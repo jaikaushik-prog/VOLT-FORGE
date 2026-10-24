@@ -1,0 +1,791 @@
+{
+  "schema_version": 1,
+  "name": "VOLT-FORGE proposed six-minute electrical case",
+  "chemistry": "LG M50T NMC",
+  "topology": "1s4p same-side-terminal ladder",
+  "cell_order": [
+    "P7",
+    "P17",
+    "P19",
+    "P13"
+  ],
+  "cell_identity_evidence": "Dataset M1 nominal position order; actual sensor/hardware mapping remains an author question.",
+  "model_key": "C2_rest_reference_RC",
+  "model_directory": "reports/improvement_v2/development",
+  "parameter_classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV.",
+  "initial_soc": [
+    0.7,
+    0.6799999999999999,
+    0.66,
+    0.6799999999999999
+  ],
+  "initial_polarization_V": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "initial_state_evidence": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer.",
+  "positive_rail_ohm": [
+    0.001,
+    0.001,
+    0.001
+  ],
+  "negative_rail_ohm": [
+    0.001,
+    0.001,
+    0.001
+  ],
+  "rail_evidence": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled.",
+  "load": [
+    {
+      "start_s": 0.0,
+      "end_s": 360.0,
+      "current_A": 14.55
+    }
+  ],
+  "load_classification": "Proposed application requirement; discharge positive. Not an established competition requirement.",
+  "temperature": {
+    "assumed_ambient_C": 23.0,
+    "assumed_surface_C": [
+      23.0,
+      23.0,
+      23.0,
+      23.0
+    ],
+    "evidence": "Nominal 23 C single-cell characterization; recorded surface temperature varied. V2 primary assessment subset 22-28 C. Module temperature history is unmeasured.",
+    "thermal_model": false,
+    "parameter_temperature_scaling": false
+  },
+  "requirements": {
+    "minimum_terminal_voltage_V": null,
+    "maximum_contiguous_excursion_s": null,
+    "documented_source": null
+  },
+  "dt_s": 0.25,
+  "reference_extrapolation": "forbidden",
+  "permit_unvalidated_waveform_transfer": true,
+  "required_outputs": {
+    "time": "s",
+    "SOC": "fraction",
+    "polarization": "V",
+    "module_and_branch_current": "A",
+    "terminal_cell_and_rail_node_voltage": "V",
+    "rail_segment_drop": "V",
+    "power_and_resistive_loss": "W",
+    "delivered_and_loss_energy": "Wh",
+    "charge_accounting": "A s",
+    "coverage_intervals": "s"
+  },
+  "decision_status": "insufficient evidence",
+  "experimental_validation": "awaiting suitable measurements",
+  "id": "soc_imbalance__soc_minus_2pp",
+  "description": "Previously investigated initial SOC imbalance",
+  "models": [
+    {
+      "kind": "C2_rest_reference_RC",
+      "parameters_ohm": [
+        0.024483436683240944,
+        0.02615665776932287
+      ],
+      "tau_s": 62.50473376572111,
+      "capacity_Ah": 4.848634393002297,
+      "reference": {
+        "rest": [
+          {
+            "cycle": 9,
+            "soc": 0.09633223365687937,
+            "V": 3.2477195262908936,
+            "correction_V": 0.05797023415331415,
+            "first_row": 67590,
+            "last_row": 67620
+          },
+          {
+            "cycle": 7,
+            "soc": 0.2971933628976098,
+            "V": 3.5548150539398193,
+            "correction_V": 0.013505357874235902,
+            "first_row": 52342,
+            "last_row": 52372
+          },
+          {
+            "cycle": 5,
+            "soc": 0.49810204729158947,
+            "V": 3.7091145515441895,
+            "correction_V": 0.017112704815882118,
+            "first_row": 37072,
+            "last_row": 37102
+          },
+          {
+            "cycle": 3,
+            "soc": 0.6990156969431159,
+            "V": 3.919555187225342,
+            "correction_V": 0.02227812132714746,
+            "first_row": 21669,
+            "last_row": 21699
+          },
+          {
+            "cycle": 1,
+            "soc": 0.8999410384319612,
+            "V": 4.088841438293457,
+            "correction_V": 0.015481818814429893,
+            "first_row": 5733,
+            "last_row": 5763
+          },
+          {
+            "cycle": 1,
+            "soc": 1.0,
+            "V": 4.190369606018066,
+            "correction_V": 0.012339591979980469,
+            "first_row": 1771,
+            "last_row": 1801
+          }
+        ],
+        "baseline": [
+          {
+            "soc": 0.09633223365687937,
+            "correction_V": 0.05798430084948114
+          },
+          {
+            "soc": 0.2971933628976098,
+            "correction_V": 0.013501781595549378
+          },
+          {
+            "soc": 0.49810204729158947,
+            "correction_V": 0.017112704815882118
+          },
+          {
+            "soc": 0.6990156969431159,
+            "correction_V": 0.02231197676537988
+          },
+          {
+            "soc": 0.8999410384319612,
+            "correction_V": 0.015483726163062705
+          }
+        ]
+      },
+      "soc_knots": [
+        0.1,
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "kind": "C2_rest_reference_RC",
+      "parameters_ohm": [
+        0.025072961234224072,
+        0.0264291844171237
+      ],
+      "tau_s": 62.50473376572111,
+      "capacity_Ah": 4.844352468565053,
+      "reference": {
+        "rest": [
+          {
+            "cycle": 9,
+            "soc": 0.09555797956399181,
+            "V": 3.249732255935669,
+            "correction_V": 0.06059103774267971,
+            "first_row": 67590,
+            "last_row": 67620
+          },
+          {
+            "cycle": 7,
+            "soc": 0.29658926889206116,
+            "V": 3.555929660797119,
+            "correction_V": 0.014232120193256037,
+            "first_row": 52342,
+            "last_row": 52372
+          },
+          {
+            "cycle": 5,
+            "soc": 0.4976729097863788,
+            "V": 3.7094473838806152,
+            "correction_V": 0.017653523299016705,
+            "first_row": 37072,
+            "last_row": 37102
+          },
+          {
+            "cycle": 3,
+            "soc": 0.6987566616080543,
+            "V": 3.9197041988372803,
+            "correction_V": 0.022637031477182212,
+            "first_row": 21669,
+            "last_row": 21699
+          },
+          {
+            "cycle": 1,
+            "soc": 0.8998525588534846,
+            "V": 4.089004993438721,
+            "correction_V": 0.015678399146313637,
+            "first_row": 5733,
+            "last_row": 5763
+          },
+          {
+            "cycle": 1,
+            "soc": 1.0,
+            "V": 4.190248966217041,
+            "correction_V": 0.012536048889160156,
+            "first_row": 1771,
+            "last_row": 1801
+          }
+        ],
+        "baseline": [
+          {
+            "soc": 0.09555797956399181,
+            "correction_V": 0.060622270576542014
+          },
+          {
+            "soc": 0.29658926889206116,
+            "correction_V": 0.014206847823871271
+          },
+          {
+            "soc": 0.4976729097863788,
+            "correction_V": 0.017659483763494244
+          },
+          {
+            "soc": 0.6987566616080543,
+            "correction_V": 0.022656104963510337
+          },
+          {
+            "soc": 0.8998525588534846,
+            "correction_V": 0.0156879358894777
+          }
+        ]
+      },
+      "soc_knots": [
+        0.1,
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "kind": "C2_rest_reference_RC",
+      "parameters_ohm": [
+        0.024822698391602116,
+        0.02462194330435891
+      ],
+      "tau_s": 62.50473376572111,
+      "capacity_Ah": 4.904010427336018,
+      "reference": {
+        "rest": [
+          {
+            "cycle": 9,
+            "soc": 0.1065503675151468,
+            "V": 3.283020257949829,
+            "correction_V": 0.05500490619368792,
+            "first_row": 67590,
+            "last_row": 67620
+          },
+          {
+            "cycle": 7,
+            "soc": 0.3051403105542998,
+            "V": 3.5634500980377197,
+            "correction_V": 0.015252372601351816,
+            "first_row": 52342,
+            "last_row": 52372
+          },
+          {
+            "cycle": 5,
+            "soc": 0.5037759778782768,
+            "V": 3.705693483352661,
+            "correction_V": 0.01649679176669583,
+            "first_row": 37072,
+            "last_row": 37102
+          },
+          {
+            "cycle": 3,
+            "soc": 0.7024145889034654,
+            "V": 3.9135801792144775,
+            "correction_V": 0.02155408545531934,
+            "first_row": 21669,
+            "last_row": 21699
+          },
+          {
+            "cycle": 1,
+            "soc": 0.9010717826225801,
+            "V": 4.084305763244629,
+            "correction_V": 0.015362896520579206,
+            "first_row": 5733,
+            "last_row": 5763
+          },
+          {
+            "cycle": 1,
+            "soc": 1.0,
+            "V": 4.1892828941345215,
+            "correction_V": 0.012543201446533203,
+            "first_row": 1771,
+            "last_row": 1801
+          }
+        ],
+        "baseline": [
+          {
+            "soc": 0.1065503675151468,
+            "correction_V": 0.055019688145592216
+          },
+          {
+            "soc": 0.3051403105542998,
+            "correction_V": 0.015252372601351816
+          },
+          {
+            "soc": 0.5037759778782768,
+            "correction_V": 0.016502036975436063
+          },
+          {
+            "soc": 0.7024145889034654,
+            "correction_V": 0.02154979392089551
+          },
+          {
+            "soc": 0.9010717826225801,
+            "correction_V": 0.015367188055003034
+          }
+        ]
+      },
+      "soc_knots": [
+        0.1,
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "kind": "C2_rest_reference_RC",
+      "parameters_ohm": [
+        0.02473126364758034,
+        0.025092213605044635
+      ],
+      "tau_s": 72.08434242404265,
+      "capacity_Ah": 4.798108715840201,
+      "reference": {
+        "rest": [
+          {
+            "cycle": 9,
+            "soc": 0.08681014183261115,
+            "V": 3.225015878677368,
+            "correction_V": 0.06505645232341495,
+            "first_row": 67590,
+            "last_row": 67620
+          },
+          {
+            "cycle": 7,
+            "soc": 0.2897963311821321,
+            "V": 3.5476555824279785,
+            "correction_V": 0.012238345114159,
+            "first_row": 52342,
+            "last_row": 52372
+          },
+          {
+            "cycle": 5,
+            "soc": 0.4928178955594563,
+            "V": 3.7059097290039062,
+            "correction_V": 0.01689051998843283,
+            "first_row": 37072,
+            "last_row": 37102
+          },
+          {
+            "cycle": 3,
+            "soc": 0.695850059043402,
+            "V": 3.918616771697998,
+            "correction_V": 0.02233486890017744,
+            "first_row": 21669,
+            "last_row": 21699
+          },
+          {
+            "cycle": 1,
+            "soc": 0.8988873694089714,
+            "V": 4.089709281921387,
+            "correction_V": 0.015311100486113283,
+            "first_row": 5733,
+            "last_row": 5763
+          },
+          {
+            "cycle": 1,
+            "soc": 1.0,
+            "V": 4.190561294555664,
+            "correction_V": 0.012226581573486328,
+            "first_row": 1771,
+            "last_row": 1801
+          }
+        ],
+        "baseline": [
+          {
+            "soc": 0.08681014183261115,
+            "correction_V": 0.06508768515727725
+          },
+          {
+            "soc": 0.2897963311821321,
+            "correction_V": 0.012238345114159
+          },
+          {
+            "soc": 0.4928178955594563,
+            "correction_V": 0.016897434127226774
+          },
+          {
+            "soc": 0.695850059043402,
+            "correction_V": 0.02234869717776533
+          },
+          {
+            "soc": 0.8988873694089714,
+            "correction_V": 0.015312054160429689
+          }
+        ]
+      },
+      "soc_knots": [
+        0.1,
+        0.5,
+        0.9
+      ]
+    }
+  ],
+  "reference_kind": "sealed_rest_pchip",
+  "capacity_factor": 1.0,
+  "origin_shift": 0.0,
+  "run_type": "sensitivity scenario",
+  "fitting_evidence": {
+    "P7": {
+      "role": "development",
+      "cell": "P7",
+      "actual_fit_current_min_A": -6.72906494140625,
+      "actual_fit_current_max_A": 19.296340942382812,
+      "unsupported_reference_rows": 3689,
+      "surface_min_C": 23.07471466064453,
+      "surface_max_C": 27.929973602294922,
+      "bands": {
+        "rest": {
+          "samples": 29240,
+          "longest_observed_contiguous_span_s": 3599.002700000012
+        },
+        "near_equal_share_3_64A": {
+          "samples": 2,
+          "longest_observed_contiguous_span_s": 0.10010000001057051
+        },
+        "4_85A_plateau": {
+          "samples": 1805,
+          "longest_observed_contiguous_span_s": 359.0030000000115
+        },
+        "above_4_9A": {
+          "samples": 250,
+          "longest_observed_contiguous_span_s": 9.900499999988824
+        },
+        "charge": {
+          "samples": 2674,
+          "longest_observed_contiguous_span_s": 75.6993999999977
+        }
+      }
+    },
+    "P17": {
+      "role": "development",
+      "cell": "P17",
+      "actual_fit_current_min_A": -6.7309417724609375,
+      "actual_fit_current_max_A": 19.301010131835938,
+      "unsupported_reference_rows": 3689,
+      "surface_min_C": 22.803194046020508,
+      "surface_max_C": 27.109357833862305,
+      "bands": {
+        "rest": {
+          "samples": 29231,
+          "longest_observed_contiguous_span_s": 3599.0014999999985
+        },
+        "near_equal_share_3_64A": {
+          "samples": 2,
+          "longest_observed_contiguous_span_s": 0.09970000000612345
+        },
+        "4_85A_plateau": {
+          "samples": 1805,
+          "longest_observed_contiguous_span_s": 359.0014000000083
+        },
+        "above_4_9A": {
+          "samples": 250,
+          "longest_observed_contiguous_span_s": 9.900499999988824
+        },
+        "charge": {
+          "samples": 2679,
+          "longest_observed_contiguous_span_s": 75.70089999999618
+        }
+      }
+    },
+    "P19": {
+      "role": "development",
+      "cell": "P19",
+      "actual_fit_current_min_A": -6.7266845703125,
+      "actual_fit_current_max_A": 19.29181671142578,
+      "unsupported_reference_rows": 3689,
+      "surface_min_C": 22.815807342529297,
+      "surface_max_C": 26.86036491394043,
+      "bands": {
+        "rest": {
+          "samples": 29235,
+          "longest_observed_contiguous_span_s": 3599.0016999999934
+        },
+        "near_equal_share_3_64A": {
+          "samples": 2,
+          "longest_observed_contiguous_span_s": 0.10050000000046566
+        },
+        "4_85A_plateau": {
+          "samples": 1805,
+          "longest_observed_contiguous_span_s": 359.0020000000077
+        },
+        "above_4_9A": {
+          "samples": 250,
+          "longest_observed_contiguous_span_s": 9.901200000022072
+        },
+        "charge": {
+          "samples": 2674,
+          "longest_observed_contiguous_span_s": 75.69949999998789
+        }
+      }
+    },
+    "P13": {
+      "role": "development",
+      "cell": "P13",
+      "actual_fit_current_min_A": -6.724884033203125,
+      "actual_fit_current_max_A": 19.291671752929688,
+      "unsupported_reference_rows": 3689,
+      "surface_min_C": 22.80319595336914,
+      "surface_max_C": 27.32077407836914,
+      "bands": {
+        "rest": {
+          "samples": 29235,
+          "longest_observed_contiguous_span_s": 3599.001700000008
+        },
+        "near_equal_share_3_64A": {
+          "samples": 2,
+          "longest_observed_contiguous_span_s": 0.09939999999187421
+        },
+        "4_85A_plateau": {
+          "samples": 1805,
+          "longest_observed_contiguous_span_s": 359.00160000000324
+        },
+        "above_4_9A": {
+          "samples": 250,
+          "longest_observed_contiguous_span_s": 9.900599999993574
+        },
+        "charge": {
+          "samples": 2674,
+          "longest_observed_contiguous_span_s": 75.70040000000154
+        }
+      }
+    }
+  },
+  "assessment_evidence": {
+    "P7": [
+      {
+        "role": "development",
+        "cell": "P7",
+        "phase": "hppc",
+        "rows": 7216,
+        "current_min_A": -2.0001821517944336,
+        "current_max_A": 2.6604232788085938,
+        "soc_min": 0.1952259361841258,
+        "soc_max": 0.7994631715089584,
+        "surface_min_C": 23.11875343322754,
+        "surface_max_C": 23.57355690002441,
+        "longest_continuous_positive_load_s": 9.90250000001106
+      },
+      {
+        "role": "development",
+        "cell": "P7",
+        "phase": "long_load",
+        "rows": 1444,
+        "current_min_A": 4.850146770477295,
+        "current_max_A": 4.850484848022461,
+        "soc_min": 0.1969092261257723,
+        "soc_max": 0.8993754184375738,
+        "surface_min_C": 23.37221908569336,
+        "surface_max_C": 26.81168937683105,
+        "longest_continuous_positive_load_s": 359.0017999999982
+      },
+      {
+        "role": "development",
+        "cell": "P7",
+        "phase": "long_rest",
+        "rows": 14404,
+        "current_min_A": -0.0,
+        "current_max_A": -0.0,
+        "soc_min": 0.1967639436818634,
+        "soc_max": 0.7994749840839815,
+        "surface_min_C": 23.08770751953125,
+        "surface_max_C": 26.89167022705078,
+        "longest_continuous_positive_load_s": 0.0
+      },
+      {
+        "role": "development",
+        "cell": "P7",
+        "phase": "multisine_rest",
+        "rows": 7598,
+        "current_min_A": -6.727813720703125,
+        "current_max_A": 17.87602996826172,
+        "soc_min": 0.1926631883617098,
+        "soc_max": 0.7991206467353777,
+        "surface_min_C": 23.231046676635746,
+        "surface_max_C": 23.92246627807617,
+        "longest_continuous_positive_load_s": 9.999800000019604
+      }
+    ],
+    "P17": [
+      {
+        "role": "development",
+        "cell": "P17",
+        "phase": "hppc",
+        "rows": 7216,
+        "current_min_A": -2.0003881454467773,
+        "current_max_A": 2.6604814529418945,
+        "soc_min": 0.1945321353385258,
+        "soc_max": 0.7992919775676408,
+        "surface_min_C": 22.89010238647461,
+        "surface_max_C": 23.494688034057617,
+        "longest_continuous_positive_load_s": 9.901099999999133
+      },
+      {
+        "role": "development",
+        "cell": "P17",
+        "phase": "long_load",
+        "rows": 1444,
+        "current_min_A": 4.850090980529785,
+        "current_max_A": 4.850493431091309,
+        "soc_min": 0.1962163675826973,
+        "soc_max": 0.8992908850245313,
+        "surface_min_C": 23.053266525268555,
+        "surface_max_C": 26.21577835083008,
+        "longest_continuous_positive_load_s": 359.0014999999985
+      },
+      {
+        "role": "development",
+        "cell": "P17",
+        "phase": "long_rest",
+        "rows": 14404,
+        "current_min_A": -0.0,
+        "current_max_A": -0.0,
+        "soc_min": 0.1960720413913753,
+        "soc_max": 0.7993032141100308,
+        "surface_min_C": 22.819713592529297,
+        "surface_max_C": 26.32229232788086,
+        "longest_continuous_positive_load_s": 0.0
+      },
+      {
+        "role": "development",
+        "cell": "P17",
+        "phase": "multisine_rest",
+        "rows": 7598,
+        "current_min_A": -6.7292022705078125,
+        "current_max_A": 17.86981201171875,
+        "soc_min": 0.1919678961801374,
+        "soc_max": 0.7989475968775099,
+        "surface_min_C": 22.91816520690918,
+        "surface_max_C": 23.61810874938965,
+        "longest_continuous_positive_load_s": 10.000800000008894
+      }
+    ],
+    "P19": [
+      {
+        "role": "development",
+        "cell": "P19",
+        "phase": "hppc",
+        "rows": 7216,
+        "current_min_A": -2.000543594360352,
+        "current_max_A": 2.6605043411254883,
+        "soc_min": 0.2043229665186338,
+        "soc_max": 0.8017314000140712,
+        "surface_min_C": 22.85533142089844,
+        "surface_max_C": 23.212730407714844,
+        "longest_continuous_positive_load_s": 9.902000000001864
+      },
+      {
+        "role": "development",
+        "cell": "P19",
+        "phase": "long_load",
+        "rows": 1444,
+        "current_min_A": 4.850061416625977,
+        "current_max_A": 4.850442886352539,
+        "soc_min": 0.2059879450004553,
+        "soc_max": 0.9005168836992292,
+        "surface_min_C": 23.08558464050293,
+        "surface_max_C": 26.03355407714844,
+        "longest_continuous_positive_load_s": 359.0013000000072
+      },
+      {
+        "role": "development",
+        "cell": "P19",
+        "phase": "long_rest",
+        "rows": 14404,
+        "current_min_A": -0.0,
+        "current_max_A": -0.0,
+        "soc_min": 0.2058442771508699,
+        "soc_max": 0.8017424923938886,
+        "surface_min_C": 22.80896759033203,
+        "surface_max_C": 26.022083282470703,
+        "longest_continuous_positive_load_s": 0.0
+      },
+      {
+        "role": "development",
+        "cell": "P19",
+        "phase": "multisine_rest",
+        "rows": 7598,
+        "current_min_A": -6.72589111328125,
+        "current_max_A": 17.88176727294922,
+        "soc_min": 0.2017911910533409,
+        "soc_max": 0.8013901543291787,
+        "surface_min_C": 22.92182159423828,
+        "surface_max_C": 23.508026123046875,
+        "longest_continuous_positive_load_s": 10.000800000008894
+      }
+    ],
+    "P13": [
+      {
+        "role": "development",
+        "cell": "P13",
+        "phase": "hppc",
+        "rows": 7216,
+        "current_min_A": -2.00054931640625,
+        "current_max_A": 2.660491466522217,
+        "soc_min": 0.1867494403070843,
+        "soc_max": 0.7973552524753902,
+        "surface_min_C": 22.83851432800293,
+        "surface_max_C": 23.14177703857422,
+        "longest_continuous_positive_load_s": 9.901700000002164
+      },
+      {
+        "role": "development",
+        "cell": "P13",
+        "phase": "long_load",
+        "rows": 1444,
+        "current_min_A": 4.850267887115479,
+        "current_max_A": 4.8504486083984375,
+        "soc_min": 0.1884508562396323,
+        "soc_max": 0.8983203241327669,
+        "surface_min_C": 23.04977035522461,
+        "surface_max_C": 25.924659729003903,
+        "longest_continuous_positive_load_s": 359.00169999999343
+      },
+      {
+        "role": "development",
+        "cell": "P13",
+        "phase": "long_rest",
+        "rows": 14404,
+        "current_min_A": -0.0,
+        "current_max_A": -0.0,
+        "soc_min": 0.1883041536595833,
+        "soc_max": 0.7973665358712052,
+        "surface_min_C": 22.79738044738769,
+        "surface_max_C": 25.98352813720703,
+        "longest_continuous_positive_load_s": 0.0
+      },
+      {
+        "role": "development",
+        "cell": "P13",
+        "phase": "multisine_rest",
+        "rows": 7598,
+        "current_min_A": -6.7261810302734375,
+        "current_max_A": 17.872146606445312,
+        "soc_min": 0.1841586447628909,
+        "soc_max": 0.7970088175137552,
+        "surface_min_C": 22.95394897460937,
+        "surface_max_C": 23.62662506103516,
+        "longest_continuous_positive_load_s": 10.0002000000095
+      }
+    ]
+  },
+  "sensitivity": {
+    "id": "soc_minus_2pp",
+    "soc_delta": -0.02
+  },
+  "parent_scenario": "soc_imbalance"
+}

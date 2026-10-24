@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-24T17:50:06.912017+00:00",
+  "procedure_seal_sha256": "1f42960e4aa825b68d1ff170bb181641fe5baf8098816916d68465965ad17148",
+  "artifacts": {
+    "reports/improvement_v2/fresh/P2_models.json": "7dbc10d84e9af0e9e1c5da2d397d82b3395f2227378ad22282d8696f584e77ee",
+    "reports/improvement_v2/fresh/P5_models.json": "7c871793fc92343c39d07e1f9a03b573ad63a3c8d4a6499d0ab4ae562715f6b2",
+    "reports/improvement_v2/fresh/P8_models.json": "1ef1c705747a1cf0ffaccd1100fb5f1624268f39ba0d3a757b8f46c84ceb50c9"
+  },
+  "fresh_assessment_voltage_accessed": false
+}

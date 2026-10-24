@@ -1,0 +1,222 @@
+{
+  "equal_soc": {
+    "time_step_sensitivity": [
+      {
+        "dt_s": 1.0,
+        "max_differences": {
+          "terminal_V": 5.778104406051199e-06,
+          "I1_A": 0.0015128591852704432,
+          "I2_A": 0.0003389574803658313,
+          "I3_A": 0.000983202291990004,
+          "I4_A": 0.0008696546476900657,
+          "SOC1": 7.482995948215887e-06,
+          "SOC2": 1.9116944739439035e-06,
+          "SOC3": 4.781427639599656e-06,
+          "SOC4": 4.6781498433956514e-06
+        },
+        "delivered_energy_difference_Wh": -1.8492115270163367e-06,
+        "energy_balance_residual_Wh": 7.011353826946731e-07
+      },
+      {
+        "dt_s": 0.5,
+        "max_differences": {
+          "terminal_V": 1.914017164317272e-06,
+          "I1_A": 0.0005013299235407942,
+          "I2_A": 0.00011232853100473505,
+          "I3_A": 0.0003258834787893683,
+          "I4_A": 0.00028813878655542524,
+          "SOC1": 2.486038969018445e-06,
+          "SOC2": 6.347041285881261e-07,
+          "SOC3": 1.5898095725441763e-06,
+          "SOC4": 1.5528530985520206e-06
+        },
+        "delivered_energy_difference_Wh": -6.755895363141917e-07,
+        "energy_balance_residual_Wh": 4.758416191899231e-07
+      },
+      {
+        "dt_s": 0.25,
+        "max_differences": {
+          "terminal_V": 0.0,
+          "I1_A": 0.0,
+          "I2_A": 0.0,
+          "I3_A": 0.0,
+          "I4_A": 0.0,
+          "SOC1": 0.0,
+          "SOC2": 0.0,
+          "SOC3": 0.0,
+          "SOC4": 0.0
+        },
+        "delivered_energy_difference_Wh": 0.0,
+        "energy_balance_residual_Wh": 2.692275594995408e-07
+      }
+    ],
+    "coordinate_relabelling": [
+      {
+        "shift": -0.02,
+        "max_voltage_change_V": 0.0,
+        "max_current_change_A": 0.0
+      },
+      {
+        "shift": 0.02,
+        "max_voltage_change_V": 0.0,
+        "max_current_change_A": 0.0
+      }
+    ]
+  },
+  "soc_imbalance": {
+    "time_step_sensitivity": [
+      {
+        "dt_s": 1.0,
+        "max_differences": {
+          "terminal_V": 7.91082844564528e-06,
+          "I1_A": 0.0023798109953396818,
+          "I2_A": 0.0003149866836089643,
+          "I3_A": 0.0019544817585281926,
+          "I4_A": 0.0007402715770559176,
+          "SOC1": 1.1661996976219946e-05,
+          "SOC2": 1.8974832164397881e-06,
+          "SOC3": 9.278444285221177e-06,
+          "SOC4": 4.268506851312637e-06
+        },
+        "delivered_energy_difference_Wh": -2.7374055759921134e-06,
+        "energy_balance_residual_Wh": -2.8226701124624123e-06
+      },
+      {
+        "dt_s": 0.5,
+        "max_differences": {
+          "terminal_V": 2.6204729772771884e-06,
+          "I1_A": 0.0007885933809337331,
+          "I2_A": 0.00010441224592749876,
+          "I3_A": 0.0006477054132334459,
+          "I4_A": 0.0002452636762608762,
+          "SOC1": 3.8744472886653725e-06,
+          "SOC2": 6.300592845231989e-07,
+          "SOC3": 3.0838141662492546e-06,
+          "SOC4": 1.416904390705298e-06
+        },
+        "delivered_energy_difference_Wh": -9.718687037363338e-07,
+        "energy_balance_residual_Wh": -1.275514251405004e-06
+      },
+      {
+        "dt_s": 0.25,
+        "max_differences": {
+          "terminal_V": 0.0,
+          "I1_A": 0.0,
+          "I2_A": 0.0,
+          "I3_A": 0.0,
+          "I4_A": 0.0,
+          "SOC1": 0.0,
+          "SOC2": 0.0,
+          "SOC3": 0.0,
+          "SOC4": 0.0
+        },
+        "delivered_energy_difference_Wh": 0.0,
+        "energy_balance_residual_Wh": -6.03828968562444e-07
+      }
+    ]
+  },
+  "lower_rail_resistance": {
+    "time_step_sensitivity": [
+      {
+        "dt_s": 1.0,
+        "max_differences": {
+          "terminal_V": 2.4619302716466507e-06,
+          "I1_A": 0.001035280971876329,
+          "I2_A": 0.0003531258629618783,
+          "I3_A": 0.0007791467745477121,
+          "I4_A": 0.0006145725196171625,
+          "SOC1": 4.7460933703113994e-06,
+          "SOC2": 1.693173414696325e-06,
+          "SOC3": 3.6399204212944625e-06,
+          "SOC4": 2.927044114087174e-06
+        },
+        "delivered_energy_difference_Wh": -3.2511645731148064e-07,
+        "energy_balance_residual_Wh": -2.714318659791104e-07
+      },
+      {
+        "dt_s": 0.5,
+        "max_differences": {
+          "terminal_V": 8.1494219639211e-07,
+          "I1_A": 0.00034294333295337154,
+          "I2_A": 0.00011695417485668713,
+          "I3_A": 0.00025825891132758017,
+          "I4_A": 0.0002034358053357721,
+          "SOC1": 1.5760668963249458e-06,
+          "SOC2": 5.61821400846263e-07,
+          "SOC3": 1.2103377545757965e-06,
+          "SOC4": 9.706976772383413e-07
+        },
+        "delivered_energy_difference_Wh": -1.673449201433641e-07,
+        "energy_balance_residual_Wh": -1.470248606712706e-08
+      },
+      {
+        "dt_s": 0.25,
+        "max_differences": {
+          "terminal_V": 0.0,
+          "I1_A": 0.0,
+          "I2_A": 0.0,
+          "I3_A": 0.0,
+          "I4_A": 0.0,
+          "SOC1": 0.0,
+          "SOC2": 0.0,
+          "SOC3": 0.0,
+          "SOC4": 0.0
+        },
+        "delivered_energy_difference_Wh": 0.0,
+        "energy_balance_residual_Wh": 2.289661415923029e-08
+      }
+    ]
+  },
+  "reduced_load": {
+    "time_step_sensitivity": [
+      {
+        "dt_s": 1.0,
+        "max_differences": {
+          "terminal_V": 4.798371898040443e-06,
+          "I1_A": 0.0012610152497845029,
+          "I2_A": 0.0003009021919830879,
+          "I3_A": 0.0008800364755203738,
+          "I4_A": 0.0006828212305336478,
+          "SOC1": 6.2385556289790145e-06,
+          "SOC2": 1.6705438877773204e-06,
+          "SOC3": 4.270192521138583e-06,
+          "SOC4": 3.688255469924684e-06
+        },
+        "delivered_energy_difference_Wh": -1.2695369493442854e-06,
+        "energy_balance_residual_Wh": 3.9835328396403076e-07
+      },
+      {
+        "dt_s": 0.5,
+        "max_differences": {
+          "terminal_V": 1.5894880385225463e-06,
+          "I1_A": 0.0004178837970765237,
+          "I2_A": 9.970819108806594e-05,
+          "I3_A": 0.0002916883584407337,
+          "I4_A": 0.00022622120540205515,
+          "SOC1": 2.0726042926355603e-06,
+          "SOC2": 5.546437007453164e-07,
+          "SOC3": 1.4197513847902243e-06,
+          "SOC4": 1.2242196364420366e-06
+        },
+        "delivered_energy_difference_Wh": -4.6352192306642337e-07,
+        "energy_balance_residual_Wh": 2.8473456778144166e-07
+      },
+      {
+        "dt_s": 0.25,
+        "max_differences": {
+          "terminal_V": 0.0,
+          "I1_A": 0.0,
+          "I2_A": 0.0,
+          "I3_A": 0.0,
+          "I4_A": 0.0,
+          "SOC1": 0.0,
+          "SOC2": 0.0,
+          "SOC3": 0.0,
+          "SOC4": 0.0
+        },
+        "delivered_energy_difference_Wh": 0.0,
+        "energy_balance_residual_Wh": 1.6374870104011545e-07
+      }
+    ]
+  }
+}

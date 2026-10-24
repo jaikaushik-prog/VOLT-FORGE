@@ -1,0 +1,1182 @@
+[
+  {
+    "role": "development",
+    "cell": "P7",
+    "model": "baseline",
+    "parameters_ohm": [
+      0.031232507829708184
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.030214818578782728
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.03161244625033594
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P7",
+    "model": "C1_rest_reference_R",
+    "parameters_ohm": [
+      0.04171958915608998
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.04041505717842977
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.04274178047627931
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P7",
+    "model": "C2_rest_reference_RC",
+    "parameters_ohm": [
+      0.024483436683240944,
+      0.02615665776932287
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.024315059791352144,
+      0.024909007366138654
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.02466421622323062,
+      0.02736735282126996
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "condition": 4.163507113548049,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P7",
+    "model": "C3_rest_reference_SOC_RC",
+    "parameters_ohm": [
+      0.02319130975043286,
+      0.023719610618555594,
+      0.025969493203937155,
+      0.03243850733360046,
+      0.025173788111917735,
+      0.023257285978168986
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.020757884091763074,
+      0.02328287519400362,
+      0.02550455681046331,
+      0.03198127708729911,
+      0.02436809152725646,
+      0.02239811120550488
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.025299861941317038,
+      0.024201650016834796,
+      0.02633136995422413,
+      0.03485601127125752,
+      0.02677557338292459,
+      0.02489136300164668
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "condition": 8.093946320937365,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P4",
+    "model": "baseline",
+    "parameters_ohm": [
+      0.03173249187486211
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.030624518097489208
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.03213939643138907
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P4",
+    "model": "C1_rest_reference_R",
+    "parameters_ohm": [
+      0.041536784448872904
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.0400197873357791
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.04264712927315849
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P4",
+    "model": "C2_rest_reference_RC",
+    "parameters_ohm": [
+      0.022277949834703766,
+      0.02923120770252244
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.021945769755694577,
+      0.027968728078277712
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.022571070301229314,
+      0.03043187738767953
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      46.99556193764456,
+      72.08434242404265
+    ],
+    "condition": 4.16223379353976,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P4",
+    "model": "C3_rest_reference_SOC_RC",
+    "parameters_ohm": [
+      0.022392891837783844,
+      0.021137049954548764,
+      0.023836979614680693,
+      0.03432729385268613,
+      0.028459155362582367,
+      0.026139210184372822
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.02098618012238889,
+      0.020613826457348276,
+      0.023300100353381738,
+      0.033644133113759224,
+      0.027539391902040185,
+      0.02534191372920668
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.023875284596177555,
+      0.021737322041879947,
+      0.025248238603897515,
+      0.03574112125223287,
+      0.02954058272302124,
+      0.027184853547644782
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "condition": 8.058723237011346,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P10",
+    "model": "baseline",
+    "parameters_ohm": [
+      0.031789954810406064
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.030670970101856574
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.032201835873777215
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P10",
+    "model": "C1_rest_reference_R",
+    "parameters_ohm": [
+      0.042197124248345465
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.04080162447270753
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.04330513860747309
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P10",
+    "model": "C2_rest_reference_RC",
+    "parameters_ohm": [
+      0.024551810365446916,
+      0.026778272056892347
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.0243796955931874,
+      0.025407845113798934
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.024752027405791795,
+      0.02806820664325329
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      83.13214231393637
+    ],
+    "condition": 4.16330906877016,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P10",
+    "model": "C3_rest_reference_SOC_RC",
+    "parameters_ohm": [
+      0.02335812450421339,
+      0.023744045213053507,
+      0.026089556113514403,
+      0.03357474407129044,
+      0.025559915869484095,
+      0.023650025996905966
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.020725887867471388,
+      0.023273367363398748,
+      0.02561264839846615,
+      0.033150428602744135,
+      0.024681989496877665,
+      0.022724090038725067
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.025648210274214857,
+      0.024272700248880775,
+      0.02648097519130459,
+      0.036138870364882836,
+      0.02735957840408918,
+      0.02540263658857154
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "condition": 8.086063038547442,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P13",
+    "model": "baseline",
+    "parameters_ohm": [
+      0.030582498293779938
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.02934428562829995
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.031008376053046974
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P13",
+    "model": "C1_rest_reference_R",
+    "parameters_ohm": [
+      0.04072279614408541
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.03945719131330306
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.04162511742032353
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P13",
+    "model": "C2_rest_reference_RC",
+    "parameters_ohm": [
+      0.02473126364758034,
+      0.025092213605044635
+    ],
+    "tau_s": 72.08434242404265,
+    "leave_one_out_parameter_min_ohm": [
+      0.02437368184222568,
+      0.023337154693066905
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.024844448119051957,
+      0.02647931219432865
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      83.13214231393637
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      83.13214231393637
+    ],
+    "condition": 4.104835478687654,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P13",
+    "model": "C3_rest_reference_SOC_RC",
+    "parameters_ohm": [
+      0.02158523552536104,
+      0.024372795865219996,
+      0.026349254140729222,
+      0.033703876362329174,
+      0.023426283770020744,
+      0.022072945451851837
+    ],
+    "tau_s": 72.08434242404265,
+    "leave_one_out_parameter_min_ohm": [
+      0.015918555795423124,
+      0.023389490400521407,
+      0.025516845156428644,
+      0.028106483385592372,
+      0.022515501070554993,
+      0.02112423253260787
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.025104028676479907,
+      0.024947276765722285,
+      0.026759296406090993,
+      0.03917718587752365,
+      0.023513493095794463,
+      0.024525968320451834
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      83.13214231393637
+    ],
+    "profile_support_s": [
+      62.50473376572111,
+      83.13214231393637
+    ],
+    "condition": 7.847452552612962,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P16",
+    "model": "baseline",
+    "parameters_ohm": [
+      0.030640952986105748
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.029769064962156033
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.031009885089619483
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P16",
+    "model": "C1_rest_reference_R",
+    "parameters_ohm": [
+      0.04122488294711733
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.039724302812802856
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.04250909792948399
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P16",
+    "model": "C2_rest_reference_RC",
+    "parameters_ohm": [
+      0.024066493883076655,
+      0.026038932705974467
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.023647057060731676,
+      0.024802170431654
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.02435993247291907,
+      0.02700237334552455
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      46.99556193764456,
+      72.08434242404265
+    ],
+    "condition": 4.163426977118123,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P16",
+    "model": "C3_rest_reference_SOC_RC",
+    "parameters_ohm": [
+      0.024059116841543302,
+      0.022574052744451276,
+      0.025024210362571072,
+      0.03177785561983953,
+      0.023916691764167716,
+      0.0237709229374862
+    ],
+    "tau_s": 54.19820188053225,
+    "leave_one_out_parameter_min_ohm": [
+      0.023402434628904234,
+      0.022345277179677256,
+      0.02498821124486602,
+      0.030205723416016517,
+      0.023219263872681566,
+      0.023051414224246756
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.026618811760874245,
+      0.022974714666228472,
+      0.02658180348637085,
+      0.0354789541589753,
+      0.027124405495192135,
+      0.02449766926341611
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      46.99556193764456,
+      72.08434242404265
+    ],
+    "condition": 8.35842558568722,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P17",
+    "model": "baseline",
+    "parameters_ohm": [
+      0.03213027776941857
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.03115799190030629
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.032503084078191816
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P17",
+    "model": "C1_rest_reference_R",
+    "parameters_ohm": [
+      0.042488442651977675
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.04115945666145007
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.04354883275111224
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P17",
+    "model": "C2_rest_reference_RC",
+    "parameters_ohm": [
+      0.025072961234224072,
+      0.0264291844171237
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.02486318708201277,
+      0.02521307042446113
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.025284444280757035,
+      0.027626270377433246
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "condition": 4.163415998029592,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P17",
+    "model": "C3_rest_reference_SOC_RC",
+    "parameters_ohm": [
+      0.024249817755102796,
+      0.024190118699968198,
+      0.026575428964974692,
+      0.0322703414569823,
+      0.025525719657521605,
+      0.023489855622380165
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.022159384772728705,
+      0.023790005942689672,
+      0.02608604514911499,
+      0.03175885917084989,
+      0.024712146493187665,
+      0.022658312063058825
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.02596070317401673,
+      0.024684946354809417,
+      0.027118386507434002,
+      0.0342459149765195,
+      0.027403636436706826,
+      0.02490428136910081
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "condition": 8.084459001247303,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P19",
+    "model": "baseline",
+    "parameters_ohm": [
+      0.03025226432644436
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.029478779851806202
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.030591376214920068
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P19",
+    "model": "C1_rest_reference_R",
+    "parameters_ohm": [
+      0.04104704349891659
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.03965726734812739
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.04229450274459291
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P19",
+    "model": "C2_rest_reference_RC",
+    "parameters_ohm": [
+      0.024822698391602116,
+      0.02462194330435891
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.02445656560161075,
+      0.02343124309802381
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.025070239624043564,
+      0.02554609683097246
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      46.99556193764456,
+      72.08434242404265
+    ],
+    "condition": 4.163288086358603,
+    "identifiable": true
+  },
+  {
+    "role": "development",
+    "cell": "P19",
+    "model": "C3_rest_reference_SOC_RC",
+    "parameters_ohm": [
+      0.02539389548163688,
+      0.023675796117728,
+      0.02625567981175585,
+      0.030023763387639,
+      0.02282027423025397,
+      0.022484579970432687
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.023168217593969177,
+      0.023254624241882318,
+      0.02571437710211395,
+      0.029055138369731077,
+      0.021641730401558062,
+      0.021809985672260394
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.026688044450674082,
+      0.023864064166528243,
+      0.026936496325553803,
+      0.03463070715616736,
+      0.02587178647774624,
+      0.023425378541755356
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "condition": 8.138653729380023,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P2",
+    "model": "baseline",
+    "parameters_ohm": [
+      0.03216281313669556
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.031137855412089254
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.032541987102656295
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P2",
+    "model": "C1_rest_reference_R",
+    "parameters_ohm": [
+      0.042476373626166124
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.04111366867657267
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.04352462930959555
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P2",
+    "model": "C2_rest_reference_RC",
+    "parameters_ohm": [
+      0.02499079598963013,
+      0.02653480413469825
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.02479712297216641,
+      0.025243626602656232
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.02518612858877363,
+      0.027716853275997176
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "condition": 4.16359882827374,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P2",
+    "model": "C3_rest_reference_SOC_RC",
+    "parameters_ohm": [
+      0.02398280000151134,
+      0.02421020590149811,
+      0.026421397517707775,
+      0.032721836395975486,
+      0.02538609806968625,
+      0.02371520032317144
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.02161117805325921,
+      0.023747663117062223,
+      0.02595150068190422,
+      0.0317822398918259,
+      0.024540825189402104,
+      0.022836832309922464
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.026034055019548034,
+      0.02471047433806492,
+      0.027011832772727857,
+      0.03513496833247938,
+      0.026695069776771527,
+      0.02536195414948312
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "condition": 8.084060279188183,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P5",
+    "model": "baseline",
+    "parameters_ohm": [
+      0.030868183289278834
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.029903738839190813
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.03123192962166492
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P5",
+    "model": "C1_rest_reference_R",
+    "parameters_ohm": [
+      0.04158447101034773
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.040299810635816356
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.042628666871667775
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P5",
+    "model": "C2_rest_reference_RC",
+    "parameters_ohm": [
+      0.024960209855526418,
+      0.025228555880999964
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.024804185085036054,
+      0.023974431708835873
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.025346153840579894,
+      0.02672417715728188
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      83.13214231393637
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      83.13214231393637
+    ],
+    "condition": 4.1633593015203365,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P5",
+    "model": "C3_rest_reference_SOC_RC",
+    "parameters_ohm": [
+      0.023775976655940247,
+      0.024259929566611216,
+      0.026335580093514627,
+      0.03158802144592053,
+      0.024106155848917565,
+      0.022397771715835534
+    ],
+    "tau_s": 62.50473376572111,
+    "leave_one_out_parameter_min_ohm": [
+      0.021354909629114873,
+      0.023863885606025856,
+      0.025875476748987627,
+      0.030632789672641457,
+      0.02333191980306332,
+      0.021505186085055156
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.02618509739270197,
+      0.024692100708365163,
+      0.027224259559133088,
+      0.0338913938949714,
+      0.026159901120175084,
+      0.024210237468513907
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      83.13214231393637
+    ],
+    "profile_support_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "condition": 8.10099619234829,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P8",
+    "model": "baseline",
+    "parameters_ohm": [
+      0.02983263148017798
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.02931955319262156
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.030085113010545093
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P8",
+    "model": "C1_rest_reference_R",
+    "parameters_ohm": [
+      0.04029740955287135
+    ],
+    "tau_s": 1.0,
+    "leave_one_out_parameter_min_ohm": [
+      0.038754500660417995
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.04178476191744566
+    ],
+    "leave_one_out_tau_range_s": [
+      1.0,
+      1.0
+    ],
+    "profile_support_s": [
+      1.0,
+      1.0
+    ],
+    "condition": 1.0,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P8",
+    "model": "C2_rest_reference_RC",
+    "parameters_ohm": [
+      0.022347858669691016,
+      0.026455103748332303
+    ],
+    "tau_s": 54.19820188053225,
+    "leave_one_out_parameter_min_ohm": [
+      0.021369941676644952,
+      0.02563372907012291
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.02309447975332738,
+      0.02709729604142492
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      62.50473376572111
+    ],
+    "profile_support_s": [
+      46.99556193764456,
+      72.08434242404265
+    ],
+    "condition": 4.217377444880598,
+    "identifiable": true
+  },
+  {
+    "role": "fresh",
+    "cell": "P8",
+    "model": "C3_rest_reference_SOC_RC",
+    "parameters_ohm": [
+      0.0323916836139588,
+      0.020019131224319257,
+      0.022545379429477118,
+      0.021482998173987317,
+      0.026435363442178,
+      0.0246287647314763
+    ],
+    "tau_s": 54.19820188053225,
+    "leave_one_out_parameter_min_ohm": [
+      0.027906422018320262,
+      0.01963908639356161,
+      0.02226608651614507,
+      0.02039599527679068,
+      0.02519139849008001,
+      0.0238868524230087
+    ],
+    "leave_one_out_parameter_max_ohm": [
+      0.03652399893470336,
+      0.02053521884157104,
+      0.02412446646122486,
+      0.025603713177099075,
+      0.029985334298693513,
+      0.025027630472021948
+    ],
+    "leave_one_out_tau_range_s": [
+      54.19820188053225,
+      72.08434242404265
+    ],
+    "profile_support_s": [
+      46.99556193764456,
+      72.08434242404265
+    ],
+    "condition": 8.15542681108159,
+    "identifiable": true
+  }
+]

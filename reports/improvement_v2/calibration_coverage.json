@@ -1,0 +1,312 @@
+[
+  {
+    "role": "development",
+    "cell": "P7",
+    "actual_fit_current_min_A": -6.72906494140625,
+    "actual_fit_current_max_A": 19.296340942382812,
+    "unsupported_reference_rows": 3689,
+    "surface_min_C": 23.07471466064453,
+    "surface_max_C": 27.929973602294922,
+    "bands": {
+      "rest": {
+        "samples": 29240,
+        "longest_observed_contiguous_span_s": 3599.002700000012
+      },
+      "near_equal_share_3_64A": {
+        "samples": 2,
+        "longest_observed_contiguous_span_s": 0.10010000001057051
+      },
+      "4_85A_plateau": {
+        "samples": 1805,
+        "longest_observed_contiguous_span_s": 359.0030000000115
+      },
+      "above_4_9A": {
+        "samples": 250,
+        "longest_observed_contiguous_span_s": 9.900499999988824
+      },
+      "charge": {
+        "samples": 2674,
+        "longest_observed_contiguous_span_s": 75.6993999999977
+      }
+    }
+  },
+  {
+    "role": "development",
+    "cell": "P4",
+    "actual_fit_current_min_A": -6.72381591796875,
+    "actual_fit_current_max_A": 19.302520751953125,
+    "unsupported_reference_rows": 3689,
+    "surface_min_C": 22.365449905395508,
+    "surface_max_C": 26.949222564697266,
+    "bands": {
+      "rest": {
+        "samples": 29232,
+        "longest_observed_contiguous_span_s": 3599.0015999999887
+      },
+      "near_equal_share_3_64A": {
+        "samples": 2,
+        "longest_observed_contiguous_span_s": 0.10020000000076834
+      },
+      "4_85A_plateau": {
+        "samples": 1805,
+        "longest_observed_contiguous_span_s": 359.00190000000293
+      },
+      "above_4_9A": {
+        "samples": 250,
+        "longest_observed_contiguous_span_s": 9.899700000009034
+      },
+      "charge": {
+        "samples": 2681,
+        "longest_observed_contiguous_span_s": 75.6996000000072
+      }
+    }
+  },
+  {
+    "role": "development",
+    "cell": "P10",
+    "actual_fit_current_min_A": -6.72918701171875,
+    "actual_fit_current_max_A": 19.296279907226562,
+    "unsupported_reference_rows": 3689,
+    "surface_min_C": 22.057098388671875,
+    "surface_max_C": 26.21381378173828,
+    "bands": {
+      "rest": {
+        "samples": 29234,
+        "longest_observed_contiguous_span_s": 3599.002700000012
+      },
+      "near_equal_share_3_64A": {
+        "samples": 2,
+        "longest_observed_contiguous_span_s": 0.09980000001087319
+      },
+      "4_85A_plateau": {
+        "samples": 1805,
+        "longest_observed_contiguous_span_s": 359.0029000000213
+      },
+      "above_4_9A": {
+        "samples": 250,
+        "longest_observed_contiguous_span_s": 9.900100000028033
+      },
+      "charge": {
+        "samples": 2679,
+        "longest_observed_contiguous_span_s": 75.6996000000072
+      }
+    }
+  },
+  {
+    "role": "development",
+    "cell": "P13",
+    "actual_fit_current_min_A": -6.724884033203125,
+    "actual_fit_current_max_A": 19.291671752929688,
+    "unsupported_reference_rows": 3689,
+    "surface_min_C": 22.80319595336914,
+    "surface_max_C": 27.32077407836914,
+    "bands": {
+      "rest": {
+        "samples": 29235,
+        "longest_observed_contiguous_span_s": 3599.001700000008
+      },
+      "near_equal_share_3_64A": {
+        "samples": 2,
+        "longest_observed_contiguous_span_s": 0.09939999999187421
+      },
+      "4_85A_plateau": {
+        "samples": 1805,
+        "longest_observed_contiguous_span_s": 359.00160000000324
+      },
+      "above_4_9A": {
+        "samples": 250,
+        "longest_observed_contiguous_span_s": 9.900599999993574
+      },
+      "charge": {
+        "samples": 2674,
+        "longest_observed_contiguous_span_s": 75.70040000000154
+      }
+    }
+  },
+  {
+    "role": "development",
+    "cell": "P16",
+    "actual_fit_current_min_A": -6.7288970947265625,
+    "actual_fit_current_max_A": 19.28643035888672,
+    "unsupported_reference_rows": 3689,
+    "surface_min_C": 22.24995994567871,
+    "surface_max_C": 26.127899169921875,
+    "bands": {
+      "rest": {
+        "samples": 29231,
+        "longest_observed_contiguous_span_s": 3599.0039000000106
+      },
+      "near_equal_share_3_64A": {
+        "samples": 2,
+        "longest_observed_contiguous_span_s": 0.09979999999632128
+      },
+      "4_85A_plateau": {
+        "samples": 1805,
+        "longest_observed_contiguous_span_s": 359.0032000000065
+      },
+      "above_4_9A": {
+        "samples": 250,
+        "longest_observed_contiguous_span_s": 9.899200000014389
+      },
+      "charge": {
+        "samples": 2682,
+        "longest_observed_contiguous_span_s": 75.70080000000598
+      }
+    }
+  },
+  {
+    "role": "development",
+    "cell": "P17",
+    "actual_fit_current_min_A": -6.7309417724609375,
+    "actual_fit_current_max_A": 19.301010131835938,
+    "unsupported_reference_rows": 3689,
+    "surface_min_C": 22.803194046020508,
+    "surface_max_C": 27.109357833862305,
+    "bands": {
+      "rest": {
+        "samples": 29231,
+        "longest_observed_contiguous_span_s": 3599.0014999999985
+      },
+      "near_equal_share_3_64A": {
+        "samples": 2,
+        "longest_observed_contiguous_span_s": 0.09970000000612345
+      },
+      "4_85A_plateau": {
+        "samples": 1805,
+        "longest_observed_contiguous_span_s": 359.0014000000083
+      },
+      "above_4_9A": {
+        "samples": 250,
+        "longest_observed_contiguous_span_s": 9.900499999988824
+      },
+      "charge": {
+        "samples": 2679,
+        "longest_observed_contiguous_span_s": 75.70089999999618
+      }
+    }
+  },
+  {
+    "role": "development",
+    "cell": "P19",
+    "actual_fit_current_min_A": -6.7266845703125,
+    "actual_fit_current_max_A": 19.29181671142578,
+    "unsupported_reference_rows": 3689,
+    "surface_min_C": 22.815807342529297,
+    "surface_max_C": 26.86036491394043,
+    "bands": {
+      "rest": {
+        "samples": 29235,
+        "longest_observed_contiguous_span_s": 3599.0016999999934
+      },
+      "near_equal_share_3_64A": {
+        "samples": 2,
+        "longest_observed_contiguous_span_s": 0.10050000000046566
+      },
+      "4_85A_plateau": {
+        "samples": 1805,
+        "longest_observed_contiguous_span_s": 359.0020000000077
+      },
+      "above_4_9A": {
+        "samples": 250,
+        "longest_observed_contiguous_span_s": 9.901200000022072
+      },
+      "charge": {
+        "samples": 2674,
+        "longest_observed_contiguous_span_s": 75.69949999998789
+      }
+    }
+  },
+  {
+    "role": "fresh",
+    "cell": "P2",
+    "actual_fit_current_min_A": -6.7234344482421875,
+    "actual_fit_current_max_A": 19.286109924316406,
+    "unsupported_reference_rows": 3689,
+    "surface_min_C": 22.141969680786133,
+    "surface_max_C": 26.078033447265625,
+    "bands": {
+      "rest": {
+        "samples": 29232,
+        "longest_observed_contiguous_span_s": 3599.002299999993
+      },
+      "near_equal_share_3_64A": {
+        "samples": 2,
+        "longest_observed_contiguous_span_s": 0.09999999999126885
+      },
+      "4_85A_plateau": {
+        "samples": 1805,
+        "longest_observed_contiguous_span_s": 359.0027999999875
+      },
+      "above_4_9A": {
+        "samples": 250,
+        "longest_observed_contiguous_span_s": 9.900200000003679
+      },
+      "charge": {
+        "samples": 2680,
+        "longest_observed_contiguous_span_s": 75.70069999998668
+      }
+    }
+  },
+  {
+    "role": "fresh",
+    "cell": "P5",
+    "actual_fit_current_min_A": -6.7222137451171875,
+    "actual_fit_current_max_A": 19.295997619628906,
+    "unsupported_reference_rows": 3689,
+    "surface_min_C": 22.853179931640625,
+    "surface_max_C": 27.049278259277344,
+    "bands": {
+      "rest": {
+        "samples": 29234,
+        "longest_observed_contiguous_span_s": 3599.0014000000083
+      },
+      "near_equal_share_3_64A": {
+        "samples": 2,
+        "longest_observed_contiguous_span_s": 0.09990000000107102
+      },
+      "4_85A_plateau": {
+        "samples": 1805,
+        "longest_observed_contiguous_span_s": 359.00169999999343
+      },
+      "above_4_9A": {
+        "samples": 250,
+        "longest_observed_contiguous_span_s": 9.900300000008428
+      },
+      "charge": {
+        "samples": 2675,
+        "longest_observed_contiguous_span_s": 75.69999999999709
+      }
+    }
+  },
+  {
+    "role": "fresh",
+    "cell": "P8",
+    "actual_fit_current_min_A": -6.6912841796875,
+    "actual_fit_current_max_A": 19.35711669921875,
+    "unsupported_reference_rows": 3689,
+    "surface_min_C": 23.762374877929688,
+    "surface_max_C": 28.686555862426758,
+    "bands": {
+      "rest": {
+        "samples": 29265,
+        "longest_observed_contiguous_span_s": 3599.0010000000184
+      },
+      "near_equal_share_3_64A": {
+        "samples": 2,
+        "longest_observed_contiguous_span_s": 0.09970000000612345
+      },
+      "4_85A_plateau": {
+        "samples": 1805,
+        "longest_observed_contiguous_span_s": 359.00130000000354
+      },
+      "above_4_9A": {
+        "samples": 250,
+        "longest_observed_contiguous_span_s": 9.900099999998929
+      },
+      "charge": {
+        "samples": 2619,
+        "longest_observed_contiguous_span_s": 75.39989999998943
+      }
+    }
+  }
+]

@@ -1,0 +1,128 @@
+{
+  "data_kind": "synthetic_fixture",
+  "experimental_validation": "awaiting suitable measurements",
+  "decision": "insufficient evidence",
+  "validation_report": "ingestion/validation.json",
+  "comparisons": {
+    "module_current_A": {
+      "unit": "A",
+      "n": 361,
+      "sample_rmse": 0.0,
+      "time_rmse": 0.0,
+      "bias": 0.0,
+      "maximum_abs": 0.0,
+      "worst_source_row": 1
+    },
+    "terminal_V": {
+      "unit": "V",
+      "n": 361,
+      "sample_rmse": 0.009999999999999837,
+      "time_rmse": 0.009999999999999837,
+      "bias": -0.009999999999999837,
+      "maximum_abs": 0.010000000000000231,
+      "worst_source_row": 7
+    },
+    "I1_A": {
+      "unit": "A",
+      "n": 361,
+      "sample_rmse": 2.337311630789803e-17,
+      "time_rmse": 2.3405556457178006e-17,
+      "bias": 1.2301640162051596e-18,
+      "maximum_abs": 4.440892098500626e-16,
+      "worst_source_row": 342
+    },
+    "I2_A": {
+      "unit": "A",
+      "n": 361,
+      "sample_rmse": 9.916373423265948e-17,
+      "time_rmse": 9.930136612989092e-17,
+      "bias": 9.841312129641277e-18,
+      "maximum_abs": 8.881784197001252e-16,
+      "worst_source_row": 187
+    },
+    "I3_A": {
+      "unit": "A",
+      "n": 361,
+      "sample_rmse": 6.610915615510631e-17,
+      "time_rmse": 6.409875621278546e-17,
+      "bias": -9.841312129641277e-18,
+      "maximum_abs": 4.440892098500626e-16,
+      "worst_source_row": 1
+    },
+    "I4_A": {
+      "unit": "A",
+      "n": 361,
+      "sample_rmse": 9.349246523159212e-17,
+      "time_rmse": 9.362222582871203e-17,
+      "bias": -1.9682624259282554e-17,
+      "maximum_abs": 4.440892098500626e-16,
+      "worst_source_row": 8
+    },
+    "V1_V": {
+      "unit": "V",
+      "n": 361,
+      "sample_rmse": 0.009999999999999827,
+      "time_rmse": 0.009999999999999827,
+      "bias": -0.009999999999999827,
+      "maximum_abs": 0.010000000000000231,
+      "worst_source_row": 7
+    },
+    "V2_V": {
+      "unit": "V",
+      "n": 361,
+      "sample_rmse": 0.009999999999999818,
+      "time_rmse": 0.00999999999999982,
+      "bias": -0.009999999999999818,
+      "maximum_abs": 0.010000000000000231,
+      "worst_source_row": 6
+    },
+    "V3_V": {
+      "unit": "V",
+      "n": 361,
+      "sample_rmse": 0.009999999999999834,
+      "time_rmse": 0.009999999999999834,
+      "bias": -0.009999999999999835,
+      "maximum_abs": 0.010000000000000231,
+      "worst_source_row": 1
+    },
+    "V4_V": {
+      "unit": "V",
+      "n": 361,
+      "sample_rmse": 0.009999999999999861,
+      "time_rmse": 0.00999999999999986,
+      "bias": -0.009999999999999861,
+      "maximum_abs": 0.010000000000000231,
+      "worst_source_row": 3
+    }
+  },
+  "issues": [
+    "Temperature has no model prediction; compare measured history to characterization evidence separately"
+  ],
+  "temperature_evidence": {
+    "ambient_C": {
+      "min_C": 23.0,
+      "max_C": 23.0
+    },
+    "surface1_C": {
+      "min_C": 23.0,
+      "max_C": 23.0
+    },
+    "surface2_C": {
+      "min_C": 23.0,
+      "max_C": 23.0
+    },
+    "surface3_C": {
+      "min_C": 23.0,
+      "max_C": 23.0
+    },
+    "surface4_C": {
+      "min_C": 23.0,
+      "max_C": 23.0
+    }
+  },
+  "status": "diagnostic comparison only; no accuracy pass configured",
+  "provenance": {
+    "run_configuration_sha256": "6d3d2f8060ec7e3aebac575b4e81feb91640facc6f773921fa242fffb680d9f4",
+    "trajectory_sha256": "0bd974aa7bff33739dc027bfbd28b99086f319172d36cf8c8eb0eef4b44248fd"
+  }
+}

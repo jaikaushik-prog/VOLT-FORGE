@@ -1,0 +1,1842 @@
+{
+  "development": {
+    "P7": {
+      "baseline": {
+        "primary_4_85A_discharge": {
+          "n": 1073,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 79.66342573086277,
+          "time_rmse_mV": 79.62013775542262,
+          "bias_mV": 74.69791645141231,
+          "max_abs_mV": 129.2703490587849,
+          "worst_source_row": 56382,
+          "worst_cycle": 8,
+          "duration_s": 1066.0065000000031
+        },
+        "primary_all_loaded": {
+          "n": 1958,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 59.89042596987553,
+          "time_rmse_mV": 76.89685245435251,
+          "bias_mV": 40.14756753507148,
+          "max_abs_mV": 129.2703490587849,
+          "worst_source_row": 56382,
+          "worst_cycle": 8,
+          "duration_s": 1145.9188000002905
+        },
+        "primary_rest": {
+          "n": 19227,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 10.843355444881194,
+          "time_rmse_mV": 13.39742667000041,
+          "bias_mV": 1.7825475039174419,
+          "max_abs_mV": 127.5405832449569,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.118999999999
+        },
+        "below_SOC_0_2": {
+          "n": 7276,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 22.03822209473406,
+          "time_rmse_mV": 22.648005552771856,
+          "bias_mV": 18.156817346963855,
+          "max_abs_mV": 142.75027906792732,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 3977.028951999997
+        }
+      },
+      "C1_rest_reference_R": {
+        "primary_4_85A_discharge": {
+          "n": 1073,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 31.643895684392273,
+          "time_rmse_mV": 31.525135689714876,
+          "bias_mV": 20.07516703816142,
+          "max_abs_mV": 66.3558603887723,
+          "worst_source_row": 40776,
+          "worst_cycle": 6,
+          "duration_s": 1066.0065000000031
+        },
+        "primary_all_loaded": {
+          "n": 1958,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 30.138073664328598,
+          "time_rmse_mV": 31.351208227903854,
+          "bias_mV": 2.2151937567070807,
+          "max_abs_mV": 74.2080540305631,
+          "worst_source_row": 47073,
+          "worst_cycle": 6,
+          "duration_s": 1145.9188000002905
+        },
+        "primary_rest": {
+          "n": 19227,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.295150218535065,
+          "time_rmse_mV": 14.02677838308319,
+          "bias_mV": -1.0994770503374618,
+          "max_abs_mV": 128.7313942651051,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.118999999999
+        },
+        "below_SOC_0_2": {
+          "n": 7276,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 40.78922112270372,
+          "time_rmse_mV": 36.65247112530302,
+          "bias_mV": -35.21154223962052,
+          "max_abs_mV": 168.0626686639974,
+          "worst_source_row": 61845,
+          "worst_cycle": 8,
+          "duration_s": 3977.028951999997
+        }
+      },
+      "C2_rest_reference_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1073,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.426058970616047,
+          "time_rmse_mV": 13.402516622114778,
+          "bias_mV": -0.9163462361869554,
+          "max_abs_mV": 28.9509093195263,
+          "worst_source_row": 25516,
+          "worst_cycle": 4,
+          "duration_s": 1066.0065000000031
+        },
+        "primary_all_loaded": {
+          "n": 1958,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 11.883609124254969,
+          "time_rmse_mV": 13.176660548218274,
+          "bias_mV": -1.1207778851620702,
+          "max_abs_mV": 28.9509093195263,
+          "worst_source_row": 25516,
+          "worst_cycle": 4,
+          "duration_s": 1145.9188000002905
+        },
+        "primary_rest": {
+          "n": 19227,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.70419100705151,
+          "time_rmse_mV": 9.303621634481264,
+          "bias_mV": -1.8214868115632565,
+          "max_abs_mV": 38.2795066482515,
+          "worst_source_row": 10338,
+          "worst_cycle": 2,
+          "duration_s": 11636.118999999999
+        },
+        "below_SOC_0_2": {
+          "n": 7276,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 36.69901075070751,
+          "time_rmse_mV": 36.34392891047387,
+          "bias_mV": -36.55701327925821,
+          "max_abs_mV": 50.1652124258611,
+          "worst_source_row": 61807,
+          "worst_cycle": 8,
+          "duration_s": 3977.028951999997
+        }
+      },
+      "C3_rest_reference_SOC_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1073,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 16.44157519477915,
+          "time_rmse_mV": 16.44314660829924,
+          "bias_mV": 0.15066720864438846,
+          "max_abs_mV": 28.887594493518897,
+          "worst_source_row": 25518,
+          "worst_cycle": 4,
+          "duration_s": 1066.0065000000031
+        },
+        "primary_all_loaded": {
+          "n": 1958,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.869561941591437,
+          "time_rmse_mV": 16.07382611115826,
+          "bias_mV": -0.35173811949238265,
+          "max_abs_mV": 28.887594493518897,
+          "worst_source_row": 25518,
+          "worst_cycle": 4,
+          "duration_s": 1145.9188000002905
+        },
+        "primary_rest": {
+          "n": 19227,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.600650586851502,
+          "time_rmse_mV": 9.124877699455977,
+          "bias_mV": -1.7875931202843807,
+          "max_abs_mV": 34.653723927509,
+          "worst_source_row": 41250,
+          "worst_cycle": 6,
+          "duration_s": 11636.118999999999
+        },
+        "below_SOC_0_2": {
+          "n": 7276,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 37.02240449355676,
+          "time_rmse_mV": 36.801430249365445,
+          "bias_mV": -36.805592863507954,
+          "max_abs_mV": 66.7618977046173,
+          "worst_source_row": 56407,
+          "worst_cycle": 8,
+          "duration_s": 3977.028951999997
+        }
+      }
+    },
+    "P4": {
+      "baseline": {
+        "primary_4_85A_discharge": {
+          "n": 1067,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 79.62283585781785,
+          "time_rmse_mV": 79.57965108944926,
+          "bias_mV": 74.52069837098458,
+          "max_abs_mV": 131.3529261030273,
+          "worst_source_row": 56374,
+          "worst_cycle": 8,
+          "duration_s": 1060.0031999999992
+        },
+        "primary_all_loaded": {
+          "n": 1950,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 59.78523773834978,
+          "time_rmse_mV": 76.85094914813433,
+          "bias_mV": 38.647335557876616,
+          "max_abs_mV": 131.3529261030273,
+          "worst_source_row": 56374,
+          "worst_cycle": 8,
+          "duration_s": 1139.7140000000545
+        },
+        "primary_rest": {
+          "n": 19224,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 10.954650325983332,
+          "time_rmse_mV": 13.544319830816477,
+          "bias_mV": 1.899024892494222,
+          "max_abs_mV": 127.9632127104686,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.113799999977
+        },
+        "below_SOC_0_2": {
+          "n": 7284,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 25.533370585442658,
+          "time_rmse_mV": 25.46312477135692,
+          "bias_mV": 20.139573051077488,
+          "max_abs_mV": 147.24852108246898,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 3985.020159999982
+        }
+      },
+      "C1_rest_reference_R": {
+        "primary_4_85A_discharge": {
+          "n": 1067,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 33.69709912162765,
+          "time_rmse_mV": 33.58858463658832,
+          "bias_mV": 23.091434359421243,
+          "max_abs_mV": 63.709919981138604,
+          "worst_source_row": 40776,
+          "worst_cycle": 6,
+          "duration_s": 1060.0031999999992
+        },
+        "primary_all_loaded": {
+          "n": 1950,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 31.462075253711657,
+          "time_rmse_mV": 33.315441963311514,
+          "bias_mV": 2.9279600416570335,
+          "max_abs_mV": 83.5089180416566,
+          "worst_source_row": 47073,
+          "worst_cycle": 6,
+          "duration_s": 1139.7140000000545
+        },
+        "primary_rest": {
+          "n": 19224,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.272847481079198,
+          "time_rmse_mV": 14.066798873792967,
+          "bias_mV": -0.9587802905785412,
+          "max_abs_mV": 129.0790112601247,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.113799999977
+        },
+        "below_SOC_0_2": {
+          "n": 7284,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 43.631503998491375,
+          "time_rmse_mV": 38.24273133213996,
+          "bias_mV": -36.59508881661313,
+          "max_abs_mV": 197.1423311658737,
+          "worst_source_row": 61845,
+          "worst_cycle": 8,
+          "duration_s": 3985.020159999982
+        }
+      },
+      "C2_rest_reference_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1067,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 15.900030636404459,
+          "time_rmse_mV": 15.861996223660327,
+          "bias_mV": -0.2476018297770647,
+          "max_abs_mV": 39.6084008955339,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1060.0031999999992
+        },
+        "primary_all_loaded": {
+          "n": 1950,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 15.266965879230897,
+          "time_rmse_mV": 15.772954192024962,
+          "bias_mV": -0.699161823596304,
+          "max_abs_mV": 39.6084008955339,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1139.7140000000545
+        },
+        "primary_rest": {
+          "n": 19224,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.813263845248477,
+          "time_rmse_mV": 9.524331511863352,
+          "bias_mV": -1.7598565581234722,
+          "max_abs_mV": 51.6757265170215,
+          "worst_source_row": 10336,
+          "worst_cycle": 2,
+          "duration_s": 11636.113799999977
+        },
+        "below_SOC_0_2": {
+          "n": 7284,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 38.50461620058498,
+          "time_rmse_mV": 37.915484369857424,
+          "bias_mV": -38.15059053430408,
+          "max_abs_mV": 65.5421690382582,
+          "worst_source_row": 61895,
+          "worst_cycle": 8,
+          "duration_s": 3985.020159999982
+        }
+      },
+      "C3_rest_reference_SOC_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1067,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 18.689854227811526,
+          "time_rmse_mV": 18.67905081112471,
+          "bias_mV": 0.9611437411023621,
+          "max_abs_mV": 39.9989952857215,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1060.0031999999992
+        },
+        "primary_all_loaded": {
+          "n": 1950,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 16.914039045363154,
+          "time_rmse_mV": 18.423051718032916,
+          "bias_mV": 0.20136022186684863,
+          "max_abs_mV": 39.9989952857215,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1139.7140000000545
+        },
+        "primary_rest": {
+          "n": 19224,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.660949396112912,
+          "time_rmse_mV": 9.28068006375044,
+          "bias_mV": -1.7255604499344335,
+          "max_abs_mV": 40.1712851197548,
+          "worst_source_row": 10337,
+          "worst_cycle": 2,
+          "duration_s": 11636.113799999977
+        },
+        "below_SOC_0_2": {
+          "n": 7284,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 38.81496361487206,
+          "time_rmse_mV": 38.34890433346128,
+          "bias_mV": -38.38489450386587,
+          "max_abs_mV": 75.7492226716265,
+          "worst_source_row": 56405,
+          "worst_cycle": 8,
+          "duration_s": 3985.020159999982
+        }
+      }
+    },
+    "P10": {
+      "baseline": {
+        "primary_4_85A_discharge": {
+          "n": 1065,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 79.31311435933307,
+          "time_rmse_mV": 79.26916452780185,
+          "bias_mV": 74.30244075826941,
+          "max_abs_mV": 130.3797648548408,
+          "worst_source_row": 56372,
+          "worst_cycle": 8,
+          "duration_s": 1058.0060000000467
+        },
+        "primary_all_loaded": {
+          "n": 1947,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 59.58577914464588,
+          "time_rmse_mV": 76.55042288537736,
+          "bias_mV": 39.58588722259538,
+          "max_abs_mV": 130.3797648548408,
+          "worst_source_row": 56372,
+          "worst_cycle": 8,
+          "duration_s": 1137.6099000000486
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 10.851642421825629,
+          "time_rmse_mV": 13.426640825327553,
+          "bias_mV": 1.8733242152752236,
+          "max_abs_mV": 127.42334553853141,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.118699999972
+        },
+        "below_SOC_0_2": {
+          "n": 7286,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 25.150519429739976,
+          "time_rmse_mV": 26.049749648091694,
+          "bias_mV": 21.163882927030837,
+          "max_abs_mV": 147.2406984155569,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 3987.0441360000077
+        }
+      },
+      "C1_rest_reference_R": {
+        "primary_4_85A_discharge": {
+          "n": 1065,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 31.613960819087865,
+          "time_rmse_mV": 31.49366367756993,
+          "bias_mV": 19.999227338254776,
+          "max_abs_mV": 66.8284817904174,
+          "worst_source_row": 40776,
+          "worst_cycle": 6,
+          "duration_s": 1058.0060000000467
+        },
+        "primary_all_loaded": {
+          "n": 1947,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 30.211146304583217,
+          "time_rmse_mV": 31.33816682797038,
+          "bias_mV": 1.9011017977420748,
+          "max_abs_mV": 75.42192800371559,
+          "worst_source_row": 47073,
+          "worst_cycle": 6,
+          "duration_s": 1137.6099000000486
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.203552089064445,
+          "time_rmse_mV": 13.969403552568169,
+          "bias_mV": -0.9830656090908829,
+          "max_abs_mV": 128.8599556945602,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.118699999972
+        },
+        "below_SOC_0_2": {
+          "n": 7286,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 40.84479313570596,
+          "time_rmse_mV": 36.385785160347965,
+          "bias_mV": -34.84562178470636,
+          "max_abs_mV": 173.29842943622558,
+          "worst_source_row": 61845,
+          "worst_cycle": 8,
+          "duration_s": 3987.0441360000077
+        }
+      },
+      "C2_rest_reference_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1065,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.796759329511445,
+          "time_rmse_mV": 13.771468747240375,
+          "bias_mV": -1.3270352708743023,
+          "max_abs_mV": 29.9683312562737,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1058.0060000000467
+        },
+        "primary_all_loaded": {
+          "n": 1947,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.333788946988962,
+          "time_rmse_mV": 13.557439686842667,
+          "bias_mV": -1.3518286361923553,
+          "max_abs_mV": 29.9683312562737,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1137.6099000000486
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.580703625767457,
+          "time_rmse_mV": 9.226336078807616,
+          "bias_mV": -1.7211470702568457,
+          "max_abs_mV": 40.3907892711634,
+          "worst_source_row": 10337,
+          "worst_cycle": 2,
+          "duration_s": 11636.118699999972
+        },
+        "below_SOC_0_2": {
+          "n": 7286,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 36.45884087421065,
+          "time_rmse_mV": 35.994776293634715,
+          "bias_mV": -36.28248321841983,
+          "max_abs_mV": 51.320353221035504,
+          "worst_source_row": 61806,
+          "worst_cycle": 8,
+          "duration_s": 3987.0441360000077
+        }
+      },
+      "C3_rest_reference_SOC_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1065,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 16.747099116106632,
+          "time_rmse_mV": 16.74876363244603,
+          "bias_mV": 0.025293455414849234,
+          "max_abs_mV": 30.145382745414498,
+          "worst_source_row": 25520,
+          "worst_cycle": 4,
+          "duration_s": 1058.0060000000467
+        },
+        "primary_all_loaded": {
+          "n": 1947,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 14.2428514829205,
+          "time_rmse_mV": 16.388911399182053,
+          "bias_mV": -0.40507667706801836,
+          "max_abs_mV": 30.145382745414498,
+          "worst_source_row": 25520,
+          "worst_cycle": 4,
+          "duration_s": 1137.6099000000486
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.459899347823134,
+          "time_rmse_mV": 9.02038608843386,
+          "bias_mV": -1.6827452320718437,
+          "max_abs_mV": 34.432660013187,
+          "worst_source_row": 41251,
+          "worst_cycle": 6,
+          "duration_s": 11636.118699999972
+        },
+        "below_SOC_0_2": {
+          "n": 7286,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 36.8296700982498,
+          "time_rmse_mV": 36.52929410109231,
+          "bias_mV": -36.577257515814104,
+          "max_abs_mV": 69.5246071121684,
+          "worst_source_row": 56406,
+          "worst_cycle": 8,
+          "duration_s": 3987.0441360000077
+        }
+      }
+    },
+    "P13": {
+      "baseline": {
+        "primary_4_85A_discharge": {
+          "n": 1050,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 75.23974647655776,
+          "time_rmse_mV": 75.19392329796496,
+          "bias_mV": 70.16531222389534,
+          "max_abs_mV": 124.5150189488644,
+          "worst_source_row": 56352,
+          "worst_cycle": 8,
+          "duration_s": 1043.002399999983
+        },
+        "primary_all_loaded": {
+          "n": 1936,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 56.46235107841916,
+          "time_rmse_mV": 72.58496445701726,
+          "bias_mV": 37.2343825968653,
+          "max_abs_mV": 124.5150189488644,
+          "worst_source_row": 56352,
+          "worst_cycle": 8,
+          "duration_s": 1123.0041999999812
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 10.699236642448112,
+          "time_rmse_mV": 13.107735368515668,
+          "bias_mV": 1.5275072300642376,
+          "max_abs_mV": 124.22483659361599,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.113399999993
+        },
+        "below_SOC_0_2": {
+          "n": 7306,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 24.954146552565884,
+          "time_rmse_mV": 26.95278447946228,
+          "bias_mV": 20.69387085739987,
+          "max_abs_mV": 147.2897268873181,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 4007.019159999996
+        }
+      },
+      "C1_rest_reference_R": {
+        "primary_4_85A_discharge": {
+          "n": 1050,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 29.16916798973369,
+          "time_rmse_mV": 29.04649695307949,
+          "bias_mV": 17.114090611653364,
+          "max_abs_mV": 65.89536083538219,
+          "worst_source_row": 40776,
+          "worst_cycle": 6,
+          "duration_s": 1043.002399999983
+        },
+        "primary_all_loaded": {
+          "n": 1936,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 28.78069367124257,
+          "time_rmse_mV": 29.043184667325875,
+          "bias_mV": 0.4548746122822855,
+          "max_abs_mV": 73.3596859288261,
+          "worst_source_row": 47073,
+          "worst_cycle": 6,
+          "duration_s": 1123.0041999999812
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.229543322490825,
+          "time_rmse_mV": 13.727443291058254,
+          "bias_mV": -1.6262666064657987,
+          "max_abs_mV": 123.8601455673067,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.113399999993
+        },
+        "below_SOC_0_2": {
+          "n": 7306,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 48.20955280543736,
+          "time_rmse_mV": 44.87073494877893,
+          "bias_mV": -43.93474362007434,
+          "max_abs_mV": 165.949354181246,
+          "worst_source_row": 61845,
+          "worst_cycle": 8,
+          "duration_s": 4007.019159999996
+        }
+      },
+      "C2_rest_reference_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1050,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 14.083324444943148,
+          "time_rmse_mV": 14.061213579893865,
+          "bias_mV": -1.993418644025685,
+          "max_abs_mV": 26.1977459151863,
+          "worst_source_row": 25520,
+          "worst_cycle": 4,
+          "duration_s": 1043.002399999983
+        },
+        "primary_all_loaded": {
+          "n": 1936,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.033622421062367,
+          "time_rmse_mV": 13.760299570556118,
+          "bias_mV": -2.1263465303898017,
+          "max_abs_mV": 28.9037127365552,
+          "worst_source_row": 31322,
+          "worst_cycle": 4,
+          "duration_s": 1123.0041999999812
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.804701270302578,
+          "time_rmse_mV": 9.159275488507172,
+          "bias_mV": -2.5620922464480413,
+          "max_abs_mV": 38.5361033127065,
+          "worst_source_row": 10339,
+          "worst_cycle": 2,
+          "duration_s": 11636.113399999993
+        },
+        "below_SOC_0_2": {
+          "n": 7306,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 45.70377863609764,
+          "time_rmse_mV": 45.25332253475559,
+          "bias_mV": -45.581679269016206,
+          "max_abs_mV": 58.7194360300711,
+          "worst_source_row": 61801,
+          "worst_cycle": 8,
+          "duration_s": 4007.019159999996
+        }
+      },
+      "C3_rest_reference_SOC_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1050,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 16.84574423313069,
+          "time_rmse_mV": 16.851157898430593,
+          "bias_mV": -0.045689191798752034,
+          "max_abs_mV": 33.5042500193925,
+          "worst_source_row": 56352,
+          "worst_cycle": 8,
+          "duration_s": 1043.002399999983
+        },
+        "primary_all_loaded": {
+          "n": 1936,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.898321956609527,
+          "time_rmse_mV": 16.424497151877915,
+          "bias_mV": -0.9367576626051719,
+          "max_abs_mV": 33.5042500193925,
+          "worst_source_row": 56352,
+          "worst_cycle": 8,
+          "duration_s": 1123.0041999999812
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.658184551998879,
+          "time_rmse_mV": 8.90692965085068,
+          "bias_mV": -2.507941717599027,
+          "max_abs_mV": 27.7671524270815,
+          "worst_source_row": 41264,
+          "worst_cycle": 6,
+          "duration_s": 11636.113399999993
+        },
+        "below_SOC_0_2": {
+          "n": 7306,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 46.25501138289811,
+          "time_rmse_mV": 46.01817708347061,
+          "bias_mV": -46.0133745109315,
+          "max_abs_mV": 78.549870043024,
+          "worst_source_row": 56410,
+          "worst_cycle": 8,
+          "duration_s": 4007.019159999996
+        }
+      }
+    },
+    "P16": {
+      "baseline": {
+        "primary_4_85A_discharge": {
+          "n": 1083,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 76.5472351034487,
+          "time_rmse_mV": 76.47771394844771,
+          "bias_mV": 72.30935347456047,
+          "max_abs_mV": 121.1727170944896,
+          "worst_source_row": 56395,
+          "worst_cycle": 8,
+          "duration_s": 1077.0037999999786
+        },
+        "primary_all_loaded": {
+          "n": 2062,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 56.75035206549769,
+          "time_rmse_mV": 73.68573789145991,
+          "bias_mV": 40.00647913110081,
+          "max_abs_mV": 121.1727170944896,
+          "worst_source_row": 56395,
+          "worst_cycle": 8,
+          "duration_s": 1164.7241000001504
+        },
+        "primary_rest": {
+          "n": 19227,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.995431709624782,
+          "time_rmse_mV": 15.876718769390155,
+          "bias_mV": 6.796753678455857,
+          "max_abs_mV": 133.38576367040432,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 11636.219899999971
+        },
+        "below_SOC_0_2": {
+          "n": 0,
+          "unsupported_n": 0,
+          "sample_rmse_mV": null,
+          "time_rmse_mV": null,
+          "bias_mV": null,
+          "max_abs_mV": null
+        }
+      },
+      "C1_rest_reference_R": {
+        "primary_4_85A_discharge": {
+          "n": 1083,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 29.33896767375483,
+          "time_rmse_mV": 29.202831775956902,
+          "bias_mV": 18.186369368943467,
+          "max_abs_mV": 67.1787273965716,
+          "worst_source_row": 40776,
+          "worst_cycle": 6,
+          "duration_s": 1077.0037999999786
+        },
+        "primary_all_loaded": {
+          "n": 2062,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 29.819402683189388,
+          "time_rmse_mV": 29.36341602594107,
+          "bias_mV": -0.31272703023245,
+          "max_abs_mV": 82.562890823306,
+          "worst_source_row": 62369,
+          "worst_cycle": 8,
+          "duration_s": 1164.7241000001504
+        },
+        "primary_rest": {
+          "n": 19227,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 14.243007783804405,
+          "time_rmse_mV": 15.53566821903422,
+          "bias_mV": -3.3826757491911486,
+          "max_abs_mV": 123.6367263639368,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.219899999971
+        },
+        "below_SOC_0_2": {
+          "n": 0,
+          "unsupported_n": 0,
+          "sample_rmse_mV": null,
+          "time_rmse_mV": null,
+          "bias_mV": null,
+          "max_abs_mV": null
+        }
+      },
+      "C2_rest_reference_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1083,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.953470231284152,
+          "time_rmse_mV": 12.948705236922057,
+          "bias_mV": -2.9127448976411783,
+          "max_abs_mV": 29.429709397273697,
+          "worst_source_row": 25516,
+          "worst_cycle": 4,
+          "duration_s": 1077.0037999999786
+        },
+        "primary_all_loaded": {
+          "n": 2062,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.14164621846164,
+          "time_rmse_mV": 12.979640280310761,
+          "bias_mV": -3.910582165234147,
+          "max_abs_mV": 31.841558505686997,
+          "worst_source_row": 62091,
+          "worst_cycle": 8,
+          "duration_s": 1164.7241000001504
+        },
+        "primary_rest": {
+          "n": 19227,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.029992597491631,
+          "time_rmse_mV": 12.50969068968232,
+          "bias_mV": -4.177287928870542,
+          "max_abs_mV": 41.0535830913372,
+          "worst_source_row": 56410,
+          "worst_cycle": 8,
+          "duration_s": 11636.219899999971
+        },
+        "below_SOC_0_2": {
+          "n": 0,
+          "unsupported_n": 0,
+          "sample_rmse_mV": null,
+          "time_rmse_mV": null,
+          "bias_mV": null,
+          "max_abs_mV": null
+        }
+      },
+      "C3_rest_reference_SOC_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1083,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 15.699161654610696,
+          "time_rmse_mV": 15.683123350325506,
+          "bias_mV": -0.5109251291836286,
+          "max_abs_mV": 29.9437233680004,
+          "worst_source_row": 25516,
+          "worst_cycle": 4,
+          "duration_s": 1077.0037999999786
+        },
+        "primary_all_loaded": {
+          "n": 2062,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 15.17519426515193,
+          "time_rmse_mV": 15.601405071899842,
+          "bias_mV": -2.3892837717015585,
+          "max_abs_mV": 35.6901579239807,
+          "worst_source_row": 62034,
+          "worst_cycle": 8,
+          "duration_s": 1164.7241000001504
+        },
+        "primary_rest": {
+          "n": 19227,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.123726351581235,
+          "time_rmse_mV": 12.703196676555368,
+          "bias_mV": -3.963957477485859,
+          "max_abs_mV": 52.4006421774028,
+          "worst_source_row": 56403,
+          "worst_cycle": 8,
+          "duration_s": 11636.219899999971
+        },
+        "below_SOC_0_2": {
+          "n": 0,
+          "unsupported_n": 0,
+          "sample_rmse_mV": null,
+          "time_rmse_mV": null,
+          "bias_mV": null,
+          "max_abs_mV": null
+        }
+      }
+    },
+    "P17": {
+      "baseline": {
+        "primary_4_85A_discharge": {
+          "n": 1071,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 79.33954838714345,
+          "time_rmse_mV": 79.29822037400429,
+          "bias_mV": 74.41692981961857,
+          "max_abs_mV": 129.01748287900088,
+          "worst_source_row": 56380,
+          "worst_cycle": 8,
+          "duration_s": 1064.0023999999685
+        },
+        "primary_all_loaded": {
+          "n": 1955,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 59.64368648045696,
+          "time_rmse_mV": 76.58588165740355,
+          "bias_mV": 39.730036509815044,
+          "max_abs_mV": 129.01748287900088,
+          "worst_source_row": 56380,
+          "worst_cycle": 8,
+          "duration_s": 1143.8112999999794
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 10.804525633257061,
+          "time_rmse_mV": 13.357085716312657,
+          "bias_mV": 1.873949170284883,
+          "max_abs_mV": 126.91699718436969,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.113399999953
+        },
+        "below_SOC_0_2": {
+          "n": 7278,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 23.212970131728447,
+          "time_rmse_mV": 23.79164183613251,
+          "bias_mV": 19.350596728633402,
+          "max_abs_mV": 143.204791593869,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 3979.0281520000135
+        }
+      },
+      "C1_rest_reference_R": {
+        "primary_4_85A_discharge": {
+          "n": 1071,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 31.68729488041332,
+          "time_rmse_mV": 31.571035036642904,
+          "bias_mV": 20.337253348537086,
+          "max_abs_mV": 65.7735238487338,
+          "worst_source_row": 40776,
+          "worst_cycle": 6,
+          "duration_s": 1064.0023999999685
+        },
+        "primary_all_loaded": {
+          "n": 1955,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 30.184047239919842,
+          "time_rmse_mV": 31.39896036993548,
+          "bias_mV": 2.1760510098212107,
+          "max_abs_mV": 75.78664375482221,
+          "worst_source_row": 47073,
+          "worst_cycle": 6,
+          "duration_s": 1143.8112999999794
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.209314472435134,
+          "time_rmse_mV": 13.95141735864578,
+          "bias_mV": -1.0128176996731306,
+          "max_abs_mV": 128.15290045844648,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.113399999953
+        },
+        "below_SOC_0_2": {
+          "n": 7278,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 40.17796480900097,
+          "time_rmse_mV": 35.77790678803809,
+          "bias_mV": -34.319439793795546,
+          "max_abs_mV": 170.6172101156204,
+          "worst_source_row": 61845,
+          "worst_cycle": 8,
+          "duration_s": 3979.0281520000135
+        }
+      },
+      "C2_rest_reference_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1071,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.73048541506101,
+          "time_rmse_mV": 13.704385848375466,
+          "bias_mV": -0.8328964110353874,
+          "max_abs_mV": 30.2357557080066,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1064.0023999999685
+        },
+        "primary_all_loaded": {
+          "n": 1955,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.283932221276782,
+          "time_rmse_mV": 13.492628910436608,
+          "bias_mV": -1.1412121322805255,
+          "max_abs_mV": 30.2357557080066,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1143.8112999999794
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.645836044310386,
+          "time_rmse_mV": 9.279395966906698,
+          "bias_mV": -1.7419397625258644,
+          "max_abs_mV": 40.3842780948036,
+          "worst_source_row": 10337,
+          "worst_cycle": 2,
+          "duration_s": 11636.113399999953
+        },
+        "below_SOC_0_2": {
+          "n": 7278,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 35.8605643356688,
+          "time_rmse_mV": 35.43711156692663,
+          "bias_mV": -35.69094535582788,
+          "max_abs_mV": 51.059013441348796,
+          "worst_source_row": 56411,
+          "worst_cycle": 8,
+          "duration_s": 3979.0281520000135
+        }
+      },
+      "C3_rest_reference_SOC_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1071,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 16.656594083326265,
+          "time_rmse_mV": 16.65661727877393,
+          "bias_mV": 0.26194644708277376,
+          "max_abs_mV": 30.4651944051936,
+          "worst_source_row": 25518,
+          "worst_cycle": 4,
+          "duration_s": 1064.0023999999685
+        },
+        "primary_all_loaded": {
+          "n": 1955,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 14.18892087714976,
+          "time_rmse_mV": 16.30182601208539,
+          "bias_mV": -0.3402912624782522,
+          "max_abs_mV": 30.4651944051936,
+          "worst_source_row": 25518,
+          "worst_cycle": 4,
+          "duration_s": 1143.8112999999794
+        },
+        "primary_rest": {
+          "n": 19225,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.536436923785429,
+          "time_rmse_mV": 9.091688148515491,
+          "bias_mV": -1.7083600673231516,
+          "max_abs_mV": 34.6248080785165,
+          "worst_source_row": 41254,
+          "worst_cycle": 6,
+          "duration_s": 11636.113399999953
+        },
+        "below_SOC_0_2": {
+          "n": 7278,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 36.167788899683636,
+          "time_rmse_mV": 35.88088263303031,
+          "bias_mV": -35.93130598625544,
+          "max_abs_mV": 66.7365795513474,
+          "worst_source_row": 56405,
+          "worst_cycle": 8,
+          "duration_s": 3979.0281520000135
+        }
+      }
+    },
+    "P19": {
+      "baseline": {
+        "primary_4_85A_discharge": {
+          "n": 1083,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 76.15386013613424,
+          "time_rmse_mV": 76.08751034075198,
+          "bias_mV": 72.04153816823978,
+          "max_abs_mV": 118.8915898672351,
+          "worst_source_row": 56395,
+          "worst_cycle": 8,
+          "duration_s": 1077.0031000000163
+        },
+        "primary_all_loaded": {
+          "n": 2068,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 56.49233156256248,
+          "time_rmse_mV": 73.30331278659271,
+          "bias_mV": 40.3218822362493,
+          "max_abs_mV": 118.8915898672351,
+          "worst_source_row": 56395,
+          "worst_cycle": 8,
+          "duration_s": 1165.3122000000676
+        },
+        "primary_rest": {
+          "n": 19226,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.790929979333407,
+          "time_rmse_mV": 15.647250622097415,
+          "bias_mV": 6.727812514211571,
+          "max_abs_mV": 130.99999031626731,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 11636.113599999971
+        },
+        "below_SOC_0_2": {
+          "n": 0,
+          "unsupported_n": 0,
+          "sample_rmse_mV": null,
+          "time_rmse_mV": null,
+          "bias_mV": null,
+          "max_abs_mV": null
+        }
+      },
+      "C1_rest_reference_R": {
+        "primary_4_85A_discharge": {
+          "n": 1083,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 28.29299130770554,
+          "time_rmse_mV": 28.154600480507874,
+          "bias_mV": 16.863818248164517,
+          "max_abs_mV": 67.5029840580148,
+          "worst_source_row": 40776,
+          "worst_cycle": 6,
+          "duration_s": 1077.0031000000163
+        },
+        "primary_all_loaded": {
+          "n": 2068,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 29.16885877150248,
+          "time_rmse_mV": 28.37645386540133,
+          "bias_mV": -0.6388407777430989,
+          "max_abs_mV": 79.4529461197868,
+          "worst_source_row": 62369,
+          "worst_cycle": 8,
+          "duration_s": 1165.3122000000676
+        },
+        "primary_rest": {
+          "n": 19226,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 14.182565603928571,
+          "time_rmse_mV": 15.414754060150567,
+          "bias_mV": -3.509551602191902,
+          "max_abs_mV": 122.42041301433821,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.113599999971
+        },
+        "below_SOC_0_2": {
+          "n": 0,
+          "unsupported_n": 0,
+          "sample_rmse_mV": null,
+          "time_rmse_mV": null,
+          "bias_mV": null,
+          "max_abs_mV": null
+        }
+      },
+      "C2_rest_reference_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1083,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.023498116466124,
+          "time_rmse_mV": 12.022049422514614,
+          "bias_mV": -3.0880361617877576,
+          "max_abs_mV": 25.2329780288378,
+          "worst_source_row": 25518,
+          "worst_cycle": 4,
+          "duration_s": 1077.0031000000163
+        },
+        "primary_all_loaded": {
+          "n": 2068,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.165596278134037,
+          "time_rmse_mV": 12.043146743171093,
+          "bias_mV": -4.011686472153224,
+          "max_abs_mV": 29.4829223084565,
+          "worst_source_row": 62092,
+          "worst_cycle": 8,
+          "duration_s": 1165.3122000000676
+        },
+        "primary_rest": {
+          "n": 19226,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 11.99365152960155,
+          "time_rmse_mV": 12.429472033598783,
+          "bias_mV": -4.264470805430825,
+          "max_abs_mV": 37.500118067173396,
+          "worst_source_row": 56411,
+          "worst_cycle": 8,
+          "duration_s": 11636.113599999971
+        },
+        "below_SOC_0_2": {
+          "n": 0,
+          "unsupported_n": 0,
+          "sample_rmse_mV": null,
+          "time_rmse_mV": null,
+          "bias_mV": null,
+          "max_abs_mV": null
+        }
+      },
+      "C3_rest_reference_SOC_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1083,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 15.386572004254523,
+          "time_rmse_mV": 15.377417160843118,
+          "bias_mV": -0.40986251998661083,
+          "max_abs_mV": 26.391371812353103,
+          "worst_source_row": 25520,
+          "worst_cycle": 4,
+          "duration_s": 1077.0031000000163
+        },
+        "primary_all_loaded": {
+          "n": 2068,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 14.238775881744992,
+          "time_rmse_mV": 15.200520575985179,
+          "bias_mV": -2.338492503805127,
+          "max_abs_mV": 32.1762461934511,
+          "worst_source_row": 62092,
+          "worst_cycle": 8,
+          "duration_s": 1165.3122000000676
+        },
+        "primary_rest": {
+          "n": 19226,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.084500816243038,
+          "time_rmse_mV": 12.613682662250119,
+          "bias_mV": -4.274811470661556,
+          "max_abs_mV": 50.090436231198204,
+          "worst_source_row": 56406,
+          "worst_cycle": 8,
+          "duration_s": 11636.113599999971
+        },
+        "below_SOC_0_2": {
+          "n": 0,
+          "unsupported_n": 0,
+          "sample_rmse_mV": null,
+          "time_rmse_mV": null,
+          "bias_mV": null,
+          "max_abs_mV": null
+        }
+      }
+    }
+  },
+  "fresh": {
+    "P2": {
+      "baseline": {
+        "primary_4_85A_discharge": {
+          "n": 1069,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 78.86665840329273,
+          "time_rmse_mV": 78.82479958983002,
+          "bias_mV": 73.9246420054733,
+          "max_abs_mV": 129.77750479042118,
+          "worst_source_row": 56377,
+          "worst_cycle": 8,
+          "duration_s": 1062.0083999999624
+        },
+        "primary_all_loaded": {
+          "n": 1950,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 59.31703453333682,
+          "time_rmse_mV": 76.13476594873156,
+          "bias_mV": 39.48158878199374,
+          "max_abs_mV": 129.77750479042118,
+          "worst_source_row": 56377,
+          "worst_cycle": 8,
+          "duration_s": 1141.5094999998837
+        },
+        "primary_rest": {
+          "n": 19224,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 10.810517963712208,
+          "time_rmse_mV": 13.333558608521399,
+          "bias_mV": 1.8547778926444871,
+          "max_abs_mV": 126.1125497063009,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.118000000037
+        },
+        "below_SOC_0_2": {
+          "n": 7281,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 23.253784328502743,
+          "time_rmse_mV": 23.975311789646554,
+          "bias_mV": 19.15577141265221,
+          "max_abs_mV": 144.37841452494249,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 3982.0444359999965
+        }
+      },
+      "C1_rest_reference_R": {
+        "primary_4_85A_discharge": {
+          "n": 1069,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 31.444103099356514,
+          "time_rmse_mV": 31.327657531851823,
+          "bias_mV": 20.17124239808863,
+          "max_abs_mV": 65.7546217975095,
+          "worst_source_row": 40776,
+          "worst_cycle": 6,
+          "duration_s": 1062.0083999999624
+        },
+        "primary_all_loaded": {
+          "n": 1950,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 29.99370676991462,
+          "time_rmse_mV": 31.163804577196377,
+          "bias_mV": 2.119215267768893,
+          "max_abs_mV": 76.4639543173157,
+          "worst_source_row": 47073,
+          "worst_cycle": 6,
+          "duration_s": 1141.5094999998837
+        },
+        "primary_rest": {
+          "n": 19224,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.130855489129967,
+          "time_rmse_mV": 13.855328990235874,
+          "bias_mV": -0.9805922402941958,
+          "max_abs_mV": 127.48445128667902,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.118000000037
+        },
+        "below_SOC_0_2": {
+          "n": 7281,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 41.120759553826495,
+          "time_rmse_mV": 36.78067132932748,
+          "bias_mV": -35.34009335827096,
+          "max_abs_mV": 171.1145181748827,
+          "worst_source_row": 61844,
+          "worst_cycle": 8,
+          "duration_s": 3982.0444359999965
+        }
+      },
+      "C2_rest_reference_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1069,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.817903114930784,
+          "time_rmse_mV": 13.79140912015965,
+          "bias_mV": -1.0407988879273904,
+          "max_abs_mV": 30.305716329525698,
+          "worst_source_row": 25516,
+          "worst_cycle": 4,
+          "duration_s": 1062.0083999999624
+        },
+        "primary_all_loaded": {
+          "n": 1950,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.369810639418,
+          "time_rmse_mV": 13.580204113147703,
+          "bias_mV": -1.1701746160074071,
+          "max_abs_mV": 30.305716329525698,
+          "worst_source_row": 25516,
+          "worst_cycle": 4,
+          "duration_s": 1141.5094999998837
+        },
+        "primary_rest": {
+          "n": 19224,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.584752627160025,
+          "time_rmse_mV": 9.215510360221776,
+          "bias_mV": -1.7134746842771296,
+          "max_abs_mV": 40.9506340023275,
+          "worst_source_row": 10337,
+          "worst_cycle": 2,
+          "duration_s": 11636.118000000037
+        },
+        "below_SOC_0_2": {
+          "n": 7281,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 36.908206790042335,
+          "time_rmse_mV": 36.45358414553537,
+          "bias_mV": -36.73555980510217,
+          "max_abs_mV": 51.339685790269904,
+          "worst_source_row": 61807,
+          "worst_cycle": 8,
+          "duration_s": 3982.0444359999965
+        }
+      },
+      "C3_rest_reference_SOC_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1069,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 16.575859580744154,
+          "time_rmse_mV": 16.57510653654286,
+          "bias_mV": 0.2655592523641252,
+          "max_abs_mV": 30.4915555075235,
+          "worst_source_row": 25520,
+          "worst_cycle": 4,
+          "duration_s": 1062.0083999999624
+        },
+        "primary_all_loaded": {
+          "n": 1950,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 14.14878782576535,
+          "time_rmse_mV": 16.226704524174465,
+          "bias_mV": -0.2618485789447303,
+          "max_abs_mV": 30.4915555075235,
+          "worst_source_row": 25520,
+          "worst_cycle": 4,
+          "duration_s": 1141.5094999998837
+        },
+        "primary_rest": {
+          "n": 19224,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.47135994201737,
+          "time_rmse_mV": 9.024912276245157,
+          "bias_mV": -1.6775795302562126,
+          "max_abs_mV": 34.1314043414739,
+          "worst_source_row": 41257,
+          "worst_cycle": 6,
+          "duration_s": 11636.118000000037
+        },
+        "below_SOC_0_2": {
+          "n": 7281,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 37.23038021527138,
+          "time_rmse_mV": 36.91654082800037,
+          "bias_mV": -36.9925895638022,
+          "max_abs_mV": 67.86174036636571,
+          "worst_source_row": 56406,
+          "worst_cycle": 8,
+          "duration_s": 3982.0444359999965
+        }
+      }
+    },
+    "P5": {
+      "baseline": {
+        "primary_4_85A_discharge": {
+          "n": 1075,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 79.76163195192963,
+          "time_rmse_mV": 79.72145882924029,
+          "bias_mV": 74.86793542821859,
+          "max_abs_mV": 129.546851868767,
+          "worst_source_row": 56385,
+          "worst_cycle": 8,
+          "duration_s": 1068.0032999999767
+        },
+        "primary_all_loaded": {
+          "n": 1963,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 59.997387164652835,
+          "time_rmse_mV": 76.9952945144339,
+          "bias_mV": 40.49108141607613,
+          "max_abs_mV": 129.546851868767,
+          "worst_source_row": 56385,
+          "worst_cycle": 8,
+          "duration_s": 1148.2045000000908
+        },
+        "primary_rest": {
+          "n": 19223,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 10.733996584440643,
+          "time_rmse_mV": 13.259526737054584,
+          "bias_mV": 1.7572008846930356,
+          "max_abs_mV": 126.78959405149509,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.11319999996
+        },
+        "below_SOC_0_2": {
+          "n": 7273,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 22.655765390905785,
+          "time_rmse_mV": 23.376197056408916,
+          "bias_mV": 19.534548886642437,
+          "max_abs_mV": 142.4944600180238,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 3974.012068000011
+        }
+      },
+      "C1_rest_reference_R": {
+        "primary_4_85A_discharge": {
+          "n": 1075,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 30.939213223592596,
+          "time_rmse_mV": 30.817995132567518,
+          "bias_mV": 19.09899676990213,
+          "max_abs_mV": 67.6012096129397,
+          "worst_source_row": 40776,
+          "worst_cycle": 6,
+          "duration_s": 1068.0032999999767
+        },
+        "primary_all_loaded": {
+          "n": 1963,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 29.78351583482308,
+          "time_rmse_mV": 30.693542199541543,
+          "bias_mV": 1.8635678269790656,
+          "max_abs_mV": 71.5843854925832,
+          "worst_source_row": 47073,
+          "worst_cycle": 6,
+          "duration_s": 1148.2045000000908
+        },
+        "primary_rest": {
+          "n": 19223,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.20140682533089,
+          "time_rmse_mV": 13.915578309120825,
+          "bias_mV": -1.0374043628864327,
+          "max_abs_mV": 128.4319040811206,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.11319999996
+        },
+        "below_SOC_0_2": {
+          "n": 7273,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 37.806893690100466,
+          "time_rmse_mV": 33.77816838292284,
+          "bias_mV": -32.34003383494363,
+          "max_abs_mV": 157.5099806114295,
+          "worst_source_row": 61845,
+          "worst_cycle": 8,
+          "duration_s": 3974.012068000011
+        }
+      },
+      "C2_rest_reference_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1075,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 12.778863016108783,
+          "time_rmse_mV": 12.757099477804497,
+          "bias_mV": -1.1885696944010335,
+          "max_abs_mV": 25.6147550914898,
+          "worst_source_row": 25518,
+          "worst_cycle": 4,
+          "duration_s": 1068.0032999999767
+        },
+        "primary_all_loaded": {
+          "n": 1963,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 11.152698402568944,
+          "time_rmse_mV": 12.517608712015125,
+          "bias_mV": -1.4127791465877886,
+          "max_abs_mV": 25.6147550914898,
+          "worst_source_row": 25518,
+          "worst_cycle": 4,
+          "duration_s": 1148.2045000000908
+        },
+        "primary_rest": {
+          "n": 19223,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.59789943029187,
+          "time_rmse_mV": 9.191554892265593,
+          "bias_mV": -1.7327003683235815,
+          "max_abs_mV": 35.392368101672105,
+          "worst_source_row": 41246,
+          "worst_cycle": 6,
+          "duration_s": 11636.11319999996
+        },
+        "below_SOC_0_2": {
+          "n": 7273,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 33.737388859932516,
+          "time_rmse_mV": 33.37630651744498,
+          "bias_mV": -33.62164351039023,
+          "max_abs_mV": 45.968775907010404,
+          "worst_source_row": 61801,
+          "worst_cycle": 8,
+          "duration_s": 3974.012068000011
+        }
+      },
+      "C3_rest_reference_SOC_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1075,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 15.784651984210328,
+          "time_rmse_mV": 15.789291255296334,
+          "bias_mV": -0.15807908627040423,
+          "max_abs_mV": 27.3430560538381,
+          "worst_source_row": 56385,
+          "worst_cycle": 8,
+          "duration_s": 1068.0032999999767
+        },
+        "primary_all_loaded": {
+          "n": 1963,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.17751101553358,
+          "time_rmse_mV": 15.413930204816056,
+          "bias_mV": -0.66782714890493,
+          "max_abs_mV": 27.3430560538381,
+          "worst_source_row": 56385,
+          "worst_cycle": 8,
+          "duration_s": 1148.2045000000908
+        },
+        "primary_rest": {
+          "n": 19223,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.510065287453063,
+          "time_rmse_mV": 9.033067595946925,
+          "bias_mV": -1.6973203104715928,
+          "max_abs_mV": 35.0043605964858,
+          "worst_source_row": 41248,
+          "worst_cycle": 6,
+          "duration_s": 11636.11319999996
+        },
+        "below_SOC_0_2": {
+          "n": 7273,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 34.06338595604562,
+          "time_rmse_mV": 33.83307615642085,
+          "bias_mV": -33.866263632047726,
+          "max_abs_mV": 62.267117234317205,
+          "worst_source_row": 56407,
+          "worst_cycle": 8,
+          "duration_s": 3974.012068000011
+        }
+      }
+    },
+    "P8": {
+      "baseline": {
+        "primary_4_85A_discharge": {
+          "n": 1068,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 85.0989455352439,
+          "time_rmse_mV": 85.08412625103848,
+          "bias_mV": 79.29442393155027,
+          "max_abs_mV": 149.9441336000719,
+          "worst_source_row": 56375,
+          "worst_cycle": 8,
+          "duration_s": 1061.0023000000128
+        },
+        "primary_all_loaded": {
+          "n": 1970,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 63.411417303400626,
+          "time_rmse_mV": 82.04249518953029,
+          "bias_mV": 42.5161369650094,
+          "max_abs_mV": 149.9441336000719,
+          "worst_source_row": 56375,
+          "worst_cycle": 8,
+          "duration_s": 1143.606600000012
+        },
+        "primary_rest": {
+          "n": 19236,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 11.043678955915809,
+          "time_rmse_mV": 13.568568216571338,
+          "bias_mV": 3.348442213383059,
+          "max_abs_mV": 128.3216743896758,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.406399999982
+        },
+        "below_SOC_0_2": {
+          "n": 7282,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 60.99055955842002,
+          "time_rmse_mV": 61.599927883858975,
+          "bias_mV": 60.30859560865048,
+          "max_abs_mV": 165.5875868906493,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 3983.2897959999973
+        }
+      },
+      "C1_rest_reference_R": {
+        "primary_4_85A_discharge": {
+          "n": 1068,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 33.224944301838065,
+          "time_rmse_mV": 33.128672193049916,
+          "bias_mV": 22.26800126965885,
+          "max_abs_mV": 63.948141705995205,
+          "worst_source_row": 40776,
+          "worst_cycle": 6,
+          "duration_s": 1061.0023000000128
+        },
+        "primary_all_loaded": {
+          "n": 1970,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 30.93080204519031,
+          "time_rmse_mV": 32.83028977640052,
+          "bias_mV": 3.48713730716749,
+          "max_abs_mV": 81.5590371597707,
+          "worst_source_row": 16487,
+          "worst_cycle": 2,
+          "duration_s": 1143.606600000012
+        },
+        "primary_rest": {
+          "n": 19236,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.146371078585187,
+          "time_rmse_mV": 14.696344904134387,
+          "bias_mV": -0.44669436951070135,
+          "max_abs_mV": 127.4749693688099,
+          "worst_source_row": 41137,
+          "worst_cycle": 6,
+          "duration_s": 11636.406399999982
+        },
+        "below_SOC_0_2": {
+          "n": 7282,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 14.916601530678776,
+          "time_rmse_mV": 10.558536632783632,
+          "bias_mV": -3.2018949568165587,
+          "max_abs_mV": 102.58598590657229,
+          "worst_source_row": 56396,
+          "worst_cycle": 8,
+          "duration_s": 3983.2897959999973
+        }
+      },
+      "C2_rest_reference_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1068,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 13.407341537386603,
+          "time_rmse_mV": 13.359818979137408,
+          "bias_mV": 0.702400378059458,
+          "max_abs_mV": 31.820388381449398,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1061.0023000000128
+        },
+        "primary_all_loaded": {
+          "n": 1970,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 14.092126982203526,
+          "time_rmse_mV": 13.476834514925581,
+          "bias_mV": -0.6168655990277755,
+          "max_abs_mV": 37.247591883040606,
+          "worst_source_row": 15917,
+          "worst_cycle": 2,
+          "duration_s": 1143.606600000012
+        },
+        "primary_rest": {
+          "n": 19236,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 10.373225897444573,
+          "time_rmse_mV": 10.983880978252737,
+          "bias_mV": -0.9579267544576027,
+          "max_abs_mV": 44.6521396985377,
+          "worst_source_row": 10336,
+          "worst_cycle": 2,
+          "duration_s": 11636.406399999982
+        },
+        "below_SOC_0_2": {
+          "n": 7282,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 8.1422806124075,
+          "time_rmse_mV": 6.0774748633850955,
+          "bias_mV": -4.4246954041604,
+          "max_abs_mV": 43.0485407335172,
+          "worst_source_row": 62128,
+          "worst_cycle": 8,
+          "duration_s": 3983.2897959999973
+        }
+      },
+      "C3_rest_reference_SOC_RC": {
+        "primary_4_85A_discharge": {
+          "n": 1068,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 15.56535950840652,
+          "time_rmse_mV": 15.552726112603407,
+          "bias_mV": 1.4612195180321323,
+          "max_abs_mV": 37.8035280598338,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1061.0023000000128
+        },
+        "primary_all_loaded": {
+          "n": 1970,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 15.12209449422543,
+          "time_rmse_mV": 15.488973221414593,
+          "bias_mV": 0.18263573677760664,
+          "max_abs_mV": 37.8035280598338,
+          "worst_source_row": 25515,
+          "worst_cycle": 4,
+          "duration_s": 1143.606600000012
+        },
+        "primary_rest": {
+          "n": 19236,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 10.354371975405943,
+          "time_rmse_mV": 10.957589752113998,
+          "bias_mV": -0.9389636087309362,
+          "max_abs_mV": 40.0386095755109,
+          "worst_source_row": 41227,
+          "worst_cycle": 6,
+          "duration_s": 11636.406399999982
+        },
+        "below_SOC_0_2": {
+          "n": 7282,
+          "unsupported_n": 0,
+          "sample_rmse_mV": 5.031189318041954,
+          "time_rmse_mV": 4.874823119375458,
+          "bias_mV": -4.354865568064276,
+          "max_abs_mV": 21.061267634602,
+          "worst_source_row": 61801,
+          "worst_cycle": 8,
+          "duration_s": 3983.2897959999973
+        }
+      }
+    }
+  }
+}

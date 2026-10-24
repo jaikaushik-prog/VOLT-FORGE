@@ -1,12 +1,119 @@
-# VOLT-FORGE data readiness and provisional modelling
+# VOLT-FORGE electrical model research
 
 Executable inspection of the **real Piombo et al. parallel-cell dataset**, DOI
 [10.17632/zh58byr53c.2](https://data.mendeley.com/datasets/zh58byr53c/2).
-Read [MODELLING_DECISION.md](MODELLING_DECISION.md) for the current decision and
+Read [SIMULATION_READINESS.md](SIMULATION_READINESS.md) for the current four-cell
+electrical CLI and validation-backend status;
+[REFERENCE_INITIAL_STATE_DECISION.md](REFERENCE_INITIAL_STATE_DECISION.md)
+for the completed bounded investigation, which keeps v2 frozen;
+[MODEL_IMPROVEMENT_DECISION.md](MODEL_IMPROVEMENT_DECISION.md) for the v2 decision,
+[MODELLING_DECISION.md](MODELLING_DECISION.md) for the sealed v1 stage and
 [DATA_READINESS.md](DATA_READINESS.md) for the original inspection record.
-The project includes provisional cell identification and a separate static
-ladder solver. Experimental module validation is pending. There is no optimizer,
+The project includes provisional cell identification, a static ladder solver
+and a dynamic four-cell command-line backend. Experimental module validation is pending. There is no optimizer,
 ranked repair result or web application.
+
+Public project repository: https://github.com/jaikaushik-prog/VOLT-FORGE.
+Local upload preparation is described in [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md).
+
+## Four-cell electrical simulation backend
+
+The frozen v2 model now supports configured rails, initial states, piecewise
+loads, SOC/polarization evolution, electrical losses, power/energy accounting,
+coverage flags and future-measurement ingestion. Four manual cases and separate
+sensitivities are supplied; there is no automatic ranking. Device voltage and
+excursion requirements remain unset: **requirement not configured**, never pass.
+All design decisions return **insufficient evidence**; experimental validation
+is **awaiting suitable measurements**. No thermal model is included.
+
+```powershell
+$env:PYTHONPATH = 'src'
+& C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation configure
+& C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation simulate
+& C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation compare
+& C:\Users\DELL\anaconda3\python.exe scripts\make_module_fixture.py
+& C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation validate --measurements tests/fixtures/module_synthetic --out reports/module_simulation_v1/synthetic_ingestion
+& C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation compare --measurements tests/fixtures/module_synthetic --out reports/module_simulation_v1/synthetic_comparison
+& C:\Users\DELL\anaconda3\python.exe -m pytest -q --junitxml=reports/module_simulation_v1/pytest.xml
+```
+
+The fixture is explicitly synthetic and contains a known voltage offset; it
+tests ingestion plumbing, not experimental accuracy. See the
+[import specification](MEASUREMENT_IMPORT_SPEC.md),
+[predeclared application](configs/module_application_v1.json),
+[scenario plan](configs/module_scenarios_v1.json) and
+[comparison/plots](reports/module_simulation_v1/COMPARISON.md).
+All **75 tests pass**. The frozen v2/reference-investigation artifacts remain
+unchanged; no unused cell or protected module outcome was opened.
+
+## Bounded reference/initial-state investigation
+
+The 55% result is a reduction in prediction RMSE on the declared subset,
+not an improvement in battery performance. A bounded investigation on P7/P13/P19
+confirmed sensitivity to reference shape and the difficulty of separating SOC
+alignment from reference bias. It did not replace the frozen v2 model. All nine
+remaining unused cells are preserved; the app and optimizer stay paused.
+The actual load-voltage requirement and measurement uncertainty must establish
+an acceptance budget before another fitting sprint. See the decision above and
+the [prepared faculty/lab brief](reports/reference_initial_state_v1/LAB_REQUEST.md).
+
+```powershell
+$env:PYTHONPATH = 'src'
+& C:\Users\DELL\anaconda3\python.exe -m voltforge.models.reference_investigation verify
+& C:\Users\DELL\anaconda3\python.exe -m voltforge.models.reference_investigation run
+& C:\Users\DELL\anaconda3\python.exe -m pytest -q
+```
+
+At that completed stage, the suite passed 52 tests. That investigation binds 112 durable
+baseline artifacts and does not write v1/v2 outputs. Reproduction of historical
+v2 diagnostics below is unnecessary for the new investigation; avoid rewriting
+frozen artifacts with different formatting or software versions.
+
+## V2 improvement sprint
+
+The selected model uses a calibration-rest reference and one RC. Additional
+characterized-cell assessment improves primary-domain RMS error, but maximum
+errors still exceed the proposed voltage-decision budget. Module validation
+remains blocked by current-reference reconciliation. See the decision report
+for the exact operating case and the distinction between development, fresh
+characterized-cell assessment and unsupported transfer.
+
+Reproduce the completed results **without refitting**:
+
+```powershell
+$env:PYTHONPATH = 'src'
+& C:\Users\DELL\anaconda3\python.exe -m voltforge.models.improvement verify
+& C:\Users\DELL\anaconda3\python.exe -m voltforge.models.improvement assess
+& C:\Users\DELL\anaconda3\python.exe scripts\model_improvement_diagnostics.py
+& C:\Users\DELL\anaconda3\python.exe scripts\summarize_improvement.py
+& C:\Users\DELL\anaconda3\python.exe scripts\summarize_domains.py
+& C:\Users\DELL\anaconda3\python.exe scripts\check_coupling_imbalance.py
+& C:\Users\DELL\anaconda3\python.exe -m pytest -q
+```
+
+The report command reconstructs any missing v2 prediction CSVs from frozen
+parameters, preserving model seals. The upload bundle omits these large
+reproducible CSVs but includes numerical summaries, models, hashes and plots.
+The official dataset is required to reproduce calculations and all integration
+checks. Keep exact file bytes: `.gitattributes` disables line-ending conversion
+because the scientific seals hash code and artifacts.
+
+The original stage order was `improvement reserve`, `improvement develop`,
+`improvement calibrate-fresh`, then `improvement assess`. The `develop` command
+refuses to overwrite an existing procedure seal; do not delete seals to tune
+against opened evidence. A future iteration requires a versioned plan and new
+assessment allocation. The machine-readable plan and lock are
+`configs/model_improvement_v2*.json`; procedure/fresh-model seals are under
+`reports/improvement_v2/`.
+
+- [Complete comparison and plots](reports/improvement_v2/RESULTS.md)
+- [Load-only errors](reports/improvement_v2/LOAD_ERRORS.md)
+- [Frozen plan](MODEL_IMPROVEMENT_PLAN.md)
+- [Parameter stability](reports/improvement_v2/parameter_stability.json)
+- [Assumption sensitivity](reports/improvement_v2/assumption_sensitivity.json)
+- [Source/header evidence review](reports/improvement_v2/diagnosis/archive_metadata_evidence.json)
+- [Software coupling](reports/improvement_v2/software_coupling/results.json)
+- [Verification record](reports/improvement_v2/VERIFICATION.md)
 
 ## Reproduce the modelling and reconciliation sprint
 
@@ -131,7 +238,10 @@ MAT data are distinguished from original raw exports.
 - [Data dictionary](reports/DATA_DICTIONARY.md) and
   [parser limitations](reports/PARSER_NOTES.md).
 
-No source data are uploaded, published, or placed in a remote repository. This
-folder was not a Git repository; `.gitignore` is ready for later initialization.
-Synthetic values exist only inside software tests. Integration tests explicitly
-skip if the original archive is absent; they all ran with the actual archive here.
+The official raw archive and processed-data cache remain local and excluded
+from Git. Reports include attributed derived observations and predictions.
+The upload bundle is prepared locally; this session has not pushed it to GitHub.
+Synthetic values are confined to labelled software tests and coupling checks.
+Archive-dependent checks require the official download; all 75 tests ran with
+the actual archive present here. See the verification record for the scope of
+those checks.

@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "development_cells": ["P7", "P4", "P10", "P13", "P16", "P17", "P19"],
+  "fresh_cells": ["P2", "P5", "P8"],
+  "calibration_cycles": [1, 3, 5, 7, 9],
+  "evaluation_cycles": [2, 4, 6, 8],
+  "split_unit": "Complete source CycleIndex; v1 opened cells are used development evidence. Fresh cells permit their own declared calibration, not zero-shot inference.",
+  "intended_case": "LG M50T NMC P7/P17/P19/P13, 1s4p same-side ladder, nominal 1 mOhm per segment on each rail; 14.55 A discharge for 360 s after rest, starting SOC proxies 0.3 to 0.8, nominal 23 C ambient. Physical lead/contact values and initial states require confirmation.",
+  "primary_domain": {"soc_min": 0.2, "soc_max": 0.8, "current_min_A": -0.01, "current_max_A": 4.9, "surface_min_C": 22.0, "surface_max_C": 28.0},
+  "provisional_criterion": {"sample_rmse_mV": 10.0, "time_rmse_mV": 10.0, "abs_bias_mV": 5.0, "maximum_abs_mV": 25.0, "operational_voltage_threshold_V": 3.5, "total_guard_V": 0.05, "near_threshold_halfwidth_V": 0.1},
+  "budget_note": "Proposed research decision budget, not an established safety/manufacturer/application requirement: model 25 mV, instrumentation/reference 10 mV, initialization 10 mV, temperature transfer 5 mV; sum 50 mV. Last three allocations are unverified, so threshold classification is diagnostic only.",
+  "baseline": "v1 functional form: loaded C/20 curve plus piecewise-linear calibration late-rest corrections, constant R0 fitted on HPPC only. On all v2 cells use only allowed calibration cycles. Keep actual sealed-v1 predictions separately for diagnosis.",
+  "candidates": ["C1_rest_reference_R", "C2_rest_reference_RC", "C3_rest_reference_SOC_RC"],
+  "reference": "Monotone PCHIP through calibration cycles' last 30 s of step 11, plus cycle-1 initial step-9 last 30 s. Reject nonmonotonic anchors. No held voltage or end-value extrapolation; outside anchor domain return unsupported.",
+  "fit_coverage": "All step10..22 samples in calibration cycles, including 4.85 A x 360 s discharge, long rest, HPPC, multisine and final rest. Each cycle/phase gets equal weight; time-quadrature weights within each phase. Phases: step10, step11, steps12..15, steps17..22.",
+  "dynamics": "C1 constant R0; C2 constant R0/R1/tau; C3 piecewise-linear positive R0 and R1 at SOC .1/.5/.9 with one shared tau. Exact interval recurrence under left-held input; state zero at cycle start after preceding rest, never initialized from held voltage.",
+  "bounds": {"R0": [0.001, 0.15], "R1": [0.0001, 0.15], "tau_s": [1.0, 300.0], "tau_grid_points": 41, "soc_knots": [0.1, 0.5, 0.9]},
+  "selection": "Macro-average each development cell's primary-domain sample and time RMSE. Candidate must improve both by at least 20% against protocol-matched baseline, not increase maximum error, have interior positive parameters and (RC) 5%-SSE tau support excluding search endpoints and normalized sensitivity condition <1000 in every development cell. Choose simplest eligible model within 10% of best combined sample/time RMSE. If none eligible retain baseline. Acceptance is evaluated separately, not guaranteed by selection.",
+  "stability": "Leave one calibration cycle out of dynamic-parameter fit, fixed reference anchors; report parameter ranges, profiles, sensitivity condition. Not a metrological confidence interval. Sensitivity: +/-0.02 initial SOC at prediction, +/-1% capacity, right-held current, alternate loaded/rest reference and +/-5 mV initial polarization.",
+  "evaluation_policy": "Freeze plan/input lock before any candidate fitting; freeze executable procedure and selected model before accessing fresh calibration voltage; seal fresh calibrated parameters before fresh assessment voltage is scored. No post-assessment tuning. Additional characterized cells on same rig are not independent module validation.",
+  "no_module_correction": true
+}

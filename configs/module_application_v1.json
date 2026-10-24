@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "name": "VOLT-FORGE proposed six-minute electrical case",
+  "chemistry": "LG M50T NMC",
+  "topology": "1s4p same-side-terminal ladder",
+  "cell_order": ["P7", "P17", "P19", "P13"],
+  "cell_identity_evidence": "Dataset M1 nominal position order; actual sensor/hardware mapping remains an author question.",
+  "model_key": "C2_rest_reference_RC",
+  "model_directory": "reports/improvement_v2/development",
+  "parameter_classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV.",
+  "initial_soc": [0.70, 0.70, 0.70, 0.70],
+  "initial_polarization_V": [0.0, 0.0, 0.0, 0.0],
+  "initial_state_evidence": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer.",
+  "positive_rail_ohm": [0.001, 0.001, 0.001],
+  "negative_rail_ohm": [0.001, 0.001, 0.001],
+  "rail_evidence": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled.",
+  "load": [{"start_s": 0.0, "end_s": 360.0, "current_A": 14.55}],
+  "load_classification": "Proposed application requirement; discharge positive. Not an established competition requirement.",
+  "temperature": {
+    "assumed_ambient_C": 23.0,
+    "assumed_surface_C": [23.0, 23.0, 23.0, 23.0],
+    "evidence": "Nominal 23 C single-cell characterization; recorded surface temperature varied. V2 primary assessment subset 22-28 C. Module temperature history is unmeasured.",
+    "thermal_model": false,
+    "parameter_temperature_scaling": false
+  },
+  "requirements": {
+    "minimum_terminal_voltage_V": null,
+    "maximum_contiguous_excursion_s": null,
+    "documented_source": null
+  },
+  "dt_s": 0.25,
+  "reference_extrapolation": "forbidden",
+  "permit_unvalidated_waveform_transfer": true,
+  "required_outputs": {
+    "time": "s", "SOC": "fraction", "polarization": "V", "module_and_branch_current": "A",
+    "terminal_cell_and_rail_node_voltage": "V", "rail_segment_drop": "V", "power_and_resistive_loss": "W",
+    "delivered_and_loss_energy": "Wh", "charge_accounting": "A s", "coverage_intervals": "s"
+  },
+  "decision_status": "insufficient evidence",
+  "experimental_validation": "awaiting suitable measurements"
+}

@@ -1,0 +1,5911 @@
+{
+  "hypothesis": "Check for overlooked packaged code, coefficient objects, hidden worksheets, macros or external/embedded metadata.",
+  "inspected": "ZIP names, MAT variable headers/shapes/types, workbook structure only; no new module voltage/current outcomes.",
+  "extensions": {
+    ".mat": 140,
+    ".xlsx": 54
+  },
+  "members": [
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H1_Calibration.mat",
+      "variables": [
+        {
+          "name": "Data",
+          "shape": null,
+          "type": "MAT_class_17"
+        },
+        {
+          "name": "",
+          "shape": [
+            1,
+            181304
+          ],
+          "type": "MAT_class_9"
+        }
+      ],
+      "reader": "Opaque-safe MAT5 tag headers; no channel-value decoding"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H2_Calibration.mat",
+      "variables": [
+        {
+          "name": "Data",
+          "shape": null,
+          "type": "MAT_class_17"
+        },
+        {
+          "name": "",
+          "shape": [
+            1,
+            181304
+          ],
+          "type": "MAT_class_9"
+        }
+      ],
+      "reader": "Opaque-safe MAT5 tag headers; no channel-value decoding"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H4_Calibration.mat",
+      "variables": [
+        {
+          "name": "Data",
+          "shape": null,
+          "type": "MAT_class_17"
+        },
+        {
+          "name": "",
+          "shape": [
+            1,
+            181304
+          ],
+          "type": "MAT_class_9"
+        }
+      ],
+      "reader": "Opaque-safe MAT5 tag headers; no channel-value decoding"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H3_Calibration.mat",
+      "variables": [
+        {
+          "name": "Data",
+          "shape": null,
+          "type": "MAT_class_17"
+        },
+        {
+          "name": "",
+          "shape": [
+            1,
+            181304
+          ],
+          "type": "MAT_class_9"
+        }
+      ],
+      "reader": "Opaque-safe MAT5 tag headers; no channel-value decoding"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H5_Calibration.mat",
+      "variables": [
+        {
+          "name": "Data",
+          "shape": null,
+          "type": "MAT_class_17"
+        },
+        {
+          "name": "",
+          "shape": [
+            1,
+            181304
+          ],
+          "type": "MAT_class_9"
+        }
+      ],
+      "reader": "Opaque-safe MAT5 tag headers; no channel-value decoding"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H6_Calibration.mat",
+      "variables": [
+        {
+          "name": "Data",
+          "shape": null,
+          "type": "MAT_class_17"
+        },
+        {
+          "name": "",
+          "shape": [
+            1,
+            181304
+          ],
+          "type": "MAT_class_9"
+        }
+      ],
+      "reader": "Opaque-safe MAT5 tag headers; no channel-value decoding"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H7_Calibration.mat",
+      "variables": [
+        {
+          "name": "Data",
+          "shape": null,
+          "type": "MAT_class_17"
+        },
+        {
+          "name": "",
+          "shape": [
+            1,
+            181304
+          ],
+          "type": "MAT_class_9"
+        }
+      ],
+      "reader": "Opaque-safe MAT5 tag headers; no channel-value decoding"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H8_Calibration.mat",
+      "variables": [
+        {
+          "name": "Data",
+          "shape": null,
+          "type": "MAT_class_17"
+        },
+        {
+          "name": "",
+          "shape": [
+            1,
+            181304
+          ],
+          "type": "MAT_class_9"
+        }
+      ],
+      "reader": "Opaque-safe MAT5 tag headers; no channel-value decoding"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/Aged_cells/HPPC_MS/HPPC_MultiSine_Y1.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            76710,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            76710,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            76710,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            76710,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            76710,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            76710,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/Aged_cells/HPPC_MS/HPPC_MultiSine_GS3.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            73109,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            73109,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            73109,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            73109,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            73109,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            73109,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/Aged_cells/Pseudo_OCV/OCVDis_Y1.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            6916,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            6916,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            6916,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            6916,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/Aged_cells/Pseudo_OCV/OCVDis_GS3.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7261,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7261,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7261,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7261,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F13.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F11.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F12.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F10.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F14.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F1.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F15.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F16.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F17.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F18.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F4.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F2.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F3.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F6.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F5.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F8.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F7.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/HPPC_MS/HPPC_MultiSine_F9.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F1.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7378,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7378,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7378,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7378,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F10.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7350,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7350,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7350,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7350,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F12.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7349,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7349,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7349,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7349,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F11.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7356,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7356,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7356,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7356,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F13.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7351,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7351,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7351,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7351,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F14.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7364,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7364,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7364,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7364,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F16.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7397,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7397,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7397,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7397,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F15.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7383,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7383,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7383,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7383,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F17.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7330,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7330,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7330,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7330,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F2.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7376,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7376,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7376,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7376,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F18.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7373,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7373,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7373,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7373,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F3.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7356,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7356,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7356,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7356,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F4.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7357,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7357,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7357,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7357,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F5.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7371,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7371,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7371,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7371,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F6.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7422,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7422,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7422,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7422,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F7.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7360,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7360,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7360,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7360,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F8.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7373,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7373,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7373,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7373,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NCA_cells/Pseudo_OCV/OCVDis_F9.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7378,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7378,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7378,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7378,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P10.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P11.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P14.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P12.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P13.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P16.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P17.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P18.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P15.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P19.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P2.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P20.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P5.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P3.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P4.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P8.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P6.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P7.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P9.mat",
+      "variables": [
+        {
+          "name": "CurrentData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "VoltageData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TimeData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "StepIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CycleIndex",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            71309,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P11.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7281,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7281,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7281,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7281,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P10.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7174,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7174,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7174,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7174,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P12.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7286,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7286,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7286,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7286,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P14.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7178,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7178,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7178,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7178,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P13.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7124,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7124,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7124,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7124,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P15.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7275,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7275,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7275,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7275,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P16.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7278,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7278,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7278,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7278,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P17.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7192,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7192,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7192,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7192,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P18.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7203,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7203,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7203,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7203,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P19.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7281,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7281,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7281,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7281,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P3.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7176,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7176,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7176,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7176,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P20.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7280,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7280,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7280,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7280,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P4.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7178,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7178,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7178,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7178,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P2.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7186,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7186,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7186,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7186,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P6.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7193,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7193,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7193,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7193,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P5.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7205,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7205,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7205,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7205,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P7.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7199,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7199,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7199,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7199,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P8.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7185,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7185,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7185,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7185,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P9.mat",
+      "variables": [
+        {
+          "name": "TimeData",
+          "shape": [
+            7179,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "CurrentData",
+          "shape": [
+            7179,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "OCV",
+          "shape": [
+            7179,
+            1
+          ],
+          "type": "double"
+        },
+        {
+          "name": "TempData",
+          "shape": [
+            7179,
+            1
+          ],
+          "type": "double"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Aged/R_0/T_10/M1_Mixed_Aged_R0_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5289352
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Aged/R_0/T_25/M1_Mixed_Aged_R0_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            3684712
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Aged/R_0/T_40/M1_Mixed_Aged_R0_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            6098992
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Aged/R_1/T_10/M2_Mixed_Aged_R1_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5568712
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Aged/R_1/T_25/M2_Mixed_Aged_R1_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            4967632
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Aged/R_1/T_40/M2_Mixed_Aged_R1_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5409112
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Aged/R_3/T_10/M2_Mixed_Aged_R3_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5656072
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Aged/R_3/T_25/M1_Mixed_Aged_R3_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5561752
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Aged/R_3/T_40/M2_Mixed_Aged_R3_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5465752
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Unaged/R_0/T_10/M1_Mixed_Unaged_R0_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5532712
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Unaged/R_0/T_25/M1_Mixed_Unaged_R0_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5418352
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Unaged/R_0/T_40/M1_Mixed_Unaged_R0_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5330632
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Unaged/R_1/T_10/M2_Mixed_Unaged_R1_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5303992
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Unaged/R_1/T_25/M2_Mixed_Unaged_R1_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            4576072
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Unaged/R_1/T_40/M2_Mixed_Unaged_R1_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5490712
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Unaged/R_3/T_10/M2_Mixed_Unaged_R3_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5641792
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Unaged/R_3/T_25/M1_Mixed_Unaged_R3_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5500672
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/Mixed_cells/Unaged/R_3/T_40/M2_Mixed_Unaged_R3_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5473552
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Aged/R_0/T_10/M1_NCA_Aged_R0_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5549992
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Aged/R_0/T_25/M1_NCA_Aged_R0_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            4560712
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Aged/R_0/T_40/M1_NCA_Aged_R0_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5445712
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Aged/R_1/T_10/M2_NCA_Aged_R1_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5592232
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Aged/R_1/T_25/M2_NCA_Aged_R1_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5518672
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Aged/R_1/T_40/M2_NCA_Aged_R1_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5690872
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Aged/R_3/T_10/M1_NCA_Aged_R3_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5890072
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Aged/R_3/T_25/M2_NCA_Aged_R3_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5682112
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Aged/R_3/T_40/M1_NCA_Aged_R3_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5456392
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Unaged/R_0/T_10/M1_NCA_Unaged_R0_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5495632
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Unaged/R_0/T_25/M1_NCA_Unaged_R0_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5490472
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Unaged/R_0/T_40/M1_NCA_Unaged_R0_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5339872
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Unaged/R_1/T_10/M2_NCA_Unaged_R1_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5688112
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Unaged/R_1/T_25/M2_NCA_Unaged_R1_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5374072
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Unaged/R_1/T_40/M2_NCA_Unaged_R1_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            4596232
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Unaged/R_3/T_10/M1_NCA_Unaged_R3_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5702152
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Unaged/R_3/T_25/M1_NCA_Unaged_R3_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5602312
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NCA_cells/Unaged/R_3/T_40/M2_NCA_Unaged_R3_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            6357712
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Aged/R_0/T_10/M1_NMC_Aged_R0_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5404072
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Aged/R_0/T_25/M1_NMC_Aged_R0_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            4012432
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Aged/R_0/T_40/M1_NMC_Aged_R0_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            4430152
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Aged/R_1/T_10/M2_NMC_Aged_R1_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5471632
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Aged/R_1/T_25/M2_NMC_Aged_R1_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5208352
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Aged/R_1/T_40/M1_NMC_Aged_R1_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5266072
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Aged/R_3/T_10/M2_NMC_Aged_R3_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5654272
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Aged/R_3/T_25/M2_NMC_Aged_R3_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5462872
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Aged/R_3/T_40/M2_NMC_Aged_R3_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5519512
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_0/T_10/M1_NMC_Unaged_R0_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5482912
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_0/T_25/M1_NMC_Unaged_R0_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            3977512
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_0/T_40/M1_NMC_Unaged_R0_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5309992
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_1/T_10/M2_NMC_Unaged_R1_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5517112
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_1/T_25/M2_NMC_Unaged_R1_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5423872
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_1/T_40/M2_NMC_Unaged_R1_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5278072
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_3/T_10/M1_NMC_Unaged_R3_T10.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5610952
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_3/T_25/M1_NMC_Unaged_R3_T25.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5010712
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_3/T_40/M1_NMC_Unaged_R3_T40.mat",
+      "variables": [
+        {
+          "name": "Data_processed",
+          "shape": [
+            1,
+            1
+          ],
+          "type": "struct"
+        },
+        {
+          "name": "__function_workspace__",
+          "shape": [
+            1,
+            5745592
+          ],
+          "type": "uint8"
+        }
+      ],
+      "reader": "SciPy whosmat headers"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Aged/R_0/T_10/M1_Mixed_Aged_R0_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Aged/R_0/T_25/M1_Mixed_Aged_R0_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Aged/R_0/T_40/M1_Mixed_Aged_R0_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Aged/R_1/T_10/M2_Mixed_Aged_R1_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Aged/R_1/T_25/M2_Mixed_Aged_R1_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Aged/R_1/T_40/M2_Mixed_Aged_R1_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Aged/R_3/T_10/M2_Mixed_Aged_R3_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Aged/R_3/T_25/M1_Mixed_Aged_R3_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Aged/R_3/T_40/M2_Mixed_Aged_R3_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Unaged/R_0/T_10/M1_Mixed_Unaged_R0_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Unaged/R_0/T_25/M1_Mixed_Unaged_R0_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Unaged/R_0/T_40/M1_Mixed_Unaged_R0_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Unaged/R_1/T_10/M2_Mixed_Unaged_R1_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Unaged/R_1/T_25/M2_Mixed_Unaged_R1_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Unaged/R_1/T_40/M2_Mixed_Unaged_R1_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Unaged/R_3/T_10/M2_Mixed_Unaged_R3_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Unaged/R_3/T_25/M1_Mixed_Unaged_R3_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/Mixed_cells/Unaged/R_3/T_40/M2_Mixed_Unaged_R3_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Aged/R_0/T_10/M1_NCA_Aged_R0_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Aged/R_0/T_25/M1_NCA_Aged_R0_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Aged/R_0/T_40/M1_NCA_Aged_R0_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Aged/R_1/T_10/M2_NCA_Aged_R1_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Aged/R_1/T_25/M2_NCA_Aged_R1_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Aged/R_1/T_40/M2_NCA_Aged_R1_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Aged/R_3/T_10/M1_NCA_Aged_R3_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Aged/R_3/T_25/M2_NCA_Aged_R3_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Aged/R_3/T_40/M1_NCA_Aged_R3_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Unaged/R_0/T_10/M1_NCA_Unaged_R0_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Unaged/R_0/T_25/M1_NCA_Unaged_R0_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Unaged/R_0/T_40/M1_NCA_Unaged_R0_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Unaged/R_1/T_10/M2_NCA_Unaged_R1_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Unaged/R_1/T_25/M2_NCA_Unaged_R1_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Unaged/R_1/T_40/M2_NCA_Unaged_R1_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Unaged/R_3/T_10/M1_NCA_Unaged_R3_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Unaged/R_3/T_25/M1_NCA_Unaged_R3_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NCA_cells/Unaged/R_3/T_40/M2_NCA_Unaged_R3_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Aged/R_0/T_10/M1_NMC_Aged_R0_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Aged/R_0/T_25/M1_NMC_Aged_R0_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Aged/R_0/T_40/M1_NMC_Aged_R0_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Aged/R_1/T_10/M2_NMC_Aged_R1_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Aged/R_1/T_25/M2_NMC_Aged_R1_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Aged/R_1/T_40/M1_NMC_Aged_R1_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Aged/R_3/T_10/M2_NMC_Aged_R3_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Aged/R_3/T_25/M2_NMC_Aged_R3_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Aged/R_3/T_40/M2_NMC_Aged_R3_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_0/T_10/M1_NMC_Unaged_R0_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_0/T_25/M1_NMC_Unaged_R0_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_0/T_40/M1_NMC_Unaged_R0_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_1/T_10/M2_NMC_Unaged_R1_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_1/T_25/M2_NMC_Unaged_R1_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_1/T_40/M2_NMC_Unaged_R1_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_3/T_10/M1_NMC_Unaged_R3_T10.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_3/T_25/M1_NMC_Unaged_R3_T25.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_3/T_40/M1_NMC_Unaged_R3_T40.xlsx",
+      "sheets": [
+        {
+          "name": "Global_Info",
+          "state": "visible"
+        },
+        {
+          "name": "Data",
+          "state": "visible"
+        }
+      ],
+      "embedded_or_external_parts": [],
+      "defined_names": [
+        "_xlnm.Print_Titles",
+        "_xlnm.Print_Titles"
+      ]
+    }
+  ],
+  "separate_processing_files": []
+}

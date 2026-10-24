@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "data_kind": "synthetic_fixture",
+  "source": {
+    "metadata.json": {
+      "source": "C:\\Users\\DELL\\Desktop\\volt-forge\\tests\\fixtures\\module_synthetic\\metadata.json",
+      "sha256": "c4ecf1712d2d6d18ec080140f1a7c759fee319edb53aa84aad274c94292515d5",
+      "bytes": 7083
+    },
+    "measurements.csv": {
+      "source": "C:\\Users\\DELL\\Desktop\\volt-forge\\tests\\fixtures\\module_synthetic\\measurements.csv",
+      "sha256": "0c6c52c7718654d64bd2414c3682c5b99ef628ee1539c68157fa701287e6aba7",
+      "bytes": 74817
+    }
+  },
+  "valid_structure": true,
+  "errors": [],
+  "issues": [],
+  "alignment_ok": true,
+  "max_channel_skew_s": {
+    "module_current_A": 0.0,
+    "terminal_V": 0.0,
+    "ambient_C": 0.0,
+    "I1_A": 0.0,
+    "V1_V": 0.0,
+    "surface1_C": 0.0,
+    "I2_A": 0.0,
+    "V2_V": 0.0,
+    "surface2_C": 0.0,
+    "I3_A": 0.0,
+    "V3_V": 0.0,
+    "surface3_C": 0.0,
+    "I4_A": 0.0,
+    "V4_V": 0.0,
+    "surface4_C": 0.0
+  },
+  "normalized_polarity": "discharge_positive",
+  "source_rows_preserved": true,
+  "experimental_validation": "awaiting suitable measurements",
+  "decision": "insufficient evidence",
+  "current_conservation": {
+    "mean_A": 8.365115310195086e-17,
+    "rmse_A": 6.130710932416076e-16,
+    "maximum_abs_A": 3.552713678800501e-15,
+    "worst_source_row": 23,
+    "declared_sum_absolute_uncertainty_A": 0.005,
+    "within_declared_bound": true,
+    "note": "No rescaling or fitted correction. Reported bound is metadata, not independently verified calibration; alignment uncertainty is not silently absorbed."
+  }
+}

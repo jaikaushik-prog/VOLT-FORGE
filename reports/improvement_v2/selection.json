@@ -1,0 +1,33 @@
+{
+  "selected": "C2_rest_reference_RC",
+  "macro_development": {
+    "baseline": {
+      "sample_rmse_mV": 21.06748237214443,
+      "time_rmse_mV": 26.26849390417764,
+      "max_abs_mV": 133.38576367040434,
+      "identifiable_all": true
+    },
+    "C1_rest_reference_R": {
+      "sample_rmse_mV": 15.257132041445134,
+      "time_rmse_mV": 16.56054350446585,
+      "max_abs_mV": 129.0790112601248,
+      "identifiable_all": true,
+      "eligible": true
+    },
+    "C2_rest_reference_RC": {
+      "sample_rmse_mV": 9.995827295586727,
+      "time_rmse_mV": 10.571852250022431,
+      "max_abs_mV": 51.67572651702157,
+      "identifiable_all": true,
+      "eligible": true
+    },
+    "C3_rest_reference_SOC_RC": {
+      "sample_rmse_mV": 10.186828446453122,
+      "time_rmse_mV": 10.844522600866878,
+      "max_abs_mV": 52.400642177402815,
+      "identifiable_all": true,
+      "eligible": true
+    }
+  },
+  "evidence": "All development cells and old v1 assessment are already-used evidence. Selection precedes fresh-cell voltage access."
+}

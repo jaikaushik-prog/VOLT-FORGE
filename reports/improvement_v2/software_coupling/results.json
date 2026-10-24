@@ -1,0 +1,158 @@
+{
+  "0.3": {
+    "cell_order": [
+      "P7",
+      "P17",
+      "P19",
+      "P13"
+    ],
+    "initial_soc": 0.3,
+    "module_A": 14.55,
+    "duration_s": 360,
+    "rail_segment_ohm": 0.001,
+    "branch_ranges_A": {
+      "P7": [
+        3.848618035095496,
+        4.57616492878229
+      ],
+      "P17": [
+        3.6230727114339083,
+        3.740889389698977
+      ],
+      "P19": [
+        3.2412042163347987,
+        3.630124276765317
+      ],
+      "P13": [
+        2.9917414651839347,
+        3.4390898825798994
+      ]
+    },
+    "soc_min": 0.21780398229462644,
+    "terminal_min_V": 3.2599077467720763,
+    "max_kcl_residual_A": 1.7763568394002505e-15,
+    "max_charge_balance_As": 1.2050804798491299e-11,
+    "max_network_power_residual_W": 2.020605904817785e-14,
+    "terminal_change_1s_vs_0_25s_mV": 0.00570126112808822,
+    "terminal_change_0_5s_vs_0_25s_mV": 0.0018884977630584387,
+    "status": "Software verification only; currents/temperatures/contact values not experimentally validated",
+    "branch_current_within_4_9A": true
+  },
+  "0.5": {
+    "cell_order": [
+      "P7",
+      "P17",
+      "P19",
+      "P13"
+    ],
+    "initial_soc": 0.5,
+    "module_A": 14.55,
+    "duration_s": 360,
+    "rail_segment_ohm": 0.001,
+    "branch_ranges_A": {
+      "P7": [
+        3.9882828677441626,
+        4.658491052184425
+      ],
+      "P17": [
+        3.6443727789430183,
+        3.788200065601599
+      ],
+      "P19": [
+        2.9722827254935464,
+        3.5096379301659124
+      ],
+      "P13": [
+        3.1310261567204303,
+        3.4517876769665694
+      ]
+    },
+    "soc_min": 0.4159095599319992,
+    "terminal_min_V": 3.4455813747007977,
+    "max_kcl_residual_A": 1.7763568394002505e-15,
+    "max_charge_balance_As": 5.275069270282984e-11,
+    "max_network_power_residual_W": 2.4369395390522186e-14,
+    "terminal_change_1s_vs_0_25s_mV": 0.005668189181573524,
+    "terminal_change_0_5s_vs_0_25s_mV": 0.0018774249044284375,
+    "status": "Software verification only; currents/temperatures/contact values not experimentally validated",
+    "branch_current_within_4_9A": true
+  },
+  "0.7": {
+    "cell_order": [
+      "P7",
+      "P17",
+      "P19",
+      "P13"
+    ],
+    "initial_soc": 0.7,
+    "module_A": 14.55,
+    "duration_s": 360,
+    "rail_segment_ohm": 0.001,
+    "branch_ranges_A": {
+      "P7": [
+        3.939012940572553,
+        4.666863993693907
+      ],
+      "P17": [
+        3.646605301679651,
+        3.78429100509153
+      ],
+      "P19": [
+        2.9454266473777233,
+        3.46397015341056
+      ],
+      "P13": [
+        3.153418353836841,
+        3.4896888018789225
+      ]
+    },
+    "soc_min": 0.616366464780563,
+    "terminal_min_V": 3.6332251643582354,
+    "max_kcl_residual_A": 1.7763568394002505e-15,
+    "max_charge_balance_As": 2.637534635141492e-11,
+    "max_network_power_residual_W": 2.2537527399890678e-14,
+    "terminal_change_1s_vs_0_25s_mV": 0.005778104406051199,
+    "terminal_change_0_5s_vs_0_25s_mV": 0.001914017164317272,
+    "status": "Software verification only; currents/temperatures/contact values not experimentally validated",
+    "branch_current_within_4_9A": true
+  },
+  "0.8": {
+    "cell_order": [
+      "P7",
+      "P17",
+      "P19",
+      "P13"
+    ],
+    "initial_soc": 0.8,
+    "module_A": 14.55,
+    "duration_s": 360,
+    "rail_segment_ohm": 0.001,
+    "branch_ranges_A": {
+      "P7": [
+        3.967043161904442,
+        4.654378063928718
+      ],
+      "P17": [
+        3.639948710953125,
+        3.768343893164603
+      ],
+      "P19": [
+        2.9933950076745455,
+        3.46437625696609
+      ],
+      "P13": [
+        3.1338830352321336,
+        3.471190068478554
+      ]
+    },
+    "soc_min": 0.7160263429354644,
+    "terminal_min_V": 3.7339103515899006,
+    "max_kcl_residual_A": 1.7763568394002505e-15,
+    "max_charge_balance_As": 5.4569682106375694e-11,
+    "max_network_power_residual_W": 2.5091040356528538e-14,
+    "terminal_change_1s_vs_0_25s_mV": 0.005524904808762443,
+    "terminal_change_0_5s_vs_0_25s_mV": 0.0018300724469177965,
+    "status": "Software verification only; currents/temperatures/contact values not experimentally validated",
+    "branch_current_within_4_9A": true
+  }
+}

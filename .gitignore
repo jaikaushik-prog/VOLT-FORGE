@@ -18,3 +18,6 @@ Case Study 2_IDV_Battery_Energy_System.pdf
 TELIPORT_*.docx
 TELIPORT_*.xlsx
 github-upload/
+# Regenerated v2 sample-level outputs; sealed models/summaries/plots are retained.
+reports/improvement_v2/**/*predictions.csv
+reports/improvement_v2/software_coupling/*.csv

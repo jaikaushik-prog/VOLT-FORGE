@@ -1,0 +1,162 @@
+{
+  "comparisons": {
+    "soc_imbalance": {
+      "maximum_branch_current_A": {
+        "minimum_delta_vs_equal_soc": 0.6422918356464127,
+        "maximum_delta_vs_equal_soc": 0.7304940953051169,
+        "delta_changes_sign": false
+      },
+      "minimum_cell_voltage_V": {
+        "minimum_delta_vs_equal_soc": 0.00023197710141742434,
+        "maximum_delta_vs_equal_soc": 0.0005235192480692596,
+        "delta_changes_sign": false
+      },
+      "minimum_terminal_voltage_V": {
+        "minimum_delta_vs_equal_soc": 0.00023197710141742434,
+        "maximum_delta_vs_equal_soc": 0.0005235192480692596,
+        "delta_changes_sign": false
+      },
+      "mean_delivered_power_W": {
+        "minimum_delta_vs_equal_soc": 0.007902364244444016,
+        "maximum_delta_vs_equal_soc": 0.009151049936342304,
+        "delta_changes_sign": false
+      },
+      "delivered_net_Wh": {
+        "minimum_delta_vs_equal_soc": 0.0007902364244447568,
+        "maximum_delta_vs_equal_soc": 0.0009151049936342304,
+        "delta_changes_sign": false
+      },
+      "delivered_charge_Ah": {
+        "minimum_delta_vs_equal_soc": 0.0,
+        "maximum_delta_vs_equal_soc": 0.0,
+        "delta_changes_sign": false
+      },
+      "cell_R0_loss_Wh": {
+        "minimum_delta_vs_equal_soc": 0.001694320983703923,
+        "maximum_delta_vs_equal_soc": 0.0018787000720884572,
+        "delta_changes_sign": false
+      },
+      "rail_loss_Wh": {
+        "minimum_delta_vs_equal_soc": -0.002367406734072687,
+        "maximum_delta_vs_equal_soc": -0.002200611333440003,
+        "delta_changes_sign": false
+      },
+      "R1_loss_Wh": {
+        "minimum_delta_vs_equal_soc": 0.0015760827632882446,
+        "maximum_delta_vs_equal_soc": 0.0017286063383978728,
+        "delta_changes_sign": false
+      },
+      "above_4_9A_cell_seconds": {
+        "minimum_delta_vs_equal_soc": 17.5,
+        "maximum_delta_vs_equal_soc": 21.25,
+        "delta_changes_sign": false
+      }
+    },
+    "lower_rail_resistance": {
+      "maximum_branch_current_A": {
+        "minimum_delta_vs_equal_soc": -0.43245923795350016,
+        "maximum_delta_vs_equal_soc": -0.4322377358266003,
+        "delta_changes_sign": false
+      },
+      "minimum_cell_voltage_V": {
+        "minimum_delta_vs_equal_soc": 0.012051124091941645,
+        "maximum_delta_vs_equal_soc": 0.012142667586977574,
+        "delta_changes_sign": false
+      },
+      "minimum_terminal_voltage_V": {
+        "minimum_delta_vs_equal_soc": 0.01205112409194209,
+        "maximum_delta_vs_equal_soc": 0.012142667586976685,
+        "delta_changes_sign": false
+      },
+      "mean_delivered_power_W": {
+        "minimum_delta_vs_equal_soc": 0.17354013751761954,
+        "maximum_delta_vs_equal_soc": 0.17373028664155754,
+        "delta_changes_sign": false
+      },
+      "delivered_net_Wh": {
+        "minimum_delta_vs_equal_soc": 0.017354013751762487,
+        "maximum_delta_vs_equal_soc": 0.01737302866415469,
+        "delta_changes_sign": false
+      },
+      "delivered_charge_Ah": {
+        "minimum_delta_vs_equal_soc": 0.0,
+        "maximum_delta_vs_equal_soc": 0.0,
+        "delta_changes_sign": false
+      },
+      "cell_R0_loss_Wh": {
+        "minimum_delta_vs_equal_soc": -0.000499636355086458,
+        "maximum_delta_vs_equal_soc": -0.00047860579528344327,
+        "delta_changes_sign": false
+      },
+      "rail_loss_Wh": {
+        "minimum_delta_vs_equal_soc": -0.016101763100822963,
+        "maximum_delta_vs_equal_soc": -0.016034808706512926,
+        "delta_changes_sign": false
+      },
+      "R1_loss_Wh": {
+        "minimum_delta_vs_equal_soc": -0.0006408629758896389,
+        "maximum_delta_vs_equal_soc": -0.0006142635923604423,
+        "delta_changes_sign": false
+      },
+      "above_4_9A_cell_seconds": {
+        "minimum_delta_vs_equal_soc": 0.0,
+        "maximum_delta_vs_equal_soc": 0.0,
+        "delta_changes_sign": false
+      }
+    },
+    "reduced_load": {
+      "maximum_branch_current_A": {
+        "minimum_delta_vs_equal_soc": -0.8069418212306609,
+        "maximum_delta_vs_equal_soc": -0.8069418212305806,
+        "delta_changes_sign": false
+      },
+      "minimum_cell_voltage_V": {
+        "minimum_delta_vs_equal_soc": 0.05048564823004131,
+        "maximum_delta_vs_equal_soc": 0.052222725703610084,
+        "delta_changes_sign": false
+      },
+      "minimum_terminal_voltage_V": {
+        "minimum_delta_vs_equal_soc": 0.050485648230040425,
+        "maximum_delta_vs_equal_soc": 0.05222272570361186,
+        "delta_changes_sign": false
+      },
+      "mean_delivered_power_W": {
+        "minimum_delta_vs_equal_soc": -8.979480255972732,
+        "maximum_delta_vs_equal_soc": -8.867259578176245,
+        "delta_changes_sign": false
+      },
+      "delivered_net_Wh": {
+        "minimum_delta_vs_equal_soc": -0.8979480255972732,
+        "maximum_delta_vs_equal_soc": -0.8867259578176245,
+        "delta_changes_sign": false
+      },
+      "delivered_charge_Ah": {
+        "minimum_delta_vs_equal_soc": -0.2549999999999608,
+        "maximum_delta_vs_equal_soc": -0.2549999999999608,
+        "delta_changes_sign": false
+      },
+      "cell_R0_loss_Wh": {
+        "minimum_delta_vs_equal_soc": -0.04212384176703435,
+        "maximum_delta_vs_equal_soc": -0.04211750419665873,
+        "delta_changes_sign": false
+      },
+      "rail_loss_Wh": {
+        "minimum_delta_vs_equal_soc": -0.01085047656467484,
+        "maximum_delta_vs_equal_soc": -0.010833169554565748,
+        "delta_changes_sign": false
+      },
+      "R1_loss_Wh": {
+        "minimum_delta_vs_equal_soc": -0.032167820926760515,
+        "maximum_delta_vs_equal_soc": -0.031711902409263554,
+        "delta_changes_sign": false
+      },
+      "above_4_9A_cell_seconds": {
+        "minimum_delta_vs_equal_soc": 0.0,
+        "maximum_delta_vs_equal_soc": 0.0,
+        "delta_changes_sign": false
+      }
+    }
+  },
+  "note": "Matched one-at-a-time sensitivity scenarios, not confidence intervals, independent uncertainty bounds, repair ranks or experimental gains.",
+  "decision": "insufficient evidence in every scenario"
+}

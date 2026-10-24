@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-10-24T17:47:15.026216+00:00",
+  "implementation_sha256": "0f4b11344ecf0567737957c8ddec607ded3170e22587202621c2847cd98eefbc",
+  "plan_sha256": "a66927134110bc2e3d43dbcb869e47c41c8213735d61ac46c6f1f4bfdf5adefa",
+  "lock_sha256": "3fcf0367c5adec7dfc2a8b657e99f36ba23c3a46a155a3cb41bb8f9df1fb3b5e",
+  "artifacts": {
+    "reports/improvement_v2/development/P10_models.json": "fb206c8d5def2c68cc17490499bb04792b12f8e25b412b2983bdbec9e9c908cd",
+    "reports/improvement_v2/development/P13_models.json": "c4f462d1ae6a08756fe61af25d10a7a3623c632833b3ae24ef1556db3b77bfe0",
+    "reports/improvement_v2/development/P16_models.json": "70797bedfe5c533812335ca3b676891ecae8ce3e6a3eea8daf7f12865de0d6b5",
+    "reports/improvement_v2/development/P17_models.json": "e999af2b55d2e98ca976286ab91f87ab31731227fa7ed7bf0851a100ff0fd74a",
+    "reports/improvement_v2/development/P19_models.json": "15f41f7ed0049baa630728facb092d3d2f629b3d8ec5be38fa2c1388fdde988d",
+    "reports/improvement_v2/development/P4_models.json": "bf62eb4c7d741ec48e6f3782f1cdab46e426b6e25e31384ee02a8e2d5a006a18",
+    "reports/improvement_v2/development/P7_models.json": "957b7d981faab3e0032f7004193f1d2d7ebda8245c4b7c4dbd112bcb775355cf",
+    "reports/improvement_v2/development/scores.json": "f4a01c6973682122900efbe8089a648080bb0501273ccb03e366072e65fb570b",
+    "reports/improvement_v2/selection.json": "458ed1ba832ac619214040bc35ffe46336c853c12c7398813b7cf3068a9b9863"
+  },
+  "selected": "C2_rest_reference_RC",
+  "fresh_calibration_voltage_accessed": false,
+  "fresh_assessment_voltage_accessed": false
+}

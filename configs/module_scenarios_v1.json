@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "declaration": "Manual scenarios fixed before examining new outputs; no optimization, ranking or experimental gain claim.",
+  "scenarios": [
+    {"id": "equal_soc", "description": "Existing equal-SOC 0.70 baseline", "overrides": {}},
+    {"id": "soc_imbalance", "description": "Previously investigated initial SOC imbalance", "overrides": {"initial_soc": [0.72, 0.70, 0.68, 0.70]}},
+    {"id": "lower_rail_resistance", "description": "Hypothetical 0.5 mOhm on every segment of both rails; feasibility and actual resistance unverified", "overrides": {"positive_rail_ohm": [0.0005, 0.0005, 0.0005], "negative_rail_ohm": [0.0005, 0.0005, 0.0005]}},
+    {"id": "reduced_load", "description": "Manually reduce requested current to 12 A for the same 360 s; reduced service must be reported", "overrides": {"load": [{"start_s": 0.0, "end_s": 360.0, "current_A": 12.0}]}}
+  ],
+  "sensitivity_scenarios": [
+    {"id": "soc_minus_2pp", "soc_delta": -0.02},
+    {"id": "soc_plus_2pp", "soc_delta": 0.02},
+    {"id": "capacity_minus_1pct", "capacity_factor": 0.99},
+    {"id": "capacity_plus_1pct", "capacity_factor": 1.01},
+    {"id": "polarization_minus_5mV", "polarization_delta_V": -0.005},
+    {"id": "polarization_plus_5mV", "polarization_delta_V": 0.005},
+    {"id": "loaded_reference_shape", "reference": "loaded_shape_same_rest_anchors"}
+  ],
+  "sensitivity_application": "Each of the seven changes separately on all four main scenarios. No joint distribution or combination of independent errors is assumed.",
+  "sensitivity_sources": ["MODEL_IMPROVEMENT_DECISION.md", "REFERENCE_INITIAL_STATE_DECISION.md"],
+  "coordinate_checks": [{"id": "origin_minus_2pp", "origin_shift": -0.02}, {"id": "origin_plus_2pp", "origin_shift": 0.02}],
+  "coordinate_check_application": "Equal-SOC baseline only. Shift SOC and reference coordinates together; this is relabelling, not an extra uncertainty scenario.",
+  "time_step_checks_s": [1.0, 0.5, 0.25],
+  "time_step_application": "All four main scenarios; compare terminal voltage, branch currents, SOC and integrated energy against 0.25 s.",
+  "assessment_policy": "No unused characterization cells or protected module outcomes may be opened. Only existing model artifacts and the four already-used cells' C/20 curves are needed."
+}

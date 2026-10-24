@@ -10,7 +10,9 @@ ROOT=Path(__file__).resolve().parents[1]
 DEST=ROOT/'github-upload'/'volt-forge'
 FOLDERS=['src','scripts','tests','configs','reports']
 ROOT_FILES=['.gitignore','.gitattributes','ATTRIBUTION.md','DATA_READINESS.md',
-    'MODELLING_DECISION.md','MODEL_IMPROVEMENT_DECISION.md','README.md',
+    'MODELLING_DECISION.md','MODEL_IMPROVEMENT_DECISION.md','MODEL_IMPROVEMENT_PLAN.md',
+    'REFERENCE_INITIAL_STATE_PLAN.md','REFERENCE_INITIAL_STATE_DECISION.md','README.md',
+    'SIMULATION_PLAN.md','SIMULATION_READINESS.md','MEASUREMENT_IMPORT_SPEC.md',
     'VOLT_FORGE_Codex_Start_Here.txt','pyproject.toml','requirements.txt','GITHUB_UPLOAD.md']
 
 
@@ -19,6 +21,7 @@ def main():
     for folder in FOLDERS:
         files.extend(p for p in (ROOT/folder).rglob('*') if p.is_file()
             and not any(x in p.parts for x in ['__pycache__','.pytest_cache','.git'])
+            and not (p.suffix=='.csv' and 'improvement_v2' in p.parts and ('predictions' in p.name or 'software_coupling' in p.parts))
             and p.suffix not in ['.pyc','.zip','.pem','.key'])
     files=sorted(set(files))
     token=re.compile(rb'(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)')

@@ -1,0 +1,39 @@
+{
+  "status": "Synthetic software stress check, not experimental evidence",
+  "cell_order": [
+    "P7",
+    "P17",
+    "P19",
+    "P13"
+  ],
+  "assumed_initial_soc": [
+    0.72,
+    0.7,
+    0.68,
+    0.7
+  ],
+  "module_A": 14.55,
+  "duration_s": 360,
+  "rail_segment_ohm": 0.001,
+  "branch_ranges_A": {
+    "P7": [
+      4.205004544095209,
+      5.352826971390422
+    ],
+    "P17": [
+      3.64945145937015,
+      3.7858687873073213
+    ],
+    "P19": [
+      2.204965037527023,
+      3.1942335534690938
+    ],
+    "P13": [
+      3.2063392037752347,
+      3.503233806891899
+    ]
+  },
+  "max_kcl_residual_A": 1.7763568394002505e-15,
+  "max_charge_balance_As": 7.639755494892597e-11,
+  "interpretation": "Small initial SOC imbalance can place a branch above the 4.85 A six-minute characterization plateau. Short higher-current multisines do not establish accuracy for this dwell."
+}

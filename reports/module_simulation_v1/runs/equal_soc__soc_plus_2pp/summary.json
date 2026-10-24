@@ -1,0 +1,664 @@
+{
+  "id": "equal_soc__soc_plus_2pp",
+  "run_type": "sensitivity scenario",
+  "status": "completed",
+  "stop": null,
+  "experimental_validation": "awaiting suitable measurements",
+  "decision": "insufficient evidence",
+  "decision_reasons": [
+    "Voltage requirement not established",
+    "Unvalidated module-current reference and waveform transfer",
+    "Unverified initial states, temperature and physical connections"
+  ],
+  "maximum_branch_current_A": 4.6648566696401215,
+  "minimum_branch_current_A": 2.9575697743076934,
+  "minimum_cell_voltage_V": 3.655196159831332,
+  "minimum_terminal_voltage_V": 3.655196159831332,
+  "delivered_net_Wh": 5.39843774934228,
+  "delivered_positive_Wh": 5.39843774934228,
+  "received_Wh": 0.0,
+  "mean_delivered_power_W": 53.984377493422805,
+  "requested_charge_Ah": 1.455,
+  "delivered_charge_Ah": 1.4549999999999608,
+  "R0_and_rail_loss_Wh": 0.16557143363838409,
+  "R1_loss_Wh": 0.09997456246433861,
+  "cell_R0_loss_Wh": 0.13181790822685288,
+  "rail_loss_Wh": 0.0337535254115313,
+  "maximum_total_resistive_loss_W": 3.010825818500443,
+  "max_kcl_residual_A": 1.7763568394002505e-15,
+  "max_charge_balance_As": 1.6370904631912708e-10,
+  "max_instantaneous_power_balance_W": 2.0816681711721685e-14,
+  "final_energy_balance_residual_Wh": 2.7222933942836233e-07,
+  "above_4_9A_cell_seconds": 0,
+  "coverage": {
+    "cells": {
+      "P7": {
+        "SOC_range": [
+          0.6363072502139204,
+          0.72
+        ],
+        "current_range_A": [
+          3.940195559199634,
+          4.6648566696401215
+        ],
+        "reference_SOC_bounds": [
+          0.09633223365687937,
+          1.0
+        ],
+        "mathematical_support": true,
+        "initial_soc": 0.72,
+        "initial_polarization_V": 0.0,
+        "temperature_assumption_C": 23.0,
+        "temperature_prediction": null,
+        "fitting": {
+          "role": "development",
+          "cell": "P7",
+          "actual_fit_current_min_A": -6.72906494140625,
+          "actual_fit_current_max_A": 19.296340942382812,
+          "unsupported_reference_rows": 3689,
+          "surface_min_C": 23.07471466064453,
+          "surface_max_C": 27.929973602294922,
+          "bands": {
+            "rest": {
+              "samples": 29240,
+              "longest_observed_contiguous_span_s": 3599.002700000012
+            },
+            "near_equal_share_3_64A": {
+              "samples": 2,
+              "longest_observed_contiguous_span_s": 0.10010000001057051
+            },
+            "4_85A_plateau": {
+              "samples": 1805,
+              "longest_observed_contiguous_span_s": 359.0030000000115
+            },
+            "above_4_9A": {
+              "samples": 250,
+              "longest_observed_contiguous_span_s": 9.900499999988824
+            },
+            "charge": {
+              "samples": 2674,
+              "longest_observed_contiguous_span_s": 75.6993999999977
+            }
+          }
+        },
+        "assessment": [
+          {
+            "role": "development",
+            "cell": "P7",
+            "phase": "hppc",
+            "rows": 7216,
+            "current_min_A": -2.0001821517944336,
+            "current_max_A": 2.6604232788085938,
+            "soc_min": 0.1952259361841258,
+            "soc_max": 0.7994631715089584,
+            "surface_min_C": 23.11875343322754,
+            "surface_max_C": 23.57355690002441,
+            "longest_continuous_positive_load_s": 9.90250000001106
+          },
+          {
+            "role": "development",
+            "cell": "P7",
+            "phase": "long_load",
+            "rows": 1444,
+            "current_min_A": 4.850146770477295,
+            "current_max_A": 4.850484848022461,
+            "soc_min": 0.1969092261257723,
+            "soc_max": 0.8993754184375738,
+            "surface_min_C": 23.37221908569336,
+            "surface_max_C": 26.81168937683105,
+            "longest_continuous_positive_load_s": 359.0017999999982
+          },
+          {
+            "role": "development",
+            "cell": "P7",
+            "phase": "long_rest",
+            "rows": 14404,
+            "current_min_A": -0.0,
+            "current_max_A": -0.0,
+            "soc_min": 0.1967639436818634,
+            "soc_max": 0.7994749840839815,
+            "surface_min_C": 23.08770751953125,
+            "surface_max_C": 26.89167022705078,
+            "longest_continuous_positive_load_s": 0.0
+          },
+          {
+            "role": "development",
+            "cell": "P7",
+            "phase": "multisine_rest",
+            "rows": 7598,
+            "current_min_A": -6.727813720703125,
+            "current_max_A": 17.87602996826172,
+            "soc_min": 0.1926631883617098,
+            "soc_max": 0.7991206467353777,
+            "surface_min_C": 23.231046676635746,
+            "surface_max_C": 23.92246627807617,
+            "longest_continuous_positive_load_s": 9.999800000019604
+          }
+        ],
+        "intervals": {
+          "charge": [],
+          "rest": [],
+          "discharge": [
+            {
+              "start_s": 0.0,
+              "end_s": 360.0,
+              "duration_s": 360.0
+            }
+          ],
+          "discharge_below_4_8A": [
+            {
+              "start_s": 0.0,
+              "end_s": 360.0,
+              "duration_s": 360.0
+            }
+          ],
+          "near_4_85A": [],
+          "above_4_9A": [],
+          "outside_fitting_amplitude": [],
+          "outside_v2_primary_SOC_current": []
+        },
+        "total_duration_s": {
+          "charge": 0,
+          "rest": 0,
+          "discharge": 360.0,
+          "discharge_below_4_8A": 360.0,
+          "near_4_85A": 0,
+          "above_4_9A": 0,
+          "outside_fitting_amplitude": 0,
+          "outside_v2_primary_SOC_current": 0
+        },
+        "longest_duration_s": {
+          "charge": 0.0,
+          "rest": 0.0,
+          "discharge": 360.0,
+          "discharge_below_4_8A": 360.0,
+          "near_4_85A": 0.0,
+          "above_4_9A": 0.0,
+          "outside_fitting_amplitude": 0.0,
+          "outside_v2_primary_SOC_current": 0.0
+        },
+        "experimental_waveform_support": "unsupported transfer",
+        "reasons": [
+          "Module waveform/current-sharing accuracy has no experimental validation",
+          "Initial SOC and polarization are assumptions",
+          "Rail/contact values and feasibility unverified",
+          "Module surface-temperature history unmeasured; no thermal model"
+        ],
+        "interpretation": "Amplitude bands are descriptive only. Even matching a plateau amplitude/duration is not validation of this module waveform."
+      },
+      "P17": {
+        "SOC_range": [
+          0.6444511130979846,
+          0.72
+        ],
+        "current_range_A": [
+          3.6453276306537994,
+          3.781002616475359
+        ],
+        "reference_SOC_bounds": [
+          0.09555797956399181,
+          1.0
+        ],
+        "mathematical_support": true,
+        "initial_soc": 0.72,
+        "initial_polarization_V": 0.0,
+        "temperature_assumption_C": 23.0,
+        "temperature_prediction": null,
+        "fitting": {
+          "role": "development",
+          "cell": "P17",
+          "actual_fit_current_min_A": -6.7309417724609375,
+          "actual_fit_current_max_A": 19.301010131835938,
+          "unsupported_reference_rows": 3689,
+          "surface_min_C": 22.803194046020508,
+          "surface_max_C": 27.109357833862305,
+          "bands": {
+            "rest": {
+              "samples": 29231,
+              "longest_observed_contiguous_span_s": 3599.0014999999985
+            },
+            "near_equal_share_3_64A": {
+              "samples": 2,
+              "longest_observed_contiguous_span_s": 0.09970000000612345
+            },
+            "4_85A_plateau": {
+              "samples": 1805,
+              "longest_observed_contiguous_span_s": 359.0014000000083
+            },
+            "above_4_9A": {
+              "samples": 250,
+              "longest_observed_contiguous_span_s": 9.900499999988824
+            },
+            "charge": {
+              "samples": 2679,
+              "longest_observed_contiguous_span_s": 75.70089999999618
+            }
+          }
+        },
+        "assessment": [
+          {
+            "role": "development",
+            "cell": "P17",
+            "phase": "hppc",
+            "rows": 7216,
+            "current_min_A": -2.0003881454467773,
+            "current_max_A": 2.6604814529418945,
+            "soc_min": 0.1945321353385258,
+            "soc_max": 0.7992919775676408,
+            "surface_min_C": 22.89010238647461,
+            "surface_max_C": 23.494688034057617,
+            "longest_continuous_positive_load_s": 9.901099999999133
+          },
+          {
+            "role": "development",
+            "cell": "P17",
+            "phase": "long_load",
+            "rows": 1444,
+            "current_min_A": 4.850090980529785,
+            "current_max_A": 4.850493431091309,
+            "soc_min": 0.1962163675826973,
+            "soc_max": 0.8992908850245313,
+            "surface_min_C": 23.053266525268555,
+            "surface_max_C": 26.21577835083008,
+            "longest_continuous_positive_load_s": 359.0014999999985
+          },
+          {
+            "role": "development",
+            "cell": "P17",
+            "phase": "long_rest",
+            "rows": 14404,
+            "current_min_A": -0.0,
+            "current_max_A": -0.0,
+            "soc_min": 0.1960720413913753,
+            "soc_max": 0.7993032141100308,
+            "surface_min_C": 22.819713592529297,
+            "surface_max_C": 26.32229232788086,
+            "longest_continuous_positive_load_s": 0.0
+          },
+          {
+            "role": "development",
+            "cell": "P17",
+            "phase": "multisine_rest",
+            "rows": 7598,
+            "current_min_A": -6.7292022705078125,
+            "current_max_A": 17.86981201171875,
+            "soc_min": 0.1919678961801374,
+            "soc_max": 0.7989475968775099,
+            "surface_min_C": 22.91816520690918,
+            "surface_max_C": 23.61810874938965,
+            "longest_continuous_positive_load_s": 10.000800000008894
+          }
+        ],
+        "intervals": {
+          "charge": [],
+          "rest": [],
+          "discharge": [
+            {
+              "start_s": 0.0,
+              "end_s": 360.0,
+              "duration_s": 360.0
+            }
+          ],
+          "discharge_below_4_8A": [
+            {
+              "start_s": 0.0,
+              "end_s": 360.0,
+              "duration_s": 360.0
+            }
+          ],
+          "near_4_85A": [],
+          "above_4_9A": [],
+          "outside_fitting_amplitude": [],
+          "outside_v2_primary_SOC_current": []
+        },
+        "total_duration_s": {
+          "charge": 0,
+          "rest": 0,
+          "discharge": 360.0,
+          "discharge_below_4_8A": 360.0,
+          "near_4_85A": 0,
+          "above_4_9A": 0,
+          "outside_fitting_amplitude": 0,
+          "outside_v2_primary_SOC_current": 0
+        },
+        "longest_duration_s": {
+          "charge": 0.0,
+          "rest": 0.0,
+          "discharge": 360.0,
+          "discharge_below_4_8A": 360.0,
+          "near_4_85A": 0.0,
+          "above_4_9A": 0.0,
+          "outside_fitting_amplitude": 0.0,
+          "outside_v2_primary_SOC_current": 0.0
+        },
+        "experimental_waveform_support": "unsupported transfer",
+        "reasons": [
+          "Module waveform/current-sharing accuracy has no experimental validation",
+          "Initial SOC and polarization are assumptions",
+          "Rail/contact values and feasibility unverified",
+          "Module surface-temperature history unmeasured; no thermal model"
+        ],
+        "interpretation": "Amplitude bands are descriptive only. Even matching a plateau amplitude/duration is not validation of this module waveform."
+      },
+      "P19": {
+        "SOC_range": [
+          0.6511988282008135,
+          0.72
+        ],
+        "current_range_A": [
+          2.9575697743076934,
+          3.465150576421956
+        ],
+        "reference_SOC_bounds": [
+          0.1065503675151468,
+          1.0
+        ],
+        "mathematical_support": true,
+        "initial_soc": 0.72,
+        "initial_polarization_V": 0.0,
+        "temperature_assumption_C": 23.0,
+        "temperature_prediction": null,
+        "fitting": {
+          "role": "development",
+          "cell": "P19",
+          "actual_fit_current_min_A": -6.7266845703125,
+          "actual_fit_current_max_A": 19.29181671142578,
+          "unsupported_reference_rows": 3689,
+          "surface_min_C": 22.815807342529297,
+          "surface_max_C": 26.86036491394043,
+          "bands": {
+            "rest": {
+              "samples": 29235,
+              "longest_observed_contiguous_span_s": 3599.0016999999934
+            },
+            "near_equal_share_3_64A": {
+              "samples": 2,
+              "longest_observed_contiguous_span_s": 0.10050000000046566
+            },
+            "4_85A_plateau": {
+              "samples": 1805,
+              "longest_observed_contiguous_span_s": 359.0020000000077
+            },
+            "above_4_9A": {
+              "samples": 250,
+              "longest_observed_contiguous_span_s": 9.901200000022072
+            },
+            "charge": {
+              "samples": 2674,
+              "longest_observed_contiguous_span_s": 75.69949999998789
+            }
+          }
+        },
+        "assessment": [
+          {
+            "role": "development",
+            "cell": "P19",
+            "phase": "hppc",
+            "rows": 7216,
+            "current_min_A": -2.000543594360352,
+            "current_max_A": 2.6605043411254883,
+            "soc_min": 0.2043229665186338,
+            "soc_max": 0.8017314000140712,
+            "surface_min_C": 22.85533142089844,
+            "surface_max_C": 23.212730407714844,
+            "longest_continuous_positive_load_s": 9.902000000001864
+          },
+          {
+            "role": "development",
+            "cell": "P19",
+            "phase": "long_load",
+            "rows": 1444,
+            "current_min_A": 4.850061416625977,
+            "current_max_A": 4.850442886352539,
+            "soc_min": 0.2059879450004553,
+            "soc_max": 0.9005168836992292,
+            "surface_min_C": 23.08558464050293,
+            "surface_max_C": 26.03355407714844,
+            "longest_continuous_positive_load_s": 359.0013000000072
+          },
+          {
+            "role": "development",
+            "cell": "P19",
+            "phase": "long_rest",
+            "rows": 14404,
+            "current_min_A": -0.0,
+            "current_max_A": -0.0,
+            "soc_min": 0.2058442771508699,
+            "soc_max": 0.8017424923938886,
+            "surface_min_C": 22.80896759033203,
+            "surface_max_C": 26.022083282470703,
+            "longest_continuous_positive_load_s": 0.0
+          },
+          {
+            "role": "development",
+            "cell": "P19",
+            "phase": "multisine_rest",
+            "rows": 7598,
+            "current_min_A": -6.72589111328125,
+            "current_max_A": 17.88176727294922,
+            "soc_min": 0.2017911910533409,
+            "soc_max": 0.8013901543291787,
+            "surface_min_C": 22.92182159423828,
+            "surface_max_C": 23.508026123046875,
+            "longest_continuous_positive_load_s": 10.000800000008894
+          }
+        ],
+        "intervals": {
+          "charge": [],
+          "rest": [],
+          "discharge": [
+            {
+              "start_s": 0.0,
+              "end_s": 360.0,
+              "duration_s": 360.0
+            }
+          ],
+          "discharge_below_4_8A": [
+            {
+              "start_s": 0.0,
+              "end_s": 360.0,
+              "duration_s": 360.0
+            }
+          ],
+          "near_4_85A": [],
+          "above_4_9A": [],
+          "outside_fitting_amplitude": [],
+          "outside_v2_primary_SOC_current": []
+        },
+        "total_duration_s": {
+          "charge": 0,
+          "rest": 0,
+          "discharge": 360.0,
+          "discharge_below_4_8A": 360.0,
+          "near_4_85A": 0,
+          "above_4_9A": 0,
+          "outside_fitting_amplitude": 0,
+          "outside_v2_primary_SOC_current": 0
+        },
+        "longest_duration_s": {
+          "charge": 0.0,
+          "rest": 0.0,
+          "discharge": 360.0,
+          "discharge_below_4_8A": 360.0,
+          "near_4_85A": 0.0,
+          "above_4_9A": 0.0,
+          "outside_fitting_amplitude": 0.0,
+          "outside_v2_primary_SOC_current": 0.0
+        },
+        "experimental_waveform_support": "unsupported transfer",
+        "reasons": [
+          "Module waveform/current-sharing accuracy has no experimental validation",
+          "Initial SOC and polarization are assumptions",
+          "Rail/contact values and feasibility unverified",
+          "Module surface-temperature history unmeasured; no thermal model"
+        ],
+        "interpretation": "Amplitude bands are descriptive only. Even matching a plateau amplitude/duration is not validation of this module waveform."
+      },
+      "P13": {
+        "SOC_range": [
+          0.6479263195676753,
+          0.72
+        ],
+        "current_range_A": [
+          3.1465709395768275,
+          3.4876678899681837
+        ],
+        "reference_SOC_bounds": [
+          0.08681014183261115,
+          1.0
+        ],
+        "mathematical_support": true,
+        "initial_soc": 0.72,
+        "initial_polarization_V": 0.0,
+        "temperature_assumption_C": 23.0,
+        "temperature_prediction": null,
+        "fitting": {
+          "role": "development",
+          "cell": "P13",
+          "actual_fit_current_min_A": -6.724884033203125,
+          "actual_fit_current_max_A": 19.291671752929688,
+          "unsupported_reference_rows": 3689,
+          "surface_min_C": 22.80319595336914,
+          "surface_max_C": 27.32077407836914,
+          "bands": {
+            "rest": {
+              "samples": 29235,
+              "longest_observed_contiguous_span_s": 3599.001700000008
+            },
+            "near_equal_share_3_64A": {
+              "samples": 2,
+              "longest_observed_contiguous_span_s": 0.09939999999187421
+            },
+            "4_85A_plateau": {
+              "samples": 1805,
+              "longest_observed_contiguous_span_s": 359.00160000000324
+            },
+            "above_4_9A": {
+              "samples": 250,
+              "longest_observed_contiguous_span_s": 9.900599999993574
+            },
+            "charge": {
+              "samples": 2674,
+              "longest_observed_contiguous_span_s": 75.70040000000154
+            }
+          }
+        },
+        "assessment": [
+          {
+            "role": "development",
+            "cell": "P13",
+            "phase": "hppc",
+            "rows": 7216,
+            "current_min_A": -2.00054931640625,
+            "current_max_A": 2.660491466522217,
+            "soc_min": 0.1867494403070843,
+            "soc_max": 0.7973552524753902,
+            "surface_min_C": 22.83851432800293,
+            "surface_max_C": 23.14177703857422,
+            "longest_continuous_positive_load_s": 9.901700000002164
+          },
+          {
+            "role": "development",
+            "cell": "P13",
+            "phase": "long_load",
+            "rows": 1444,
+            "current_min_A": 4.850267887115479,
+            "current_max_A": 4.8504486083984375,
+            "soc_min": 0.1884508562396323,
+            "soc_max": 0.8983203241327669,
+            "surface_min_C": 23.04977035522461,
+            "surface_max_C": 25.924659729003903,
+            "longest_continuous_positive_load_s": 359.00169999999343
+          },
+          {
+            "role": "development",
+            "cell": "P13",
+            "phase": "long_rest",
+            "rows": 14404,
+            "current_min_A": -0.0,
+            "current_max_A": -0.0,
+            "soc_min": 0.1883041536595833,
+            "soc_max": 0.7973665358712052,
+            "surface_min_C": 22.79738044738769,
+            "surface_max_C": 25.98352813720703,
+            "longest_continuous_positive_load_s": 0.0
+          },
+          {
+            "role": "development",
+            "cell": "P13",
+            "phase": "multisine_rest",
+            "rows": 7598,
+            "current_min_A": -6.7261810302734375,
+            "current_max_A": 17.872146606445312,
+            "soc_min": 0.1841586447628909,
+            "soc_max": 0.7970088175137552,
+            "surface_min_C": 22.95394897460937,
+            "surface_max_C": 23.62662506103516,
+            "longest_continuous_positive_load_s": 10.0002000000095
+          }
+        ],
+        "intervals": {
+          "charge": [],
+          "rest": [],
+          "discharge": [
+            {
+              "start_s": 0.0,
+              "end_s": 360.0,
+              "duration_s": 360.0
+            }
+          ],
+          "discharge_below_4_8A": [
+            {
+              "start_s": 0.0,
+              "end_s": 360.0,
+              "duration_s": 360.0
+            }
+          ],
+          "near_4_85A": [],
+          "above_4_9A": [],
+          "outside_fitting_amplitude": [],
+          "outside_v2_primary_SOC_current": []
+        },
+        "total_duration_s": {
+          "charge": 0,
+          "rest": 0,
+          "discharge": 360.0,
+          "discharge_below_4_8A": 360.0,
+          "near_4_85A": 0,
+          "above_4_9A": 0,
+          "outside_fitting_amplitude": 0,
+          "outside_v2_primary_SOC_current": 0
+        },
+        "longest_duration_s": {
+          "charge": 0.0,
+          "rest": 0.0,
+          "discharge": 360.0,
+          "discharge_below_4_8A": 360.0,
+          "near_4_85A": 0.0,
+          "above_4_9A": 0.0,
+          "outside_fitting_amplitude": 0.0,
+          "outside_v2_primary_SOC_current": 0.0
+        },
+        "experimental_waveform_support": "unsupported transfer",
+        "reasons": [
+          "Module waveform/current-sharing accuracy has no experimental validation",
+          "Initial SOC and polarization are assumptions",
+          "Rail/contact values and feasibility unverified",
+          "Module surface-temperature history unmeasured; no thermal model"
+        ],
+        "interpretation": "Amplitude bands are descriptive only. Even matching a plateau amplitude/duration is not validation of this module waveform."
+      }
+    },
+    "experimental_validation": "awaiting suitable measurements",
+    "decision": "insufficient evidence"
+  },
+  "voltage_requirement": {
+    "status": "requirement not configured",
+    "reason": "Load/device minimum voltage, permitted excursion and documented source must all be supplied"
+  },
+  "provenance": {
+    "config_sha256": "b6a2a8da1f74f0f2935f37f1228c17190add5307cdd3869510eed7c620945f01",
+    "manifest_sha256": "940ab3f4654cf07eae3651087244b2cd917ab2802f04f78cddc188ef5150e339",
+    "implementation_sha256": "895eb087cfe3b44a09cd6f98530359f0a6dc754644c9a0ec2b83598f81b24d84"
+  }
+}

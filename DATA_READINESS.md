@@ -301,6 +301,7 @@ permission to investigate those records, not a claim of validated performance.
 explanation or independent measurement reconciles the branch and module
 currents, the actual schedules and initial-state assumptions are understood,
 and an engineering uncertainty/acceptance budget is agreed before fitting.
+
 Do not select whichever current source makes a prospective model look best.
 
 ## Reproduction and delivered evidence

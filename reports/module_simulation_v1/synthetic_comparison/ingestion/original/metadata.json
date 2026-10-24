@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "data_kind": "synthetic_fixture",
+  "dataset_id": "generated-v2-module-plumbing-check",
+  "cell_order": [
+    "P7",
+    "P17",
+    "P19",
+    "P13"
+  ],
+  "time_unit": "s",
+  "time_origin": "Synthetic elapsed seconds since the configured load begins",
+  "channels": {
+    "module_current_A": {
+      "unit": "A",
+      "location": "module_load_path",
+      "sensor_id": "SYNTHETIC_module_current_A",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      },
+      "polarity": "discharge_positive"
+    },
+    "terminal_V": {
+      "unit": "V",
+      "location": "positive_node1-negative_node1",
+      "sensor_id": "SYNTHETIC_terminal_V",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      },
+      "polarity": "positive_minus_negative"
+    },
+    "ambient_C": {
+      "unit": "degC",
+      "location": "chamber_ambient",
+      "sensor_id": "SYNTHETIC_ambient_C",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      }
+    },
+    "I1_A": {
+      "unit": "A",
+      "location": "cell1_branch",
+      "sensor_id": "SYNTHETIC_I1_A",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      },
+      "polarity": "discharge_positive"
+    },
+    "V1_V": {
+      "unit": "V",
+      "location": "positive_node1-negative_node1",
+      "sensor_id": "SYNTHETIC_V1_V",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      },
+      "polarity": "positive_minus_negative"
+    },
+    "surface1_C": {
+      "unit": "degC",
+      "location": "cell1_surface",
+      "sensor_id": "SYNTHETIC_surface1_C",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      }
+    },
+    "I2_A": {
+      "unit": "A",
+      "location": "cell2_branch",
+      "sensor_id": "SYNTHETIC_I2_A",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      },
+      "polarity": "discharge_positive"
+    },
+    "V2_V": {
+      "unit": "V",
+      "location": "positive_node2-negative_node2",
+      "sensor_id": "SYNTHETIC_V2_V",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      },
+      "polarity": "positive_minus_negative"
+    },
+    "surface2_C": {
+      "unit": "degC",
+      "location": "cell2_surface",
+      "sensor_id": "SYNTHETIC_surface2_C",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      }
+    },
+    "I3_A": {
+      "unit": "A",
+      "location": "cell3_branch",
+      "sensor_id": "SYNTHETIC_I3_A",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      },
+      "polarity": "discharge_positive"
+    },
+    "V3_V": {
+      "unit": "V",
+      "location": "positive_node3-negative_node3",
+      "sensor_id": "SYNTHETIC_V3_V",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      },
+      "polarity": "positive_minus_negative"
+    },
+    "surface3_C": {
+      "unit": "degC",
+      "location": "cell3_surface",
+      "sensor_id": "SYNTHETIC_surface3_C",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      }
+    },
+    "I4_A": {
+      "unit": "A",
+      "location": "cell4_branch",
+      "sensor_id": "SYNTHETIC_I4_A",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      },
+      "polarity": "discharge_positive"
+    },
+    "V4_V": {
+      "unit": "V",
+      "location": "positive_node4-negative_node4",
+      "sensor_id": "SYNTHETIC_V4_V",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      },
+      "polarity": "positive_minus_negative"
+    },
+    "surface4_C": {
+      "unit": "degC",
+      "location": "cell4_surface",
+      "sensor_id": "SYNTHETIC_surface4_C",
+      "time_column": "time_s",
+      "calibration": {
+        "status": "synthetic",
+        "source": "Generated software fixture; not an instrument certificate",
+        "date": "2026-10-25",
+        "absolute_uncertainty": 0.001
+      }
+    }
+  },
+  "preparation": {
+    "history": "Synthetic initial states copied from configuration",
+    "initial_soc": [
+      0.7,
+      0.7,
+      0.7,
+      0.7
+    ],
+    "initial_polarization_V": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rest_s": 0,
+    "source": "software fixture"
+  },
+  "synchronization": {
+    "method": "Same generated clock",
+    "evidence": "Synthetic common timestamps",
+    "alignment_tolerance_s": 0.0,
+    "maximum_gap_s": 2.0
+  },
+  "fixture_truth": {
+    "voltage_offset_V": 0.01,
+    "physical_evidence": false,
+    "source_run_config_sha256": "6d3d2f8060ec7e3aebac575b4e81feb91640facc6f773921fa242fffb680d9f4"
+  }
+}
