@@ -10,18 +10,21 @@ import shutil
 import sys
 import threading
 import time
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, parse_qs
 import webbrowser
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
+sys.path.insert(0, str(ROOT / 'scripts'))
 from voltforge.project import Project, dispatch
+from measurement_viewer import MeasurementStore, MeasurementError
 
 ASSETS = ROOT / 'web/editor'
 OPERATIONS = {'inspect', 'validate_edit', 'apply_edit', 'create_variant', 'update_display', 'get_run', 'series', 'compare'}
 MUTATIONS = {'apply_edit', 'create_variant', 'update_display'}
 STATIC = {'/': 'index.html', '/index.html': 'index.html', '/style.css': 'style.css',
-          '/app.js': 'app.js', '/state.mjs': 'state.mjs', '/favicon.svg': 'favicon.svg'}
+          '/app.js': 'app.js', '/state.mjs': 'state.mjs', '/favicon.svg': 'favicon.svg',
+          '/measurements': 'measurements.html', '/measurements.js': 'measurements.js', '/measurements.css': 'measurements.css'}
 
 
 def error(code, message):
@@ -30,7 +33,7 @@ def error(code, message):
 
 def project_destination(path):
     path = Path(path).resolve()
-    protected = ['reports', 'src', 'scripts', 'tests', 'web', 'configs', 'data', '.git', '.codex', '.agents', 'github-upload']
+    protected = ['reports', 'src', 'scripts', 'tests', 'web', 'configs', 'data', '.git', '.codex', '.agents', 'github-upload', '1s4p Battery Module Measurement']
     if path == ROOT or path in ROOT.parents or any(path.is_relative_to(ROOT / p) for p in protected):
         raise ValueError('Choose a working project outside source, data and reports (default: workspace/editor_project).')
     return path
@@ -137,6 +140,27 @@ class Handler(BaseHTTPRequestHandler):
             file = ASSETS / STATIC[path]
             mime = {'.js': 'text/javascript', '.mjs': 'text/javascript', '.svg': 'image/svg+xml'}.get(file.suffix, mimetypes.guess_type(file.name)[0])
             return self.send_bytes(file.read_bytes(), (mime or 'application/octet-stream') + '; charset=utf-8')
+        if path == '/api/measurements' or path.startswith('/api/measurements/'):
+            try:
+                store = MeasurementStore()
+                if path == '/api/measurements':
+                    return self.send_json(dict(status='ok', result=store.catalogue()))
+                parts = path.split('/')[3:]
+                if len(parts) == 2 and parts[1] == 'original':
+                    record, data = store.original(parts[0])
+                    return self.send_bytes(data, 'text/csv; charset=utf-8', download=Path(record['csv']).name)
+                if len(parts) != 1:
+                    raise MeasurementError('not_found', 'Unknown measurement resource.')
+                query = parse_qs(urlsplit(self.path).query, keep_blank_values=True, strict_parsing=True)
+                if set(query)-{'view','offset','limit','bins'} or any(len(v)!=1 for v in query.values()):
+                    raise MeasurementError('invalid_request', 'Unknown or repeated measurement query parameter.')
+                args = {k:(v[0] if k=='view' else int(v[0])) for k,v in query.items()}
+                return self.send_json(dict(status='ok', result=store.read(parts[0], **args)))
+            except MeasurementError as exc:
+                status = {'protected_record':403, 'not_found':404, 'source_missing':404, 'integrity_error':409}.get(exc.code,400)
+                return self.send_json(error(exc.code, str(exc)),status)
+            except (ValueError, FileNotFoundError) as exc:
+                return self.send_json(error('invalid_request', str(exc)),400)
         if path == '/api/session':
             with self.server.gate:
                 active = self.server.active_job

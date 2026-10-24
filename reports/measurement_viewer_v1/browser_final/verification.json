@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "Measured ID01 opens via simulator link; 13 protected records disabled; source polarity visible",
+    "Exact sample selection preserves CSV line and source sensor K units",
+    "Latest request wins during rapid sample navigation",
+    "Browser JSON export matches API summary; original CSV download matches declared hash",
+    "390px layout fits viewport and exact-source inspector remains usable",
+    "Return to unchanged four-cell LG simulator succeeds"
+  ],
+  "browser_errors": [],
+  "source_record": "ID01 only",
+  "experimental_validation": "awaiting suitable measurements"
+}

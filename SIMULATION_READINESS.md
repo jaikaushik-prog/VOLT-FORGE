@@ -1,5 +1,23 @@
 # Four-cell simulation and product-handoff readiness
 
+## P45B measured-data viewer update
+
+The editor now links to a separate read-only FreeTwinEV P45B measurement view.
+Only predeclared complete development record ID01 was opened; 13 other records
+remain protected. The viewer plots actual source channels, retains units/signs,
+checks provenance hashes, inspects exact samples and exports original data or
+summary metadata. ID01's explicit units row resolves its temperature units as K.
+See [decision and observations](reports/measurement_viewer_v1/DECISION.md) and
+[reproduction commands](reports/measurement_viewer_v1/USAGE.md).
+
+This adds measured evidence inspection, not a P45B model or experimental validation
+of LG current sharing. Calibration, voltage locations, timing, SOC method and
+module-cell mapping remain unresolved; branch currents and cell voltages are not
+provided. Public P45B cell-characterization leads are recorded for a future scoped
+investigation. The frozen electrical implementation and its previous runs remain
+unchanged. Prior living-report bytes are retained in
+`reports/measurement_viewer_v1/previous/`; prior release manifests stay intact.
+
 ## 2D editor release update
 
 The local 2D four-cell editor is now connected to the unchanged project contract.

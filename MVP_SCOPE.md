@@ -13,6 +13,12 @@ plots, evidence view and explicit run comparison. See [EDITOR_GUIDE.md](EDITOR_G
 
 ## Implemented
 
+- Separate P45B measured-data viewer for predeclared FreeTwinEV ID01, exact source
+  samples/units, provenance, plots and exports; 13 complete records protected.
+  No P45B model or current-sharing validation. See
+  [measurement scope](reports/measurement_viewer_v1/DECISION.md). The next evidence
+  milestone is an inventory/allocation for newly found public P45B cell data.
+
 - LG M50T NMC P7/P17/P19/P13 only; explicit same-side 1s4p ladder with eight nodes,
   four cell branches, six independently specified rail resistances, p1/n1 terminals.
 - Frozen v2 rested-reference/one-RC electrical dynamics through the existing solver.

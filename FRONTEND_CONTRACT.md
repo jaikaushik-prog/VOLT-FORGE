@@ -6,6 +6,12 @@ controls and the thin loopback HTTP/job adapter. The underlying Python interface
 schemas and electrical solver are unchanged. Original handoff document bytes are
 preserved in `reports/editor_v1/previous/FRONTEND_CONTRACT.md`.
 
+A separate **read-only P45B measurement profile** is available at `/measurements`.
+Its additive GET routes, exact generated responses, access allocation and errors
+are documented in [measurement usage](reports/measurement_viewer_v1/USAGE.md).
+These routes do not change this LG project schema, physics hash or validation
+import contract. Measured records cannot be selected as simulated LG runs.
+
 The frontend connects to `voltforge.project.Project` or the JSON-compatible
 `voltforge.project.dispatch(project_path, request)` function. This is a synchronous
 local Python interface, with a JSON CLI adapter. It calls the existing electrical

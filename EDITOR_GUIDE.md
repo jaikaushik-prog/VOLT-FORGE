@@ -7,6 +7,11 @@ repository's Python requirements are installed.
 
 ## Start
 
+The **Measurements** link opens a separate P45B source-data viewer at
+`/measurements`. It reads allocated ID01 only and does not run the LG model on
+P45B measurements. See [measurement guide](reports/measurement_viewer_v1/USAGE.md)
+for source-folder setup, sensor/sample controls, exports and access restrictions.
+
 From the repository root, using its existing Python environment:
 
 ```powershell

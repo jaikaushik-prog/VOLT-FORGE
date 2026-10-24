@@ -31,6 +31,17 @@ recorded demonstration runs stay untouched. See [EDITOR_GUIDE.md](EDITOR_GUIDE.m
 for exact controls, limitations, local HTTP contract and verification commands.
 Thermal simulation and AI optimization remain unavailable.
 
+## Inspect the added P45B measurements
+
+Click **Measurements** in the editor or open **http://127.0.0.1:8765/measurements**.
+The separate read-only viewer shows the complete FreeTwinEV ID01 development
+record: measured module current/voltage, source sensors, exact samples and exports.
+The other 13 complete records remain protected. Keep the original downloaded
+folder local; it is excluded from Git. This is not a P45B simulation or module
+validation. See the [viewer decision](reports/measurement_viewer_v1/DECISION.md),
+[commands/API](reports/measurement_viewer_v1/USAGE.md) and
+[new public P45B evidence leads](reports/measurement_viewer_v1/PUBLIC_EVIDENCE.md).
+
 ## First product workflow and frontend handoff
 
 Read [FRONTEND_CONTRACT.md](FRONTEND_CONTRACT.md) for the Python/JSON interface,

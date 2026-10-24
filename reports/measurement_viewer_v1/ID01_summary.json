@@ -1,0 +1,233 @@
+{
+  "schema_version": "voltforge.measurement_viewer/1",
+  "record_id": "ID01",
+  "classification": "measured development data",
+  "cell_type": "Molicel INR21700-P45B",
+  "topology": "1s4p; detailed electrical connection mapping unverified",
+  "units": {
+    "timesamp": "s",
+    "current": "A",
+    "voltage": "V",
+    "SOC": "%",
+    "liquid_flow": "L/min",
+    "temp_ambient": "K",
+    "temp_inlet": "K",
+    "temp_outlet": "K",
+    "temp_TH1": "K",
+    "temp_TH2": "K",
+    "temp_TH3": "K",
+    "temp_TH4": "K",
+    "temp_TH5": "K",
+    "temp_TH6": "K",
+    "temp_TH7": "K",
+    "temp_TH8": "K",
+    "temp_TH9": "K",
+    "temp_TH10": "K",
+    "temp_cell-1_TH20": "K",
+    "temp_cell-1_TH21": "K",
+    "temp_cell-1_TH22": "K",
+    "temp_cell-2_TH17": "K",
+    "temp_cell-2_TH18": "K",
+    "temp_cell-2_TH19": "K",
+    "temp_cell-3_TH14": "K",
+    "temp_cell-3_TH15": "K",
+    "temp_cell-3_TH16": "K",
+    "temp_cell-4_TH11": "K",
+    "temp_cell-4_TH12": "K",
+    "temp_cell-4_TH13": "K"
+  },
+  "unit_source": "CSV line 2",
+  "current_polarity": "negative discharge; positive charge (Measurement_Protocol.xlsx Protocol!C13:C14)",
+  "time_basis": "source timesamp in seconds; elapsed_s = timesamp minus first timesamp; no alignment correction",
+  "provenance": {
+    "source_file": "1s4p Battery Module Measurement/AllData/ID01_20251126_150908248/FreeTwinEV_1s4p_ID_01.csv",
+    "source_sha256": "aa05b4f6445e6aecdd86db92bade11ef3d722450f53bfae75efc3ef0386bca55",
+    "dataset_doi": "10.5281/zenodo.18405243",
+    "allocation": "configs/freetwinev_viewer_v1.json",
+    "allocation_sha256": "4b94d7d76ea3a934a0ff975a9e2486fc8101767b43878448a0954493ba2d4f01",
+    "inventory_sha256": "d31ae89f630fb866a7594788fc0682f067e1dcfb3b9259eebff03413dd23ec43",
+    "parser_sha256": "106cbbd5786898cff564d2941bb933b7a45f8c36d3407fb9b29b51e1f03a5753",
+    "source_access": "ID01 CSV only; other 13 records and all measurement XLSX outcomes unopened",
+    "attribution": "Plzak, Berta, Urge and Bata (2026), FreeTwinEV / STU Bratislava. DOI 10.5281/zenodo.18405243. CC BY 4.0."
+  },
+  "limitations": [
+    "Development measurement, not a model prediction or fresh independent assessment.",
+    "Module current only: branch sharing and current-conservation residual are not assessable.",
+    "Module voltage only: individual cell voltage and sense-point equivalence are not established.",
+    "Calibration_Table referenced by Protocol!A19 is absent; conversion and calibration uncertainty remain unresolved.",
+    "Preparation compliance, source SOC calculation and inter-channel timing accuracy are unverified.",
+    "Measured temperatures are available; thermal prediction is unavailable.",
+    "No application voltage requirement is configured; design decisions have insufficient evidence."
+  ],
+  "summary": {
+    "sample_count": 2413,
+    "first_source_line": 3,
+    "last_source_line": 2415,
+    "duration_s": 12059.9979999997,
+    "ranges": {
+      "timesamp": {
+        "min": 0.0,
+        "max": 12059.9979999997
+      },
+      "current": {
+        "min": -20.0841953,
+        "max": 15.0615005
+      },
+      "voltage": {
+        "min": 2.52804461,
+        "max": 4.20465939
+      },
+      "SOC": {
+        "min": 0.00200314708329224,
+        "max": 100.0
+      },
+      "liquid_flow": {
+        "min": 0.0,
+        "max": 1.5391915
+      },
+      "temp_ambient": {
+        "min": 296.0300709,
+        "max": 298.0362073
+      },
+      "temp_inlet": {
+        "min": 296.3344585,
+        "max": 298.8054102
+      },
+      "temp_outlet": {
+        "min": 296.6656625,
+        "max": 298.824517
+      },
+      "temp_TH1": {
+        "min": 296.604206562029,
+        "max": 298.862547012408
+      },
+      "temp_TH2": {
+        "min": 296.623090095711,
+        "max": 298.899793734292
+      },
+      "temp_TH3": {
+        "min": 296.583306401385,
+        "max": 299.131692033922
+      },
+      "temp_TH4": {
+        "min": 296.690960684421,
+        "max": 299.203305975161
+      },
+      "temp_TH5": {
+        "min": 296.6024962992,
+        "max": 299.245440709031
+      },
+      "temp_TH6": {
+        "min": 296.605936798072,
+        "max": 299.263743530957
+      },
+      "temp_TH7": {
+        "min": 296.598888162954,
+        "max": 299.182190621332
+      },
+      "temp_TH8": {
+        "min": 296.613866683271,
+        "max": 299.281659711637
+      },
+      "temp_TH9": {
+        "min": 296.478039988375,
+        "max": 298.798368260608
+      },
+      "temp_TH10": {
+        "min": 296.461427055167,
+        "max": 298.849556758566
+      },
+      "temp_cell-1_TH20": {
+        "min": 296.653242929267,
+        "max": 304.336198782947
+      },
+      "temp_cell-1_TH21": {
+        "min": 296.638201991828,
+        "max": 304.317178821435
+      },
+      "temp_cell-1_TH22": {
+        "min": 296.628262361061,
+        "max": 302.574202355029
+      },
+      "temp_cell-2_TH17": {
+        "min": 296.53852030706,
+        "max": 304.619131629064
+      },
+      "temp_cell-2_TH18": {
+        "min": 296.62303887524,
+        "max": 304.507783808978
+      },
+      "temp_cell-2_TH19": {
+        "min": 296.564620402802,
+        "max": 302.683948495372
+      },
+      "temp_cell-3_TH14": {
+        "min": 296.603980538192,
+        "max": 304.510127059396
+      },
+      "temp_cell-3_TH15": {
+        "min": 296.882017060401,
+        "max": 304.58145595255
+      },
+      "temp_cell-3_TH16": {
+        "min": 296.592142370033,
+        "max": 302.352941327446
+      },
+      "temp_cell-4_TH11": {
+        "min": 296.530322679195,
+        "max": 304.177360356868
+      },
+      "temp_cell-4_TH12": {
+        "min": 296.601768884268,
+        "max": 304.200284187324
+      },
+      "temp_cell-4_TH13": {
+        "min": 296.663080331102,
+        "max": 302.57764909312
+      }
+    },
+    "missing_readings": {
+      "timesamp": 0,
+      "current": 0,
+      "voltage": 0,
+      "SOC": 0,
+      "liquid_flow": 0,
+      "temp_ambient": 0,
+      "temp_inlet": 0,
+      "temp_outlet": 0,
+      "temp_TH1": 0,
+      "temp_TH2": 0,
+      "temp_TH3": 0,
+      "temp_TH4": 0,
+      "temp_TH5": 0,
+      "temp_TH6": 0,
+      "temp_TH7": 0,
+      "temp_TH8": 0,
+      "temp_TH9": 0,
+      "temp_TH10": 0,
+      "temp_cell-1_TH20": 0,
+      "temp_cell-1_TH21": 0,
+      "temp_cell-1_TH22": 0,
+      "temp_cell-2_TH17": 0,
+      "temp_cell-2_TH18": 0,
+      "temp_cell-2_TH19": 0,
+      "temp_cell-3_TH14": 0,
+      "temp_cell-3_TH15": 0,
+      "temp_cell-3_TH16": 0,
+      "temp_cell-4_TH11": 0,
+      "temp_cell-4_TH12": 0,
+      "temp_cell-4_TH13": 0
+    },
+    "sampling": {
+      "min_interval_s": 4.328000000212299,
+      "median_interval_s": 5.0,
+      "max_interval_s": 5.532000000122906,
+      "gap_rule": "interval > 2 * median; diagnostic only, not a missing-sample reconstruction",
+      "gaps": []
+    },
+    "requirement_status": "requirement not configured",
+    "validation_status": "awaiting suitable measurements",
+    "current_conservation_status": "not assessable: individual branch currents absent"
+  },
+  "predictions_available": false
+}
