@@ -1,0 +1,19 @@
+{
+  "run_id": "run_0002",
+  "variant_id": "A1",
+  "revision_id": "rev_f7cec9c49e8ef4d3802c055e803720b22d2b21008a733ab1fe1fc596808c1bcb",
+  "scenario_id": "nominal",
+  "snapshot_id": "351fa6a36dac6561fbc042ce5eea2342dd7c9cd873defe48b0ebe6efb2bdab11",
+  "software_id": "5e7b36e03cfcf526d841d025ff49834bd9905fcff5f9731d6424be1580d38ac1",
+  "execution_status": "completed",
+  "error": null,
+  "created_utc": "2026-10-24T20:37:16.679635+00:00",
+  "artifacts": {
+    "configuration.json": "285321d9a51897dc66b5cca0bff404f55f43f8bc3c7194e00e6305e517b7f2ea",
+    "electrical.png": "7716db6b800c6a2a2c59a7ba61e57b9002ee4dceaed889aa1524b1a097eda179",
+    "nodes_and_power.png": "eddae18e31ae0a98b59b858da33c5faabc70712ced445f4796c54d020f341212",
+    "snapshot.json": "5af7e46640e207ccc91985a4d383d8d2f05bc41f7d647c90c477ae68b736ac46",
+    "summary.json": "7f102711667a3115f328ad549ba3a2e2bdf7479a103f3a6dc053470d914bd9d4",
+    "trajectory.csv": "1d70fec87f22efda1bffe89e2809f9ddf7194e94bd19084460f3c6e5ce766aeb"
+  }
+}

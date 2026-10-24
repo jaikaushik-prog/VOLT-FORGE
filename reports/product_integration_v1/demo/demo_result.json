@@ -1,0 +1,132 @@
+{
+  "kind": "simulation comparison",
+  "selections": [
+    {
+      "variant_id": "A0",
+      "run_id": "run_0001"
+    },
+    {
+      "variant_id": "A1",
+      "run_id": "run_0002"
+    }
+  ],
+  "inherited_result_freshness": "outdated",
+  "visual_change_result_freshness": "current",
+  "comparison": [
+    {
+      "variant_id": "A0",
+      "run_id": "run_0001",
+      "snapshot_id": "86edf53a5bbdaeac82fa324e6bea8e17b4fac67008b4c310bb388a16de12db5e",
+      "freshness": "current",
+      "maximum_branch_current_A": 4.666863993693907,
+      "minimum_cell_voltage_V": 3.6332251643582363,
+      "minimum_terminal_voltage_V": 3.6332251643582363,
+      "mean_delivered_power_W": 53.68873711416432,
+      "delivered_net_Wh": 5.368873711416432,
+      "delivered_charge_Ah": 1.4549999999999608,
+      "cell_R0_loss_Wh": 0.1318143178985831,
+      "rail_loss_Wh": 0.03377777201462756,
+      "R1_loss_Wh": 0.0999664049669418,
+      "above_4_9A_cell_seconds": 0,
+      "requirement": "requirement not configured",
+      "decision": "insufficient evidence"
+    },
+    {
+      "variant_id": "A1",
+      "run_id": "run_0002",
+      "snapshot_id": "351fa6a36dac6561fbc042ce5eea2342dd7c9cd873defe48b0ebe6efb2bdab11",
+      "freshness": "current",
+      "maximum_branch_current_A": 4.5269473627102315,
+      "minimum_cell_voltage_V": 3.63712057669394,
+      "minimum_terminal_voltage_V": 3.63712057669394,
+      "mean_delivered_power_W": 53.74432400331773,
+      "delivered_net_Wh": 5.374432400331773,
+      "delivered_charge_Ah": 1.4549999999999608,
+      "cell_R0_loss_Wh": 0.1316562854096264,
+      "rail_loss_Wh": 0.028613726967965155,
+      "R1_loss_Wh": 0.09979627097841863,
+      "above_4_9A_cell_seconds": 0,
+      "requirement": "requirement not configured",
+      "decision": "insufficient evidence"
+    }
+  ],
+  "export": {
+    "path": "C:\\Users\\DELL\\Desktop\\volt-forge\\reports\\product_integration_v1\\demo\\export",
+    "run_ids": [
+      "run_0001",
+      "run_0002"
+    ],
+    "manifest_sha256": "057861762e7c41173188e210045e7eabac9f9abe6a346a1bef64ba052ac9c1ae",
+    "classification": "reproducible simulation package",
+    "experimental_validation": "awaiting suitable measurements"
+  },
+  "replays": [
+    {
+      "run_id": "run_0001",
+      "reproduced": true,
+      "samples": 1441,
+      "solver_status": "completed",
+      "scope": "software reproduction only",
+      "experimental_validation": "awaiting suitable measurements"
+    },
+    {
+      "run_id": "run_0002",
+      "reproduced": true,
+      "samples": 1441,
+      "solver_status": "completed",
+      "scope": "software reproduction only",
+      "experimental_validation": "awaiting suitable measurements"
+    }
+  ],
+  "examples": [
+    {
+      "operation": "load_reference",
+      "example": "examples/01_load_reference.json"
+    },
+    {
+      "operation": "run",
+      "example": "examples/02_run.json"
+    },
+    {
+      "operation": "create_variant",
+      "example": "examples/03_create_variant.json"
+    },
+    {
+      "operation": "validate_edit",
+      "example": "examples/04_validate_edit.json"
+    },
+    {
+      "operation": "apply_edit",
+      "example": "examples/05_apply_edit.json"
+    },
+    {
+      "operation": "get_run",
+      "example": "examples/06_get_run.json"
+    },
+    {
+      "operation": "run",
+      "example": "examples/07_run.json"
+    },
+    {
+      "operation": "update_display",
+      "example": "examples/08_update_display.json"
+    },
+    {
+      "operation": "get_run",
+      "example": "examples/09_get_run.json"
+    },
+    {
+      "operation": "series",
+      "example": "examples/10_series.json"
+    },
+    {
+      "operation": "compare",
+      "example": "examples/11_compare.json"
+    },
+    {
+      "operation": "export",
+      "example": "examples/12_export.json"
+    }
+  ],
+  "experimental_validation": "awaiting suitable measurements"
+}

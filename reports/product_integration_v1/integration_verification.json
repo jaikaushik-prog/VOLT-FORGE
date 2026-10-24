@@ -1,0 +1,43 @@
+{
+  "tests": 100,
+  "failures": 0,
+  "skips": 0,
+  "preserved_baseline_artifacts": 112,
+  "previous_simulation_artifacts_verified": 145,
+  "previous_readiness_preserved_as": "reports\\product_integration_v1\\SIMULATION_READINESS_previous.md",
+  "untouched_unused_cells": [
+    "P11",
+    "P12",
+    "P14",
+    "P15",
+    "P18",
+    "P20",
+    "P3",
+    "P6",
+    "P9"
+  ],
+  "original_archive_hash_verified": true,
+  "new_measurement_outcomes_opened": [],
+  "no_model_refitting": true,
+  "workflow": "A0 -> one declared rail edit -> outdated A1 -> rerun -> compare -> export/replay",
+  "experimental_validation": "awaiting suitable measurements",
+  "artifacts": {
+    "src/voltforge/project/package.py": "138c60adfc5f3c66f06920646c324865a1e039af706d7e0c30c2419037d8c697",
+    "src/voltforge/project/replay.py": "7e83ec62a2371816be96a552839f34764cebdded5869c1afd545c6ad6296fac5",
+    "src/voltforge/project/schema.py": "cbfb01b68da84c8d4073506b33251a2e2a233168e8af5ffe35cdc22a38e0a0f3",
+    "src/voltforge/project/service.py": "51864490e95a27f6ba15b730ca47af8cdb6364cac086230c66a41e6a75ac16a5",
+    "src/voltforge/project/__init__.py": "5a557ba66bc05f92119a6097be1c7c0e0bbbf2ae60253f876d95438a8dbc90d4",
+    "src/voltforge/project/__main__.py": "9fde4e8d42d6731d8f80a9d29f1eb58a730ec2c6315222186b2d62603047fd54",
+    "tests/test_project_workflow.py": "fac6bae9b864344db9c9f1aeeeb1a3a352b8d3cb11a8959e224d84ded94f446c",
+    "scripts/demonstrate_product_workflow.py": "82f588197cbcd848c9521f9110135f837014cb052377ebf8e0cfdaf1d78461bd",
+    "scripts/verify_product_integration.py": "736856567115a403e21dd491b27caffb3972ee3e49b928fc02989c27cf6ceb3b",
+    "VOLT_FORGE_Product_Vision.md": "bd4b88a2eea521564a5db8d206642ba18493b28d217f0ddb18732f1ac5f004a2",
+    "PRODUCT_INTEGRATION_PLAN.md": "5cfd4d7e7bc9341bd96c1d513bc448809114ee5cdbf65dbddf17d0ff926e7722",
+    "SIMULATION_READINESS.md": "0fefc389983434f3b9fde7d427a88f198fcfe6751d58bdfa4f50a12479000bc4",
+    "FRONTEND_CONTRACT.md": "efb294487bf2be83dbf2e5b358838a36f11129cafe235ac0205abad7d028efe1",
+    "MVP_SCOPE.md": "7b797520abd5aed2710b6d0e2f4afe10e032d6b292264969262d8fcf300eb4ca",
+    "reports/product_integration_v1/pytest.xml": "94d05e1eecb59356801dfaec21f4b33218b681962f33a182b25fbb61385c5ff2",
+    "reports/product_integration_v1/FRONTEND_EXAMPLES.md": "ae6472a4f511851e6e7485862cf7ebd1fdf49c3b787f9467f0836f0626297947",
+    "reports/product_integration_v1/demo/demo_manifest.json": "77c246f27d42c858128766f963e047eaf78fe523f3368c3e1228764260368be1"
+  }
+}

@@ -1,265 +1,191 @@
-# Four-cell electrical simulation readiness
+# Four-cell simulation and product-handoff readiness
 
-25 October 2026. **The command-line simulation and measurement-comparison backend
-works and passes 75 tests. Experimental module validation is awaiting suitable
-measurements.** Every supplied scenario returns **requirement not configured**
-for the missing load-voltage requirement, and **insufficient evidence** for an
-engineering decision. No replacement cell model, optimizer, repair rank,
-temperature prediction or experimental battery-performance gain is claimed.
+25 October 2026. **The electrical backend and the first product workflow work;
+100 tests pass.** The frontend can connect to a versioned Python/JSON interface
+for load, inspect, edit, branch, run, time series, comparison and export/replay.
+Experimental module validation is **awaiting suitable measurements**. Device
+voltage/excursion requirements remain **requirement not configured**; the supplied
+runs return **insufficient evidence** for engineering acceptance.
 
-## 1. What now works
+## Actual repository state and what changed
 
-`python -m voltforge.simulation` provides four commands:
-
-| Command | Function |
+| Workstream | Status after inspection and this sprint |
 |---|---|
-| `configure` | Verify frozen model files; materialize four manual scenarios with fitted parameters, explicit rails, states, temperature assumptions and evidence; hash the declaration before simulation. |
-| `simulate` | Run four main cases, 28 one-at-a-time sensitivity scenarios, two paired SOC/reference-origin checks, and 1/0.5/0.25 s integration checks. Save trajectories, losses, energy, coverage and decision status. |
-| `compare` | Produce an unranked scenario table and electrical plots; optionally compare a supplied measurement package against one configured main run. |
-| `validate` | Preserve original measurement bytes, check the import structure, units, timing, locations, polarity, calibration metadata and current-conservation residuals. |
+| Existing dynamic ladder, frozen v2 model, SOC/RC and electrical accounting | Already complete; reused unchanged. No new electrical model or fitting pipeline. |
+| Four manual scenarios, 28 sensitivities, coordinate and time-step checks | Already complete; original declarations, outputs and test records retained. |
+| Coverage, requirement checks and future-measurement import/comparison | Already complete; reused through the project interface, including synthetic ingestion tests. |
+| Shared project state and explicit component/connection graph | Implemented: schema v1, stable IDs, pinned model references, units/provenance, requirements, variants, saved runs and optional display state. |
+| Invalidation and immutable run history | Implemented: new design revisions; captured scenario/model/software inputs; owner-variant checks; visual changes excluded; old runs retained. |
+| Frontend handoff and reproducible result export | Implemented: Python/JSON API and CLI, exact generated examples, A0/A1 demonstration, source/reference assets and independent-process replay. |
+| Visual editor and asynchronous/collaborative application infrastructure | Not built; next bounded product milestone. No general CAD framework was introduced. |
+| Experimental module accuracy and requirement acceptance | Blocked by external calibration, preparation, module measurements and missing application requirements. |
+| Thermal solver, broad CAD, AI copilot and optimizer | Unavailable; future scope, not incomplete electrical outputs. |
 
-The [application configuration](configs/module_application_v1.json) specifies
-LG M50T NMC cells P7/P17/P19/P13 in position order, a 1s4p same-side-terminal
-ladder, 14.55 A for 360 s, and separate resistance values for each of the three
-segments on each rail. Initial SOC 0.70 and zero polarization are assumptions,
-not measured initial states. Nominal ambient/surface 23 C is an assumed operating
-condition supported only by characterization context, not a thermal prediction.
-Minimum device voltage, allowed excursion duration and their source are **null**.
-The old 3.50 V example and 25 mV proposal are not backend acceptance defaults.
+The original downloaded [product vision](VOLT_FORGE_Product_Vision.md) is retained
+unchanged. Its concept graphics/specifications and thermal/AI stage descriptions
+are not current capabilities. See [MVP_SCOPE.md](MVP_SCOPE.md) for that distinction
+and [PRODUCT_INTEGRATION_PLAN.md](PRODUCT_INTEGRATION_PLAN.md) for the inventory and
+A0/A1 scenario declaration made before examining the new comparison outputs.
 
-Each [configured scenario](reports/module_simulation_v1/configured/equal_soc.json)
-contains the actual extracted, frozen v2 R0/R1/tau/capacity/reference values,
-fitting and assessment evidence, assumptions and units. The
-[configuration manifest](reports/module_simulation_v1/manifest.json) binds source
-model files, scenario inputs and exported C/20 sensitivity data by hash. Source
-values, fitted parameters, proposed service and unverified physical assumptions
-are labelled separately.
+## What the frontend can use
 
-The original `models/coupling.py` is itself protected by the previous preservation
-lock. The [versioned extension](src/voltforge/models/coupling_v2.py) reuses its
-ladder solver and preserves its held-current state convention. The frozen file
-and the v2 cell models remain unchanged. This extends the software backend; it
-does not reopen the completed reference/initial-state modelling investigation.
+[`voltforge.project`](src/voltforge/project/service.py) wraps the existing
+`simulation.workflow`, `simulation.measurements`, `simulation.reporting` and
+`models.coupling_v2`. It accepts only the LG M50T NMC cells P7/P17/P19/P13 in a
+same-side 1s4p ladder. Cells have stable IDs; six rail connections map to explicit
+node pairs, and terminals are fixed at p1/n1. Unknown topology, rewiring, fitted
+parameter edits and thermal requests are rejected.
 
-Each trajectory records SOC, polarization, reference voltage, branch current,
-cell voltage, both sets of node potentials, each rail drop/current/loss, terminal
-power, delivered/received energy, resistor losses, equivalent-capacitor storage,
-and numerical conservation residuals. Negative module current charges the module;
-internal circulating currents can exist even at zero module current.
+The project stores frozen-model versions/hashes, conditions, load, simulation
+settings, explicitly unset requirements, variants, outputs and evidence. Each run
+captures a complete immutable design/scenario/model/software snapshot before
+execution. Results from another variant are inherited as **outdated**, never
+current. A changed physics/requirement revision or software/runtime invalidates
+dependent results. Pure positions, camera and selection changes do not create an
+electrical revision. No implemented geometry-to-resistance rule exists.
 
-## 2. What has been checked mathematically
+`execution_status` (completed/failed) and `freshness` (current/outdated) are
+separate. Domain failures retain exact inputs and supported partial samples.
+No SOC clipping, reference extrapolation or invented temperature is introduced.
+A synchronous request may return a saved failed run; the UI must display that
+status and must select results by variant, scenario, run and snapshot ID.
 
-The model equations use discharge-positive current:
+[FRONTEND_CONTRACT.md](FRONTEND_CONTRACT.md) documents the exact editable properties,
+request envelopes, error codes, units, measurement handoff and replay. The
+[generated examples](reports/product_integration_v1/FRONTEND_EXAMPLES.md) and
+[complete response corpus](reports/product_integration_v1/demo/examples) come from
+this implementation. A copied project preserves its state; an export is an
+immutable selected-history package rather than a mutable project.
 
-```text
-cell voltage = rested-reference(SOC) - polarization - R0 * branch current
-dSOC/dt = -branch current / (3600 * capacity_Ah)
-dpolarization/dt = (R1 * branch current - polarization) / tau
-R0 loss = R0 * current^2
-R1 loss = polarization^2 / R1
-equivalent polarization capacitance = tau / R1
-stored polarization energy = 0.5 * (tau/R1) * polarization^2
-rail loss = segment resistance * downstream-current^2
-```
+## Declared A0/A1 simulation comparison
 
-The static ladder solves all branch currents and shared rail drops together.
-SOC integration and polarization updates use each interval's held branch currents.
-Polarization updates and integrated R1 resistor losses are exact under that
-assumption. Load changes are integration boundaries. Delivered energy uses
-trapezoidal terminal power with the endpoint solution under the **old** load
-before a change; a discontinuity is never smeared across the integration interval.
+Both cases use 14.55 A for 360 seconds, initial relative SOC 0.70 for every cell,
+zero polarization, assumed ambient/surface 23 C, and dt 0.25 seconds. A0 has
+0.001 ohm per segment on each rail. A1 changes **only positive segment p1-p2 to
+0.0005 ohm**, with explicitly hypothetical provenance. This differs from the
+older scenario that changed all six segments. No physical feasibility or measured
+resistance is established by the edit.
 
-Reference-source work integrates the reference curve along the held-current SOC
-trajectory. It is electrical-model bookkeeping, not measured chemical energy:
-the reference is not proven equilibrium OCV. The finite-step source-work minus
-terminal-energy/loss/storage residual is reported rather than forced to zero.
-Calculated equivalent-circuit resistor dissipation is not a prediction of actual
-heat partition, surface temperature or core temperature.
-
-The [test record](reports/module_simulation_v1/pytest.xml) has **75 passed, zero
-failures or skips**. New tests include closed-form symmetric RC voltage and
-energy, arbitrary initial polarization, charging/rest/discharging transitions,
-circulating currents, node/drop relationships, source-work/loss/storage accounting,
-legacy-coupling equivalence, domain stops, importer failures and an end-to-end
-test of all four CLI commands. The synthetic analytical RC comparison is separate
-from the generated importer fixture.
-
-For the four 360 s main cases at 0.25 s:
-
-- Maximum KCL residual: 1.8e-15 A; maximum total charge-accounting residual:
-  2.1e-10 A s; instantaneous full power-balance residual: below 2.5e-14 W.
-- Reducing the step from 1 s to 0.25 s changes terminal voltage by at most
-  **0.00792 mV**, branch current by **0.00238 A**, and delivered energy by
-  **2.74e-6 Wh** on common sample times.
-- At 0.25 s, the largest final integrated energy-balance residual magnitude is
-  **6.04e-7 Wh**. Residual cancellation can make individual cases nonmonotonic
-  across steps; all step results are retained. This is not a physical error bound.
-- Paired +/-0.02 SOC/reference-origin relabelling leaves the tested baseline
-  voltage and branch currents unchanged at stored precision.
-
-See [software verification](reports/module_simulation_v1/software_verification.json).
-These checks establish numerical consistency, not experimental accuracy.
-The [release verification](reports/module_simulation_v1/release_verification.json)
-records file hashes, test counts and the unchanged baseline/archive checks;
-reproduce it with `python scripts/verify_simulation_release.py` after the full
-demonstration and its JUnit test record have been generated.
-
-If a state would leave SOC/reference support, the integrator stops at the last
-supported sample and records the attempted state and first predicted boundary
-time. It saves partial results; it never clips SOC or extends the voltage curve.
-No reference extrapolation option is supplied. Mathematically supported but
-experimentally unverified waveform transfer is explicitly permitted and flagged
-for these research scenarios.
-
-## 3. Scenario results and experimental support
-
-The [scenario declaration](configs/module_scenarios_v1.json) and
-[plan](SIMULATION_PLAN.md) precede these outputs. Cases appear in declared order,
-not in performance rank. Every numerical entry below is a **simulation**.
-
-| Manual case | Peak branch [A] | Minimum terminal [V] | Mean delivered power [W] | Delivered [Wh] | R0 / rail / R1 loss [Wh] |
+| Simulation | Peak branch current [A] | Minimum cell/terminal [V] | Mean delivered power [W] | Net delivered [Wh] | Cell R0 / rail / R1 losses [Wh] |
 |---|---:|---:|---:|---:|---:|
-| Equal SOC, 14.55 A | 4.6669 | 3.6332 | 53.689 | 5.3689 | 0.1318 / 0.0338 / 0.1000 |
-| Prior SOC imbalance | 5.3528 | 3.6337 | 53.697 | 5.3697 | 0.1336 / 0.0315 / 0.1016 |
-| Hypothetical 0.5 mOhm rail segments | 4.2345 | 3.6454 | 53.862 | 5.3862 | 0.1313 / 0.0177 / 0.0993 |
-| Reduced load, 12 A | 3.8599 | 3.6841 | 44.765 | 4.4765 | 0.0897 / 0.0229 / 0.0680 |
+| A0 | 4.666864 | 3.633225 | 53.688737 | 5.368874 | 0.131814 / 0.033778 / 0.099966 |
+| A1 | 4.526947 | 3.637121 | 53.744324 | 5.374432 | 0.131656 / 0.028614 / 0.099796 |
 
-Minimum cell voltage equals minimum terminal voltage in these discharge cases
-because position 1 shares the terminal nodes; all node voltages are still
-reported. See the [complete comparison](reports/module_simulation_v1/COMPARISON.md),
-[machine-readable table](reports/module_simulation_v1/comparison.csv),
-[imbalance electrical plot](reports/module_simulation_v1/runs/soc_imbalance/electrical.png)
-and [node/power plot](reports/module_simulation_v1/runs/equal_soc/nodes_and_power.png).
+Both supply the same requested/delivered 1.455 Ah in the simulation. The minimum
+voltage difference is about 3.90 mV. It is **not** an experimentally demonstrated
+repair advantage, safety margin or battery-performance improvement. No ranking
+is produced. Neither run exceeds the descriptive 4.9 A primary-subset boundary,
+but **every branch still carries unsupported module waveform transfer**. Matching
+an amplitude band does not validate current sharing or contiguous dwell accuracy.
 
-Reduced load supplies **1.200 Ah instead of 1.455 Ah**, and about **16.62% less
-terminal energy** in this calculation. Its higher voltage and lower losses come
-with reduced delivered service; they are not an unconditional improvement.
-The rail change is hypothetical until construction, contact resistance, current
-carrying capability and temperature behaviour are established. The roughly
-12 mV terminal-voltage difference does not establish a real repair advantage.
+See [comparison table](reports/product_integration_v1/demo/comparison.csv),
+[plot](reports/product_integration_v1/demo/comparison.png),
+[exact conditions and flags](reports/product_integration_v1/demo/comparison.json)
+and [workflow/replay result](reports/product_integration_v1/demo/demo_result.json).
+The demonstration explicitly records A0 inherited by A1 as outdated, reruns A1,
+then moves display positions without making its results outdated.
 
-Experimental evidence is limited to the already-characterized individual cells
-and the frozen v2 fit/assessment records. The previous 9.55 mV headline applies
-only to its specified single-cell SOC/current/temperature subset; full-record
-fresh-cell maxima reached about 97 mV. Those errors are not module error bounds.
+## Mathematical/software evidence
 
-Every cell's run summary retains fitting current ranges/dwell spans and
-assessment protocol, SOC and temperature ranges separately. It records intervals
-by direction and current band, out-of-subset durations, initial assumptions and
-temperature evidence. The current/reference curve's mathematical support never
-becomes an experimental waveform-support flag. Even the baseline, whose peaks
-stay below 4.9 A, returns **unsupported transfer** for every branch.
+The earlier 75-test release covered analytical RC and network cases, conservation,
+charge/discharge conventions, node/rail accounting, domain stops, importer timing
+and current conservation. Its full report is preserved byte-for-byte as
+[previous readiness](reports/product_integration_v1/SIMULATION_READINESS_previous.md).
+For the earlier four 360-second cases, KCL residual was below 1.8e-15 A and
+charge-accounting residual below 2.1e-10 A s. Changing dt from 1 to 0.25 s changed
+terminal voltage by at most 0.00792 mV. These are numerical checks, not accuracy
+bounds. [Original verification](reports/module_simulation_v1/software_verification.json)
+remains unchanged.
 
-In the imbalance case P7 stays above 4.9 A for approximately **19.25 s**. The
-observed calibration excursions above 4.9 A last about 9.9 s; the sustained
-characterization plateau is about 4.85 A for six minutes. An amplitude lying
-between observed values does not validate this waveform or duration. Rail and
-temperature assumptions create additional unsupported transfer.
+The current suite has **100 passed, zero failed, zero skipped**:
+[JUnit record](reports/product_integration_v1/pytest.xml). Its 25 additional checks
+cover explicit topology and frozen identities, invalid edits/units, optimistic
+revision conflicts, single-writer exclusion, variant isolation, visual invariance,
+software-version invalidation, artifact tampering, partial and empty domain stops,
+backend exceptions, output mapping, changed-service comparison rejection, all
+seven sensitivity scenarios, synthetic importer reuse and standalone export replay.
+The project path reproduces the existing solver's numerical trajectory rather
+than introducing a second implementation. The exported A0/A1 runs each replay
+1,441 samples with all numeric columns agreeing within rtol/atol 1e-10.
 
-## 4. Sensitivity and decisions still unsupported
+[Integration verification](reports/product_integration_v1/integration_verification.json)
+checks all 112 protected baseline artifacts, the original archive hash, the prior
+145 release artifacts and the new handoff. The living root readiness report was
+explicitly updated as requested; its original hash is verified against the
+preserved previous-readiness copy. Previous release manifests, assessment outcomes,
+fitted artifacts and test XML are not rewritten. Nine unused characterization
+cells remain unconsumed. No raw measurements were decoded for this product layer.
 
-Seven separate sensitivities apply to every manual scenario: relative initial
-SOC +/-2 percentage points, capacity +/-1%, polarization +/-5 mV, and the
-previously investigated C/20-shape reference with the same rest anchors.
-These are **sensitivity scenarios**, not calibrated confidence intervals or
-guaranteed bounds. RC parameters are unchanged. Capacity changes affect charge
-integration at a fixed reference coordinate; they are not a re-estimation of
-the original capacity/reference calibration.
-Each offset or capacity multiplier acts commonly on all four cells. This small
-set does not cover all independent per-cell extremes or combinations of the
-manual rail/load changes with the imbalance case.
+## Experimental support and unresolved decisions
 
-Relative SOC changes hold the reference fixed. Paired origin shifts move both
-SOC and reference labels together and are reported separately as coordinate
-checks, not additional physical uncertainty. No joint distribution or independent
-combination of SOC, capacity and reference errors is assumed.
+The frozen v2 cell model retains its original evidence and limits. Its 9.55 mV
+headline was the specified single-cell SOC/current/temperature subset; full-record
+maximum errors reached about 97 mV. It is not a module error bound. The rested
+voltage curve is not proven equilibrium OCV. Initial SOC/reference-origin
+uncertainty and sparse reference coverage remain; no replacement was adopted.
 
-Across nominal and one-at-a-time cases, baseline minimum terminal voltage spans
-**3.6109-3.6552 V**. Imbalance peak current spans **5.3107-5.3993 A**, with
-**17.5-21.25 s** above 4.9 A. Thus the imbalance coverage concern persists across
-the declared sensitivities. The signs of the reported manual-case contrasts do
-not change in this small set. That does not establish robustness to unexamined
-states, thermal histories, model-form error or actual interconnect uncertainty.
-The reduced-load case always delivers less energy than its matched baseline
-(approximately **0.887-0.898 Wh less**).
+The baseline assumes temperature and initial states. It has no thermal prediction,
+no broad temperature law and no independent module-current accuracy evidence.
+The approximately 4.85 A sustained cell plateau and brief higher-current records
+do not establish arbitrary branch waveform validity. Old sensitivity results and
+the seven available project sensitivity scenarios are exploratory, not confidence
+intervals or guarantees. SOC-origin and reference uncertainty are not treated as
+independent calibrated errors.
 
-See [sensitivity plot](reports/module_simulation_v1/sensitivity_scenarios.png),
-[all cases](reports/module_simulation_v1/sensitivity_comparison.csv), and
-[matched contrasts](reports/module_simulation_v1/sensitivity_contrasts.json).
-No score combines these quantities into an optimum or repair rank.
+The measured module-versus-branch-current discrepancy remains unresolved. Neither
+source is rescaled or selected for capacity agreement. The importer preserves
+original bytes and requires timing, channel locations, units, polarity, sensor
+mapping, calibration and preparation metadata. The current integration test uses
+an explicitly synthetic fixture with a known +10 mV voltage offset, recovering
+-10 mV prediction-minus-fixture bias; this checks plumbing only.
 
-The missing load/device minimum voltage and permitted excursion duration produce
-**requirement not configured**, not a pass. Even if a user later supplies a sourced
-requirement, this version only reports a finite-step simulated excursion screen;
-it cannot grant experimental acceptance. The simulation stops remain distinct
-from coverage warnings. None of this resolves the independent disagreement
-between module and summed branch current measurements. Both uncertain sources
-remain unchanged.
+Actual device minimum voltage, allowed excursion duration and a documented source
+remain null. **3.50 V and 25 mV are not defaults or authoritative requirements.**
+A supplied requirement enables only the existing finite-step screen and cannot
+turn missing module validation into an experimental pass.
 
-## 5. Real-data validation and minimum next evidence
+Minimum external evidence needed next:
 
-The [measurement import specification](MEASUREMENT_IMPORT_SPEC.md) documents all
-15 required current/voltage/temperature channels, original source rows, separate
-channel timestamps when needed, units, polarity, defined node locations, sensor
-IDs, preparation history and calibration/synchronization metadata. The importer
-keeps original bytes, calculates current-sum residuals and reports missing
-evidence. It never rescales a channel to enforce conservation or shifts it to
-improve prediction error.
+1. Actual load/converter voltage and excursion requirements, with sources and
+   consequences of a wrong decision; establish an uncertainty budget prospectively.
+2. Traceable Hall/cycler calibration and processing, sensor-position assignment,
+   alignment/filtering evidence and an independent current reference resolving the
+   disagreement, or suitable replacement controlled measurements.
+3. Measured contacts/rail resistances and physical feasibility, documented charge
+   and rest preparation, synchronized module/four-branch currents, defined-node
+   voltages and temperatures for the intended waveform and relevant imbalance.
+4. A prospective allocation of complete measurement sequences before any further
+   fitting, model selection or module-accuracy assessment.
 
-The [synthetic ingestion record](reports/module_simulation_v1/synthetic_ingestion/validation.json)
-and [synthetic comparison](reports/module_simulation_v1/synthetic_comparison/comparison.json)
-demonstrate the workflow. A generated fixture adds a known +10 mV to simulated
-voltage readings; the comparison recovers -10 mV prediction-minus-fixture bias.
-This tests plumbing only. Its explicit synthetic label leaves experimental
-validation at **awaiting suitable measurements**. No protected module outcome
-was opened to demonstrate import.
+The [author questions](reports/reconciliation/AUTHOR_QUESTIONS.md) and
+[lab request](reports/reference_initial_state_v1/LAB_REQUEST.md) remain unsent.
 
-Minimum external evidence remains:
+## Reproduce and hand off
 
-1. The actual load or converter input-voltage requirement, allowable excursion
-   duration and consequence of false clearance, with a documented source.
-2. Traceable module and branch-current calibration/conversion, sensor-position
-   mapping, timing/filtering evidence and an independent current reference that
-   can resolve the existing discrepancy. The existing author packet remains unsent.
-3. Suitable synchronized measurements at the modeled electrical nodes, measured
-   rail/contact resistances, temperature observations, and documented initial
-   charge/rest preparation for the intended waveform and relevant imbalance.
-4. A sourced uncertainty budget and a prospective allocation of complete
-   measurement sequences before using new outcomes for fitting or acceptance.
-
-The [lab brief](reports/reference_initial_state_v1/LAB_REQUEST.md) remains prepared
-and unsent. All nine unused characterization cells and frozen module assessment
-outcomes remain preserved. The 112 protected original/v1/v2 artifacts, frozen
-investigation procedure and original archive retain their hashes. No repository
-publication or frontend/optimizer work was performed.
-
-## Reproduce the demonstration
-
-From `C:\Users\DELL\Desktop\volt-forge`, with the existing Anaconda environment:
+From the repository root, with the existing pinned environment:
 
 ```powershell
 $env:PYTHONPATH = 'src'
-& C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation configure
-& C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation simulate
-& C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation compare
-& C:\Users\DELL\anaconda3\python.exe scripts\make_module_fixture.py
-& C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation validate --measurements tests/fixtures/module_synthetic --out reports/module_simulation_v1/synthetic_ingestion
-& C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation compare --measurements tests/fixtures/module_synthetic --out reports/module_simulation_v1/synthetic_comparison
-& C:\Users\DELL\anaconda3\python.exe -m pytest -q --junitxml=reports/module_simulation_v1/pytest.xml
-& C:\Users\DELL\anaconda3\python.exe scripts\verify_simulation_release.py
+& C:\Users\DELL\anaconda3\python.exe scripts\demonstrate_product_workflow.py
+& C:\Users\DELL\anaconda3\python.exe -m pytest -q --junitxml=reports/product_integration_v1/pytest.xml
+& C:\Users\DELL\anaconda3\python.exe scripts\verify_product_integration.py
 ```
 
-Use `python` instead of the absolute interpreter path in an environment installed
-from the existing pinned requirements. First configuration needs the official
-archive solely to export the four already-used C/20 sensitivity curves. Later
-simulation and comparison use configured artifacts without decoding raw records.
-The main-only run option is `simulate --main-only`. It regenerates main runs and
-time-step checks; previously produced sensitivity files remain on disk. Use a
-new `--workspace` and versioned inputs for a changed declaration. `configure`
-refuses a silently changed declaration in an existing workspace.
+The first command verifies an existing completed demonstration without overwriting
+it. For a fresh full reproduction, use `--out tmp/product_demo_fresh` (a new path).
+The demo loads A0, runs it, validates/applies the declared A1 edit, demonstrates
+invalidation, reruns, compares, exports, replays and writes exact frontend examples.
+It uses the configured reference assets already in the repository and does not
+need the raw archive. The full historical test/preservation suite separately
+requires that original archive; it is still excluded from GitHub.
 
-For a student: the backend now calculates how the four cells share current,
-how their voltages change, and how much electrical energy reaches the load or
-is dissipated in the circuit model. It also tells us where evidence is missing.
-We still need a real, calibrated module test and the load's voltage requirement
-before deciding that this module can do the intended job.
+The original `python -m voltforge.simulation configure/simulate/compare/validate`
+workflow remains available. Use new output directories for new investigations;
+do not overwrite old release outputs or regenerate their historical test XML.
+For the handoff, prefer the versioned project interface and its immutable runs.
+
+The next implementation milestone is a small 2D four-cell editor/inspector and
+results view using this contract. A student can now change one supported input,
+see the computed current/voltage consequences, track assumptions and export a
+reproducible comparison. Whether a physical module actually meets its load's
+requirements still requires the missing calibrated measurements.

@@ -1,0 +1,15 @@
+{
+  "baseline": "Existing equal-SOC A0, 14.55 A for 360 s, dt 0.25 s",
+  "alternative": {
+    "target": "connection",
+    "id": "rail_p_1",
+    "property": "resistance",
+    "value": 0.0005,
+    "unit": "ohm",
+    "classification": "assumed",
+    "source": "Predeclared manual hypothetical p1-p2 segment alternative; feasibility and resistance unmeasured"
+  },
+  "comparison": "identical operating conditions; one rail resistance change",
+  "interpretation": "simulation comparison; not validated repair, ranking or battery-performance gain",
+  "requirements": "minimum device voltage, excursion duration and source remain unset"
+}

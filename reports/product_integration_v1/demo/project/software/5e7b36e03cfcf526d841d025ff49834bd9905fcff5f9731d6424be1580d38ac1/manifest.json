@@ -1,0 +1,41 @@
+{
+  "id": "5e7b36e03cfcf526d841d025ff49834bd9905fcff5f9731d6424be1580d38ac1",
+  "files": {
+    "src/voltforge/__init__.py": "f23ed902dd6014d766f3fe09ef959aa358455b61d8d8d708b14c8d564b1bcda1",
+    "src/voltforge/data/__init__.py": "a5cd04e841cb03c05295629c490ddd1d4908836f39cfc1d3501c894a4abb1257",
+    "src/voltforge/data/archive.py": "a70aa022ed9eef58f5b2157a076ca89049d0e4431065c23d5ea7976c5df8ca2c",
+    "src/voltforge/data/cli.py": "8e94fa5d4bb3fc740885433b3d8b7910eefad6e0cf7ced789046b0411bd61ae1",
+    "src/voltforge/data/inspection.py": "4c9d11df92dc7f0357678002558bc697dbff0acdf37fdec9b928efeef85fe80c",
+    "src/voltforge/data/matlab.py": "c39369ce797d7a2190d5ddae2ff6b136756e9acfd51da9b2471c7f75b6573497",
+    "src/voltforge/data/plots.py": "805d8fd17d9f8e40f8c6fdcab1bff7f46fbb3d68552f2a386c0dce58204783db",
+    "src/voltforge/models/__init__.py": "9e96f6859d4c1afb7ef079c37144f6f71081a0b715020a06fdba44d31a9bb887",
+    "src/voltforge/models/coupling.py": "8fc8aae001f67a22690a81a47b41b1f9ff31518a2ccc307c8ffa776abde60b07",
+    "src/voltforge/models/coupling_v2.py": "895eb087cfe3b44a09cd6f98530359f0a6dc754644c9a0ec2b83598f81b24d84",
+    "src/voltforge/models/identification.py": "128fa77ba776fb6cc38b59c0ce15887985713ad5c2fc10d0b233de81441f3589",
+    "src/voltforge/models/improvement.py": "0f4b11344ecf0567737957c8ddec607ded3170e22587202621c2847cd98eefbc",
+    "src/voltforge/models/ladder.py": "33bbb51db20ae86697a7fca754c1e0bd3387c6f532b76aab056bc955e67b29ec",
+    "src/voltforge/models/reference_investigation.py": "44d4e971bb8669b8a844de8dc77002fb496d79bba9fafaf56bb035b1b8f013f4",
+    "src/voltforge/project/__init__.py": "5a557ba66bc05f92119a6097be1c7c0e0bbbf2ae60253f876d95438a8dbc90d4",
+    "src/voltforge/project/__main__.py": "9fde4e8d42d6731d8f80a9d29f1eb58a730ec2c6315222186b2d62603047fd54",
+    "src/voltforge/project/package.py": "138c60adfc5f3c66f06920646c324865a1e039af706d7e0c30c2419037d8c697",
+    "src/voltforge/project/replay.py": "7e83ec62a2371816be96a552839f34764cebdded5869c1afd545c6ad6296fac5",
+    "src/voltforge/project/schema.py": "cbfb01b68da84c8d4073506b33251a2e2a233168e8af5ffe35cdc22a38e0a0f3",
+    "src/voltforge/project/service.py": "51864490e95a27f6ba15b730ca47af8cdb6364cac086230c66a41e6a75ac16a5",
+    "src/voltforge/simulation/__init__.py": "22e021b2a88204c9df19252a79078bf239662be1663b43fbeaa8984eb2db4284",
+    "src/voltforge/simulation/__main__.py": "73176650cde520e8d2115cb06d7864f2e2ef8db5cf3178052775b158f6470584",
+    "src/voltforge/simulation/measurements.py": "acd3222f6f15715615f32b4b770e4618b68a881b1c3c6e0fbe5681afbffb8735",
+    "src/voltforge/simulation/reporting.py": "bae72bc3d151dc0796ced43d3d7474fbff3c4fe435ab5b73a31ee02d2368fc3b",
+    "src/voltforge/simulation/workflow.py": "4a8c2bbc409f3bd19159490e6788166fde8c946094bb7cf0d6267037f70cf8a3",
+    "requirements.txt": "cc68d2dfe73da2abb5898d723d3400338d5aee4916f3f2db58e3e3dddd432e08",
+    "pyproject.toml": "08518c670b14c157073c2b945ea9fa2de9f1e699ca1bbd6de04643d3b4be626f"
+  },
+  "runtime": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "2.2.2",
+    "matplotlib": "3.9.2",
+    "python": "3.12.3"
+  },
+  "solver": "voltforge.models.coupling_v2",
+  "adapter": "voltforge.project/1"
+}

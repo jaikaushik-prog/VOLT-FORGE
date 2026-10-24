@@ -1,20 +1,48 @@
-# VOLT-FORGE electrical model research
+# VOLT-FORGE battery-engineering workspace
 
 Executable inspection of the **real Piombo et al. parallel-cell dataset**, DOI
 [10.17632/zh58byr53c.2](https://data.mendeley.com/datasets/zh58byr53c/2).
 Read [SIMULATION_READINESS.md](SIMULATION_READINESS.md) for the current four-cell
-electrical CLI and validation-backend status;
+electrical project workflow and validation-backend status;
 [REFERENCE_INITIAL_STATE_DECISION.md](REFERENCE_INITIAL_STATE_DECISION.md)
 for the completed bounded investigation, which keeps v2 frozen;
 [MODEL_IMPROVEMENT_DECISION.md](MODEL_IMPROVEMENT_DECISION.md) for the v2 decision,
 [MODELLING_DECISION.md](MODELLING_DECISION.md) for the sealed v1 stage and
 [DATA_READINESS.md](DATA_READINESS.md) for the original inspection record.
-The project includes provisional cell identification, a static ladder solver
-and a dynamic four-cell command-line backend. Experimental module validation is pending. There is no optimizer,
-ranked repair result or web application.
+The product direction is a visual workspace for design, simulation and evidence.
+The implemented core is a versioned four-cell electrical project backend with
+immutable runs, variant comparison and reproducible export. Experimental module
+validation is pending. There is no optimizer, ranked repair result or web application.
 
 Public project repository: https://github.com/jaikaushik-prog/VOLT-FORGE.
 Local upload preparation is described in [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md).
+
+## First product workflow and frontend handoff
+
+Read [FRONTEND_CONTRACT.md](FRONTEND_CONTRACT.md) for the Python/JSON interface,
+[MVP_SCOPE.md](MVP_SCOPE.md) for implemented versus future capabilities, and the
+[product vision](VOLT_FORGE_Product_Vision.md) for the broader direction.
+
+```powershell
+$env:PYTHONPATH = 'src'
+& C:\Users\DELL\anaconda3\python.exe scripts\demonstrate_product_workflow.py
+```
+
+This loads A0, saves its run, creates A1 with one declared p1-p2 resistance edit,
+shows inherited results as outdated, reruns A1, compares identical operating
+conditions and exports/replays both simulations. Existing completed demo outputs
+are verified and preserved; use `--out tmp/product_demo_fresh` for a new run.
+The configured reference assets suffice; this workflow does not decode raw data.
+See [comparison and plot](reports/product_integration_v1/demo/comparison.json),
+[plot](reports/product_integration_v1/demo/comparison.png), and
+[actual API examples](reports/product_integration_v1/FRONTEND_EXAMPLES.md).
+The current suite passes **100 tests**. These are software checks; module accuracy,
+load-voltage acceptance, thermal behaviour and repair benefits remain unvalidated.
+
+```powershell
+& C:\Users\DELL\anaconda3\python.exe -m pytest -q --junitxml=reports/product_integration_v1/pytest.xml
+& C:\Users\DELL\anaconda3\python.exe scripts\verify_product_integration.py
+```
 
 ## Four-cell electrical simulation backend
 
@@ -34,7 +62,7 @@ $env:PYTHONPATH = 'src'
 & C:\Users\DELL\anaconda3\python.exe scripts\make_module_fixture.py
 & C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation validate --measurements tests/fixtures/module_synthetic --out reports/module_simulation_v1/synthetic_ingestion
 & C:\Users\DELL\anaconda3\python.exe -m voltforge.simulation compare --measurements tests/fixtures/module_synthetic --out reports/module_simulation_v1/synthetic_comparison
-& C:\Users\DELL\anaconda3\python.exe -m pytest -q --junitxml=reports/module_simulation_v1/pytest.xml
+& C:\Users\DELL\anaconda3\python.exe -m pytest -q
 ```
 
 The fixture is explicitly synthetic and contains a known voltage offset; it
@@ -43,7 +71,9 @@ tests ingestion plumbing, not experimental accuracy. See the
 [predeclared application](configs/module_application_v1.json),
 [scenario plan](configs/module_scenarios_v1.json) and
 [comparison/plots](reports/module_simulation_v1/COMPARISON.md).
-All **75 tests pass**. The frozen v2/reference-investigation artifacts remain
+At that completed backend release, **75 tests passed**. Preserve its existing
+outputs and test XML; use new output directories for new investigations.
+The frozen v2/reference-investigation artifacts remain
 unchanged; no unused cell or protected module outcome was opened.
 
 ## Bounded reference/initial-state investigation

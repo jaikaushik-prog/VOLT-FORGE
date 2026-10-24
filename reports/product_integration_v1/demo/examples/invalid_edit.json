@@ -1,0 +1,25 @@
+{
+  "request": {
+    "operation": "validate_edit",
+    "arguments": {
+      "variant_id": "A1",
+      "edit": {
+        "target": "connection",
+        "id": "rail_p_1",
+        "property": "resistance",
+        "value": -0.001,
+        "unit": "ohm",
+        "classification": "assumed",
+        "source": "Predeclared manual hypothetical p1-p2 segment alternative; feasibility and resistance unmeasured"
+      },
+      "expected_revision": "rev_f7cec9c49e8ef4d3802c055e803720b22d2b21008a733ab1fe1fc596808c1bcb"
+    }
+  },
+  "response": {
+    "status": "error",
+    "error": {
+      "code": "invalid_request",
+      "message": "rail_p_1.resistance: below mathematical lower bound"
+    }
+  }
+}

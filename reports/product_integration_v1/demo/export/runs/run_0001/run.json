@@ -1,0 +1,19 @@
+{
+  "run_id": "run_0001",
+  "variant_id": "A0",
+  "revision_id": "rev_3b5cab3a673761e00fc59d725a04553590cbb583cc0fe9cf28233b88c1f2f828",
+  "scenario_id": "nominal",
+  "snapshot_id": "86edf53a5bbdaeac82fa324e6bea8e17b4fac67008b4c310bb388a16de12db5e",
+  "software_id": "5e7b36e03cfcf526d841d025ff49834bd9905fcff5f9731d6424be1580d38ac1",
+  "execution_status": "completed",
+  "error": null,
+  "created_utc": "2026-10-24T20:37:02.629093+00:00",
+  "artifacts": {
+    "configuration.json": "c121b8badca4b64ddaba4a1a5f5d10f06bde691ec9d43629d7b87b05c5dc1494",
+    "electrical.png": "1ce73a3d2cedbc11adaf9315a39551d95aab70b03982e5eaf3f16e39d09ddcac",
+    "nodes_and_power.png": "d332f6f56915808541ec08b174269cc40d05c5a79cc7fd1e4ae8d0db93dd716b",
+    "snapshot.json": "a3a62f6d56c5dc0fbddc6ca034cf1e3f263e8f8215fa3b17ceb40bce4064b021",
+    "summary.json": "bbf340223f95866ca8f630e685f4ddcb9a0ea455c462577b51ea7fd2dd8dc64d",
+    "trajectory.csv": "0bd974aa7bff33739dc027bfbd28b99086f319172d36cf8c8eb0eef4b44248fd"
+  }
+}

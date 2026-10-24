@@ -1,0 +1,13 @@
+{
+  "request": {
+    "operation": "run_thermal",
+    "arguments": {}
+  },
+  "response": {
+    "status": "error",
+    "error": {
+      "code": "unsupported_request",
+      "message": "Operation unavailable: run_thermal"
+    }
+  }
+}

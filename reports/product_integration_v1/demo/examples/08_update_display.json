@@ -1,0 +1,67 @@
+{
+  "request": {
+    "operation": "update_display",
+    "arguments": {
+      "display": {
+        "positions": {
+          "cell_1": [
+            0,
+            0
+          ],
+          "cell_2": [
+            120,
+            0
+          ],
+          "cell_3": [
+            240,
+            0
+          ],
+          "cell_4": [
+            360,
+            0
+          ]
+        },
+        "camera": {
+          "zoom": 1.25
+        },
+        "selection": [
+          "rail_p_1"
+        ]
+      }
+    }
+  },
+  "response": {
+    "status": "ok",
+    "result": {
+      "display": {
+        "positions": {
+          "cell_1": [
+            0,
+            0
+          ],
+          "cell_2": [
+            120,
+            0
+          ],
+          "cell_3": [
+            240,
+            0
+          ],
+          "cell_4": [
+            360,
+            0
+          ]
+        },
+        "camera": {
+          "zoom": 1.25
+        },
+        "selection": [
+          "rail_p_1"
+        ]
+      },
+      "physics_changed": false,
+      "invalidated_run_ids": [],
+      "units": "arbitrary display coordinates; no physical geometry rule"
+    }
+  }
+}

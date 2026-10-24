@@ -1,0 +1,32 @@
+{
+  "request": {
+    "operation": "validate_edit",
+    "arguments": {
+      "variant_id": "A1",
+      "edit": {
+        "target": "connection",
+        "id": "rail_p_1",
+        "property": "resistance",
+        "value": 0.0005,
+        "unit": "ohm",
+        "classification": "assumed",
+        "source": "Predeclared manual hypothetical p1-p2 segment alternative; feasibility and resistance unmeasured"
+      },
+      "expected_revision": "rev_3b5cab3a673761e00fc59d725a04553590cbb583cc0fe9cf28233b88c1f2f828"
+    }
+  },
+  "response": {
+    "status": "ok",
+    "result": {
+      "valid": true,
+      "physics_changed": true,
+      "expected_revision": "rev_3b5cab3a673761e00fc59d725a04553590cbb583cc0fe9cf28233b88c1f2f828",
+      "invalidated_run_ids": [],
+      "classification": "exploratory edit; does not modify fitted artifacts",
+      "warnings": [
+        "Module accuracy unvalidated",
+        "A user-declared measurement is not independently verified"
+      ]
+    }
+  }
+}

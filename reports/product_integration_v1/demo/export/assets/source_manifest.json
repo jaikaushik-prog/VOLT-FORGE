@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "configured_utc": "2026-10-24T19:28:52.105367+00:00",
+  "declared_inputs": {
+    "configs/module_application_v1.json": "7060c605aca968a768dc2fd7f01bae2543bb107002cd9c364d79fa70f4b4c983",
+    "configs/module_scenarios_v1.json": "a4f7e862b380bde491f632126ab36858ef69fac8063dff3ebe3e6a3ea76a1676",
+    "SIMULATION_PLAN.md": "e209c5683de95c2826ae4636036b3611b1d6351a6e889e6b82fc2469842973c0"
+  },
+  "model_sources": {
+    "P7": {
+      "path": "reports/improvement_v2/development/P7_models.json",
+      "sha256": "957b7d981faab3e0032f7004193f1d2d7ebda8245c4b7c4dbd112bcb775355cf",
+      "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+    },
+    "P17": {
+      "path": "reports/improvement_v2/development/P17_models.json",
+      "sha256": "e999af2b55d2e98ca976286ab91f87ab31731227fa7ed7bf0851a100ff0fd74a",
+      "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+    },
+    "P19": {
+      "path": "reports/improvement_v2/development/P19_models.json",
+      "sha256": "15f41f7ed0049baa630728facb092d3d2f629b3d8ec5be38fa2c1388fdde988d",
+      "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+    },
+    "P13": {
+      "path": "reports/improvement_v2/development/P13_models.json",
+      "sha256": "c4f462d1ae6a08756fe61af25d10a7a3623c632833b3ae24ef1556db3b77bfe0",
+      "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+    }
+  },
+  "loaded_reference_sources": {
+    "P7": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P7.mat",
+      "sha256": "3d82595cafc3574da9e85243e1d51d51cf883bdca32c220c6ad4b1f71fdb11e5"
+    },
+    "P17": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P17.mat",
+      "sha256": "a44a1bb77ac52eeef19e69d73ca6ba26f629de6b310713b92030e27acb059166"
+    },
+    "P19": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P19.mat",
+      "sha256": "f179c558ab05c4cf3540951572985a196a2e800d3b965faef74a04ba3e141844"
+    },
+    "P13": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P13.mat",
+      "sha256": "b1c0f85eb00b129ccc9c462641a5482704d8c350d9c43e820d57256dfef752ee"
+    }
+  },
+  "artifacts": {
+    "reference_sensitivity.npz": "f0db3feac3888fe2f0dbc9683864e8a84f9b8bcbe555f8bd153e9cab4cb9d585",
+    "scenario_plan.json": "1c6e72549b27c0a7474f286f564b1f6a786b1f39e04f838f614705d43e8abcb2",
+    "configured/equal_soc.json": "6d3d2f8060ec7e3aebac575b4e81feb91640facc6f773921fa242fffb680d9f4",
+    "configured/lower_rail_resistance.json": "0e75e563148c64f01c0a374cf7f847b8786bc316c594d7cc2b7e83ae5ab8bf6b",
+    "configured/reduced_load.json": "d1a1e7e91af097d54a35df8bb475767d617f439d8b88417731a66529db0eaf41",
+    "configured/soc_imbalance.json": "fa588b61e3dc7a57ed78ca7e9eba585642f1c499927f0fde1768fdf9b48b1a05"
+  },
+  "scenarios": [
+    "equal_soc",
+    "soc_imbalance",
+    "lower_rail_resistance",
+    "reduced_load"
+  ],
+  "experimental_validation": "awaiting suitable measurements",
+  "new_characterization_cells_opened": [],
+  "measurement_outcomes_opened": [],
+  "note": "Scenario assumptions recorded before new simulation outputs."
+}

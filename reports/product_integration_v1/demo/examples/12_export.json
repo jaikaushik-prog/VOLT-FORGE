@@ -1,0 +1,31 @@
+{
+  "request": {
+    "operation": "export",
+    "arguments": {
+      "selections": [
+        {
+          "variant_id": "A0",
+          "run_id": "run_0001"
+        },
+        {
+          "variant_id": "A1",
+          "run_id": "run_0002"
+        }
+      ],
+      "out": "C:\\Users\\DELL\\Desktop\\volt-forge\\reports\\product_integration_v1\\demo\\export"
+    }
+  },
+  "response": {
+    "status": "ok",
+    "result": {
+      "path": "C:\\Users\\DELL\\Desktop\\volt-forge\\reports\\product_integration_v1\\demo\\export",
+      "run_ids": [
+        "run_0001",
+        "run_0002"
+      ],
+      "manifest_sha256": "057861762e7c41173188e210045e7eabac9f9abe6a346a1bef64ba052ac9c1ae",
+      "classification": "reproducible simulation package",
+      "experimental_validation": "awaiting suitable measurements"
+    }
+  }
+}
