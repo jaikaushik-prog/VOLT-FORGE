@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "frozen_date": "2026-10-24",
+  "status": "frozen_before_model_fitting; archive-specific hashes bound by inventory command",
+  "population": "Unambiguously unaged, all-NMC whole module experiments",
+  "calibration": ["M1_NMC_Unaged_R0_T25", "M1_NMC_Unaged_R0_T10", "M1_NMC_Unaged_R0_T40"],
+  "development_validation": ["M1_NMC_Unaged_R3_T25", "M2_NMC_Unaged_R1_T10"],
+  "final_assessment": ["M1_NMC_Unaged_R3_T10", "M2_NMC_Unaged_R1_T40", "M1_NMC_Unaged_R3_T40"],
+  "quarantine": ["M2_NMC_Unaged_R1_T25"],
+  "initial_inspection": ["M1_NMC_Unaged_R0_T25", "M1_NMC_Unaged_R3_T25"],
+  "rationale": "R0 at each temperature supports later calibration; development covers R3/25C and R1/10C; reserve R3/10C, R1/40C and R3/40C. The first pilot is only 25C. No clean final-assessment 25C unaged run remains after quarantining row 32; do not claim independent final validation at 25C. Do not fit broad temperature dependence from 23C characterization alone.",
+  "cell_policy": "Known-cell reconstruction conditional on pre-module characterization; cell identities recur across splits. This is not unseen-cell generalization. Do not use final module signals for fitting, sensor correction, threshold selection or design decisions.",
+  "final_access_policy": "Inventory, hashes and cell-identity metadata only until model and acceptance criteria are locked. Audit CLI rejects final-assessment signal access.",
+  "change_policy": "Any revision requires a new manifest version, reason and contamination assessment. Never move failed assessment runs to calibration silently."
+}

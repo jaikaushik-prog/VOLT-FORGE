@@ -1,0 +1,2669 @@
+[
+  {
+    "cell_id": "P10",
+    "protocol": "pseudo_ocv",
+    "source_file": "OCVDis_P10.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 7174,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 71727.0968,
+      "interval_min_s": 7.095600000000559,
+      "interval_median_s": 10.0,
+      "interval_max_s": 10.001799999998184,
+      "interval_quantiles_s": [
+        9.998599999998987,
+        9.999100000000908,
+        10.000899999999092,
+        10.001400000001013
+      ],
+      "gap_threshold_s": 15.0,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 7174,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 7174.0,
+        "mean": 3587.5,
+        "rms": 4142.343841353588,
+        "max_abs": 7174.0
+      },
+      "time_s": {
+        "count": 7174,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 71727.0968,
+        "mean": 35865.00010922776,
+        "rms": 41414.7779045272,
+        "max_abs": 71727.0968
+      },
+      "current_A": {
+        "count": 7174,
+        "missing_or_nonfinite": 0,
+        "min": 0.24251669645309448,
+        "max": 0.24252766370773315,
+        "mean": 0.2425216985240699,
+        "rms": 0.2425216985290092,
+        "max_abs": 0.24252766370773315
+      },
+      "voltage_V": {
+        "count": 7174,
+        "missing_or_nonfinite": 0,
+        "min": 2.4999759197235107,
+        "max": 4.1775898933410645,
+        "mean": 3.674582706243506,
+        "rms": 3.689645386963795,
+        "max_abs": 4.1775898933410645
+      },
+      "surface_C": {
+        "count": 7174,
+        "missing_or_nonfinite": 0,
+        "min": 22.06407814924967,
+        "max": 23.332997917447063,
+        "mean": 22.33137477009236,
+        "rms": 22.33208949030753,
+        "max_abs": 23.332997917447063
+      }
+    },
+    "observed_discharge_integral_Ah": 4.832049259061464,
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P10.mat",
+      "basename": "OCVDis_P10.mat",
+      "bytes": 95146,
+      "sha256": "dc02b0d172e0f7f9f2c965965e6167df974a58e99af92fbea3cc83aa270b49a2",
+      "crc32": "87bb30b4",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P10",
+    "protocol": "hppc_ms",
+    "source_file": "HPPC_MultiSine_P10.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 71309,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 40823.23926799999,
+      "interval_min_s": 0.0010999999940395355,
+      "interval_median_s": 0.9988999999914085,
+      "interval_max_s": 1.14259599999059,
+      "interval_quantiles_s": [
+        0.09870000000228174,
+        0.09939999999187421,
+        1.0005999999993946,
+        1.001300000003539
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 71309.0,
+        "mean": 35655.0,
+        "rms": 41170.7033580919,
+        "max_abs": 71309.0
+      },
+      "time_s": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 40823.23926799999,
+        "mean": 21502.6344366227,
+        "rms": 24456.341904953493,
+        "max_abs": 40823.23926799999
+      },
+      "current_A": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": -6.72918701171875,
+        "max": 19.296279907226562,
+        "mean": 0.22924953836444437,
+        "rms": 1.7096471351576636,
+        "max_abs": 19.296279907226562
+      },
+      "voltage_V": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 2.9301950931549072,
+        "max": 4.19844913482666,
+        "mean": 3.71949137262382,
+        "rms": 3.7294569775488493,
+        "max_abs": 4.19844913482666
+      },
+      "surface_C": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 22.057098388671875,
+        "max": 26.21381378173828,
+        "mean": 22.51714364023858,
+        "rms": 22.52246233015448,
+        "max_abs": 26.21381378173828
+      },
+      "step_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 9.0,
+        "max": 22.0,
+        "mean": 14.074731099861168,
+        "rms": 14.691648026323493,
+        "max_abs": 22.0
+      },
+      "cycle_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 9.0,
+        "mean": 4.859877434825899,
+        "rms": 5.529236139388994,
+        "max_abs": 9.0
+      }
+    },
+    "steps": [
+      {
+        "step": 9,
+        "rows": 1801,
+        "current_A": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 10,
+        "rows": 3249,
+        "current_A": {
+          "count": 3249,
+          "missing_or_nonfinite": 0,
+          "min": 4.850326061248779,
+          "max": 4.850445747375488,
+          "mean": 4.850376957928302,
+          "rms": 4.850376957961816,
+          "max_abs": 4.850445747375488
+        }
+      },
+      {
+        "step": 11,
+        "rows": 32409,
+        "current_A": {
+          "count": 32409,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 12,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": 2.6599931716918945,
+          "max": 2.660269260406494,
+          "mean": 2.6602256725592452,
+          "rms": 2.6602256727034206,
+          "max_abs": 2.660269260406494
+        }
+      },
+      {
+        "step": 13,
+        "rows": 3609,
+        "current_A": {
+          "count": 3609,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 14,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": -2.000370979309082,
+          "max": -2.0002050399780273,
+          "mean": -2.000325347724134,
+          "rms": 2.000325347808084,
+          "max_abs": 2.000370979309082
+        }
+      },
+      {
+        "step": 15,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 17,
+        "rows": 1201,
+        "current_A": {
+          "count": 1201,
+          "missing_or_nonfinite": 0,
+          "min": -2.195587158203125,
+          "max": 19.296279907226562,
+          "mean": 0.0003049089747801311,
+          "rms": 3.859610145225742,
+          "max_abs": 19.296279907226562
+        }
+      },
+      {
+        "step": 18,
+        "rows": 1602,
+        "current_A": {
+          "count": 1602,
+          "missing_or_nonfinite": 0,
+          "min": -4.8584136962890625,
+          "max": 17.769287109375,
+          "mean": -0.0007988147521286868,
+          "rms": 4.4859351352696795,
+          "max_abs": 17.769287109375
+        }
+      },
+      {
+        "step": 19,
+        "rows": 2004,
+        "current_A": {
+          "count": 2004,
+          "missing_or_nonfinite": 0,
+          "min": -6.72918701171875,
+          "max": 17.875473022460938,
+          "mean": -0.0015365387389283931,
+          "rms": 5.09461963584425,
+          "max_abs": 17.875473022460938
+        }
+      },
+      {
+        "step": 20,
+        "rows": 1314,
+        "current_A": {
+          "count": 1314,
+          "missing_or_nonfinite": 0,
+          "min": -6.1219482421875,
+          "max": 7.732818603515625,
+          "mean": -0.004306648056982497,
+          "rms": 3.401720866364112,
+          "max_abs": 7.732818603515625
+        }
+      },
+      {
+        "step": 21,
+        "rows": 684,
+        "current_A": {
+          "count": 684,
+          "missing_or_nonfinite": 0,
+          "min": -6.5551910400390625,
+          "max": 3.7728118896484375,
+          "mean": -0.0022180345323350695,
+          "rms": 2.5859348562330946,
+          "max_abs": 6.5551910400390625
+        }
+      },
+      {
+        "step": 22,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      }
+    ],
+    "cycles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P10.mat",
+      "basename": "HPPC_MultiSine_P10.mat",
+      "bytes": 532517,
+      "sha256": "2a3da695198de3cd82437b4f37ca566e84de57326357c57dcbae256c42671195",
+      "crc32": "56df18fd",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P13",
+    "protocol": "pseudo_ocv",
+    "source_file": "OCVDis_P13.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 7124,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 71220.0174,
+      "interval_min_s": 0.017000000007101335,
+      "interval_median_s": 10.0,
+      "interval_max_s": 10.001400000001013,
+      "interval_quantiles_s": [
+        9.998899999998685,
+        9.999299999995856,
+        10.000700000000506,
+        10.001100000001315
+      ],
+      "gap_threshold_s": 15.0,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 7124,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 7124.0,
+        "mean": 3562.5,
+        "rms": 4113.476327876459,
+        "max_abs": 7124.0
+      },
+      "time_s": {
+        "count": 7124,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 71220.0174,
+        "mean": 35614.99914250421,
+        "rms": 41126.101070157194,
+        "max_abs": 71220.0174
+      },
+      "current_A": {
+        "count": 7124,
+        "missing_or_nonfinite": 0,
+        "min": 0.2425205111503601,
+        "max": 0.2425459623336792,
+        "mean": 0.24253281760188986,
+        "rms": 0.24253281762508727,
+        "max_abs": 0.2425459623336792
+      },
+      "voltage_V": {
+        "count": 7124,
+        "missing_or_nonfinite": 0,
+        "min": 2.499983072280884,
+        "max": 4.178334712982178,
+        "mean": 3.6750008878180447,
+        "rms": 3.6901225939791176,
+        "max_abs": 4.178334712982178
+      },
+      "surface_C": {
+        "count": 7124,
+        "missing_or_nonfinite": 0,
+        "min": 22.72000386174862,
+        "max": 23.524185180664062,
+        "mean": 23.002186421794438,
+        "rms": 23.002611622339185,
+        "max_abs": 23.524185180664062
+      }
+    },
+    "observed_discharge_integral_Ah": 4.798108715840196,
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P13.mat",
+      "basename": "OCVDis_P13.mat",
+      "bytes": 88812,
+      "sha256": "b1c0f85eb00b129ccc9c462641a5482704d8c350d9c43e820d57256dfef752ee",
+      "crc32": "bf4b67dd",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P13",
+    "protocol": "hppc_ms",
+    "source_file": "HPPC_MultiSine_P13.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 71309,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 40822.902496000024,
+      "interval_min_s": 0.0007999999943422154,
+      "interval_median_s": 0.9991999999911059,
+      "interval_max_s": 1.1445959999982733,
+      "interval_quantiles_s": [
+        0.09899999998742715,
+        0.0996000000013737,
+        1.000499999994645,
+        1.0010000000038417
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 71309.0,
+        "mean": 35655.0,
+        "rms": 41170.7033580919,
+        "max_abs": 71309.0
+      },
+      "time_s": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 40822.902496000024,
+        "mean": 21502.468142762234,
+        "rms": 24456.147655210876,
+        "max_abs": 40822.902496000024
+      },
+      "current_A": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": -6.7261810302734375,
+        "max": 19.291671752929688,
+        "mean": 0.22924188352620495,
+        "rms": 1.7096231062369607,
+        "max_abs": 19.291671752929688
+      },
+      "voltage_V": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 2.914663314819336,
+        "max": 4.198500633239746,
+        "mean": 3.715538018359198,
+        "rms": 3.7258674202518955,
+        "max_abs": 4.198500633239746
+      },
+      "surface_C": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 22.797380447387695,
+        "max": 27.32077407836914,
+        "mean": 23.275232144293525,
+        "rms": 23.280739748887964,
+        "max_abs": 27.32077407836914
+      },
+      "step_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 9.0,
+        "max": 22.0,
+        "mean": 14.074731099861168,
+        "rms": 14.691648026323493,
+        "max_abs": 22.0
+      },
+      "cycle_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 9.0,
+        "mean": 4.859877434825899,
+        "rms": 5.529236139388994,
+        "max_abs": 9.0
+      }
+    },
+    "steps": [
+      {
+        "step": 9,
+        "rows": 1801,
+        "current_A": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 10,
+        "rows": 3249,
+        "current_A": {
+          "count": 3249,
+          "missing_or_nonfinite": 0,
+          "min": 4.850161552429199,
+          "max": 4.850461006164551,
+          "mean": 4.850327679325009,
+          "rms": 4.850327679621808,
+          "max_abs": 4.850461006164551
+        }
+      },
+      {
+        "step": 11,
+        "rows": 32409,
+        "current_A": {
+          "count": 32409,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 12,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": 2.6602187156677246,
+          "max": 2.660494804382324,
+          "mean": 2.6604318728934815,
+          "rms": 2.6604318730369108,
+          "max_abs": 2.660494804382324
+        }
+      },
+      {
+        "step": 13,
+        "rows": 3609,
+        "current_A": {
+          "count": 3609,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 14,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": -2.00054931640625,
+          "max": -2.000117301940918,
+          "mean": -2.000187003048602,
+          "rms": 2.0001870039229837,
+          "max_abs": 2.00054931640625
+        }
+      },
+      {
+        "step": 15,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 17,
+        "rows": 1201,
+        "current_A": {
+          "count": 1201,
+          "missing_or_nonfinite": 0,
+          "min": -2.2002716064453125,
+          "max": 19.291671752929688,
+          "mean": 0.00022521642324430162,
+          "rms": 3.85932109788939,
+          "max_abs": 19.291671752929688
+        }
+      },
+      {
+        "step": 18,
+        "rows": 1602,
+        "current_A": {
+          "count": 1602,
+          "missing_or_nonfinite": 0,
+          "min": -4.8551025390625,
+          "max": 17.765098571777344,
+          "mean": -0.001063900493950433,
+          "rms": 4.485839571912922,
+          "max_abs": 17.765098571777344
+        }
+      },
+      {
+        "step": 19,
+        "rows": 2004,
+        "current_A": {
+          "count": 2004,
+          "missing_or_nonfinite": 0,
+          "min": -6.7261810302734375,
+          "max": 17.872146606445312,
+          "mean": -0.0012477981354186158,
+          "rms": 5.094450797579411,
+          "max_abs": 17.872146606445312
+        }
+      },
+      {
+        "step": 20,
+        "rows": 1314,
+        "current_A": {
+          "count": 1314,
+          "missing_or_nonfinite": 0,
+          "min": -6.1201019287109375,
+          "max": 7.740814208984375,
+          "mean": -0.004354793368590658,
+          "rms": 3.4018746109827807,
+          "max_abs": 7.740814208984375
+        }
+      },
+      {
+        "step": 21,
+        "rows": 684,
+        "current_A": {
+          "count": 684,
+          "missing_or_nonfinite": 0,
+          "min": -6.555145263671875,
+          "max": 3.773406982421875,
+          "mean": -0.0032325655396221674,
+          "rms": 2.5863097262341044,
+          "max_abs": 6.555145263671875
+        }
+      },
+      {
+        "step": 22,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      }
+    ],
+    "cycles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P13.mat",
+      "basename": "HPPC_MultiSine_P13.mat",
+      "bytes": 512146,
+      "sha256": "6203a2a73a099d7c27f874f86c55a401e931cd60e2d08ad21c419a1ab21cea40",
+      "crc32": "f32cb687",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P16",
+    "protocol": "pseudo_ocv",
+    "source_file": "OCVDis_P16.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 7278,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 72767.6354,
+      "interval_min_s": 7.63640000000305,
+      "interval_median_s": 10.0,
+      "interval_max_s": 10.001700000007986,
+      "interval_quantiles_s": [
+        9.998600000006263,
+        9.999100000000908,
+        10.000899999999092,
+        10.00139999999461
+      ],
+      "gap_threshold_s": 15.0,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 7278,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 7278.0,
+        "mean": 3639.5,
+        "rms": 4202.388269385239,
+        "max_abs": 7278.0
+      },
+      "time_s": {
+        "count": 7278,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 72767.6354,
+        "mean": 36384.9991932399,
+        "rms": 42015.22145806479,
+        "max_abs": 72767.6354
+      },
+      "current_A": {
+        "count": 7278,
+        "missing_or_nonfinite": 0,
+        "min": 0.24251580238342285,
+        "max": 0.24252814054489136,
+        "mean": 0.24252224014368184,
+        "rms": 0.24252224014837523,
+        "max_abs": 0.24252814054489136
+      },
+      "voltage_V": {
+        "count": 7278,
+        "missing_or_nonfinite": 0,
+        "min": 2.4999966621398926,
+        "max": 4.176516532897949,
+        "mean": 3.6686195024719406,
+        "rms": 3.6833919152374177,
+        "max_abs": 4.176516532897949
+      },
+      "surface_C": {
+        "count": 7278,
+        "missing_or_nonfinite": 0,
+        "min": 22.17659439010994,
+        "max": 23.541709426727003,
+        "mean": 22.503865622473988,
+        "rms": 22.504770106217613,
+        "max_abs": 23.541709426727003
+      }
+    },
+    "observed_discharge_integral_Ah": 4.902158317494169,
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P16.mat",
+      "basename": "OCVDis_P16.mat",
+      "bytes": 96415,
+      "sha256": "996d773edcbd7cec3d47b72c03053c6e94a5a8a33abf544b1c88520827c9de2f",
+      "crc32": "a55bf960",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P16",
+    "protocol": "hppc_ms",
+    "source_file": "HPPC_MultiSine_P16.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 71309,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 40823.229676,
+      "interval_min_s": 0.00020000000949949026,
+      "interval_median_s": 0.9988000000012107,
+      "interval_max_s": 1.142996000009589,
+      "interval_quantiles_s": [
+        0.09850000000733417,
+        0.09940000000642613,
+        1.0006000000284985,
+        1.0014000000082888
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 71309.0,
+        "mean": 35655.0,
+        "rms": 41170.7033580919,
+        "max_abs": 71309.0
+      },
+      "time_s": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 40823.229676,
+        "mean": 21502.64069829913,
+        "rms": 24456.348670729272,
+        "max_abs": 40823.229676
+      },
+      "current_A": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": -6.7291717529296875,
+        "max": 19.28643035888672,
+        "mean": 0.2292614106862208,
+        "rms": 1.709580204720944,
+        "max_abs": 19.28643035888672
+      },
+      "voltage_V": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 2.98054575920105,
+        "max": 4.198507308959961,
+        "mean": 3.721733289188302,
+        "rms": 3.7309209926701037,
+        "max_abs": 4.198507308959961
+      },
+      "surface_C": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 22.24995994567871,
+        "max": 26.127899169921875,
+        "mean": 22.693472246572316,
+        "rms": 22.69802944864287,
+        "max_abs": 26.127899169921875
+      },
+      "step_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 9.0,
+        "max": 22.0,
+        "mean": 14.074731099861168,
+        "rms": 14.691648026323493,
+        "max_abs": 22.0
+      },
+      "cycle_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 9.0,
+        "mean": 4.859877434825899,
+        "rms": 5.529236139388994,
+        "max_abs": 9.0
+      }
+    },
+    "steps": [
+      {
+        "step": 9,
+        "rows": 1801,
+        "current_A": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 10,
+        "rows": 3249,
+        "current_A": {
+          "count": 3249,
+          "missing_or_nonfinite": 0,
+          "min": 4.850318908691406,
+          "max": 4.850461483001709,
+          "mean": 4.850390993437058,
+          "rms": 4.85039099348709,
+          "max_abs": 4.850461483001709
+        }
+      },
+      {
+        "step": 11,
+        "rows": 32409,
+        "current_A": {
+          "count": 32409,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 12,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": 2.660020351409912,
+          "max": 2.660287857055664,
+          "mean": 2.6602423985799155,
+          "rms": 2.66024239871542,
+          "max_abs": 2.660287857055664
+        }
+      },
+      {
+        "step": 13,
+        "rows": 3609,
+        "current_A": {
+          "count": 3609,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 14,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": -2.000368118286133,
+          "max": -2.000227928161621,
+          "mean": -2.000321880294414,
+          "rms": 2.0003218803916476,
+          "max_abs": 2.000368118286133
+        }
+      },
+      {
+        "step": 15,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 17,
+        "rows": 1201,
+        "current_A": {
+          "count": 1201,
+          "missing_or_nonfinite": 0,
+          "min": -2.2023468017578125,
+          "max": 19.28643035888672,
+          "mean": 5.985993727557764e-05,
+          "rms": 3.8591380611024846,
+          "max_abs": 19.28643035888672
+        }
+      },
+      {
+        "step": 18,
+        "rows": 1602,
+        "current_A": {
+          "count": 1602,
+          "missing_or_nonfinite": 0,
+          "min": -4.85626220703125,
+          "max": 17.765663146972656,
+          "mean": -0.0008004006375087781,
+          "rms": 4.485762353408714,
+          "max_abs": 17.765663146972656
+        }
+      },
+      {
+        "step": 19,
+        "rows": 2004,
+        "current_A": {
+          "count": 2004,
+          "missing_or_nonfinite": 0,
+          "min": -6.7291717529296875,
+          "max": 17.876388549804688,
+          "mean": -0.0014287183384695452,
+          "rms": 5.0944635649731405,
+          "max_abs": 17.876388549804688
+        }
+      },
+      {
+        "step": 20,
+        "rows": 1314,
+        "current_A": {
+          "count": 1314,
+          "missing_or_nonfinite": 0,
+          "min": -6.1230316162109375,
+          "max": 7.7435302734375,
+          "mean": -0.003531039396196014,
+          "rms": 3.401528685932285,
+          "max_abs": 7.7435302734375
+        }
+      },
+      {
+        "step": 21,
+        "rows": 684,
+        "current_A": {
+          "count": 684,
+          "missing_or_nonfinite": 0,
+          "min": -6.5505523681640625,
+          "max": 3.7805328369140625,
+          "mean": -0.002445711727030793,
+          "rms": 2.584502597668353,
+          "max_abs": 6.5505523681640625
+        }
+      },
+      {
+        "step": 22,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      }
+    ],
+    "cycles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P16.mat",
+      "basename": "HPPC_MultiSine_P16.mat",
+      "bytes": 532162,
+      "sha256": "6e12fe6b013f85be9cf2325067249d201b1dd1b9eeee10b93fd83bdcf80bbe52",
+      "crc32": "00c1e5a0",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P17",
+    "protocol": "pseudo_ocv",
+    "source_file": "OCVDis_P17.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 7192,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 71909.1642,
+      "interval_min_s": 9.16479999999865,
+      "interval_median_s": 10.0,
+      "interval_max_s": 10.001399999993737,
+      "interval_quantiles_s": [
+        9.998899999998685,
+        9.999299999999494,
+        10.000700000000506,
+        10.001100000001315
+      ],
+      "gap_threshold_s": 15.0,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 7192,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 7192.0,
+        "mean": 3596.5,
+        "rms": 4152.736146205294,
+        "max_abs": 7192.0
+      },
+      "time_s": {
+        "count": 7192,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 71909.1642,
+        "mean": 35954.999618534486,
+        "rms": 41518.700779570085,
+        "max_abs": 71909.1642
+      },
+      "current_A": {
+        "count": 7192,
+        "missing_or_nonfinite": 0,
+        "min": 0.2425122857093811,
+        "max": 0.24253588914871216,
+        "mean": 0.24252359287293257,
+        "rms": 0.24252359289311828,
+        "max_abs": 0.24253588914871216
+      },
+      "voltage_V": {
+        "count": 7192,
+        "missing_or_nonfinite": 0,
+        "min": 2.5000007152557373,
+        "max": 4.177712917327881,
+        "mean": 3.6736997670604867,
+        "rms": 3.688782039256377,
+        "max_abs": 4.177712917327881
+      },
+      "surface_C": {
+        "count": 7192,
+        "missing_or_nonfinite": 0,
+        "min": 22.730118508992277,
+        "max": 23.72047963540113,
+        "mean": 23.06981205514764,
+        "rms": 23.070495947595653,
+        "max_abs": 23.72047963540113
+      }
+    },
+    "observed_discharge_integral_Ah": 4.844352468565058,
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P17.mat",
+      "basename": "OCVDis_P17.mat",
+      "bytes": 91121,
+      "sha256": "a44a1bb77ac52eeef19e69d73ca6ba26f629de6b310713b92030e27acb059166",
+      "crc32": "a59729fc",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P17",
+    "protocol": "hppc_ms",
+    "source_file": "HPPC_MultiSine_P17.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 71309,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 40822.91998000002,
+      "interval_min_s": 0.0007999999797903001,
+      "interval_median_s": 0.9991999999911059,
+      "interval_max_s": 1.1351040000008652,
+      "interval_quantiles_s": [
+        0.09899999998742715,
+        0.09959999998682179,
+        1.000499999994645,
+        1.0010000000038417
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 71309.0,
+        "mean": 35655.0,
+        "rms": 41170.7033580919,
+        "max_abs": 71309.0
+      },
+      "time_s": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 40822.91998000002,
+        "mean": 21502.480321565024,
+        "rms": 24456.1615008059,
+        "max_abs": 40822.91998000002
+      },
+      "current_A": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": -6.7309417724609375,
+        "max": 19.301010131835938,
+        "mean": 0.22921127923217777,
+        "rms": 1.7095280532844992,
+        "max_abs": 19.301010131835938
+      },
+      "voltage_V": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 2.9409162998199463,
+        "max": 4.19835901260376,
+        "mean": 3.72017470365232,
+        "rms": 3.73006636107346,
+        "max_abs": 4.19835901260376
+      },
+      "surface_C": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 22.803194046020508,
+        "max": 27.109357833862305,
+        "mean": 23.35747376190438,
+        "rms": 23.36318751557797,
+        "max_abs": 27.109357833862305
+      },
+      "step_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 9.0,
+        "max": 22.0,
+        "mean": 14.074731099861168,
+        "rms": 14.691648026323493,
+        "max_abs": 22.0
+      },
+      "cycle_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 9.0,
+        "mean": 4.859877434825899,
+        "rms": 5.529236139388994,
+        "max_abs": 9.0
+      }
+    },
+    "steps": [
+      {
+        "step": 9,
+        "rows": 1801,
+        "current_A": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 10,
+        "rows": 3249,
+        "current_A": {
+          "count": 3249,
+          "missing_or_nonfinite": 0,
+          "min": 4.850090980529785,
+          "max": 4.850493431091309,
+          "mean": 4.850220244200129,
+          "rms": 4.850220244332281,
+          "max_abs": 4.850493431091309
+        }
+      },
+      {
+        "step": 11,
+        "rows": 32409,
+        "current_A": {
+          "count": 32409,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 12,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": 2.660029411315918,
+          "max": 2.660517692565918,
+          "mean": 2.6603747725617897,
+          "rms": 2.6603747742689,
+          "max_abs": 2.660517692565918
+        }
+      },
+      {
+        "step": 13,
+        "rows": 3609,
+        "current_A": {
+          "count": 3609,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 14,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": -2.0003881454467773,
+          "max": -2.0001182556152344,
+          "mean": -2.0002780165215923,
+          "rms": 2.0002780167341463,
+          "max_abs": 2.0003881454467773
+        }
+      },
+      {
+        "step": 15,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 17,
+        "rows": 1201,
+        "current_A": {
+          "count": 1201,
+          "missing_or_nonfinite": 0,
+          "min": -2.1991424560546875,
+          "max": 19.301010131835938,
+          "mean": 0.0001132784040643214,
+          "rms": 3.858949086448073,
+          "max_abs": 19.301010131835938
+        }
+      },
+      {
+        "step": 18,
+        "rows": 1602,
+        "current_A": {
+          "count": 1602,
+          "missing_or_nonfinite": 0,
+          "min": -4.8455047607421875,
+          "max": 17.771987915039062,
+          "mean": -0.0012822002358502068,
+          "rms": 4.4852118735293995,
+          "max_abs": 17.771987915039062
+        }
+      },
+      {
+        "step": 19,
+        "rows": 2004,
+        "current_A": {
+          "count": 2004,
+          "missing_or_nonfinite": 0,
+          "min": -6.7309417724609375,
+          "max": 17.86981201171875,
+          "mean": -0.0013418292808913424,
+          "rms": 5.094073836553797,
+          "max_abs": 17.86981201171875
+        }
+      },
+      {
+        "step": 20,
+        "rows": 1314,
+        "current_A": {
+          "count": 1314,
+          "missing_or_nonfinite": 0,
+          "min": -6.1226806640625,
+          "max": 7.740081787109375,
+          "mean": -0.005092382793920044,
+          "rms": 3.4021634042468545,
+          "max_abs": 7.740081787109375
+        }
+      },
+      {
+        "step": 21,
+        "rows": 684,
+        "current_A": {
+          "count": 684,
+          "missing_or_nonfinite": 0,
+          "min": -6.5589752197265625,
+          "max": 3.776702880859375,
+          "mean": -0.003315730401647021,
+          "rms": 2.585670884841418,
+          "max_abs": 6.5589752197265625
+        }
+      },
+      {
+        "step": 22,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      }
+    ],
+    "cycles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P17.mat",
+      "basename": "HPPC_MultiSine_P17.mat",
+      "bytes": 515990,
+      "sha256": "789b0beb01982f62fc8e5ae1360957991ed86bc66b71a479833889d15154d8e6",
+      "crc32": "377301bd",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P19",
+    "protocol": "pseudo_ocv",
+    "source_file": "OCVDis_P19.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 7281,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 72791.34400000001,
+      "interval_min_s": 1.3443000000261236,
+      "interval_median_s": 10.0,
+      "interval_max_s": 10.001400000001013,
+      "interval_quantiles_s": [
+        9.998899999998685,
+        9.999299999999494,
+        10.000700000000506,
+        10.00109999999404
+      ],
+      "gap_threshold_s": 15.0,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 7281,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 7281.0,
+        "mean": 3641.0,
+        "rms": 4204.12032019383,
+        "max_abs": 7281.0
+      },
+      "time_s": {
+        "count": 7281,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 72791.34400000001,
+        "mean": 36399.998647520944,
+        "rms": 42032.54074781949,
+        "max_abs": 72791.34400000001
+      },
+      "current_A": {
+        "count": 7281,
+        "missing_or_nonfinite": 0,
+        "min": 0.24252361059188843,
+        "max": 0.24254482984542847,
+        "mean": 0.24253484851923343,
+        "rms": 0.24253484853891275,
+        "max_abs": 0.24254482984542847
+      },
+      "voltage_V": {
+        "count": 7281,
+        "missing_or_nonfinite": 0,
+        "min": 2.5000159740448,
+        "max": 4.176739692687988,
+        "mean": 3.6685861128893644,
+        "rms": 3.6833937741139327,
+        "max_abs": 4.176739692687988
+      },
+      "surface_C": {
+        "count": 7281,
+        "missing_or_nonfinite": 0,
+        "min": 22.71965980529785,
+        "max": 23.74889155945637,
+        "mean": 23.020714855604712,
+        "rms": 23.02126752510268,
+        "max_abs": 23.74889155945637
+      }
+    },
+    "observed_discharge_integral_Ah": 4.904010427336025,
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P19.mat",
+      "basename": "OCVDis_P19.mat",
+      "bytes": 91130,
+      "sha256": "f179c558ab05c4cf3540951572985a196a2e800d3b965faef74a04ba3e141844",
+      "crc32": "8ed276e5",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P19",
+    "protocol": "hppc_ms",
+    "source_file": "HPPC_MultiSine_P19.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 71309,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 40822.92737199999,
+      "interval_min_s": 0.0007999999943422154,
+      "interval_median_s": 0.9991999999911059,
+      "interval_max_s": 1.1441960000083782,
+      "interval_quantiles_s": [
+        0.09900000000197906,
+        0.09959999998682179,
+        1.000499999994645,
+        1.0010000000038417
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 71309.0,
+        "mean": 35655.0,
+        "rms": 41170.7033580919,
+        "max_abs": 71309.0
+      },
+      "time_s": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 40822.92737199999,
+        "mean": 21502.473353444257,
+        "rms": 24456.154188960525,
+        "max_abs": 40822.92737199999
+      },
+      "current_A": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": -6.7266845703125,
+        "max": 19.29181671142578,
+        "mean": 0.22923841252963761,
+        "rms": 1.7096347084722279,
+        "max_abs": 19.29181671142578
+      },
+      "voltage_V": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 2.988448143005371,
+        "max": 4.198470115661621,
+        "mean": 3.7220397049909044,
+        "rms": 3.7312331400942633,
+        "max_abs": 4.198470115661621
+      },
+      "surface_C": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 22.80896759033203,
+        "max": 26.86036491394043,
+        "mean": 23.279397210955484,
+        "rms": 23.284722658687414,
+        "max_abs": 26.86036491394043
+      },
+      "step_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 9.0,
+        "max": 22.0,
+        "mean": 14.074731099861168,
+        "rms": 14.691648026323493,
+        "max_abs": 22.0
+      },
+      "cycle_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 9.0,
+        "mean": 4.859877434825899,
+        "rms": 5.529236139388994,
+        "max_abs": 9.0
+      }
+    },
+    "steps": [
+      {
+        "step": 9,
+        "rows": 1801,
+        "current_A": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 10,
+        "rows": 3249,
+        "current_A": {
+          "count": 3249,
+          "missing_or_nonfinite": 0,
+          "min": 4.850061416625977,
+          "max": 4.850459098815918,
+          "mean": 4.850223187264313,
+          "rms": 4.8502231877055895,
+          "max_abs": 4.850459098815918
+        }
+      },
+      {
+        "step": 11,
+        "rows": 32409,
+        "current_A": {
+          "count": 32409,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 12,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": 2.6601696014404297,
+          "max": 2.6605138778686523,
+          "mean": 2.6604251683217335,
+          "rms": 2.66042516884781,
+          "max_abs": 2.6605138778686523
+        }
+      },
+      {
+        "step": 13,
+        "rows": 3609,
+        "current_A": {
+          "count": 3609,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 14,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": -2.000547409057617,
+          "max": -2.0000791549682617,
+          "mean": -2.0001997103129807,
+          "rms": 2.0001997119423693,
+          "max_abs": 2.000547409057617
+        }
+      },
+      {
+        "step": 15,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 17,
+        "rows": 1201,
+        "current_A": {
+          "count": 1201,
+          "missing_or_nonfinite": 0,
+          "min": -2.2046356201171875,
+          "max": 19.29181671142578,
+          "mean": 0.00019877717258729704,
+          "rms": 3.8593222986241615,
+          "max_abs": 19.29181671142578
+        }
+      },
+      {
+        "step": 18,
+        "rows": 1602,
+        "current_A": {
+          "count": 1602,
+          "missing_or_nonfinite": 0,
+          "min": -4.8491363525390625,
+          "max": 17.765830993652344,
+          "mean": -0.000780188933145092,
+          "rms": 4.485853316174183,
+          "max_abs": 17.765830993652344
+        }
+      },
+      {
+        "step": 19,
+        "rows": 2004,
+        "current_A": {
+          "count": 2004,
+          "missing_or_nonfinite": 0,
+          "min": -6.7266845703125,
+          "max": 17.88176727294922,
+          "mean": -0.0010419719947312406,
+          "rms": 5.094672004439186,
+          "max_abs": 17.88176727294922
+        }
+      },
+      {
+        "step": 20,
+        "rows": 1314,
+        "current_A": {
+          "count": 1314,
+          "missing_or_nonfinite": 0,
+          "min": -6.1248779296875,
+          "max": 7.7352447509765625,
+          "mean": -0.004824192738061264,
+          "rms": 3.4020143770133267,
+          "max_abs": 7.7352447509765625
+        }
+      },
+      {
+        "step": 21,
+        "rows": 684,
+        "current_A": {
+          "count": 684,
+          "missing_or_nonfinite": 0,
+          "min": -6.559173583984375,
+          "max": 3.773223876953125,
+          "mean": -0.0033916451080500732,
+          "rms": 2.586347416120878,
+          "max_abs": 6.559173583984375
+        }
+      },
+      {
+        "step": 22,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      }
+    ],
+    "cycles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P19.mat",
+      "basename": "HPPC_MultiSine_P19.mat",
+      "bytes": 510227,
+      "sha256": "8f7ea937386058236dfd5112a48ae6e93c4d2291417f3b53a62e5f3337ee9dc1",
+      "crc32": "9141b16f",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P4",
+    "protocol": "pseudo_ocv",
+    "source_file": "OCVDis_P4.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 7178,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 71766.10780000001,
+      "interval_min_s": 6.107100000008359,
+      "interval_median_s": 10.0,
+      "interval_max_s": 10.001400000001013,
+      "interval_quantiles_s": [
+        9.998899999998685,
+        9.999299999999494,
+        10.000699999997597,
+        10.001100000001315
+      ],
+      "gap_threshold_s": 15.0,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 7178,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 7178.0,
+        "mean": 3589.5,
+        "rms": 4144.6532424317475,
+        "max_abs": 7178.0
+      },
+      "time_s": {
+        "count": 7178,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 71766.10780000001,
+        "mean": 35884.99988305935,
+        "rms": 41437.87160027728,
+        "max_abs": 71766.10780000001
+      },
+      "current_A": {
+        "count": 7178,
+        "missing_or_nonfinite": 0,
+        "min": 0.24250763654708862,
+        "max": 0.24253201484680176,
+        "mean": 0.24251941202676008,
+        "rms": 0.24251941204825422,
+        "max_abs": 0.24253201484680176
+      },
+      "voltage_V": {
+        "count": 7178,
+        "missing_or_nonfinite": 0,
+        "min": 2.499973773956299,
+        "max": 4.177862167358398,
+        "mean": 3.6736771399080004,
+        "rms": 3.6888163465107304,
+        "max_abs": 4.177862167358398
+      },
+      "surface_C": {
+        "count": 7178,
+        "missing_or_nonfinite": 0,
+        "min": 22.20117111098479,
+        "max": 23.586719494113733,
+        "mean": 22.547110194374767,
+        "rms": 22.548089697528628,
+        "max_abs": 23.586719494113733
+      }
+    },
+    "observed_discharge_integral_Ah": 4.83463174117643,
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P4.mat",
+      "basename": "OCVDis_P4.mat",
+      "bytes": 91406,
+      "sha256": "9d10d05ee212ac0d31288e92e8ce7cfbca11bb404e1ebcb9d494d7b17bf35789",
+      "crc32": "7e5566d6",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P4",
+    "protocol": "hppc_ms",
+    "source_file": "HPPC_MultiSine_P4.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 71309,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 40822.936564,
+      "interval_min_s": 0.0007999999943422154,
+      "interval_median_s": 0.9991999999911059,
+      "interval_max_s": 1.1444960000080755,
+      "interval_quantiles_s": [
+        0.09899999998742715,
+        0.09959999998682179,
+        1.000499999994645,
+        1.0010000000038417
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 71309.0,
+        "mean": 35655.0,
+        "rms": 41170.7033580919,
+        "max_abs": 71309.0
+      },
+      "time_s": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 40822.936564,
+        "mean": 21502.486612800854,
+        "rms": 24456.168238672322,
+        "max_abs": 40822.936564
+      },
+      "current_A": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": -6.7299346923828125,
+        "max": 19.302520751953125,
+        "mean": 0.2293060108720249,
+        "rms": 1.7100820649753106,
+        "max_abs": 19.302520751953125
+      },
+      "voltage_V": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 2.928859233856201,
+        "max": 4.198364734649658,
+        "mean": 3.719039182026771,
+        "rms": 3.728993744330691,
+        "max_abs": 4.198364734649658
+      },
+      "surface_C": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 22.36172103881836,
+        "max": 26.949222564697266,
+        "mean": 22.823242977500552,
+        "rms": 22.829827823360205,
+        "max_abs": 26.949222564697266
+      },
+      "step_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 9.0,
+        "max": 22.0,
+        "mean": 14.074731099861168,
+        "rms": 14.691648026323493,
+        "max_abs": 22.0
+      },
+      "cycle_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 9.0,
+        "mean": 4.859877434825899,
+        "rms": 5.529236139388994,
+        "max_abs": 9.0
+      }
+    },
+    "steps": [
+      {
+        "step": 9,
+        "rows": 1801,
+        "current_A": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 10,
+        "rows": 3249,
+        "current_A": {
+          "count": 3249,
+          "missing_or_nonfinite": 0,
+          "min": 4.850180625915527,
+          "max": 4.850438117980957,
+          "mean": 4.8503274735614825,
+          "rms": 4.850327473702764,
+          "max_abs": 4.850438117980957
+        }
+      },
+      {
+        "step": 11,
+        "rows": 32409,
+        "current_A": {
+          "count": 32409,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 12,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": 2.660046100616455,
+          "max": 2.6605477333068848,
+          "mean": 2.660204805032124,
+          "rms": 2.66020480784609,
+          "max_abs": 2.6605477333068848
+        }
+      },
+      {
+        "step": 13,
+        "rows": 3609,
+        "current_A": {
+          "count": 3609,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 14,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": -2.000364303588867,
+          "max": -2.0001325607299805,
+          "mean": -2.0002608797600034,
+          "rms": 2.0002608799476307,
+          "max_abs": 2.000364303588867
+        }
+      },
+      {
+        "step": 15,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 17,
+        "rows": 1201,
+        "current_A": {
+          "count": 1201,
+          "missing_or_nonfinite": 0,
+          "min": -2.2066650390625,
+          "max": 19.302520751953125,
+          "mean": 0.000879508470317704,
+          "rms": 3.8610984965392734,
+          "max_abs": 19.302520751953125
+        }
+      },
+      {
+        "step": 18,
+        "rows": 1602,
+        "current_A": {
+          "count": 1602,
+          "missing_or_nonfinite": 0,
+          "min": -4.859466552734375,
+          "max": 17.763381958007812,
+          "mean": -0.0001258707225099485,
+          "rms": 4.488591322787431,
+          "max_abs": 17.763381958007812
+        }
+      },
+      {
+        "step": 19,
+        "rows": 2004,
+        "current_A": {
+          "count": 2004,
+          "missing_or_nonfinite": 0,
+          "min": -6.7299346923828125,
+          "max": 17.875259399414062,
+          "mean": -9.597656493653319e-05,
+          "rms": 5.096347761166596,
+          "max_abs": 17.875259399414062
+        }
+      },
+      {
+        "step": 20,
+        "rows": 1314,
+        "current_A": {
+          "count": 1314,
+          "missing_or_nonfinite": 0,
+          "min": -6.125885009765625,
+          "max": 7.7438812255859375,
+          "mean": -0.004665159925115344,
+          "rms": 3.403704327463078,
+          "max_abs": 7.7438812255859375
+        }
+      },
+      {
+        "step": 21,
+        "rows": 684,
+        "current_A": {
+          "count": 684,
+          "missing_or_nonfinite": 0,
+          "min": -6.5678253173828125,
+          "max": 3.78411865234375,
+          "mean": -0.0022703918100100513,
+          "rms": 2.586764886845644,
+          "max_abs": 6.5678253173828125
+        }
+      },
+      {
+        "step": 22,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      }
+    ],
+    "cycles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P4.mat",
+      "basename": "HPPC_MultiSine_P4.mat",
+      "bytes": 511402,
+      "sha256": "b5011d58aa5433bd46e5fe450ba0897e6ee969b6e8e69e9ce3038055c4fec049",
+      "crc32": "584fbf56",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P7",
+    "protocol": "pseudo_ocv",
+    "source_file": "OCVDis_P7.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 7199,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 71972.7092,
+      "interval_min_s": 2.709499999997206,
+      "interval_median_s": 10.0,
+      "interval_max_s": 10.001699999993434,
+      "interval_quantiles_s": [
+        9.998599999998987,
+        9.999100000000908,
+        10.000899999999092,
+        10.001400000001013
+      ],
+      "gap_threshold_s": 15.0,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 7199,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 7199.0,
+        "mean": 3600.0,
+        "rms": 4156.7775980920605,
+        "max_abs": 7199.0
+      },
+      "time_s": {
+        "count": 7199,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 71972.7092,
+        "mean": 35989.99830432004,
+        "rms": 41559.11338294682,
+        "max_abs": 71972.7092
+      },
+      "current_A": {
+        "count": 7199,
+        "missing_or_nonfinite": 0,
+        "min": 0.2425163984298706,
+        "max": 0.24253135919570923,
+        "mean": 0.24252364558964276,
+        "rms": 0.2425236455969707,
+        "max_abs": 0.24253135919570923
+      },
+      "voltage_V": {
+        "count": 7199,
+        "missing_or_nonfinite": 0,
+        "min": 2.4999639987945557,
+        "max": 4.178030014038086,
+        "mean": 3.673059226241538,
+        "rms": 3.688200372522296,
+        "max_abs": 4.178030014038086
+      },
+      "surface_C": {
+        "count": 7199,
+        "missing_or_nonfinite": 0,
+        "min": 22.994089926284055,
+        "max": 23.927642822265625,
+        "mean": 23.366730668594077,
+        "rms": 23.367254596748666,
+        "max_abs": 23.927642822265625
+      }
+    },
+    "observed_discharge_integral_Ah": 4.848634393002313,
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P7.mat",
+      "basename": "OCVDis_P7.mat",
+      "bytes": 95602,
+      "sha256": "3d82595cafc3574da9e85243e1d51d51cf883bdca32c220c6ad4b1f71fdb11e5",
+      "crc32": "a73e1b6a",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  },
+  {
+    "cell_id": "P7",
+    "protocol": "hppc_ms",
+    "source_file": "HPPC_MultiSine_P7.mat",
+    "identification_chamber_setpoint_C": 23,
+    "setpoint_source": "Data in Brief Table 2 / section 3 (not a raw ambient channel)",
+    "timestamp": {
+      "rows": 71309,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 40823.25425200003,
+      "interval_min_s": 0.0010999999940395355,
+      "interval_median_s": 0.9988999999768566,
+      "interval_max_s": 1.1357040000002598,
+      "interval_quantiles_s": [
+        0.09860000001208391,
+        0.09949999999662396,
+        1.0005999999993946,
+        1.001300000003539
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "duplicate_rows": 0,
+    "channels": {
+      "source_mat_row": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 71309.0,
+        "mean": 35655.0,
+        "rms": 41170.7033580919,
+        "max_abs": 71309.0
+      },
+      "time_s": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 40823.25425200003,
+        "mean": 21502.639555910755,
+        "rms": 24456.34987618395,
+        "max_abs": 40823.25425200003
+      },
+      "current_A": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": -6.72906494140625,
+        "max": 19.296340942382812,
+        "mean": 0.22924534248632686,
+        "rms": 1.7095689857851495,
+        "max_abs": 19.296340942382812
+      },
+      "voltage_V": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 2.9426000118255615,
+        "max": 4.198474884033203,
+        "mean": 3.7197452551130743,
+        "rms": 3.7296619883501965,
+        "max_abs": 4.198474884033203
+      },
+      "surface_C": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 23.07471466064453,
+        "max": 27.929973602294922,
+        "mean": 23.61300167819193,
+        "rms": 23.619884788567795,
+        "max_abs": 27.929973602294922
+      },
+      "step_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 9.0,
+        "max": 22.0,
+        "mean": 14.074731099861168,
+        "rms": 14.691648026323493,
+        "max_abs": 22.0
+      },
+      "cycle_index": {
+        "count": 71309,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 9.0,
+        "mean": 4.859877434825899,
+        "rms": 5.529236139388994,
+        "max_abs": 9.0
+      }
+    },
+    "steps": [
+      {
+        "step": 9,
+        "rows": 1801,
+        "current_A": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 10,
+        "rows": 3249,
+        "current_A": {
+          "count": 3249,
+          "missing_or_nonfinite": 0,
+          "min": 4.850135803222656,
+          "max": 4.850484848022461,
+          "mean": 4.850222784102825,
+          "rms": 4.850222784157162,
+          "max_abs": 4.850484848022461
+        }
+      },
+      {
+        "step": 11,
+        "rows": 32409,
+        "current_A": {
+          "count": 32409,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 12,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": 2.6601295471191406,
+          "max": 2.6604318618774414,
+          "mean": 2.6603789423952007,
+          "rms": 2.6603789425805715,
+          "max_abs": 2.6604318618774414
+        }
+      },
+      {
+        "step": 13,
+        "rows": 3609,
+        "current_A": {
+          "count": 3609,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 14,
+        "rows": 909,
+        "current_A": {
+          "count": 909,
+          "missing_or_nonfinite": 0,
+          "min": -2.0001821517944336,
+          "max": -2.000004768371582,
+          "mean": -2.000141622209706,
+          "rms": 2.0001416222925474,
+          "max_abs": 2.0001821517944336
+        }
+      },
+      {
+        "step": 15,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      },
+      {
+        "step": 17,
+        "rows": 1201,
+        "current_A": {
+          "count": 1201,
+          "missing_or_nonfinite": 0,
+          "min": -2.2027740478515625,
+          "max": 19.296340942382812,
+          "mean": 0.00023190564259601375,
+          "rms": 3.8591130018259805,
+          "max_abs": 19.296340942382812
+        }
+      },
+      {
+        "step": 18,
+        "rows": 1602,
+        "current_A": {
+          "count": 1602,
+          "missing_or_nonfinite": 0,
+          "min": -4.848175048828125,
+          "max": 17.761917114257812,
+          "mean": -0.0007644110404596793,
+          "rms": 4.4855798974161525,
+          "max_abs": 17.761917114257812
+        }
+      },
+      {
+        "step": 19,
+        "rows": 2004,
+        "current_A": {
+          "count": 2004,
+          "missing_or_nonfinite": 0,
+          "min": -6.72906494140625,
+          "max": 17.87602996826172,
+          "mean": -0.0013679268355379086,
+          "rms": 5.094321973354257,
+          "max_abs": 17.87602996826172
+        }
+      },
+      {
+        "step": 20,
+        "rows": 1314,
+        "current_A": {
+          "count": 1314,
+          "missing_or_nonfinite": 0,
+          "min": -6.1224822998046875,
+          "max": 7.7330780029296875,
+          "mean": -0.004438356721782249,
+          "rms": 3.4018473709924386,
+          "max_abs": 7.7330780029296875
+        }
+      },
+      {
+        "step": 21,
+        "rows": 684,
+        "current_A": {
+          "count": 684,
+          "missing_or_nonfinite": 0,
+          "min": -6.5554046630859375,
+          "max": 3.7689208984375,
+          "mean": -0.0025643688893457603,
+          "rms": 2.5860458503488624,
+          "max_abs": 6.5554046630859375
+        }
+      },
+      {
+        "step": 22,
+        "rows": 10809,
+        "current_A": {
+          "count": 10809,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        }
+      }
+    ],
+    "cycles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P7.mat",
+      "basename": "HPPC_MultiSine_P7.mat",
+      "bytes": 529276,
+      "sha256": "3681767fe55eb5d9a22a11db4a43b4d0bd8979b259dc17a34ec93a763c9b62cc",
+      "crc32": "5f1c51ea",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    }
+  }
+]

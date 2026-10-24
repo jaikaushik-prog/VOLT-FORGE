@@ -1,0 +1,13 @@
+{
+  "archive_name": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation.zip",
+  "bytes": 758227888,
+  "sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1",
+  "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+  "doi": "10.17632/zh58byr53c.2",
+  "version": 2,
+  "access_date": "2026-10-24",
+  "inspected_at_utc": "2026-10-24T16:23:32.248409+00:00",
+  "retrieval": "User downloaded the full official dataset ZIP and placed it in the workspace.",
+  "version_assurance": "User-supplied archive; matches documented v2 layout. No publisher checksum or embedded version manifest was available.",
+  "licence": "CC BY 4.0 (official dataset record, checked 2026-10-24)"
+}

@@ -1,0 +1,3 @@
+# Preserve exact file bytes: provenance/model seals hash code and artifacts.
+# In particular, do not convert LF/CRLF during Windows checkout.
+* -text

@@ -1,0 +1,113 @@
+{
+  "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1",
+  "config_sha256": "1ddc8d84472595760e6ebee4f873bcc7fbe05d7bafc8a6ad2349845f45460731",
+  "groups": {
+    "calibration": [
+      {
+        "run_id": "M1_NMC_Unaged_R0_T25",
+        "cells": [
+          "P7",
+          "P17",
+          "P19",
+          "P13"
+        ],
+        "raw_sha256": "4596d3fed65277b548176bca7dd3dfa9efcd0bd2167722effc87ac38975c24bc",
+        "processed_sha256": "fa9e2344a40bf796fbb5aadec0aaf61885472ac16798023604f9dc3e45650f84"
+      },
+      {
+        "run_id": "M1_NMC_Unaged_R0_T10",
+        "cells": [
+          "P13",
+          "P2",
+          "P6",
+          "P11"
+        ],
+        "raw_sha256": "56599e00b5eb76228620d92dd9ae1f729afa94cd7c4c9774389473d1b3e18516",
+        "processed_sha256": "1463b016cc82cbc65a249e87576ac2b042fde13be1cf46f514712de6be9c0f36"
+      },
+      {
+        "run_id": "M1_NMC_Unaged_R0_T40",
+        "cells": [
+          "P14",
+          "P3",
+          "P8",
+          "P12"
+        ],
+        "raw_sha256": "a01f19d1384371bf6f6502193ada85c0cc346f48a6a43c5db396aabba521b762",
+        "processed_sha256": "e99efbe117ab8fb6f310a3f45274dd364a3b1937c13d53a17540c64c14d35585"
+      }
+    ],
+    "development_validation": [
+      {
+        "run_id": "M1_NMC_Unaged_R3_T25",
+        "cells": [
+          "P17",
+          "P4",
+          "P10",
+          "P16"
+        ],
+        "raw_sha256": "8356496b3fd5c8519165f597959e103fd1247e1a9cf4db36deb14776c66568d1",
+        "processed_sha256": "85076072c6057d11e3ddb793b5ae47d8d0065d3148fbd208de968f65a4a6cb1b"
+      },
+      {
+        "run_id": "M2_NMC_Unaged_R1_T10",
+        "cells": [
+          "P2",
+          "P7",
+          "P12",
+          "P3"
+        ],
+        "raw_sha256": "864a375ffd04677ac63048e80e7c4340f2d18b82bd5d3721ebcf39163e5cf1f8",
+        "processed_sha256": "39ddc2a9da3e1f9811bac9725f3bb271475301c3de257b6aa8c2420d0d04c6cd"
+      }
+    ],
+    "final_assessment": [
+      {
+        "run_id": "M1_NMC_Unaged_R3_T10",
+        "cells": [
+          "P14",
+          "P5",
+          "P13",
+          "P6"
+        ],
+        "raw_sha256": "2e44d8e87a8dae38dce83fff3ad5b325ee084f0f38cc49db7bf2d7e5811e5799",
+        "processed_sha256": "7102f3336576ec0a683e562882f16c987164c8e6dd4e8a9d611182ee00eb39dd"
+      },
+      {
+        "run_id": "M2_NMC_Unaged_R1_T40",
+        "cells": [
+          "P14",
+          "P3",
+          "P7",
+          "P12"
+        ],
+        "raw_sha256": "4bcdd37681f602723433ae886722de2e1a3a7315e6122d4ce8281c01f28f2add",
+        "processed_sha256": "ea70ddbd2ed8fe4808593fd2d418d1c6f75abc1fdf9e85446e6bf88438540ebb"
+      },
+      {
+        "run_id": "M1_NMC_Unaged_R3_T40",
+        "cells": [
+          "P16",
+          "P9",
+          "P14",
+          "P5"
+        ],
+        "raw_sha256": "d3fa24f2d9af8c3198e504a718a30a6899a3323324b44d8895ee78198e727f04",
+        "processed_sha256": "311952f74622b71ac988de8c33a1fec1bb8b9f69992d25e99e63cb17fefb0111"
+      }
+    ],
+    "quarantine": [
+      {
+        "run_id": "M2_NMC_Unaged_R1_T25",
+        "cells": [
+          "P20",
+          "P11",
+          "P17",
+          "Y1"
+        ],
+        "raw_sha256": "fd264011da5ef2424a2d00912d58fb15e6992ae81d90d14e54fa1d9031be28ef",
+        "processed_sha256": "c109366da87621d0bae46511fabd8ea8638399060360fb1a96716592183b9b81"
+      }
+    ]
+  }
+}

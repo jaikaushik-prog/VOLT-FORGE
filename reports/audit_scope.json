@@ -1,0 +1,26 @@
+{
+  "audited_runs": [
+    "M1_NMC_Unaged_R0_T25",
+    "M1_NMC_Unaged_R3_T25"
+  ],
+  "characterized_cells": [
+    "P10",
+    "P13",
+    "P16",
+    "P17",
+    "P19",
+    "P4",
+    "P7"
+  ],
+  "sensors": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "final_assessment_signals_inspected": false,
+  "data_class": "measured data and explicitly identified derived diagnostics; no synthetic measured results",
+  "generated_at_utc": "2026-10-24T16:26:11.122603+00:00",
+  "python": "3.12.3 | packaged by conda-forge | (main, Apr 15 2024, 18:20:11) [MSC v.1938 64 bit (AMD64)]",
+  "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+}

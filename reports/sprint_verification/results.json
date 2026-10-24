@@ -1,0 +1,49 @@
+{
+  "protected_original_artifacts": 11,
+  "archive_hash_verified": true,
+  "separate_residual_calculations_difference": {
+    "M1_NMC_Unaged_R0_T25": {
+      "mean": 0.0,
+      "rms": 0.0,
+      "max_abs": 0.0
+    },
+    "M1_NMC_Unaged_R3_T25": {
+      "mean": 0.0,
+      "rms": 0.0,
+      "max_abs": 0.0
+    }
+  },
+  "ladder_analytical_cases": {
+    "symmetric_four": {
+      "branch_A": [
+        2.9999999999999254,
+        3.000000000000025,
+        3.000000000000025,
+        3.000000000000025
+      ],
+      "terminal_V": 3.6399999999999997,
+      "kcl_residual_A": 0.0,
+      "energy_residual_W": 1.3100631690576847e-14
+    },
+    "two_cell_shared_rails": {
+      "branch_A": [
+        7.5,
+        2.4999999999999996
+      ],
+      "terminal_V": 2.95,
+      "kcl_residual_A": 0.0,
+      "energy_residual_W": 2.220446049250313e-16
+    },
+    "circulating_zero_load": {
+      "branch_A": [
+        0.6666666666666687,
+        -0.6666666666666687
+      ],
+      "terminal_V": 3.9333333333333336,
+      "kcl_residual_A": 0.0,
+      "energy_residual_W": -4.163336342344337e-16
+    }
+  },
+  "ladder_experimental_validation": "pending",
+  "optimizer_or_ranked_repairs": false
+}

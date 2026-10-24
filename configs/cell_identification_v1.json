@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "frozen_before_fitting": true,
+  "created_date": "2026-10-24",
+  "cells": ["P7", "P4", "P10", "P13", "P16", "P17", "P19"],
+  "calibration_cycles": [1, 4, 5, 9],
+  "development_cycles": [2, 7],
+  "assessment_cycles": [3, 6, 8],
+  "split_unit": "Complete source CycleIndex blocks; all pulse, rest and multisine samples within a cycle stay together",
+  "fit_sequence": "Steps 12,13,14,15 (both HPPC pulses and complete intervening/following rests), preceded by the last 10 seconds of step 11 for state initialization. No thinning or random timestamp split.",
+  "additional_assessment": "The following multisine step 17..21 and complete step 22 rest, simulated continuously after the HPPC sequence with no voltage reset.",
+  "loaded_curve": "All OCVDis samples are independent input characterization for that same cell. They are low-rate loaded voltage, not equilibrium OCV.",
+  "soc": "Coulomb count positive-discharge CurrentData using observed C/20 integral; initial HPPC SOC proxy=1 is an explicit assumption. Assessment currents may be inputs; their voltages never enter fitting or model selection.",
+  "voltage_reference": "Piecewise-linear correction to the C/20 loaded curve using only calibration cycles' final 10 s of pre-pulse rest. Not a proven equilibrium OCV map. Assessment baseline voltages are not used to initialize predictions.",
+  "models": ["loaded/rest-referenced voltage minus constant R0*I", "same reference minus constant R0*I and one RC polarization state"],
+  "parameter_bounds": {"R0_ohm": [0.0001, 0.2], "R1_ohm": [0.00001, 0.2], "tau_s": [0.2, 300.0]},
+  "current_hold": "left endpoint zero-order hold; instantaneous ohmic voltage uses current sample. Sensitivity to right-endpoint hold reported separately without selecting using assessment results.",
+  "one_rc_selection": "At least 20 percent reduction in development-cycle HPPC sample RMSE, interior positive R0/R1/tau, and the calibration tau-profile's 5-percent-SSE support must exclude both search bounds. This is a complexity/identifiability screen, not engineering acceptance or a confidence interval.",
+  "uncertainty": "Enumerate all 4^4 whole-calibration-cycle bootstrap draws (256, including repeats), refit on a fixed log-tau grid; report 2.5/97.5 percentile conditional intervals. Only four calibration cycles, same cells/rig, no sensor uncertainty budget. Report tau SSE profile and normalized sensitivity conditioning separately.",
+  "temperature": "No temperature law fitted. Report recorded surface-temperature ranges by split; nominal chamber characterization is 23 C.",
+  "assessment_policy": "Freeze fitted artifacts and selected model before first assessment scoring. No fitting, correction, model selection or thresholds based on assessment voltages. This is within-cell held-sequence assessment, not independent module validation.",
+  "module_final_assessment": "Existing configs/splits.json and splits.lock.json remain unchanged; no reserved module traces are accessed."
+}

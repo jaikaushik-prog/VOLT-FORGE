@@ -1,0 +1,901 @@
+{
+  "implementation": "struct/zlib MAT5 + direct XLSX XML; no voltforge/SciPy/pandas readers",
+  "runs": {
+    "M1_NMC_Unaged_R0_T25": {
+      "rows": 33079,
+      "source_discharge_rows": [
+        13317,
+        18751
+      ],
+      "timestamp_check": {
+        "backwards": 0,
+        "duplicates": 0,
+        "minimum_interval_s": 0.0007999999997991836,
+        "median_interval_s": 1.0,
+        "maximum_interval_s": 1.1754880000007688,
+        "intervals_above_provisional_1_5s": 0
+      },
+      "column_labels": [
+        "Test_Times",
+        "Step_Times",
+        "Step_Index",
+        "Cycle_Index",
+        "VoltageV",
+        "CurrentA",
+        "TemperatureC_Cell_1",
+        "TemperatureC_Cell_2",
+        "TemperatureC_Cell_3",
+        "TemperatureC_Cell_4",
+        "Ambient_TemperatureC",
+        "CurrentA_Cell_1",
+        "CurrentA_Cell_2",
+        "CurrentA_Cell_3",
+        "CurrentA_Cell_4"
+      ],
+      "shared_channels": {
+        "Test_Time(s) -> Test_Times": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Step_Time(s) -> Step_Times": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Step_Index -> Step_Index": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Cycle_Index -> Cycle_Index": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Voltage(V) -> VoltageV": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Current(A) -> CurrentA": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Aux_Temperature(\u00a1\u00e6)_1 -> TemperatureC_Cell_1": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Aux_Temperature(\u00a1\u00e6)_2 -> TemperatureC_Cell_2": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Aux_Temperature(\u00a1\u00e6)_3 -> TemperatureC_Cell_3": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Aux_Temperature(\u00a1\u00e6)_4 -> TemperatureC_Cell_4": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Aux_Temperature(\u00a1\u00e6)_5 -> Ambient_TemperatureC": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        }
+      },
+      "source_sign": "positive charge; step 5 module and all four branches negative",
+      "discharge_source_sign_confirmed": true,
+      "full": {
+        "mean_A": -0.3369158125699354,
+        "rms_A": 0.6924719211537329,
+        "max_abs_A": 2.0883674273825505
+      },
+      "discharge": {
+        "mean_A": -1.6832915320630526,
+        "rms_A": 1.6858798703845315,
+        "max_abs_A": 2.0883674273825505
+      },
+      "by_step": {
+        "1": {
+          "mean_A": -0.019394966116776925,
+          "rms_A": 0.09303903083222713,
+          "max_abs_A": 0.3815445522668739
+        },
+        "2": {
+          "mean_A": -0.1023362856950438,
+          "rms_A": 0.13740042002975386,
+          "max_abs_A": 0.4994004123624052
+        },
+        "3": {
+          "mean_A": -0.07611789566922626,
+          "rms_A": 0.12439984309450552,
+          "max_abs_A": 0.47278195035445947
+        },
+        "4": {
+          "mean_A": -0.013791126051109697,
+          "rms_A": 0.09296527544011864,
+          "max_abs_A": 0.3892601207072204
+        },
+        "5": {
+          "mean_A": -1.6832915320630526,
+          "rms_A": 1.6858798703845315,
+          "max_abs_A": 2.0883674273825505
+        },
+        "6": {
+          "mean_A": -0.013164748452644095,
+          "rms_A": 0.09260380246753204,
+          "max_abs_A": 0.39801261289377976
+        },
+        "7": {
+          "mean_A": -0.08880750919831377,
+          "rms_A": 0.1288562707395326,
+          "max_abs_A": 0.4865613691059991
+        },
+        "8": {
+          "mean_A": -0.05089711438200214,
+          "rms_A": 0.10860942707535103,
+          "max_abs_A": 0.4108851757808907
+        }
+      },
+      "sign_hypotheses": {
+        "(1, 1, 1, 1)": {
+          "mean_A": -1.6832915320630526,
+          "rms_A": 1.6858798703845315,
+          "max_abs_A": 2.0883674273825505
+        },
+        "(1, 1, 1, -1)": {
+          "mean_A": -8.033643583996346,
+          "rms_A": 8.034270777787714,
+          "max_abs_A": 8.320491848890114
+        },
+        "(1, 1, -1, 1)": {
+          "mean_A": -8.121495443526985,
+          "rms_A": 8.122113794433458,
+          "max_abs_A": 8.45183757507344
+        },
+        "(1, 1, -1, -1)": {
+          "mean_A": -14.471847495460278,
+          "rms_A": 14.47213979912564,
+          "max_abs_A": 14.697294539057907
+        },
+        "(1, -1, 1, 1)": {
+          "mean_A": -8.147339478056972,
+          "rms_A": 8.147616328374221,
+          "max_abs_A": 8.451270175148707
+        },
+        "(1, -1, 1, -1)": {
+          "mean_A": -14.497691529990265,
+          "rms_A": 14.497944608663092,
+          "max_abs_A": 14.764486635841124
+        },
+        "(1, -1, -1, 1)": {
+          "mean_A": -14.585543389520906,
+          "rms_A": 14.58574609521639,
+          "max_abs_A": 14.85587054820553
+        },
+        "(1, -1, -1, -1)": {
+          "mean_A": -20.9358954414542,
+          "rms_A": 20.936033938591553,
+          "max_abs_A": 21.207323618315215
+        },
+        "(-1, 1, 1, 1)": {
+          "mean_A": -8.172880987273809,
+          "rms_A": 8.173244692266108,
+          "max_abs_A": 8.555484644728182
+        },
+        "(-1, 1, 1, -1)": {
+          "mean_A": -14.523233039207101,
+          "rms_A": 14.523435566619572,
+          "max_abs_A": 14.768226400947626
+        },
+        "(-1, 1, -1, 1)": {
+          "mean_A": -14.611084898737742,
+          "rms_A": 14.611337722511266,
+          "max_abs_A": 14.903234608414806
+        },
+        "(-1, 1, -1, -1)": {
+          "mean_A": -20.961436950671033,
+          "rms_A": 20.96154154115673,
+          "max_abs_A": 21.21773142470184
+        },
+        "(-1, -1, 1, 1)": {
+          "mean_A": -14.636928933267729,
+          "rms_A": 14.637220965647359,
+          "max_abs_A": 15.076579695447677
+        },
+        "(-1, -1, 1, -1)": {
+          "mean_A": -20.987280985201025,
+          "rms_A": 20.987518183513455,
+          "max_abs_A": 21.378458334290997
+        },
+        "(-1, -1, -1, 1)": {
+          "mean_A": -21.075132844731662,
+          "rms_A": 21.075371754874993,
+          "max_abs_A": 21.45049853042677
+        },
+        "(-1, -1, -1, -1)": {
+          "mean_A": -27.42548489666496,
+          "rms_A": 27.425640528428286,
+          "max_abs_A": 27.818344719060462
+        }
+      },
+      "time_shift_samples": {
+        "-10": {
+          "mean_A": -0.3367040499569434,
+          "rms_A": 0.786767912086777,
+          "max_abs_A": 14.58037301619646
+        },
+        "-9": {
+          "mean_A": -0.3367261219128117,
+          "rms_A": 0.7779259721151439,
+          "max_abs_A": 14.587559905844898
+        },
+        "-8": {
+          "mean_A": -0.33675481927110157,
+          "rms_A": 0.7688825909261339,
+          "max_abs_A": 14.57597848494646
+        },
+        "-7": {
+          "mean_A": -0.33677694903290073,
+          "rms_A": 0.7597062234359444,
+          "max_abs_A": 14.586575713950367
+        },
+        "-6": {
+          "mean_A": -0.33679292863138743,
+          "rms_A": 0.7504539988360232,
+          "max_abs_A": 14.57590982039568
+        },
+        "-5": {
+          "mean_A": -0.33681440460565093,
+          "rms_A": 0.741070610349277,
+          "max_abs_A": 14.587285247641773
+        },
+        "-4": {
+          "mean_A": -0.3368347018726817,
+          "rms_A": 0.7315926552971908,
+          "max_abs_A": 14.571764681628139
+        },
+        "-3": {
+          "mean_A": -0.33685614706921013,
+          "rms_A": 0.7220489143895765,
+          "max_abs_A": 14.571777265029269
+        },
+        "-2": {
+          "mean_A": -0.3368767837061995,
+          "rms_A": 0.7123439478845529,
+          "max_abs_A": 14.572474215319545
+        },
+        "-1": {
+          "mean_A": -0.3368962987280194,
+          "rms_A": 0.7024474615868713,
+          "max_abs_A": 14.572486798720675
+        },
+        "0": {
+          "mean_A": -0.3369158125699354,
+          "rms_A": 0.6924719211537329,
+          "max_abs_A": 2.0883674273825505
+        },
+        "1": {
+          "mean_A": -0.3369547460843983,
+          "rms_A": 0.7025321284620563,
+          "max_abs_A": 14.556881812802828
+        },
+        "2": {
+          "mean_A": -0.3369940840847562,
+          "rms_A": 0.7124277563662668,
+          "max_abs_A": 14.560157107266363
+        },
+        "3": {
+          "mean_A": -0.3370329018277475,
+          "rms_A": 0.7221595959931352,
+          "max_abs_A": 14.582173255673922
+        },
+        "4": {
+          "mean_A": -0.3370698934913251,
+          "rms_A": 0.7316490024613359,
+          "max_abs_A": 14.585448550137457
+        },
+        "5": {
+          "mean_A": -0.3370999884593772,
+          "rms_A": 0.7409461597122211,
+          "max_abs_A": 14.59219113761391
+        },
+        "6": {
+          "mean_A": -0.3371397758781998,
+          "rms_A": 0.7504668678455265,
+          "max_abs_A": 14.80784535792408
+        },
+        "7": {
+          "mean_A": -0.33717970932772295,
+          "rms_A": 0.7597012385867056,
+          "max_abs_A": 14.809287313490486
+        },
+        "8": {
+          "mean_A": -0.33721988403578734,
+          "rms_A": 0.7688592654537432,
+          "max_abs_A": 14.833136800795174
+        },
+        "9": {
+          "mean_A": -0.3372590498990585,
+          "rms_A": 0.7777344384164423,
+          "max_abs_A": 14.808829549818611
+        },
+        "10": {
+          "mean_A": -0.33729973432461335,
+          "rms_A": 0.7866848683629094,
+          "max_abs_A": 14.835013631849861
+        }
+      },
+      "branch_unit_factor_hypotheses": {
+        "0.001": {
+          "mean_A": -14.541517117681702,
+          "rms_A": 14.5415210096276,
+          "max_abs_A": 14.561369014866452
+        },
+        "1": {
+          "mean_A": -1.6832915320630526,
+          "rms_A": 1.6858798703845315,
+          "max_abs_A": 2.0883674273825505
+        },
+        "1000": {
+          "mean_A": 12856.542294086588,
+          "rms_A": 12856.873466323163,
+          "max_abs_A": 13239.63329450692
+        }
+      },
+      "permutation_note": "Any permutation of the four branches leaves their sum unchanged; cannot explain this residual.",
+      "author_branch_vs_candidate_H1_to_H8_RMS_A": [
+        [
+          0.8743469767334513,
+          0.2368247940523697,
+          0.21824154003381313,
+          0.6984445672684556,
+          0.12628274596983538,
+          0.6346223751479476,
+          0.07805084636416756,
+          1.3786513561624372
+        ],
+        [
+          0.47393805909014197,
+          0.6342705304539701,
+          0.6152263578039032,
+          0.30222027633423704,
+          0.2695153819145034,
+          0.2464872883177495,
+          0.4125364695616655,
+          1.0275603865616039
+        ],
+        [
+          0.9956850662614293,
+          0.09297525478915951,
+          0.07734087936292965,
+          0.8195687718697512,
+          0.2535938278128159,
+          0.7566910501992734,
+          0.13111860329701883,
+          1.4591051239097947
+        ],
+        [
+          0.6851056086679719,
+          0.8561891175974069,
+          0.8482227582937701,
+          0.607628722363973,
+          0.6729616416262241,
+          0.6244010817651113,
+          0.712232888118406,
+          0.3606860422029289
+        ]
+      ],
+      "nominal_sensor_mapping": "M1 local positions 1..4 -> H1..H4 per article; H5..H8 tested as mislabelling hypotheses only, no reassignment",
+      "module_discharge_integral_Ah": 21.9681044330438,
+      "raw_cycler_discharge_capacity_increment_Ah": 21.96809661621225,
+      "raw_cycler_capacity_caveat": "Same cycler, not an independent current reference",
+      "wall_minus_test_elapsed_max_abs_s": 0.0007924451892904472
+    },
+    "M1_NMC_Unaged_R3_T25": {
+      "rows": 41689,
+      "source_discharge_rows": [
+        22340,
+        26563
+      ],
+      "timestamp_check": {
+        "backwards": 0,
+        "duplicates": 0,
+        "minimum_interval_s": 0.000800000001618173,
+        "median_interval_s": 1.0,
+        "maximum_interval_s": 1.1762999999991735,
+        "intervals_above_provisional_1_5s": 0
+      },
+      "column_labels": [
+        "Test_Times",
+        "Step_Times",
+        "Step_Index",
+        "Cycle_Index",
+        "VoltageV",
+        "CurrentA",
+        "TemperatureC_Cell_1",
+        "TemperatureC_Cell_2",
+        "TemperatureC_Cell_3",
+        "TemperatureC_Cell_4",
+        "Ambient_TemperatureC",
+        "CurrentA_Cell_1",
+        "CurrentA_Cell_2",
+        "CurrentA_Cell_3",
+        "CurrentA_Cell_4"
+      ],
+      "shared_channels": {
+        "Test_Time(s) -> Test_Times": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Step_Time(s) -> Step_Times": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Step_Index -> Step_Index": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Cycle_Index -> Cycle_Index": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Voltage(V) -> VoltageV": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Current(A) -> CurrentA": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Aux_Temperature(\u00a1\u00e6)_1 -> TemperatureC_Cell_1": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Aux_Temperature(\u00a1\u00e6)_2 -> TemperatureC_Cell_2": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Aux_Temperature(\u00a1\u00e6)_3 -> TemperatureC_Cell_3": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Aux_Temperature(\u00a1\u00e6)_4 -> TemperatureC_Cell_4": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        },
+        "Aux_Temperature(\u00a1\u00e6)_5 -> Ambient_TemperatureC": {
+          "equal": true,
+          "max_abs_difference": 0.0
+        }
+      },
+      "source_sign": "positive charge; step 5 module and all four branches negative",
+      "discharge_source_sign_confirmed": true,
+      "full": {
+        "mean_A": 0.1412849097434629,
+        "rms_A": 0.5041632323959686,
+        "max_abs_A": 1.9570073712789338
+      },
+      "discharge": {
+        "mean_A": 1.5479236508577328,
+        "rms_A": 1.5510595030801098,
+        "max_abs_A": 1.9570073712789338
+      },
+      "by_step": {
+        "1": {
+          "mean_A": 0.03126094578620047,
+          "rms_A": 0.09700841832549276,
+          "max_abs_A": 0.42572329429204103
+        },
+        "2": {
+          "mean_A": -0.07451370225507856,
+          "rms_A": 0.11998849242643095,
+          "max_abs_A": 0.4436765806692904
+        },
+        "3": {
+          "mean_A": -0.0473397407068776,
+          "rms_A": 0.1080691700592982,
+          "max_abs_A": 0.45401504918585545
+        },
+        "4": {
+          "mean_A": 0.019994178048947427,
+          "rms_A": 0.09695419644139261,
+          "max_abs_A": 0.3846599994522393
+        },
+        "5": {
+          "mean_A": 1.5479236508577328,
+          "rms_A": 1.5510595030801098,
+          "max_abs_A": 1.9570073712789338
+        },
+        "6": {
+          "mean_A": 0.03174032068143849,
+          "rms_A": 0.10080345354576843,
+          "max_abs_A": 0.4141613249015421
+        },
+        "7": {
+          "mean_A": -0.08382681296743154,
+          "rms_A": 0.12582580872569848,
+          "max_abs_A": 0.4884349060505855
+        },
+        "8": {
+          "mean_A": -0.04180218991397997,
+          "rms_A": 0.10482151808296276,
+          "max_abs_A": 0.46107848243866556
+        }
+      },
+      "sign_hypotheses": {
+        "(1, 1, 1, 1)": {
+          "mean_A": 1.5479236508577328,
+          "rms_A": 1.5510595030801098,
+          "max_abs_A": 1.9570073712789338
+        },
+        "(1, 1, 1, -1)": {
+          "mean_A": -6.422077264177114,
+          "rms_A": 6.541692431967499,
+          "max_abs_A": 9.575345608869327
+        },
+        "(1, 1, -1, 1)": {
+          "mean_A": -6.337296101877896,
+          "rms_A": 6.381338275101006,
+          "max_abs_A": 8.410498102969171
+        },
+        "(1, 1, -1, -1)": {
+          "mean_A": -14.307297016912743,
+          "rms_A": 14.442937100175993,
+          "max_abs_A": 19.33250820874059
+        },
+        "(1, -1, 1, 1)": {
+          "mean_A": -6.539922075420037,
+          "rms_A": 6.555116854258763,
+          "max_abs_A": 7.348810722071022
+        },
+        "(1, -1, 1, -1)": {
+          "mean_A": -14.509922990454884,
+          "rms_A": 14.534852876890682,
+          "max_abs_A": 16.421014276152434
+        },
+        "(1, -1, -1, 1)": {
+          "mean_A": -14.425141828155665,
+          "rms_A": 14.431282083458331,
+          "max_abs_A": 15.635705197917432
+        },
+        "(1, -1, -1, -1)": {
+          "mean_A": -22.39514274319051,
+          "rms_A": 22.450908519661755,
+          "max_abs_A": 26.21401177056599
+        },
+        "(-1, 1, 1, 1)": {
+          "mean_A": -6.726908831776613,
+          "rms_A": 6.91040236395448,
+          "max_abs_A": 10.461723810919082
+        },
+        "(-1, 1, 1, -1)": {
+          "mean_A": -14.69690974681146,
+          "rms_A": 14.702950234479774,
+          "max_abs_A": 15.760307928000003
+        },
+        "(-1, 1, -1, 1)": {
+          "mean_A": -14.612128584512242,
+          "rms_A": 14.636912244181207,
+          "max_abs_A": 16.561124572450083
+        },
+        "(-1, 1, -1, -1)": {
+          "mean_A": -22.582129499547086,
+          "rms_A": 22.586528826176636,
+          "max_abs_A": 23.990185847848863
+        },
+        "(-1, -1, 1, 1)": {
+          "mean_A": -14.814754558054382,
+          "rms_A": 14.94585342843928,
+          "max_abs_A": 19.342444408562912
+        },
+        "(-1, -1, 1, -1)": {
+          "mean_A": -22.784755473089227,
+          "rms_A": 22.79706245018721,
+          "max_abs_A": 24.636837234593187
+        },
+        "(-1, -1, -1, 1)": {
+          "mean_A": -22.69997431079001,
+          "rms_A": 22.73413132091676,
+          "max_abs_A": 25.441845170093913
+        },
+        "(-1, -1, -1, -1)": {
+          "mean_A": -30.669975225824857,
+          "rms_A": 30.670136096470767,
+          "max_abs_A": 31.087602693398026
+        }
+      },
+      "time_shift_samples": {
+        "-10": {
+          "mean_A": 0.1415739297667655,
+          "rms_A": 0.6221964185409011,
+          "max_abs_A": 16.154862018732416
+        },
+        "-9": {
+          "mean_A": 0.14154564224274246,
+          "rms_A": 0.6113002587913462,
+          "max_abs_A": 16.154862018732416
+        },
+        "-8": {
+          "mean_A": 0.14151811029782393,
+          "rms_A": 0.6003595190790729,
+          "max_abs_A": 16.154862018732416
+        },
+        "-7": {
+          "mean_A": 0.14148854982446823,
+          "rms_A": 0.5891638084558898,
+          "max_abs_A": 16.154862018732416
+        },
+        "-6": {
+          "mean_A": 0.14145667912087612,
+          "rms_A": 0.5777062172127637,
+          "max_abs_A": 16.154862018732416
+        },
+        "-5": {
+          "mean_A": 0.1414281794253666,
+          "rms_A": 0.5659518318249908,
+          "max_abs_A": 16.154862018732416
+        },
+        "-4": {
+          "mean_A": 0.1413991482127274,
+          "rms_A": 0.5542020365347207,
+          "max_abs_A": 16.154862018732416
+        },
+        "-3": {
+          "mean_A": 0.14137187937582668,
+          "rms_A": 0.542176735140749,
+          "max_abs_A": 16.154862018732416
+        },
+        "-2": {
+          "mean_A": 0.14134433950724254,
+          "rms_A": 0.5297768322218182,
+          "max_abs_A": 16.154862018732416
+        },
+        "-1": {
+          "mean_A": 0.1413168002023385,
+          "rms_A": 0.5171368065746849,
+          "max_abs_A": 16.141817136019895
+        },
+        "0": {
+          "mean_A": 0.1412849097434629,
+          "rms_A": 0.5041632323959686,
+          "max_abs_A": 1.9570073712789338
+        },
+        "1": {
+          "mean_A": 0.14126409767625359,
+          "rms_A": 0.5171664877276534,
+          "max_abs_A": 16.172875874542157
+        },
+        "2": {
+          "mean_A": 0.1412431752884247,
+          "rms_A": 0.5298774709094987,
+          "max_abs_A": 16.172875874542157
+        },
+        "3": {
+          "mean_A": 0.14122225357021043,
+          "rms_A": 0.5425222096447416,
+          "max_abs_A": 16.172875874542157
+        },
+        "4": {
+          "mean_A": 0.1412012394793246,
+          "rms_A": 0.5547153795969363,
+          "max_abs_A": 16.25994569359331
+        },
+        "5": {
+          "mean_A": 0.14118035231083229,
+          "rms_A": 0.566671666951372,
+          "max_abs_A": 16.25994569359331
+        },
+        "6": {
+          "mean_A": 0.14115911694957378,
+          "rms_A": 0.5782720415205318,
+          "max_abs_A": 16.25994569359331
+        },
+        "7": {
+          "mean_A": 0.14113488502857546,
+          "rms_A": 0.5896710108905271,
+          "max_abs_A": 16.25994569359331
+        },
+        "8": {
+          "mean_A": 0.14111394661646445,
+          "rms_A": 0.6008899815750176,
+          "max_abs_A": 16.25994569359331
+        },
+        "9": {
+          "mean_A": 0.14109936198085749,
+          "rms_A": 0.6120334540380424,
+          "max_abs_A": 16.25994569359331
+        },
+        "10": {
+          "mean_A": 0.14107827743816437,
+          "rms_A": 0.6229168555693284,
+          "max_abs_A": 16.331768238364845
+        }
+      },
+      "branch_unit_factor_hypotheses": {
+        "0.001": {
+          "mean_A": -14.544916838045221,
+          "rms_A": 14.544921216851304,
+          "max_abs_A": 14.56571381979217
+        },
+        "1": {
+          "mean_A": 1.5479236508577328,
+          "rms_A": 1.5510595030801098,
+          "max_abs_A": 1.9570073712789338
+        },
+        "1000": {
+          "mean_A": 16094.38841255381,
+          "rms_A": 16094.688681163698,
+          "max_abs_A": 16498.794450600173
+        }
+      },
+      "permutation_note": "Any permutation of the four branches leaves their sum unchanged; cannot explain this residual.",
+      "author_branch_vs_candidate_H1_to_H8_RMS_A": [
+        [
+          0.8900800548498441,
+          0.214817806180424,
+          0.1979863775009903,
+          0.7124282074115602,
+          0.1345827461541777,
+          0.6421891355691699,
+          0.07672754721217384,
+          1.436318098389841
+        ],
+        [
+          0.44326304791433846,
+          0.6569856776111597,
+          0.6398324454991248,
+          0.27032254178264736,
+          0.3057210407392147,
+          0.20952157967643517,
+          0.4394906191832864,
+          0.9778398490246817
+        ],
+        [
+          1.024738566182391,
+          0.05994838510870912,
+          0.047681581574820685,
+          0.8453021728510506,
+          0.2666424993679306,
+          0.7698201287148002,
+          0.16166288008469482,
+          1.5938861829101754
+        ],
+        [
+          0.6026261331283546,
+          0.8936809979189485,
+          0.885572348503189,
+          0.5371733249938189,
+          0.6832549619101485,
+          0.5561399368509831,
+          0.7364616716860086,
+          0.4076823926622223
+        ]
+      ],
+      "nominal_sensor_mapping": "M1 local positions 1..4 -> H1..H4 per article; H5..H8 tested as mislabelling hypotheses only, no reassignment",
+      "module_discharge_integral_Ah": 17.08017924488195,
+      "raw_cycler_discharge_capacity_increment_Ah": 17.080141958431327,
+      "raw_cycler_capacity_caveat": "Same cycler, not an independent current reference",
+      "wall_minus_test_elapsed_max_abs_s": 0.0018923408424598165
+    }
+  },
+  "accessed_members": [
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H1_Calibration.mat",
+      "sha256": "9657edb5755d68ac07c4f94040ef7139f72b0b8245bac65808dfa3d32e05f2d2"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H2_Calibration.mat",
+      "sha256": "90a61fb9e9353a137eadb6961e76d919f9260dd8996b4cac63e96bb2de01ecf9"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H3_Calibration.mat",
+      "sha256": "71b51345361a203dacd02342c3577da1d89cf20cabee11577d2ec72b3980486d"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H4_Calibration.mat",
+      "sha256": "6877c1777beb12f464a7fe76b35cd0e0985726beace6f8ed74e356fcca8196a2"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H5_Calibration.mat",
+      "sha256": "d7ca8f778ebda6641defdc7fbf3a9a04f7993b260fc42eac7a97d9debc02ec2c"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H6_Calibration.mat",
+      "sha256": "357628fcbbff3db55785c2feb07360b55659c54fb4e4b8909690bcf657d27f5f"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H7_Calibration.mat",
+      "sha256": "261c9214ec002be7dfb6433ab755da4dfde5685f81f1e1c54132e459def7e317"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/2_Hall_sensors_calibration/H8_Calibration.mat",
+      "sha256": "f9ae8820e73407b3f680f1ae982220ff3e122392e7e13644fdf9418493292068"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_0/T_25/M1_NMC_Unaged_R0_T25.xlsx",
+      "sha256": "4596d3fed65277b548176bca7dd3dfa9efcd0bd2167722effc87ac38975c24bc"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_0/T_25/M1_NMC_Unaged_R0_T25.mat",
+      "sha256": "fa9e2344a40bf796fbb5aadec0aaf61885472ac16798023604f9dc3e45650f84"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_3/T_25/M1_NMC_Unaged_R3_T25.xlsx",
+      "sha256": "8356496b3fd5c8519165f597959e103fd1247e1a9cf4db36deb14776c66568d1"
+    },
+    {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_3/T_25/M1_NMC_Unaged_R3_T25.mat",
+      "sha256": "85076072c6057d11e3ddb793b5ae47d8d0065d3148fbd208de968f65a4a6cb1b"
+    }
+  ],
+  "calibrations": {
+    "1": {
+      "slope_A_per_V": 47.50599351598237,
+      "intercept_A": -119.37020026512563,
+      "calibration_residual": {
+        "mean_A": 6.744242012423719e-14,
+        "rms_A": 0.0373922623412576,
+        "max_abs_A": 1.0581363030901372
+      }
+    },
+    "2": {
+      "slope_A_per_V": 48.76028125183801,
+      "intercept_A": -121.43155011580151,
+      "calibration_residual": {
+        "mean_A": 7.629319200126516e-14,
+        "rms_A": 0.054122900171017764,
+        "max_abs_A": 1.497703576938477
+      }
+    },
+    "3": {
+      "slope_A_per_V": 48.38816293972026,
+      "intercept_A": -120.51354346393661,
+      "calibration_residual": {
+        "mean_A": 6.664619683934159e-14,
+        "rms_A": 0.03167399853477568,
+        "max_abs_A": 0.09196138508970364
+      }
+    },
+    "4": {
+      "slope_A_per_V": 47.10324650317453,
+      "intercept_A": -118.18639904447059,
+      "calibration_residual": {
+        "mean_A": 7.720480996513114e-14,
+        "rms_A": 0.03172701113327766,
+        "max_abs_A": 0.09435730576005597
+      }
+    },
+    "5": {
+      "slope_A_per_V": 45.84748303407436,
+      "intercept_A": -114.4687929890578,
+      "calibration_residual": {
+        "mean_A": 9.21022630202069e-14,
+        "rms_A": 0.029126641122549413,
+        "max_abs_A": 0.08696470734112438
+      }
+    },
+    "6": {
+      "slope_A_per_V": 45.6391901960014,
+      "intercept_A": -114.45820468230262,
+      "calibration_residual": {
+        "mean_A": 4.912928457163827e-14,
+        "rms_A": 0.07508468834616153,
+        "max_abs_A": 2.440483083722526
+      }
+    },
+    "7": {
+      "slope_A_per_V": 47.77328565304563,
+      "intercept_A": -119.17115454792429,
+      "calibration_residual": {
+        "mean_A": 1.6570675900146227e-14,
+        "rms_A": 0.0307931102720875,
+        "max_abs_A": 0.3542745427654097
+      }
+    },
+    "8": {
+      "slope_A_per_V": 69.83549224838333,
+      "intercept_A": -175.43650074167343,
+      "calibration_residual": {
+        "mean_A": 1.6112559024633828e-13,
+        "rms_A": 0.25181670525540784,
+        "max_abs_A": 8.70667348568307
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+VOLT-FORGE: CODEX IMPLEMENTATION HANDOFF
+Prepared 24 October 2026
+
+HOW TO USE
+Open a dedicated local project folder in Codex. Attach this file and, when available:
+- TELIPORT_Recommended_Concept_Blueprint.docx
+- TELIPORT_Battery_Research_Memo.pdf
+- The original TELIPORT Case Study 2 PDF.
+Ask Codex to execute the FIRST ASSIGNMENT below. The later stages explain the intended direction, not extra scope for this first run.
+
+PROJECT CONTEXT
+We are three BITS Pilani students, two EEE and one Chemical Engineering student, preparing TELIPORT Case Study 2: a reusable digital platform for designing battery energy systems. Build a research prototype that configures a module, checks subsystem consistency, simulates coupled behaviour, searches for requirement violations, compares physically permitted repairs, and preserves traceable evidence.
+
+The initial object is one single-chemistry 1s4p LG M50T NMC research module. Stationary DC backup is a future application context. A four-cell parallel group remains at cell-level voltage; it is not a complete 12 V or 48 V backup battery.
+
+CURRENT STATE
+Research, a conceptual slide, and a scripted interface mockup exist. No application, fitted battery model, measured improvement, or runtime benchmark has been established by this research effort. Do not treat the slide or UI illustration as implemented behaviour.
+
+PRIMARY SOURCES
+1. Piombo et al. experimental dataset, version 2:
+   https://data.mendeley.com/datasets/zh58byr53c/2
+   DOI: 10.17632/zh58byr53c.2
+2. Dataset article:
+   https://doi.org/10.1016/j.dib.2024.110227
+3. Related module modelling reference:
+   https://pangea.stanford.edu/ERE/pdf/OnoriPDF/Journals/109.pdf
+   DOI: 10.1016/j.est.2025.116942
+
+Read the original records and relevant methods. Preserve attribution and verify the license for the downloaded files. The dataset record describes a ladder-configured parallel module, cell characterization, measured branch currents and surface temperatures. Research identified 54 factorial conditions and an 18-condition all-NMC subset; verify these against actual metadata rather than hard-coding the counts. Do not assume all time samples or experiments using the same cells are independent.
+
+FIRST ASSIGNMENT: ESTABLISH DATA READINESS
+Complete this assignment end to end. Its deliverable is an executable real-data inspection pipeline and a technical go/no-go report for model development. Do not implement the optimizer, full web application or autonomous redesign in this run.
+
+1. Inspect the workspace and any AGENTS.md. Reuse relevant existing code, preserve unrelated work, and inspect the available runtime. Do not assume access to ChatGPT Library or the previous conversation. Initialize a small project only if needed. Do not create a remote repository, publish or deploy without a separate request.
+
+2. Retrieve the dataset through its official download mechanism. Begin with the documentation and a small coherent set of raw module runs plus the matching cell-characterization files. Inventory other files without unnecessarily downloading a large collection. If direct access fails, report the exact blocked resource and the manual download needed. Continue with documentation and parser architecture, but do not invent a successful download or silently substitute synthetic validation data.
+
+3. Preserve raw bytes unchanged. Record source URL, DOI/version, access date, file size and SHA-256 hash. Keep downloaded data out of source control by default; provide reproducible retrieval instructions. Mark measured, derived and synthetic data separately. Synthetic fixtures are allowed only for software tests and must never appear as measured results.
+
+4. Build a file inventory and data dictionary from actual content. Identify timestamps, module voltage/current, branch currents, surface temperatures, ambient conditions, cell IDs, chemistry, ageing state and interconnect settings. State where a field is missing or ambiguous. Do not infer core temperature from surface measurements.
+
+5. Parse at least one all-NMC experiment and its relevant characterization records. Preserve source row references. Convert units explicitly; use positive discharge current internally and document sign conversion. Reconcile the physical module wiring with the article before assigning branch labels. Do not assume four independent series resistors describe the shared interconnections.
+
+6. Inspect timestamp monotonicity, gaps, duplicate rows, missing channels, signal ranges, sampling intervals and sum of branch currents versus module current. Report residuals and potential sensor offset/time-alignment effects. Derive tolerances from documented measurement accuracy or clearly mark them provisional. Do not manufacture a precision requirement.
+
+7. Produce plots of the original measured module voltage/current, the four branch currents, and the four surface temperatures. Show units, experiment identity and missing intervals. These are measured-data plots, not model predictions. Provide a simple CLI or notebook to reproduce them; an interactive data viewer is optional only after the underlying pipeline works.
+
+8. Map which characterization records can identify capacity, pseudo-OCV and resistance/polarization parameters for the selected cells. Record the temperature and protocol of identification. Research suggests characterization at 23 C and module tests at 10/25/40 C; verify before use. Do not assume broad temperature dependence is already identified.
+
+9. Investigate the reported metadata ambiguity in the data article: Table 5 row 32 appears to pair an UNAGED label with a Y1 aged-cell ID. Reconcile the selected runs with raw metadata. If the ambiguity does not affect the first subset, document and isolate it. Do not label the entire dataset invalid.
+
+10. Propose and freeze a manifest of calibration, development-validation and final assessment runs before model fitting. Split whole experiments, not random timestamps. Document reused cell identities and distinguish known-cell reconstruction from unseen-cell generalization. Avoid contaminating the final assessment set with tuning or design decisions.
+
+11. Write focused checks for actual risks: unit conversion, sign conventions, parser correctness on small inspected fixtures, timestamp handling, measured-channel mapping and split disjointness. Tests must establish independent expectations rather than duplicate the parser logic. Run them and report failures honestly.
+
+12. Produce DATA_READINESS.md with:
+    - What was downloaded and actually inspected.
+    - Which exact runs/cells can support the first model.
+    - Missing information and contradictory metadata.
+    - The proposed electrical topology and measurable thermal states.
+    - Parameters that can be identified versus assumed.
+    - Which prospective repair comparisons the data can support.
+    - A go/no-go decision for the next model task with evidence.
+    - Exact reproduction commands and the three most important questions for the human team.
+
+Work autonomously on routine reversible choices. Do not end after merely describing a plan. Finish the data pipeline, verification and report, or identify a concrete external blocker. This first task ends at the data-readiness deliverables so the next task can use real findings.
+
+SUGGESTED PROJECT STRUCTURE
+Adapt to existing conventions rather than creating empty scaffolding:
+- src/voltforge/data/        source adapters, schema and validation
+- data/raw/                 immutable downloaded inputs, ignored by git
+- data/processed/           versioned derived records, reproducible
+- configs/                  run selection and unit conventions
+- tests/                    meaningful correctness checks
+- reports/                  data audit, plots and evidence
+- README.md                 installation and exact commands
+
+Use a small Python scientific stack, such as NumPy, SciPy, pandas and a plotting library. Inspect compatibility and pin a working environment. Reuse PyBaMM selectively later if appropriate. Avoid a dependency-heavy microservice architecture. A working data command is the first product milestone.
+
+SUBSEQUENT WORKFLOW (FUTURE ASSIGNMENTS)
+
+STAGE B: MODEL AND VALIDATION
+Implement the actual electrical ladder network and an identifiable low-order cell model. Start with electrical behaviour, then add coupled thermal behaviour. Use one-RC equivalent circuits when characterization supports them. Track per-cell SOC and polarization states. Keep parameter sources and validity ranges explicit.
+
+Use a surface-equivalent thermal network unless the available evidence supports a core/surface model. Check heat accounting and avoid counting electrical losses twice. Mechanical scope begins with placement, clearances, conductor lengths, mass and volume. Represent sensing delay/bias and module-level current derating only as justified.
+
+Verify current conservation, physically sensible limits, analytical symmetric cases and numerical convergence. Fit on calibration records and assess untouched runs. Report per-channel error, bias and maximum error, not only a voltage fit. Set acceptance limits before fitting based on measurement uncertainty and the engineering decisions we intend to distinguish. If model uncertainty is as large as a claimed repair advantage, do not rank that repair as superior.
+
+Exit evidence: measured-versus-predicted plots, held-out errors, parameter provenance, documented limits and a conclusion about which comparisons are trustworthy. Passing software tests alone is not scientific validation.
+
+STAGE C: DETERMINISTIC FAILURE AND REPAIR WORKFLOW
+Define sourced requirements with IDs, limits, units and operating domains. Reject invalid configurations. Run corners and a reproducible scenario sample before using ML.
+
+Compare A0 (original), A1 (engineering heuristic) and A2 (a selected candidate from a finite repair catalogue). Re-evaluate every candidate on common scenarios. Candidate changes must map to real component/control choices. Begin near the measured interconnect/configuration domain. New geometry and new cooling arrangements require separate evidence.
+
+Record usable energy, unmet demand after derating, current imbalance, temperature peak/spread, limit violations, computation time, and sourced or explicitly assumed cost/mass. Do not let a zero-power design win merely because it stays cool. Preserve every violating scenario as a regression case. Include seeded unit/assumption conflicts to test the interface checker.
+
+Exit evidence: one reproducible end-to-end case from requirement violation to two compared alternatives, with uncertainty and trade-offs. If no honest violation exists within the chosen domain and sourced limits, report that and revisit the use case; do not invent a dramatic failure.
+
+STAGE D: TEST WHETHER AI EARNS ITS PLACE
+Measure the cost of simulation and the size of the search space. Compare enumeration or sampling against a small surrogate-guided search, such as a Gaussian process, only when justified. Do not adopt PPO solely because the team used it in Nebula.
+
+Fix identical search domains, budgets and assessment scenarios. Include surrogate fitting/setup cost in end-to-end timing. Use multiple seeds where the method is stochastic. Confirm suggested failures and repairs with the physics engine. Distinguish verification by the same model from independent experimental validation.
+
+Exit evidence: an honest comparison of violations found, verified design quality, simulator calls and total runtime. Retain a simpler method if it performs as well. An AI benefit remains a hypothesis until these comparisons support it.
+
+STAGE E: INTEGRATE THE INTERFACE
+Connect a lightweight UI to the verified runner. Useful screens are module configuration, baseline results, stress-case inspection, alternative comparison and evidence export. The UI reads actual result records. A replay must identify itself as a replay, and a scripted UI concept must identify itself as illustrative.
+
+Keep simulation independent of the UI. Save requirements, designs, scenarios, model/parameter versions, source hashes, seeds and results. Changed assumptions invalidate dependent results. Display measured, simulated-in-domain and extrapolated outputs distinctly. An LLM explanation, if added later, must reference structured evidence and cannot decide whether a design meets a limit.
+
+TEAM REVIEW LOOP
+Codex owns code changes, reproducible commands, automated checks and technical reports.
+EEE member 1 reviews topology, current sharing, sensing and controls.
+EEE member 2 reviews experiment orchestration, search comparisons and reproducibility.
+The Chemical Engineering member reviews heat balance, parameter meaning, thermal assumptions and engineering/business trade-offs.
+Assign these owners by actual strengths. All members must understand the central model and be able to explain one result independently.
+
+PRESENTATION RULE
+Update the competition slide using the strongest completed evidence available by the revised deadline. Keep unfinished capabilities in future tense. A credible raw-data analysis or validated model comparison can support feasibility even before the full app exists. Do not invent improvement percentages, certifications or deployment readiness.

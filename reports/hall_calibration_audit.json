@@ -1,0 +1,742 @@
+{
+  "1": {
+    "sensor": 1,
+    "timestamp": {
+      "rows": 2463,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.1004,
+      "end_s": 245.72969600000002,
+      "interval_min_s": 0.0006999999999948159,
+      "interval_median_s": 0.099899999999991,
+      "interval_max_s": 0.23339999999999606,
+      "interval_quantiles_s": [
+        0.09959999999999404,
+        0.09979999999998768,
+        0.1004000000000076,
+        0.10050000000001091
+      ],
+      "gap_threshold_s": 0.15000000000000002,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": [
+        {
+          "after_source_row": 151,
+          "before_source_row": 152,
+          "start_s": 15.0008,
+          "end_s": 15.1974,
+          "interval_s": 0.1966000000000001
+        },
+        {
+          "after_source_row": 352,
+          "before_source_row": 353,
+          "start_s": 35.0978,
+          "end_s": 35.331199999999995,
+          "interval_s": 0.23339999999999606
+        },
+        {
+          "after_source_row": 1156,
+          "before_source_row": 1157,
+          "start_s": 115.33879599999999,
+          "end_s": 115.515004,
+          "interval_s": 0.1762080000000168
+        },
+        {
+          "after_source_row": 1357,
+          "before_source_row": 1358,
+          "start_s": 135.415504,
+          "end_s": 135.611996,
+          "interval_s": 0.19649200000000633
+        },
+        {
+          "after_source_row": 2362,
+          "before_source_row": 2363,
+          "start_s": 235.652796,
+          "end_s": 235.828796,
+          "interval_s": 0.17600000000001614
+        }
+      ]
+    },
+    "channels": {
+      "Test_Times": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 0.1004,
+        "max": 245.72969600000002,
+        "mean": 123.01374627689809,
+        "rms": 142.0057888563008,
+        "max_abs": 245.72969600000002
+      },
+      "Step_Times": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 0.0999,
+        "max": 20.0012,
+        "mean": 9.741334997969956,
+        "rms": 11.30926265062655,
+        "max_abs": 20.0012
+      },
+      "Step_Index": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 13.0,
+        "mean": 6.878197320341047,
+        "rms": 7.743057084157793,
+        "max_abs": 13.0
+      },
+      "Cycle_Index": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "rms": 1.0,
+        "max_abs": 1.0
+      },
+      "CurrentA": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": -9.701703071594238,
+        "max": 9.701960563659668,
+        "mean": -0.00011660885239731622,
+        "rms": 5.405674131401358,
+        "max_abs": 9.701960563659668
+      },
+      "HallVoltage": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 2.3078250885009766,
+        "max": 2.7181620597839355,
+        "mean": 2.512737337365943,
+        "rms": 2.515312369007461,
+        "max_abs": 2.7181620597839355
+      },
+      "PowerSupplyVoltage": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 4.996446132659912,
+        "max": 4.999090671539307,
+        "mean": 4.997877697929098,
+        "rms": 4.997877721586559,
+        "max_abs": 4.999090671539307
+      },
+      "CellTempData": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 22.349037170410156,
+        "max": 22.50442123413086,
+        "mean": 22.421436973625937,
+        "rms": 22.421455383921725,
+        "max_abs": 22.50442123413086
+      },
+      "AmbientTempData": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 22.81316566467285,
+        "max": 22.99468994140625,
+        "mean": 22.91005874642104,
+        "rms": 22.910079754840147,
+        "max_abs": 22.99468994140625
+      }
+    },
+    "exploratory_linear_maps": {
+      "hall_V": {
+        "slope": 47.50599351598228,
+        "intercept": -119.37020026512548,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -0.23320894158632655,
+          "max": 1.0581363030900803,
+          "mean": 9.404666336085775e-15,
+          "rms": 0.03739226234125758,
+          "max_abs": 1.0581363030900803
+        }
+      },
+      "hall_over_supply": {
+        "slope": 237.464303827544,
+        "intercept": -119.38783957938055,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -0.23457056534000742,
+          "max": 1.0668459131456274,
+          "mean": 1.0053184431899298e-13,
+          "rms": 0.03616612703952808,
+          "max_abs": 1.0668459131456274
+        }
+      },
+      "hall_minus_half_supply_V": {
+        "slope": 47.51330407914919,
+        "intercept": -0.6557283841004425,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -0.23433255082821702,
+          "max": 1.0667980088180795,
+          "mean": -7.230197854237722e-17,
+          "rms": 0.03610904637019318,
+          "max_abs": 1.0667980088180795
+        }
+      }
+    },
+    "warning": "OLS reconstructions are derived diagnostics, not the authors' undocumented processing code or an instrument uncertainty budget."
+  },
+  "2": {
+    "sensor": 2,
+    "timestamp": {
+      "rows": 2463,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.1004,
+      "end_s": 245.730288,
+      "interval_min_s": 0.0007999999999981355,
+      "interval_median_s": 0.0998999999999981,
+      "interval_max_s": 0.23370000000000601,
+      "interval_quantiles_s": [
+        0.09950000000000614,
+        0.09979999999998768,
+        0.1004000000000076,
+        0.10050000000001091
+      ],
+      "gap_threshold_s": 0.15000000000000002,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": [
+        {
+          "after_source_row": 151,
+          "before_source_row": 152,
+          "start_s": 15.0012,
+          "end_s": 15.1982,
+          "interval_s": 0.19699999999999918
+        },
+        {
+          "after_source_row": 352,
+          "before_source_row": 353,
+          "start_s": 35.0986,
+          "end_s": 35.332300000000004,
+          "interval_s": 0.23370000000000601
+        },
+        {
+          "after_source_row": 1156,
+          "before_source_row": 1157,
+          "start_s": 115.33820399999999,
+          "end_s": 115.514204,
+          "interval_s": 0.17600000000001614
+        },
+        {
+          "after_source_row": 1357,
+          "before_source_row": 1358,
+          "start_s": 135.415004,
+          "end_s": 135.611612,
+          "interval_s": 0.19660799999999767
+        },
+        {
+          "after_source_row": 2362,
+          "before_source_row": 2363,
+          "start_s": 235.65339600000001,
+          "end_s": 235.82898799999998,
+          "interval_s": 0.17559199999996622
+        }
+      ]
+    },
+    "channels": {
+      "Test_Times": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 0.1004,
+        "max": 245.730288,
+        "mean": 123.01384864149412,
+        "rms": 142.00590532782695,
+        "max_abs": 245.730288
+      },
+      "Step_Times": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 0.0999,
+        "max": 20.0013,
+        "mean": 9.741337028014616,
+        "rms": 11.309266659000523,
+        "max_abs": 20.0013
+      },
+      "Step_Index": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 13.0,
+        "mean": 6.878197320341047,
+        "rms": 7.743057084157793,
+        "max_abs": 13.0
+      },
+      "Cycle_Index": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "rms": 1.0,
+        "max_abs": 1.0
+      },
+      "CurrentA": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": -9.701560974121094,
+        "max": 9.701922416687012,
+        "mean": -1.0364383785791432e-05,
+        "rms": 5.40573194928108,
+        "max_abs": 9.701922416687012
+      },
+      "HallVoltage": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 2.29023814201355,
+        "max": 2.691343280315399,
+        "mean": 2.4903781650529435,
+        "rms": 2.492844333823292,
+        "max_abs": 2.691343280315399
+      },
+      "PowerSupplyVoltage": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 4.996418058575682,
+        "max": 4.999081466052386,
+        "mean": 4.997614088718927,
+        "rms": 4.997614119223399,
+        "max_abs": 4.999081466052386
+      },
+      "CellTempData": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 22.816423416137695,
+        "max": 23.1756591796875,
+        "mean": 22.969197174880758,
+        "rms": 22.969346120320996,
+        "max_abs": 23.1756591796875
+      },
+      "AmbientTempData": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 22.75983238220215,
+        "max": 22.961259841918945,
+        "mean": 22.84424661705378,
+        "rms": 22.844268242500025,
+        "max_abs": 22.961259841918945
+      }
+    },
+    "exploratory_linear_maps": {
+      "hall_V": {
+        "slope": 48.76028125183793,
+        "intercept": -121.43155011580137,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -1.4977035769385623,
+          "max": 0.10624776410557502,
+          "mean": 2.3430889564935175e-14,
+          "rms": 0.05412290017101809,
+          "max_abs": 1.4977035769385623
+        }
+      },
+      "hall_over_supply": {
+        "slope": 243.59239330371818,
+        "intercept": -121.38547190531386,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -1.4962847784514395,
+          "max": 0.1045146613108443,
+          "mean": -2.650038802554722e-14,
+          "rms": 0.049545762092443185,
+          "max_abs": 1.4962847784514395
+        }
+      },
+      "hall_minus_half_supply_V": {
+        "slope": 48.73987126309536,
+        "intercept": 0.4108121279081463,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -1.4967748783533867,
+          "max": 0.10441892294683885,
+          "mean": -2.890276099836177e-16,
+          "rms": 0.04946723001801106,
+          "max_abs": 1.4967748783533867
+        }
+      }
+    },
+    "warning": "OLS reconstructions are derived diagnostics, not the authors' undocumented processing code or an instrument uncertainty budget."
+  },
+  "3": {
+    "sensor": 3,
+    "timestamp": {
+      "rows": 2463,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.1004,
+      "end_s": 245.730188,
+      "interval_min_s": 0.0006999999999948159,
+      "interval_median_s": 0.099899999999991,
+      "interval_max_s": 0.23339999999999606,
+      "interval_quantiles_s": [
+        0.09950000000000614,
+        0.09979999999998768,
+        0.1004000000000076,
+        0.10050000000001091
+      ],
+      "gap_threshold_s": 0.15000000000000002,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": [
+        {
+          "after_source_row": 151,
+          "before_source_row": 152,
+          "start_s": 15.0008,
+          "end_s": 15.197600000000001,
+          "interval_s": 0.19680000000000142
+        },
+        {
+          "after_source_row": 352,
+          "before_source_row": 353,
+          "start_s": 35.0982,
+          "end_s": 35.331599999999995,
+          "interval_s": 0.23339999999999606
+        },
+        {
+          "after_source_row": 1156,
+          "before_source_row": 1157,
+          "start_s": 115.337796,
+          "end_s": 115.513996,
+          "interval_s": 0.17620000000000857
+        },
+        {
+          "after_source_row": 1357,
+          "before_source_row": 1358,
+          "start_s": 135.414696,
+          "end_s": 135.611488,
+          "interval_s": 0.1967920000000163
+        },
+        {
+          "after_source_row": 2362,
+          "before_source_row": 2363,
+          "start_s": 235.653404,
+          "end_s": 235.829388,
+          "interval_s": 0.1759839999999997
+        }
+      ]
+    },
+    "channels": {
+      "Test_Times": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 0.1004,
+        "max": 245.730188,
+        "mean": 123.01353778481528,
+        "rms": 142.00562143818397,
+        "max_abs": 245.730188
+      },
+      "Step_Times": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 0.1003,
+        "max": 20.0011,
+        "mean": 9.741339545269996,
+        "rms": 11.309266522243826,
+        "max_abs": 20.0011
+      },
+      "Step_Index": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 13.0,
+        "mean": 6.878197320341047,
+        "rms": 7.743057084157793,
+        "max_abs": 13.0
+      },
+      "Cycle_Index": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "rms": 1.0,
+        "max_abs": 1.0
+      },
+      "CurrentA": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": -9.701335906982422,
+        "max": 9.701788902282715,
+        "mean": -3.057256056630316e-05,
+        "rms": 5.405752508296486,
+        "max_abs": 9.701788902282715
+      },
+      "HallVoltage": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 2.288672924041748,
+        "max": 2.692917585372925,
+        "mean": 2.4905577225881936,
+        "rms": 2.4930619527738793,
+        "max_abs": 2.692917585372925
+      },
+      "PowerSupplyVoltage": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 4.996397972106934,
+        "max": 4.9991230964660645,
+        "mean": 4.997796208456388,
+        "rms": 4.997796239232995,
+        "max_abs": 4.9991230964660645
+      },
+      "CellTempData": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 22.392988204956055,
+        "max": 22.648799896240234,
+        "mean": 22.524823217901737,
+        "rms": 22.524887754861407,
+        "max_abs": 22.648799896240234
+      },
+      "AmbientTempData": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 22.727148056030273,
+        "max": 22.914243698120117,
+        "mean": 22.822343311682307,
+        "rms": 22.822364716318678,
+        "max_abs": 22.914243698120117
+      }
+    },
+    "exploratory_linear_maps": {
+      "hall_V": {
+        "slope": 48.38816293972021,
+        "intercept": -120.5135434639365,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -0.08378824850800015,
+          "max": 0.09196138508967522,
+          "mean": 5.645684668625725e-14,
+          "rms": 0.03167399853477567,
+          "max_abs": 0.09196138508967522
+        }
+      },
+      "hall_over_supply": {
+        "slope": 241.6390941080268,
+        "intercept": -120.4165277485039,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -0.08252499019395998,
+          "max": 0.08989120703959941,
+          "mean": -4.4675049963381695e-14,
+          "rms": 0.02474844162695781,
+          "max_abs": 0.08989120703959941
+        }
+      },
+      "hall_minus_half_supply_V": {
+        "slope": 48.34854807538396,
+        "intercept": 0.4032147701280663,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -0.08230837060031204,
+          "max": 0.08953923610818926,
+          "mean": -7.272569337922159e-16,
+          "rms": 0.0246402611885547,
+          "max_abs": 0.08953923610818926
+        }
+      }
+    },
+    "warning": "OLS reconstructions are derived diagnostics, not the authors' undocumented processing code or an instrument uncertainty budget."
+  },
+  "4": {
+    "sensor": 4,
+    "timestamp": {
+      "rows": 2463,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.1004,
+      "end_s": 245.72950400000002,
+      "interval_min_s": 0.0006999999999948159,
+      "interval_median_s": 0.099899999999991,
+      "interval_max_s": 0.23319999999999652,
+      "interval_quantiles_s": [
+        0.09966099999999414,
+        0.09979999999998768,
+        0.1004000000000076,
+        0.10050000000001091
+      ],
+      "gap_threshold_s": 0.15000000000000002,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": [
+        {
+          "after_source_row": 151,
+          "before_source_row": 152,
+          "start_s": 15.0008,
+          "end_s": 15.197199999999999,
+          "interval_s": 0.1963999999999988
+        },
+        {
+          "after_source_row": 352,
+          "before_source_row": 353,
+          "start_s": 35.098,
+          "end_s": 35.331199999999995,
+          "interval_s": 0.23319999999999652
+        },
+        {
+          "after_source_row": 1156,
+          "before_source_row": 1157,
+          "start_s": 115.337796,
+          "end_s": 115.514204,
+          "interval_s": 0.17640800000000922
+        },
+        {
+          "after_source_row": 1357,
+          "before_source_row": 1358,
+          "start_s": 135.414704,
+          "end_s": 135.611196,
+          "interval_s": 0.19649200000000633
+        },
+        {
+          "after_source_row": 2362,
+          "before_source_row": 2363,
+          "start_s": 235.65239599999998,
+          "end_s": 235.828604,
+          "interval_s": 0.176208000000031
+        }
+      ]
+    },
+    "channels": {
+      "Test_Times": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 0.1004,
+        "max": 245.72950400000002,
+        "mean": 123.01339971416972,
+        "rms": 142.00547038804365,
+        "max_abs": 245.72950400000002
+      },
+      "Step_Times": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 0.0999,
+        "max": 20.0011,
+        "mean": 9.741330247665449,
+        "rms": 11.30926122387352,
+        "max_abs": 20.0011
+      },
+      "Step_Index": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 13.0,
+        "mean": 6.878197320341047,
+        "rms": 7.743057084157793,
+        "max_abs": 13.0
+      },
+      "Cycle_Index": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "rms": 1.0,
+        "max_abs": 1.0
+      },
+      "CurrentA": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": -9.70134162902832,
+        "max": 9.701838493347168,
+        "mean": -7.533562459260334e-06,
+        "rms": 5.405761984278435,
+        "max_abs": 9.701838493347168
+      },
+      "HallVoltage": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 2.302973747253418,
+        "max": 2.716468334197998,
+        "mean": 2.5090922661337793,
+        "rms": 2.5117154190628312,
+        "max_abs": 2.716468334197998
+      },
+      "PowerSupplyVoltage": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 4.996392250061035,
+        "max": 4.999108791351318,
+        "mean": 4.99773219899862,
+        "rms": 4.997732225601539,
+        "max_abs": 4.999108791351318
+      },
+      "CellTempData": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 22.593162536621094,
+        "max": 22.853609085083008,
+        "mean": 22.70301351239564,
+        "rms": 22.703051105816925,
+        "max_abs": 22.853609085083008
+      },
+      "AmbientTempData": {
+        "count": 2463,
+        "missing_or_nonfinite": 0,
+        "min": 22.791763305664062,
+        "max": 23.0010986328125,
+        "mean": 22.888605207304174,
+        "rms": 22.88864356366991,
+        "max_abs": 23.0010986328125
+      }
+    },
+    "exploratory_linear_maps": {
+      "hall_V": {
+        "slope": 47.103246503174546,
+        "intercept": -118.18639904447072,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -0.0886339229226536,
+          "max": 0.0943573057599707,
+          "mean": -1.5122472679067985e-14,
+          "rms": 0.03172701113327763,
+          "max_abs": 0.0943573057599707
+        }
+      },
+      "hall_over_supply": {
+        "slope": 235.47406777277703,
+        "intercept": -118.21880699891892,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -0.0823028564715571,
+          "max": 0.07316641145210667,
+          "mean": 8.814999526547146e-14,
+          "rms": 0.025140638760663237,
+          "max_abs": 0.0823028564715571
+        }
+      },
+      "hall_minus_half_supply_V": {
+        "slope": 47.11360306514127,
+        "intercept": -0.4817990892568317,
+        "residual_A": {
+          "count": 2463,
+          "missing_or_nonfinite": 0,
+          "min": -0.08233973862260158,
+          "max": 0.07322911980337432,
+          "mean": 1.0291762930670555e-15,
+          "rms": 0.025182106320045507,
+          "max_abs": 0.08233973862260158
+        }
+      }
+    },
+    "warning": "OLS reconstructions are derived diagnostics, not the authors' undocumented processing code or an instrument uncertainty budget."
+  }
+}

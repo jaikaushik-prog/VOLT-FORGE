@@ -1,0 +1,992 @@
+{
+  "plan_sha256": "4d0b94cbe692305496e1dc89239d4624a86b8ec85976e52659719cb9893e4beb",
+  "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1",
+  "protected_existing": {
+    "configs/splits.json": "1ddc8d84472595760e6ebee4f873bcc7fbe05d7bafc8a6ad2349845f45460731",
+    "configs/splits.lock.json": "f64ed335adca3ad411f192da1592ce31a572020d8945685e13319c9fb912172b",
+    "reports/actual_raw_columns.json": "fb4ca504ed7d50551e011c74e2d8e3f7638b6d9bca6cde85ce5d76d216dc8995",
+    "reports/audit_scope.json": "6da2e99fa1a42af8610f60811ec27e25dd3805550fe1af4c27e457d6393dd9bf",
+    "reports/characterization_audit.json": "0280dd00af856268ea0460205102ad9c70357c6458d7b26a00d32e3911976f8b",
+    "reports/file_inventory.json": "277b7847074891c64502f9c2908ddbb44e587e89cb61ae72fd6e83a47e7e6c37",
+    "reports/hall_calibration_audit.json": "1848337ece208250d58082ac9fb332264f739ce552c4d6bbf368f3998175a20a",
+    "reports/inventory_summary.json": "6f0bc484548f2fa19edfa306af52ed42ccd502b0f96b9469c7b398ae79ab85f3",
+    "reports/module_audit.json": "7e8d311e0eacb46d47d919e4980b149384f242abfa93b27a736fc6ed53466574",
+    "reports/provenance.json": "6d4a1fc946e994e7b165b5688a3c1bdf08500fef3527dcb3703bfaf8d43e808c",
+    "reports/run_inventory.json": "1ecbf96e5b1f782fe4f2345e356ff0b09f51a9d7a0ca0551099f8eabb79ee610"
+  },
+  "cells": {
+    "P7": {
+      "low_rate": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P7.mat",
+        "sha256": "3d82595cafc3574da9e85243e1d51d51cf883bdca32c220c6ad4b1f71fdb11e5"
+      },
+      "hppc_ms": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P7.mat",
+        "sha256": "3681767fe55eb5d9a22a11db4a43b4d0bd8979b259dc17a34ec93a763c9b62cc"
+      },
+      "cycles": {
+        "1": {
+          "source_first_row": 1,
+          "source_last_row": 9969,
+          "steps": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            22
+          ]
+        },
+        "2": {
+          "source_first_row": 9970,
+          "source_last_row": 17737,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "3": {
+          "source_first_row": 17738,
+          "source_last_row": 25505,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "4": {
+          "source_first_row": 25506,
+          "source_last_row": 33140,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "5": {
+          "source_first_row": 33141,
+          "source_last_row": 40775,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "6": {
+          "source_first_row": 40776,
+          "source_last_row": 48410,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "7": {
+          "source_first_row": 48411,
+          "source_last_row": 56034,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "8": {
+          "source_first_row": 56035,
+          "source_last_row": 63658,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "9": {
+          "source_first_row": 63659,
+          "source_last_row": 71309,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    "P4": {
+      "low_rate": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P4.mat",
+        "sha256": "9d10d05ee212ac0d31288e92e8ce7cfbca11bb404e1ebcb9d494d7b17bf35789"
+      },
+      "hppc_ms": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P4.mat",
+        "sha256": "b5011d58aa5433bd46e5fe450ba0897e6ee969b6e8e69e9ce3038055c4fec049"
+      },
+      "cycles": {
+        "1": {
+          "source_first_row": 1,
+          "source_last_row": 9969,
+          "steps": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            22
+          ]
+        },
+        "2": {
+          "source_first_row": 9970,
+          "source_last_row": 17737,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "3": {
+          "source_first_row": 17738,
+          "source_last_row": 25505,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "4": {
+          "source_first_row": 25506,
+          "source_last_row": 33140,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "5": {
+          "source_first_row": 33141,
+          "source_last_row": 40775,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "6": {
+          "source_first_row": 40776,
+          "source_last_row": 48410,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "7": {
+          "source_first_row": 48411,
+          "source_last_row": 56034,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "8": {
+          "source_first_row": 56035,
+          "source_last_row": 63658,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "9": {
+          "source_first_row": 63659,
+          "source_last_row": 71309,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    "P10": {
+      "low_rate": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P10.mat",
+        "sha256": "dc02b0d172e0f7f9f2c965965e6167df974a58e99af92fbea3cc83aa270b49a2"
+      },
+      "hppc_ms": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P10.mat",
+        "sha256": "2a3da695198de3cd82437b4f37ca566e84de57326357c57dcbae256c42671195"
+      },
+      "cycles": {
+        "1": {
+          "source_first_row": 1,
+          "source_last_row": 9969,
+          "steps": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            22
+          ]
+        },
+        "2": {
+          "source_first_row": 9970,
+          "source_last_row": 17737,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "3": {
+          "source_first_row": 17738,
+          "source_last_row": 25505,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "4": {
+          "source_first_row": 25506,
+          "source_last_row": 33140,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "5": {
+          "source_first_row": 33141,
+          "source_last_row": 40775,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "6": {
+          "source_first_row": 40776,
+          "source_last_row": 48410,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "7": {
+          "source_first_row": 48411,
+          "source_last_row": 56034,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "8": {
+          "source_first_row": 56035,
+          "source_last_row": 63658,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "9": {
+          "source_first_row": 63659,
+          "source_last_row": 71309,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    "P13": {
+      "low_rate": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P13.mat",
+        "sha256": "b1c0f85eb00b129ccc9c462641a5482704d8c350d9c43e820d57256dfef752ee"
+      },
+      "hppc_ms": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P13.mat",
+        "sha256": "6203a2a73a099d7c27f874f86c55a401e931cd60e2d08ad21c419a1ab21cea40"
+      },
+      "cycles": {
+        "1": {
+          "source_first_row": 1,
+          "source_last_row": 9969,
+          "steps": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            22
+          ]
+        },
+        "2": {
+          "source_first_row": 9970,
+          "source_last_row": 17737,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "3": {
+          "source_first_row": 17738,
+          "source_last_row": 25505,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "4": {
+          "source_first_row": 25506,
+          "source_last_row": 33140,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "5": {
+          "source_first_row": 33141,
+          "source_last_row": 40775,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "6": {
+          "source_first_row": 40776,
+          "source_last_row": 48410,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "7": {
+          "source_first_row": 48411,
+          "source_last_row": 56034,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "8": {
+          "source_first_row": 56035,
+          "source_last_row": 63658,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "9": {
+          "source_first_row": 63659,
+          "source_last_row": 71309,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    "P16": {
+      "low_rate": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P16.mat",
+        "sha256": "996d773edcbd7cec3d47b72c03053c6e94a5a8a33abf544b1c88520827c9de2f"
+      },
+      "hppc_ms": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P16.mat",
+        "sha256": "6e12fe6b013f85be9cf2325067249d201b1dd1b9eeee10b93fd83bdcf80bbe52"
+      },
+      "cycles": {
+        "1": {
+          "source_first_row": 1,
+          "source_last_row": 9969,
+          "steps": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            22
+          ]
+        },
+        "2": {
+          "source_first_row": 9970,
+          "source_last_row": 17737,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "3": {
+          "source_first_row": 17738,
+          "source_last_row": 25505,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "4": {
+          "source_first_row": 25506,
+          "source_last_row": 33140,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "5": {
+          "source_first_row": 33141,
+          "source_last_row": 40775,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "6": {
+          "source_first_row": 40776,
+          "source_last_row": 48410,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "7": {
+          "source_first_row": 48411,
+          "source_last_row": 56034,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "8": {
+          "source_first_row": 56035,
+          "source_last_row": 63658,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "9": {
+          "source_first_row": 63659,
+          "source_last_row": 71309,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    "P17": {
+      "low_rate": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P17.mat",
+        "sha256": "a44a1bb77ac52eeef19e69d73ca6ba26f629de6b310713b92030e27acb059166"
+      },
+      "hppc_ms": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P17.mat",
+        "sha256": "789b0beb01982f62fc8e5ae1360957991ed86bc66b71a479833889d15154d8e6"
+      },
+      "cycles": {
+        "1": {
+          "source_first_row": 1,
+          "source_last_row": 9969,
+          "steps": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            22
+          ]
+        },
+        "2": {
+          "source_first_row": 9970,
+          "source_last_row": 17737,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "3": {
+          "source_first_row": 17738,
+          "source_last_row": 25505,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "4": {
+          "source_first_row": 25506,
+          "source_last_row": 33140,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "5": {
+          "source_first_row": 33141,
+          "source_last_row": 40775,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "6": {
+          "source_first_row": 40776,
+          "source_last_row": 48410,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "7": {
+          "source_first_row": 48411,
+          "source_last_row": 56034,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "8": {
+          "source_first_row": 56035,
+          "source_last_row": 63658,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "9": {
+          "source_first_row": 63659,
+          "source_last_row": 71309,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    "P19": {
+      "low_rate": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/Pseudo_OCV/OCVDis_P19.mat",
+        "sha256": "f179c558ab05c4cf3540951572985a196a2e800d3b965faef74a04ba3e141844"
+      },
+      "hppc_ms": {
+        "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/1_Single_cell_characterisation/NMC_cells/HPPC_MS/HPPC_MultiSine_P19.mat",
+        "sha256": "8f7ea937386058236dfd5112a48ae6e93c4d2291417f3b53a62e5f3337ee9dc1"
+      },
+      "cycles": {
+        "1": {
+          "source_first_row": 1,
+          "source_last_row": 9969,
+          "steps": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            22
+          ]
+        },
+        "2": {
+          "source_first_row": 9970,
+          "source_last_row": 17737,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "3": {
+          "source_first_row": 17738,
+          "source_last_row": 25505,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            22
+          ]
+        },
+        "4": {
+          "source_first_row": 25506,
+          "source_last_row": 33140,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "5": {
+          "source_first_row": 33141,
+          "source_last_row": 40775,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "6": {
+          "source_first_row": 40776,
+          "source_last_row": 48410,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            22
+          ]
+        },
+        "7": {
+          "source_first_row": 48411,
+          "source_last_row": 56034,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "8": {
+          "source_first_row": 56035,
+          "source_last_row": 63658,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            20,
+            22
+          ]
+        },
+        "9": {
+          "source_first_row": 63659,
+          "source_last_row": 71309,
+          "steps": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            21,
+            22
+          ]
+        }
+      }
+    }
+  }
+}

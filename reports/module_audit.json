@@ -1,0 +1,1954 @@
+{
+  "M1_NMC_Unaged_R0_T25": {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "cells": [
+      "P7",
+      "P17",
+      "P19",
+      "P13"
+    ],
+    "metadata": {
+      "raw_headers": [
+        "Date_Time",
+        "Test_Time(s)",
+        "Step_Time(s)",
+        "Step_Index",
+        "Cycle_Index",
+        "Voltage(V)",
+        "Current(A)",
+        "Charge_Capacity(Ah)",
+        "Discharge_Capacity(Ah)",
+        "Charge_Energy(Wh)",
+        "Discharge_Energy(Wh)",
+        "Internal Resistance(Ohm)",
+        "dV/dt(V/s)",
+        "Aux_Voltage(V)_1",
+        "Aux_Voltage(V)_2",
+        "Aux_Voltage(V)_3",
+        "Aux_Voltage(V)_4",
+        "Aux_Voltage(V)_5",
+        "Aux_Temperature(¡æ)_1",
+        "Aux_Temperature(¡æ)_2",
+        "Aux_Temperature(¡æ)_3",
+        "Aux_Temperature(¡æ)_4",
+        "Aux_Temperature(¡æ)_5"
+      ],
+      "raw_test_name": "TEST_53_NMC_R0_T25_NEW_DOE2",
+      "global_info_start_datetime": "2022-12-21 07:57:58",
+      "temperature_headers": {
+        "1": "Aux_Temperature(¡æ)_1",
+        "2": "Aux_Temperature(¡æ)_2",
+        "3": "Aux_Temperature(¡æ)_3",
+        "4": "Aux_Temperature(¡æ)_4",
+        "5": "Aux_Temperature(¡æ)_5"
+      }
+    },
+    "timestamp": {
+      "rows": 33079,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 1.0001,
+      "end_s": 33074.324172,
+      "interval_min_s": 0.0007999999997991836,
+      "interval_median_s": 1.0,
+      "interval_max_s": 1.1754880000007688,
+      "interval_quantiles_s": [
+        0.9994999999998981,
+        0.9997000000003027,
+        1.000300000000152,
+        1.0005000000001019
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "wall_timestamp": {
+      "rows": 33079,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 33073.325,
+      "interval_min_s": 0.0009999999999763531,
+      "interval_median_s": 1.0,
+      "interval_max_s": 1.1750000000029104,
+      "interval_quantiles_s": [
+        0.9989999999997963,
+        1.0,
+        1.0,
+        1.0010000000002037
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "wall_minus_test_elapsed_s": {
+      "count": 33079,
+      "missing_or_nonfinite": 0,
+      "min": -0.0005199999941396527,
+      "max": 0.00159200000052806,
+      "mean": 0.0007963795765595795,
+      "rms": 0.000943981116306491,
+      "max_abs": 0.00159200000052806
+    },
+    "raw_duplicate_rows": 0,
+    "raw_missing_values": {
+      "Date_Time": 0,
+      "Test_Time(s)": 0,
+      "Step_Time(s)": 0,
+      "Step_Index": 0,
+      "Cycle_Index": 0,
+      "Voltage(V)": 0,
+      "Current(A)": 0,
+      "Charge_Capacity(Ah)": 0,
+      "Discharge_Capacity(Ah)": 0,
+      "Charge_Energy(Wh)": 0,
+      "Discharge_Energy(Wh)": 0,
+      "Internal Resistance(Ohm)": 33079,
+      "dV/dt(V/s)": 0,
+      "Aux_Voltage(V)_1": 0,
+      "Aux_Voltage(V)_2": 0,
+      "Aux_Voltage(V)_3": 0,
+      "Aux_Voltage(V)_4": 0,
+      "Aux_Voltage(V)_5": 0,
+      "Aux_Temperature(¡æ)_1": 0,
+      "Aux_Temperature(¡æ)_2": 0,
+      "Aux_Temperature(¡æ)_3": 0,
+      "Aux_Temperature(¡æ)_4": 0,
+      "Aux_Temperature(¡æ)_5": 0
+    },
+    "channels": {
+      "source_xlsx_row": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 2.0,
+        "max": 33080.0,
+        "mean": 16541.0,
+        "rms": 19099.468605173286,
+        "max_abs": 33080.0
+      },
+      "source_mat_row": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 33079.0,
+        "mean": 16540.0,
+        "rms": 19098.602566680107,
+        "max_abs": 33079.0
+      },
+      "time_s": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 1.0001,
+        "max": 33074.324172,
+        "mean": 16537.801568743307,
+        "rms": 19096.133430314458,
+        "max_abs": 33074.324172
+      },
+      "step_time_s": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 9667.1801,
+        "mean": 3091.9838199280507,
+        "rms": 3985.31106047773,
+        "max_abs": 9667.1801
+      },
+      "step_index": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 8.0,
+        "mean": 4.750234287614498,
+        "rms": 5.24953086397697,
+        "max_abs": 8.0
+      },
+      "cycle_index": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "rms": 1.0,
+        "max_abs": 1.0
+      },
+      "module_voltage_V": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 2.4998815059661865,
+        "max": 4.201004505157471,
+        "mean": 3.7472354536596506,
+        "rms": 3.767411994729046,
+        "max_abs": 4.201004505157471
+      },
+      "module_current_A": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": -6.5876145362854,
+        "max": 14.574256896972656,
+        "mean": -1.4118489267178915,
+        "rms": 7.6472561081389685,
+        "max_abs": 14.574256896972656
+      },
+      "hall_1_V": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 2.419869469709485,
+        "max": 2.53563161175251,
+        "mean": 2.503873970956849,
+        "rms": 2.504167616861085,
+        "max_abs": 2.53563161175251
+      },
+      "surface_1_C": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 24.707824214935304,
+        "max": 28.001115412139892,
+        "mean": 25.488257493783667,
+        "rms": 25.49279228168054,
+        "max_abs": 28.001115412139892
+      },
+      "hall_2_V": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 2.4293342814324843,
+        "max": 2.5403551535502413,
+        "mean": 2.5119893726910125,
+        "rms": 2.512280615824736,
+        "max_abs": 2.5403551535502413
+      },
+      "surface_2_C": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 24.65471474243817,
+        "max": 27.012725371696412,
+        "mean": 25.359104983452017,
+        "rms": 25.361198408647564,
+        "max_abs": 27.012725371696412
+      },
+      "hall_3_V": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 2.4220756959781675,
+        "max": 2.5292341709136963,
+        "mean": 2.500981649922262,
+        "rms": 2.501248780587901,
+        "max_abs": 2.5292341709136963
+      },
+      "surface_3_C": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 24.914004719431436,
+        "max": 28.73142590637207,
+        "mean": 25.818967305220152,
+        "rms": 25.82506825094163,
+        "max_abs": 28.73142590637207
+      },
+      "hall_4_V": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 2.4590290056221957,
+        "max": 2.532019463983396,
+        "mean": 2.5131691588303076,
+        "rms": 2.51328979210765,
+        "max_abs": 2.532019463983396
+      },
+      "surface_4_C": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 25.00684752026991,
+        "max": 28.2753434984443,
+        "mean": 25.82611186875546,
+        "rms": 25.830473732844517,
+        "max_abs": 28.2753434984443
+      },
+      "hall_supply_V": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 4.990727424621582,
+        "max": 4.993864489603043,
+        "mean": 4.992298839948813,
+        "rms": 4.992298879377094,
+        "max_abs": 4.993864489603043
+      },
+      "ambient_C": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 24.64821908789302,
+        "max": 27.76273111815881,
+        "mean": 25.44739729824921,
+        "rms": 25.448573976679313,
+        "max_abs": 27.76273111815881
+      },
+      "branch_1_A": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": -1.9119978478353659,
+        "max": 3.413051643337326,
+        "mean": -0.45047537585541075,
+        "rms": 1.8165320220798329,
+        "max_abs": 3.413051643337326
+      },
+      "branch_2_A": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": -1.748299170293322,
+        "max": 3.3568601201587853,
+        "mean": -0.43177224848075885,
+        "rms": 1.797205817746372,
+        "max_abs": 3.3568601201587853
+      },
+      "branch_3_A": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": -1.803805237027035,
+        "max": 3.359825365805577,
+        "mean": -0.4366000488274508,
+        "rms": 1.800656779452435,
+        "max_abs": 3.359825365805577
+      },
+      "branch_4_A": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": -1.7754984438380177,
+        "max": 3.3742298424068053,
+        "mean": -0.42991706612420666,
+        "rms": 1.7708330256576557,
+        "max_abs": 3.3742298424068053
+      },
+      "kcl_residual_A": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": -2.0883674273825505,
+        "max": 0.35615043699731075,
+        "mean": -0.3369158125699354,
+        "rms": 0.6924719211537329,
+        "max_abs": 2.0883674273825505
+      }
+    },
+    "raw_vs_author_processed": {
+      "time_s": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "step_time_s": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "step_index": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "cycle_index": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "module_voltage_V": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "module_current_A": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "surface_1_C": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "surface_2_C": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "surface_3_C": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "surface_4_C": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "ambient_C": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      }
+    },
+    "kcl": {
+      "definition": "sum(author branch discharge currents) - raw module discharge current [A]",
+      "overall": {
+        "count": 33079,
+        "missing_or_nonfinite": 0,
+        "min": -2.0883674273825505,
+        "max": 0.35615043699731075,
+        "mean": -0.3369158125699354,
+        "rms": 0.6924719211537329,
+        "max_abs": 2.0883674273825505
+      },
+      "by_step": {
+        "1": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.3815445522668739,
+          "max": 0.347734748588465,
+          "mean": -0.019394966116776925,
+          "rms": 0.09303903083222713,
+          "max_abs": 0.3815445522668739
+        },
+        "2": {
+          "count": 7748,
+          "missing_or_nonfinite": 0,
+          "min": -0.4994004123624052,
+          "max": 0.2855612761702133,
+          "mean": -0.1023362856950438,
+          "rms": 0.13740042002975386,
+          "max_abs": 0.4994004123624052
+        },
+        "3": {
+          "count": 1965,
+          "missing_or_nonfinite": 0,
+          "min": -0.47278195035445947,
+          "max": 0.3385168622868804,
+          "mean": -0.07611789566922626,
+          "rms": 0.12439984309450552,
+          "max_abs": 0.47278195035445947
+        },
+        "4": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.3892601207072204,
+          "max": 0.35615043699731075,
+          "mean": -0.013791126051109697,
+          "rms": 0.09296527544011864,
+          "max_abs": 0.3892601207072204
+        },
+        "5": {
+          "count": 5435,
+          "missing_or_nonfinite": 0,
+          "min": -2.0883674273825505,
+          "max": -1.2882715299487018,
+          "mean": -1.6832915320630526,
+          "rms": 1.6858798703845315,
+          "max_abs": 2.0883674273825505
+        },
+        "6": {
+          "count": 2701,
+          "missing_or_nonfinite": 0,
+          "min": -0.39801261289377976,
+          "max": 0.35285493829104553,
+          "mean": -0.013164748452644095,
+          "rms": 0.09260380246753204,
+          "max_abs": 0.39801261289377976
+        },
+        "7": {
+          "count": 9668,
+          "missing_or_nonfinite": 0,
+          "min": -0.4865613691059991,
+          "max": 0.28871029133902937,
+          "mean": -0.08880750919831377,
+          "rms": 0.1288562707395326,
+          "max_abs": 0.4865613691059991
+        },
+        "8": {
+          "count": 1960,
+          "missing_or_nonfinite": 0,
+          "min": -0.4108851757808907,
+          "max": 0.3255119468488914,
+          "mean": -0.05089711438200214,
+          "rms": 0.10860942707535103,
+          "max_abs": 0.4108851757808907
+        }
+      },
+      "sample_lag_sensitivity": {
+        "-2": {
+          "count": 33077,
+          "missing_or_nonfinite": 0,
+          "min": -14.572474215319545,
+          "max": 12.86895346552464,
+          "mean": -0.3368767837061995,
+          "rms": 0.7123439478845529,
+          "max_abs": 14.572474215319545
+        },
+        "-1": {
+          "count": 33078,
+          "missing_or_nonfinite": 0,
+          "min": -14.572486798720675,
+          "max": 12.868951170458729,
+          "mean": -0.3368962987280194,
+          "rms": 0.7024474615868713,
+          "max_abs": 14.572486798720675
+        },
+        "0": {
+          "count": 33079,
+          "missing_or_nonfinite": 0,
+          "min": -2.0883674273825505,
+          "max": 0.35615043699731075,
+          "mean": -0.3369158125699354,
+          "rms": 0.6924719211537329,
+          "max_abs": 2.0883674273825505
+        },
+        "1": {
+          "count": 33078,
+          "missing_or_nonfinite": 0,
+          "min": -14.556881812802828,
+          "max": 12.911771053957779,
+          "mean": -0.3369547460843983,
+          "rms": 0.7025321284620563,
+          "max_abs": 14.556881812802828
+        },
+        "2": {
+          "count": 33077,
+          "missing_or_nonfinite": 0,
+          "min": -14.560157107266363,
+          "max": 12.911771053957779,
+          "mean": -0.3369940840847562,
+          "rms": 0.7124277563662668,
+          "max_abs": 14.560157107266363
+        }
+      },
+      "acceptance_tolerance_A": null,
+      "tolerance_reason": "No end-to-end sensor uncertainty budget supplied; residuals are observations, not a precision acceptance test."
+    },
+    "steps": [
+      {
+        "step": 1,
+        "rows": 1801,
+        "start_s": 1.0001,
+        "end_s": 1800.0008,
+        "duration_s": 1799.0007,
+        "source_first_xlsx_row": 2,
+        "source_last_xlsx_row": 1802,
+        "current_A": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        },
+        "voltage_V": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": 3.468646764755249,
+          "max": 3.4700965881347656,
+          "mean": 3.469269580406854,
+          "rms": 3.469269590656223,
+          "max_abs": 3.4700965881347656
+        }
+      },
+      {
+        "step": 2,
+        "rows": 7748,
+        "start_s": 1801.0972239999999,
+        "end_s": 9547.580824,
+        "duration_s": 7746.4836000000005,
+        "source_first_xlsx_row": 1803,
+        "source_last_xlsx_row": 9550,
+        "current_A": {
+          "count": 7748,
+          "missing_or_nonfinite": 0,
+          "min": -6.468711853027344,
+          "max": -6.465671539306641,
+          "mean": -6.467372410310933,
+          "rms": 6.467372436355404,
+          "max_abs": 6.468711853027344
+        },
+        "voltage_V": {
+          "count": 7748,
+          "missing_or_nonfinite": 0,
+          "min": 3.5153608322143555,
+          "max": 4.199995994567871,
+          "mean": 3.8757769862400484,
+          "rms": 3.8802249241665865,
+          "max_abs": 4.199995994567871
+        }
+      },
+      {
+        "step": 3,
+        "rows": 1965,
+        "start_s": 9548.713835999999,
+        "end_s": 11512.407936,
+        "duration_s": 1963.6941000000006,
+        "source_first_xlsx_row": 9551,
+        "source_last_xlsx_row": 11515,
+        "current_A": {
+          "count": 1965,
+          "missing_or_nonfinite": 0,
+          "min": -6.587588787078857,
+          "max": -0.9999615550041199,
+          "mean": -3.3516452770803418,
+          "rms": 3.73057592541221,
+          "max_abs": 6.587588787078857
+        },
+        "voltage_V": {
+          "count": 1965,
+          "missing_or_nonfinite": 0,
+          "min": 4.199554443359375,
+          "max": 4.201004505157471,
+          "mean": 4.200330042899717,
+          "rms": 4.200330047326797,
+          "max_abs": 4.201004505157471
+        }
+      },
+      {
+        "step": 4,
+        "rows": 1801,
+        "start_s": 11513.484864,
+        "end_s": 13312.485964,
+        "duration_s": 1799.0010999999995,
+        "source_first_xlsx_row": 11516,
+        "source_last_xlsx_row": 13316,
+        "current_A": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        },
+        "voltage_V": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": 4.1694207191467285,
+          "max": 4.192935466766357,
+          "mean": 4.175289650482314,
+          "rms": 4.175292572419687,
+          "max_abs": 4.192935466766357
+        }
+      },
+      {
+        "step": 5,
+        "rows": 5435,
+        "start_s": 13313.581731999999,
+        "end_s": 18747.349732,
+        "duration_s": 5433.768,
+        "source_first_xlsx_row": 13317,
+        "source_last_xlsx_row": 18751,
+        "current_A": {
+          "count": 5435,
+          "missing_or_nonfinite": 0,
+          "min": 14.53436279296875,
+          "max": 14.574256896972656,
+          "mean": 14.554388214364003,
+          "rms": 14.554392099415358,
+          "max_abs": 14.574256896972656
+        },
+        "voltage_V": {
+          "count": 5435,
+          "missing_or_nonfinite": 0,
+          "min": 2.4998815059661865,
+          "max": 4.078577041625977,
+          "mean": 3.5344834741804725,
+          "rms": 3.5490205509248183,
+          "max_abs": 4.078577041625977
+        }
+      },
+      {
+        "step": 6,
+        "rows": 2701,
+        "start_s": 18748.52522,
+        "end_s": 21447.52592,
+        "duration_s": 2699.0007000000005,
+        "source_first_xlsx_row": 18752,
+        "source_last_xlsx_row": 21452,
+        "current_A": {
+          "count": 2701,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        },
+        "voltage_V": {
+          "count": 2701,
+          "missing_or_nonfinite": 0,
+          "min": 2.659945011138916,
+          "max": 2.9363207817077637,
+          "mean": 2.900327403207304,
+          "rms": 2.900530714003346,
+          "max_abs": 2.9363207817077637
+        }
+      },
+      {
+        "step": 7,
+        "rows": 9668,
+        "start_s": 21448.620608,
+        "end_s": 31114.800608,
+        "duration_s": 9666.18,
+        "source_first_xlsx_row": 21453,
+        "source_last_xlsx_row": 31120,
+        "current_A": {
+          "count": 9668,
+          "missing_or_nonfinite": 0,
+          "min": -6.468793869018555,
+          "max": -6.465311050415039,
+          "mean": -6.4675826659417615,
+          "rms": 6.4675826949509565,
+          "max_abs": 6.468793869018555
+        },
+        "voltage_V": {
+          "count": 9668,
+          "missing_or_nonfinite": 0,
+          "min": 2.999993085861206,
+          "max": 4.199995994567871,
+          "mean": 3.7885204041650287,
+          "rms": 3.796463582476666,
+          "max_abs": 4.199995994567871
+        }
+      },
+      {
+        "step": 8,
+        "rows": 1960,
+        "start_s": 31115.934272,
+        "end_s": 33074.324172,
+        "duration_s": 1958.389900000002,
+        "source_first_xlsx_row": 31121,
+        "source_last_xlsx_row": 33080,
+        "current_A": {
+          "count": 1960,
+          "missing_or_nonfinite": 0,
+          "min": -6.5876145362854,
+          "max": -0.9999259114265442,
+          "mean": -3.3581004964757937,
+          "rms": 3.7354134263308096,
+          "max_abs": 6.5876145362854
+        },
+        "voltage_V": {
+          "count": 1960,
+          "missing_or_nonfinite": 0,
+          "min": 4.199743747711182,
+          "max": 4.201004505157471,
+          "mean": 4.200339034382178,
+          "rms": 4.200339038940051,
+          "max_abs": 4.201004505157471
+        }
+      }
+    ],
+    "observed_step5_integrals_Ah": {
+      "module_current_A": 21.9681044330438,
+      "branch_1_A": 4.897609980367948,
+      "branch_2_A": 4.87834564158257,
+      "branch_3_A": 4.858864992213516,
+      "branch_4_A": 4.792549741335281
+    },
+    "raw_source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_0/T_25/M1_NMC_Unaged_R0_T25.xlsx",
+      "basename": "M1_NMC_Unaged_R0_T25.xlsx",
+      "bytes": 8224193,
+      "sha256": "4596d3fed65277b548176bca7dd3dfa9efcd0bd2167722effc87ac38975c24bc",
+      "crc32": "2dbf0378",
+      "data_origin": "measured_raw_export",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    },
+    "author_processed_source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_0/T_25/M1_NMC_Unaged_R0_T25.mat",
+      "basename": "M1_NMC_Unaged_R0_T25.mat",
+      "bytes": 2231608,
+      "sha256": "fa9e2344a40bf796fbb5aadec0aaf61885472ac16798023604f9dc3e45650f84",
+      "crc32": "977c4838",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "cell_identity_metadata_only; signals not audited except explicitly selected runs",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    },
+    "calibration_reconstruction_comparison": {
+      "1": {
+        "sensor": 1,
+        "models": {
+          "hall_V": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": 0.7554563449303799,
+              "max": 1.0698184057225149,
+              "mean": 0.8716550118680002,
+              "rms": 0.874346976733508,
+              "max_abs": 1.0698184057225149
+            }
+          },
+          "hall_over_supply": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": 0.6555005468784714,
+              "max": 0.9095194225200345,
+              "mean": 0.7387397699304674,
+              "rms": 0.7416499401373852,
+              "max_abs": 0.9095194225200345
+            }
+          },
+          "hall_minus_half_supply_V": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": 0.6570396339961295,
+              "max": 0.9045934525236907,
+              "mean": 0.739184820252145,
+              "rms": 0.7419220165031037,
+              "max_abs": 0.9045934525236907
+            }
+          }
+        }
+      },
+      "2": {
+        "sensor": 2,
+        "models": {
+          "hall_V": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": -0.7807450185006246,
+              "max": -0.29861121893324594,
+              "mean": -0.6219859497595721,
+              "rms": 0.6342705304539163,
+              "max_abs": 0.7807450185006246
+            }
+          },
+          "hall_over_supply": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": -0.872674851467707,
+              "max": -0.4593014883006816,
+              "mean": -0.7518378840827968,
+              "rms": 0.7617565211795179,
+              "max_abs": 0.872674851467707
+            }
+          },
+          "hall_minus_half_supply_V": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": -0.8711142776884264,
+              "max": -0.46383332300096747,
+              "mean": -0.7510771356483027,
+              "rms": 0.7606813252335868,
+              "max_abs": 0.8711142776884264
+            }
+          }
+        }
+      },
+      "3": {
+        "sensor": 3,
+        "models": {
+          "hall_V": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": -0.15799977334883408,
+              "max": 0.04771764809002832,
+              "mean": -0.06776407292477764,
+              "rms": 0.07734087936291975,
+              "max_abs": 0.15799977334883408
+            }
+          },
+          "hall_over_supply": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": -0.25256887900818015,
+              "max": -0.1178640509433535,
+              "mean": -0.20030714190048987,
+              "rms": 0.2020854751543578,
+              "max_abs": 0.25256887900818015
+            }
+          },
+          "hall_minus_half_supply_V": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": -0.25159255830927263,
+              "max": -0.12301332772215812,
+              "mean": -0.20024602324586285,
+              "rms": 0.2018205591778491,
+              "max_abs": 0.25159255830927263
+            }
+          }
+        }
+      },
+      "4": {
+        "sensor": 4,
+        "models": {
+          "hall_V": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": -1.0613032527949855,
+              "max": 0.7450133583941323,
+              "mean": 0.2378897180351219,
+              "rms": 0.6076287223640088,
+              "max_abs": 1.0613032527949855
+            }
+          },
+          "hall_over_supply": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": -1.1560179107486022,
+              "max": 0.5794982817989478,
+              "mean": 0.10891462358574579,
+              "rms": 0.5675540893581649,
+              "max_abs": 1.1560179107486022
+            }
+          },
+          "hall_minus_half_supply_V": {
+            "derived_minus_author_A": {
+              "count": 33079,
+              "missing_or_nonfinite": 0,
+              "min": -1.157513489458582,
+              "max": 0.5819367896446725,
+              "mean": 0.1098549346517309,
+              "rms": 0.5690387399928296,
+              "max_abs": 1.157513489458582
+            }
+          }
+        }
+      }
+    },
+    "sum_separate_cell_C20_integrals_Ah": 19.395106004743592,
+    "capacity_comparison_caveat": "Different rates, 23C cell characterization versus 25C module setpoint, and different charging protocols; discrepancy prompts investigation, not an automatic rescaling."
+  },
+  "M1_NMC_Unaged_R3_T25": {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "cells": [
+      "P17",
+      "P4",
+      "P10",
+      "P16"
+    ],
+    "metadata": {
+      "raw_headers": [
+        "Date_Time",
+        "Test_Time(s)",
+        "Step_Time(s)",
+        "Step_Index",
+        "Cycle_Index",
+        "Voltage(V)",
+        "Current(A)",
+        "Charge_Capacity(Ah)",
+        "Discharge_Capacity(Ah)",
+        "Charge_Energy(Wh)",
+        "Discharge_Energy(Wh)",
+        "Internal Resistance(Ohm)",
+        "dV/dt(V/s)",
+        "Aux_Voltage(V)_1",
+        "Aux_Voltage(V)_2",
+        "Aux_Voltage(V)_3",
+        "Aux_Voltage(V)_4",
+        "Aux_Voltage(V)_5",
+        "Aux_Temperature(¡æ)_1",
+        "Aux_Temperature(¡æ)_2",
+        "Aux_Temperature(¡æ)_3",
+        "Aux_Temperature(¡æ)_4",
+        "Aux_Temperature(¡æ)_5"
+      ],
+      "raw_test_name": "TEST_28_NMC_R3_T25_NEW_DOE2",
+      "global_info_start_datetime": "2023-01-18 17:21:04",
+      "temperature_headers": {
+        "1": "Aux_Temperature(¡æ)_1",
+        "2": "Aux_Temperature(¡æ)_2",
+        "3": "Aux_Temperature(¡æ)_3",
+        "4": "Aux_Temperature(¡æ)_4",
+        "5": "Aux_Temperature(¡æ)_5"
+      }
+    },
+    "timestamp": {
+      "rows": 41689,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 1.0003,
+      "end_s": 41684.929092000006,
+      "interval_min_s": 0.000800000001618173,
+      "interval_median_s": 1.0,
+      "interval_max_s": 1.1762999999991735,
+      "interval_quantiles_s": [
+        0.9994999999998981,
+        0.9996999999999616,
+        1.0003000000015163,
+        1.0005000000019209
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "wall_timestamp": {
+      "rows": 41689,
+      "nonfinite_timestamps": 0,
+      "backwards_intervals": 0,
+      "repeated_adjacent_timestamps": 0,
+      "duplicate_timestamps": 0,
+      "start_s": 0.0,
+      "end_s": 41683.927,
+      "interval_min_s": 0.0010000000002037268,
+      "interval_median_s": 1.0,
+      "interval_max_s": 1.1749999999992724,
+      "interval_quantiles_s": [
+        0.9989999999997963,
+        1.0,
+        1.0,
+        1.0010000000002037
+      ],
+      "gap_threshold_s": 1.5,
+      "gap_rule_status": "provisional screening rule, not instrument accuracy",
+      "gaps": []
+    },
+    "wall_minus_test_elapsed_s": {
+      "count": 41689,
+      "missing_or_nonfinite": 0,
+      "min": -0.0024919999996200204,
+      "max": 0.0011440000016591512,
+      "mean": -0.00019435150791327705,
+      "rms": 0.0008515196413245343,
+      "max_abs": 0.0024919999996200204
+    },
+    "raw_duplicate_rows": 0,
+    "raw_missing_values": {
+      "Date_Time": 0,
+      "Test_Time(s)": 0,
+      "Step_Time(s)": 0,
+      "Step_Index": 0,
+      "Cycle_Index": 0,
+      "Voltage(V)": 0,
+      "Current(A)": 0,
+      "Charge_Capacity(Ah)": 0,
+      "Discharge_Capacity(Ah)": 0,
+      "Charge_Energy(Wh)": 0,
+      "Discharge_Energy(Wh)": 0,
+      "Internal Resistance(Ohm)": 41689,
+      "dV/dt(V/s)": 0,
+      "Aux_Voltage(V)_1": 0,
+      "Aux_Voltage(V)_2": 0,
+      "Aux_Voltage(V)_3": 0,
+      "Aux_Voltage(V)_4": 0,
+      "Aux_Voltage(V)_5": 0,
+      "Aux_Temperature(¡æ)_1": 0,
+      "Aux_Temperature(¡æ)_2": 0,
+      "Aux_Temperature(¡æ)_3": 0,
+      "Aux_Temperature(¡æ)_4": 0,
+      "Aux_Temperature(¡æ)_5": 0
+    },
+    "channels": {
+      "source_xlsx_row": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 2.0,
+        "max": 41690.0,
+        "mean": 20846.0,
+        "rms": 24070.454420305407,
+        "max_abs": 41690.0
+      },
+      "source_mat_row": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 41689.0,
+        "mean": 20845.0,
+        "rms": 24069.588384515428,
+        "max_abs": 41689.0
+      },
+      "time_s": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 1.0003,
+        "max": 41684.929092000006,
+        "mean": 20843.550568063994,
+        "rms": 24067.654521154935,
+        "max_abs": 41684.929092000006
+      },
+      "step_time_s": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 14400.0003,
+        "mean": 4108.852170193576,
+        "rms": 5519.862500519952,
+        "max_abs": 14400.0003
+      },
+      "step_index": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 8.0,
+        "mean": 3.987022955695747,
+        "rms": 4.799511337035902,
+        "max_abs": 8.0
+      },
+      "cycle_index": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "rms": 1.0,
+        "max_abs": 1.0
+      },
+      "module_voltage_V": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 2.5000076293945312,
+        "max": 4.2011308670043945,
+        "mean": 3.828053093078929,
+        "rms": 3.8433088076446755,
+        "max_abs": 4.2011308670043945
+      },
+      "module_current_A": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": -6.519792556762695,
+        "max": 14.581855773925781,
+        "mean": -0.7685639717072815,
+        "rms": 5.860787114565088,
+        "max_abs": 14.581855773925781
+      },
+      "hall_1_V": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 2.363790988922119,
+        "max": 2.5592425410991875,
+        "mean": 2.499342819510468,
+        "rms": 2.499604986192594,
+        "max_abs": 2.5592425410991875
+      },
+      "surface_1_C": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 24.261587132647744,
+        "max": 28.68721099385787,
+        "mean": 25.327251084473406,
+        "rms": 25.343871617598122,
+        "max_abs": 28.68721099385787
+      },
+      "hall_2_V": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 2.4065259218215944,
+        "max": 2.5501357934302518,
+        "mean": 2.508121699125798,
+        "rms": 2.50836163608518,
+        "max_abs": 2.5501357934302518
+      },
+      "surface_2_C": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 24.361159305183254,
+        "max": 28.41007346683375,
+        "mean": 25.330635388227357,
+        "rms": 25.341147272965983,
+        "max_abs": 28.41007346683375
+      },
+      "hall_3_V": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 2.3880455493927,
+        "max": 2.527230021953106,
+        "mean": 2.4929379625675625,
+        "rms": 2.4931484732083815,
+        "max_abs": 2.527230021953106
+      },
+      "surface_3_C": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 24.46618611023901,
+        "max": 30.133059184137903,
+        "mean": 25.442961740477827,
+        "rms": 25.45596414984923,
+        "max_abs": 30.133059184137903
+      },
+      "hall_4_V": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 2.4271100155053,
+        "max": 2.5327308177948,
+        "mean": 2.507401586975409,
+        "rms": 2.5075038396056737,
+        "max_abs": 2.5327308177948
+      },
+      "surface_4_C": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 24.573143872954446,
+        "max": 30.238082896037753,
+        "mean": 25.498345258391343,
+        "rms": 25.508750122827735,
+        "max_abs": 30.238082896037753
+      },
+      "hall_supply_V": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 4.990655422210693,
+        "max": 4.993776321411133,
+        "mean": 4.992183083093419,
+        "rms": 4.992183122282243,
+        "max_abs": 4.993776321411133
+      },
+      "ambient_C": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 24.48488069600651,
+        "max": 28.94184661214382,
+        "mean": 25.404855133187194,
+        "rms": 25.407174263286425,
+        "max_abs": 28.94184661214382
+      },
+      "branch_1_A": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": -2.9616441619221945,
+        "max": 6.035618781939604,
+        "mean": -0.2512594097651718,
+        "rms": 1.6805004845865763,
+        "max_abs": 6.035618781939604
+      },
+      "branch_2_A": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": -2.1604742062272777,
+        "max": 4.440360298821915,
+        "mean": -0.2180048817480635,
+        "rms": 1.5973504027471408,
+        "max_abs": 4.440360298821915
+      },
+      "branch_3_A": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": -1.744994437093382,
+        "max": 4.933658324658509,
+        "mean": -0.08355693531237537,
+        "rms": 1.5506726592589755,
+        "max_abs": 4.933658324658509
+      },
+      "branch_4_A": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": -1.878863386426275,
+        "max": 5.564047911835871,
+        "mean": -0.07445783513820797,
+        "rms": 1.5817409681687924,
+        "max_abs": 5.564047911835871
+      },
+      "kcl_residual_A": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": -0.4884349060505855,
+        "max": 1.9570073712789338,
+        "mean": 0.1412849097434629,
+        "rms": 0.5041632323959686,
+        "max_abs": 1.9570073712789338
+      }
+    },
+    "raw_vs_author_processed": {
+      "time_s": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "step_time_s": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "step_index": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "cycle_index": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "module_voltage_V": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "module_current_A": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "surface_1_C": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "surface_2_C": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "surface_3_C": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "surface_4_C": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      },
+      "ambient_C": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "rms": 0.0,
+        "max_abs": 0.0
+      }
+    },
+    "kcl": {
+      "definition": "sum(author branch discharge currents) - raw module discharge current [A]",
+      "overall": {
+        "count": 41689,
+        "missing_or_nonfinite": 0,
+        "min": -0.4884349060505855,
+        "max": 1.9570073712789338,
+        "mean": 0.1412849097434629,
+        "rms": 0.5041632323959686,
+        "max_abs": 1.9570073712789338
+      },
+      "by_step": {
+        "1": {
+          "count": 14400,
+          "missing_or_nonfinite": 0,
+          "min": -0.3550941043871063,
+          "max": 0.42572329429204103,
+          "mean": 0.03126094578620047,
+          "rms": 0.09700841832549276,
+          "max_abs": 0.42572329429204103
+        },
+        "2": {
+          "count": 2178,
+          "missing_or_nonfinite": 0,
+          "min": -0.4436765806692904,
+          "max": 0.3040921354459982,
+          "mean": -0.07451370225507856,
+          "rms": 0.11998849242643095,
+          "max_abs": 0.4436765806692904
+        },
+        "3": {
+          "count": 3959,
+          "missing_or_nonfinite": 0,
+          "min": -0.45401504918585545,
+          "max": 0.3544674647390451,
+          "mean": -0.0473397407068776,
+          "rms": 0.1080691700592982,
+          "max_abs": 0.45401504918585545
+        },
+        "4": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.3514866609050813,
+          "max": 0.3846599994522393,
+          "mean": 0.019994178048947427,
+          "rms": 0.09695419644139261,
+          "max_abs": 0.3846599994522393
+        },
+        "5": {
+          "count": 4224,
+          "missing_or_nonfinite": 0,
+          "min": 1.131562853259112,
+          "max": 1.9570073712789338,
+          "mean": 1.5479236508577328,
+          "rms": 1.5510595030801098,
+          "max_abs": 1.9570073712789338
+        },
+        "6": {
+          "count": 2701,
+          "missing_or_nonfinite": 0,
+          "min": -0.37145172285585204,
+          "max": 0.4141613249015421,
+          "mean": 0.03174032068143849,
+          "rms": 0.10080345354576843,
+          "max_abs": 0.4141613249015421
+        },
+        "7": {
+          "count": 8356,
+          "missing_or_nonfinite": 0,
+          "min": -0.4884349060505855,
+          "max": 0.302744012818593,
+          "mean": -0.08382681296743154,
+          "rms": 0.12582580872569848,
+          "max_abs": 0.4884349060505855
+        },
+        "8": {
+          "count": 4070,
+          "missing_or_nonfinite": 0,
+          "min": -0.46107848243866556,
+          "max": 0.3631623760439169,
+          "mean": -0.04180218991397997,
+          "rms": 0.10482151808296276,
+          "max_abs": 0.46107848243866556
+        }
+      },
+      "sample_lag_sensitivity": {
+        "-2": {
+          "count": 41687,
+          "missing_or_nonfinite": 0,
+          "min": -14.5429697712175,
+          "max": 16.154862018732416,
+          "mean": 0.14134433950724254,
+          "rms": 0.5297768322218182,
+          "max_abs": 16.154862018732416
+        },
+        "-1": {
+          "count": 41688,
+          "missing_or_nonfinite": 0,
+          "min": -14.5429697712175,
+          "max": 16.141817136019895,
+          "mean": 0.1413168002023385,
+          "rms": 0.5171368065746849,
+          "max_abs": 16.141817136019895
+        },
+        "0": {
+          "count": 41689,
+          "missing_or_nonfinite": 0,
+          "min": -0.4884349060505855,
+          "max": 1.9570073712789338,
+          "mean": 0.1412849097434629,
+          "rms": 0.5041632323959686,
+          "max_abs": 1.9570073712789338
+        },
+        "1": {
+          "count": 41688,
+          "missing_or_nonfinite": 0,
+          "min": -14.521073211372794,
+          "max": 16.172875874542157,
+          "mean": 0.14126409767625359,
+          "rms": 0.5171664877276534,
+          "max_abs": 16.172875874542157
+        },
+        "2": {
+          "count": 41687,
+          "missing_or_nonfinite": 0,
+          "min": -14.510269988716544,
+          "max": 16.172875874542157,
+          "mean": 0.1412431752884247,
+          "rms": 0.5298774709094987,
+          "max_abs": 16.172875874542157
+        }
+      },
+      "acceptance_tolerance_A": null,
+      "tolerance_reason": "No end-to-end sensor uncertainty budget supplied; residuals are observations, not a precision acceptance test."
+    },
+    "steps": [
+      {
+        "step": 1,
+        "rows": 14400,
+        "start_s": 1.0003,
+        "end_s": 14400.0004,
+        "duration_s": 14399.000100000001,
+        "source_first_xlsx_row": 2,
+        "source_last_xlsx_row": 14401,
+        "current_A": {
+          "count": 14400,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        },
+        "voltage_V": {
+          "count": 14400,
+          "missing_or_nonfinite": 0,
+          "min": 3.803525447845459,
+          "max": 3.8298768997192383,
+          "mean": 3.827318901502424,
+          "rms": 3.8273216811154,
+          "max_abs": 3.8298768997192383
+        }
+      },
+      {
+        "step": 2,
+        "rows": 2178,
+        "start_s": 14401.096656000002,
+        "end_s": 16577.408756,
+        "duration_s": 2176.312099999999,
+        "source_first_xlsx_row": 14402,
+        "source_last_xlsx_row": 16579,
+        "current_A": {
+          "count": 2178,
+          "missing_or_nonfinite": 0,
+          "min": -6.468658447265625,
+          "max": -6.46575927734375,
+          "mean": -6.46736792887538,
+          "rms": 6.467367955068388,
+          "max_abs": 6.468658447265625
+        },
+        "voltage_V": {
+          "count": 2178,
+          "missing_or_nonfinite": 0,
+          "min": 3.9413979053497314,
+          "max": 4.200058937072754,
+          "mean": 4.086776726173632,
+          "rms": 4.087267547576724,
+          "max_abs": 4.200058937072754
+        }
+      },
+      {
+        "step": 3,
+        "rows": 3959,
+        "start_s": 16578.543068,
+        "end_s": 20535.583768,
+        "duration_s": 3957.0407000000014,
+        "source_first_xlsx_row": 16580,
+        "source_last_xlsx_row": 20538,
+        "current_A": {
+          "count": 3959,
+          "missing_or_nonfinite": 0,
+          "min": -6.519792556762695,
+          "max": -0.999946653842926,
+          "mean": -3.178778209795281,
+          "rms": 3.466483900749862,
+          "max_abs": 6.519792556762695
+        },
+        "voltage_V": {
+          "count": 3959,
+          "missing_or_nonfinite": 0,
+          "min": 4.199680805206299,
+          "max": 4.2011308670043945,
+          "mean": 4.200334591828202,
+          "rms": 4.200334596270494,
+          "max_abs": 4.2011308670043945
+        }
+      },
+      {
+        "step": 4,
+        "rows": 1801,
+        "start_s": 20536.660644,
+        "end_s": 22335.661244,
+        "duration_s": 1799.0005999999994,
+        "source_first_xlsx_row": 20539,
+        "source_last_xlsx_row": 22339,
+        "current_A": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        },
+        "voltage_V": {
+          "count": 1801,
+          "missing_or_nonfinite": 0,
+          "min": 4.160910129547119,
+          "max": 4.1820292472839355,
+          "mean": 4.165937782723926,
+          "rms": 4.165940094472667,
+          "max_abs": 4.1820292472839355
+        }
+      },
+      {
+        "step": 5,
+        "rows": 4224,
+        "start_s": 22336.756488,
+        "end_s": 26559.580188,
+        "duration_s": 4222.823700000001,
+        "source_first_xlsx_row": 22340,
+        "source_last_xlsx_row": 26563,
+        "current_A": {
+          "count": 4224,
+          "missing_or_nonfinite": 0,
+          "min": 14.540084838867188,
+          "max": 14.581855773925781,
+          "mean": 14.561025787483562,
+          "rms": 14.56103016368659,
+          "max_abs": 14.581855773925781
+        },
+        "voltage_V": {
+          "count": 4224,
+          "missing_or_nonfinite": 0,
+          "min": 2.5000076293945312,
+          "max": 3.8766539096832275,
+          "mean": 3.326639946324356,
+          "rms": 3.3408484859001546,
+          "max_abs": 3.8766539096832275
+        }
+      },
+      {
+        "step": 6,
+        "rows": 2701,
+        "start_s": 26560.756488,
+        "end_s": 29259.757088000002,
+        "duration_s": 2699.000600000003,
+        "source_first_xlsx_row": 26564,
+        "source_last_xlsx_row": 29264,
+        "current_A": {
+          "count": 2701,
+          "missing_or_nonfinite": 0,
+          "min": -0.0,
+          "max": -0.0,
+          "mean": 0.0,
+          "rms": 0.0,
+          "max_abs": 0.0
+        },
+        "voltage_V": {
+          "count": 2701,
+          "missing_or_nonfinite": 0,
+          "min": 2.8369035720825195,
+          "max": 3.0865495204925537,
+          "mean": 3.0637067956687876,
+          "rms": 3.063823615532713,
+          "max_abs": 3.0865495204925537
+        }
+      },
+      {
+        "step": 7,
+        "rows": 8356,
+        "start_s": 29260.852076,
+        "end_s": 37615.283876,
+        "duration_s": 8354.431800000002,
+        "source_first_xlsx_row": 29265,
+        "source_last_xlsx_row": 37620,
+        "current_A": {
+          "count": 8356,
+          "missing_or_nonfinite": 0,
+          "min": -6.468572616577148,
+          "max": -6.465435028076172,
+          "mean": -6.4673766261256445,
+          "rms": 6.467376651749219,
+          "max_abs": 6.468572616577148
+        },
+        "voltage_V": {
+          "count": 8356,
+          "missing_or_nonfinite": 0,
+          "min": 3.2168571949005127,
+          "max": 4.200121879577637,
+          "mean": 3.8318767632919957,
+          "rms": 3.837548806566794,
+          "max_abs": 4.200121879577637
+        }
+      },
+      {
+        "step": 8,
+        "rows": 4070,
+        "start_s": 37616.419792,
+        "end_s": 41684.929092000006,
+        "duration_s": 4068.509300000005,
+        "source_first_xlsx_row": 37621,
+        "source_last_xlsx_row": 41690,
+        "current_A": {
+          "count": 4070,
+          "missing_or_nonfinite": 0,
+          "min": -6.515438556671143,
+          "max": -0.9999879002571106,
+          "mean": -3.1533972907271375,
+          "rms": 3.441407822569988,
+          "max_abs": 6.515438556671143
+        },
+        "voltage_V": {
+          "count": 4070,
+          "missing_or_nonfinite": 0,
+          "min": 4.199680805206299,
+          "max": 4.2010674476623535,
+          "mean": 4.200337466326627,
+          "rms": 4.200337470644331,
+          "max_abs": 4.2010674476623535
+        }
+      }
+    ],
+    "observed_step5_integrals_Ah": {
+      "module_current_A": 17.08017924488195,
+      "branch_1_A": 4.8533082969620365,
+      "branch_2_A": 4.743605538558307,
+      "branch_3_A": 4.624645289411031,
+      "branch_4_A": 4.674329009622009
+    },
+    "raw_source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Raw_data/NMC_cells/Unaged/R_3/T_25/M1_NMC_Unaged_R3_T25.xlsx",
+      "basename": "M1_NMC_Unaged_R3_T25.xlsx",
+      "bytes": 9917136,
+      "sha256": "8356496b3fd5c8519165f597959e103fd1247e1a9cf4db36deb14776c66568d1",
+      "crc32": "ec3cacd0",
+      "data_origin": "measured_raw_export",
+      "content_inspection": "inventory_and_integrity_only",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    },
+    "author_processed_source": {
+      "member": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells imbalanced performance investigation/Parallel-connected module experimental campaign/3_Module_level_experiments/Processed_data/NMC_cells/Unaged/R_3/T_25/M1_NMC_Unaged_R3_T25.mat",
+      "basename": "M1_NMC_Unaged_R3_T25.mat",
+      "bytes": 2798720,
+      "sha256": "85076072c6057d11e3ddb793b5ae47d8d0065d3148fbd208de968f65a4a6cb1b",
+      "crc32": "9a8034e3",
+      "data_origin": "author_processed_measurements",
+      "content_inspection": "cell_identity_metadata_only; signals not audited except explicitly selected runs",
+      "source_url": "https://data.mendeley.com/datasets/zh58byr53c/2",
+      "doi": "10.17632/zh58byr53c.2",
+      "version": 2,
+      "access_date": "2026-10-24",
+      "archive_sha256": "1a2b578859bc83bf71a32f5ad0df8841001ec8cb5c2b2c810818cbe746c20fa1"
+    },
+    "calibration_reconstruction_comparison": {
+      "1": {
+        "sensor": 1,
+        "models": {
+          "hall_V": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": 0.7421113704422027,
+              "max": 1.1549890132233145,
+              "mean": 0.8876958970094877,
+              "rms": 0.8900800548499006,
+              "max_abs": 1.1549890132233145
+            }
+          },
+          "hall_over_supply": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": 0.6323917750724632,
+              "max": 0.9961036532072143,
+              "mean": 0.7522935955499713,
+              "rms": 0.7548466659778059,
+              "max_abs": 0.9961036532072143
+            }
+          },
+          "hall_minus_half_supply_V": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": 0.6349476583529539,
+              "max": 0.987883594381965,
+              "mean": 0.7525088353277061,
+              "rms": 0.7549073639462548,
+              "max_abs": 0.987883594381965
+            }
+          }
+        }
+      },
+      "2": {
+        "sensor": 2,
+        "models": {
+          "hall_V": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": -0.8228108370132645,
+              "max": -0.26476908113716036,
+              "mean": -0.6471644656621144,
+              "rms": 0.6569856776111062,
+              "max_abs": 0.8228108370132645
+            }
+          },
+          "hall_over_supply": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": -0.9327715963368206,
+              "max": -0.42636159654642825,
+              "mean": -0.7797269533733628,
+              "rms": 0.7876247151786433,
+              "max_abs": 0.9327715963368206
+            }
+          },
+          "hall_minus_half_supply_V": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": -0.9304125823419422,
+              "max": -0.4325289065078497,
+              "mean": -0.779155577839637,
+              "rms": 0.7867939023000836,
+              "max_abs": 0.9304125823419422
+            }
+          }
+        }
+      },
+      "3": {
+        "sensor": 3,
+        "models": {
+          "hall_V": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": -0.12304160019873223,
+              "max": 0.09463466027752077,
+              "mean": -0.03158793208448421,
+              "rms": 0.04768158157481319,
+              "max_abs": 0.12304160019873223
+            }
+          },
+          "hall_over_supply": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": -0.22163683967173142,
+              "max": -0.07145357449311973,
+              "mean": -0.16681635323986552,
+              "rms": 0.16863304107790714,
+              "max_abs": 0.22163683967173142
+            }
+          },
+          "hall_minus_half_supply_V": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": -0.22068904875040252,
+              "max": -0.07876329476281807,
+              "mean": -0.1671868699329287,
+              "rms": 0.16879871524378678,
+              "max_abs": 0.22068904875040252
+            }
+          }
+        }
+      },
+      "4": {
+        "sensor": 4,
+        "models": {
+          "hall_V": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": -1.742645575915219,
+              "max": 0.8045916636481678,
+              "mean": 0.1541018458551874,
+              "rms": 0.5371733249938451,
+              "max_abs": 1.742645575915219
+            }
+          },
+          "hall_over_supply": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": -1.8377569144264498,
+              "max": 0.6391749952437493,
+              "mean": 0.022753706466773785,
+              "rms": 0.5129137092308388,
+              "max_abs": 1.8377569144264498
+            }
+          },
+          "hall_minus_half_supply_V": {
+            "derived_minus_author_A": {
+              "count": 41689,
+              "missing_or_nonfinite": 0,
+              "min": -1.8406320360616917,
+              "max": 0.641673861847277,
+              "mean": 0.02339993341855483,
+              "rms": 0.5141976020040082,
+              "max_abs": 1.8406320360616917
+            }
+          }
+        }
+      }
+    },
+    "sum_separate_cell_C20_integrals_Ah": 19.41319178629712,
+    "capacity_comparison_caveat": "Different rates, 23C cell characterization versus 25C module setpoint, and different charging protocols; discrepancy prompts investigation, not an automatic rescaling."
+  }
+}

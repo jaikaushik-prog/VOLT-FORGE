@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voltforge"
+version = "0.1.0"
+description = "Traceable inspection of Piombo et al. parallel-cell measurements"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy==1.26.4", "scipy==1.13.1", "pandas==2.2.2", "matplotlib==3.9.2", "openpyxl==3.1.5"]
+
+[project.scripts]
+voltforge-data = "voltforge.data.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

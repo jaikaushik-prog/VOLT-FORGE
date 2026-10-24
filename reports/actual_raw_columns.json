@@ -1,0 +1,324 @@
+[
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Date_Time",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Test_Time(s)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Step_Time(s)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Step_Index",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Cycle_Index",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Voltage(V)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Current(A)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Charge_Capacity(Ah)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Discharge_Capacity(Ah)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Charge_Energy(Wh)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Discharge_Energy(Wh)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Internal Resistance(Ohm)",
+    "missing_rows": 33079,
+    "values": false
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "dV/dt(V/s)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Voltage(V)_1",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Voltage(V)_2",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Voltage(V)_3",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Voltage(V)_4",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Voltage(V)_5",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Temperature(¡æ)_1",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Temperature(¡æ)_2",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Temperature(¡æ)_3",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Temperature(¡æ)_4",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R0_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Temperature(¡æ)_5",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Date_Time",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Test_Time(s)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Step_Time(s)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Step_Index",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Cycle_Index",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Voltage(V)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Current(A)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Charge_Capacity(Ah)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Discharge_Capacity(Ah)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Charge_Energy(Wh)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Discharge_Energy(Wh)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Internal Resistance(Ohm)",
+    "missing_rows": 41689,
+    "values": false
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "dV/dt(V/s)",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Voltage(V)_1",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Voltage(V)_2",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Voltage(V)_3",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Voltage(V)_4",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Voltage(V)_5",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Temperature(¡æ)_1",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Temperature(¡æ)_2",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Temperature(¡æ)_3",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Temperature(¡æ)_4",
+    "missing_rows": 0,
+    "values": true
+  },
+  {
+    "run_id": "M1_NMC_Unaged_R3_T25",
+    "source_container": "raw Excel Data sheet",
+    "source_field": "Aux_Temperature(¡æ)_5",
+    "missing_rows": 0,
+    "values": true
+  }
+]
