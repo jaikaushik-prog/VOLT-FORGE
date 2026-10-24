@@ -1,0 +1,112 @@
+{
+  "schema_version": "voltforge.measurement_allocation/1",
+  "declared_at": "2026-10-24T22:01:08.414246+00:00",
+  "dataset_doi": "10.5281/zenodo.18405243",
+  "dataset_version": "v1",
+  "inventory": "reports/freetwinev_inventory_v1/inventory.json",
+  "inventory_sha256": "d31ae89f630fb866a7594788fc0682f067e1dcfb3b9259eebff03413dd23ec43",
+  "plan": "reports/measurement_viewer_v1/PLAN.md",
+  "plan_sha256": "4cb01556bf2db427e4298e5bfd50e9536506efb3a97d1aca6dc2ddc696a431f8",
+  "outcomes_opened_before_declaration": 0,
+  "purpose": "Read-only development viewer, no fitting or experimental model validation",
+  "records": [
+    {
+      "id": "ID01",
+      "csv": "AllData/ID01_20251126_150908248/FreeTwinEV_1s4p_ID_01.csv",
+      "sha256": "aa05b4f6445e6aecdd86db92bade11ef3d722450f53bfae75efc3ef0386bca55",
+      "access": "development",
+      "reason": "Complete lowest nominal discharge record; selected from metadata"
+    },
+    {
+      "id": "ID02",
+      "csv": "AllData/ID02_20251127_141017875/FreeTwinEV_1s4p_ID_02.csv",
+      "sha256": "03a9080d4b3b1e3c31357a78d640fae54535b2e8f27ad39afb94f6ae37e4cade",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID11",
+      "csv": "AllData/ID11_20251128_102057991/FreeTwinEV_1s4p_ID_11.csv",
+      "sha256": "50ab6d86ad3521867ccb4b475bc5a504a9228d53dcb89073de3ed519d4740e27",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID12",
+      "csv": "AllData/ID12_20251128_134031152/FreeTwinEV_1s4p_ID_12.csv",
+      "sha256": "9ce55a9ca416c9fb5b77f3cc7949eb0345f0ee2ab7a9d5bd6bd6145fd84ef19a",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID13",
+      "csv": "AllData/ID13_20251201_113728861/FreeTwinEV_1s4p_ID_13.csv",
+      "sha256": "4368b32ddf793f463f290b750a4bab7ef4ec5787207f0cb06cd4a460a43fd61a",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID14",
+      "csv": "AllData/ID14_20251201_163543484/FreeTwinEV_1s4p_ID_14.csv",
+      "sha256": "185b832694da7ac8236e61d5a48810b535df3ee7cb43289705c8c217a0b8c0ce",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID15",
+      "csv": "AllData/ID15_20251202_133030514/FreeTwinEV_1s4p_ID_15.csv",
+      "sha256": "600f161a0f53c0fa3b004e00b07c869afb9daf203e46cac1c8be419a595eb779",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID16",
+      "csv": "AllData/ID16_20251203_103357473/FreeTwinEV_1s4p_ID_16.csv",
+      "sha256": "7b9a489538ad24801707b35355fbb7c06c0e38734da78d83ea4dd10af71ea1f5",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID17",
+      "csv": "AllData/ID17_20251204_111640041/FreeTwinEV_1s4p_ID_17.csv",
+      "sha256": "eb1e7d6eff27bf371da9fb794f0ec147935ab4cde44daf95e9a321c6cdd09ac0",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID18",
+      "csv": "AllData/ID18_20251204_144331500/FreeTwinEV_1s4p_ID_18.csv",
+      "sha256": "0d9b42f9cffff669311ad5c835b1285e895b864790b50f7fac5bbdde95145fbf",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID19",
+      "csv": "AllData/ID19_20251205_120936377/FreeTwinEV_1s4p_ID_19.csv",
+      "sha256": "fc651fba8675183aaba6b4db5b33203b86df66ef5c03746e7a31598f0835a64b",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID20",
+      "csv": "AllData/ID20_20251205_160840427/FreeTwinEV_1s4p_ID_20.csv",
+      "sha256": "6aa7aa2b759f1b1b3afb54152be7872cb799f1f2c3876bdea62a81de66fdbbda",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID21",
+      "csv": "AllData/ID21_20251209_144434492/FreeTwinEV_1s4p_ID_21.csv",
+      "sha256": "b9050298e174e7cc7423d005bd7ed0411e9527a31c4b28da8c28914976ff7654",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    },
+    {
+      "id": "ID22",
+      "csv": "AllData/ID22_20251210_144332381/FreeTwinEV_1s4p_ID_22.csv",
+      "sha256": "9d580fa05d0d04bd68418832d6b62b237f1292cae6e80412b3351f787de801b5",
+      "access": "protected",
+      "reason": "Unopened candidate future assessment evidence"
+    }
+  ]
+}
