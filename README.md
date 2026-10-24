@@ -12,10 +12,24 @@ for the completed bounded investigation, which keeps v2 frozen;
 The product direction is a visual workspace for design, simulation and evidence.
 The implemented core is a versioned four-cell electrical project backend with
 immutable runs, variant comparison and reproducible export. Experimental module
-validation is pending. There is no optimizer, ranked repair result or web application.
+validation is pending. A local 2D web editor now connects to this backend.
+There is no optimizer or ranked repair result.
 
 Public project repository: https://github.com/jaikaushik-prog/VOLT-FORGE.
 Local upload preparation is described in [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md).
+
+## Open the 2D workspace
+
+```powershell
+& C:\Users\DELL\anaconda3\python.exe scripts\run_editor.py --open
+```
+
+Open **http://127.0.0.1:8765**. Select a cell or rail, preview an edit, save a
+variant, run it, inspect current/voltage and compare/export saved simulations.
+The editor keeps its working project in ignored `workspace/editor_project`;
+recorded demonstration runs stay untouched. See [EDITOR_GUIDE.md](EDITOR_GUIDE.md)
+for exact controls, limitations, local HTTP contract and verification commands.
+Thermal simulation and AI optimization remain unavailable.
 
 ## First product workflow and frontend handoff
 
@@ -36,12 +50,12 @@ The configured reference assets suffice; this workflow does not decode raw data.
 See [comparison and plot](reports/product_integration_v1/demo/comparison.json),
 [plot](reports/product_integration_v1/demo/comparison.png), and
 [actual API examples](reports/product_integration_v1/FRONTEND_EXAMPLES.md).
-The current suite passes **100 tests**. These are software checks; module accuracy,
+That product-handoff release passed **100 tests**. These are software checks; module accuracy,
 load-voltage acceptance, thermal behaviour and repair benefits remain unvalidated.
 
 ```powershell
-& C:\Users\DELL\anaconda3\python.exe -m pytest -q --junitxml=reports/product_integration_v1/pytest.xml
-& C:\Users\DELL\anaconda3\python.exe scripts\verify_product_integration.py
+& C:\Users\DELL\anaconda3\python.exe -m pytest -q --junitxml=tmp/product_tests.xml
+& C:\Users\DELL\anaconda3\python.exe scripts\verify_editor_release.py --out tmp/editor_verification.json
 ```
 
 ## Four-cell electrical simulation backend
@@ -82,7 +96,8 @@ The 55% result is a reduction in prediction RMSE on the declared subset,
 not an improvement in battery performance. A bounded investigation on P7/P13/P19
 confirmed sensitivity to reference shape and the difficulty of separating SOC
 alignment from reference bias. It did not replace the frozen v2 model. All nine
-remaining unused cells are preserved; the app and optimizer stay paused.
+remaining unused cells are preserved; the bounded electrical editor is now
+implemented, while the optimizer remains paused.
 The actual load-voltage requirement and measurement uncertainty must establish
 an acceptance budget before another fitting sprint. See the decision above and
 the [prepared faculty/lab brief](reports/reference_initial_state_v1/LAB_REQUEST.md).

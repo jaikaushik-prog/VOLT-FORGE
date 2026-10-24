@@ -8,7 +8,8 @@ mockup image assets are not bundled in this repository.
 
 The immediate workflow is now executable: **load A0 → inspect → validate/edit →
 create A1 revision → run → inspect current/voltage → compare → export/replay**.
-No frontend screens were built in this sprint.
+The local 2D editor now connects this workflow to a schematic, inspector, result
+plots, evidence view and explicit run comparison. See [EDITOR_GUIDE.md](EDITOR_GUIDE.md).
 
 ## Implemented
 
@@ -39,12 +40,17 @@ Capacity/reference changes are predeclared exploratory sensitivities, not new fi
 
 ## Next implementation milestone
 
-Build a small **2D four-cell workspace** on this contract: select one of the ten
-components, show its actual supported fields and evidence, preview an edit, create
-a variant, run the backend in a worker, and bind time-series plots/overlays to an
-explicit current run. Show outdated/failed/unsupported states and missing
-requirements. Allow export of the selected experiment. Test the complete workflow
-with a frontend teammate before considering a broader editor.
+The **2D four-cell workspace is implemented**: four selectable cells, six exact
+rail edges, module inspector, preview/apply, variants, asynchronous local runs,
+current/voltage plots, saved-sample inspection, evidence, comparison and download.
+Pure layout changes leave physics current. The browser shows inherited/outdated,
+failed/partial and unsupported states. Production dependencies are unchanged.
+
+Next, conduct a student/engineering usability review of this bounded workflow and
+add a guided measurement-import screen over the existing importer, with explicit
+sensor-location mapping and calibration completeness. Keep the current supported
+topology until another model and its evidence justify broadening the editor.
+Measured traces cannot be shown or validated until suitable observations arrive.
 
 This milestone does not require new measurements to demonstrate software. A usable
 engineering acceptance decision does: obtain actual load requirements, traceable

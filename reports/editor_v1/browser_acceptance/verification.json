@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "observations": [
+    "Four cell branches and six exact electrical edge IDs, no fabricated initial results",
+    "A0 full 360-second run completed through HTTP worker with real saved series",
+    "A1 inherited result explicitly outdated; preview converts 0.5 m\u03a9 to 0.0005 ohm and creates a revision",
+    "Keyboard layout movement retains revision and current result; sample scrubber displays 200 s saved data",
+    "Explicit A0/A1 comparison uses identical-condition backend check, unranked metrics and pending-validation notice",
+    "Negative resistance rejected without applying a revision",
+    "Browser-selected two-run package downloaded and both runs replayed in separate Python processes",
+    "390 px view has no document overflow; circuit scrolls horizontally; unknown requirement fields remain empty",
+    "Deliberately unsupported 1000 A software fixture stops at reference support and displays a failed run with partial samples"
+  ],
+  "browser_errors": [],
+  "expected_validation_network_errors": 1,
+  "replays": [
+    {
+      "run_id": "run_0001",
+      "reproduced": true,
+      "samples": 1441,
+      "solver_status": "completed",
+      "scope": "software reproduction only",
+      "experimental_validation": "awaiting suitable measurements"
+    },
+    {
+      "run_id": "run_0002",
+      "reproduced": true,
+      "samples": 1441,
+      "solver_status": "completed",
+      "scope": "software reproduction only",
+      "experimental_validation": "awaiting suitable measurements"
+    }
+  ],
+  "project": "C:\\Users\\DELL\\Desktop\\volt-forge\\tmp\\editor_browser_d1a5f3d77ac5\\project",
+  "run_ids": [
+    "run_0001",
+    "run_0002"
+  ],
+  "comparison": {
+    "kind": "simulation comparison",
+    "conditions": "identical operating conditions",
+    "condition_sha256": "a3b1586df9bba0e9b347ce4965b8b9f7cd3bbe9d3793c4a4e71ac13881ef81c3",
+    "ordered_results": [
+      {
+        "variant_id": "A0",
+        "run_id": "run_0001",
+        "snapshot_id": "f0d944364ca58e68cdd25f50226cdd3eb3b189e6b81544a1b2bf3a5a902f6424",
+        "freshness": "current",
+        "maximum_branch_current_A": 4.666863993693907,
+        "minimum_cell_voltage_V": 3.6332251643582363,
+        "minimum_terminal_voltage_V": 3.6332251643582363,
+        "mean_delivered_power_W": 53.68873711416432,
+        "delivered_net_Wh": 5.368873711416432,
+        "delivered_charge_Ah": 1.4549999999999608,
+        "cell_R0_loss_Wh": 0.1318143178985831,
+        "rail_loss_Wh": 0.03377777201462756,
+        "R1_loss_Wh": 0.0999664049669418,
+        "above_4_9A_cell_seconds": 0,
+        "requirement": "requirement not configured",
+        "decision": "insufficient evidence"
+      },
+      {
+        "variant_id": "A1",
+        "run_id": "run_0002",
+        "snapshot_id": "bbff083f45b06365462baf00f4f4107b0dd93c17b663bb431bbc979aa7c76ae7",
+        "freshness": "current",
+        "maximum_branch_current_A": 4.5269473627102315,
+        "minimum_cell_voltage_V": 3.63712057669394,
+        "minimum_terminal_voltage_V": 3.63712057669394,
+        "mean_delivered_power_W": 53.74432400331773,
+        "delivered_net_Wh": 5.374432400331773,
+        "delivered_charge_Ah": 1.4549999999999608,
+        "cell_R0_loss_Wh": 0.1316562854096264,
+        "rail_loss_Wh": 0.028613726967965155,
+        "R1_loss_Wh": 0.09979627097841863,
+        "above_4_9A_cell_seconds": 0,
+        "requirement": "requirement not configured",
+        "decision": "insufficient evidence"
+      }
+    ],
+    "deltas_vs_first": [
+      {
+        "run_id": "run_0002",
+        "maximum_branch_current_A": -0.13991663098367546,
+        "minimum_cell_voltage_V": 0.003895412335703785,
+        "minimum_terminal_voltage_V": 0.003895412335703785,
+        "mean_delivered_power_W": 0.05558688915341037,
+        "delivered_net_Wh": 0.005558688915340504,
+        "delivered_charge_Ah": 0.0,
+        "cell_R0_loss_Wh": -0.00015803248895671085,
+        "rail_loss_Wh": -0.005164045046662406,
+        "R1_loss_Wh": -0.00017013398852316897,
+        "above_4_9A_cell_seconds": 0
+      }
+    ],
+    "evidence": "Experimental validation awaiting suitable measurements; hypothetical changes, no repair ranking",
+    "historical_results": false
+  },
+  "package_sha256": "b7b58d51966a153bf7cf0ceab4ca2f388a83b31e52d85ccb0e0b1769cb59bdd8",
+  "experimental_validation": "awaiting suitable measurements"
+}

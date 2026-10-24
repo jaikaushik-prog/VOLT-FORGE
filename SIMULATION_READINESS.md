@@ -1,5 +1,20 @@
 # Four-cell simulation and product-handoff readiness
 
+## 2D editor release update
+
+The local 2D four-cell editor is now connected to the unchanged project contract.
+It provides exact electrical connections, component/operating-case inspection,
+validated revisions, named variants, background simulation, saved current/voltage
+plots and overlays, rail readouts, evidence, explicit comparison and reproducible
+ZIP export. See [EDITOR_GUIDE.md](EDITOR_GUIDE.md) and
+[editor verification](reports/editor_v1/VERIFICATION.md). This is software
+integration; it does not improve or establish experimental module accuracy.
+
+Frozen models, source solvers, raw data, unused cells, prior runs and provenance
+remain unchanged. UI code is outside the electrical source tree. Earlier wording
+below describes the recorded product-handoff release, whose exact readiness
+report is preserved in `reports/editor_v1/previous/SIMULATION_READINESS.md`.
+
 25 October 2026. **The electrical backend and the first product workflow work;
 100 tests pass.** The frontend can connect to a versioned Python/JSON interface
 for load, inspect, edit, branch, run, time series, comparison and export/replay.
@@ -17,7 +32,7 @@ runs return **insufficient evidence** for engineering acceptance.
 | Shared project state and explicit component/connection graph | Implemented: schema v1, stable IDs, pinned model references, units/provenance, requirements, variants, saved runs and optional display state. |
 | Invalidation and immutable run history | Implemented: new design revisions; captured scenario/model/software inputs; owner-variant checks; visual changes excluded; old runs retained. |
 | Frontend handoff and reproducible result export | Implemented: Python/JSON API and CLI, exact generated examples, A0/A1 demonstration, source/reference assets and independent-process replay. |
-| Visual editor and asynchronous/collaborative application infrastructure | Not built; next bounded product milestone. No general CAD framework was introduced. |
+| Visual editor and asynchronous local execution | Implemented in the subsequent 2D editor release: one local user, one worker, existing backend authority. Collaborative infrastructure and general CAD remain unavailable. |
 | Experimental module accuracy and requirement acceptance | Blocked by external calibration, preparation, module measurements and missing application requirements. |
 | Thermal solver, broad CAD, AI copilot and optimizer | Unavailable; future scope, not incomplete electrical outputs. |
 

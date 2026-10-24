@@ -1,5 +1,11 @@
 # Four-cell frontend contract — version 1
 
+The local 2D editor now implements this contract. Start with
+`python scripts/run_editor.py --open`; see [EDITOR_GUIDE.md](EDITOR_GUIDE.md) for
+controls and the thin loopback HTTP/job adapter. The underlying Python interface,
+schemas and electrical solver are unchanged. Original handoff document bytes are
+preserved in `reports/editor_v1/previous/FRONTEND_CONTRACT.md`.
+
 The frontend connects to `voltforge.project.Project` or the JSON-compatible
 `voltforge.project.dispatch(project_path, request)` function. This is a synchronous
 local Python interface, with a JSON CLI adapter. It calls the existing electrical

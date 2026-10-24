@@ -8,12 +8,13 @@ from zipfile import ZipFile, ZIP_DEFLATED
 
 ROOT=Path(__file__).resolve().parents[1]
 DEST=ROOT/'github-upload'/'volt-forge'
-FOLDERS=['src','scripts','tests','configs','reports']
+FOLDERS=['src','scripts','tests','configs','reports','web']
 ROOT_FILES=['.gitignore','.gitattributes','ATTRIBUTION.md','DATA_READINESS.md',
     'MODELLING_DECISION.md','MODEL_IMPROVEMENT_DECISION.md','MODEL_IMPROVEMENT_PLAN.md',
     'REFERENCE_INITIAL_STATE_PLAN.md','REFERENCE_INITIAL_STATE_DECISION.md','README.md',
     'SIMULATION_PLAN.md','SIMULATION_READINESS.md','MEASUREMENT_IMPORT_SPEC.md',
     'VOLT_FORGE_Product_Vision.md','PRODUCT_INTEGRATION_PLAN.md','FRONTEND_CONTRACT.md','MVP_SCOPE.md',
+    'EDITOR_PLAN.md','EDITOR_GUIDE.md',
     'VOLT_FORGE_Codex_Start_Here.txt','pyproject.toml','requirements.txt','GITHUB_UPLOAD.md']
 
 
