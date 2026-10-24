@@ -22,3 +22,5 @@ github-upload/
 # Regenerated v2 sample-level outputs; sealed models/summaries/plots are retained.
 reports/improvement_v2/**/*predictions.csv
 reports/improvement_v2/software_coupling/*.csv
+# Original FreeTwinEV download remains local; its inventory and hashes are versioned.
+/1s4p Battery Module Measurement/

@@ -1,0 +1,40 @@
+{
+  "archive_name": "1s4p Battery Module Measurement.zip",
+  "archive_md5": "dea7c0e8c7146f517d71979ac546249d",
+  "archive_sha256": "81a3fb83a4cc156c9df37c9d0f5926573b7fc8de227dc4c8e137358d185c1e37",
+  "published_Zenodo_v1_md5_matches": true,
+  "extracted_files_match_archive": 32,
+  "prior_release_artifact_counts": {
+    "reports/module_simulation_v1/release_verification.json": 145,
+    "reports/product_integration_v1/integration_verification.json": 17,
+    "reports/editor_v1/release_verification.json": 37
+  },
+  "protected_baseline_artifacts": 112,
+  "original_LG_archive_verified": true,
+  "unused_LG_cells": [
+    "P11",
+    "P12",
+    "P14",
+    "P15",
+    "P18",
+    "P20",
+    "P3",
+    "P6",
+    "P9"
+  ],
+  "outcome_rows_interpreted": 0,
+  "new_complete_records_retained": 14,
+  "tests": 5,
+  "failures": 0,
+  "experimental_module_validation": "awaiting suitable measurements",
+  "artifacts": {
+    "reports/freetwinev_inventory_v1/inventory.json": "d31ae89f630fb866a7594788fc0682f067e1dcfb3b9259eebff03413dd23ec43",
+    "reports/freetwinev_inventory_v1/ASSESSMENT.md": "399b539463070e10c9445b88a08a04bed07ada31c49514eb652d7424eeb704c4",
+    "reports/freetwinev_inventory_v1/pytest.xml": "94b56150a4c9f6b02e78326fd0957258945327e6dc4bb1e138566a4a7a7090b5",
+    "reports/freetwinev_inventory_v1/EDITOR_gitignore_previous.txt": "8088768846bcfdf72ae1252b7692ef4a0e43b20e8666c41c56ff98ff8394b809",
+    ".gitignore": "8079bb93048712345e9c65bde320d74c4417eb9d698e0d3e11bcfdc00ef5f28f",
+    "scripts/inventory_freetwinev.py": "0283b5f6835fac801970011a7e231379274c113115ba511708cc4f73823cf790",
+    "scripts/verify_freetwinev_intake.py": "bd75579e2ac0b05e4abafc5bc704bb32e4b79840309ce4627ff0fbbc12bf711b",
+    "tests/test_freetwinev_inventory.py": "74ee3042132e2809c0056c9df0bcc7e4caa579cc0ffaa1f0111321e7cb761bff"
+  }
+}

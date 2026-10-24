@@ -1,0 +1,24 @@
+# Original downloads and reproducible measured/derived data stay local.
+*.zip
+data/raw/
+data/processed/
+__pycache__/
+.pytest_cache/
+.venv/
+*.egg-info/
+tmp/
+workspace/
+
+# Local credentials and downloaded third-party briefing material.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+Case Study 2_IDV_Battery_Energy_System.pdf
+TELIPORT_*.docx
+TELIPORT_*.xlsx
+github-upload/
+# Regenerated v2 sample-level outputs; sealed models/summaries/plots are retained.
+reports/improvement_v2/**/*predictions.csv
+reports/improvement_v2/software_coupling/*.csv
