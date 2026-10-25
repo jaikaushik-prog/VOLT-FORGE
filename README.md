@@ -42,6 +42,14 @@ validation. See the [viewer decision](reports/measurement_viewer_v1/DECISION.md)
 [commands/API](reports/measurement_viewer_v1/USAGE.md) and
 [new public P45B evidence leads](reports/measurement_viewer_v1/PUBLIC_EVIDENCE.md).
 
+The complete About:Energy P45B release has also been verified. See the
+[P45B intake decision](reports/p45b_intake_v1/DECISION.md) and
+[prospective modelling plan](reports/p45b_intake_v1/MODELLING_PLAN.md).
+Its 51 CSV files include both experimental data and author simulations; every
+outcome remains unopened pending the declared modelling procedure. This intake
+adds source/schema checks and a synthetic-tested experimental adapter, not a
+P45B model or new module-validation result.
+
 ## First product workflow and frontend handoff
 
 Read [FRONTEND_CONTRACT.md](FRONTEND_CONTRACT.md) for the Python/JSON interface,

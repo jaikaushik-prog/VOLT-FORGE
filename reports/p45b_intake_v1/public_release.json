@@ -1,0 +1,46 @@
+{
+  "record_url": "https://zenodo.org/records/19052626",
+  "api_url": "https://zenodo.org/api/records/19052626",
+  "retrieved_at": "2026-10-25T06:16:59.002521+00:00",
+  "raw_metadata_local_path": "data/raw/ae_p45b_metadata/record_19052626.json",
+  "raw_metadata_sha256": "615475c61f3c5c7f67c1b49baaa67deb22e623dc8b2f66a4592e6b3f3162b2c3",
+  "record_id": 19052626,
+  "doi": "10.5281/zenodo.19052626",
+  "version": null,
+  "license": {
+    "id": "cc-by-4.0"
+  },
+  "access_right": "open",
+  "files": [
+    {
+      "key": "Molicel P45B ECM Validation Matrix.xlsx",
+      "size": 57044,
+      "checksum": "md5:3acb090dbe48829935f0db184b96328c"
+    },
+    {
+      "key": "molicel_p45b_data.zip",
+      "size": 12421433,
+      "checksum": "md5:0bd40f92dfabcea679900696cc2c0077"
+    },
+    {
+      "key": "Molicel_INR-21700-P45B_ECM-charge.csv",
+      "size": 101668,
+      "checksum": "md5:fe6583f5d019f26de3933b46824e5cf2"
+    },
+    {
+      "key": "Molicel_INR-21700-P45B_ECM.csv",
+      "size": 152462,
+      "checksum": "md5:2b670bf683b99e59124f4b2454f17a75"
+    },
+    {
+      "key": "Molicel P45B Data Release Data Format Documentation.pdf",
+      "size": 91444,
+      "checksum": "md5:addcc323b21e48e147b3833a2a0f7239"
+    },
+    {
+      "key": "readme_Molicel_P45B_dataset_AE.txt",
+      "size": 2668,
+      "checksum": "md5:fe0d319f7ec39825fca2006db8997654"
+    }
+  ]
+}

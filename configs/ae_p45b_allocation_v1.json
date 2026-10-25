@@ -1,0 +1,453 @@
+{
+  "schema_version": "voltforge.ae_p45b_allocation/1",
+  "status": "proposal_only_all_outcomes_protected",
+  "created_at": "2026-10-25T06:16:59.001565+00:00",
+  "basis": "filename, headers and documented protocols only",
+  "procedure_required_before_development_access": true,
+  "freeze_required_before_assessment_voltage": true,
+  "inventory_sha256": "8549d43773a720eadf923c4865a54e4e290fe749907281421680b68f78a78f25",
+  "plan_sha256": "51608ae08465aff48f88db5d55dccccbbd9758ca50770d2227c51cc847d8b60a",
+  "families": [
+    {
+      "family_id": "MOLICEL_P45B_010degC_10C_Dch",
+      "members": [
+        "MOLICEL_P45B_010degC_10C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "10C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_1C_Ch",
+      "members": [
+        "MOLICEL_P45B_010degC_1C_Ch-charge.csv",
+        "MOLICEL_P45B_010degC_1C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "1C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_1C_Dch",
+      "members": [
+        "MOLICEL_P45B_010degC_1C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "1C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_3C_Ch",
+      "members": [
+        "MOLICEL_P45B_010degC_3C_Ch-charge.csv",
+        "MOLICEL_P45B_010degC_3C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "3C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_3C_Dch",
+      "members": [
+        "MOLICEL_P45B_010degC_3C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "3C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_Co30_Ch",
+      "members": [
+        "MOLICEL_P45B_010degC_Co30_Ch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "Co30_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_Co30_Dch",
+      "members": [
+        "MOLICEL_P45B_010degC_Co30_Dch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "Co30_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_GITT_Ch",
+      "members": [
+        "MOLICEL_P45B_010degC_GITT_Ch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "GITT_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_GITT_Dch",
+      "members": [
+        "MOLICEL_P45B_010degC_GITT_Dch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "GITT_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_WLTP",
+      "members": [
+        "MOLICEL_P45B_010degC_WLTP.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "WLTP",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_10C_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_10C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "10C_Dch",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_1C_Ch",
+      "members": [
+        "MOLICEL_P45B_025degC_1C_Ch-charge.csv",
+        "MOLICEL_P45B_025degC_1C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "1C_Ch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_1C_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_1C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "1C_Dch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_3C_Ch",
+      "members": [
+        "MOLICEL_P45B_025degC_3C_Ch-charge.csv",
+        "MOLICEL_P45B_025degC_3C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "3C_Ch",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_3C_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_3C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "3C_Dch",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_Co30_Ch",
+      "members": [
+        "MOLICEL_P45B_025degC_Co30_Ch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "Co30_Ch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_Co30_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_Co30_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "Co30_Dch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_GITT_Ch",
+      "members": [
+        "MOLICEL_P45B_025degC_GITT_Ch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "GITT_Ch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_GITT_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_GITT_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "GITT_Dch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_WLTP",
+      "members": [
+        "MOLICEL_P45B_025degC_WLTP.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "WLTP",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_eVTOL",
+      "members": [
+        "MOLICEL_P45B_025degC_eVTOL.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "eVTOL",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_10C_Dch",
+      "members": [
+        "MOLICEL_P45B_040degC_10C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "10C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_1C_Ch",
+      "members": [
+        "MOLICEL_P45B_040degC_1C_Ch-charge.csv",
+        "MOLICEL_P45B_040degC_1C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "1C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_1C_Dch",
+      "members": [
+        "MOLICEL_P45B_040degC_1C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "1C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_3C_Ch",
+      "members": [
+        "MOLICEL_P45B_040degC_3C_Ch-charge.csv",
+        "MOLICEL_P45B_040degC_3C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "3C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_3C_Dch",
+      "members": [
+        "MOLICEL_P45B_040degC_3C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "3C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_Co30_Ch",
+      "members": [
+        "MOLICEL_P45B_040degC_Co30_Ch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "Co30_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_Co30_Dch",
+      "members": [
+        "MOLICEL_P45B_040degC_Co30_Dch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "Co30_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_GITT_Ch",
+      "members": [
+        "MOLICEL_P45B_040degC_GITT_Ch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "GITT_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_GITT_Dch",
+      "members": [
+        "MOLICEL_P45B_040degC_GITT_Dch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "GITT_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_WLTP",
+      "members": [
+        "MOLICEL_P45B_040degC_WLTP.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "WLTP",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_eVTOL",
+      "members": [
+        "MOLICEL_P45B_040degC_eVTOL.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "eVTOL",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_10C_Dch",
+      "members": [
+        "MOLICEL_P45B_060degC_10C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "10C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_1C_Ch",
+      "members": [
+        "MOLICEL_P45B_060degC_1C_Ch-charge.csv",
+        "MOLICEL_P45B_060degC_1C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "1C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_1C_Dch",
+      "members": [
+        "MOLICEL_P45B_060degC_1C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "1C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_3C_Ch",
+      "members": [
+        "MOLICEL_P45B_060degC_3C_Ch-charge.csv",
+        "MOLICEL_P45B_060degC_3C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "3C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_3C_Dch",
+      "members": [
+        "MOLICEL_P45B_060degC_3C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "3C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_Co30_Ch",
+      "members": [
+        "MOLICEL_P45B_060degC_Co30_Ch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "Co30_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_Co30_Dch",
+      "members": [
+        "MOLICEL_P45B_060degC_Co30_Dch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "Co30_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_GITT_Ch",
+      "members": [
+        "MOLICEL_P45B_060degC_GITT_Ch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "GITT_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_GITT_Dch",
+      "members": [
+        "MOLICEL_P45B_060degC_GITT_Dch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "GITT_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_WLTP",
+      "members": [
+        "MOLICEL_P45B_060degC_WLTP.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "WLTP",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_eVTOL",
+      "members": [
+        "MOLICEL_P45B_060degC_eVTOL.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "eVTOL",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    }
+  ],
+  "validation_workbook_access": "protected_unopened",
+  "numerical_parameter_tables_access": "unopened; headers only",
+  "real_outcome_rows_decoded": 0
+}

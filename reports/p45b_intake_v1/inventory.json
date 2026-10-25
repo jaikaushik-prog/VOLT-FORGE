@@ -1,0 +1,2274 @@
+{
+  "schema_version": "voltforge.ae_p45b_intake/1",
+  "doi": "10.5281/zenodo.19052626",
+  "version": "v1",
+  "source_url": "https://zenodo.org/records/19052626",
+  "source_location": "repository root; original user-supplied files",
+  "license": "CC BY 4.0; confirmed in public Zenodo API metadata",
+  "files": {
+    "molicel_p45b_data.zip": {
+      "bytes": 12421433,
+      "sha256": "9d5d07892493e74822f0952846a9071cac41ac22e3aced806c034eaa660ebc53",
+      "md5": "0bd40f92dfabcea679900696cc2c0077",
+      "role": "experimental and author-simulation archive",
+      "published_md5_matches": true
+    },
+    "Molicel P45B Data Release Data Format Documentation.pdf": {
+      "bytes": 91444,
+      "sha256": "1146673eb79699d2d3eb5b509ee100fc6f85fca82e08350fe61baccc51a0fbc1",
+      "md5": "addcc323b21e48e147b3833a2a0f7239",
+      "role": "format documentation; two pages inspected",
+      "published_md5_matches": true
+    },
+    "Molicel P45B ECM Validation Matrix.xlsx": {
+      "bytes": 57044,
+      "sha256": "8a80f2ce4726532b9ca6217f5f441625dbffd90ad5d10f46d09f543d89d36a81",
+      "md5": "3acb090dbe48829935f0db184b96328c",
+      "role": "protected author validation outcomes; binary hash only",
+      "published_md5_matches": true
+    },
+    "Molicel_INR-21700-P45B_ECM.csv": {
+      "bytes": 152462,
+      "sha256": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e",
+      "md5": "2b670bf683b99e59124f4b2454f17a75",
+      "role": "base fitted parameter table; header only",
+      "published_md5_matches": true,
+      "columns": [
+        "SOC",
+        "Q_Ah",
+        "T_degC",
+        "E_OCV_ch_V",
+        "E_OCV_dch_V",
+        "R_R0_Ohm",
+        "R_R1_Ohm",
+        "C_C1_F",
+        "R_R2_Ohm",
+        "C_C2_F",
+        "gamma",
+        "dUdT"
+      ],
+      "parameter_rows_decoded": 0
+    },
+    "Molicel_INR-21700-P45B_ECM-charge.csv": {
+      "bytes": 101668,
+      "sha256": "fce8333301b91fbc021761505788dba9046454dc4473202fbe7754703899571a",
+      "md5": "fe6583f5d019f26de3933b46824e5cf2",
+      "role": "charge-optimized fitted parameter table; header only",
+      "published_md5_matches": true,
+      "columns": [
+        "SOC",
+        "Q_Ah",
+        "T_degC",
+        "E_OCV_ch_V",
+        "E_OCV_dch_V",
+        "R_R0_Ohm",
+        "R_R1_Ohm",
+        "C_C1_F",
+        "R_R2_Ohm",
+        "C_C2_F",
+        "gamma",
+        "dUdT"
+      ],
+      "parameter_rows_decoded": 0
+    },
+    "readme_Molicel_P45B_dataset_AE.txt": {
+      "bytes": 2668,
+      "sha256": "6f5917c9d6fe366993364f0a225d00621c6ff6e9cf98ed2cc10620960d0547d4",
+      "md5": "fe0d319f7ec39825fca2006db8997654",
+      "role": "release documentation; inspected",
+      "published_md5_matches": true
+    }
+  },
+  "archive": {
+    "bytes": 12421433,
+    "sha256": "9d5d07892493e74822f0952846a9071cac41ac22e3aced806c034eaa660ebc53",
+    "md5": "0bd40f92dfabcea679900696cc2c0077"
+  },
+  "records": [
+    {
+      "name": "MOLICEL_P45B_010degC_10C_Dch.csv",
+      "family_id": "MOLICEL_P45B_010degC_10C_Dch",
+      "nominal_temperature_degC": 10,
+      "protocol": "10C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 22630,
+      "sha256": "6aa947cdb5eb296811c168fc78fa6157eb5a8e7f014c6dc0b9121a0b61373e77",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_1C_Ch-charge.csv",
+      "family_id": "MOLICEL_P45B_010degC_1C_Ch",
+      "nominal_temperature_degC": 10,
+      "protocol": "1C_Ch",
+      "author_parameter_variant": "charge_optimized",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 419175,
+      "sha256": "afd06b63d42174b8955d964b7c6a1d79298079d4220b66c853ff708c170ffcfc",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_1C_Ch.csv",
+      "family_id": "MOLICEL_P45B_010degC_1C_Ch",
+      "nominal_temperature_degC": 10,
+      "protocol": "1C_Ch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 418829,
+      "sha256": "fd20616e36f87e615e8f898a6c60ce8b06572ae840e2b3c4d88704dd0cd4e046",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_1C_Dch.csv",
+      "family_id": "MOLICEL_P45B_010degC_1C_Dch",
+      "nominal_temperature_degC": 10,
+      "protocol": "1C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 457673,
+      "sha256": "3ee25db7dc77500114692845be800c26bf8bea960724c978227f424a1d585fc5",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_3C_Ch-charge.csv",
+      "family_id": "MOLICEL_P45B_010degC_3C_Ch",
+      "nominal_temperature_degC": 10,
+      "protocol": "3C_Ch",
+      "author_parameter_variant": "charge_optimized",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 112633,
+      "sha256": "6552fc9386c2d0d4e13b9d5e2f2cfa14c63845f34a5f5974efae254cae526046",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_3C_Ch.csv",
+      "family_id": "MOLICEL_P45B_010degC_3C_Ch",
+      "nominal_temperature_degC": 10,
+      "protocol": "3C_Ch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 112627,
+      "sha256": "cf53b13719946b4fcbd778cb6af29ab226377d351827d2f85d05ad0b0745ab63",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_3C_Dch.csv",
+      "family_id": "MOLICEL_P45B_010degC_3C_Dch",
+      "nominal_temperature_degC": 10,
+      "protocol": "3C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 148782,
+      "sha256": "8d4df71b0be70c2aa97aec0b41f63732a1406fd60782cb11358f4152c6bf84a2",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_Co30_Ch.csv",
+      "family_id": "MOLICEL_P45B_010degC_Co30_Ch",
+      "nominal_temperature_degC": 10,
+      "protocol": "Co30_Ch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 124815,
+      "sha256": "91ecc207365fa3067e043f56095871570a9d26d8d33e23476e42957f06fc4865",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_Co30_Dch.csv",
+      "family_id": "MOLICEL_P45B_010degC_Co30_Dch",
+      "nominal_temperature_degC": 10,
+      "protocol": "Co30_Dch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 138131,
+      "sha256": "206110b125f48e5dd3e8e63a68e5d332e4e35670f1f76a76f736773d32203c13",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_GITT_Ch.csv",
+      "family_id": "MOLICEL_P45B_010degC_GITT_Ch",
+      "nominal_temperature_degC": 10,
+      "protocol": "GITT_Ch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3683369,
+      "sha256": "2379d6be11816cbf44d451cb99832a8d7bf9ca61176292f0d5dc5ec6103fd34a",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_GITT_Dch.csv",
+      "family_id": "MOLICEL_P45B_010degC_GITT_Dch",
+      "nominal_temperature_degC": 10,
+      "protocol": "GITT_Dch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3345944,
+      "sha256": "007bcf07c021b3a8af5e52c4783277ea57d2dc549dfedc8b94a7b64d30e234db",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_010degC_WLTP.csv",
+      "family_id": "MOLICEL_P45B_010degC_WLTP",
+      "nominal_temperature_degC": 10,
+      "protocol": "WLTP",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3246264,
+      "sha256": "3026d45b3c59e0001bc7c417d23a4ffeb8641e5f6486625cfe015cd036c8c9b5",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_10C_Dch.csv",
+      "family_id": "MOLICEL_P45B_025degC_10C_Dch",
+      "nominal_temperature_degC": 25,
+      "protocol": "10C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 38760,
+      "sha256": "48b9f020aea556ab0b849e3d49ba528cd012f39f58bd2c62629a270f30646962",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_1C_Ch-charge.csv",
+      "family_id": "MOLICEL_P45B_025degC_1C_Ch",
+      "nominal_temperature_degC": 25,
+      "protocol": "1C_Ch",
+      "author_parameter_variant": "charge_optimized",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 458983,
+      "sha256": "a452eeceafb293c4a21a84f3163fdf72e02ccab588129d01704c6f41a91fbc53",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_1C_Ch.csv",
+      "family_id": "MOLICEL_P45B_025degC_1C_Ch",
+      "nominal_temperature_degC": 25,
+      "protocol": "1C_Ch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 458521,
+      "sha256": "d5a47b149b92fa0121fdf4feffe6f3ea9f549fca39926067d8624805b3b01db7",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_1C_Dch.csv",
+      "family_id": "MOLICEL_P45B_025degC_1C_Dch",
+      "nominal_temperature_degC": 25,
+      "protocol": "1C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 481045,
+      "sha256": "41cef2d81d1a7c9fc139547d7a0a8d0961e0789f07aedac10a8a0009c21eaf5a",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_3C_Ch-charge.csv",
+      "family_id": "MOLICEL_P45B_025degC_3C_Ch",
+      "nominal_temperature_degC": 25,
+      "protocol": "3C_Ch",
+      "author_parameter_variant": "charge_optimized",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 119952,
+      "sha256": "cd218154696859e48adf79b2abefd73e23050d39794b77fb82598d17090694dc",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_3C_Ch.csv",
+      "family_id": "MOLICEL_P45B_025degC_3C_Ch",
+      "nominal_temperature_degC": 25,
+      "protocol": "3C_Ch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 119987,
+      "sha256": "2628f30e4946df3e0e5b372315eb039bd2881866b81ed4fa72670419ff01f918",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_3C_Dch.csv",
+      "family_id": "MOLICEL_P45B_025degC_3C_Dch",
+      "nominal_temperature_degC": 25,
+      "protocol": "3C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 154680,
+      "sha256": "313911886f59e1214ded70c36f5635ebd3a8a4d34920bced9d20ac914b5f5086",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_Co30_Ch.csv",
+      "family_id": "MOLICEL_P45B_025degC_Co30_Ch",
+      "nominal_temperature_degC": 25,
+      "protocol": "Co30_Ch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 127725,
+      "sha256": "37a999c177050d554e7e1dc8c514804cc97c3080d62414a1983ba7dc88f988e5",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_Co30_Dch.csv",
+      "family_id": "MOLICEL_P45B_025degC_Co30_Dch",
+      "nominal_temperature_degC": 25,
+      "protocol": "Co30_Dch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 139378,
+      "sha256": "51209af2bdce924358ae96e968a639ecdba727f593e20d95560b23575da23584",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_GITT_Ch.csv",
+      "family_id": "MOLICEL_P45B_025degC_GITT_Ch",
+      "nominal_temperature_degC": 25,
+      "protocol": "GITT_Ch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3755984,
+      "sha256": "1da2c6d8fd38d760bf5c388c45cfaf96c0dd15ee3809377cbcbd5b3f3e6de6b2",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_GITT_Dch.csv",
+      "family_id": "MOLICEL_P45B_025degC_GITT_Dch",
+      "nominal_temperature_degC": 25,
+      "protocol": "GITT_Dch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3516570,
+      "sha256": "23dc2ab8c7e27e3901009be8bf25e4cdac84857f22bff0ba181a168fe30161ed",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_WLTP.csv",
+      "family_id": "MOLICEL_P45B_025degC_WLTP",
+      "nominal_temperature_degC": 25,
+      "protocol": "WLTP",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3374036,
+      "sha256": "855321e50190e687488ce684c0fc8f9513de71d8791813f1a1d16c3b10d1b50d",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_025degC_eVTOL.csv",
+      "family_id": "MOLICEL_P45B_025degC_eVTOL",
+      "nominal_temperature_degC": 25,
+      "protocol": "eVTOL",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 771916,
+      "sha256": "04715b0211b9f8e3400f75fadecb9dfc84294000d25889f81524a5486921d871",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_10C_Dch.csv",
+      "family_id": "MOLICEL_P45B_040degC_10C_Dch",
+      "nominal_temperature_degC": 40,
+      "protocol": "10C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 45171,
+      "sha256": "fa49227469772a447ae781932ce39b983f21670ce9145127ffcf50436afd0ce5",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_1C_Ch-charge.csv",
+      "family_id": "MOLICEL_P45B_040degC_1C_Ch",
+      "nominal_temperature_degC": 40,
+      "protocol": "1C_Ch",
+      "author_parameter_variant": "charge_optimized",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 480066,
+      "sha256": "87be59b625c9315d9587f602e8d3e6d3009e78ef832013990ca6b18cb1f3b727",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_1C_Ch.csv",
+      "family_id": "MOLICEL_P45B_040degC_1C_Ch",
+      "nominal_temperature_degC": 40,
+      "protocol": "1C_Ch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 479816,
+      "sha256": "2b7425bf9f1c7a860a189c7b1fd2cf3ec63d8f5af172bf223bc9731fba0f00ce",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_1C_Dch.csv",
+      "family_id": "MOLICEL_P45B_040degC_1C_Dch",
+      "nominal_temperature_degC": 40,
+      "protocol": "1C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 496755,
+      "sha256": "df53fc719e48cad77e84f23b6397449f8c2f83798b498a6f9f151d8d08107ddb",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_3C_Ch-charge.csv",
+      "family_id": "MOLICEL_P45B_040degC_3C_Ch",
+      "nominal_temperature_degC": 40,
+      "protocol": "3C_Ch",
+      "author_parameter_variant": "charge_optimized",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 127052,
+      "sha256": "63b2e79cdd57ffb61f3e35b658b0b6a3f3d6652a8fc76bd0eeecbb68867b53d9",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_3C_Ch.csv",
+      "family_id": "MOLICEL_P45B_040degC_3C_Ch",
+      "nominal_temperature_degC": 40,
+      "protocol": "3C_Ch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 127009,
+      "sha256": "ccc14d124ae6555b232cc280b6bf2e7f2be0dbdf8564a7c39f3ad1d2f7cb893e",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_3C_Dch.csv",
+      "family_id": "MOLICEL_P45B_040degC_3C_Dch",
+      "nominal_temperature_degC": 40,
+      "protocol": "3C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 161219,
+      "sha256": "42d6c7313f88f10f0b0fc49db4061e82cec59ed4c273e6c1a64579078b63e04a",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_Co30_Ch.csv",
+      "family_id": "MOLICEL_P45B_040degC_Co30_Ch",
+      "nominal_temperature_degC": 40,
+      "protocol": "Co30_Ch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 129350,
+      "sha256": "f6f37e17f8dd2af84ed39aa40e8d3424ecbe5da3befb0b85cf80eeb52d23d501",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_Co30_Dch.csv",
+      "family_id": "MOLICEL_P45B_040degC_Co30_Dch",
+      "nominal_temperature_degC": 40,
+      "protocol": "Co30_Dch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 138445,
+      "sha256": "7b526d11608187ce6f0a99763ee048999c40e6537ad12bcb52907deffb0840f0",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_GITT_Ch.csv",
+      "family_id": "MOLICEL_P45B_040degC_GITT_Ch",
+      "nominal_temperature_degC": 40,
+      "protocol": "GITT_Ch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3828899,
+      "sha256": "435750a60de2b0c19cd6fb2fedf90544336dd594607927569556b902e477f88e",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_GITT_Dch.csv",
+      "family_id": "MOLICEL_P45B_040degC_GITT_Dch",
+      "nominal_temperature_degC": 40,
+      "protocol": "GITT_Dch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3662128,
+      "sha256": "81d97b9e10e83d2c0285b0766f9e8a84681bd92879bf865554e7821e2ade33f7",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_WLTP.csv",
+      "family_id": "MOLICEL_P45B_040degC_WLTP",
+      "nominal_temperature_degC": 40,
+      "protocol": "WLTP",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3408420,
+      "sha256": "d4b433369075fe28f0e9b98695a5d649339b23bf0474e2dfc1aa19c5c774da23",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_040degC_eVTOL.csv",
+      "family_id": "MOLICEL_P45B_040degC_eVTOL",
+      "nominal_temperature_degC": 40,
+      "protocol": "eVTOL",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 773376,
+      "sha256": "3f1f2ce6b5c5b099309bceddb208d46fffa71eaff9b2c7f03a9abaade89bc8c3",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_10C_Dch.csv",
+      "family_id": "MOLICEL_P45B_060degC_10C_Dch",
+      "nominal_temperature_degC": 60,
+      "protocol": "10C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 45491,
+      "sha256": "8ffdebdac6c9631a94d9a556b02927068a2baf5f53d1b125fc6886fcbde333c7",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_1C_Ch-charge.csv",
+      "family_id": "MOLICEL_P45B_060degC_1C_Ch",
+      "nominal_temperature_degC": 60,
+      "protocol": "1C_Ch",
+      "author_parameter_variant": "charge_optimized",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 502267,
+      "sha256": "bc72c692284cdc97253892bced8dd4c40e3895b117af66cfc51b86cce90e5225",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_1C_Ch.csv",
+      "family_id": "MOLICEL_P45B_060degC_1C_Ch",
+      "nominal_temperature_degC": 60,
+      "protocol": "1C_Ch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 502054,
+      "sha256": "f85872631132b6ab743ae9a2be8a0d788c9cd2c66ec445fea23bf9ca5bf30a44",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_1C_Dch.csv",
+      "family_id": "MOLICEL_P45B_060degC_1C_Dch",
+      "nominal_temperature_degC": 60,
+      "protocol": "1C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 518165,
+      "sha256": "1931c65455fe1c5e05e0244663ba38dcb3915c02dd12c3ff113973cc4200e525",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_3C_Ch-charge.csv",
+      "family_id": "MOLICEL_P45B_060degC_3C_Ch",
+      "nominal_temperature_degC": 60,
+      "protocol": "3C_Ch",
+      "author_parameter_variant": "charge_optimized",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 130891,
+      "sha256": "401f50dfad4e23ddd2c62f6af373b9df9f298dc7d1241acacd963ceee589e39c",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_3C_Ch.csv",
+      "family_id": "MOLICEL_P45B_060degC_3C_Ch",
+      "nominal_temperature_degC": 60,
+      "protocol": "3C_Ch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 130978,
+      "sha256": "c54fbedf2bb0889262a3f1901bffccaa9fe930e783da7dfa9cf9d9e9e3a98f23",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_3C_Dch.csv",
+      "family_id": "MOLICEL_P45B_060degC_3C_Dch",
+      "nominal_temperature_degC": 60,
+      "protocol": "3C_Dch",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 165082,
+      "sha256": "f0e4fc4d48335b07d20bcdd26e2f17f8ed291d103d319cafc4dccf4c40f6d6d6",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_Co30_Ch.csv",
+      "family_id": "MOLICEL_P45B_060degC_Co30_Ch",
+      "nominal_temperature_degC": 60,
+      "protocol": "Co30_Ch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 132061,
+      "sha256": "fe5c3ceedabbe24de36d11cd15c46ee6f5787e644d2113e2a499de4d0d2ec299",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_Co30_Dch.csv",
+      "family_id": "MOLICEL_P45B_060degC_Co30_Dch",
+      "nominal_temperature_degC": 60,
+      "protocol": "Co30_Dch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 137153,
+      "sha256": "f43fa1973062b7ec4c727377c2b8d8300c8adf807b63166ee6bc26534adad9c4",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_GITT_Ch.csv",
+      "family_id": "MOLICEL_P45B_060degC_GITT_Ch",
+      "nominal_temperature_degC": 60,
+      "protocol": "GITT_Ch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3779761,
+      "sha256": "111224c5d13ddb061c3657bc13e17a35e3278189b0564b560c6b98f252e2962f",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_GITT_Dch.csv",
+      "family_id": "MOLICEL_P45B_060degC_GITT_Dch",
+      "nominal_temperature_degC": 60,
+      "protocol": "GITT_Dch",
+      "author_parameter_variant": "none",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3658680,
+      "sha256": "37c59ef49207fb570cf3525aa61e9f897ca1b56adf6a1a3a70b9944eeb5b85f3",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": []
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_WLTP.csv",
+      "family_id": "MOLICEL_P45B_060degC_WLTP",
+      "nominal_temperature_degC": 60,
+      "protocol": "WLTP",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 3335725,
+      "sha256": "ba6b79921909f6e2f7fb4a0d4d55ffdca44b5a94de8ef7e9f6efcf4574816cec",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    },
+    {
+      "name": "MOLICEL_P45B_060degC_eVTOL.csv",
+      "family_id": "MOLICEL_P45B_060degC_eVTOL",
+      "nominal_temperature_degC": 60,
+      "protocol": "eVTOL",
+      "author_parameter_variant": "base",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened",
+      "family_identity_basis": "filename and format documentation; equality of repeated experimental values not yet tested",
+      "bytes": 770116,
+      "sha256": "15e998b5700f8cd525f3c80815a719a89ae2aff51e3751a672f5b140a4d3ce47",
+      "columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC",
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ],
+      "experimental_columns": [
+        "t_s",
+        "I_exp_A",
+        "V_exp_V",
+        "T_exp_degC"
+      ],
+      "author_output_columns": [
+        "I_sim_A",
+        "V_sim_V",
+        "SOC_sim",
+        "E_OCV_V",
+        "T_sim_degC",
+        "Q_sim_W"
+      ]
+    }
+  ],
+  "families": [
+    {
+      "family_id": "MOLICEL_P45B_010degC_10C_Dch",
+      "members": [
+        "MOLICEL_P45B_010degC_10C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "10C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_1C_Ch",
+      "members": [
+        "MOLICEL_P45B_010degC_1C_Ch-charge.csv",
+        "MOLICEL_P45B_010degC_1C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "1C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_1C_Dch",
+      "members": [
+        "MOLICEL_P45B_010degC_1C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "1C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_3C_Ch",
+      "members": [
+        "MOLICEL_P45B_010degC_3C_Ch-charge.csv",
+        "MOLICEL_P45B_010degC_3C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "3C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_3C_Dch",
+      "members": [
+        "MOLICEL_P45B_010degC_3C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "3C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_Co30_Ch",
+      "members": [
+        "MOLICEL_P45B_010degC_Co30_Ch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "Co30_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_Co30_Dch",
+      "members": [
+        "MOLICEL_P45B_010degC_Co30_Dch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "Co30_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_GITT_Ch",
+      "members": [
+        "MOLICEL_P45B_010degC_GITT_Ch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "GITT_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_GITT_Dch",
+      "members": [
+        "MOLICEL_P45B_010degC_GITT_Dch.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "GITT_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_010degC_WLTP",
+      "members": [
+        "MOLICEL_P45B_010degC_WLTP.csv"
+      ],
+      "nominal_temperature_degC": 10,
+      "protocol": "WLTP",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_10C_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_10C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "10C_Dch",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_1C_Ch",
+      "members": [
+        "MOLICEL_P45B_025degC_1C_Ch-charge.csv",
+        "MOLICEL_P45B_025degC_1C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "1C_Ch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_1C_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_1C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "1C_Dch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_3C_Ch",
+      "members": [
+        "MOLICEL_P45B_025degC_3C_Ch-charge.csv",
+        "MOLICEL_P45B_025degC_3C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "3C_Ch",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_3C_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_3C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "3C_Dch",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_Co30_Ch",
+      "members": [
+        "MOLICEL_P45B_025degC_Co30_Ch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "Co30_Ch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_Co30_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_Co30_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "Co30_Dch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_GITT_Ch",
+      "members": [
+        "MOLICEL_P45B_025degC_GITT_Ch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "GITT_Ch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_GITT_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_GITT_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "GITT_Dch",
+      "proposed_allocation": "development_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_WLTP",
+      "members": [
+        "MOLICEL_P45B_025degC_WLTP.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "WLTP",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_025degC_eVTOL",
+      "members": [
+        "MOLICEL_P45B_025degC_eVTOL.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "eVTOL",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_10C_Dch",
+      "members": [
+        "MOLICEL_P45B_040degC_10C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "10C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_1C_Ch",
+      "members": [
+        "MOLICEL_P45B_040degC_1C_Ch-charge.csv",
+        "MOLICEL_P45B_040degC_1C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "1C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_1C_Dch",
+      "members": [
+        "MOLICEL_P45B_040degC_1C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "1C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_3C_Ch",
+      "members": [
+        "MOLICEL_P45B_040degC_3C_Ch-charge.csv",
+        "MOLICEL_P45B_040degC_3C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "3C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_3C_Dch",
+      "members": [
+        "MOLICEL_P45B_040degC_3C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "3C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_Co30_Ch",
+      "members": [
+        "MOLICEL_P45B_040degC_Co30_Ch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "Co30_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_Co30_Dch",
+      "members": [
+        "MOLICEL_P45B_040degC_Co30_Dch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "Co30_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_GITT_Ch",
+      "members": [
+        "MOLICEL_P45B_040degC_GITT_Ch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "GITT_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_GITT_Dch",
+      "members": [
+        "MOLICEL_P45B_040degC_GITT_Dch.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "GITT_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_WLTP",
+      "members": [
+        "MOLICEL_P45B_040degC_WLTP.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "WLTP",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_040degC_eVTOL",
+      "members": [
+        "MOLICEL_P45B_040degC_eVTOL.csv"
+      ],
+      "nominal_temperature_degC": 40,
+      "protocol": "eVTOL",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_10C_Dch",
+      "members": [
+        "MOLICEL_P45B_060degC_10C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "10C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_1C_Ch",
+      "members": [
+        "MOLICEL_P45B_060degC_1C_Ch-charge.csv",
+        "MOLICEL_P45B_060degC_1C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "1C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_1C_Dch",
+      "members": [
+        "MOLICEL_P45B_060degC_1C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "1C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_3C_Ch",
+      "members": [
+        "MOLICEL_P45B_060degC_3C_Ch-charge.csv",
+        "MOLICEL_P45B_060degC_3C_Ch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "3C_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_3C_Dch",
+      "members": [
+        "MOLICEL_P45B_060degC_3C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "3C_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_Co30_Ch",
+      "members": [
+        "MOLICEL_P45B_060degC_Co30_Ch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "Co30_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_Co30_Dch",
+      "members": [
+        "MOLICEL_P45B_060degC_Co30_Dch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "Co30_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_GITT_Ch",
+      "members": [
+        "MOLICEL_P45B_060degC_GITT_Ch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "GITT_Ch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_GITT_Dch",
+      "members": [
+        "MOLICEL_P45B_060degC_GITT_Dch.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "GITT_Dch",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_WLTP",
+      "members": [
+        "MOLICEL_P45B_060degC_WLTP.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "WLTP",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    },
+    {
+      "family_id": "MOLICEL_P45B_060degC_eVTOL",
+      "members": [
+        "MOLICEL_P45B_060degC_eVTOL.csv"
+      ],
+      "nominal_temperature_degC": 60,
+      "protocol": "eVTOL",
+      "proposed_allocation": "reserved_temperature_transfer",
+      "access": "protected_unopened"
+    }
+  ],
+  "file_count": 51,
+  "family_count": 43,
+  "files_with_author_simulations": 35,
+  "outcomes_decoded": 0,
+  "author_simulation_rows_decoded": 0,
+  "archive_extracted": false,
+  "source_unchanged": true,
+  "validation_workbook_opened": false,
+  "models_changed": false,
+  "allocation_status": "proposal only; every outcome remains protected until a frozen procedure is committed",
+  "limitations": [
+    "43 filename families are not proof of 43 independent cells or experiments.",
+    "Author predictions and parameter tables do not provide independent measured SOC, OCV or branch currents.",
+    "Separate single-cell evidence; no established identity mapping to the FreeTwinEV module cells."
+  ]
+}

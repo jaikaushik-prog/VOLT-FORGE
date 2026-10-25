@@ -24,3 +24,10 @@ reports/improvement_v2/**/*predictions.csv
 reports/improvement_v2/software_coupling/*.csv
 # Original FreeTwinEV download remains local; its inventory and hashes are versioned.
 /1s4p Battery Module Measurement/
+
+# Original About:Energy P45B release; versioned hashes and intake reports are retained.
+/Molicel P45B Data Release Data Format Documentation.pdf
+/Molicel P45B ECM Validation Matrix.xlsx
+/Molicel_INR-21700-P45B_ECM-charge.csv
+/Molicel_INR-21700-P45B_ECM.csv
+/readme_Molicel_P45B_dataset_AE.txt
