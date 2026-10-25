@@ -1,0 +1,29 @@
+{
+  "schema_version": "voltforge.ae_p45b_author_comparison_allocation/1",
+  "preaccess_procedure_commit": "1d53403",
+  "allowed_member": "MOLICEL_P45B_025degC_1C_Dch.csv",
+  "member_sha256": "41cef2d81d1a7c9fc139547d7a0a8d0961e0789f07aedac10a8a0009c21eaf5a",
+  "own_prediction": "reports/p45b_reproduction_v1/run_002/primary.csv",
+  "allowed_new_access": [
+    "I_sim_A",
+    "V_sim_V",
+    "SOC_sim",
+    "E_OCV_V",
+    "T_sim_degC",
+    "Q_sim_W"
+  ],
+  "new_experimental_families_opened": 0,
+  "remaining_unopened_members": 50,
+  "validation_workbook_access": "protected_unopened",
+  "preaccess_files": {
+    "reports/p45b_reproduction_v1/PROCEDURE.md": "2ab246314c615be1842455819f7347199793cd28050e4136b80aba5d4a0f97f8",
+    "configs/ae_p45b_allocation_v1.json": "4e8ec7d530e207a91e91ae6ca6ec78efd4dedcb425a55775171d710fba8f8ddf",
+    "molicel_p45b_data.zip": "9d5d07892493e74822f0952846a9071cac41ac22e3aced806c034eaa660ebc53",
+    "Molicel_INR-21700-P45B_ECM.csv": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e",
+    "ssrn-6861858.pdf": "0b872b05c28471a12fd3b004f9b98188da1074a11d35e6ab721ff9f250e8f258",
+    "reports/p45b_author_comparison_v1/PROCEDURE.md": "85f8fc0f05959d56978de21ec840f02bced4281edcb9f5019a4c2a6b27bf6d01",
+    "reports/p45b_reproduction_v1/run_002/primary.csv": "b1c9a6ead62b1a002a94bba174b9c28609b33a1321a2399e06e554d23fc4c797",
+    "reports/p45b_reproduction_v1/run_002/manifest.json": "b34044ff2d657df0d8fc2493163086071b99db1d3738604efb4f439762988de3",
+    "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088"
+  }
+}
