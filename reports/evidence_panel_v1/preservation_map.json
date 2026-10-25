@@ -1,0 +1,22 @@
+{
+  "README.md": {
+    "preserved_path": "reports/evidence_panel_v1/previous/README.md",
+    "sha256": "9679ee48628f18fa51046dd1625d42ba4a37bccf529dcb04d3406fe8c9ecdb6c"
+  },
+  "scripts/run_editor.py": {
+    "preserved_path": "reports/evidence_panel_v1/previous/scripts/run_editor.py",
+    "sha256": "223009374af5b5732fbf0c0e610cdafff1b101304d8c4ad950ccbf0eaf5adcd2"
+  },
+  "web/editor/index.html": {
+    "preserved_path": "reports/evidence_panel_v1/previous/web/editor/index.html",
+    "sha256": "847c0e46b827263d7e1914b393202f1e39670fe39a0788b8c5aebacb60c0e2cf"
+  },
+  "web/editor/app.js": {
+    "preserved_path": "reports/evidence_panel_v1/previous/web/editor/app.js",
+    "sha256": "5fbddd8b9c6ecc8e6f8be57168eaf64fa92747e76ed66605e48c5933bdb3a8f5"
+  },
+  "web/editor/style.css": {
+    "preserved_path": "reports/evidence_panel_v1/previous/web/editor/style.css",
+    "sha256": "18f983918f12471c20bc10adc8ca8fa3d812f6c1611bdafdf955cce16564eaf0"
+  }
+}

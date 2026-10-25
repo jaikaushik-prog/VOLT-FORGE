@@ -1,0 +1,64 @@
+{
+  "schema_version": "voltforge.p45b_reference_origin_allocation/1",
+  "saved_records": {
+    "co30": "reports/p45b_low_soc_v1/run_001/co30_samples.csv",
+    "gitt": "reports/p45b_low_soc_v1/run_001/gitt_samples.csv",
+    "oneC": "reports/p45b_reproduction_v1/run_002/primary.csv"
+  },
+  "saved_segments": "reports/p45b_low_soc_v1/run_001/gitt_segments.csv",
+  "saved_pairs": "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv",
+  "parameter_table": "Molicel_INR-21700-P45B_ECM.csv",
+  "initial_soc_assumptions": [
+    1.0,
+    0.995
+  ],
+  "integration_conventions": [
+    "left",
+    "linear"
+  ],
+  "rest_windows_s": [
+    60,
+    300,
+    600
+  ],
+  "pair_allocation": "all 32 previously opened complete pulse/rest pairs; no outcome selection",
+  "new_measurement_families": 0,
+  "remaining_unopened_members": 48,
+  "remaining_unopened_families": 40,
+  "unused_LG_cells": 9,
+  "unused_FreeTwinEV_records": 13,
+  "protected_charge_table_and_validation_workbook": true,
+  "permitted_paper_pages": [
+    9,
+    12,
+    14,
+    15,
+    16,
+    17,
+    42,
+    53
+  ],
+  "parameter_fits": 0,
+  "frozen_files": {
+    "reports/p45b_low_soc_v1/run_001/co30_samples.csv": "9bea0449b6a2df25a0c2d54533512c237303fe3d224e7b1a68cecc1f6ff29b75",
+    "reports/p45b_low_soc_v1/run_001/gitt_samples.csv": "7a2306a4746afc30bd138d9113e1f91555debf6a1ef1b2a9fdc063ea576e2ea6",
+    "reports/p45b_reproduction_v1/run_002/primary.csv": "b1c9a6ead62b1a002a94bba174b9c28609b33a1321a2399e06e554d23fc4c797",
+    "reports/p45b_low_soc_v1/run_001/gitt_segments.csv": "84ab839b717285efc939c92c785687bf8e9b0da5e66026f535b3162abe84083d",
+    "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv": "7fb7e3ba700918e44f3b37e96ffcef975dbbd771d3652e76333951bed350293d",
+    "Molicel_INR-21700-P45B_ECM.csv": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e",
+    "reports/p45b_local_dynamics_v1/DECISION.md": "df04c034581f559bdacedd90fe63bb11f422b80986aa3e1d07185b4a194bc265",
+    "reports/p45b_local_dynamics_v1/verification.json": "995a2f8cd7252ac01febdedc4c18cbeea4e16b45f9283717cb3a1a0d1363ed4e",
+    "reports/p45b_paper_v1/DECISION.md": "55c13679c191a2c1258a586395d5ff3ab0c876309f8206a9aaa15e38f68fbe4a",
+    "reports/p45b_paper_v1/source.json": "496c6651ec1e6b4300d858451a75b78150987fdaab5474513b8fc26d761a621f",
+    "reports/p45b_intake_v1/DECISION.md": "b9ca9e776e7bb5933672df01bc7216efd4be3f6ae4fad239888b79b44fdeb999",
+    "reports/p45b_low_soc_v1/DECISION.md": "adee18c7eb24022f7c031413c4d149e225a22cc057a2b211d5461c8d83dee3f8",
+    "reports/p45b_reference_origin_v1/PROCEDURE.md": "b7d1ea2d60f3db64ceed4fa7e8a89479cc983106942a388fb4f2b9bb1317e789",
+    "reports/p45b_reference_origin_v1/pre_analysis_pytest.xml": "2b7a0cd3c24a3b105034ff42d0094e062e996643b255b7fb59aeef0886c5be6d",
+    "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
+    "scripts/ae_p45b_low_soc.py": "42129b98769e6a4e2c3c5e1b764ed4aa7fd3688c7eda03ea5579e3b8e957a936",
+    "scripts/ae_p45b_identifiability.py": "31073acb6c4acd38117009e304a4427e7ee0e4ed2bbcd7fe4b8ea8b2eedd4496",
+    "readme_Molicel_P45B_dataset_AE.txt": "6f5917c9d6fe366993364f0a225d00621c6ff6e9cf98ed2cc10620960d0547d4",
+    "Molicel P45B Data Release Data Format Documentation.pdf": "1146673eb79699d2d3eb5b509ee100fc6f85fca82e08350fe61baccc51a0fbc1",
+    "ssrn-6861858.pdf": "0b872b05c28471a12fd3b004f9b98188da1074a11d35e6ab721ff9f250e8f258"
+  }
+}
