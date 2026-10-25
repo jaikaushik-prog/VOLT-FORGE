@@ -1,0 +1,19 @@
+{
+  "schema_version": "voltforge.ae_p45b_reproduction_allocation/1",
+  "preaccess_commit": "af8d64f",
+  "allowed_measurement_member": "MOLICEL_P45B_025degC_1C_Dch.csv",
+  "allowed_parameter_file": "Molicel_INR-21700-P45B_ECM.csv",
+  "member_sha256": "41cef2d81d1a7c9fc139547d7a0a8d0961e0789f07aedac10a8a0009c21eaf5a",
+  "access": "one whole development family released for frozen reproduction procedure",
+  "unopened_archive_members": 50,
+  "unopened_families": 42,
+  "validation_workbook_access": "protected_unopened",
+  "charge_optimized_parameter_table_access": "protected_unopened",
+  "preaccess_files": {
+    "reports/p45b_reproduction_v1/PROCEDURE.md": "2ab246314c615be1842455819f7347199793cd28050e4136b80aba5d4a0f97f8",
+    "configs/ae_p45b_allocation_v1.json": "4e8ec7d530e207a91e91ae6ca6ec78efd4dedcb425a55775171d710fba8f8ddf",
+    "molicel_p45b_data.zip": "9d5d07892493e74822f0952846a9071cac41ac22e3aced806c034eaa660ebc53",
+    "Molicel_INR-21700-P45B_ECM.csv": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e",
+    "ssrn-6861858.pdf": "0b872b05c28471a12fd3b004f9b98188da1074a11d35e6ab721ff9f250e8f258"
+  }
+}
