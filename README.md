@@ -18,7 +18,40 @@ There is no optimizer or ranked repair result.
 Public project repository: https://github.com/jaikaushik-prog/VOLT-FORGE.
 Local upload preparation is described in [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md).
 
-## Evidence panel and completed reference-origin investigation
+## Local commands and thermal feasibility
+
+The **Commands** button now opens a local command assistant in the existing
+editor. It can explain the selected saved evidence, preview an explicit supported
+edit and compare two explicitly selected runs. It uses a fixed documented grammar;
+there is no language model, API key or external AI call. Apply, run and export
+remain separate actions. See the [sprint report and walkthrough](reports/assistant_thermal_v1/READINESS.md)
+and [exact command interface](reports/local_assistant_v1/INTERFACE.md).
+
+A separate [thermal feasibility study and prototype](reports/thermal_feasibility_v1/DECISION.md)
+now checks a one-node prescribed-heat balance. Its 39 analytical tests pass,
+but its demonstration uses **synthetic inputs with no established real-cell
+applicability**. Thermal prediction remains unavailable in the module editor.
+Exact-part public M50T thermal evidence has been identified for a future
+documentation/inventory review; no numerical outcome from it was opened.
+
+The command workflow demonstration checks 133 claims/references against the
+backend and reproduces both exported A0/A1 runs. Frozen electrical models,
+reserved measurements and earlier reports are preserved. This is a simulation
+comparison, not experimentally established repair benefit or module accuracy.
+The combined regression suite passes **515 Python tests and 27 JavaScript tests**;
+browser checks cover command previews, separate manual edits and stale responses.
+
+```powershell
+& C:\Users\DELL\anaconda3\python.exe scripts\run_editor.py --open
+& C:\Users\DELL\anaconda3\python.exe scripts\demonstrate_local_assistant.py
+```
+
+Select a rail, open **Commands**, and enter
+`preview change selected rail to 0.5 mOhm`. Review the exact proposal in the
+inspector before applying it. This number is a hypothetical syntax example,
+not a recommended physical connection. Use `help` for all supported commands.
+
+## Previous evidence and reference-origin release
 
 The 2D editor now has an [evidence and edit-preview panel](reports/evidence_panel_v1/READINESS.md).
 Select a component and open **Evidence** to inspect saved results, assumptions,
@@ -34,7 +67,7 @@ reference; the final 9,000-second rest still evolves. Further exploratory fittin
 is paused pending that evidence. Frozen LG v2/P45B models and unused measurements
 remain preserved. The LG four-cell product workflow can continue independently.
 
-This release passes **387 Python tests and 22 JavaScript tests**, including
+That release passed **387 Python tests and 22 JavaScript tests**, including
 evidence transport, stale edits, provenance and numerical regression checks.
 The [release report](reports/evidence_panel_v1/READINESS.md) includes browser
 checks, preserved historical sources and exact reproduction commands.
@@ -156,7 +189,7 @@ load-voltage acceptance, thermal behaviour and repair benefits remain unvalidate
 
 ```powershell
 & C:\Users\DELL\anaconda3\python.exe -m pytest -q --junitxml=tmp/product_tests.xml
-& C:\Users\DELL\anaconda3\python.exe scripts\verify_evidence_panel.py --browser reports/evidence_panel_v1/browser_005 --out tmp/evidence_panel_verification.json
+& C:\Users\DELL\anaconda3\python.exe scripts\verify_assistant_thermal.py --out tmp/assistant_thermal_verification.json
 ```
 
 ## Four-cell electrical simulation backend

@@ -1,0 +1,22 @@
+{
+  "request": {
+    "message": "run simulation",
+    "selection": {
+      "variant_id": "A1",
+      "revision_id": "rev_1b9bf3bdbbfb94be22c860a609bfbb053622a4142d0950e1f53220816c79f031",
+      "component_id": "module",
+      "run_id": "run_0002"
+    },
+    "comparison": null
+  },
+  "response": {
+    "status": "error",
+    "error": {
+      "code": "unsupported_command",
+      "message": "Command not supported. Type help for complete supported phrases and explicit units; no compound instructions are accepted"
+    }
+  },
+  "source_responses": {},
+  "verified_claims": [],
+  "comparison_source": null
+}

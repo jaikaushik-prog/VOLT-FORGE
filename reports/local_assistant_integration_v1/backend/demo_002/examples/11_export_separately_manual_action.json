@@ -1,0 +1,32 @@
+{
+  "classification": "Explicit orchestration step standing in for a separate manual UI action; never a command execution",
+  "request": {
+    "operation": "export",
+    "arguments": {
+      "selections": [
+        {
+          "variant_id": "A0",
+          "run_id": "run_0001"
+        },
+        {
+          "variant_id": "A1",
+          "run_id": "run_0002"
+        }
+      ],
+      "out": "C:\\Users\\DELL\\Desktop\\volt-forge\\reports\\local_assistant_integration_v1\\backend\\demo_002\\export"
+    }
+  },
+  "response": {
+    "status": "ok",
+    "result": {
+      "path": "C:\\Users\\DELL\\Desktop\\volt-forge\\reports\\local_assistant_integration_v1\\backend\\demo_002\\export",
+      "run_ids": [
+        "run_0001",
+        "run_0002"
+      ],
+      "manifest_sha256": "b1bf1acc1e8189e8590d6cd7e0aad2e8f0be192bf1133e2c35ae2a59f8af93a4",
+      "classification": "reproducible simulation package",
+      "experimental_validation": "awaiting suitable measurements"
+    }
+  }
+}

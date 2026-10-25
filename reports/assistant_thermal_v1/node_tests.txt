@@ -1,0 +1,172 @@
+﻿TAP version 13
+# Subtest: comparison preserves exact values, supplied deltas and explicit historical/unconfigured evidence
+ok 1 - comparison preserves exact values, supplied deltas and explicit historical/unconfigured evidence
+  ---
+  duration_ms: 2.6423
+  type: 'test'
+  ...
+# Subtest: wrong selected variant, swapped comparison or changed snapshot rejects display
+ok 2 - wrong selected variant, swapped comparison or changed snapshot rejects display
+  ---
+  duration_ms: 0.6851
+  type: 'test'
+  ...
+# Subtest: missing units, missing row citations, failed or nonfinite comparisons reject display
+ok 3 - missing units, missing row citations, failed or nonfinite comparisons reject display
+  ---
+  duration_ms: 0.5388
+  type: 'test'
+  ...
+# Subtest: action-execution claims and unknown assistant modes are rejected
+ok 4 - action-execution claims and unknown assistant modes are rejected
+  ---
+  duration_ms: 0.3357
+  type: 'test'
+  ...
+# Subtest: untrusted command/provenance text is escaped rather than rendered as markup
+ok 5 - untrusted command/provenance text is escaped rather than rendered as markup
+  ---
+  duration_ms: 2.4347
+  type: 'test'
+  ...
+# Subtest: inherited and sensitivity runs cannot be selected as current nominal results
+ok 6 - inherited and sensitivity runs cannot be selected as current nominal results
+  ---
+  duration_ms: 0.8503
+  type: 'test'
+  ...
+# Subtest: late results fail the selection epoch after a variant change
+ok 7 - late results fail the selection epoch after a variant change
+  ---
+  duration_ms: 0.2196
+  type: 'test'
+  ...
+# Subtest: user content escapes markup and numeric edits reject empty or nonfinite input
+ok 8 - user content escapes markup and numeric edits reject empty or nonfinite input
+  ---
+  duration_ms: 0.4928
+  type: 'test'
+  ...
+# Subtest: chart bounds show negative charge and flat data without undefined scales
+ok 9 - chart bounds show negative charge and flat data without undefined scales
+  ---
+  duration_ms: 0.4404
+  type: 'test'
+  ...
+# Subtest: current presentation retains actual values, units, context and every citation
+ok 10 - current presentation retains actual values, units, context and every citation
+  ---
+  duration_ms: 23.6305
+  type: 'test'
+  ...
+# Subtest: unconfigured requirements cannot become a pass or experimental acceptance
+ok 11 - unconfigured requirements cannot become a pass or experimental acceptance
+  ---
+  duration_ms: 8.8495
+  type: 'test'
+  ...
+# Subtest: configuration-only evidence never acquires simulated claims or an implied run
+ok 12 - configuration-only evidence never acquires simulated claims or an implied run
+  ---
+  duration_ms: 5.5551
+  type: 'test'
+  ...
+# Subtest: historical evidence preserves current design and historical output revision separately
+ok 13 - historical evidence preserves current design and historical output revision separately
+  ---
+  duration_ms: 3.8048
+  type: 'test'
+  ...
+# Subtest: failed and outdated flags coexist; missing coverage never means supported
+ok 14 - failed and outdated flags coexist; missing coverage never means supported
+  ---
+  duration_ms: 3.8965
+  type: 'test'
+  ...
+# Subtest: no response, rejected response and malformed response remain distinct
+ok 15 - no response, rejected response and malformed response remain distinct
+  ---
+  duration_ms: 2.8442
+  type: 'test'
+  ...
+# Subtest: every selection dimension prevents a response from being shown in another context
+ok 16 - every selection dimension prevents a response from being shown in another context
+  ---
+  duration_ms: 9.3204
+  type: 'test'
+  ...
+# Subtest: numerical claims require a citation, a unit and the actual bound run and snapshot
+ok 17 - numerical claims require a citation, a unit and the actual bound run and snapshot
+  ---
+  duration_ms: 17.1959
+  type: 'test'
+  ...
+# Subtest: sample citations bind to selected component without treating module summary as cell output
+ok 18 - sample citations bind to selected component without treating module summary as cell output
+  ---
+  duration_ms: 8.6378
+  type: 'test'
+  ...
+# Subtest: request tickets reject late results after selection changes and reverse completion order
+ok 19 - request tickets reject late results after selection changes and reverse completion order
+  ---
+  duration_ms: 0.7684
+  type: 'test'
+  ...
+# Subtest: editing any preview input invalidates the ticket, including edit then revert
+ok 20 - editing any preview input invalidates the ticket, including edit then revert
+  ---
+  duration_ms: 0.5669
+  type: 'test'
+  ...
+# Subtest: request keys are stable JSON identities and reject missing or extra selection fields
+ok 21 - request keys are stable JSON identities and reject missing or extra selection fields
+  ---
+  duration_ms: 0.5727
+  type: 'test'
+  ...
+# Subtest: a valid preview exposes exact before/proposed data and invalidated IDs without executing
+ok 22 - a valid preview exposes exact before/proposed data and invalidated IDs without executing
+  ---
+  duration_ms: 1.0382
+  type: 'test'
+  ...
+# Subtest: timestep preview derives seconds from the exact supported schema while preserving its source claim
+ok 23 - timestep preview derives seconds from the exact supported schema while preserving its source claim
+  ---
+  duration_ms: 0.4574
+  type: 'test'
+  ...
+# Subtest: other supported scalar edits retain their quantity-object units without inventing claim metadata
+ok 24 - other supported scalar edits retain their quantity-object units without inventing claim metadata
+  ---
+  duration_ms: 0.4807
+  type: 'test'
+  ...
+# Subtest: schema unit fallback cannot accept arbitrary unitless claims, edits or mismatched pointers
+ok 25 - schema unit fallback cannot accept arbitrary unitless claims, edits or mismatched pointers
+  ---
+  duration_ms: 3.0645
+  type: 'test'
+  ...
+# Subtest: preview rejects supplied outcomes or execution and cannot hide a revision mismatch
+ok 26 - preview rejects supplied outcomes or execution and cannot hide a revision mismatch
+  ---
+  duration_ms: 0.7796
+  type: 'test'
+  ...
+# Subtest: hostile strings stay inspectable data and are escaped only at the rendering boundary
+ok 27 - hostile strings stay inspectable data and are escaped only at the rendering boundary
+  ---
+  duration_ms: 1.5772
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 255.1306

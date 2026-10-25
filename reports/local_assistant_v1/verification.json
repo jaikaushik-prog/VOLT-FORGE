@@ -1,0 +1,25 @@
+{
+  "schema": "voltforge.local_assistant_verification/1",
+  "mode": "local_commands",
+  "command": "python -m pytest tests/test_local_assistant.py -q --junitxml=reports/local_assistant_v1/tests.xml",
+  "python": "3.12.3",
+  "tests": 73,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_s": 42.198,
+  "implementation_and_receipt_sha256": {
+    "scripts/local_assistant.py": "e4b6a8e398b861716a1ef80da71cfb2dd5a2860c6a28b63629880120d1b07700",
+    "tests/test_local_assistant.py": "fb53cc73d02bb071471655813c7b03a9db914b3c785e8dda9dcbfa0a8c393261",
+    "configs/local_assistant_eval_v1.json": "3772d1305f242d2e47be75f7f48345b7e43f635a1a10fb595a161aa5f98d1593",
+    "reports/local_assistant_v1/PROCEDURE.md": "ce183c9d2aba558eb183b18e1d1bd9bcbb2f1776b19646701b6cca237afdffc4",
+    "reports/local_assistant_v1/tests.xml": "a153f337a2901f95c26d28d3999e802f80d79fee73c08352f969ff11bb690372",
+    "scripts/copilot_contract.py": "99119c3a86cb22f803adbb226574d6f6c2491ab8eebdc813763ef4539580ccae",
+    "scripts/evidence_context.py": "b16d76679115554b4a891ecef289cbf16eb5cca420158bf773cf000d4ddb1122"
+  },
+  "scope": "Fixed grammar, explicit input-unit conversion and read-only delegation; software verification only",
+  "evidence_access": "Existing frozen LG reference assets, temporary projects and synthetic load/failure cases; no new measurement outcomes",
+  "external_model_calls": false,
+  "automatic_execution": false,
+  "experimental_validation": "awaiting suitable measurements"
+}

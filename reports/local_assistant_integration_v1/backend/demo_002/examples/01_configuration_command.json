@@ -1,0 +1,1690 @@
+{
+  "request": {
+    "message": "explain this result",
+    "selection": {
+      "variant_id": "A0",
+      "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+      "component_id": "module",
+      "run_id": null
+    },
+    "comparison": null
+  },
+  "response": {
+    "status": "ok",
+    "result": {
+      "schema": "voltforge.local_assistant/1",
+      "mode": "local_commands",
+      "action": "explain",
+      "selection": {
+        "variant_id": "A0",
+        "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+        "component_id": "module",
+        "run_id": null
+      },
+      "payload": {
+        "schema": "voltforge.copilot_contract/1",
+        "operation": "explain",
+        "status": "configuration_only",
+        "binding": {
+          "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+          "variant_id": "A0",
+          "current_revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+          "component_id": "module",
+          "run_id": null,
+          "snapshot_id": null,
+          "run_revision_id": null
+        },
+        "claims": [
+          {
+            "kind": "component_identity",
+            "label": "Dataset cell identity",
+            "value": "P7",
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_1/identity",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_1/identity",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_1"
+            }
+          },
+          {
+            "kind": "fitted_artifact_reference",
+            "label": "Frozen model provenance",
+            "value": {
+              "version": "frozen-v2",
+              "key": "C2_rest_reference_RC",
+              "path": "reports/improvement_v2/development/P7_models.json",
+              "sha256": "957b7d981faab3e0032f7004193f1d2d7ebda8245c4b7c4dbd112bcb775355cf",
+              "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_1/model",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_1/model",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_1"
+            }
+          },
+          {
+            "kind": "configured_input",
+            "label": "initial soc",
+            "value": {
+              "value": 0.7,
+              "unit": "fraction",
+              "classification": "assumed",
+              "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_1/initial_soc",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_1/initial_soc",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_1"
+            },
+            "unit": "fraction"
+          },
+          {
+            "kind": "configured_input",
+            "label": "initial polarization",
+            "value": {
+              "value": 0.0,
+              "unit": "V",
+              "classification": "assumed",
+              "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_1/initial_polarization",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_1/initial_polarization",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_1"
+            },
+            "unit": "V"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "R0_ohm",
+            "value": 0.024483436683240944,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_1/R0_ohm",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_1/R0_ohm",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_1"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "R1_ohm",
+            "value": 0.02615665776932287,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_1/R1_ohm",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_1/R1_ohm",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_1"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "tau_s",
+            "value": 62.50473376572111,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_1/tau_s",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_1/tau_s",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_1"
+            },
+            "unit": "s"
+          },
+          {
+            "kind": "derived_capacity",
+            "label": "capacity_Ah",
+            "value": 4.848634393002297,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_1/capacity_Ah",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_1/capacity_Ah",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_1"
+            },
+            "unit": "Ah"
+          },
+          {
+            "kind": "component_identity",
+            "label": "Dataset cell identity",
+            "value": "P17",
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_2/identity",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_2/identity",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_2"
+            }
+          },
+          {
+            "kind": "fitted_artifact_reference",
+            "label": "Frozen model provenance",
+            "value": {
+              "version": "frozen-v2",
+              "key": "C2_rest_reference_RC",
+              "path": "reports/improvement_v2/development/P17_models.json",
+              "sha256": "e999af2b55d2e98ca976286ab91f87ab31731227fa7ed7bf0851a100ff0fd74a",
+              "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_2/model",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_2/model",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_2"
+            }
+          },
+          {
+            "kind": "configured_input",
+            "label": "initial soc",
+            "value": {
+              "value": 0.7,
+              "unit": "fraction",
+              "classification": "assumed",
+              "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_2/initial_soc",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_2/initial_soc",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_2"
+            },
+            "unit": "fraction"
+          },
+          {
+            "kind": "configured_input",
+            "label": "initial polarization",
+            "value": {
+              "value": 0.0,
+              "unit": "V",
+              "classification": "assumed",
+              "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_2/initial_polarization",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_2/initial_polarization",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_2"
+            },
+            "unit": "V"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "R0_ohm",
+            "value": 0.025072961234224072,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_2/R0_ohm",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_2/R0_ohm",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_2"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "R1_ohm",
+            "value": 0.0264291844171237,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_2/R1_ohm",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_2/R1_ohm",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_2"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "tau_s",
+            "value": 62.50473376572111,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_2/tau_s",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_2/tau_s",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_2"
+            },
+            "unit": "s"
+          },
+          {
+            "kind": "derived_capacity",
+            "label": "capacity_Ah",
+            "value": 4.844352468565053,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_2/capacity_Ah",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_2/capacity_Ah",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_2"
+            },
+            "unit": "Ah"
+          },
+          {
+            "kind": "component_identity",
+            "label": "Dataset cell identity",
+            "value": "P19",
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_3/identity",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_3/identity",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_3"
+            }
+          },
+          {
+            "kind": "fitted_artifact_reference",
+            "label": "Frozen model provenance",
+            "value": {
+              "version": "frozen-v2",
+              "key": "C2_rest_reference_RC",
+              "path": "reports/improvement_v2/development/P19_models.json",
+              "sha256": "15f41f7ed0049baa630728facb092d3d2f629b3d8ec5be38fa2c1388fdde988d",
+              "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_3/model",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_3/model",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_3"
+            }
+          },
+          {
+            "kind": "configured_input",
+            "label": "initial soc",
+            "value": {
+              "value": 0.7,
+              "unit": "fraction",
+              "classification": "assumed",
+              "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_3/initial_soc",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_3/initial_soc",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_3"
+            },
+            "unit": "fraction"
+          },
+          {
+            "kind": "configured_input",
+            "label": "initial polarization",
+            "value": {
+              "value": 0.0,
+              "unit": "V",
+              "classification": "assumed",
+              "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_3/initial_polarization",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_3/initial_polarization",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_3"
+            },
+            "unit": "V"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "R0_ohm",
+            "value": 0.024822698391602116,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_3/R0_ohm",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_3/R0_ohm",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_3"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "R1_ohm",
+            "value": 0.02462194330435891,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_3/R1_ohm",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_3/R1_ohm",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_3"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "tau_s",
+            "value": 62.50473376572111,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_3/tau_s",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_3/tau_s",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_3"
+            },
+            "unit": "s"
+          },
+          {
+            "kind": "derived_capacity",
+            "label": "capacity_Ah",
+            "value": 4.904010427336018,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_3/capacity_Ah",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_3/capacity_Ah",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_3"
+            },
+            "unit": "Ah"
+          },
+          {
+            "kind": "component_identity",
+            "label": "Dataset cell identity",
+            "value": "P13",
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_4/identity",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_4/identity",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_4"
+            }
+          },
+          {
+            "kind": "fitted_artifact_reference",
+            "label": "Frozen model provenance",
+            "value": {
+              "version": "frozen-v2",
+              "key": "C2_rest_reference_RC",
+              "path": "reports/improvement_v2/development/P13_models.json",
+              "sha256": "c4f462d1ae6a08756fe61af25d10a7a3623c632833b3ae24ef1556db3b77bfe0",
+              "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_4/model",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_4/model",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_4"
+            }
+          },
+          {
+            "kind": "configured_input",
+            "label": "initial soc",
+            "value": {
+              "value": 0.7,
+              "unit": "fraction",
+              "classification": "assumed",
+              "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_4/initial_soc",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_4/initial_soc",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_4"
+            },
+            "unit": "fraction"
+          },
+          {
+            "kind": "configured_input",
+            "label": "initial polarization",
+            "value": {
+              "value": 0.0,
+              "unit": "V",
+              "classification": "assumed",
+              "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/cells/cell_4/initial_polarization",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/cells/cell_4/initial_polarization",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_4"
+            },
+            "unit": "V"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "R0_ohm",
+            "value": 0.02473126364758034,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_4/R0_ohm",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_4/R0_ohm",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_4"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "R1_ohm",
+            "value": 0.025092213605044635,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_4/R1_ohm",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_4/R1_ohm",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_4"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "fitted_parameter",
+            "label": "tau_s",
+            "value": 72.08434242404265,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_4/tau_s",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_4/tau_s",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_4"
+            },
+            "unit": "s"
+          },
+          {
+            "kind": "derived_capacity",
+            "label": "capacity_Ah",
+            "value": 4.798108715840201,
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/fitted_parameters/cell_4/capacity_Ah",
+              "reference_id": "e007",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/fitted_parameters/cell_4/capacity_Ah",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "cell_4"
+            },
+            "unit": "Ah"
+          },
+          {
+            "kind": "configured_input",
+            "label": "Effective connection resistance",
+            "value": {
+              "value": 0.001,
+              "unit": "ohm",
+              "classification": "assumed",
+              "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/connections/rail_p_1/resistance",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/connections/rail_p_1/resistance",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "rail_p_1"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "configured_input",
+            "label": "Effective connection resistance",
+            "value": {
+              "value": 0.001,
+              "unit": "ohm",
+              "classification": "assumed",
+              "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/connections/rail_p_2/resistance",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/connections/rail_p_2/resistance",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "rail_p_2"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "configured_input",
+            "label": "Effective connection resistance",
+            "value": {
+              "value": 0.001,
+              "unit": "ohm",
+              "classification": "assumed",
+              "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/connections/rail_p_3/resistance",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/connections/rail_p_3/resistance",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "rail_p_3"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "configured_input",
+            "label": "Effective connection resistance",
+            "value": {
+              "value": 0.001,
+              "unit": "ohm",
+              "classification": "assumed",
+              "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/connections/rail_n_1/resistance",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/connections/rail_n_1/resistance",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "rail_n_1"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "configured_input",
+            "label": "Effective connection resistance",
+            "value": {
+              "value": 0.001,
+              "unit": "ohm",
+              "classification": "assumed",
+              "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/connections/rail_n_2/resistance",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/connections/rail_n_2/resistance",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "rail_n_2"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "configured_input",
+            "label": "Effective connection resistance",
+            "value": {
+              "value": 0.001,
+              "unit": "ohm",
+              "classification": "assumed",
+              "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/connections/rail_n_3/resistance",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/connections/rail_n_3/resistance",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "rail_n_3"
+            },
+            "unit": "ohm"
+          },
+          {
+            "kind": "configured_input",
+            "label": "Configured load intervals",
+            "value": [
+              {
+                "start_s": 0.0,
+                "end_s": 360.0,
+                "current_A": 14.55
+              }
+            ],
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/scenario/load_profile",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/scenario/load_profile",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "module"
+            },
+            "unit": "A,s"
+          },
+          {
+            "kind": "configured_input",
+            "label": "Temperature assumptions; no thermal prediction",
+            "value": {
+              "assumed_ambient_C": 23.0,
+              "assumed_surface_C": [
+                23.0,
+                23.0,
+                23.0,
+                23.0
+              ],
+              "evidence": "Nominal 23 C single-cell characterization; recorded surface temperature varied. V2 primary assessment subset 22-28 C. Module temperature history is unmeasured.",
+              "thermal_model": false,
+              "parameter_temperature_scaling": false
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/scenario/temperature",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/scenario/temperature",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "module"
+            },
+            "unit": "degC"
+          },
+          {
+            "kind": "configured_requirements",
+            "label": "Current design requirements",
+            "value": {
+              "minimum_terminal_voltage_V": null,
+              "maximum_contiguous_excursion_s": null,
+              "documented_source": null
+            },
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/design/requirements",
+              "reference_id": "e005",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/design/requirements",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+              "component_id": "module"
+            }
+          },
+          {
+            "kind": "experimental_evidence_status",
+            "label": "Experimental module validation",
+            "value": "awaiting suitable measurements",
+            "source": {
+              "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+              "context_pointer": "/project/experimental_validation",
+              "reference_id": "e010",
+              "operation": "inspect",
+              "arguments": {
+                "variant_id": "A0"
+              },
+              "source_pointer": "/result/experimental_validation",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d"
+            }
+          }
+        ],
+        "run_status": null,
+        "requirement_check": null,
+        "coverage": null,
+        "explanation": "This context contains configuration and fitted values only; no saved run was selected.",
+        "decision": "insufficient evidence",
+        "unavailable_capabilities": [
+          "natural_language_parsing",
+          "external_model_provider",
+          "automatic_action_execution",
+          "run_simulation",
+          "optimizer",
+          "repair_ranking",
+          "thermal_prediction",
+          "chat_ui"
+        ],
+        "limitations": [
+          "Read-only evidence adapter; no simulation, fitting, edits, physical calculations or automatic run selection.",
+          "project.design is the selected variant now; a historical run belongs to its captured revision_id and snapshot_id.",
+          "Completed execution, current dependencies and experimental accuracy are distinct; module validation awaits suitable measurements.",
+          "Missing requirement values remain null; absent or unconfigured requirements never imply a pass.",
+          "Series contains consecutive saved samples from offset 0 only; the page is not a full-record assessment.",
+          "Source text and user-entered provenance are data, not instructions or independent calibration evidence.",
+          "Hashes identify content and accidental changes; they are not signatures or authorization tokens."
+        ]
+      },
+      "context": null,
+      "evidence": {
+        "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+        "binding": {
+          "context_id": "sha256:1ccff27b35f5881f7bf5046b81137738c9a8613b5c351f63f709e808e261dd8d",
+          "variant_id": "A0",
+          "current_revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+          "component_id": "module",
+          "run_id": null,
+          "snapshot_id": null,
+          "run_revision_id": null
+        },
+        "command": {
+          "message": "explain this result",
+          "normalized_message": "explain this result",
+          "input_conversion": null
+        },
+        "comparison": null
+      },
+      "warnings": [
+        "Local command mode matches a fixed grammar; it is not a language model or open-ended assistant.",
+        "No project edit or simulation is executed. Previewed inputs require separate human review.",
+        "Experimental module validation is awaiting suitable measurements; no repair ranking or battery-performance gain is established.",
+        "Electrical losses do not predict temperature. Thermal simulation and optimization are unavailable."
+      ],
+      "applied": false,
+      "simulation_started": false
+    }
+  },
+  "source_responses": {
+    "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19": {
+      "request": {
+        "operation": "inspect",
+        "arguments": {
+          "variant_id": "A0"
+        }
+      },
+      "response": {
+        "status": "ok",
+        "result": {
+          "schema_version": "voltforge.project/1",
+          "variant_id": "A0",
+          "name": "Reference A0",
+          "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+          "design": {
+            "schema_version": "voltforge.design/1",
+            "topology": "1s4p same-side-terminal ladder",
+            "nodes": [
+              "p1",
+              "p2",
+              "p3",
+              "p4",
+              "n1",
+              "n2",
+              "n3",
+              "n4"
+            ],
+            "terminals": {
+              "positive": "p1",
+              "negative": "n1",
+              "voltage_reference": "n1"
+            },
+            "cells": {
+              "cell_1": {
+                "id": "cell_1",
+                "type": "cell",
+                "identity": "P7",
+                "part": "LG M50T",
+                "chemistry": "NMC",
+                "positive_node": "p1",
+                "negative_node": "n1",
+                "model": {
+                  "version": "frozen-v2",
+                  "key": "C2_rest_reference_RC",
+                  "path": "reports/improvement_v2/development/P7_models.json",
+                  "sha256": "957b7d981faab3e0032f7004193f1d2d7ebda8245c4b7c4dbd112bcb775355cf",
+                  "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+                },
+                "initial_soc": {
+                  "value": 0.7,
+                  "unit": "fraction",
+                  "classification": "assumed",
+                  "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+                },
+                "initial_polarization": {
+                  "value": 0.0,
+                  "unit": "V",
+                  "classification": "assumed",
+                  "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+                }
+              },
+              "cell_2": {
+                "id": "cell_2",
+                "type": "cell",
+                "identity": "P17",
+                "part": "LG M50T",
+                "chemistry": "NMC",
+                "positive_node": "p2",
+                "negative_node": "n2",
+                "model": {
+                  "version": "frozen-v2",
+                  "key": "C2_rest_reference_RC",
+                  "path": "reports/improvement_v2/development/P17_models.json",
+                  "sha256": "e999af2b55d2e98ca976286ab91f87ab31731227fa7ed7bf0851a100ff0fd74a",
+                  "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+                },
+                "initial_soc": {
+                  "value": 0.7,
+                  "unit": "fraction",
+                  "classification": "assumed",
+                  "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+                },
+                "initial_polarization": {
+                  "value": 0.0,
+                  "unit": "V",
+                  "classification": "assumed",
+                  "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+                }
+              },
+              "cell_3": {
+                "id": "cell_3",
+                "type": "cell",
+                "identity": "P19",
+                "part": "LG M50T",
+                "chemistry": "NMC",
+                "positive_node": "p3",
+                "negative_node": "n3",
+                "model": {
+                  "version": "frozen-v2",
+                  "key": "C2_rest_reference_RC",
+                  "path": "reports/improvement_v2/development/P19_models.json",
+                  "sha256": "15f41f7ed0049baa630728facb092d3d2f629b3d8ec5be38fa2c1388fdde988d",
+                  "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+                },
+                "initial_soc": {
+                  "value": 0.7,
+                  "unit": "fraction",
+                  "classification": "assumed",
+                  "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+                },
+                "initial_polarization": {
+                  "value": 0.0,
+                  "unit": "V",
+                  "classification": "assumed",
+                  "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+                }
+              },
+              "cell_4": {
+                "id": "cell_4",
+                "type": "cell",
+                "identity": "P13",
+                "part": "LG M50T",
+                "chemistry": "NMC",
+                "positive_node": "p4",
+                "negative_node": "n4",
+                "model": {
+                  "version": "frozen-v2",
+                  "key": "C2_rest_reference_RC",
+                  "path": "reports/improvement_v2/development/P13_models.json",
+                  "sha256": "c4f462d1ae6a08756fe61af25d10a7a3623c632833b3ae24ef1556db3b77bfe0",
+                  "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+                },
+                "initial_soc": {
+                  "value": 0.7,
+                  "unit": "fraction",
+                  "classification": "assumed",
+                  "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+                },
+                "initial_polarization": {
+                  "value": 0.0,
+                  "unit": "V",
+                  "classification": "assumed",
+                  "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+                }
+              }
+            },
+            "connections": {
+              "rail_p_1": {
+                "id": "rail_p_1",
+                "type": "rail_segment",
+                "rail": "positive",
+                "node_a": "p1",
+                "node_b": "p2",
+                "resistance": {
+                  "value": 0.001,
+                  "unit": "ohm",
+                  "classification": "assumed",
+                  "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+                }
+              },
+              "rail_p_2": {
+                "id": "rail_p_2",
+                "type": "rail_segment",
+                "rail": "positive",
+                "node_a": "p2",
+                "node_b": "p3",
+                "resistance": {
+                  "value": 0.001,
+                  "unit": "ohm",
+                  "classification": "assumed",
+                  "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+                }
+              },
+              "rail_p_3": {
+                "id": "rail_p_3",
+                "type": "rail_segment",
+                "rail": "positive",
+                "node_a": "p3",
+                "node_b": "p4",
+                "resistance": {
+                  "value": 0.001,
+                  "unit": "ohm",
+                  "classification": "assumed",
+                  "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+                }
+              },
+              "rail_n_1": {
+                "id": "rail_n_1",
+                "type": "rail_segment",
+                "rail": "negative",
+                "node_a": "n1",
+                "node_b": "n2",
+                "resistance": {
+                  "value": 0.001,
+                  "unit": "ohm",
+                  "classification": "assumed",
+                  "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+                }
+              },
+              "rail_n_2": {
+                "id": "rail_n_2",
+                "type": "rail_segment",
+                "rail": "negative",
+                "node_a": "n2",
+                "node_b": "n3",
+                "resistance": {
+                  "value": 0.001,
+                  "unit": "ohm",
+                  "classification": "assumed",
+                  "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+                }
+              },
+              "rail_n_3": {
+                "id": "rail_n_3",
+                "type": "rail_segment",
+                "rail": "negative",
+                "node_a": "n3",
+                "node_b": "n4",
+                "resistance": {
+                  "value": 0.001,
+                  "unit": "ohm",
+                  "classification": "assumed",
+                  "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+                }
+              }
+            },
+            "scenario": {
+              "load_profile": [
+                {
+                  "start_s": 0.0,
+                  "end_s": 360.0,
+                  "current_A": 14.55
+                }
+              ],
+              "load_unit": "A",
+              "time_unit": "s",
+              "current_polarity": "discharge_positive",
+              "load_provenance": "Proposed application requirement; discharge positive. Not an established competition requirement.",
+              "temperature": {
+                "assumed_ambient_C": 23.0,
+                "assumed_surface_C": [
+                  23.0,
+                  23.0,
+                  23.0,
+                  23.0
+                ],
+                "evidence": "Nominal 23 C single-cell characterization; recorded surface temperature varied. V2 primary assessment subset 22-28 C. Module temperature history is unmeasured.",
+                "thermal_model": false,
+                "parameter_temperature_scaling": false
+              }
+            },
+            "simulation": {
+              "dt_s": 0.25,
+              "reference_extrapolation": "forbidden",
+              "permit_unvalidated_waveform_transfer": true,
+              "thermal_model": false
+            },
+            "requirements": {
+              "minimum_terminal_voltage_V": null,
+              "maximum_contiguous_excursion_s": null,
+              "documented_source": null
+            }
+          },
+          "display": {
+            "positions": {},
+            "camera": {},
+            "selection": []
+          },
+          "editable_properties": [
+            {
+              "target": "connection",
+              "property": "resistance",
+              "unit": "ohm",
+              "ids": [
+                "rail_p_1",
+                "rail_p_2",
+                "rail_p_3",
+                "rail_n_1",
+                "rail_n_2",
+                "rail_n_3"
+              ],
+              "meaning": "Exploratory effective segment resistance, including represented contacts; no geometry rule"
+            },
+            {
+              "target": "cell",
+              "property": "initial_soc",
+              "unit": "fraction",
+              "ids": [
+                "cell_1",
+                "cell_2",
+                "cell_3",
+                "cell_4"
+              ],
+              "meaning": "Relative to fixed rested-reference coordinate; not a measured SOC"
+            },
+            {
+              "target": "cell",
+              "property": "initial_polarization",
+              "unit": "V",
+              "ids": [
+                "cell_1",
+                "cell_2",
+                "cell_3",
+                "cell_4"
+              ],
+              "meaning": "Explicit initial RC state assumption"
+            },
+            {
+              "target": "scenario",
+              "property": "load_profile",
+              "unit": "A,s",
+              "ids": [
+                "module"
+              ],
+              "meaning": "Contiguous piecewise constant current, discharge positive"
+            },
+            {
+              "target": "scenario",
+              "property": "temperature",
+              "unit": "degC",
+              "ids": [
+                "module"
+              ],
+              "meaning": "Assumed ambient/surface metadata; no thermal evolution or parameter scaling"
+            },
+            {
+              "target": "simulation",
+              "property": "dt_s",
+              "unit": "s",
+              "ids": [
+                "module"
+              ],
+              "meaning": "Maximum held-current integration step"
+            },
+            {
+              "target": "requirements",
+              "property": "voltage_requirement",
+              "unit": "V,s",
+              "ids": [
+                "module"
+              ],
+              "meaning": "Minimum voltage, maximum contiguous excursion and source; null means unconfigured"
+            }
+          ],
+          "fitted_parameters": {
+            "cell_1": {
+              "R0_ohm": 0.024483436683240944,
+              "R1_ohm": 0.02615665776932287,
+              "tau_s": 62.50473376572111,
+              "capacity_Ah": 4.848634393002297,
+              "classification": "R0/R1/tau fitted; capacity derived from recorded C/20 integration; all read-only"
+            },
+            "cell_2": {
+              "R0_ohm": 0.025072961234224072,
+              "R1_ohm": 0.0264291844171237,
+              "tau_s": 62.50473376572111,
+              "capacity_Ah": 4.844352468565053,
+              "classification": "R0/R1/tau fitted; capacity derived from recorded C/20 integration; all read-only"
+            },
+            "cell_3": {
+              "R0_ohm": 0.024822698391602116,
+              "R1_ohm": 0.02462194330435891,
+              "tau_s": 62.50473376572111,
+              "capacity_Ah": 4.904010427336018,
+              "classification": "R0/R1/tau fitted; capacity derived from recorded C/20 integration; all read-only"
+            },
+            "cell_4": {
+              "R0_ohm": 0.02473126364758034,
+              "R1_ohm": 0.025092213605044635,
+              "tau_s": 72.08434242404265,
+              "capacity_Ah": 4.798108715840201,
+              "classification": "R0/R1/tau fitted; capacity derived from recorded C/20 integration; all read-only"
+            }
+          },
+          "output_components": [
+            "module",
+            "cell_1",
+            "cell_2",
+            "cell_3",
+            "cell_4",
+            "rail_p_1",
+            "rail_p_2",
+            "rail_p_3",
+            "rail_n_1",
+            "rail_n_2",
+            "rail_n_3"
+          ],
+          "variants": {
+            "A0": {
+              "name": "Reference A0",
+              "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d"
+            }
+          },
+          "runs": [],
+          "current_run_ids": [],
+          "current_runs_by_scenario": {},
+          "capabilities": {
+            "electrical": true,
+            "thermal": false,
+            "general_cad": false,
+            "optimizer": false,
+            "ai_physics": false
+          },
+          "experimental_validation": "awaiting suitable measurements"
+        }
+      }
+    }
+  },
+  "verified_claims": [
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_1/identity",
+      "value": "P7"
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_1/model",
+      "value": {
+        "version": "frozen-v2",
+        "key": "C2_rest_reference_RC",
+        "path": "reports/improvement_v2/development/P7_models.json",
+        "sha256": "957b7d981faab3e0032f7004193f1d2d7ebda8245c4b7c4dbd112bcb775355cf",
+        "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_1/initial_soc",
+      "value": {
+        "value": 0.7,
+        "unit": "fraction",
+        "classification": "assumed",
+        "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_1/initial_polarization",
+      "value": {
+        "value": 0.0,
+        "unit": "V",
+        "classification": "assumed",
+        "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_1/R0_ohm",
+      "value": 0.024483436683240944
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_1/R1_ohm",
+      "value": 0.02615665776932287
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_1/tau_s",
+      "value": 62.50473376572111
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_1/capacity_Ah",
+      "value": 4.848634393002297
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_2/identity",
+      "value": "P17"
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_2/model",
+      "value": {
+        "version": "frozen-v2",
+        "key": "C2_rest_reference_RC",
+        "path": "reports/improvement_v2/development/P17_models.json",
+        "sha256": "e999af2b55d2e98ca976286ab91f87ab31731227fa7ed7bf0851a100ff0fd74a",
+        "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_2/initial_soc",
+      "value": {
+        "value": 0.7,
+        "unit": "fraction",
+        "classification": "assumed",
+        "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_2/initial_polarization",
+      "value": {
+        "value": 0.0,
+        "unit": "V",
+        "classification": "assumed",
+        "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_2/R0_ohm",
+      "value": 0.025072961234224072
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_2/R1_ohm",
+      "value": 0.0264291844171237
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_2/tau_s",
+      "value": 62.50473376572111
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_2/capacity_Ah",
+      "value": 4.844352468565053
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_3/identity",
+      "value": "P19"
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_3/model",
+      "value": {
+        "version": "frozen-v2",
+        "key": "C2_rest_reference_RC",
+        "path": "reports/improvement_v2/development/P19_models.json",
+        "sha256": "15f41f7ed0049baa630728facb092d3d2f629b3d8ec5be38fa2c1388fdde988d",
+        "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_3/initial_soc",
+      "value": {
+        "value": 0.7,
+        "unit": "fraction",
+        "classification": "assumed",
+        "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_3/initial_polarization",
+      "value": {
+        "value": 0.0,
+        "unit": "V",
+        "classification": "assumed",
+        "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_3/R0_ohm",
+      "value": 0.024822698391602116
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_3/R1_ohm",
+      "value": 0.02462194330435891
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_3/tau_s",
+      "value": 62.50473376572111
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_3/capacity_Ah",
+      "value": 4.904010427336018
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_4/identity",
+      "value": "P13"
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_4/model",
+      "value": {
+        "version": "frozen-v2",
+        "key": "C2_rest_reference_RC",
+        "path": "reports/improvement_v2/development/P13_models.json",
+        "sha256": "c4f462d1ae6a08756fe61af25d10a7a3623c632833b3ae24ef1556db3b77bfe0",
+        "classification": "Frozen fitted R0/R1/tau and calibration-rest reference; capacity derived from C/20 current integration. Not independent measurements of physical circuit elements or equilibrium OCV."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_4/initial_soc",
+      "value": {
+        "value": 0.7,
+        "unit": "fraction",
+        "classification": "assumed",
+        "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/cells/cell_4/initial_polarization",
+      "value": {
+        "value": 0.0,
+        "unit": "V",
+        "classification": "assumed",
+        "source": "Unverified preparation assumption after rest; SOC is relative to each fitted reference. No measured module initializer."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_4/R0_ohm",
+      "value": 0.02473126364758034
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_4/R1_ohm",
+      "value": 0.025092213605044635
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_4/tau_s",
+      "value": 72.08434242404265
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/fitted_parameters/cell_4/capacity_Ah",
+      "value": 4.798108715840201
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/connections/rail_p_1/resistance",
+      "value": {
+        "value": 0.001,
+        "unit": "ohm",
+        "classification": "assumed",
+        "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/connections/rail_p_2/resistance",
+      "value": {
+        "value": 0.001,
+        "unit": "ohm",
+        "classification": "assumed",
+        "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/connections/rail_p_3/resistance",
+      "value": {
+        "value": 0.001,
+        "unit": "ohm",
+        "classification": "assumed",
+        "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/connections/rail_n_1/resistance",
+      "value": {
+        "value": 0.001,
+        "unit": "ohm",
+        "classification": "assumed",
+        "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/connections/rail_n_2/resistance",
+      "value": {
+        "value": 0.001,
+        "unit": "ohm",
+        "classification": "assumed",
+        "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/connections/rail_n_3/resistance",
+      "value": {
+        "value": 0.001,
+        "unit": "ohm",
+        "classification": "assumed",
+        "source": "Proposed segment values, including whatever contact resistance the segment represents; not measured hardware. No extra terminal leads are modeled."
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/scenario/load_profile",
+      "value": [
+        {
+          "start_s": 0.0,
+          "end_s": 360.0,
+          "current_A": 14.55
+        }
+      ]
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/scenario/temperature",
+      "value": {
+        "assumed_ambient_C": 23.0,
+        "assumed_surface_C": [
+          23.0,
+          23.0,
+          23.0,
+          23.0
+        ],
+        "evidence": "Nominal 23 C single-cell characterization; recorded surface temperature varied. V2 primary assessment subset 22-28 C. Module temperature history is unmeasured.",
+        "thermal_model": false,
+        "parameter_temperature_scaling": false
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/design/requirements",
+      "value": {
+        "minimum_terminal_voltage_V": null,
+        "maximum_contiguous_excursion_s": null,
+        "documented_source": null
+      }
+    },
+    {
+      "source_key": "b81b08b724a347116118fd31ab6b2417cb1e99ad2e3306eb8c32612fa0ea2f19",
+      "source_pointer": "/result/experimental_validation",
+      "value": "awaiting suitable measurements"
+    }
+  ],
+  "comparison_source": null
+}

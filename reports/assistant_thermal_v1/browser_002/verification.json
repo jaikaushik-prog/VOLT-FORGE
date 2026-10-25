@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    "Initially closed, honestly labelled local command sheet; help and configuration-only evidence work.",
+    "Actual full A0 simulation is explained with saved values and no implied requirement pass.",
+    "A delayed response cannot overwrite a later component selection.",
+    "Unsupported optimization is rejected without invented outcomes.",
+    "Command and inspector review preserve all project bytes; separate manual Apply changes only the declared input and starts no run.",
+    "Read-only comparison preserves explicit A0/A1 identities, backend deltas and limitations; four viewport widths have no document overflow.",
+    "Changing comparison selections invalidates the previous comparison response.",
+    "An external design revision rejects inspector review of a stale command without further writes."
+  ],
+  "browser_errors": [],
+  "expected_rejections": 2,
+  "external_ai_calls": 0,
+  "scope": "Software checks on reference project; synthetic concurrent-edit fixture; no new measured outcomes",
+  "screenshots": {
+    "01_configuration.png": "62b1f06609d89bdf6e8113e8ab4568f3e490c2f09417966528221b3f774eadfb",
+    "02_command_preview.png": "0ff6ebd79ed4ae0c8ece0108195f4001e97f0647d05fc0e8dfce3734774d8b06",
+    "03_compare_desktop.png": "313a33a9ae57706d6fc97ef263cf7dea3759f05b224fa8445bfa06e910dfb44d",
+    "04_compare_wide.png": "79e4615781bed488540598cc9e0443c3d1a06385744c2795658530786ae41ffa",
+    "05_compare_tablet.png": "e676f673f622648040828b9b69ab707ed4521b4662c29caa8b3240319d9e3a2a",
+    "06_compare_phone.png": "456445b47591591e73062a8e6d5fb1654dc38b7ae19e25d8b0227e1a632bd250"
+  }
+}

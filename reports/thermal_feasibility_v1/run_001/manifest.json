@@ -1,0 +1,22 @@
+{
+  "evidence_kind": "synthetic_only",
+  "input_sha256": {
+    "configs/thermal_feasibility_v1.json": "3d03aa86b85b6b2d6f49ebfd813c1720ba237a67e06a6546c3ae02513e797b74",
+    "reports/thermal_feasibility_v1/PROCEDURE.md": "a6a8b34b6bde372fe5815266d656b7b54b0335da37374b73c33616e18241c476",
+    "reports/thermal_feasibility_v1/SOURCE_AUDIT.md": "865e21b63dd173a2c53c7ff7f1026d0d1f32832d2fb7b042565829ed0b5ffa6a",
+    "scripts/thermal_prototype.py": "ee358da45579b4ec8c7c2d88e7fe4134ed1b57dc997afc93fac7da550b2e0a77",
+    "tests/test_thermal_prototype.py": "0b091bd00d65f4e458f2314197823150f3e77e74b3375455d89e870002a5c0a1"
+  },
+  "new_experimental_records_read": 0,
+  "output_sha256": {
+    "config_snapshot.json": "50976d0d7ffaa600a437d22c25606dfd1e05956a7186b91b82b82b92b744b042",
+    "series.csv": "6329795920dbdc1fd7cca8486fd2dd7a0af63ca1c3ecd422b414214e77143532",
+    "series_fine.csv": "52bec0ce233f4d25c5069ec747ddef4ad2c17a8f8a22ca9c233207de2504cfe4",
+    "summary.json": "1025f33df386ee4bfdd316a0b93fd9e8191b751c1fda50421de2adefffd244b2",
+    "synthetic_heat_balance.png": "215bc5edbf23d8b496c90c878e41f9c2883f5b5754098b20be7cdcb2e18a51e2"
+  },
+  "protected_records_opened": 0,
+  "python": "3.12.3",
+  "schema_version": 1,
+  "source_note": "Only synthetic configuration used numerically; online metadata/literature audit is documentary."
+}

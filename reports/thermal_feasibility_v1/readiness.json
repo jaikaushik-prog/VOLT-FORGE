@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "scope": "standalone synthetic one-node heat-balance prototype",
+  "software_status": "implemented and mathematically tested",
+  "experimental_status": "awaiting suitable measurements",
+  "editor_thermal_capability": "unavailable",
+  "electrical_coupling": false,
+  "real_cell_applicability": "not established",
+  "LG_M50T_heat_capacity_J_per_K": null,
+  "module_conductance_W_per_K": null,
+  "module_heat_input_W": null,
+  "decision_status": "insufficient evidence",
+  "missing_evidence": [
+    "Exact-part specimen/preparation/state linkage",
+    "Applicable calibrated representative and ambient temperature histories",
+    "Defined cooling geometry and boundary/fixture heat paths",
+    "Independently known heat source or supported complete heat-generation model",
+    "Complete allocated transients and untouched matching assessment sequences",
+    "Evidence that spatial gradients are acceptable for the intended decision"
+  ],
+  "next_public_data_lead": {
+    "url": "https://zenodo.org/records/6421061",
+    "title": "Cell Cooling Coefficient Data for Base Cooled LG M50T & Samsung 30Q",
+    "inspected": "landing-page metadata only",
+    "numerical_archive_opened": false,
+    "next_step": "Documentation and file inventory, then prospective allocation if usable"
+  },
+  "synthetic_test_count": 39,
+  "verified_synthetic_rows": 242,
+  "decision_report": "reports/thermal_feasibility_v1/DECISION.md"
+}

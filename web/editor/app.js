@@ -1,5 +1,7 @@
 import {escapeHTML as h, chooseRun, viewLabel, bounds, RequestEpoch, number as n, finiteInput, failureMessage} from './state.mjs';
 import {createEvidencePanel, previewMarkup} from './evidence-panel.mjs';
+import {createAssistantPanel} from './assistant-panel.mjs';
+import {presentPreview, selectionKey} from './evidence-state.mjs';
 
 const $ = id => document.getElementById(id);
 const ids = ['cell_1','cell_2','cell_3','cell_4'];
@@ -14,6 +16,17 @@ state.loading=false;state.previewEvidence=null;
 const evidence=createEvidencePanel({element:$('panel-evidence'),request,
   getSelection:()=>state.info?{variant_id:state.variant,revision_id:state.info.revision_id,component_id:state.selected,run_id:state.run?.run_id||null}:null,
   isReady:()=>Boolean(state.info)&&!state.busy&&!state.loading});
+const assistant=createAssistantPanel({element:$('assistant-panel'),toggle:$('assistant-toggle'),request,
+  getSelection:commandSelection,getComparison:commandComparison,
+  isReady:()=>Boolean(state.info)&&!state.busy&&!state.action&&!state.loading,
+  onPreview:reviewAssistantProposal,onEvidence:()=>$('tab-evidence').click(),
+  onChooseComparison:()=>{$('tab-compare').click();$('compare-first').focus();}});
+
+function commandSelection(){return state.info?{variant_id:state.variant,revision_id:state.info.revision_id,component_id:state.selected,run_id:state.run?.run_id||null}:null;}
+function commandComparison(){
+  const rows=[$('compare-first').value,$('compare-second').value].map(id=>state.catalog.find(r=>r.run_id===id));
+  return rows.every(Boolean)?{first:{variant_id:rows[0].variant_id,run_id:rows[0].run_id},second:{variant_id:rows[1].variant_id,run_id:rows[1].run_id}}:null;
+}
 
 function notice(message, kind='') { $('notice').textContent=message; $('notice').className='notice '+kind; $('notice').setAttribute('role',kind==='error'?'alert':'status'); }
 async function request(path, body) {
@@ -31,6 +44,7 @@ function buttons() {
   $('run-select').disabled=locked;
   $('run').textContent=state.busy?'Working…':'▷ Run simulation';
   $('make-export').disabled=locked;
+  assistant.sync();
 }
 async function action(fn) {
   if(state.action||state.busy) return;
@@ -41,7 +55,7 @@ async function action(fn) {
 
 async function refresh(variant=state.variant, preferred='') {
   const epoch=designEpoch.begin(); seriesEpoch.begin();
-  state.loading=true;evidence.changed({reload:false});invalidatePreview();
+  state.loading=true;evidence.changed({reload:false});assistant.changed();invalidatePreview();
   state.run=null;state.series=null;state.preview=null; renderResults(); drawCanvas();
   $('comparison').textContent='';
   const info=await api('inspect',{variant_id:variant});
@@ -56,7 +70,7 @@ async function refresh(variant=state.variant, preferred='') {
   if(picked) await loadRun(picked);
   if(!designEpoch.current(epoch)) return;
   await catalogRuns(epoch);
-  evidence.refreshIfVisible();
+  evidence.refreshIfVisible();assistant.changed();
 }
 async function catalogRuns(epoch=designEpoch.value) {
   const infos=await Promise.all(Object.keys(state.info.variants).map(variant_id=>api('inspect',{variant_id})));
@@ -77,7 +91,7 @@ function renderNavigation() {
   $('components').innerHTML=items.map(([id,label,c])=>`<button class="nav-item component ${id===state.selected?'active':''}" data-component="${h(id)}"><i class="dot c${c}"></i>${h(label)}</button>`).join('');
   $('mobile-component').innerHTML=items.map(([id,label])=>`<option value="${h(id)}" ${id===state.selected?'selected':''}>${h(label)}</option>`).join('');
 }
-function selectComponent(id) { state.selected=id;state.preview=null;renderNavigation();renderInspector();drawCanvas();evidence.changed(); }
+function selectComponent(id) { state.selected=id;state.preview=null;renderNavigation();renderInspector();drawCanvas();evidence.changed();assistant.changed(); }
 
 function position(i) { return state.display?.positions[ids[i]] || [190+i*180,155]; }
 function drawCanvas() {
@@ -166,12 +180,36 @@ async function applyEdit() {
   notice('Revision saved. Previous runs are retained; outdated results must be rerun for this design.');
 }
 
+async function reviewAssistantProposal(result,isCurrent) {
+  if(state.busy||state.action||state.loading)throw new Error('Wait for the current operation to finish.');
+  const selection=commandSelection(),edit=result.payload.proposed_edit;
+  if(selectionKey(selection)!==selectionKey(result.selection))throw new Error('Selection changed. Review the command again.');
+  const model=presentPreview(result.payload,selection,edit);
+  if(!model.ok)throw new Error(model.warnings.join(' '));
+  const saved={context:result.context,response:result.payload,model,selection};
+  const fields=()=>JSON.stringify([...$('inspector-content').querySelectorAll('input,select,textarea')].map(e=>[e.id,e.value]));
+  const priorFields=fields();state.action=true;buttons();
+  try {
+    await evidence.revalidate(saved,edit);
+    if(!isCurrent()||selectionKey(selection)!==selectionKey(commandSelection())||priorFields!==fields())throw new Error('Command, selection or inspector changed. Review the command again.');
+    const property={resistance:'resistance',initial_soc:'soc',initial_polarization:'polarization',dt_s:'step'}[edit.property];
+    if(!property)throw new Error('This command is not supported by the inspector.');
+    $('edit-property').value=property;renderEditFields();
+    const factor={resistance:1000,initial_soc:100,initial_polarization:1000,dt_s:1}[edit.property];
+    $('edit-value').value=String(edit.value*factor);$('classification').value=edit.classification;$('edit-source').value=edit.source;
+    state.preview={variant_id:selection.variant_id,edit,expected_revision:selection.revision_id};state.previewEvidence=saved;
+    $('edit-feedback').innerHTML=previewMarkup(model);
+    notice('Command preview reviewed. Choose Apply revision to save it; run the simulation separately.');
+    $('edit-feedback').scrollIntoView({block:'center'});
+  }finally{state.action=false;buttons();}
+}
+
 function renderRunPicker() {
   $('run-select').innerHTML='<option value="">Select a saved run</option>'+state.info.runs.map(r=>`<option value="${h(r.run_id)}">${h(viewLabel(r))}</option>`).join('');
 }
 async function loadRun(run_id,offset=0) {
   const epoch=seriesEpoch.begin(),variant=state.variant;
-  state.loading=true;invalidatePreview();evidence.changed({reload:false});
+  state.loading=true;invalidatePreview();evidence.changed({reload:false});assistant.changed();
   state.run=null;state.series=null;state.index=0;renderResults();drawCanvas();
   if(!run_id){state.loading=false;evidence.refreshIfVisible();return;}
   $('run-state').textContent='Loading this run’s saved outputs…';
@@ -238,7 +276,7 @@ async function waitJob(id) {
   }notice(`${job.operation==='run'?'Simulating electrical behaviour':'Preparing reproducible export'}… ${Math.max(0,Math.round(Date.now()/1000-job.started_at))} s elapsed.`, 'busy');await new Promise(resolve=>setTimeout(resolve,600));}
 }
 async function runSimulation() {
-  state.busy=true;buttons();const variant=state.variant;
+  state.busy=true;assistant.changed();buttons();const variant=state.variant;
   try{const {job_id}=await request('/api/jobs',{operation:'run',arguments:{variant_id:variant,expected_revision:state.info.revision_id,scenario_id:state.scenario}});
     const result=await waitJob(job_id);
     if(state.variant===variant) await refresh(variant,result.run_id);else await catalogRuns();
@@ -261,7 +299,7 @@ async function exportRuns() {
   const checked=[...$('export-choices').querySelectorAll('input:checked')].map(el=>el.value);
   if(!checked.length)throw new Error('Select at least one saved run.');
   const selections=checked.map(id=>state.catalog.find(r=>r.run_id===id)).map(r=>({variant_id:r.variant_id,run_id:r.run_id}));
-  state.busy=true;buttons();
+  state.busy=true;assistant.changed();buttons();
   try{const {job_id}=await request('/api/jobs',{operation:'export',arguments:{selections}});const result=await waitJob(job_id);
     $('download').innerHTML=`<a href="${h(result.download_url)}" download>Download result package (.zip)</a><p>Includes replay.py and manifest hashes. No original raw archive.</p>`;notice('Reproducible package ready. Use the download link to save it.');
   }finally{state.busy=false;buttons();}
@@ -313,7 +351,7 @@ for(const name of ['results','evidence','compare']) $('tab-'+name).addEventListe
 });
 document.querySelector('.tabs').addEventListener('keydown',e=>{const tabs=[...document.querySelectorAll('[role=tab]')];let i=tabs.indexOf(document.activeElement);if(i<0)return;if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();i=e.key==='Home'?0:e.key==='End'?2:(i+(e.key==='ArrowRight'?1:2))%3;tabs[i].focus();tabs[i].click();}});
 $('compare').addEventListener('click',()=>action(async()=>{ $('comparison').textContent='';await compareRuns(); }));
-for(const id of ['compare-first','compare-second'])$(id).addEventListener('change',()=>{$('comparison').textContent='';});
+for(const id of ['compare-first','compare-second'])$(id).addEventListener('change',()=>{$('comparison').textContent='';assistant.changed();});
 $('new-variant').addEventListener('click',()=>{let i=1;while(state.info.variants['A'+i])i++;$('variant-id').value='A'+i;$('variant-name').value='Connection study';$('variant-error').textContent='';$('variant-dialog').showModal();$('variant-id').focus();});
 $('cancel-variant').addEventListener('click',()=>$('variant-dialog').close());
 $('variant-form').addEventListener('submit',e=>{e.preventDefault();action(async()=>{try{const id=$('variant-id').value;await api('create_variant',{source_variant:state.variant,variant_id:id,name:$('variant-name').value,expected_revision:state.info.revision_id});$('variant-dialog').close();await refresh(id);notice(`Created ${id}. Inherited results are outdated for this variant; run it to obtain owned results.`);}catch(err){$('variant-error').textContent=err.message;}});});
@@ -323,5 +361,5 @@ $('make-export').addEventListener('click',()=>action(async()=>{try{$('export-err
 try {
   const session=await request('/api/session');state.token=session.token;$('project-location').textContent=session.project;
   await refresh();notice('Reference project ready. Select a component to inspect it, or run the proposed operating case.');
-  if(session.active_job){state.busy=true;buttons();try{await waitJob(session.active_job);await refresh();notice('Previous job finished. Saved runs are available.');}finally{state.busy=false;buttons();}}
+  if(session.active_job){state.busy=true;assistant.changed();buttons();try{await waitJob(session.active_job);await refresh();notice('Previous job finished. Saved runs are available.');}finally{state.busy=false;buttons();}}
 } catch(e) {notice(e.message,'error');}

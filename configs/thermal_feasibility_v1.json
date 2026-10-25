@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "model": "one_node_prescribed_heat_v1",
+  "evidence_kind": "synthetic_only",
+  "cell_identity": null,
+  "electrical_coupling": false,
+  "scenario_id": "synthetic_heating_cooling_001",
+  "description": "Arithmetic demonstration only; no applicability to LG M50T, P45B or any real battery is established.",
+  "heat_capacity_J_per_K": 100.0,
+  "conductance_W_per_K": 0.5,
+  "initial_temperature_degC": 25.0,
+  "output_step_s": 10.0,
+  "comparison_output_step_s": 2.5,
+  "profile": [
+    {"start_s": 0.0, "end_s": 120.0, "prescribed_heat_W": 2.0, "ambient_temperature_degC": 25.0},
+    {"start_s": 120.0, "end_s": 300.0, "prescribed_heat_W": 0.0, "ambient_temperature_degC": 25.0},
+    {"start_s": 300.0, "end_s": 360.0, "prescribed_heat_W": -1.0, "ambient_temperature_degC": 25.0},
+    {"start_s": 360.0, "end_s": 480.0, "prescribed_heat_W": 0.0, "ambient_temperature_degC": 30.0}
+  ],
+  "provenance": {
+    "heat_capacity_J_per_K": "Synthetic arithmetic example; not an estimate or calibration.",
+    "conductance_W_per_K": "Synthetic arithmetic example; not the published M50T base cooling coefficient.",
+    "initial_temperature_degC": "Synthetic starting condition; not a measurement.",
+    "profile": "Synthetic heat and ambient sequence, declared before execution.",
+    "output_steps": "Fixed reporting-grid consistency check; exact interval solution."
+  }
+}

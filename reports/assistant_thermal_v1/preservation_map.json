@@ -1,0 +1,18 @@
+{
+  "README.md": {
+    "preserved_path": "reports/assistant_thermal_v1/previous/README.md",
+    "sha256": "4b988d09f3d731afde56ab735c237d420b7b0253f3fc8bf06c48ba5724daccdd"
+  },
+  "scripts/run_editor.py": {
+    "preserved_path": "reports/assistant_thermal_v1/previous/scripts/run_editor.py",
+    "sha256": "3095b037096b29aea0166bca3ecc3118fc35695c29bcd44bcb8e40878decdc99"
+  },
+  "web/editor/app.js": {
+    "preserved_path": "reports/assistant_thermal_v1/previous/web/editor/app.js",
+    "sha256": "45681269fa0b9f465f8929311a785c4704af741457883b42a2b9ff800b9a3d85"
+  },
+  "web/editor/index.html": {
+    "preserved_path": "reports/assistant_thermal_v1/previous/web/editor/index.html",
+    "sha256": "1d45b02f8f9dedd0de34d4d7cfd5084ceec8934122197b1d716d2577fe9197cd"
+  }
+}

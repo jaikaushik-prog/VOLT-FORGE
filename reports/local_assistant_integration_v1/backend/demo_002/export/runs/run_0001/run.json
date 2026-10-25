@@ -1,0 +1,17 @@
+{
+  "run_id": "run_0001",
+  "variant_id": "A0",
+  "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+  "scenario_id": "nominal",
+  "snapshot_id": "57e1d363b61bbe026b02c5a9cb2718994bf0672c1ad2120b555e03431016d5e2",
+  "software_id": "5e7b36e03cfcf526d841d025ff49834bd9905fcff5f9731d6424be1580d38ac1",
+  "execution_status": "completed",
+  "error": null,
+  "created_utc": "2026-10-25T19:37:47.361404+00:00",
+  "artifacts": {
+    "configuration.json": "c121b8badca4b64ddaba4a1a5f5d10f06bde691ec9d43629d7b87b05c5dc1494",
+    "snapshot.json": "42d586e45d8efefe51253b58046902f457652fedb0e9492f706365f6cc6c2ff7",
+    "summary.json": "bbf340223f95866ca8f630e685f4ddcb9a0ea455c462577b51ea7fd2dd8dc64d",
+    "trajectory.csv": "0bd974aa7bff33739dc027bfbd28b99086f319172d36cf8c8eb0eef4b44248fd"
+  }
+}

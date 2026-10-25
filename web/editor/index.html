@@ -2,10 +2,10 @@
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VOLT-FORGE · Four-cell workspace</title><link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/evidence.css"><script type="module" src="/app.js"></script></head>
+<link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/evidence.css"><link rel="stylesheet" href="/assistant.css"><script type="module" src="/app.js"></script></head>
 <body>
 <a class="skip" href="#canvas">Skip to circuit</a>
-<header class="topbar"><a class="brand" href="/" aria-label="VOLT-FORGE workspace"><img src="/favicon.svg" alt="" width="30" height="30">VOLT-FORGE</a><span class="project-title">Four-cell workspace</span><span class="mode">Electrical</span><div class="actions"><a class="compact" href="/measurements">Measurements</a><button id="export" disabled>Export results</button><button id="run" class="primary" disabled><span aria-hidden="true">▷</span> Run simulation</button></div></header>
+<header class="topbar"><a class="brand" href="/" aria-label="VOLT-FORGE workspace"><img src="/favicon.svg" alt="" width="30" height="30">VOLT-FORGE</a><span class="project-title">Four-cell workspace</span><span class="mode">Electrical</span><div class="actions"><button id="assistant-toggle" aria-expanded="false" aria-controls="assistant-panel">Commands</button><a class="compact" href="/measurements">Measurements</a><button id="export" disabled>Export results</button><button id="run" class="primary" disabled><span aria-hidden="true">▷</span> Run simulation</button></div></header>
 <div id="notice" class="notice" role="status" aria-live="polite">Connecting to the local project…</div>
 <main class="workbench">
 <aside class="navigator" aria-label="Project navigation"><div class="section-title"><h2>Design variants</h2><button id="new-variant" class="small" disabled aria-label="Create variant">+</button></div><div id="variants"></div><label class="mobile-component">Inspect component<select id="mobile-component"></select></label><h2 class="component-heading">Components</h2><div id="components"></div><div class="nav-foot"><strong>LG M50T / NMC</strong><span>1s4p · same-side terminals</span><span>Frozen v2 cell models</span><details><summary>Available capabilities</summary><p>Electrical simulation only. Thermal simulation, arbitrary rewiring and optimization are unavailable.</p></details></div></aside>
@@ -21,6 +21,7 @@
 </section></section>
 <aside class="inspector" aria-label="Component inspector"><div class="section-title"><h2>Inspector</h2><span class="small-label">Electrical</span></div><div id="inspector-content"></div></aside>
 </main><footer><span>Simulation workspace · Experimental module validation pending</span><span id="project-location"></span></footer>
+<aside id="assistant-panel" hidden aria-labelledby="assistant-title"></aside>
 <dialog id="variant-dialog"><form id="variant-form"><h2>Create design variant</h2><p>Start from the selected design. Inherited runs remain historical.</p><label>Variant ID<input id="variant-id" required maxlength="48" pattern="[A-Za-z][A-Za-z0-9_\-]*"></label><label>Name<input id="variant-name" required maxlength="120"></label><p id="variant-error" class="error" role="alert"></p><div class="dialog-actions"><button type="button" id="cancel-variant">Cancel</button><button type="submit" class="primary">Create variant</button></div></form></dialog>
 <dialog id="export-dialog"><h2>Export a reproducible package</h2><p>Includes selected snapshots, configurations, electrical outputs, evidence and replay code. Multiple runs must have comparable operating conditions.</p><div id="export-choices"></div><p id="export-error" class="error" role="alert"></p><div id="download"></div><div class="dialog-actions"><button id="close-export">Close</button><button id="make-export" class="primary">Prepare download</button></div></dialog>
 </body></html>

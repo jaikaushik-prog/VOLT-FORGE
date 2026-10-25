@@ -1,0 +1,8 @@
+{
+  "baseline": "Frozen LG M50T v2 A0, four cells, same-side 1s4p ladder, 14.55 A for 360 s",
+  "alternative": "A1: explicitly proposed positive rail 1 resistance 0.5 mOhm; all operating conditions unchanged",
+  "requirements": "Minimum voltage, excursion duration and documented application source remain unset",
+  "preparation": "Only the orchestration script creates variants, applies edits, runs simulations and exports",
+  "command_mode": "Deterministic exact commands; explain/preview/compare read existing backend evidence",
+  "interpretation": "Simulation comparison, not validated repair, module accuracy or battery-performance gain"
+}

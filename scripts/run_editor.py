@@ -21,16 +21,19 @@ from voltforge.project import Project, dispatch
 from measurement_viewer import MeasurementStore, MeasurementError
 from copilot_contract import handle_request as evidence_request, unique_object, MAX_REQUEST_BYTES
 from evidence_context import build_context
+from local_assistant import handle_command
 
 ASSETS = ROOT / 'web/editor'
 OPERATIONS = {'inspect', 'validate_edit', 'apply_edit', 'create_variant', 'update_display', 'get_run', 'series', 'compare'}
 MUTATIONS = {'apply_edit', 'create_variant', 'update_display'}
 EVIDENCE_CONTEXT = '/api/evidence/context'
 EVIDENCE_REQUEST = '/api/evidence/request'
+ASSISTANT_REQUEST = '/api/assistant/request'
 STATIC = {'/': 'index.html', '/index.html': 'index.html', '/style.css': 'style.css',
           '/app.js': 'app.js', '/state.mjs': 'state.mjs', '/favicon.svg': 'favicon.svg',
           '/evidence-panel.mjs': 'evidence-panel.mjs', '/evidence-state.mjs': 'evidence-state.mjs',
           '/evidence.css': 'evidence.css',
+          '/assistant-panel.mjs': 'assistant-panel.mjs', '/assistant.css': 'assistant.css',
           '/measurements': 'measurements.html', '/measurements.js': 'measurements.js', '/measurements.css': 'measurements.css'}
 
 
@@ -280,6 +283,13 @@ class Handler(BaseHTTPRequestHandler):
                 parse_constant=lambda value: (_ for _ in ()).throw(ValueError('Nonfinite JSON')))
         except (ValueError, UnicodeDecodeError, RecursionError) as exc:
             return self.send_json(error('invalid_request', str(exc)), 400)
+        if path == ASSISTANT_REQUEST:
+            with self.server.gate:
+                if self.server.active_job:
+                    return self.send_json(error('conflict',
+                        'A job is running. Wait before using local commands.'), 409)
+                response = handle_command(self.server.project, request)
+            return self.send_json(response, evidence_http_status(response))
         if path in (EVIDENCE_CONTEXT, EVIDENCE_REQUEST):
             if path == EVIDENCE_CONTEXT and (not isinstance(request, dict)
                     or set(request) != {'variant_id', 'run_id', 'component_id', 'limit'}):

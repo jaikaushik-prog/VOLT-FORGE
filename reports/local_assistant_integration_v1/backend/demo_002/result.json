@@ -1,0 +1,119 @@
+{
+  "checks": {
+    "configuration_has_no_predicted_result": true,
+    "unset_requirement_not_pass": true,
+    "run_binding_matches_snapshot": true,
+    "preview_is_not_execution_or_prediction": true,
+    "preview_matches_declared_edit": true,
+    "changed_revision_rejects_old_selection": true,
+    "comparison_uses_same_conditions": true,
+    "comparison_is_unranked_simulation": true,
+    "command_cannot_run_simulation": true,
+    "export_keeps_validation_pending": true,
+    "both_exported_runs_reproduce": true,
+    "A0_remains_current": true
+  },
+  "read_only_checks": [
+    {
+      "command": "01_configuration",
+      "unchanged": true,
+      "files_checked": 16,
+      "project_index_sha256": "036c48e7cef07f484210a692f6aa67755f3cc502e14ec7dae44e09824363d285"
+    },
+    {
+      "command": "03_A0_explanation",
+      "unchanged": true,
+      "files_checked": 49,
+      "project_index_sha256": "24a6240ccabb447d723aa323f01386eca1be40c1b69c1a45bee4c4a94bd01aca"
+    },
+    {
+      "command": "05_A1_preview",
+      "unchanged": true,
+      "files_checked": 49,
+      "project_index_sha256": "ab7adfb0a1c97e4eaab7ff8b87bfc0c587a0fac31a5e475eb8180af0d2a6470b"
+    },
+    {
+      "command": "07_old_selection_rejected",
+      "unchanged": true,
+      "files_checked": 50,
+      "project_index_sha256": "7d7b2fae8bd92de5972a0fe6469b04b81dfc4e1b46afdd059e45cac379538425"
+    },
+    {
+      "command": "09_compare_selected",
+      "unchanged": true,
+      "files_checked": 55,
+      "project_index_sha256": "ed6b67a5c8a35efe01aeb6ed5aaf399ecb1ad22a2e2350b531d322e79c3ce0c9"
+    },
+    {
+      "command": "10_execution_refused",
+      "unchanged": true,
+      "files_checked": 55,
+      "project_index_sha256": "ed6b67a5c8a35efe01aeb6ed5aaf399ecb1ad22a2e2350b531d322e79c3ce0c9"
+    }
+  ],
+  "claims_checked_against_backend": 133,
+  "comparison": {
+    "kind": "simulation comparison",
+    "conditions": "identical operating conditions",
+    "condition_sha256": "a3b1586df9bba0e9b347ce4965b8b9f7cd3bbe9d3793c4a4e71ac13881ef81c3",
+    "ordered_results": [
+      {
+        "variant_id": "A0",
+        "run_id": "run_0001",
+        "snapshot_id": "57e1d363b61bbe026b02c5a9cb2718994bf0672c1ad2120b555e03431016d5e2",
+        "freshness": "current",
+        "maximum_branch_current_A": 4.666863993693907,
+        "minimum_cell_voltage_V": 3.6332251643582363,
+        "minimum_terminal_voltage_V": 3.6332251643582363,
+        "mean_delivered_power_W": 53.68873711416432,
+        "delivered_net_Wh": 5.368873711416432,
+        "delivered_charge_Ah": 1.4549999999999608,
+        "cell_R0_loss_Wh": 0.1318143178985831,
+        "rail_loss_Wh": 0.03377777201462756,
+        "R1_loss_Wh": 0.0999664049669418,
+        "above_4_9A_cell_seconds": 0,
+        "requirement": "requirement not configured",
+        "decision": "insufficient evidence"
+      },
+      {
+        "variant_id": "A1",
+        "run_id": "run_0002",
+        "snapshot_id": "fb3b420d48f94d6e6380e1af819124b315a12ab420c414300e19c52683c1f1ec",
+        "freshness": "current",
+        "maximum_branch_current_A": 4.5269473627102315,
+        "minimum_cell_voltage_V": 3.63712057669394,
+        "minimum_terminal_voltage_V": 3.63712057669394,
+        "mean_delivered_power_W": 53.74432400331773,
+        "delivered_net_Wh": 5.374432400331773,
+        "delivered_charge_Ah": 1.4549999999999608,
+        "cell_R0_loss_Wh": 0.1316562854096264,
+        "rail_loss_Wh": 0.028613726967965155,
+        "R1_loss_Wh": 0.09979627097841863,
+        "above_4_9A_cell_seconds": 0,
+        "requirement": "requirement not configured",
+        "decision": "insufficient evidence"
+      }
+    ],
+    "deltas_vs_first": [
+      {
+        "run_id": "run_0002",
+        "maximum_branch_current_A": -0.13991663098367546,
+        "minimum_cell_voltage_V": 0.003895412335703785,
+        "minimum_terminal_voltage_V": 0.003895412335703785,
+        "mean_delivered_power_W": 0.05558688915341037,
+        "delivered_net_Wh": 0.005558688915340504,
+        "delivered_charge_Ah": 0.0,
+        "cell_R0_loss_Wh": -0.00015803248895671085,
+        "rail_loss_Wh": -0.005164045046662406,
+        "R1_loss_Wh": -0.00017013398852316897,
+        "above_4_9A_cell_seconds": 0
+      }
+    ],
+    "evidence": "Experimental validation awaiting suitable measurements; hypothetical changes, no repair ranking",
+    "historical_results": false
+  },
+  "experimental_module_validation": "awaiting suitable measurements",
+  "mode": "local_commands",
+  "assistant_executes_actions": false,
+  "physical_outcomes_source": "existing electrical solver only"
+}

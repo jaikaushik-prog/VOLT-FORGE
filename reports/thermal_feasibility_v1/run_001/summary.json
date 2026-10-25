@@ -1,0 +1,35 @@
+{
+  "applicability": "SYNTHETIC ONLY - no established real-cell applicability",
+  "conventions": {
+    "boundary_heat": "positive outward; negative when environment heats node",
+    "heat": "positive into node; excludes separately represented H exchange",
+    "temperature": "one lumped mathematical node, not predicted cell core/surface/maximum",
+    "transition_sample": "right-hand input at events; temperature and cumulative energy continuous"
+  },
+  "decision": "insufficient evidence for real-cell or module thermal decisions",
+  "electrical_coupling": false,
+  "evidence_kind": "synthetic_only",
+  "experimental_validation": "not performed; awaiting suitable measurements",
+  "final_outward_boundary_energy_J": -46.97816065517074,
+  "final_source_energy_J": 180.0,
+  "final_stored_energy_change_J": 226.97816065517102,
+  "final_temperature_degC": 27.26978160655171,
+  "max_absolute_energy_residual_J": 4.121147867408581e-13,
+  "maximum_sampled_temperature_degC": 27.26978160655171,
+  "minimum_sampled_temperature_degC": 25.0,
+  "model": "one_node_prescribed_heat_v1",
+  "physical_parameter_identification": "not attempted; missing applicable heat/cooling/transient evidence",
+  "reporting_grid_check": {
+    "coarse_rows": 49,
+    "fine_rows": 193,
+    "interpretation": "Exact interval solution; reporting density is not an integration convergence study",
+    "max_shared_temperature_difference_degC": 0.0,
+    "output_steps_s": [
+      10.0,
+      2.5
+    ],
+    "shared_timestamps": 49
+  },
+  "scenario_id": "synthetic_heating_cooling_001",
+  "simulation_status": "completed"
+}

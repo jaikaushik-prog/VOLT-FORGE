@@ -1,0 +1,22 @@
+{
+  "request": {
+    "message": "show evidence",
+    "selection": {
+      "variant_id": "A1",
+      "revision_id": "rev_89840ac7be400499fef25dce0354f5c3a0abd221e42954b6bd0238456c73d19d",
+      "component_id": "rail_p_1",
+      "run_id": "run_0001"
+    },
+    "comparison": null
+  },
+  "response": {
+    "status": "error",
+    "error": {
+      "code": "stale_context",
+      "message": "The selected design revision changed; reload the current selection before issuing a command"
+    }
+  },
+  "source_responses": {},
+  "verified_claims": [],
+  "comparison_source": null
+}

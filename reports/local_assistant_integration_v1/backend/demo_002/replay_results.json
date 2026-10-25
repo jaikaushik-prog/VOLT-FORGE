@@ -1,0 +1,18 @@
+[
+  {
+    "run_id": "run_0001",
+    "reproduced": true,
+    "samples": 1441,
+    "solver_status": "completed",
+    "scope": "software reproduction only",
+    "experimental_validation": "awaiting suitable measurements"
+  },
+  {
+    "run_id": "run_0002",
+    "reproduced": true,
+    "samples": 1441,
+    "solver_status": "completed",
+    "scope": "software reproduction only",
+    "experimental_validation": "awaiting suitable measurements"
+  }
+]
