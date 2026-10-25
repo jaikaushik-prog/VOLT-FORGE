@@ -1,6 +1,7 @@
 """Synthetic checks; no real unused measurement outcomes are accessed."""
 import csv
 import io
+import json
 import math
 from pathlib import Path
 import sys
@@ -140,3 +141,13 @@ def test_time_metrics_do_not_bridge_excluded_pairs():
     result = study.metrics(rows)
     assert result['covered_duration_s'] == 3
     assert result['time_rmse_mV'] == pytest.approx(1000*math.sqrt((.01+2*.04)/3))
+
+
+def test_screening_is_json_serializable_and_checks_recovery(prepared):
+    _,_,seg,pairs,base,_,groups,_ = prepared
+    _,_,diagnostics = study.summarize_gitt(base,seg,pairs)
+    result = study.screening(base,diagnostics,base,diagnostics,groups,10.,10.)
+    restored = json.loads(json.dumps(result))
+    assert restored['checks']['objective_improves_20pct'] is False
+    assert restored['checks']['late_rest_median_max_degrades_at_most_5mV'] is True
+    assert restored['all_pass'] is False

@@ -209,6 +209,7 @@ def screening(base, baseline_pairs, cv_run, cv_pairs, groups, baseline_objective
         rest_time_rmse_not_worse=cm['rest']['time_rmse_mV'] <= bm['rest']['time_rmse_mV'],
         loaded_endpoint_max_improves_20pct=maximum(c,'loaded_error_mV') <= .8*maximum(b,'loaded_error_mV'),
         late_rest_median_max_degrades_at_most_5mV=maximum(c,'late_median_difference_mV') <= maximum(b,'late_median_difference_mV')+5)
+    checks = {key: bool(value) for key, value in checks.items()}
     return dict(checks=checks, all_pass=all(checks.values()), baseline_phase_metrics=bm,
         cv_phase_metrics=cm, baseline_loaded_max_mV=maximum(b,'loaded_error_mV'),
         cv_loaded_max_mV=maximum(c,'loaded_error_mV'), baseline_late_rest_max_mV=maximum(b,'late_median_difference_mV'),

@@ -24,8 +24,13 @@
     "reports/p45b_gitt_replay_v1/run_001/primary.csv.gz": "2f97ce8b7e3c8615a74a2ddc40ba5440f9d4ecbe0087e88c98b01ecdfc5a605b",
     "reports/p45b_gitt_replay_v1/run_001/summary.json": "c1562a72682127aeaf9ba3f271e2a868662438cefffb5a6bd5314aceb51215ec",
     "reports/p45b_gitt_replay_v1/verification.json": "7cbab022910a2e693cc627ba8939700969827d287c655fe033e3df5ad26e445c",
+    "reports/p45b_identifiability_v1/IMPLEMENTATION_CORRECTION.md": "b527b3830763fabe23683bd2c43bf6bc2d19f94855d3d989a7a21505514a6b54",
     "reports/p45b_identifiability_v1/PROCEDURE.md": "6889d2e3858f3c3289d1ec7d484b9bde4c0f4f2026825b75a6a72265bbe9f324",
     "reports/p45b_identifiability_v1/pre_fit_pytest.xml": "d9249896d8a617462745de4718d4f9ca2d4409e7de75e16721be5272117ae8e4",
+    "reports/p45b_identifiability_v1/pre_fit_pytest_02.xml": "c492788824a17938fbc5355386ffd9cac99c7e10b7df168ffb960dc262452dfa",
+    "reports/p45b_identifiability_v1/previous/ae_p45b_identifiability.py": "a4e0dfa596c2fbed2739a3be8f5d6383cd36cd81797324743d73b1358f531700",
+    "reports/p45b_identifiability_v1/previous/ae_p45b_identifiability_v1.json": "c80f4e62ccd39e0aa4237ff8dc124f883e594fa78b0e02719d2d476786c8f3f4",
+    "reports/p45b_identifiability_v1/previous/test_ae_p45b_identifiability.py": "0f05e249703cdeea70ff5f9688f5a9e136120095c255acb7c37d9042417a4454",
     "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv": "7fb7e3ba700918e44f3b37e96ffcef975dbbd771d3652e76333951bed350293d",
     "reports/p45b_low_soc_v1/run_001/gitt_samples.csv": "7a2306a4746afc30bd138d9113e1f91555debf6a1ef1b2a9fdc063ea576e2ea6",
     "reports/p45b_low_soc_v1/run_001/gitt_segments.csv": "84ab839b717285efc939c92c785687bf8e9b0da5e66026f535b3162abe84083d",
@@ -33,9 +38,10 @@
     "reports/p45b_low_soc_v1/verification.json": "30eb8f6044f9172e831b159b9c3091de0781fc4663bac75a15f25fcab9e5a627",
     "reports/p45b_reproduction_v1/run_002/primary.csv": "b1c9a6ead62b1a002a94bba174b9c28609b33a1321a2399e06e554d23fc4c797",
     "scripts/ae_p45b_equations.py": "1bee15332127bfe86446d600b2af5d814e103380bb76f972748a12220500c40b",
-    "scripts/ae_p45b_identifiability.py": "a4e0dfa596c2fbed2739a3be8f5d6383cd36cd81797324743d73b1358f531700",
+    "scripts/ae_p45b_identifiability.py": "31073acb6c4acd38117009e304a4427e7ee0e4ed2bbcd7fe4b8ea8b2eedd4496",
     "scripts/ae_p45b_low_soc.py": "42129b98769e6a4e2c3c5e1b764ed4aa7fd3688c7eda03ea5579e3b8e957a936",
     "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
-    "tests/test_ae_p45b_identifiability.py": "0f05e249703cdeea70ff5f9688f5a9e136120095c255acb7c37d9042417a4454"
-  }
+    "tests/test_ae_p45b_identifiability.py": "5b4ffe4c35e22e37b5ce957435a69af3530cccee1b2f86a36bf97506f512fed7"
+  },
+  "implementation_correction": "JSON-native screening booleans only; original freeze retained under previous/"
 }

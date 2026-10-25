@@ -1,0 +1,7 @@
+{
+  "status": "incomplete",
+  "implementation_commit": "4c1353e",
+  "failure": "NumPy bool_ not JSON serializable while reporting C1 screening",
+  "candidate_stage": "C1 direct/fine solver and fit computed; C2 not started",
+  "disposition": "preserved; not a completed release or selection result; restart under corrected serialization without changing the procedure"
+}
