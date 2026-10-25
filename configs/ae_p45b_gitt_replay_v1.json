@@ -1,0 +1,24 @@
+{
+  "schema_version": "voltforge.ae_p45b_gitt_replay_allocation/1",
+  "procedure_commit": "9a40595",
+  "saved_samples": "reports/p45b_low_soc_v1/run_001/gitt_samples.csv",
+  "saved_segments": "reports/p45b_low_soc_v1/run_001/gitt_segments.csv",
+  "saved_pairs": "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv",
+  "frozen_files": {
+    "reports/p45b_gitt_replay_v1/PROCEDURE.md": "f07716c324d763b09f9ccd770d668731e91f71aeeb166df824f592ecae78dc70",
+    "reports/p45b_low_soc_v1/verification.json": "30eb8f6044f9172e831b159b9c3091de0781fc4663bac75a15f25fcab9e5a627",
+    "reports/p45b_low_soc_v1/run_001/manifest.json": "04c202328da98432bc50cbdada212a6f53c661b1a38d578ba74bde918122371f",
+    "reports/p45b_low_soc_v1/run_001/gitt_samples.csv": "7a2306a4746afc30bd138d9113e1f91555debf6a1ef1b2a9fdc063ea576e2ea6",
+    "reports/p45b_low_soc_v1/run_001/gitt_segments.csv": "84ab839b717285efc939c92c785687bf8e9b0da5e66026f535b3162abe84083d",
+    "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv": "7fb7e3ba700918e44f3b37e96ffcef975dbbd771d3652e76333951bed350293d",
+    "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
+    "scripts/ae_p45b_equations.py": "1bee15332127bfe86446d600b2af5d814e103380bb76f972748a12220500c40b",
+    "scripts/ae_p45b_low_soc.py": "42129b98769e6a4e2c3c5e1b764ed4aa7fd3688c7eda03ea5579e3b8e957a936",
+    "Molicel_INR-21700-P45B_ECM.csv": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e"
+  },
+  "new_measurement_families": 0,
+  "remaining_unopened_members": 48,
+  "remaining_unopened_filename_families": 40,
+  "validation_workbook_access": "protected_unopened",
+  "charge_optimized_table_access": "protected_unopened"
+}
