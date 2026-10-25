@@ -1,0 +1,72 @@
+{
+  "schema_version": "voltforge.p45b_local_dynamics_allocation/1",
+  "saved_samples": "reports/p45b_low_soc_v1/run_001/gitt_samples.csv",
+  "saved_segments": "reports/p45b_low_soc_v1/run_001/gitt_segments.csv",
+  "saved_pairs": "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv",
+  "saved_allocation": "reports/p45b_identifiability_v1/run_002/pair_allocation.json",
+  "parameter_table": "Molicel_INR-21700-P45B_ECM.csv",
+  "saved_replays": {
+    "primary": "reports/p45b_gitt_replay_v1/run_001/primary.csv.gz",
+    "initial_soc_minus_0p005": "reports/p45b_gitt_replay_v1/run_001/initial_soc_minus_0p005.csv.gz"
+  },
+  "selected_pair_ids": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "tau_multiplier_grid": [
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    16.0
+  ],
+  "resistance_lower_Ohm": [
+    0,
+    1e-06,
+    1e-06
+  ],
+  "resistance_upper_Ohm": [
+    0.2,
+    0.2,
+    0.2
+  ],
+  "new_measurement_families": 0,
+  "remaining_unopened_members": 48,
+  "remaining_unopened_families": 40,
+  "reserved_family": "MOLICEL_P45B_025degC_3C_Dch",
+  "reserved_family_access": "metadata only; all outcomes protected",
+  "used_1C_access": "previous report context only; no local-model transfer rule fitted",
+  "unused_LG_cells": 9,
+  "unused_FreeTwinEV_records": 13,
+  "validation_workbook_access": "protected_unopened",
+  "charge_table_access": "protected_unopened",
+  "frozen_files": {
+    "Molicel_INR-21700-P45B_ECM.csv": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e",
+    "reports/p45b_low_soc_v1/run_001/gitt_samples.csv": "7a2306a4746afc30bd138d9113e1f91555debf6a1ef1b2a9fdc063ea576e2ea6",
+    "reports/p45b_low_soc_v1/run_001/gitt_segments.csv": "84ab839b717285efc939c92c785687bf8e9b0da5e66026f535b3162abe84083d",
+    "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv": "7fb7e3ba700918e44f3b37e96ffcef975dbbd771d3652e76333951bed350293d",
+    "reports/p45b_gitt_replay_v1/run_001/primary.csv.gz": "2f97ce8b7e3c8615a74a2ddc40ba5440f9d4ecbe0087e88c98b01ecdfc5a605b",
+    "reports/p45b_gitt_replay_v1/run_001/initial_soc_minus_0p005.csv.gz": "e1e7a6fe702f367cef6f9c69a41821e01356948dd01bf93959bf3f8c89e88fe1",
+    "reports/p45b_identifiability_v1/run_002/pair_allocation.json": "cc3038904034477860e8f7e581888cfac66b46dd159391b98e0bfe2b05677d97",
+    "reports/p45b_identifiability_v1/verification.json": "96f3702489af4e63dc8b42a1a23093ce46cd2498d830f3a07a54d0f0c0f02ce4",
+    "reports/p45b_identifiability_v1/DECISION.md": "84a347b0e61cab062771fcae379eec4b3c74310d0f651af840e9087713d518cc",
+    "reports/p45b_local_dynamics_v1/PROCEDURE.md": "60e5a330428b1725730f01880be0c6f6b1c10fbfb6137f8579261edaa7a3b9ba",
+    "reports/p45b_local_dynamics_v1/pre_fit_pytest.xml": "a097fe272f1fe1654cb41dec205c18a41c3473cd51d280080b3d7c6d8213a4de",
+    "scripts/ae_p45b_identifiability.py": "31073acb6c4acd38117009e304a4427e7ee0e4ed2bbcd7fe4b8ea8b2eedd4496",
+    "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
+    "scripts/ae_p45b_equations.py": "1bee15332127bfe86446d600b2af5d814e103380bb76f972748a12220500c40b",
+    "scripts/verify_p45b_identifiability.py": "9a24a59274d1923645998a310b8285f208bc9517fb7e39e3e7a36b50442638ef",
+    "reports/parallel_engineering_v1/previous/README.md": "4f286591579b8ac6a74d581a06266045ec1873ded3c9646faf41f128b776a3af"
+  }
+}
