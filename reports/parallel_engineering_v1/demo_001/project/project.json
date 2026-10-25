@@ -1,0 +1,68 @@
+{
+  "schema_version": "voltforge.project/1",
+  "project_id": "four_cell_reference",
+  "created_utc": "2026-10-25T11:11:34.926838+00:00",
+  "assets": {
+    "base_case.json": "6d3d2f8060ec7e3aebac575b4e81feb91640facc6f773921fa242fffb680d9f4",
+    "source_manifest.json": "940ab3f4654cf07eae3651087244b2cd917ab2802f04f78cddc188ef5150e339",
+    "reference_sensitivity.npz": "f0db3feac3888fe2f0dbc9683864e8a84f9b8bcbe555f8bd153e9cab4cb9d585",
+    "scenario_plan.json": "1c6e72549b27c0a7474f286f564b1f6a786b1f39e04f838f614705d43e8abcb2",
+    "models/P7.json": "957b7d981faab3e0032f7004193f1d2d7ebda8245c4b7c4dbd112bcb775355cf",
+    "models/P17.json": "e999af2b55d2e98ca976286ab91f87ab31731227fa7ed7bf0851a100ff0fd74a",
+    "models/P19.json": "15f41f7ed0049baa630728facb092d3d2f629b3d8ec5be38fa2c1388fdde988d",
+    "models/P13.json": "c4f462d1ae6a08756fe61af25d10a7a3623c632833b3ae24ef1556db3b77bfe0",
+    "evidence/ATTRIBUTION.md": "673824e54a852e64837cd28ee9500b185691c9e8995473e76556d93fdc771678",
+    "evidence/MODEL_IMPROVEMENT_DECISION.md": "e3c8b00366eca140613c5893d27a5b2030ddcd075a74efa74541bfa363042152",
+    "evidence/REFERENCE_INITIAL_STATE_DECISION.md": "e454e09479abd11dba33197342c4b06b53c11f415bc6d9ffa60148659fe861ee",
+    "evidence/MEASUREMENT_IMPORT_SPEC.md": "155fe8770d5ded46476c42e9aa8a7598b5d0e4ef8c4f1f1263b27b558201520f",
+    "evidence/reports/reconciliation/RECONCILIATION.md": "b3b4ccaf02417765eb28d1f12c9c0960f394cd5aa2a60b2ab4a75d0c83620a5d",
+    "evidence/reports/reference_initial_state_v1/LAB_REQUEST.md": "4f215fc2c90682d60c10dcd228b5186b16ad8f1c494f7feec4f21c7ed6288ba0"
+  },
+  "variants": {
+    "A0": {
+      "name": "Reference A0",
+      "revision_id": "rev_ae0da225034beb65fb3f6efa6218f7c37dab5a479fcab5798b5ee87d19d5e1f3",
+      "run_ids": [
+        "run_0001"
+      ],
+      "inherited_run_ids": []
+    },
+    "A1": {
+      "name": "Hypothetical rail edit for context isolation",
+      "revision_id": "rev_19514a427fad4c701829168e36692f3de539205519e8699e09d93609ef7d1d58",
+      "run_ids": [],
+      "inherited_run_ids": [
+        "run_0001"
+      ]
+    }
+  },
+  "runs": {
+    "run_0001": {
+      "variant_id": "A0",
+      "manifest_sha256": "dea002af66faf050a1dcb972d020774e5b3b9dc7c83d0f5ef34575f51c438aa1"
+    }
+  },
+  "measurements": {},
+  "display": {
+    "positions": {
+      "cell_1": [
+        20,
+        50
+      ]
+    },
+    "camera": {
+      "zoom": 1.2
+    },
+    "selection": [
+      "cell_1"
+    ]
+  },
+  "capabilities": {
+    "electrical": true,
+    "thermal": false,
+    "general_cad": false,
+    "optimizer": false,
+    "ai_physics": false
+  },
+  "evidence_status": "awaiting suitable measurements"
+}

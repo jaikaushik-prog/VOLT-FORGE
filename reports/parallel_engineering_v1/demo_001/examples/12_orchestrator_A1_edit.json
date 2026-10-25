@@ -1,0 +1,13 @@
+{
+  "edit": {
+    "target": "connection",
+    "id": "rail_p_1",
+    "property": "resistance",
+    "value": 0.0005,
+    "unit": "ohm",
+    "classification": "assumed",
+    "source": "Predeclared hypothetical p1-p2 rail edit; physical feasibility and resistance unmeasured"
+  },
+  "revision_id": "rev_19514a427fad4c701829168e36692f3de539205519e8699e09d93609ef7d1d58",
+  "classification": "Explicit setup to test stale context; A1 was not run and no repair outcome is claimed"
+}

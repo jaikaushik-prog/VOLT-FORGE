@@ -1,0 +1,114 @@
+{
+  "checks": {
+    "configuration_is_not_a_prediction": true,
+    "actual_run_current": true,
+    "unset_requirement_not_pass": true,
+    "simulation_not_experimental_acceptance": true,
+    "preview_does_not_apply_or_predict": true,
+    "preview_declares_invalidation": true,
+    "rehashed_fabrication_rejected": true,
+    "unavailable_operation_rejected": true,
+    "visual_move_keeps_context_and_physics_current": true,
+    "edited_revision_rejects_old_context": true,
+    "inherited_run_is_outdated": true,
+    "A1_edit_does_not_change_A0_run": true
+  },
+  "read_only_checks": [
+    {
+      "operation": "01_configuration",
+      "unchanged": true,
+      "files_checked": 16,
+      "project_index_sha256": "1851ed035e62f88d59f5e2a99582e579fc587eda980576132c8e0f06f04154b3"
+    },
+    {
+      "operation": "02_configuration_explanation",
+      "unchanged": true,
+      "files_checked": 16,
+      "project_index_sha256": "1851ed035e62f88d59f5e2a99582e579fc587eda980576132c8e0f06f04154b3"
+    },
+    {
+      "operation": "04_saved_A0",
+      "unchanged": true,
+      "files_checked": 49,
+      "project_index_sha256": "bdf5c8c5fa1fb4702d724e124dcab691dad0c3cb41bd526ddc174117972e2641"
+    },
+    {
+      "operation": "05_saved_run_explanation",
+      "unchanged": true,
+      "files_checked": 49,
+      "project_index_sha256": "bdf5c8c5fa1fb4702d724e124dcab691dad0c3cb41bd526ddc174117972e2641"
+    },
+    {
+      "operation": "06_structured_preview",
+      "unchanged": true,
+      "files_checked": 49,
+      "project_index_sha256": "bdf5c8c5fa1fb4702d724e124dcab691dad0c3cb41bd526ddc174117972e2641"
+    },
+    {
+      "operation": "07_fabricated_result_rejected",
+      "unchanged": true,
+      "files_checked": 49,
+      "project_index_sha256": "bdf5c8c5fa1fb4702d724e124dcab691dad0c3cb41bd526ddc174117972e2641"
+    },
+    {
+      "operation": "08_thermal_request_rejected",
+      "unchanged": true,
+      "files_checked": 49,
+      "project_index_sha256": "bdf5c8c5fa1fb4702d724e124dcab691dad0c3cb41bd526ddc174117972e2641"
+    },
+    {
+      "operation": "09_after_visual_move",
+      "unchanged": true,
+      "files_checked": 49,
+      "project_index_sha256": "dfb1cbfb1f1f7632102a9408dfcdc13d832e5b9eab5934b7fbbb9599a380055d"
+    },
+    {
+      "operation": "10_preview_after_visual_move",
+      "unchanged": true,
+      "files_checked": 49,
+      "project_index_sha256": "dfb1cbfb1f1f7632102a9408dfcdc13d832e5b9eab5934b7fbbb9599a380055d"
+    },
+    {
+      "operation": "11_A1_before_edit",
+      "unchanged": true,
+      "files_checked": 49,
+      "project_index_sha256": "9394989f70a242e182c3647c2b28c5c6c168a5ca5c91fb0731b1fef4133e1333"
+    },
+    {
+      "operation": "13_stale_context_rejected",
+      "unchanged": true,
+      "files_checked": 50,
+      "project_index_sha256": "278075f7f66bcfa37170c454b4b5f97952ca8324b2707457cb5daa11da0863e0"
+    },
+    {
+      "operation": "14_A1_historical_run",
+      "unchanged": true,
+      "files_checked": 50,
+      "project_index_sha256": "278075f7f66bcfa37170c454b4b5f97952ca8324b2707457cb5daa11da0863e0"
+    },
+    {
+      "operation": "15_A1_historical_explanation",
+      "unchanged": true,
+      "files_checked": 50,
+      "project_index_sha256": "278075f7f66bcfa37170c454b4b5f97952ca8324b2707457cb5daa11da0863e0"
+    },
+    {
+      "operation": "16_A0_still_current",
+      "unchanged": true,
+      "files_checked": 50,
+      "project_index_sha256": "278075f7f66bcfa37170c454b4b5f97952ca8324b2707457cb5daa11da0863e0"
+    }
+  ],
+  "claims_checked_against_live_backend": 172,
+  "A0_run_id": "run_0001",
+  "A0_snapshot_id": "9b92fd17d30b5d74ea2cc904ab0e765d14a3d1df30b2408cf9769976e7d39e48",
+  "application_requirement_status": "requirement not configured",
+  "experimental_validation": "awaiting suitable measurements",
+  "unavailable": [
+    "natural-language assistant",
+    "model provider",
+    "automatic edit execution",
+    "optimizer",
+    "thermal prediction"
+  ]
+}

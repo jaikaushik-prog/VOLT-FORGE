@@ -1,0 +1,10 @@
+Command: "C:\Program Files\nodejs\node.exe" --test tests/editor_state.test.mjs
+Captured by the orchestrator from the completed command, exit code 0.
+
+PASS inherited and sensitivity runs cannot be selected as current nominal results
+PASS late results fail the selection epoch after a variant change
+PASS user content escapes markup and numeric edits reject empty or nonfinite input
+PASS chart bounds show negative charge and flat data without undefined scales
+
+tests 4; suites 0; pass 4; fail 0; cancelled 0; skipped 0; todo 0
+duration_ms 124.3374

@@ -1,0 +1,16 @@
+{
+  "call": "build_context",
+  "arguments": {
+    "variant_id": "A0",
+    "run_id": null,
+    "component_id": "temperature",
+    "limit": 2
+  },
+  "response": {
+    "status": "error",
+    "error": {
+      "code": "unsupported_request",
+      "message": "Component output unavailable: temperature"
+    }
+  }
+}

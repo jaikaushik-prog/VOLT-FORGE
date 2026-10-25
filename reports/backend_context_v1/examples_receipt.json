@@ -1,0 +1,51 @@
+{
+  "schema": "voltforge.backend_context_examples/1",
+  "checks": [
+    {
+      "example": "01_configuration",
+      "status": "ok",
+      "read_only": true,
+      "project_index_sha256": "2398fa9204554edbc3400db5bbb3e31a75fc0786af6cb3aa033d7d2a79cb9dff"
+    },
+    {
+      "example": "02_current_cell",
+      "status": "ok",
+      "read_only": true,
+      "project_index_sha256": "5a775a712ca0c9058ccb02a17a4a6b6f38bb9d0adee15dec1c00d361d6b716c2"
+    },
+    {
+      "example": "03_inherited",
+      "status": "ok",
+      "read_only": true,
+      "project_index_sha256": "38fd9bdeda3209874f5c166a3b0d174584ad17a1489adebebf4f0f55bcdac9ee"
+    },
+    {
+      "example": "04_outdated",
+      "status": "ok",
+      "read_only": true,
+      "project_index_sha256": "7727ce8dbda07ca3cca0b98cd43ebcfd37f6cc1066e46c38950b4512bb772bc1"
+    },
+    {
+      "example": "05_failed_partial",
+      "status": "ok",
+      "read_only": true,
+      "project_index_sha256": "5dd6896294a01d172c84ad004e91d209f98a4f36beb332b67639ad91ea83bbe5"
+    },
+    {
+      "example": "06_unsupported",
+      "status": "error",
+      "read_only": true,
+      "project_index_sha256": "5dd6896294a01d172c84ad004e91d209f98a4f36beb332b67639ad91ea83bbe5"
+    }
+  ],
+  "fixture": "LG frozen-v2 software-only shortened load and deliberate out-of-domain failure",
+  "experimental_validation": "awaiting suitable measurements",
+  "examples_sha256": {
+    "01_configuration.json": "ae36066e5210c6d9537d0834f0b527362d5893499642da2d6b9f616f8e04236f",
+    "02_current_cell.json": "3c5aedc89197e73c806961adeeae34480faadeee369ece344960212019991db8",
+    "03_inherited.json": "f3193092daed3929fe24aada80ab329b81e9fafe0ef7b69c6a9d486cf908573c",
+    "04_outdated.json": "a78025b7b09cc07a00bc761bab792659e1a0869e5226b5ccc6e4e112b8e9e77f",
+    "05_failed_partial.json": "632f449cb9acc10970aa3b89578a55b0a908c1e0c058b2a829e25b4db558b9b2",
+    "06_unsupported.json": "dc1b6e8bdff367301ccd4f75547f1e4be3b91736402a4e2a876d5cbf7feb550a"
+  }
+}

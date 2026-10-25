@@ -1,0 +1,9 @@
+{
+  "operation": "run",
+  "arguments": {
+    "variant_id": "A0",
+    "expected_revision": "rev_ae0da225034beb65fb3f6efa6218f7c37dab5a479fcab5798b5ee87d19d5e1f3",
+    "plots": false
+  },
+  "classification": "Explicit demonstration setup; not a copilot action"
+}

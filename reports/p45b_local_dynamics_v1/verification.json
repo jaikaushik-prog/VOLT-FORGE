@@ -1,0 +1,18 @@
+{
+  "schema_version": "voltforge.p45b_local_dynamics_verification/1",
+  "checked_complete_pairs_and_scenarios": 22,
+  "maximum_equation_closure_V": 3.9968028886505635e-15,
+  "all_grid_bounded_optima_KKT_checked": true,
+  "original_channels_and_complete_pairs_preserved": true,
+  "previous_stage_artifacts_preserved": 49,
+  "prior_LG_artifacts": 112,
+  "remaining_unopened_P45B_members": 48,
+  "tests": {
+    "path": "reports\\p45b_local_dynamics_v1\\pytest.xml",
+    "passed": 135,
+    "sha256": "17abe763abc0d5ef1045e2f66b1ecc292df15269b874af8aef9a038f92127f5b"
+  },
+  "source_allocation": "used development evidence only",
+  "experimental_validation": "not established",
+  "run": "reports\\p45b_local_dynamics_v1\\run_001"
+}

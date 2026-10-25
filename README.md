@@ -18,17 +18,32 @@ There is no optimizer or ranked repair result.
 Public project repository: https://github.com/jaikaushik-prog/VOLT-FORGE.
 Local upload preparation is described in [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md).
 
-## Latest engineering investigation
+## Latest parallel engineering sprint
 
-The bounded [P45B low-SOC resistance study](reports/p45b_identifiability_v1/DECISION.md)
-tested two revisions on already-used complete pulse/rest sequences. Neither was
-adopted: lower aggregate GITT error did not consistently improve recovery, and
-the three-resistance revision increased RMSE on the used sustained 1C record.
-The report includes reproducible commands, parameter sensitivity, plots and 117
-passing focused tests. Frozen P45B/LG models and unused records are preserved;
-experimental module validation still awaits suitable measurements. Frontend
-redesign remains deferred; its future implementation guide is the
-[product design skill](web/editor/skills/volt-forge-product-design/SKILL.md).
+Three coordinated workstreams now deliver [local electrical diagnostics,
+backend evidence context and a deterministic copilot contract](reports/parallel_engineering_v1/READINESS.md).
+The [P45B local study](reports/p45b_local_dynamics_v1/DECISION.md) separates
+per-pulse resistance flexibility from recovery-time flexibility. These are
+in-sample conditional fits; uncertain charge/reference origin and remaining
+relaxation errors prevent adopting a replacement model. Frozen P45B/LG models
+and unused records are preserved. Experimental module validation still awaits
+suitable measurements.
+
+The [read-only context adapter](reports/backend_context_v1/INTERFACE.md) exposes
+actual saved evidence, units, coverage and freshness. The
+[copilot contract](reports/copilot_contract_v1/README.md) validates structured edit
+previews and cites saved results. It has no language-model provider, automatic
+execution or optimizer. A real A0 integration demonstration checks 172 claims
+against backend fields and 12 workflow invariants. The combined release passes
+224 focused Python tests and four existing editor-state checks.
+
+```powershell
+& C:\Users\DELL\anaconda3\python.exe scripts\demonstrate_copilot_handoff.py
+```
+
+This verifies the saved handoff; add `--out tmp/copilot_handoff_fresh` to create
+a new demonstration. Frontend redesign remains deferred; its future guide is
+the [product design skill](web/editor/skills/volt-forge-product-design/SKILL.md).
 
 ## Open the 2D workspace
 

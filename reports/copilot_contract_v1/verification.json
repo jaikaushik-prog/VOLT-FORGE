@@ -1,0 +1,30 @@
+{
+  "schema": "voltforge.software_verification/1",
+  "scope": "Offline deterministic copilot contract; no experimental model validation",
+  "command": "python -m pytest tests/test_copilot_contract.py -q --junitxml=reports/copilot_contract_v1/tests.xml",
+  "environment": {
+    "python": "3.12.3",
+    "PYTHONPATH": "src"
+  },
+  "tests": 37,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_s": 45.941,
+  "implementation_and_receipt_sha256": {
+    "scripts/copilot_contract.py": "99119c3a86cb22f803adbb226574d6f6c2491ab8eebdc813763ef4539580ccae",
+    "tests/test_copilot_contract.py": "d653b80ce42bb8749abdfcb0ef9e14983ebab4d0a2ff9f33fcb22281d943782b",
+    "scripts/evidence_context.py": "b16d76679115554b4a891ecef289cbf16eb5cca420158bf773cf000d4ddb1122",
+    "reports/copilot_contract_v1/tests.xml": "b4de529a361233d5ae363981268ecd752b44641674ec660c4108963b8677d4b8"
+  },
+  "evidence_access": "Temporary reference projects and synthetic load/failure cases; no new measurement outcomes opened",
+  "experimental_validation": "awaiting suitable measurements",
+  "actions_unavailable": [
+    "external model calls",
+    "natural language parsing",
+    "apply edits",
+    "run solver",
+    "optimizer",
+    "thermal prediction"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "baseline": "Frozen LG M50T v2 A0, 1s4p same-side ladder, 14.55 A for 360 s, dt=0.25 s",
+  "preview": {
+    "target": "connection",
+    "id": "rail_p_1",
+    "property": "resistance",
+    "value": 0.0005,
+    "unit": "ohm",
+    "classification": "assumed",
+    "source": "Predeclared hypothetical p1-p2 rail edit; physical feasibility and resistance unmeasured"
+  },
+  "requirements": "Application minimum voltage and excursion duration remain unset",
+  "operations": "Only the orchestrator creates the reference, runs A0, moves layout and edits A1 as explicit test setup",
+  "adapter_actions": "Read-only context, explanation and preview; no automatic apply or solver execution",
+  "scope": "Software integration demonstration; not experimental validation, repair ranking or battery-performance gain"
+}
