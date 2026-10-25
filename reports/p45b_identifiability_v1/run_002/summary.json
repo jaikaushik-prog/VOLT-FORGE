@@ -1,0 +1,3079 @@
+{
+  "schema_version": "voltforge.ae_p45b_identifiability/1",
+  "source_lock": {
+    "schema_version": "voltforge.ae_p45b_identifiability_allocation/1",
+    "procedure_commit": "4fb44ac",
+    "used_1C_trace": "reports/p45b_reproduction_v1/run_002/primary.csv",
+    "reserved_future_family": {
+      "family_id": "MOLICEL_P45B_025degC_3C_Dch",
+      "members": [
+        "MOLICEL_P45B_025degC_3C_Dch.csv"
+      ],
+      "nominal_temperature_degC": 25,
+      "protocol": "3C_Dch",
+      "proposed_allocation": "assessment_candidate",
+      "access": "protected_unopened"
+    },
+    "reserved_family_access": "metadata only; outcomes must remain unopened in this study",
+    "new_measurement_families": 0,
+    "remaining_unopened_members": 48,
+    "remaining_unopened_families": 40,
+    "frozen_files": {
+      "Molicel_INR-21700-P45B_ECM.csv": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e",
+      "configs/ae_p45b_allocation_v1.json": "4e8ec7d530e207a91e91ae6ca6ec78efd4dedcb425a55775171d710fba8f8ddf",
+      "configs/ae_p45b_gitt_replay_v1.json": "7cf6b48f429a54507e63a102c58b68657740cc37e4c70f96d4994eb67a1fbf6c",
+      "reports/p45b_gitt_replay_v1/PROCEDURE.md": "f07716c324d763b09f9ccd770d668731e91f71aeeb166df824f592ecae78dc70",
+      "reports/p45b_gitt_replay_v1/run_001/primary.csv.gz": "2f97ce8b7e3c8615a74a2ddc40ba5440f9d4ecbe0087e88c98b01ecdfc5a605b",
+      "reports/p45b_gitt_replay_v1/run_001/summary.json": "c1562a72682127aeaf9ba3f271e2a868662438cefffb5a6bd5314aceb51215ec",
+      "reports/p45b_gitt_replay_v1/verification.json": "7cbab022910a2e693cc627ba8939700969827d287c655fe033e3df5ad26e445c",
+      "reports/p45b_identifiability_v1/IMPLEMENTATION_CORRECTION.md": "b527b3830763fabe23683bd2c43bf6bc2d19f94855d3d989a7a21505514a6b54",
+      "reports/p45b_identifiability_v1/PROCEDURE.md": "6889d2e3858f3c3289d1ec7d484b9bde4c0f4f2026825b75a6a72265bbe9f324",
+      "reports/p45b_identifiability_v1/pre_fit_pytest.xml": "d9249896d8a617462745de4718d4f9ca2d4409e7de75e16721be5272117ae8e4",
+      "reports/p45b_identifiability_v1/pre_fit_pytest_02.xml": "c492788824a17938fbc5355386ffd9cac99c7e10b7df168ffb960dc262452dfa",
+      "reports/p45b_identifiability_v1/previous/ae_p45b_identifiability.py": "a4e0dfa596c2fbed2739a3be8f5d6383cd36cd81797324743d73b1358f531700",
+      "reports/p45b_identifiability_v1/previous/ae_p45b_identifiability_v1.json": "c80f4e62ccd39e0aa4237ff8dc124f883e594fa78b0e02719d2d476786c8f3f4",
+      "reports/p45b_identifiability_v1/previous/test_ae_p45b_identifiability.py": "0f05e249703cdeea70ff5f9688f5a9e136120095c255acb7c37d9042417a4454",
+      "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv": "7fb7e3ba700918e44f3b37e96ffcef975dbbd771d3652e76333951bed350293d",
+      "reports/p45b_low_soc_v1/run_001/gitt_samples.csv": "7a2306a4746afc30bd138d9113e1f91555debf6a1ef1b2a9fdc063ea576e2ea6",
+      "reports/p45b_low_soc_v1/run_001/gitt_segments.csv": "84ab839b717285efc939c92c785687bf8e9b0da5e66026f535b3162abe84083d",
+      "reports/p45b_low_soc_v1/run_001/manifest.json": "04c202328da98432bc50cbdada212a6f53c661b1a38d578ba74bde918122371f",
+      "reports/p45b_low_soc_v1/verification.json": "30eb8f6044f9172e831b159b9c3091de0781fc4663bac75a15f25fcab9e5a627",
+      "reports/p45b_reproduction_v1/run_002/primary.csv": "b1c9a6ead62b1a002a94bba174b9c28609b33a1321a2399e06e554d23fc4c797",
+      "scripts/ae_p45b_equations.py": "1bee15332127bfe86446d600b2af5d814e103380bb76f972748a12220500c40b",
+      "scripts/ae_p45b_identifiability.py": "31073acb6c4acd38117009e304a4427e7ee0e4ed2bbcd7fe4b8ea8b2eedd4496",
+      "scripts/ae_p45b_low_soc.py": "42129b98769e6a4e2c3c5e1b764ed4aa7fd3688c7eda03ea5579e3b8e957a936",
+      "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
+      "tests/test_ae_p45b_identifiability.py": "5b4ffe4c35e22e37b5ce957435a69af3530cccee1b2f86a36bf97506f512fed7"
+    },
+    "implementation_correction": "JSON-native screening booleans only; original freeze retained under previous/"
+  },
+  "baseline_reproduction_max_difference_V": 0.0,
+  "baseline_objective_rmse_mV": 73.00104766244597,
+  "selected_pair_ids": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "fits": {
+    "C1_R0": {
+      "increments_Ohm": [
+        0.03450577201603473,
+        0.0,
+        0.0
+      ],
+      "objective_rmse_mV": 56.4540467303699,
+      "identifiability": {
+        "rank": 1,
+        "parameters": 1,
+        "weighted_singular_values_V_per_Ohm": [
+          1.341304772912778
+        ],
+        "normalized_condition_number": 1.0,
+        "column_cosines": [
+          [
+            1.0000000000000002
+          ]
+        ],
+        "active_lower_bounds": [],
+        "active_upper_bounds": [],
+        "profile_grid": {
+          "delta_R0_Ohm": [
+            {
+              "value_Ohm": 0.0,
+              "objective_rmse_mV": 73.00104766244597
+            },
+            {
+              "value_Ohm": 0.0025,
+              "objective_rmse_mV": 70.9224993432075
+            },
+            {
+              "value_Ohm": 0.005,
+              "objective_rmse_mV": 68.94445298595683
+            },
+            {
+              "value_Ohm": 0.0075,
+              "objective_rmse_mV": 67.07580050324661
+            },
+            {
+              "value_Ohm": 0.01,
+              "objective_rmse_mV": 65.32593022638748
+            },
+            {
+              "value_Ohm": 0.0125,
+              "objective_rmse_mV": 63.70463121239567
+            },
+            {
+              "value_Ohm": 0.015,
+              "objective_rmse_mV": 62.2219547028604
+            },
+            {
+              "value_Ohm": 0.0175,
+              "objective_rmse_mV": 60.88802827613378
+            },
+            {
+              "value_Ohm": 0.02,
+              "objective_rmse_mV": 59.712821561526496
+            },
+            {
+              "value_Ohm": 0.0225,
+              "objective_rmse_mV": 58.705867351527345
+            },
+            {
+              "value_Ohm": 0.025,
+              "objective_rmse_mV": 57.875948331967116
+            },
+            {
+              "value_Ohm": 0.0275,
+              "objective_rmse_mV": 57.230766728455706
+            },
+            {
+              "value_Ohm": 0.03,
+              "objective_rmse_mV": 56.77662068582702
+            },
+            {
+              "value_Ohm": 0.0325,
+              "objective_rmse_mV": 56.51811553697301
+            },
+            {
+              "value_Ohm": 0.03450577201603473,
+              "objective_rmse_mV": 56.4540467303699
+            },
+            {
+              "value_Ohm": 0.035,
+              "objective_rmse_mV": 56.45793870105393
+            },
+            {
+              "value_Ohm": 0.0375,
+              "objective_rmse_mV": 56.596722803235515
+            },
+            {
+              "value_Ohm": 0.04,
+              "objective_rmse_mV": 56.93301285663334
+            },
+            {
+              "value_Ohm": 0.0425,
+              "objective_rmse_mV": 57.463341401052006
+            },
+            {
+              "value_Ohm": 0.045,
+              "objective_rmse_mV": 58.182402736455636
+            },
+            {
+              "value_Ohm": 0.0475,
+              "objective_rmse_mV": 59.083306462768014
+            },
+            {
+              "value_Ohm": 0.05,
+              "objective_rmse_mV": 60.15788350775476
+            },
+            {
+              "value_Ohm": 0.0525,
+              "objective_rmse_mV": 61.39701560226524
+            },
+            {
+              "value_Ohm": 0.055,
+              "objective_rmse_mV": 62.790961393898016
+            },
+            {
+              "value_Ohm": 0.0575,
+              "objective_rmse_mV": 64.32965779365041
+            },
+            {
+              "value_Ohm": 0.06,
+              "objective_rmse_mV": 66.00298206974686
+            },
+            {
+              "value_Ohm": 0.0625,
+              "objective_rmse_mV": 67.80096712823102
+            },
+            {
+              "value_Ohm": 0.065,
+              "objective_rmse_mV": 69.71396829990807
+            },
+            {
+              "value_Ohm": 0.0675,
+              "objective_rmse_mV": 71.73278427532765
+            },
+            {
+              "value_Ohm": 0.07,
+              "objective_rmse_mV": 73.84873753039912
+            },
+            {
+              "value_Ohm": 0.0725,
+              "objective_rmse_mV": 76.05372088826326
+            },
+            {
+              "value_Ohm": 0.075,
+              "objective_rmse_mV": 78.34021711891603
+            },
+            {
+              "value_Ohm": 0.0775,
+              "objective_rmse_mV": 80.70129804842632
+            },
+            {
+              "value_Ohm": 0.08,
+              "objective_rmse_mV": 83.13060884136456
+            },
+            {
+              "value_Ohm": 0.0825,
+              "objective_rmse_mV": 85.62234216105021
+            },
+            {
+              "value_Ohm": 0.085,
+              "objective_rmse_mV": 88.17120595253839
+            },
+            {
+              "value_Ohm": 0.08750000000000001,
+              "objective_rmse_mV": 90.77238771938804
+            },
+            {
+              "value_Ohm": 0.09,
+              "objective_rmse_mV": 93.42151741759416
+            },
+            {
+              "value_Ohm": 0.0925,
+              "objective_rmse_mV": 96.11463047895352
+            },
+            {
+              "value_Ohm": 0.095,
+              "objective_rmse_mV": 98.84813199438162
+            },
+            {
+              "value_Ohm": 0.0975,
+              "objective_rmse_mV": 101.61876271941411
+            },
+            {
+              "value_Ohm": 0.1,
+              "objective_rmse_mV": 104.42356729035579
+            },
+            {
+              "value_Ohm": 0.10250000000000001,
+              "objective_rmse_mV": 107.25986484158615
+            },
+            {
+              "value_Ohm": 0.105,
+              "objective_rmse_mV": 110.12522207559977
+            },
+            {
+              "value_Ohm": 0.1075,
+              "objective_rmse_mV": 113.01742874326061
+            },
+            {
+              "value_Ohm": 0.11,
+              "objective_rmse_mV": 115.93447543094678
+            },
+            {
+              "value_Ohm": 0.1125,
+              "objective_rmse_mV": 118.8745335146792
+            },
+            {
+              "value_Ohm": 0.115,
+              "objective_rmse_mV": 121.83593712197302
+            },
+            {
+              "value_Ohm": 0.11750000000000001,
+              "objective_rmse_mV": 124.8171669347575
+            },
+            {
+              "value_Ohm": 0.12,
+              "objective_rmse_mV": 127.81683566737934
+            },
+            {
+              "value_Ohm": 0.1225,
+              "objective_rmse_mV": 130.83367505958694
+            },
+            {
+              "value_Ohm": 0.125,
+              "objective_rmse_mV": 133.86652423345532
+            },
+            {
+              "value_Ohm": 0.1275,
+              "objective_rmse_mV": 136.91431927401888
+            },
+            {
+              "value_Ohm": 0.13,
+              "objective_rmse_mV": 139.97608390493943
+            },
+            {
+              "value_Ohm": 0.1325,
+              "objective_rmse_mV": 143.05092114219428
+            },
+            {
+              "value_Ohm": 0.135,
+              "objective_rmse_mV": 146.13800582008403
+            },
+            {
+              "value_Ohm": 0.1375,
+              "objective_rmse_mV": 149.2365778945783
+            },
+            {
+              "value_Ohm": 0.14,
+              "objective_rmse_mV": 152.34593643898455
+            },
+            {
+              "value_Ohm": 0.14250000000000002,
+              "objective_rmse_mV": 155.46543425607734
+            },
+            {
+              "value_Ohm": 0.145,
+              "objective_rmse_mV": 158.59447303914237
+            },
+            {
+              "value_Ohm": 0.1475,
+              "objective_rmse_mV": 161.73249902189977
+            },
+            {
+              "value_Ohm": 0.15,
+              "objective_rmse_mV": 164.8789990640025
+            },
+            {
+              "value_Ohm": 0.1525,
+              "objective_rmse_mV": 168.03349712482583
+            },
+            {
+              "value_Ohm": 0.155,
+              "objective_rmse_mV": 171.19555108361703
+            },
+            {
+              "value_Ohm": 0.1575,
+              "objective_rmse_mV": 174.36474986883331
+            },
+            {
+              "value_Ohm": 0.16,
+              "objective_rmse_mV": 177.5407108637094
+            },
+            {
+              "value_Ohm": 0.1625,
+              "objective_rmse_mV": 180.72307755882946
+            },
+            {
+              "value_Ohm": 0.165,
+              "objective_rmse_mV": 183.91151742577495
+            },
+            {
+              "value_Ohm": 0.1675,
+              "objective_rmse_mV": 187.1057199888355
+            },
+            {
+              "value_Ohm": 0.17,
+              "objective_rmse_mV": 190.30539507434597
+            },
+            {
+              "value_Ohm": 0.17250000000000001,
+              "objective_rmse_mV": 193.51027121948405
+            },
+            {
+              "value_Ohm": 0.17500000000000002,
+              "objective_rmse_mV": 196.72009422437412
+            },
+            {
+              "value_Ohm": 0.1775,
+              "objective_rmse_mV": 199.93462583311566
+            },
+            {
+              "value_Ohm": 0.18,
+              "objective_rmse_mV": 203.15364253092355
+            },
+            {
+              "value_Ohm": 0.1825,
+              "objective_rmse_mV": 206.37693444595396
+            },
+            {
+              "value_Ohm": 0.185,
+              "objective_rmse_mV": 209.60430434561653
+            },
+            {
+              "value_Ohm": 0.1875,
+              "objective_rmse_mV": 212.8355667182605
+            },
+            {
+              "value_Ohm": 0.19,
+              "objective_rmse_mV": 216.0705469320827
+            },
+            {
+              "value_Ohm": 0.1925,
+              "objective_rmse_mV": 219.30908046396206
+            },
+            {
+              "value_Ohm": 0.195,
+              "objective_rmse_mV": 222.5510121916789
+            },
+            {
+              "value_Ohm": 0.1975,
+              "objective_rmse_mV": 225.7961957436529
+            },
+            {
+              "value_Ohm": 0.2,
+              "objective_rmse_mV": 229.04449290093004
+            }
+          ]
+        },
+        "within_1pct_objective_grid_bands_Ohm": {
+          "delta_R0_Ohm": [
+            0.03,
+            0.04
+          ]
+        },
+        "uncertainty_interpretation": "conditional objective sensitivity, NOT confidence intervals; correlated residuals/model discrepancy"
+      },
+      "leave_pair_out": {
+        "objective_rmse_mV": 59.98913847312735,
+        "folds": [
+          {
+            "pair_index": 21,
+            "increments_Ohm": [
+              0.03450583332834548,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 58.60540001463549
+          },
+          {
+            "pair_index": 22,
+            "increments_Ohm": [
+              0.0346037592217482,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 58.478965356793466
+          },
+          {
+            "pair_index": 23,
+            "increments_Ohm": [
+              0.034970705296421684,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 58.40120798665881
+          },
+          {
+            "pair_index": 24,
+            "increments_Ohm": [
+              0.03582283455383883,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 58.07481535238241
+          },
+          {
+            "pair_index": 25,
+            "increments_Ohm": [
+              0.03697825232979329,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 57.56574578909837
+          },
+          {
+            "pair_index": 26,
+            "increments_Ohm": [
+              0.03805804729630128,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 57.288601085215866
+          },
+          {
+            "pair_index": 27,
+            "increments_Ohm": [
+              0.038929615965864015,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 57.323473920153226
+          },
+          {
+            "pair_index": 28,
+            "increments_Ohm": [
+              0.036549358492378094,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 58.251038213615054
+          },
+          {
+            "pair_index": 29,
+            "increments_Ohm": [
+              0.028130252424880854,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 53.944219834084834
+          },
+          {
+            "pair_index": 30,
+            "increments_Ohm": [
+              0.029154410086351654,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 50.95190261051116
+          },
+          {
+            "pair_index": 31,
+            "increments_Ohm": [
+              0.031215994948454975,
+              0.0,
+              0.0
+            ],
+            "training_objective_rmse_mV": 49.32062106001678
+          }
+        ],
+        "increments_min_Ohm": [
+          0.028130252424880854,
+          0.0,
+          0.0
+        ],
+        "increments_max_Ohm": [
+          0.038929615965864015,
+          0.0,
+          0.0
+        ],
+        "evidence": "leave-complete-pair-out development diagnostic on previously opened GITT; not fresh assessment"
+      },
+      "screening": {
+        "checks": {
+          "objective_improves_20pct": false,
+          "pulse_time_rmse_not_worse": true,
+          "rest_time_rmse_not_worse": false,
+          "loaded_endpoint_max_improves_20pct": true,
+          "late_rest_median_max_degrades_at_most_5mV": true
+        },
+        "all_pass": false,
+        "baseline_phase_metrics": {
+          "discharge": {
+            "samples": 5055,
+            "covered_duration_s": 1004.9220000000059,
+            "sample_rmse_mV": 105.50479530390876,
+            "sample_bias_mV": 57.83608802730386,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 105.33088619075151,
+            "time_bias_mV": 57.84359320486559
+          },
+          "rest": {
+            "samples": 31842,
+            "covered_duration_s": 27002.27399999999,
+            "sample_rmse_mV": 30.39532605799304,
+            "sample_bias_mV": -4.309593028836582,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 28.032098087189713,
+            "time_bias_mV": -6.126627366814791
+          }
+        },
+        "cv_phase_metrics": {
+          "discharge": {
+            "samples": 5055,
+            "covered_duration_s": 1004.9220000000059,
+            "sample_rmse_mV": 85.44885564700581,
+            "sample_bias_mV": 11.262614456133408,
+            "max_abs_error_mV": 233.4281943649623,
+            "time_rmse_mV": 85.26703557738588,
+            "time_bias_mV": 11.3499919274551
+          },
+          "rest": {
+            "samples": 31842,
+            "covered_duration_s": 27002.27399999999,
+            "sample_rmse_mV": 30.395326332279595,
+            "sample_bias_mV": -4.309593481516612,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 28.03209812705168,
+            "time_bias_mV": -6.126627427482779
+          }
+        },
+        "baseline_loaded_max_mV": 333.3579248213656,
+        "cv_loaded_max_mV": 233.4175721835492,
+        "baseline_late_rest_max_mV": 41.554988936930215,
+        "cv_late_rest_max_mV": 41.554988936930215,
+        "interpretation": "proposed development screen only; never application acceptance or automatic adoption"
+      },
+      "max_affine_direct_difference_V": 8.881784197001252e-16,
+      "time_step": {
+        "common_samples": 98426,
+        "max_abs_voltage_difference_mV": 0.03961121992590577,
+        "rmse_voltage_difference_mV": 0.003105262882828168,
+        "proposed_0p1_mV_check_met": true
+      }
+    },
+    "C2_R0_R1_R2": {
+      "increments_Ohm": [
+        0.0,
+        0.0,
+        0.07935677298732843
+      ],
+      "objective_rmse_mV": 49.32070615467156,
+      "identifiability": {
+        "rank": 3,
+        "parameters": 3,
+        "weighted_singular_values_V_per_Ohm": [
+          1.9515350572740287,
+          0.27070520013043226,
+          0.12142155309005226
+        ],
+        "normalized_condition_number": 17.615973094856546,
+        "column_cosines": [
+          [
+            1.0,
+            0.9875259651992043,
+            0.8981746665915992
+          ],
+          [
+            0.9875259651992043,
+            1.0000000000000002,
+            0.9288673934888012
+          ],
+          [
+            0.8981746665915992,
+            0.9288673934888012,
+            0.9999999999999997
+          ]
+        ],
+        "active_lower_bounds": [
+          "delta_R0_Ohm",
+          "delta_R1_Ohm"
+        ],
+        "active_upper_bounds": [],
+        "profile_grid": {
+          "delta_R0_Ohm": [
+            {
+              "value_Ohm": 0.0,
+              "objective_rmse_mV": 49.32070615467156
+            },
+            {
+              "value_Ohm": 0.0025,
+              "objective_rmse_mV": 49.48234364559653
+            },
+            {
+              "value_Ohm": 0.005,
+              "objective_rmse_mV": 49.687214479164595
+            },
+            {
+              "value_Ohm": 0.0075,
+              "objective_rmse_mV": 49.934786529114625
+            },
+            {
+              "value_Ohm": 0.01,
+              "objective_rmse_mV": 50.22442833612084
+            },
+            {
+              "value_Ohm": 0.0125,
+              "objective_rmse_mV": 50.55541682791445
+            },
+            {
+              "value_Ohm": 0.015,
+              "objective_rmse_mV": 50.926945839804304
+            },
+            {
+              "value_Ohm": 0.0175,
+              "objective_rmse_mV": 51.33813521612072
+            },
+            {
+              "value_Ohm": 0.02,
+              "objective_rmse_mV": 51.788040273205674
+            },
+            {
+              "value_Ohm": 0.0225,
+              "objective_rmse_mV": 52.27566141314521
+            },
+            {
+              "value_Ohm": 0.025,
+              "objective_rmse_mV": 52.79995369312906
+            },
+            {
+              "value_Ohm": 0.0275,
+              "objective_rmse_mV": 53.3598361765054
+            },
+            {
+              "value_Ohm": 0.03,
+              "objective_rmse_mV": 53.95420091654182
+            },
+            {
+              "value_Ohm": 0.0325,
+              "objective_rmse_mV": 54.581921450914294
+            },
+            {
+              "value_Ohm": 0.035,
+              "objective_rmse_mV": 55.241860712480886
+            },
+            {
+              "value_Ohm": 0.0375,
+              "objective_rmse_mV": 55.93287828864743
+            },
+            {
+              "value_Ohm": 0.04,
+              "objective_rmse_mV": 56.6538369865652
+            },
+            {
+              "value_Ohm": 0.0425,
+              "objective_rmse_mV": 57.40360868377621
+            },
+            {
+              "value_Ohm": 0.045,
+              "objective_rmse_mV": 58.182402736455636
+            },
+            {
+              "value_Ohm": 0.0475,
+              "objective_rmse_mV": 59.083306462768014
+            },
+            {
+              "value_Ohm": 0.05,
+              "objective_rmse_mV": 60.15788350775476
+            },
+            {
+              "value_Ohm": 0.0525,
+              "objective_rmse_mV": 61.39701560226524
+            },
+            {
+              "value_Ohm": 0.055,
+              "objective_rmse_mV": 62.790961393898016
+            },
+            {
+              "value_Ohm": 0.0575,
+              "objective_rmse_mV": 64.32965779365041
+            },
+            {
+              "value_Ohm": 0.06,
+              "objective_rmse_mV": 66.00298206974686
+            },
+            {
+              "value_Ohm": 0.0625,
+              "objective_rmse_mV": 67.80096712823102
+            },
+            {
+              "value_Ohm": 0.065,
+              "objective_rmse_mV": 69.71396829990807
+            },
+            {
+              "value_Ohm": 0.0675,
+              "objective_rmse_mV": 71.73278427532765
+            },
+            {
+              "value_Ohm": 0.07,
+              "objective_rmse_mV": 73.84873753039912
+            },
+            {
+              "value_Ohm": 0.0725,
+              "objective_rmse_mV": 76.05372088826326
+            },
+            {
+              "value_Ohm": 0.075,
+              "objective_rmse_mV": 78.34021711891603
+            },
+            {
+              "value_Ohm": 0.0775,
+              "objective_rmse_mV": 80.70129804842632
+            },
+            {
+              "value_Ohm": 0.08,
+              "objective_rmse_mV": 83.13060884136456
+            },
+            {
+              "value_Ohm": 0.0825,
+              "objective_rmse_mV": 85.62234216105021
+            },
+            {
+              "value_Ohm": 0.085,
+              "objective_rmse_mV": 88.17120595253839
+            },
+            {
+              "value_Ohm": 0.08750000000000001,
+              "objective_rmse_mV": 90.77238771938804
+            },
+            {
+              "value_Ohm": 0.09,
+              "objective_rmse_mV": 93.42151741759416
+            },
+            {
+              "value_Ohm": 0.0925,
+              "objective_rmse_mV": 96.11463047895352
+            },
+            {
+              "value_Ohm": 0.095,
+              "objective_rmse_mV": 98.84813199438162
+            },
+            {
+              "value_Ohm": 0.0975,
+              "objective_rmse_mV": 101.61876271941411
+            },
+            {
+              "value_Ohm": 0.1,
+              "objective_rmse_mV": 104.42356729035579
+            },
+            {
+              "value_Ohm": 0.10250000000000001,
+              "objective_rmse_mV": 107.25986484158615
+            },
+            {
+              "value_Ohm": 0.105,
+              "objective_rmse_mV": 110.12522207559977
+            },
+            {
+              "value_Ohm": 0.1075,
+              "objective_rmse_mV": 113.01742874326061
+            },
+            {
+              "value_Ohm": 0.11,
+              "objective_rmse_mV": 115.93447543094678
+            },
+            {
+              "value_Ohm": 0.1125,
+              "objective_rmse_mV": 118.8745335146792
+            },
+            {
+              "value_Ohm": 0.115,
+              "objective_rmse_mV": 121.83593712197302
+            },
+            {
+              "value_Ohm": 0.11750000000000001,
+              "objective_rmse_mV": 124.8171669347575
+            },
+            {
+              "value_Ohm": 0.12,
+              "objective_rmse_mV": 127.81683566737934
+            },
+            {
+              "value_Ohm": 0.1225,
+              "objective_rmse_mV": 130.83367505958694
+            },
+            {
+              "value_Ohm": 0.125,
+              "objective_rmse_mV": 133.86652423345532
+            },
+            {
+              "value_Ohm": 0.1275,
+              "objective_rmse_mV": 136.91431927401888
+            },
+            {
+              "value_Ohm": 0.13,
+              "objective_rmse_mV": 139.97608390493943
+            },
+            {
+              "value_Ohm": 0.1325,
+              "objective_rmse_mV": 143.05092114219428
+            },
+            {
+              "value_Ohm": 0.135,
+              "objective_rmse_mV": 146.13800582008403
+            },
+            {
+              "value_Ohm": 0.1375,
+              "objective_rmse_mV": 149.2365778945783
+            },
+            {
+              "value_Ohm": 0.14,
+              "objective_rmse_mV": 152.34593643898455
+            },
+            {
+              "value_Ohm": 0.14250000000000002,
+              "objective_rmse_mV": 155.46543425607734
+            },
+            {
+              "value_Ohm": 0.145,
+              "objective_rmse_mV": 158.59447303914237
+            },
+            {
+              "value_Ohm": 0.1475,
+              "objective_rmse_mV": 161.73249902189977
+            },
+            {
+              "value_Ohm": 0.15,
+              "objective_rmse_mV": 164.8789990640025
+            },
+            {
+              "value_Ohm": 0.1525,
+              "objective_rmse_mV": 168.03349712482583
+            },
+            {
+              "value_Ohm": 0.155,
+              "objective_rmse_mV": 171.19555108361703
+            },
+            {
+              "value_Ohm": 0.1575,
+              "objective_rmse_mV": 174.36474986883331
+            },
+            {
+              "value_Ohm": 0.16,
+              "objective_rmse_mV": 177.5407108637094
+            },
+            {
+              "value_Ohm": 0.1625,
+              "objective_rmse_mV": 180.72307755882946
+            },
+            {
+              "value_Ohm": 0.165,
+              "objective_rmse_mV": 183.91151742577495
+            },
+            {
+              "value_Ohm": 0.1675,
+              "objective_rmse_mV": 187.1057199888355
+            },
+            {
+              "value_Ohm": 0.17,
+              "objective_rmse_mV": 190.30539507434597
+            },
+            {
+              "value_Ohm": 0.17250000000000001,
+              "objective_rmse_mV": 193.51027121948405
+            },
+            {
+              "value_Ohm": 0.17500000000000002,
+              "objective_rmse_mV": 196.72009422437412
+            },
+            {
+              "value_Ohm": 0.1775,
+              "objective_rmse_mV": 199.93462583311566
+            },
+            {
+              "value_Ohm": 0.18,
+              "objective_rmse_mV": 203.15364253092355
+            },
+            {
+              "value_Ohm": 0.1825,
+              "objective_rmse_mV": 206.37693444595396
+            },
+            {
+              "value_Ohm": 0.185,
+              "objective_rmse_mV": 209.60430434561653
+            },
+            {
+              "value_Ohm": 0.1875,
+              "objective_rmse_mV": 212.8355667182605
+            },
+            {
+              "value_Ohm": 0.19,
+              "objective_rmse_mV": 216.0705469320827
+            },
+            {
+              "value_Ohm": 0.1925,
+              "objective_rmse_mV": 219.30908046396206
+            },
+            {
+              "value_Ohm": 0.195,
+              "objective_rmse_mV": 222.5510121916789
+            },
+            {
+              "value_Ohm": 0.1975,
+              "objective_rmse_mV": 225.7961957436529
+            },
+            {
+              "value_Ohm": 0.2,
+              "objective_rmse_mV": 229.04449290093004
+            }
+          ],
+          "delta_R1_Ohm": [
+            {
+              "value_Ohm": 0.0,
+              "objective_rmse_mV": 49.32070615467156
+            },
+            {
+              "value_Ohm": 0.0025,
+              "objective_rmse_mV": 49.45530597284892
+            },
+            {
+              "value_Ohm": 0.005,
+              "objective_rmse_mV": 49.617848209043665
+            },
+            {
+              "value_Ohm": 0.0075,
+              "objective_rmse_mV": 49.80805930447636
+            },
+            {
+              "value_Ohm": 0.01,
+              "objective_rmse_mV": 50.025623646444565
+            },
+            {
+              "value_Ohm": 0.0125,
+              "objective_rmse_mV": 50.270186089849894
+            },
+            {
+              "value_Ohm": 0.015,
+              "objective_rmse_mV": 50.541354716266824
+            },
+            {
+              "value_Ohm": 0.0175,
+              "objective_rmse_mV": 50.83870378321835
+            },
+            {
+              "value_Ohm": 0.02,
+              "objective_rmse_mV": 51.16177681546134
+            },
+            {
+              "value_Ohm": 0.0225,
+              "objective_rmse_mV": 51.51008979051849
+            },
+            {
+              "value_Ohm": 0.025,
+              "objective_rmse_mV": 51.88313437230275
+            },
+            {
+              "value_Ohm": 0.0275,
+              "objective_rmse_mV": 52.28038114930412
+            },
+            {
+              "value_Ohm": 0.03,
+              "objective_rmse_mV": 52.701282837266376
+            },
+            {
+              "value_Ohm": 0.0325,
+              "objective_rmse_mV": 53.145277410373225
+            },
+            {
+              "value_Ohm": 0.035,
+              "objective_rmse_mV": 53.61179112949359
+            },
+            {
+              "value_Ohm": 0.0375,
+              "objective_rmse_mV": 54.100241440813505
+            },
+            {
+              "value_Ohm": 0.04,
+              "objective_rmse_mV": 54.61003972303192
+            },
+            {
+              "value_Ohm": 0.0425,
+              "objective_rmse_mV": 55.14059386607002
+            },
+            {
+              "value_Ohm": 0.045,
+              "objective_rmse_mV": 55.69131066880702
+            },
+            {
+              "value_Ohm": 0.0475,
+              "objective_rmse_mV": 56.323433831369655
+            },
+            {
+              "value_Ohm": 0.05,
+              "objective_rmse_mV": 57.12699508892021
+            },
+            {
+              "value_Ohm": 0.0525,
+              "objective_rmse_mV": 58.09583529102802
+            },
+            {
+              "value_Ohm": 0.055,
+              "objective_rmse_mV": 59.221843346647894
+            },
+            {
+              "value_Ohm": 0.0575,
+              "objective_rmse_mV": 60.49624386296604
+            },
+            {
+              "value_Ohm": 0.06,
+              "objective_rmse_mV": 61.90987364403123
+            },
+            {
+              "value_Ohm": 0.0625,
+              "objective_rmse_mV": 63.45342802916383
+            },
+            {
+              "value_Ohm": 0.065,
+              "objective_rmse_mV": 65.11766844432117
+            },
+            {
+              "value_Ohm": 0.0675,
+              "objective_rmse_mV": 66.89358788057875
+            },
+            {
+              "value_Ohm": 0.07,
+              "objective_rmse_mV": 68.77253518948383
+            },
+            {
+              "value_Ohm": 0.0725,
+              "objective_rmse_mV": 70.74630191169551
+            },
+            {
+              "value_Ohm": 0.075,
+              "objective_rmse_mV": 72.80717693272183
+            },
+            {
+              "value_Ohm": 0.0775,
+              "objective_rmse_mV": 74.94797483978105
+            },
+            {
+              "value_Ohm": 0.08,
+              "objective_rmse_mV": 77.16204373392499
+            },
+            {
+              "value_Ohm": 0.0825,
+              "objective_rmse_mV": 79.4432577047779
+            },
+            {
+              "value_Ohm": 0.085,
+              "objective_rmse_mV": 81.78599841806214
+            },
+            {
+              "value_Ohm": 0.08750000000000001,
+              "objective_rmse_mV": 84.18512945093497
+            },
+            {
+              "value_Ohm": 0.09,
+              "objective_rmse_mV": 86.63596623251796
+            },
+            {
+              "value_Ohm": 0.0925,
+              "objective_rmse_mV": 89.13424375823926
+            },
+            {
+              "value_Ohm": 0.095,
+              "objective_rmse_mV": 91.67608366746661
+            },
+            {
+              "value_Ohm": 0.0975,
+              "objective_rmse_mV": 94.25796180586218
+            },
+            {
+              "value_Ohm": 0.1,
+              "objective_rmse_mV": 96.87667702768458
+            },
+            {
+              "value_Ohm": 0.10250000000000001,
+              "objective_rmse_mV": 99.52932171474471
+            },
+            {
+              "value_Ohm": 0.105,
+              "objective_rmse_mV": 102.21325428244567
+            },
+            {
+              "value_Ohm": 0.1075,
+              "objective_rmse_mV": 104.92607379464148
+            },
+            {
+              "value_Ohm": 0.11,
+              "objective_rmse_mV": 107.66559670502511
+            },
+            {
+              "value_Ohm": 0.1125,
+              "objective_rmse_mV": 110.42983567260967
+            },
+            {
+              "value_Ohm": 0.115,
+              "objective_rmse_mV": 113.21698035387597
+            },
+            {
+              "value_Ohm": 0.11750000000000001,
+              "objective_rmse_mV": 116.02538004747157
+            },
+            {
+              "value_Ohm": 0.12,
+              "objective_rmse_mV": 118.8535280536947
+            },
+            {
+              "value_Ohm": 0.1225,
+              "objective_rmse_mV": 121.70004760640184
+            },
+            {
+              "value_Ohm": 0.125,
+              "objective_rmse_mV": 124.56367923648716
+            },
+            {
+              "value_Ohm": 0.1275,
+              "objective_rmse_mV": 127.44326943154103
+            },
+            {
+              "value_Ohm": 0.13,
+              "objective_rmse_mV": 130.33776046415008
+            },
+            {
+              "value_Ohm": 0.1325,
+              "objective_rmse_mV": 133.24618127045844
+            },
+            {
+              "value_Ohm": 0.135,
+              "objective_rmse_mV": 136.16763927031076
+            },
+            {
+              "value_Ohm": 0.1375,
+              "objective_rmse_mV": 139.10131303003212
+            },
+            {
+              "value_Ohm": 0.14,
+              "objective_rmse_mV": 142.04644567833577
+            },
+            {
+              "value_Ohm": 0.14250000000000002,
+              "objective_rmse_mV": 145.00233899478215
+            },
+            {
+              "value_Ohm": 0.145,
+              "objective_rmse_mV": 147.96834809852726
+            },
+            {
+              "value_Ohm": 0.1475,
+              "objective_rmse_mV": 150.94387667274242
+            },
+            {
+              "value_Ohm": 0.15,
+              "objective_rmse_mV": 153.9283726670464
+            },
+            {
+              "value_Ohm": 0.1525,
+              "objective_rmse_mV": 156.9213244265866
+            },
+            {
+              "value_Ohm": 0.155,
+              "objective_rmse_mV": 159.92225720206335
+            },
+            {
+              "value_Ohm": 0.1575,
+              "objective_rmse_mV": 162.93073000005757
+            },
+            {
+              "value_Ohm": 0.16,
+              "objective_rmse_mV": 165.9463327375459
+            },
+            {
+              "value_Ohm": 0.1625,
+              "objective_rmse_mV": 168.9686836685096
+            },
+            {
+              "value_Ohm": 0.165,
+              "objective_rmse_mV": 171.99742705411998
+            },
+            {
+              "value_Ohm": 0.1675,
+              "objective_rmse_mV": 175.03223105115728
+            },
+            {
+              "value_Ohm": 0.17,
+              "objective_rmse_mV": 178.07278579612878
+            },
+            {
+              "value_Ohm": 0.17250000000000001,
+              "objective_rmse_mV": 181.11880166504568
+            },
+            {
+              "value_Ohm": 0.17500000000000002,
+              "objective_rmse_mV": 184.1700076910197
+            },
+            {
+              "value_Ohm": 0.1775,
+              "objective_rmse_mV": 187.2261501237961
+            },
+            {
+              "value_Ohm": 0.18,
+              "objective_rmse_mV": 190.2869911170654
+            },
+            {
+              "value_Ohm": 0.1825,
+              "objective_rmse_mV": 193.3523075309264
+            },
+            {
+              "value_Ohm": 0.185,
+              "objective_rmse_mV": 196.4218898382297
+            },
+            {
+              "value_Ohm": 0.1875,
+              "objective_rmse_mV": 199.495541124731
+            },
+            {
+              "value_Ohm": 0.19,
+              "objective_rmse_mV": 202.57307617404828
+            },
+            {
+              "value_Ohm": 0.1925,
+              "objective_rmse_mV": 205.65432062936142
+            },
+            {
+              "value_Ohm": 0.195,
+              "objective_rmse_mV": 208.73911022463304
+            },
+            {
+              "value_Ohm": 0.1975,
+              "objective_rmse_mV": 211.82729007887238
+            },
+            {
+              "value_Ohm": 0.2,
+              "objective_rmse_mV": 214.9187140476275
+            }
+          ],
+          "delta_R2_Ohm": [
+            {
+              "value_Ohm": 0.0,
+              "objective_rmse_mV": 54.88471045490909
+            },
+            {
+              "value_Ohm": 0.0025,
+              "objective_rmse_mV": 54.606144823907826
+            },
+            {
+              "value_Ohm": 0.005,
+              "objective_rmse_mV": 54.33341082724047
+            },
+            {
+              "value_Ohm": 0.0075,
+              "objective_rmse_mV": 54.06659671641541
+            },
+            {
+              "value_Ohm": 0.01,
+              "objective_rmse_mV": 53.805790558740235
+            },
+            {
+              "value_Ohm": 0.0125,
+              "objective_rmse_mV": 53.55108013465505
+            },
+            {
+              "value_Ohm": 0.015,
+              "objective_rmse_mV": 53.3025528310529
+            },
+            {
+              "value_Ohm": 0.0175,
+              "objective_rmse_mV": 53.06029553072462
+            },
+            {
+              "value_Ohm": 0.02,
+              "objective_rmse_mV": 52.82439449809333
+            },
+            {
+              "value_Ohm": 0.0225,
+              "objective_rmse_mV": 52.594935261432376
+            },
+            {
+              "value_Ohm": 0.025,
+              "objective_rmse_mV": 52.37200249178985
+            },
+            {
+              "value_Ohm": 0.0275,
+              "objective_rmse_mV": 52.15567987887352
+            },
+            {
+              "value_Ohm": 0.03,
+              "objective_rmse_mV": 51.946050004179654
+            },
+            {
+              "value_Ohm": 0.0325,
+              "objective_rmse_mV": 51.74319421168008
+            },
+            {
+              "value_Ohm": 0.035,
+              "objective_rmse_mV": 51.54719247641197
+            },
+            {
+              "value_Ohm": 0.0375,
+              "objective_rmse_mV": 51.358123271344255
+            },
+            {
+              "value_Ohm": 0.04,
+              "objective_rmse_mV": 51.17606343292373
+            },
+            {
+              "value_Ohm": 0.0425,
+              "objective_rmse_mV": 51.00108802573122
+            },
+            {
+              "value_Ohm": 0.045,
+              "objective_rmse_mV": 50.83327020670464
+            },
+            {
+              "value_Ohm": 0.0475,
+              "objective_rmse_mV": 50.672681089409686
+            },
+            {
+              "value_Ohm": 0.05,
+              "objective_rmse_mV": 50.51938960886106
+            },
+            {
+              "value_Ohm": 0.0525,
+              "objective_rmse_mV": 50.373462387416765
+            },
+            {
+              "value_Ohm": 0.055,
+              "objective_rmse_mV": 50.23496360228394
+            },
+            {
+              "value_Ohm": 0.0575,
+              "objective_rmse_mV": 50.103954855188874
+            },
+            {
+              "value_Ohm": 0.06,
+              "objective_rmse_mV": 49.98049504477249
+            },
+            {
+              "value_Ohm": 0.0625,
+              "objective_rmse_mV": 49.8646402422795
+            },
+            {
+              "value_Ohm": 0.065,
+              "objective_rmse_mV": 49.7564435711105
+            },
+            {
+              "value_Ohm": 0.0675,
+              "objective_rmse_mV": 49.65595509080412
+            },
+            {
+              "value_Ohm": 0.07,
+              "objective_rmse_mV": 49.56322168600947
+            },
+            {
+              "value_Ohm": 0.0725,
+              "objective_rmse_mV": 49.47828696099727
+            },
+            {
+              "value_Ohm": 0.075,
+              "objective_rmse_mV": 49.40119114024252
+            },
+            {
+              "value_Ohm": 0.0775,
+              "objective_rmse_mV": 49.33677968363604
+            },
+            {
+              "value_Ohm": 0.07935677298732843,
+              "objective_rmse_mV": 49.32070615467156
+            },
+            {
+              "value_Ohm": 0.08,
+              "objective_rmse_mV": 49.32263538657842
+            },
+            {
+              "value_Ohm": 0.0825,
+              "objective_rmse_mV": 49.36675441047305
+            },
+            {
+              "value_Ohm": 0.085,
+              "objective_rmse_mV": 49.46898086873683
+            },
+            {
+              "value_Ohm": 0.08750000000000001,
+              "objective_rmse_mV": 49.628955691005906
+            },
+            {
+              "value_Ohm": 0.09,
+              "objective_rmse_mV": 49.846122872186285
+            },
+            {
+              "value_Ohm": 0.0925,
+              "objective_rmse_mV": 50.11973897995925
+            },
+            {
+              "value_Ohm": 0.095,
+              "objective_rmse_mV": 50.44888554834771
+            },
+            {
+              "value_Ohm": 0.0975,
+              "objective_rmse_mV": 50.83248388916496
+            },
+            {
+              "value_Ohm": 0.1,
+              "objective_rmse_mV": 51.26931178819382
+            },
+            {
+              "value_Ohm": 0.10250000000000001,
+              "objective_rmse_mV": 51.75802152081099
+            },
+            {
+              "value_Ohm": 0.105,
+              "objective_rmse_mV": 52.297158621509496
+            },
+            {
+              "value_Ohm": 0.1075,
+              "objective_rmse_mV": 52.88518086986942
+            },
+            {
+              "value_Ohm": 0.11,
+              "objective_rmse_mV": 53.52047700661093
+            },
+            {
+              "value_Ohm": 0.1125,
+              "objective_rmse_mV": 54.201384761022695
+            },
+            {
+              "value_Ohm": 0.115,
+              "objective_rmse_mV": 54.92620784862689
+            },
+            {
+              "value_Ohm": 0.11750000000000001,
+              "objective_rmse_mV": 55.693231679168996
+            },
+            {
+              "value_Ohm": 0.12,
+              "objective_rmse_mV": 56.50073759456162
+            },
+            {
+              "value_Ohm": 0.1225,
+              "objective_rmse_mV": 57.347015530106816
+            },
+            {
+              "value_Ohm": 0.125,
+              "objective_rmse_mV": 58.23037505728434
+            },
+            {
+              "value_Ohm": 0.1275,
+              "objective_rmse_mV": 59.149154820965805
+            },
+            {
+              "value_Ohm": 0.13,
+              "objective_rmse_mV": 60.10173042748476
+            },
+            {
+              "value_Ohm": 0.1325,
+              "objective_rmse_mV": 61.08652087279486
+            },
+            {
+              "value_Ohm": 0.135,
+              "objective_rmse_mV": 62.10199362281088
+            },
+            {
+              "value_Ohm": 0.1375,
+              "objective_rmse_mV": 63.146668472167015
+            },
+            {
+              "value_Ohm": 0.14,
+              "objective_rmse_mV": 64.21912031444208
+            },
+            {
+              "value_Ohm": 0.14250000000000002,
+              "objective_rmse_mV": 65.31798095783955
+            },
+            {
+              "value_Ohm": 0.145,
+              "objective_rmse_mV": 66.44194011674766
+            },
+            {
+              "value_Ohm": 0.1475,
+              "objective_rmse_mV": 67.58974570278512
+            },
+            {
+              "value_Ohm": 0.15,
+              "objective_rmse_mV": 68.7602035299324
+            },
+            {
+              "value_Ohm": 0.1525,
+              "objective_rmse_mV": 69.9521765380405
+            },
+            {
+              "value_Ohm": 0.155,
+              "objective_rmse_mV": 71.16458362810482
+            },
+            {
+              "value_Ohm": 0.1575,
+              "objective_rmse_mV": 72.39639819172469
+            },
+            {
+              "value_Ohm": 0.16,
+              "objective_rmse_mV": 73.64664640653282
+            },
+            {
+              "value_Ohm": 0.1625,
+              "objective_rmse_mV": 74.91440535934247
+            },
+            {
+              "value_Ohm": 0.165,
+              "objective_rmse_mV": 76.19880104949007
+            },
+            {
+              "value_Ohm": 0.1675,
+              "objective_rmse_mV": 77.49900631644608
+            },
+            {
+              "value_Ohm": 0.17,
+              "objective_rmse_mV": 78.81423872825404
+            },
+            {
+              "value_Ohm": 0.17250000000000001,
+              "objective_rmse_mV": 80.1437584607359
+            },
+            {
+              "value_Ohm": 0.17500000000000002,
+              "objective_rmse_mV": 81.48686619162758
+            },
+            {
+              "value_Ohm": 0.1775,
+              "objective_rmse_mV": 82.84290102883014
+            },
+            {
+              "value_Ohm": 0.18,
+              "objective_rmse_mV": 84.21123848770878
+            },
+            {
+              "value_Ohm": 0.1825,
+              "objective_rmse_mV": 85.59128852877417
+            },
+            {
+              "value_Ohm": 0.185,
+              "objective_rmse_mV": 86.98249366406358
+            },
+            {
+              "value_Ohm": 0.1875,
+              "objective_rmse_mV": 88.38432713803248
+            },
+            {
+              "value_Ohm": 0.19,
+              "objective_rmse_mV": 89.79629118670498
+            },
+            {
+              "value_Ohm": 0.1925,
+              "objective_rmse_mV": 91.21791537715147
+            },
+            {
+              "value_Ohm": 0.195,
+              "objective_rmse_mV": 92.6487550280073
+            },
+            {
+              "value_Ohm": 0.1975,
+              "objective_rmse_mV": 94.0883897106712
+            },
+            {
+              "value_Ohm": 0.2,
+              "objective_rmse_mV": 95.53642182997778
+            }
+          ]
+        },
+        "within_1pct_objective_grid_bands_Ohm": {
+          "delta_R0_Ohm": [
+            0.0,
+            0.005
+          ],
+          "delta_R1_Ohm": [
+            0.0,
+            0.0075
+          ],
+          "delta_R2_Ohm": [
+            0.065,
+            0.08750000000000001
+          ]
+        },
+        "uncertainty_interpretation": "conditional objective sensitivity, NOT confidence intervals; correlated residuals/model discrepancy"
+      },
+      "leave_pair_out": {
+        "objective_rmse_mV": 54.60710470910153,
+        "folds": [
+          {
+            "pair_index": 21,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.07935681702763024
+            ],
+            "training_objective_rmse_mV": 51.03545372227612
+          },
+          {
+            "pair_index": 22,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.07952432316239437
+            ],
+            "training_objective_rmse_mV": 50.89342968586547
+          },
+          {
+            "pair_index": 23,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.0803587151700403
+            ],
+            "training_objective_rmse_mV": 50.75317692434393
+          },
+          {
+            "pair_index": 24,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.08228361417775466
+            ],
+            "training_objective_rmse_mV": 50.14998771687909
+          },
+          {
+            "pair_index": 25,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.08486174414919916
+            ],
+            "training_objective_rmse_mV": 49.24029697357328
+          },
+          {
+            "pair_index": 26,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.08762794478593718
+            ],
+            "training_objective_rmse_mV": 48.52151118153398
+          },
+          {
+            "pair_index": 27,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.08946685631959655
+            ],
+            "training_objective_rmse_mV": 48.743200232181565
+          },
+          {
+            "pair_index": 28,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.08447694768832674
+            ],
+            "training_objective_rmse_mV": 51.147361398178965
+          },
+          {
+            "pair_index": 29,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.06589166347923522
+            ],
+            "training_objective_rmse_mV": 48.16767275407305
+          },
+          {
+            "pair_index": 30,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.06693094368660389
+            ],
+            "training_objective_rmse_mV": 46.961443184039766
+          },
+          {
+            "pair_index": 31,
+            "increments_Ohm": [
+              0.0,
+              0.0,
+              0.07077949417809111
+            ],
+            "training_objective_rmse_mV": 43.569584736862076
+          }
+        ],
+        "increments_min_Ohm": [
+          0.0,
+          0.0,
+          0.06589166347923522
+        ],
+        "increments_max_Ohm": [
+          0.0,
+          0.0,
+          0.08946685631959655
+        ],
+        "evidence": "leave-complete-pair-out development diagnostic on previously opened GITT; not fresh assessment"
+      },
+      "screening": {
+        "checks": {
+          "objective_improves_20pct": true,
+          "pulse_time_rmse_not_worse": true,
+          "rest_time_rmse_not_worse": false,
+          "loaded_endpoint_max_improves_20pct": true,
+          "late_rest_median_max_degrades_at_most_5mV": true
+        },
+        "all_pass": false,
+        "baseline_phase_metrics": {
+          "discharge": {
+            "samples": 5055,
+            "covered_duration_s": 1004.9220000000059,
+            "sample_rmse_mV": 105.50479530390876,
+            "sample_bias_mV": 57.83608802730386,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 105.33088619075151,
+            "time_bias_mV": 57.84359320486559
+          },
+          "rest": {
+            "samples": 31842,
+            "covered_duration_s": 27002.27399999999,
+            "sample_rmse_mV": 30.39532605799304,
+            "sample_bias_mV": -4.309593028836582,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 28.032098087189713,
+            "time_bias_mV": -6.126627366814791
+          }
+        },
+        "cv_phase_metrics": {
+          "discharge": {
+            "samples": 5055,
+            "covered_duration_s": 1004.9220000000059,
+            "sample_rmse_mV": 74.6769907682244,
+            "sample_bias_mV": 6.887978161774764,
+            "max_abs_error_mV": 182.34751507206727,
+            "time_rmse_mV": 74.46297418057233,
+            "time_bias_mV": 7.066189434285155
+          },
+          "rest": {
+            "samples": 31842,
+            "covered_duration_s": 27002.27399999999,
+            "sample_rmse_mV": 33.50851591739232,
+            "sample_bias_mV": -12.14327802185783,
+            "max_abs_error_mV": 164.47071902064803,
+            "time_rmse_mV": 28.344139096161868,
+            "time_bias_mV": -8.233185747206463
+          }
+        },
+        "baseline_loaded_max_mV": 333.3579248213656,
+        "cv_loaded_max_mV": 182.32864176490037,
+        "baseline_late_rest_max_mV": 41.554988936930215,
+        "cv_late_rest_max_mV": 41.554988936930215,
+        "interpretation": "proposed development screen only; never application acceptance or automatic adoption"
+      },
+      "max_affine_direct_difference_V": 3.9968028886505635e-15,
+      "time_step": {
+        "common_samples": 98426,
+        "max_abs_voltage_difference_mV": 0.0647669185305233,
+        "rmse_voltage_difference_mV": 0.005830174701065035,
+        "proposed_0p1_mV_check_met": true
+      }
+    }
+  },
+  "runs": {
+    "B0": {
+      "configuration": {
+        "max_step_s": 0.25,
+        "current_mode": "left",
+        "reference_policy": "stop",
+        "initial_soc": 1.0,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25,
+        "initial_soc_offset": 0.0,
+        "evidence_role": "frozen-model development replay"
+      },
+      "stopped": null,
+      "coverage": {
+        "rows": 98426,
+        "predicted_rows": 98426,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "already-used complete GITT development record; no fresh assessment",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 29.883582946503992,
+        "sample_bias_mV": 0.8515289602892738,
+        "max_abs_error_mV": 333.3674920539833,
+        "time_rmse_mV": 22.190069927698907,
+        "time_bias_mV": -3.2981853486173422
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 83546,
+        "covered_duration_s": 55654.049000000006,
+        "sample_rmse_mV": 18.24103695321968,
+        "sample_bias_mV": -4.1303336629677805,
+        "max_abs_error_mV": 332.71118772682894,
+        "time_rmse_mV": 15.539762219534477,
+        "time_bias_mV": -7.438050003147805
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 83548,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "0-0.2": {
+            "samples": 36013,
+            "covered_duration_s": 27831.59999999999,
+            "sample_rmse_mV": 48.75656672979708,
+            "sample_bias_mV": 4.469811376663489,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 34.10851691434018,
+            "time_bias_mV": -3.8101600968264995
+          },
+          "0.2-0.8": {
+            "samples": 38235,
+            "covered_duration_s": 23762.154,
+            "sample_rmse_mV": 6.9935923340405415,
+            "sample_bias_mV": -0.6513441886380875,
+            "max_abs_error_mV": 22.535000620328205,
+            "time_rmse_mV": 6.8396902171214045,
+            "time_bias_mV": -2.842595231478566
+          },
+          "0.8-1": {
+            "samples": 24178,
+            "covered_duration_s": 16921.526,
+            "sample_rmse_mV": 4.1526374289228905,
+            "sample_bias_mV": -2.1612450413505195,
+            "max_abs_error_mV": 14.84804563826092,
+            "time_rmse_mV": 3.8154086484572693,
+            "time_bias_mV": -3.0959810702718893
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 18618,
+            "covered_duration_s": 3705.112000000012,
+            "sample_rmse_mV": 55.32288322035298,
+            "sample_bias_mV": 19.5629572186609,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 55.20439134476189,
+            "time_bias_mV": 19.55663021855499
+          },
+          "rest": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 19.681511049726907,
+            "sample_bias_mV": -3.513564405217478,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 18.599243261529892,
+            "time_bias_mV": -4.606563769762299
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 19.681511049726907,
+            "sample_bias_mV": -3.513564405217478,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 18.599243261529892,
+            "time_bias_mV": -4.606563769762299
+          },
+          "0.5-3 A": {
+            "samples": 1308,
+            "covered_duration_s": 260.7740000000049,
+            "sample_rmse_mV": 178.10483376639303,
+            "sample_bias_mV": 162.349595197193,
+            "max_abs_error_mV": 289.8693973551714,
+            "time_rmse_mV": 177.89945994441757,
+            "time_bias_mV": 162.22838813532138
+          },
+          "3-5 A": {
+            "samples": 17280,
+            "covered_duration_s": 3438.3999999999896,
+            "sample_rmse_mV": 29.933364017497862,
+            "sample_bias_mV": 8.80820131452099,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 29.720249409124094,
+            "time_bias_mV": 8.783646089863012
+          },
+          ">5 A": {
+            "samples": 30,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 16.49122925348704,
+            "sample_bias_mV": -11.19505786074928,
+            "max_abs_error_mV": 41.749772922485384,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 3285,
+            "covered_duration_s": 645.3460000000216,
+            "sample_rmse_mV": 32.637921406120306,
+            "sample_bias_mV": 4.2933346350040065,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 38.026828087948694,
+            "time_bias_mV": 6.406745573171087
+          },
+          "10-60 s": {
+            "samples": 15802,
+            "covered_duration_s": 3186.4710000000373,
+            "sample_rmse_mV": 41.04154371821798,
+            "sample_bias_mV": 11.604992195292938,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 43.91838742737446,
+            "time_bias_mV": 13.27174636044979
+          },
+          ">60 s": {
+            "samples": 79339,
+            "covered_duration_s": 64653.34400000001,
+            "sample_rmse_mV": 26.98664133106091,
+            "sample_bias_mV": -1.4327518811754008,
+            "max_abs_error_mV": 289.8693973551714,
+            "time_rmse_mV": 20.26638694037627,
+            "time_bias_mV": -4.222521121053991
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 98426,
+            "covered_duration_s": 68515.68,
+            "sample_rmse_mV": 29.883582946503992,
+            "sample_bias_mV": 0.8515289602892738,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 22.190069927698907,
+            "time_bias_mV": -3.2981853486173422
+          }
+        }
+      },
+      "requirement_status": "requirement not configured",
+      "conditional_memory_bounds": {
+        "max_tau1_s": 4.5873905354198765,
+        "max_tau2_s": 80.64401946476097,
+        "min_gamma": 46.4235066696758,
+        "interpretation": "fixed SOC/current history only; not real-error or initial-SOC bounds"
+      },
+      "rest_windows": {
+        "0-1 s": {
+          "samples": 218,
+          "covered_duration_s": 31.211000000003878,
+          "sample_rmse_mV": 66.35140465482795,
+          "sample_bias_mV": 16.021902446857727,
+          "max_abs_error_mV": 290.09453797061144,
+          "time_rmse_mV": 69.85298870414334,
+          "time_bias_mV": 18.687534703958075
+        },
+        "1-10 s": {
+          "samples": 1407,
+          "covered_duration_s": 281.39600000001224,
+          "sample_rmse_mV": 40.09795242375454,
+          "sample_bias_mV": 7.685781088356561,
+          "max_abs_error_mV": 205.13188932065108,
+          "time_rmse_mV": 48.743983411335826,
+          "time_bias_mV": 11.73891298648852
+        },
+        "10-60 s": {
+          "samples": 7800,
+          "covered_duration_s": 1592.798000000011,
+          "sample_rmse_mV": 27.44896684663578,
+          "sample_bias_mV": 2.1759674659417567,
+          "max_abs_error_mV": 178.46832532957936,
+          "time_rmse_mV": 35.90843072642602,
+          "time_bias_mV": 5.792032742978492
+        },
+        "60-600 s": {
+          "samples": 24749,
+          "covered_duration_s": 17270.008000000013,
+          "sample_rmse_mV": 19.980681896324572,
+          "sample_bias_mV": -0.2656569763266471,
+          "max_abs_error_mV": 132.14517029501715,
+          "time_rmse_mV": 20.83599564384789,
+          "time_bias_mV": -0.43628624295075985
+        },
+        ">600 s": {
+          "samples": 45634,
+          "covered_duration_s": 45578.037999999964,
+          "sample_rmse_mV": 16.17227437774445,
+          "sample_bias_mV": -6.686133551815901,
+          "max_abs_error_mV": 63.44098112084673,
+          "time_rmse_mV": 16.171671547823387,
+          "time_bias_mV": -6.682816538164953
+        }
+      },
+      "max_voltage_decomposition_closure_mV": 0.0
+    },
+    "C1_R0": {
+      "configuration": {
+        "max_step_s": 0.25,
+        "current_mode": "left",
+        "reference_policy": "stop",
+        "initial_soc": 1.0,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25,
+        "initial_soc_offset": 0.0,
+        "evidence_role": "frozen-model development replay"
+      },
+      "stopped": null,
+      "coverage": {
+        "rows": 98426,
+        "predicted_rows": 98426,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "already-used complete GITT development record; no fresh assessment",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 25.614238771467654,
+        "sample_bias_mV": -1.5810528598461455,
+        "max_abs_error_mV": 290.09453797061144,
+        "time_rmse_mV": 20.60997904408997,
+        "time_bias_mV": -3.992341354944803
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 83546,
+        "covered_duration_s": 55654.049000000006,
+        "sample_rmse_mV": 16.336101424930312,
+        "sample_bias_mV": -6.22840742043056,
+        "max_abs_error_mV": 210.13329485953224,
+        "time_rmse_mV": 14.889824775758333,
+        "time_bias_mV": -8.063394895017376
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 83548,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "0-0.2": {
+            "samples": 36013,
+            "covered_duration_s": 27831.59999999999,
+            "sample_rmse_mV": 41.588837803701914,
+            "sample_bias_mV": -2.178601647207026,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 31.5737987544855,
+            "time_bias_mV": -5.519029534722669
+          },
+          "0.2-0.8": {
+            "samples": 38235,
+            "covered_duration_s": 23762.154,
+            "sample_rmse_mV": 6.9935923340405415,
+            "sample_bias_mV": -0.6513441886380875,
+            "max_abs_error_mV": 22.535000620328205,
+            "time_rmse_mV": 6.8396902171214045,
+            "time_bias_mV": -2.842595231478566
+          },
+          "0.8-1": {
+            "samples": 24178,
+            "covered_duration_s": 16921.526,
+            "sample_rmse_mV": 4.1526374289228905,
+            "sample_bias_mV": -2.1612450413505195,
+            "max_abs_error_mV": 14.84804563826092,
+            "time_rmse_mV": 3.8154086484572693,
+            "time_bias_mV": -3.0959810702718893
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 18618,
+            "covered_duration_s": 3705.112000000012,
+            "sample_rmse_mV": 42.520783552652205,
+            "sample_bias_mV": 6.7028603174132755,
+            "max_abs_error_mV": 221.96128317963203,
+            "time_rmse_mV": 42.40988023541096,
+            "time_bias_mV": 6.729994320611073
+          },
+          "rest": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 19.681511210859938,
+            "sample_bias_mV": -3.513564582157391,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 18.599243285397897,
+            "time_bias_mV": -4.606563794530386
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 19.681511210859938,
+            "sample_bias_mV": -3.513564582157391,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 18.599243285397897,
+            "time_bias_mV": -4.606563794530386
+          },
+          "0.5-3 A": {
+            "samples": 1308,
+            "covered_duration_s": 260.7740000000049,
+            "sample_rmse_mV": 134.91096978906057,
+            "sample_bias_mV": 113.49757393576722,
+            "max_abs_error_mV": 221.96128317963203,
+            "time_rmse_mV": 134.69962950141087,
+            "time_bias_mV": 113.38879231060527
+          },
+          "3-5 A": {
+            "samples": 17280,
+            "covered_duration_s": 3438.3999999999896,
+            "sample_rmse_mV": 23.791594820419718,
+            "sample_bias_mV": -1.321161540451196,
+            "max_abs_error_mV": 210.77767062565346,
+            "time_rmse_mV": 23.63413744242522,
+            "time_bias_mV": -1.3068730135216176
+          },
+          ">5 A": {
+            "samples": 30,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 49.53845445639521,
+            "sample_bias_mV": -27.710063312883577,
+            "max_abs_error_mV": 140.41307641550736,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 3285,
+            "covered_duration_s": 645.3460000000216,
+            "sample_rmse_mV": 39.66655790685999,
+            "sample_bias_mV": -4.356230810422127,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 44.150716280667915,
+            "time_bias_mV": -2.21808299749432
+          },
+          "10-60 s": {
+            "samples": 15802,
+            "covered_duration_s": 3186.4710000000373,
+            "sample_rmse_mV": 30.81986218630043,
+            "sample_bias_mV": 2.1052106072962653,
+            "max_abs_error_mV": 210.77767062565346,
+            "time_rmse_mV": 34.77804590580123,
+            "time_bias_mV": 3.899812806637337
+          },
+          ">60 s": {
+            "samples": 79339,
+            "covered_duration_s": 64653.34400000001,
+            "sample_rmse_mV": 23.655772265945693,
+            "sample_bias_mV": -2.200343192975405,
+            "max_abs_error_mV": 221.96128317963203,
+            "time_rmse_mV": 19.22539290330651,
+            "time_bias_mV": -4.406257967110974
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 98426,
+            "covered_duration_s": 68515.68,
+            "sample_rmse_mV": 25.614238771467654,
+            "sample_bias_mV": -1.5810528598461455,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 20.60997904408997,
+            "time_bias_mV": -3.992341354944803
+          }
+        }
+      },
+      "requirement_status": "requirement not configured",
+      "conditional_memory_bounds": {
+        "max_tau1_s": 4.5873905354198765,
+        "max_tau2_s": 80.64401946476097,
+        "min_gamma": 46.4235066696758,
+        "interpretation": "fixed SOC/current history only; not real-error or initial-SOC bounds"
+      },
+      "rest_windows": {
+        "0-1 s": {
+          "samples": 218,
+          "covered_duration_s": 31.211000000003878,
+          "sample_rmse_mV": 66.35140465482795,
+          "sample_bias_mV": 16.021902446857727,
+          "max_abs_error_mV": 290.09453797061144,
+          "time_rmse_mV": 69.85298870414334,
+          "time_bias_mV": 18.687534703958075
+        },
+        "1-10 s": {
+          "samples": 1407,
+          "covered_duration_s": 281.39600000001224,
+          "sample_rmse_mV": 40.09795242375454,
+          "sample_bias_mV": 7.685781088356561,
+          "max_abs_error_mV": 205.13188932065108,
+          "time_rmse_mV": 48.743983411335826,
+          "time_bias_mV": 11.73891298648852
+        },
+        "10-60 s": {
+          "samples": 7800,
+          "covered_duration_s": 1592.798000000011,
+          "sample_rmse_mV": 27.44896684663578,
+          "sample_bias_mV": 2.1759674659417567,
+          "max_abs_error_mV": 178.46832532957936,
+          "time_rmse_mV": 35.90843072642602,
+          "time_bias_mV": 5.792032742978492
+        },
+        "60-600 s": {
+          "samples": 24749,
+          "covered_duration_s": 17270.008000000013,
+          "sample_rmse_mV": 19.980681896324572,
+          "sample_bias_mV": -0.2656569763266471,
+          "max_abs_error_mV": 132.14517029501715,
+          "time_rmse_mV": 20.83599564384789,
+          "time_bias_mV": -0.43628624295075985
+        },
+        ">600 s": {
+          "samples": 45634,
+          "covered_duration_s": 45578.037999999964,
+          "sample_rmse_mV": 16.172274720693657,
+          "sample_bias_mV": -6.6861338612610615,
+          "max_abs_error_mV": 63.44098112084673,
+          "time_rmse_mV": 16.1716715868556,
+          "time_bias_mV": -6.682816573382501
+        }
+      },
+      "max_voltage_decomposition_closure_mV": 0.0
+    },
+    "C2_R0_R1_R2": {
+      "configuration": {
+        "max_step_s": 0.25,
+        "current_mode": "left",
+        "reference_policy": "stop",
+        "initial_soc": 1.0,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25,
+        "initial_soc_offset": 0.0,
+        "evidence_role": "frozen-model development replay"
+      },
+      "stopped": null,
+      "coverage": {
+        "rows": 98426,
+        "predicted_rows": 98426,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "already-used complete GITT development record; no fresh assessment",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 24.414582026669017,
+        "sample_bias_mV": -4.368615929994771,
+        "max_abs_error_mV": 170.15134832102464,
+        "time_rmse_mV": 19.86968747508567,
+        "time_bias_mV": -4.8997501551329155
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 83546,
+        "covered_duration_s": 55654.049000000006,
+        "sample_rmse_mV": 19.959736486709375,
+        "sample_bias_mV": -8.206578553933008,
+        "max_abs_error_mV": 150.9607535735773,
+        "time_rmse_mV": 16.166581624413187,
+        "time_bias_mV": -8.707134259876083
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 83548,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "0-0.2": {
+            "samples": 36013,
+            "covered_duration_s": 27831.59999999999,
+            "sample_rmse_mV": 39.567660077292444,
+            "sample_bias_mV": -9.797202784086725,
+            "max_abs_error_mV": 170.15134832102464,
+            "time_rmse_mV": 30.38310012179172,
+            "time_bias_mV": -7.752883540052289
+          },
+          "0.2-0.8": {
+            "samples": 38235,
+            "covered_duration_s": 23762.154,
+            "sample_rmse_mV": 6.9935923340405415,
+            "sample_bias_mV": -0.6513441886380875,
+            "max_abs_error_mV": 22.535000620328205,
+            "time_rmse_mV": 6.8396902171214045,
+            "time_bias_mV": -2.842595231478566
+          },
+          "0.8-1": {
+            "samples": 24178,
+            "covered_duration_s": 16921.526,
+            "sample_rmse_mV": 4.1526374289228905,
+            "sample_bias_mV": -2.1612450413505195,
+            "max_abs_error_mV": 14.84804563826092,
+            "time_rmse_mV": 3.8154086484572693,
+            "time_bias_mV": -3.0959810702718893
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 18618,
+            "covered_duration_s": 3705.112000000012,
+            "sample_rmse_mV": 35.58806098621539,
+            "sample_bias_mV": 5.374509079132505,
+            "max_abs_error_mV": 170.15134832102464,
+            "time_rmse_mV": 35.47309286364865,
+            "time_bias_mV": 5.4263029666508595
+          },
+          "rest": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 20.96827846675827,
+            "sample_bias_mV": -6.641539714827516,
+            "max_abs_error_mV": 156.36767236090822,
+            "time_rmse_mV": 18.580731374137528,
+            "time_bias_mV": -5.490145337541067
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 20.96827846675827,
+            "sample_bias_mV": -6.641539714827516,
+            "max_abs_error_mV": 156.36767236090822,
+            "time_rmse_mV": 18.580731374137528,
+            "time_bias_mV": -5.490145337541067
+          },
+          "0.5-3 A": {
+            "samples": 1308,
+            "covered_duration_s": 260.7740000000049,
+            "sample_rmse_mV": 104.60842523380441,
+            "sample_bias_mV": 93.28598499851802,
+            "max_abs_error_mV": 170.15134832102464,
+            "time_rmse_mV": 104.47492960331178,
+            "time_bias_mV": 93.2016003265224
+          },
+          "3-5 A": {
+            "samples": 17280,
+            "covered_duration_s": 3438.3999999999896,
+            "sample_rmse_mV": 23.147052971694485,
+            "sample_bias_mV": -1.2511346415518914,
+            "max_abs_error_mV": 151.4862433937143,
+            "time_rmse_mV": 22.973089888373107,
+            "time_bias_mV": -1.207521607617983
+          },
+          ">5 A": {
+            "samples": 30,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 16.49122929382077,
+            "sample_bias_mV": -11.195057891864375,
+            "max_abs_error_mV": 41.74977294425952,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 3285,
+            "covered_duration_s": 645.3460000000216,
+            "sample_rmse_mV": 37.564921664942204,
+            "sample_bias_mV": -12.193321436387187,
+            "max_abs_error_mV": 156.36767236090822,
+            "time_rmse_mV": 39.57234008751764,
+            "time_bias_mV": -10.552703063868323
+          },
+          "10-60 s": {
+            "samples": 15802,
+            "covered_duration_s": 3186.4710000000373,
+            "sample_rmse_mV": 33.116882942644786,
+            "sample_bias_mV": -6.8473955055409395,
+            "max_abs_error_mV": 151.4862433937143,
+            "time_rmse_mV": 35.04375455815207,
+            "time_bias_mV": -5.427957607591236
+          },
+          ">60 s": {
+            "samples": 79339,
+            "covered_duration_s": 64653.34400000001,
+            "sample_rmse_mV": 21.508345474053627,
+            "sample_bias_mV": -3.5509369519224525,
+            "max_abs_error_mV": 170.15134832102464,
+            "time_rmse_mV": 18.47054715648715,
+            "time_bias_mV": -4.819146150084307
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 98426,
+            "covered_duration_s": 68515.68,
+            "sample_rmse_mV": 24.414582026669017,
+            "sample_bias_mV": -4.368615929994771,
+            "max_abs_error_mV": 170.15134832102464,
+            "time_rmse_mV": 19.86968747508567,
+            "time_bias_mV": -4.8997501551329155
+          }
+        }
+      },
+      "requirement_status": "requirement not configured",
+      "conditional_memory_bounds": {
+        "max_tau1_s": 4.5873905354198765,
+        "max_tau2_s": 80.64401946476097,
+        "min_gamma": 46.4235066696758,
+        "interpretation": "fixed SOC/current history only; not real-error or initial-SOC bounds"
+      },
+      "rest_windows": {
+        "0-1 s": {
+          "samples": 218,
+          "covered_duration_s": 31.211000000003878,
+          "sample_rmse_mV": 57.371680615350655,
+          "sample_bias_mV": -16.08883725817311,
+          "max_abs_error_mV": 156.36767236090822,
+          "time_rmse_mV": 60.104546291115355,
+          "time_bias_mV": -14.343281885181266
+        },
+        "1-10 s": {
+          "samples": 1407,
+          "covered_duration_s": 281.39600000001224,
+          "sample_rmse_mV": 51.063082539599705,
+          "sample_bias_mV": -21.655099800874957,
+          "max_abs_error_mV": 144.46586490493019,
+          "time_rmse_mV": 53.77024329932489,
+          "time_bias_mV": -18.436518946229725
+        },
+        "10-60 s": {
+          "samples": 7800,
+          "covered_duration_s": 1592.798000000011,
+          "sample_rmse_mV": 34.83082091156738,
+          "sample_bias_mV": -15.296120861154654,
+          "max_abs_error_mV": 124.22775677657283,
+          "time_rmse_mV": 38.4592705840497,
+          "time_bias_mV": -12.227071808168564
+        },
+        "60-600 s": {
+          "samples": 24749,
+          "covered_duration_s": 17270.008000000013,
+          "sample_rmse_mV": 19.389845959233384,
+          "sample_bias_mV": -2.8949213193112087,
+          "max_abs_error_mV": 108.18151726267588,
+          "time_rmse_mV": 20.254153627649288,
+          "time_bias_mV": -1.5047853844557337
+        },
+        ">600 s": {
+          "samples": 45634,
+          "covered_duration_s": 45578.037999999964,
+          "sample_rmse_mV": 16.172273787708708,
+          "sample_bias_mV": -6.6861497824035165,
+          "max_abs_error_mV": 63.439996084696304,
+          "time_rmse_mV": 16.171670972632636,
+          "time_bias_mV": -6.6828326381006296
+        }
+      },
+      "max_voltage_decomposition_closure_mV": 0.0
+    }
+  },
+  "initial_soc_sensitivity": {
+    "C1_R0": {
+      "primary_parameters_Ohm": [
+        0.03450577201603473,
+        0.0,
+        0.0
+      ],
+      "refitted_parameters_Ohm": [
+        0.02458017942651446,
+        0.0,
+        0.0
+      ],
+      "refitted_objective_rmse_mV": 55.17701877532071,
+      "unchanged_parameters_metrics": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 28.38381003964569,
+        "sample_bias_mV": -13.772491096333317,
+        "max_abs_error_mV": 264.9331326699063,
+        "time_rmse_mV": 27.317188290345708,
+        "time_bias_mV": -17.61727924870311
+      },
+      "refitted_metrics": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 28.32199918796555,
+        "sample_bias_mV": -13.034308495209794,
+        "max_abs_error_mV": 264.9331326699063,
+        "time_rmse_mV": 27.299055845508175,
+        "time_bias_mV": -17.406640230348884
+      },
+      "max_unchanged_parameter_voltage_shift_mV": 49.798815194647794,
+      "interpretation": "sensitivity scenario; conditional refit, not selected calibration or uncertainty bound"
+    },
+    "C2_R0_R1_R2": {
+      "primary_parameters_Ohm": [
+        0.0,
+        0.0,
+        0.07935677298732843
+      ],
+      "refitted_parameters_Ohm": [
+        0.0,
+        0.0,
+        0.058936714974500884
+      ],
+      "refitted_objective_rmse_mV": 49.87896266728499,
+      "unchanged_parameters_metrics": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 29.750450806443222,
+        "sample_bias_mV": -16.716214915129754,
+        "max_abs_error_mV": 163.82824433249255,
+        "time_rmse_mV": 27.624711801866,
+        "time_bias_mV": -18.574447449207117
+      },
+      "refitted_metrics": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 28.3782281148339,
+        "sample_bias_mV": -15.298390091874207,
+        "max_abs_error_mV": 168.77571486571742,
+        "time_rmse_mV": 27.230349904362065,
+        "time_bias_mV": -18.139720531143205
+      },
+      "max_unchanged_parameter_voltage_shift_mV": 50.90323540883679,
+      "interpretation": "sensitivity scenario; conditional refit, not selected calibration or uncertainty bound"
+    }
+  },
+  "used_1C_transfer": {
+    "B0": {
+      "configuration": {
+        "max_step_s": 0.25,
+        "current_mode": "left",
+        "reference_policy": "stop",
+        "initial_soc": 1,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25
+      },
+      "stopped": null,
+      "coverage": {
+        "rows": 3433,
+        "predicted_rows": 3433,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "this one complete development discharge only",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 3433,
+        "covered_duration_s": 3433.786,
+        "sample_rmse_mV": 35.8603865408592,
+        "sample_bias_mV": 19.071409267665132,
+        "max_abs_error_mV": 336.0385718808918,
+        "time_rmse_mV": 35.034084507479065,
+        "time_bias_mV": 18.909661534209143
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 3431,
+        "covered_duration_s": 3433.084,
+        "sample_rmse_mV": 34.94224876234073,
+        "sample_bias_mV": 18.886744317143147,
+        "max_abs_error_mV": 331.5264096741766,
+        "time_rmse_mV": 34.711198816205304,
+        "time_bias_mV": 18.845293333627723
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 3433,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "0-0.2": {
+            "samples": 555,
+            "covered_duration_s": 553.44,
+            "sample_rmse_mV": 81.06214216334354,
+            "sample_bias_mV": 41.01875756952411,
+            "max_abs_error_mV": 336.0385718808918,
+            "time_rmse_mV": 78.90283409089713,
+            "time_bias_mV": 40.0517514911562
+          },
+          "0.2-0.8": {
+            "samples": 2157,
+            "covered_duration_s": 2158.963999999999,
+            "sample_rmse_mV": 18.022000801138958,
+            "sample_bias_mV": 16.966364132984097,
+            "max_abs_error_mV": 29.850867027836347,
+            "time_rmse_mV": 18.015982517029055,
+            "time_bias_mV": 16.960067704962285
+          },
+          "0.8-1": {
+            "samples": 721,
+            "covered_duration_s": 719.381000000001,
+            "sample_rmse_mV": 9.654504886753967,
+            "sample_bias_mV": 8.474743592180042,
+            "max_abs_error_mV": 20.318390468918146,
+            "time_rmse_mV": 9.650648588381237,
+            "time_bias_mV": 8.478152018699827
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 3432,
+            "covered_duration_s": 3433.7609999999986,
+            "sample_rmse_mV": 35.86561032741106,
+            "sample_bias_mV": 19.07689417667225,
+            "max_abs_error_mV": 336.0385718808918,
+            "time_rmse_mV": 35.034208464761896,
+            "time_bias_mV": 18.909768112759988
+          },
+          "rest": {
+            "samples": 1,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 0.24720155521418263,
+            "sample_bias_mV": 0.24720155521418263,
+            "max_abs_error_mV": 0.24720155521418263,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 1,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 0.24720155521418263,
+            "sample_bias_mV": 0.24720155521418263,
+            "max_abs_error_mV": 0.24720155521418263,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          },
+          "3-5 A": {
+            "samples": 3432,
+            "covered_duration_s": 3433.7609999999986,
+            "sample_rmse_mV": 35.86561032741106,
+            "sample_bias_mV": 19.07689417667225,
+            "max_abs_error_mV": 336.0385718808918,
+            "time_rmse_mV": 35.034208464761896,
+            "time_bias_mV": 18.909768112759988
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 12,
+            "covered_duration_s": 10.0220000000008,
+            "sample_rmse_mV": 6.639247849810287,
+            "sample_bias_mV": 6.185349172216951,
+            "max_abs_error_mV": 10.1770210894081,
+            "time_rmse_mV": 6.939343461570555,
+            "time_bias_mV": 6.726152433816411
+          },
+          "10-60 s": {
+            "samples": 49,
+            "covered_duration_s": 48.001000000000204,
+            "sample_rmse_mV": 6.70548712710316,
+            "sample_bias_mV": 6.649333193679907,
+            "max_abs_error_mV": 7.6197087637375205,
+            "time_rmse_mV": 6.714523607194173,
+            "time_bias_mV": 6.66002459875197
+          },
+          ">60 s": {
+            "samples": 3372,
+            "covered_duration_s": 3373.7530000000006,
+            "sample_rmse_mV": 36.172094466089106,
+            "sample_bias_mV": 19.297777728154646,
+            "max_abs_error_mV": 336.0385718808918,
+            "time_rmse_mV": 35.332979181885776,
+            "time_bias_mV": 19.127735933026777
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 3433,
+            "covered_duration_s": 3433.786,
+            "sample_rmse_mV": 35.8603865408592,
+            "sample_bias_mV": 19.071409267665132,
+            "max_abs_error_mV": 336.0385718808918,
+            "time_rmse_mV": 35.034084507479065,
+            "time_bias_mV": 18.909661534209143
+          }
+        }
+      },
+      "requirement_status": "requirement not configured"
+    },
+    "C1_R0": {
+      "configuration": {
+        "max_step_s": 0.25,
+        "current_mode": "left",
+        "reference_policy": "stop",
+        "initial_soc": 1,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25
+      },
+      "stopped": null,
+      "coverage": {
+        "rows": 3433,
+        "predicted_rows": 3433,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "this one complete development discharge only",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 3433,
+        "covered_duration_s": 3433.786,
+        "sample_rmse_mV": 29.471563071369342,
+        "sample_bias_mV": 9.386402465573555,
+        "max_abs_error_mV": 216.6142202406136,
+        "time_rmse_mV": 29.0616957475922,
+        "time_bias_mV": 9.28001750848817
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 3431,
+        "covered_duration_s": 3433.084,
+        "sample_rmse_mV": 29.01329154022108,
+        "sample_bias_mV": 9.26570534039703,
+        "max_abs_error_mV": 212.25560062381055,
+        "time_rmse_mV": 28.902577317560105,
+        "time_bias_mV": 9.238084633547222
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 3433,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "0-0.2": {
+            "samples": 555,
+            "covered_duration_s": 553.44,
+            "sample_rmse_mV": 63.16045257821266,
+            "sample_bias_mV": -18.88868090179186,
+            "max_abs_error_mV": 216.6142202406136,
+            "time_rmse_mV": 62.052963740959754,
+            "time_bias_mV": -19.694747593689144
+          },
+          "0.2-0.8": {
+            "samples": 2157,
+            "covered_duration_s": 2158.963999999999,
+            "sample_rmse_mV": 18.022000801138958,
+            "sample_bias_mV": 16.966364132984097,
+            "max_abs_error_mV": 29.850867027836347,
+            "time_rmse_mV": 18.015982517029055,
+            "time_bias_mV": 16.960067704962285
+          },
+          "0.8-1": {
+            "samples": 721,
+            "covered_duration_s": 719.381000000001,
+            "sample_rmse_mV": 9.654504886753967,
+            "sample_bias_mV": 8.474743592180042,
+            "max_abs_error_mV": 20.318390468918146,
+            "time_rmse_mV": 9.650648588381237,
+            "time_bias_mV": 8.478152018699827
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 3432,
+            "covered_duration_s": 3433.7609999999986,
+            "sample_rmse_mV": 29.475856099252177,
+            "sample_bias_mV": 9.38906540290175,
+            "max_abs_error_mV": 216.6142202406136,
+            "time_rmse_mV": 29.06179722820916,
+            "time_bias_mV": 9.280053977004968
+          },
+          "rest": {
+            "samples": 1,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 0.24720155521418263,
+            "sample_bias_mV": 0.24720155521418263,
+            "max_abs_error_mV": 0.24720155521418263,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 1,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 0.24720155521418263,
+            "sample_bias_mV": 0.24720155521418263,
+            "max_abs_error_mV": 0.24720155521418263,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          },
+          "3-5 A": {
+            "samples": 3432,
+            "covered_duration_s": 3433.7609999999986,
+            "sample_rmse_mV": 29.475856099252177,
+            "sample_bias_mV": 9.38906540290175,
+            "max_abs_error_mV": 216.6142202406136,
+            "time_rmse_mV": 29.06179722820916,
+            "time_bias_mV": 9.280053977004968
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 12,
+            "covered_duration_s": 10.0220000000008,
+            "sample_rmse_mV": 6.639247849810287,
+            "sample_bias_mV": 6.185349172216951,
+            "max_abs_error_mV": 10.1770210894081,
+            "time_rmse_mV": 6.939343461570555,
+            "time_bias_mV": 6.726152433816411
+          },
+          "10-60 s": {
+            "samples": 49,
+            "covered_duration_s": 48.001000000000204,
+            "sample_rmse_mV": 6.70548712710316,
+            "sample_bias_mV": 6.649333193679907,
+            "max_abs_error_mV": 7.6197087637375205,
+            "time_rmse_mV": 6.714523607194173,
+            "time_bias_mV": 6.66002459875197
+          },
+          ">60 s": {
+            "samples": 3372,
+            "covered_duration_s": 3373.7530000000006,
+            "sample_rmse_mV": 29.723314047166628,
+            "sample_bias_mV": 9.437567659477196,
+            "max_abs_error_mV": 216.6142202406136,
+            "time_rmse_mV": 29.30533773544176,
+            "time_bias_mV": 9.326740768145324
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 3433,
+            "covered_duration_s": 3433.786,
+            "sample_rmse_mV": 29.471563071369342,
+            "sample_bias_mV": 9.386402465573555,
+            "max_abs_error_mV": 216.6142202406136,
+            "time_rmse_mV": 29.0616957475922,
+            "time_bias_mV": 9.28001750848817
+          }
+        }
+      },
+      "requirement_status": "requirement not configured"
+    },
+    "C2_R0_R1_R2": {
+      "configuration": {
+        "max_step_s": 0.25,
+        "current_mode": "left",
+        "reference_policy": "stop",
+        "initial_soc": 1,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25
+      },
+      "stopped": null,
+      "coverage": {
+        "rows": 3433,
+        "predicted_rows": 3433,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "this one complete development discharge only",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 3433,
+        "covered_duration_s": 3433.786,
+        "sample_rmse_mV": 43.68330307618355,
+        "sample_bias_mV": 0.5434604834756427,
+        "max_abs_error_mV": 164.9156880528464,
+        "time_rmse_mV": 43.65219280772211,
+        "time_bias_mV": 0.4988598997955214
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 3431,
+        "covered_duration_s": 3433.084,
+        "sample_rmse_mV": 43.644524953016585,
+        "sample_bias_mV": 0.49256783218474065,
+        "max_abs_error_mV": 164.9156880528464,
+        "time_rmse_mV": 43.63938270352652,
+        "time_bias_mV": 0.48140703755239606
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 3433,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "0-0.2": {
+            "samples": 555,
+            "covered_duration_s": 553.44,
+            "sample_rmse_mV": 102.07906702028359,
+            "sample_bias_mV": -73.58745536042633,
+            "max_abs_error_mV": 164.9156880528464,
+            "time_rmse_mV": 102.14232984542475,
+            "time_bias_mV": -74.17698650676898
+          },
+          "0.2-0.8": {
+            "samples": 2157,
+            "covered_duration_s": 2158.963999999999,
+            "sample_rmse_mV": 18.022000801138958,
+            "sample_bias_mV": 16.966364132984097,
+            "max_abs_error_mV": 29.850867027836347,
+            "time_rmse_mV": 18.015982517029055,
+            "time_bias_mV": 16.960067704962285
+          },
+          "0.8-1": {
+            "samples": 721,
+            "covered_duration_s": 719.381000000001,
+            "sample_rmse_mV": 9.654504886753967,
+            "sample_bias_mV": 8.474743592180042,
+            "max_abs_error_mV": 20.318390468918146,
+            "time_rmse_mV": 9.650648588381237,
+            "time_bias_mV": 8.478152018699827
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 3432,
+            "covered_duration_s": 3433.7609999999986,
+            "sample_rmse_mV": 43.689666526472564,
+            "sample_bias_mV": 0.5435468060071883,
+            "max_abs_error_mV": 164.9156880528464,
+            "time_rmse_mV": 43.65234884401642,
+            "time_bias_mV": 0.4988324358079211
+          },
+          "rest": {
+            "samples": 1,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 0.24720155521418263,
+            "sample_bias_mV": 0.24720155521418263,
+            "max_abs_error_mV": 0.24720155521418263,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 1,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 0.24720155521418263,
+            "sample_bias_mV": 0.24720155521418263,
+            "max_abs_error_mV": 0.24720155521418263,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          },
+          "3-5 A": {
+            "samples": 3432,
+            "covered_duration_s": 3433.7609999999986,
+            "sample_rmse_mV": 43.689666526472564,
+            "sample_bias_mV": 0.5435468060071883,
+            "max_abs_error_mV": 164.9156880528464,
+            "time_rmse_mV": 43.65234884401642,
+            "time_bias_mV": 0.4988324358079211
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 12,
+            "covered_duration_s": 10.0220000000008,
+            "sample_rmse_mV": 6.639247849810287,
+            "sample_bias_mV": 6.185349172216951,
+            "max_abs_error_mV": 10.1770210894081,
+            "time_rmse_mV": 6.939343461570555,
+            "time_bias_mV": 6.726152433816411
+          },
+          "10-60 s": {
+            "samples": 49,
+            "covered_duration_s": 48.001000000000204,
+            "sample_rmse_mV": 6.70548712710316,
+            "sample_bias_mV": 6.649333193679907,
+            "max_abs_error_mV": 7.6197087637375205,
+            "time_rmse_mV": 6.714523607194173,
+            "time_bias_mV": 6.66002459875197
+          },
+          ">60 s": {
+            "samples": 3372,
+            "covered_duration_s": 3373.7530000000006,
+            "sample_rmse_mV": 44.06745860772679,
+            "sample_bias_mV": 0.43465549324287067,
+            "max_abs_error_mV": 164.9156880528464,
+            "time_rmse_mV": 44.02968265972977,
+            "time_bias_mV": 0.38933009803334756
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 3433,
+            "covered_duration_s": 3433.786,
+            "sample_rmse_mV": 43.68330307618355,
+            "sample_bias_mV": 0.5434604834756427,
+            "max_abs_error_mV": 164.9156880528464,
+            "time_rmse_mV": 43.65219280772211,
+            "time_bias_mV": 0.4988598997955214
+          }
+        }
+      },
+      "requirement_status": "requirement not configured"
+    }
+  },
+  "candidate_for_further_review_only": null,
+  "model_adopted": false,
+  "new_measurement_families_opened": 0,
+  "remaining_unopened_members": 48,
+  "remaining_unopened_families": 40,
+  "fresh_independent_assessment": false,
+  "requirement_status": "requirement not configured",
+  "experimental_module_validation": "awaiting suitable measurements",
+  "implementation_sha256": {
+    "scripts/ae_p45b_identifiability.py": "31073acb6c4acd38117009e304a4427e7ee0e4ed2bbcd7fe4b8ea8b2eedd4496",
+    "tests/test_ae_p45b_identifiability.py": "5b4ffe4c35e22e37b5ce957435a69af3530cccee1b2f86a36bf97506f512fed7",
+    "scripts/ae_p45b_gitt_replay.py": "c9173e7da9966038d28d01530b0f08ac9607236f35f63919c8f35a8a6e24908f",
+    "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
+    "scripts/ae_p45b_equations.py": "1bee15332127bfe86446d600b2af5d814e103380bb76f972748a12220500c40b"
+  }
+}

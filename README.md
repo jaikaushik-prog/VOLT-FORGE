@@ -18,6 +18,18 @@ There is no optimizer or ranked repair result.
 Public project repository: https://github.com/jaikaushik-prog/VOLT-FORGE.
 Local upload preparation is described in [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md).
 
+## Latest engineering investigation
+
+The bounded [P45B low-SOC resistance study](reports/p45b_identifiability_v1/DECISION.md)
+tested two revisions on already-used complete pulse/rest sequences. Neither was
+adopted: lower aggregate GITT error did not consistently improve recovery, and
+the three-resistance revision increased RMSE on the used sustained 1C record.
+The report includes reproducible commands, parameter sensitivity, plots and 117
+passing focused tests. Frozen P45B/LG models and unused records are preserved;
+experimental module validation still awaits suitable measurements. Frontend
+redesign remains deferred; its future implementation guide is the
+[product design skill](web/editor/skills/volt-forge-product-design/SKILL.md).
+
 ## Open the 2D workspace
 
 ```powershell

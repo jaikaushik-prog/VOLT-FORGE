@@ -1,0 +1,101 @@
+[
+  {
+    "pair_index": 21,
+    "pulse_segment_id": 43,
+    "rest_segment_id": 44,
+    "loaded_source_line": 62433,
+    "first_source_line": 61531,
+    "last_source_line": 64717,
+    "nominal_soc_loaded": 0.19910608376034633
+  },
+  {
+    "pair_index": 22,
+    "pulse_segment_id": 45,
+    "rest_segment_id": 46,
+    "loaded_source_line": 65080,
+    "first_source_line": 64718,
+    "last_source_line": 67364,
+    "nominal_soc_loaded": 0.17906653352264162
+  },
+  {
+    "pair_index": 23,
+    "pulse_segment_id": 47,
+    "rest_segment_id": 48,
+    "loaded_source_line": 67727,
+    "first_source_line": 67365,
+    "last_source_line": 70011,
+    "nominal_soc_loaded": 0.15902679042031523
+  },
+  {
+    "pair_index": 24,
+    "pulse_segment_id": 49,
+    "rest_segment_id": 50,
+    "loaded_source_line": 70374,
+    "first_source_line": 70012,
+    "last_source_line": 72658,
+    "nominal_soc_loaded": 0.13898673710215906
+  },
+  {
+    "pair_index": 25,
+    "pulse_segment_id": 51,
+    "rest_segment_id": 52,
+    "loaded_source_line": 73021,
+    "first_source_line": 72659,
+    "last_source_line": 75305,
+    "nominal_soc_loaded": 0.11894668087894585
+  },
+  {
+    "pair_index": 26,
+    "pulse_segment_id": 53,
+    "rest_segment_id": 54,
+    "loaded_source_line": 75668,
+    "first_source_line": 75306,
+    "last_source_line": 77952,
+    "nominal_soc_loaded": 0.09890674532854156
+  },
+  {
+    "pair_index": 27,
+    "pulse_segment_id": 55,
+    "rest_segment_id": 56,
+    "loaded_source_line": 78315,
+    "first_source_line": 77953,
+    "last_source_line": 80599,
+    "nominal_soc_loaded": 0.07886731386404348
+  },
+  {
+    "pair_index": 28,
+    "pulse_segment_id": 57,
+    "rest_segment_id": 58,
+    "loaded_source_line": 80962,
+    "first_source_line": 80600,
+    "last_source_line": 83246,
+    "nominal_soc_loaded": 0.05882745418973995
+  },
+  {
+    "pair_index": 29,
+    "pulse_segment_id": 59,
+    "rest_segment_id": 60,
+    "loaded_source_line": 83549,
+    "first_source_line": 83247,
+    "last_source_line": 85833,
+    "nominal_soc_loaded": 0.042103869028885355
+  },
+  {
+    "pair_index": 30,
+    "pulse_segment_id": 61,
+    "rest_segment_id": 62,
+    "loaded_source_line": 86447,
+    "first_source_line": 85834,
+    "last_source_line": 88731,
+    "nominal_soc_loaded": 0.025073744988034084
+  },
+  {
+    "pair_index": 31,
+    "pulse_segment_id": 63,
+    "rest_segment_id": 64,
+    "loaded_source_line": 89425,
+    "first_source_line": 88732,
+    "last_source_line": 98427,
+    "nominal_soc_loaded": 0.01544643495915653
+  }
+]
