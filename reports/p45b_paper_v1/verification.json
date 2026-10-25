@@ -1,0 +1,50 @@
+{
+  "schema_version": "voltforge.ae_p45b_paper_verification/1",
+  "paper_sha256": "0b872b05c28471a12fd3b004f9b98188da1074a11d35e6ab721ff9f250e8f258",
+  "synthetic_tests": 43,
+  "new_equation_tests": 23,
+  "failures": 0,
+  "published_parameter_rows_opened": 0,
+  "experimental_rows_opened": 0,
+  "author_simulation_rows_opened": 0,
+  "validation_workbook_opened": false,
+  "prior_intake_artifacts_preserved": 13,
+  "prior_release_artifact_counts": {
+    "reports/module_simulation_v1/release_verification.json": 145,
+    "reports/product_integration_v1/integration_verification.json": 17,
+    "reports/editor_v1/release_verification.json": 37,
+    "reports/freetwinev_inventory_v1/verification.json": 8,
+    "reports/measurement_viewer_v1/release_verification.json": 42
+  },
+  "original_P45B_source_files_unchanged": 6,
+  "original_FreeTwinEV_files_unchanged": 32,
+  "protected_LG_artifacts": 112,
+  "unused_LG_cells": [
+    "P11",
+    "P12",
+    "P14",
+    "P15",
+    "P18",
+    "P20",
+    "P3",
+    "P6",
+    "P9"
+  ],
+  "unused_FreeTwinEV_records": 13,
+  "P45B_outcome_files_unopened": 51,
+  "frozen_models_changed": false,
+  "experimental_module_validation": "awaiting suitable measurements",
+  "artifacts": {
+    ".gitignore": "24c1184ac425602252fa37919f8f586afcb751e546f6f44d8d8023d783f1f7cb",
+    "README.md": "1ffd3ef56a633dcececace99c6466bf1d9eb30cdafcea970c1295d53fe66803e",
+    "reports/p45b_paper_v1/DECISION.md": "55c13679c191a2c1258a586395d5ff3ab0c876309f8206a9aaa15e38f68fbe4a",
+    "reports/p45b_paper_v1/previous/.gitignore": "149bb00f8a63108a4a451afc9b5b02be8c921f60e81119780b84d403f1ace8f5",
+    "reports/p45b_paper_v1/previous/README.md": "512afa7515551f37cc73ec2a85b6ef7acb7f7ddcb860e8ca11945cf6d5e5eb62",
+    "reports/p45b_paper_v1/pytest.xml": "4f784454896a985fac306e8d8112557306526d0773744d2acc2770fbd4a05a23",
+    "reports/p45b_paper_v1/source.json": "496c6651ec1e6b4300d858451a75b78150987fdaab5474513b8fc26d761a621f",
+    "reports/p45b_paper_v1/synthetic_demo.json": "b5aa6e518c9b88c6bb02931c3083ee9dda14ed30d1b70e0fec722044c6b6aa16",
+    "scripts/ae_p45b_equations.py": "1bee15332127bfe86446d600b2af5d814e103380bb76f972748a12220500c40b",
+    "scripts/verify_p45b_paper.py": "8d4812219400f0d20914034faee230e52df15430455b051ae9539e6fd5c127ba",
+    "tests/test_ae_p45b_equations.py": "a25092d961c1703d5bdd77488ea27a97a14d9d4c573ed9ab1f5f54e45a1503b2"
+  }
+}

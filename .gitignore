@@ -31,3 +31,6 @@ reports/improvement_v2/software_coupling/*.csv
 /Molicel_INR-21700-P45B_ECM-charge.csv
 /Molicel_INR-21700-P45B_ECM.csv
 /readme_Molicel_P45B_dataset_AE.txt
+
+# User-supplied paper; source hash and method review are versioned instead.
+/ssrn-6861858.pdf

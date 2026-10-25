@@ -1,0 +1,21 @@
+{
+  "schema_version": "voltforge.ae_p45b_paper_source/1",
+  "local_original": "ssrn-6861858.pdf",
+  "bytes": 10588160,
+  "sha256": "0b872b05c28471a12fd3b004f9b98188da1074a11d35e6ab721ff9f250e8f258",
+  "pages": 56,
+  "title": "An Industry-Standard Parameterisation of a Lithium-Ion Battery Equivalent Circuit Model for a High-Power Cylindrical Cell: Molicel P45B",
+  "authors": ["Edmund J.F. Dickinson", "Ceren Zor", "Darryl Doyle", "Christian Pilling", "Katie Lukow", "Kieran O'Regan", "Mark Blyth", "Alastair Hales", "Gavin White"],
+  "source_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6861858",
+  "identity_basis": "user-supplied local PDF; title and authors inspected; no publisher checksum available",
+  "pdf_creation_date_metadata": "D:20260601123353+01'00'",
+  "methods_text_read_pages": [6, 7, 8, 9, 11, 12, 14, 15, 16, 17, 42, 53],
+  "equations_visually_checked_pages": [7, 8, 53],
+  "page_numbering": "one-based PDF page order",
+  "published_results_exposure": "page headings/captions scanned to locate methods; published validation information is prior evidence, not blinded",
+  "source_pdf_republished": false,
+  "experimental_csv_rows_opened": 0,
+  "author_simulation_csv_rows_opened": 0,
+  "parameter_csv_rows_opened": 0,
+  "validation_workbook_opened": false
+}

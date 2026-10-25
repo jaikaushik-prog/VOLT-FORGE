@@ -1,0 +1,33 @@
+# Original downloads and reproducible measured/derived data stay local.
+*.zip
+data/raw/
+data/processed/
+__pycache__/
+.pytest_cache/
+.venv/
+*.egg-info/
+tmp/
+workspace/
+
+# Local credentials and downloaded third-party briefing material.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+Case Study 2_IDV_Battery_Energy_System.pdf
+TELIPORT_*.docx
+TELIPORT_*.xlsx
+github-upload/
+# Regenerated v2 sample-level outputs; sealed models/summaries/plots are retained.
+reports/improvement_v2/**/*predictions.csv
+reports/improvement_v2/software_coupling/*.csv
+# Original FreeTwinEV download remains local; its inventory and hashes are versioned.
+/1s4p Battery Module Measurement/
+
+# Original About:Energy P45B release; versioned hashes and intake reports are retained.
+/Molicel P45B Data Release Data Format Documentation.pdf
+/Molicel P45B ECM Validation Matrix.xlsx
+/Molicel_INR-21700-P45B_ECM-charge.csv
+/Molicel_INR-21700-P45B_ECM.csv
+/readme_Molicel_P45B_dataset_AE.txt

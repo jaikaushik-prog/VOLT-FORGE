@@ -50,6 +50,13 @@ outcome remains unopened pending the declared modelling procedure. This intake
 adds source/schema checks and a synthetic-tested experimental adapter, not a
 P45B model or new module-validation result.
 
+The subsequently supplied full paper resolves the core electrical-specification
+access blocker. See the [paper review and equation checks](reports/p45b_paper_v1/DECISION.md).
+A separate synthetic-tested two-RC/hysteresis kernel now implements its electrical
+equations. Real P45B tables and outcome rows remain unopened; table interpolation
+and measured-record reproduction are the next stage. The frozen LG model and
+editor physics are unchanged.
+
 ## First product workflow and frontend handoff
 
 Read [FRONTEND_CONTRACT.md](FRONTEND_CONTRACT.md) for the Python/JSON interface,
