@@ -1,0 +1,21 @@
+{
+  "schema_version": "voltforge.ae_p45b_author_comparison_interpretation/1",
+  "basis": "completed run_001 on one already-used development family; no model revision",
+  "electrical_reproduction": "close agreement with released author prediction for this discharge",
+  "measured_accuracy": "large end-of-discharge discrepancy persists in both predictions",
+  "author_outputs_are_measurements": false,
+  "Q_sim_W": {
+    "source_class": "author prediction",
+    "documented_meaning": "signed cell power, negative on discharge",
+    "interpretation_status": "unresolved: released values conflict with signed I_sim_A times V_sim_V",
+    "may_use_as_delivered_power": false,
+    "may_use_as_heat_generation": false,
+    "used_in_voltage_model": false,
+    "clarification": "AUTHOR_QUESTIONS.md; prepared, not sent"
+  },
+  "initial_conditions_or_parameters_changed": false,
+  "additional_experimental_families_opened": 0,
+  "remaining_unopened_measurement_files": 50,
+  "device_voltage_requirement": "requirement not configured",
+  "experimental_module_validation": "awaiting suitable measurements"
+}

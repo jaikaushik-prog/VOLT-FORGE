@@ -1,0 +1,75 @@
+{
+  "schema_version": "voltforge.ae_p45b_author_comparison_verification/1",
+  "new_tests_before_author_access": 15,
+  "focused_tests": 74,
+  "failures": 0,
+  "experimental_families_newly_opened": 0,
+  "author_output_rows_newly_interpreted": 3433,
+  "author_columns_per_row": 6,
+  "unused_archive_members": 50,
+  "unused_filename_families": 42,
+  "validation_workbook_opened": false,
+  "charge_optimized_table_opened": false,
+  "fitted_parameters_changed": false,
+  "initial_states_changed": false,
+  "previous_reproduction_artifacts_preserved": 29,
+  "protected_LG_artifacts": 112,
+  "unused_LG_cells": [
+    "P11",
+    "P12",
+    "P14",
+    "P15",
+    "P18",
+    "P20",
+    "P3",
+    "P6",
+    "P9"
+  ],
+  "unused_FreeTwinEV_records": 13,
+  "original_P45B_files_unchanged": 6,
+  "original_FreeTwinEV_files_unchanged": 32,
+  "independent_voltage_metrics": {
+    "ours_minus_measured_mV": {
+      "sample_rmse": 35.8603865408592,
+      "time_rmse": 35.034084507479065,
+      "sample_bias": 19.07140926766511,
+      "max_abs": 336.0385718808918
+    },
+    "author_minus_measured_mV": {
+      "sample_rmse": 35.85888174701338,
+      "time_rmse": 35.0325866921348,
+      "sample_bias": 19.06386472664052,
+      "max_abs": 336.02789938810986
+    },
+    "ours_minus_author_mV": {
+      "sample_rmse": 0.018301512143772,
+      "time_rmse": 0.018063055327128423,
+      "sample_bias": 0.007544541024611174,
+      "max_abs": 0.2510146139673708
+    }
+  },
+  "independent_max_voltage_decomposition_closure_mV": 1.1969591984239969e-12,
+  "independent_max_author_soc_minus_measured_linear_current_integral": 3.356124711473285e-09,
+  "Q_sim_W_definition_status": "unresolved; not used for electrical power or heat",
+  "independent_Q_sim_minus_I_sim_times_V_sim_rmse_W": 16.829309158506554,
+  "experimental_module_validation": "awaiting suitable measurements",
+  "artifacts": {
+    "configs/ae_p45b_author_comparison_v1.json": "124f3eb842b4d861c37b8ce2bee8405ec107813d989ad58636ba8312be62cd25",
+    "README.md": "63db0590940f7d575535da0052a60259dbdbd3e171f04cc14acb21189ccef2f3",
+    "reports/p45b_author_comparison_v1/AUTHOR_QUESTIONS.md": "335786709fe2d00280af7d1bd378d91c645e7b3ca8283d8452f43df6fdf577d6",
+    "reports/p45b_author_comparison_v1/DECISION.md": "ffe428e2f098df632d5b946d77300579985066869cca37ddc0c3e5022ce48be7",
+    "reports/p45b_author_comparison_v1/INTERPRETATION.json": "ca5c67fefe449a3ac4822f45ad6217cd2899bf185b0fefc76c54fd6183dcb92d",
+    "reports/p45b_author_comparison_v1/preaccess_pytest.xml": "d3980a9a0fe9aec1febc661af0b277d4b94ea43a13bc0239c4901cc6fcb09422",
+    "reports/p45b_author_comparison_v1/previous/README.md": "d24175b6c99171d778043fcc295bf8bb1fb25daee3af4c886ed4fa5ac9ed2385",
+    "reports/p45b_author_comparison_v1/PROCEDURE.md": "85f8fc0f05959d56978de21ec840f02bced4281edcb9f5019a4c2a6b27bf6d01",
+    "reports/p45b_author_comparison_v1/pytest.xml": "7308b40285bb04389732193ef9bc744fa09c5bde227481543fa91cc96054c168",
+    "reports/p45b_author_comparison_v1/run_001/author_state_comparison.png": "4aa12b5ce1c43294d15f6055bf3a62d8320fb1336965058ca582d1e157dfa0b0",
+    "reports/p45b_author_comparison_v1/run_001/author_voltage_comparison.png": "55163f80f71c2c4facae353292aa4423a3cc2cbce47c9ec450b2a2d10f0d9ea0",
+    "reports/p45b_author_comparison_v1/run_001/comparison.csv": "d650777b95ec0b0de21b582844d75278062cf9bfd07688e4ec206b82e6c076fb",
+    "reports/p45b_author_comparison_v1/run_001/manifest.json": "bf367e90959c5ccdefc3a09dfaa688edca7b47f1cd46262c3ced1ccf75a46c72",
+    "reports/p45b_author_comparison_v1/run_001/summary.json": "090ccc0b630aafeb9d4fd85cd3f718a0ed06564ccfcbba169342ab6ae9a274b1",
+    "scripts/ae_p45b_author_comparison.py": "030ee35c89918a38acfe62f6f03ab04b9694fc2fccfd2664dd2d78bdb15fa12a",
+    "scripts/verify_p45b_author_comparison.py": "88c2fdc5dc56068e446df7678d026284686cebbdadbba626b0b46be685c5536c",
+    "tests/test_ae_p45b_author_comparison.py": "08cc30b30772e41ba39f79cf556bb30d54f1ed7e340b2a0315a3a10923c7d156"
+  }
+}

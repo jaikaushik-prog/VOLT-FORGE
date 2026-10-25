@@ -1,0 +1,466 @@
+{
+  "evidence_class": "same development record; comparison of predictions, not independent validation",
+  "rows": 3433,
+  "author_missing_counts": {
+    "I_sim_A": 0,
+    "V_sim_V": 0,
+    "SOC_sim": 0,
+    "E_OCV_V": 0,
+    "T_sim_degC": 0,
+    "Q_sim_W": 0
+  },
+  "voltage_comparisons": {
+    "ours_minus_measured_mV": {
+      "all_available": {
+        "unit": "mV",
+        "samples": 3433,
+        "covered_duration_s": 3433.785999999978,
+        "sample_rmse": 35.86038654085922,
+        "sample_bias": 19.071409267665125,
+        "max_abs": 336.0385718808918,
+        "time_rmse": 35.03408450747917,
+        "time_bias": 18.909661534209263
+      },
+      "identical_common_samples": {
+        "unit": "mV",
+        "samples": 3433,
+        "covered_duration_s": 3433.785999999978,
+        "sample_rmse": 35.86038654085922,
+        "sample_bias": 19.071409267665125,
+        "max_abs": 336.0385718808918,
+        "time_rmse": 35.03408450747917,
+        "time_bias": 18.909661534209263
+      }
+    },
+    "author_minus_measured_mV": {
+      "all_available": {
+        "unit": "mV",
+        "samples": 3433,
+        "covered_duration_s": 3433.785999999978,
+        "sample_rmse": 35.85888174701336,
+        "sample_bias": 19.063864726640517,
+        "max_abs": 336.02789938810986,
+        "time_rmse": 35.03258669213491,
+        "time_bias": 18.902077713539807
+      },
+      "identical_common_samples": {
+        "unit": "mV",
+        "samples": 3433,
+        "covered_duration_s": 3433.785999999978,
+        "sample_rmse": 35.85888174701336,
+        "sample_bias": 19.063864726640517,
+        "max_abs": 336.02789938810986,
+        "time_rmse": 35.03258669213491,
+        "time_bias": 18.902077713539807
+      }
+    },
+    "ours_minus_author_mV": {
+      "all_available": {
+        "unit": "mV",
+        "samples": 3433,
+        "covered_duration_s": 3433.785999999978,
+        "sample_rmse": 0.018301512143771993,
+        "sample_bias": 0.007544541024611174,
+        "max_abs": 0.2510146139673708,
+        "time_rmse": 0.01806305532712847,
+        "time_bias": 0.007583820669457706
+      },
+      "identical_common_samples": {
+        "unit": "mV",
+        "samples": 3433,
+        "covered_duration_s": 3433.785999999978,
+        "sample_rmse": 0.018301512143771993,
+        "sample_bias": 0.007544541024611174,
+        "max_abs": 0.2510146139673708,
+        "time_rmse": 0.01806305532712847,
+        "time_bias": 0.007583820669457706
+      }
+    }
+  },
+  "by_unchanged_ours_soc": {
+    "0-0.2": {
+      "ours_minus_measured_mV": {
+        "unit": "mV",
+        "samples": 555,
+        "covered_duration_s": 553.44,
+        "sample_rmse": 81.06214216334352,
+        "sample_bias": 41.01875756952411,
+        "max_abs": 336.0385718808918,
+        "time_rmse": 78.90283409089713,
+        "time_bias": 40.051751491156196
+      },
+      "author_minus_measured_mV": {
+        "unit": "mV",
+        "samples": 555,
+        "covered_duration_s": 553.44,
+        "sample_rmse": 81.06212728775705,
+        "sample_bias": 40.994870712470366,
+        "max_abs": 336.02789938810986,
+        "time_rmse": 78.90296581447419,
+        "time_bias": 40.02779787717712
+      },
+      "ours_minus_author_mV": {
+        "unit": "mV",
+        "samples": 555,
+        "covered_duration_s": 553.44,
+        "sample_rmse": 0.04094270944586138,
+        "sample_bias": 0.02388685705374918,
+        "max_abs": 0.0873530420393287,
+        "time_rmse": 0.041025090202430316,
+        "time_bias": 0.02395361397908609
+      }
+    },
+    "0.2-0.8": {
+      "ours_minus_measured_mV": {
+        "unit": "mV",
+        "samples": 2157,
+        "covered_duration_s": 2158.9639999999995,
+        "sample_rmse": 18.022000801138958,
+        "sample_bias": 16.966364132984094,
+        "max_abs": 29.850867027836347,
+        "time_rmse": 18.01598251702905,
+        "time_bias": 16.960067704962285
+      },
+      "author_minus_measured_mV": {
+        "unit": "mV",
+        "samples": 2157,
+        "covered_duration_s": 2158.9639999999995,
+        "sample_rmse": 18.01780944361584,
+        "sample_bias": 16.962176960140035,
+        "max_abs": 29.844198034859826,
+        "time_rmse": 18.011791685618928,
+        "time_bias": 16.95588043833726
+      },
+      "ours_minus_author_mV": {
+        "unit": "mV",
+        "samples": 2157,
+        "covered_duration_s": 2158.9639999999995,
+        "sample_rmse": 0.00701289756713485,
+        "sample_bias": 0.004187172844060686,
+        "max_abs": 0.015128079849269227,
+        "time_rmse": 0.007013752525216325,
+        "time_bias": 0.004187266625025317
+      }
+    },
+    "0.8-1": {
+      "ours_minus_measured_mV": {
+        "unit": "mV",
+        "samples": 721,
+        "covered_duration_s": 719.3810000000011,
+        "sample_rmse": 9.65450488675397,
+        "sample_bias": 8.474743592180042,
+        "max_abs": 20.318390468918146,
+        "time_rmse": 9.650648588381236,
+        "time_bias": 8.478152018699827
+      },
+      "author_minus_measured_mV": {
+        "unit": "mV",
+        "samples": 721,
+        "covered_duration_s": 719.3810000000011,
+        "sample_rmse": 9.65139178526625,
+        "sample_bias": 8.469734615969196,
+        "max_abs": 20.31487983225988,
+        "time_rmse": 9.647382514075739,
+        "time_bias": 8.47296177902703
+      },
+      "ours_minus_author_mV": {
+        "unit": "mV",
+        "samples": 721,
+        "covered_duration_s": 719.3810000000011,
+        "sample_rmse": 0.012543129883143739,
+        "sample_bias": 0.005008976210846691,
+        "max_abs": 0.2510146139673708,
+        "time_rmse": 0.010716672421587026,
+        "time_bias": 0.005190239672796531
+      }
+    }
+  },
+  "state_diagnostics": {
+    "current_difference": {
+      "unit": "A",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 0.0008296212481006277,
+      "sample_bias": -1.4249023904624486e-05,
+      "max_abs": 0.048607929295210184,
+      "time_rmse": 0.000592993329735291,
+      "time_bias": -7.322379294009834e-06
+    },
+    "soc_difference": {
+      "unit": "SOC fraction",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 3.906403241007566e-06,
+      "sample_bias": 3.905826572104509e-06,
+      "max_abs": 3.912068768041621e-06,
+      "time_rmse": 3.907025926503316e-06,
+      "time_bias": 3.907014801227362e-06
+    },
+    "temperature_difference": {
+      "unit": "degC",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 0.0,
+      "sample_bias": 0.0,
+      "max_abs": 0.0,
+      "time_rmse": 0.0,
+      "time_bias": 0.0
+    },
+    "author_power_minus_current_times_voltage": {
+      "unit": "W",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 16.829309158506554,
+      "sample_bias": 16.780159086259626,
+      "max_abs": 18.885635801341028,
+      "time_rmse": 16.83255642806493,
+      "time_bias": 16.78592957645686
+    }
+  },
+  "soc_integral_checks": {
+    "author_SOC_minus_measured_current_left_integral": {
+      "unit": "SOC fraction",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 3.906403270068762e-06,
+      "sample_bias": -3.905826601161466e-06,
+      "max_abs": 3.912068799127866e-06,
+      "time_rmse": 3.907025955575056e-06,
+      "time_bias": -3.907014830299491e-06
+    },
+    "author_SOC_minus_measured_current_linear_integral": {
+      "unit": "SOC fraction",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 3.3250431668115163e-09,
+      "sample_bias": 3.3240000433443184e-09,
+      "max_abs": 3.3561252665847974e-09,
+      "time_rmse": 3.325764729402045e-09,
+      "time_bias": 3.325441531228532e-09
+    },
+    "author_SOC_minus_author_current_left_integral": {
+      "unit": "SOC fraction",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 6.915947787074474e-06,
+      "sample_bias": -6.91468845217079e-06,
+      "max_abs": 6.922681370591377e-06,
+      "time_rmse": 6.917313135943491e-06,
+      "time_bias": -6.917171740383868e-06
+    },
+    "author_SOC_minus_author_current_linear_integral": {
+      "unit": "SOC fraction",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 1.548527521566571e-06,
+      "sample_bias": -1.5480871611058128e-06,
+      "max_abs": 1.549432535385975e-06,
+      "time_rmse": 1.5488607305059154e-06,
+      "time_bias": -1.5487481526753958e-06
+    }
+  },
+  "voltage_decomposition": {
+    "reference_difference_mV": {
+      "unit": "mV",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 0.005740997302771177,
+      "sample_bias": 0.005006007126172576,
+      "max_abs": 0.0173219623427201,
+      "time_rmse": 0.00572733513067208,
+      "time_bias": 0.004999672910874011
+    },
+    "ohmic_difference_mV": {
+      "unit": "mV",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 0.005828558710099982,
+      "sample_bias": -9.581187261831473e-05,
+      "max_abs": 0.34145523830609104,
+      "time_rmse": 0.004166615076482929,
+      "time_bias": -4.718853419796698e-05
+    },
+    "polarization_difference_mV": {
+      "unit": "mV",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 0.01623516191678952,
+      "sample_bias": 0.002634345771063582,
+      "max_abs": 0.08011522725311082,
+      "time_rmse": 0.01621730581267557,
+      "time_bias": 0.0026313362927883684
+    },
+    "decomposition_closure_mV": {
+      "unit": "mV",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 2.7456233052384556e-13,
+      "sample_bias": -6.6697599163040105e-15,
+      "max_abs": 1.1969591984239969e-12,
+      "time_rmse": 2.746082188299362e-13,
+      "time_bias": -6.703786860005882e-15
+    },
+    "reference_soc_coordinate_difference_mV": {
+      "unit": "mV",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 0.00574351523427321,
+      "sample_bias": 0.005007713074198459,
+      "max_abs": 0.017321951261806134,
+      "time_rmse": 0.005729854644802154,
+      "time_bias": 0.005001376459648617
+    },
+    "reference_same_soc_branch_difference_mV": {
+      "unit": "mV",
+      "samples": 3433,
+      "covered_duration_s": 3433.785999999978,
+      "sample_rmse": 0.00010053586583341916,
+      "sample_bias": -1.7059480258827526e-06,
+      "max_abs": 0.0034590956419222607,
+      "time_rmse": 0.00010054606477470736,
+      "time_bias": -1.70354877460708e-06
+    }
+  },
+  "decomposition_status_counts": {
+    "defined; author polarization is algebraic inferred remainder": 3433
+  },
+  "protocol_cutoff_V": 2.5,
+  "protocol_crossings": {
+    "voltage_V": {
+      "source_line": 3433,
+      "time_s": 3433.758,
+      "voltage_V": 2.49986962728063
+    },
+    "ours_predicted_voltage_V": null,
+    "author_V_sim_V": null
+  },
+  "requirement_status": "requirement not configured",
+  "first_row": {
+    "source_line": 2,
+    "raw_time": "0",
+    "time_s": 0.0,
+    "source_current_A": -0.0028854520177433,
+    "current_discharge_positive_A": 0.0028854520177433,
+    "voltage_V": 4.18726253105995,
+    "controlled_temperature_degC": 25.0,
+    "author_I_sim_A": -0.0028854520177433,
+    "author_V_sim_V": 4.18750973261517,
+    "author_SOC_sim": 1.0,
+    "author_E_OCV_V": 4.18752999592138,
+    "author_T_sim_degC": 25.0,
+    "author_Q_sim_W": 3.08356765907969e-05,
+    "ours_predicted_voltage_V": 4.1875097326151645,
+    "ours_soc": 1.0,
+    "ours_hysteresis": -1.0,
+    "ours_v1_V": 0.0,
+    "ours_v2_V": 0.0,
+    "soc_region": "0.8-1",
+    "ours_minus_measured_mV": 0.24720155521418263,
+    "author_minus_measured_mV": 0.2472015552195117,
+    "ours_minus_author_mV": -5.329070518200751e-12,
+    "ours_reference_V": 4.18752999592138,
+    "ours_ohmic_V": -2.0263306215130806e-05,
+    "ours_polarization_total_V": 0.0,
+    "table_discharge_at_author_soc_V": 4.18752999592138,
+    "author_polarization_inferred_V": 5.2751924464918e-15,
+    "reference_difference_mV": 0.0,
+    "ohmic_difference_mV": 0.0,
+    "polarization_difference_mV": -5.2751924464918e-12,
+    "decomposition_closure_mV": -5.3878071708951536e-14,
+    "reference_soc_coordinate_difference_mV": 0.0,
+    "reference_same_soc_branch_difference_mV": 0.0,
+    "decomposition_status": "defined; author polarization is algebraic inferred remainder",
+    "author_SOC_minus_measured_current_left_integral": 0.0,
+    "measured_current_left_integrated_soc": 1.0,
+    "author_SOC_minus_measured_current_linear_integral": 0.0,
+    "measured_current_linear_integrated_soc": 1.0,
+    "author_SOC_minus_author_current_left_integral": 0.0,
+    "author_current_left_integrated_soc": 1.0,
+    "author_SOC_minus_author_current_linear_integral": 0.0,
+    "author_current_linear_integrated_soc": 1.0
+  },
+  "last_row": {
+    "source_line": 3434,
+    "raw_time": "3433.786",
+    "time_s": 3433.786,
+    "source_current_A": -4.50000450681941,
+    "current_discharge_positive_A": 4.50000450681941,
+    "voltage_V": 2.49948773457863,
+    "controlled_temperature_degC": 25.0,
+    "author_I_sim_A": -4.50000450681941,
+    "author_V_sim_V": 2.83551563396674,
+    "author_SOC_sim": 0.0461741870218523,
+    "author_E_OCV_V": 2.96655313107975,
+    "author_T_sim_degC": 25.0,
+    "author_Q_sim_W": 1.23971456499047,
+    "ours_predicted_voltage_V": 2.835526306459522,
+    "ours_soc": 0.046178093232155194,
+    "ours_hysteresis": -1.0,
+    "ours_v1_V": -0.05231966079332352,
+    "ours_v2_V": -0.046080687785232326,
+    "soc_region": "0-0.2",
+    "ours_minus_measured_mV": 336.0385718808918,
+    "author_minus_measured_mV": 336.02789938810986,
+    "ours_minus_author_mV": 0.010672492781971243,
+    "ours_reference_V": 2.9665704476702115,
+    "ours_ohmic_V": -0.03264379263213396,
+    "ours_polarization_total_V": -0.09840034857855584,
+    "table_discharge_at_author_soc_V": 2.966553131079746,
+    "author_polarization_inferred_V": -0.09839361161582355,
+    "reference_difference_mV": 0.01731659046155798,
+    "ohmic_difference_mV": 9.286505243261134e-05,
+    "polarization_difference_mV": -0.006736962732289964,
+    "decomposition_closure_mV": 2.706168622523819e-13,
+    "reference_soc_coordinate_difference_mV": 0.017316590465554782,
+    "reference_same_soc_branch_difference_mV": -3.9968028886505635e-12,
+    "decomposition_status": "defined; author polarization is algebraic inferred remainder",
+    "author_SOC_minus_measured_current_left_integral": -3.906210335663518e-06,
+    "measured_current_left_integrated_soc": 0.04617809323218797,
+    "author_SOC_minus_measured_current_linear_integral": 3.311797072691469e-09,
+    "measured_current_linear_integrated_soc": 0.04617418371005523,
+    "author_SOC_minus_author_current_left_integral": -6.9165541435115e-06,
+    "author_current_left_integrated_soc": 0.046181103575995815,
+    "author_SOC_minus_author_current_linear_integral": -1.5487550919096593e-06,
+    "author_current_linear_integrated_soc": 0.04617573577694421
+  },
+  "parameters_or_initial_states_changed": false,
+  "unused_archive_members": 50,
+  "validation_workbook_opened": false,
+  "author_polarization_status": "inferred algebraic remainder; not measured or separately disclosed RC states",
+  "schema_version": "voltforge.ae_p45b_author_comparison/1",
+  "source_lock": {
+    "schema_version": "voltforge.ae_p45b_author_comparison_allocation/1",
+    "preaccess_procedure_commit": "1d53403",
+    "allowed_member": "MOLICEL_P45B_025degC_1C_Dch.csv",
+    "member_sha256": "41cef2d81d1a7c9fc139547d7a0a8d0961e0789f07aedac10a8a0009c21eaf5a",
+    "own_prediction": "reports/p45b_reproduction_v1/run_002/primary.csv",
+    "allowed_new_access": [
+      "I_sim_A",
+      "V_sim_V",
+      "SOC_sim",
+      "E_OCV_V",
+      "T_sim_degC",
+      "Q_sim_W"
+    ],
+    "new_experimental_families_opened": 0,
+    "remaining_unopened_members": 50,
+    "validation_workbook_access": "protected_unopened",
+    "preaccess_files": {
+      "reports/p45b_reproduction_v1/PROCEDURE.md": "2ab246314c615be1842455819f7347199793cd28050e4136b80aba5d4a0f97f8",
+      "configs/ae_p45b_allocation_v1.json": "4e8ec7d530e207a91e91ae6ca6ec78efd4dedcb425a55775171d710fba8f8ddf",
+      "molicel_p45b_data.zip": "9d5d07892493e74822f0952846a9071cac41ac22e3aced806c034eaa660ebc53",
+      "Molicel_INR-21700-P45B_ECM.csv": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e",
+      "ssrn-6861858.pdf": "0b872b05c28471a12fd3b004f9b98188da1074a11d35e6ab721ff9f250e8f258",
+      "reports/p45b_author_comparison_v1/PROCEDURE.md": "85f8fc0f05959d56978de21ec840f02bced4281edcb9f5019a4c2a6b27bf6d01",
+      "reports/p45b_reproduction_v1/run_002/primary.csv": "b1c9a6ead62b1a002a94bba174b9c28609b33a1321a2399e06e554d23fc4c797",
+      "reports/p45b_reproduction_v1/run_002/manifest.json": "b34044ff2d657df0d8fc2493163086071b99db1d3738604efb4f439762988de3",
+      "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088"
+    }
+  },
+  "implementation_sha256": {
+    "scripts/ae_p45b_author_comparison.py": "030ee35c89918a38acfe62f6f03ab04b9694fc2fccfd2664dd2d78bdb15fa12a",
+    "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
+    "scripts/ae_p45b_equations.py": "1bee15332127bfe86446d600b2af5d814e103380bb76f972748a12220500c40b",
+    "scripts/ae_p45b_intake.py": "9a0e7fc1571d639b0af1fd06bfa9baa42a35c889fce7c6d6204feab219318a73"
+  }
+}

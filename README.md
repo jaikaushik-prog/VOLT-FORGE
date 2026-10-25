@@ -58,6 +58,13 @@ This requires diagnosis before voltage-limit or P45B module decisions. The other
 50 measurement files and author validation workbook remain unopened. The frozen
 LG model and editor physics are unchanged; 59 focused synthetic tests pass.
 
+The [same-record author comparison](reports/p45b_author_comparison_v1/DECISION.md)
+now shows that our voltage prediction matches the authors' output to 0.0183 mV
+RMSE. Their prediction has the same approximately 336 mV end-of-discharge miss
+against measurement. This confirms close reproduction for this case, not battery
+accuracy. The focused suite now has 74 passing tests. The remaining 50 measurement
+files remain protected; no fitted parameters or initial states were adjusted.
+
 ## First product workflow and frontend handoff
 
 Read [FRONTEND_CONTRACT.md](FRONTEND_CONTRACT.md) for the Python/JSON interface,
