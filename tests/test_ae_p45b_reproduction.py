@@ -166,3 +166,30 @@ def test_only_allocated_member_read_and_author_values_unused(tmp_path,monkeypatc
     param.write_bytes(b'changed')
     with pytest.raises(ValueError,match='hash mismatch'):rep.load_allowed_sources()
     assert opened==[rep.MEMBER]
+
+
+def test_complete_cli_exports_all_runs_and_refuses_overwrite(tmp_path,monkeypatch):
+    root=tmp_path
+    (root/'scripts').mkdir()
+    for name in ('ae_p45b_reproduction.py','ae_p45b_equations.py','ae_p45b_intake.py'):
+        (root/'scripts'/name).write_text('synthetic implementation provenance fixture')
+    table=rep.Table25(table_bytes())
+    source=dict(rows=records([0,1,2,3]),source_sha256='synthetic')
+    lock=dict(preaccess_files={'reports/p45b_reproduction_v1/PROCEDURE.md':'synthetic'},preaccess_commit='synthetic')
+    monkeypatch.setattr(rep,'ROOT',root)
+    monkeypatch.setattr(rep,'load_allowed_sources',lambda:(table,source,lock))
+    out=root/'tmp/run'
+    monkeypatch.setattr(sys,'argv',['reproduce','--out',str(out)])
+    rep.main()
+    summary=json.loads((out/'summary.json').read_text())
+    assert summary['numerical_convergence']['criterion_met'] is True
+    assert len(summary['runs'])==4 and summary['author_numeric_output_rows_opened']==0
+    manifest=json.loads((out/'manifest.json').read_text())
+    for name,expected in manifest.items():assert rep.sha(out/name)==expected
+    assert (out/'voltage_comparison.png').stat().st_size>1000
+    with pytest.raises(SystemExit,match='new output directory'):rep.main()
+
+
+def test_failed_serialization_does_not_leave_empty_report(tmp_path):
+    with pytest.raises(TypeError):rep.write_json(tmp_path/'bad.json',{'bad':object()})
+    assert not (tmp_path/'bad.json').exists()

@@ -1,0 +1,11 @@
+{
+  "fine_step.csv": "fb45737e685b7e5ca4efc6bf1d8717427473dc91d0c094a8423a1d1d7ab44f26",
+  "linear_current_sensitivity.csv": "9b4a21c976102be66a621dea51faebfe6e58c785412ce0134b1407bb205d643c",
+  "nearest_extension_sensitivity.csv": "b1c9a6ead62b1a002a94bba174b9c28609b33a1321a2399e06e554d23fc4c797",
+  "primary.csv": "b1c9a6ead62b1a002a94bba174b9c28609b33a1321a2399e06e554d23fc4c797",
+  "residual_diagnostics.png": "a973a0280e93c036d09b06bb71e725ad6be73173b81ac7ac5543ad595f2dc7bf",
+  "source_diagnostics.json": "e2ba06f26309f8c4265645914cdffd169d80c869ac8df0edddc1b24ebe49a3ea",
+  "summary.json": "aa84af28b75823e19acf4ca281a3942a352761acddc1e37b8af3d5aeab529e30",
+  "table_audit.json": "68b82061bb038c2c8faeb7381e4e1ba062e8b1f16cec757ce643b486c6cc293e",
+  "voltage_comparison.png": "c6ac44cd76c937380614b38ad05f3471b8ba4aa6f76457ff38791de0d3dfe665"
+}

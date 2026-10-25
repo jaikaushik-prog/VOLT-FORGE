@@ -45,17 +45,18 @@ validation. See the [viewer decision](reports/measurement_viewer_v1/DECISION.md)
 The complete About:Energy P45B release has also been verified. See the
 [P45B intake decision](reports/p45b_intake_v1/DECISION.md) and
 [prospective modelling plan](reports/p45b_intake_v1/MODELLING_PLAN.md).
-Its 51 CSV files include both experimental data and author simulations; every
-outcome remains unopened pending the declared modelling procedure. This intake
-adds source/schema checks and a synthetic-tested experimental adapter, not a
-P45B model or new module-validation result.
+Its 51 CSV files include both experimental data and author simulations. The
+initial intake preserved every outcome until a declared modelling procedure.
 
 The subsequently supplied full paper resolves the core electrical-specification
 access blocker. See the [paper review and equation checks](reports/p45b_paper_v1/DECISION.md).
-A separate synthetic-tested two-RC/hysteresis kernel now implements its electrical
-equations. Real P45B tables and outcome rows remain unopened; table interpolation
-and measured-record reproduction are the next stage. The frozen LG model and
-editor physics are unchanged.
+A separate two-RC/hysteresis implementation now reproduces the declared 25 degC
+1C discharge using the published base table. See the
+[reproduction results and plots](reports/p45b_reproduction_v1/DECISION.md): full-record
+RMSE is 35.86 mV and maximum error reaches 336.04 mV near discharge termination.
+This requires diagnosis before voltage-limit or P45B module decisions. The other
+50 measurement files and author validation workbook remain unopened. The frozen
+LG model and editor physics are unchanged; 59 focused synthetic tests pass.
 
 ## First product workflow and frontend handoff
 

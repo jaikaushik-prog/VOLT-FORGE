@@ -1,0 +1,43 @@
+{
+  "samples": 3433,
+  "first_time_s": 0.0,
+  "last_time_s": 3433.786,
+  "duration_s": 3433.786,
+  "sample_interval_s": {
+    "min": 0.0250000000014552,
+    "median": 1.0,
+    "max": 1.0270000000000437
+  },
+  "current_charge_positive_A": [
+    -4.50015782697698,
+    -0.0028854520177433
+  ],
+  "voltage_V": [
+    2.49948773457863,
+    4.18726253105995
+  ],
+  "controlled_temperature_degC": [
+    25.0,
+    25.0
+  ],
+  "discharge_Ah_left": 4.29219858045515,
+  "discharge_Ah_linear": 4.292216173304731,
+  "contiguous_direction_runs": [
+    {
+      "direction": "rest",
+      "source_line_start": 2,
+      "source_line_end": 2,
+      "duration_s": 0.0,
+      "current_min_A": -0.0028854520177433,
+      "current_max_A": -0.0028854520177433
+    },
+    {
+      "direction": "discharge",
+      "source_line_start": 3,
+      "source_line_end": 3434,
+      "duration_s": 3433.7609999999986,
+      "current_min_A": -4.50015782697698,
+      "current_max_A": -4.4852976021968
+    }
+  ]
+}

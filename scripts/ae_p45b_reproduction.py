@@ -31,8 +31,9 @@ def sha(path):
 
 
 def write_json(path, value):
+    serialized = json.dumps(value, indent=2, allow_nan=False)+'\n'
     with Path(path).open('x', encoding='utf-8', newline='\n') as stream:
-        stream.write(json.dumps(value, indent=2, allow_nan=False)+'\n')
+        stream.write(serialized)
 
 
 class Table25:
@@ -228,7 +229,7 @@ def summarize(run):
 def difference(left, right):
     deltas = [a['predicted_voltage_V']-b['predicted_voltage_V'] for a,b in zip(left['rows'],right['rows'])
               if a['predicted_voltage_V'] is not None and b['predicted_voltage_V'] is not None]
-    return dict(common_samples=len(deltas), max_abs_voltage_difference_mV=1000*max(map(abs,deltas)) if deltas else None,
+    return dict(common_samples=len(deltas), max_abs_voltage_difference_mV=float(1000*max(map(abs,deltas))) if deltas else None,
         rmse_voltage_difference_mV=float(1000*np.sqrt(np.mean(np.array(deltas)**2))) if deltas else None)
 
 
@@ -324,7 +325,7 @@ def main():
             writer.writeheader(); writer.writerows(runs[name]['rows'])
     convergence = difference(runs['primary'],runs['fine_step'])
     convergence['proposed_numerical_tolerance_mV'] = 0.1
-    convergence['criterion_met'] = convergence['max_abs_voltage_difference_mV'] is not None and convergence['max_abs_voltage_difference_mV'] <= 0.1
+    convergence['criterion_met'] = bool(convergence['max_abs_voltage_difference_mV'] is not None and convergence['max_abs_voltage_difference_mV'] <= 0.1)
     summary = dict(schema_version='voltforge.ae_p45b_reproduction/1',
         evidence_class='published-parameter reproduction on one development record',
         source_member=MEMBER, source_member_sha256=source['source_sha256'],

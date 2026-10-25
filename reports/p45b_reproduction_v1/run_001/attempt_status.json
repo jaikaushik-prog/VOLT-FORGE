@@ -1,0 +1,15 @@
+{
+  "status": "failed_report_export",
+  "implementation_commit": "8c2dd73",
+  "reason": "numpy.bool_ convergence flag was not JSON serializable; summary.json is empty and no manifest was produced",
+  "physics_changes_for_retry": false,
+  "retry": "run_002",
+  "identical_trace_and_audit_files": {
+    "primary.csv": true,
+    "fine_step.csv": true,
+    "linear_current_sensitivity.csv": true,
+    "nearest_extension_sensitivity.csv": true,
+    "table_audit.json": true,
+    "source_diagnostics.json": true
+  }
+}
