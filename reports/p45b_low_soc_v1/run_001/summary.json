@@ -1,0 +1,268 @@
+{
+  "schema_version": "voltforge.ae_p45b_low_soc_diagnosis/1",
+  "source_lock": {
+    "schema_version": "voltforge.ae_p45b_low_soc_allocation/1",
+    "preaccess_procedure_commit": "cda4833",
+    "allowed_members": {
+      "co30": "MOLICEL_P45B_025degC_Co30_Dch.csv",
+      "gitt": "MOLICEL_P45B_025degC_GITT_Dch.csv"
+    },
+    "member_sha256": {
+      "co30": "51209af2bdce924358ae96e968a639ecdba727f593e20d95560b23575da23584",
+      "gitt": "23dc2ab8c7e27e3901009be8bf25e4cdac84857f22bff0ba181a168fe30161ed"
+    },
+    "oneC_saved_trace": "reports/p45b_reproduction_v1/run_002/primary.csv",
+    "new_development_families": 2,
+    "remaining_unopened_members": 48,
+    "remaining_unopened_families": 40,
+    "validation_workbook_access": "protected_unopened",
+    "charge_optimized_table_access": "protected_unopened",
+    "preaccess_files": {
+      "reports/p45b_reproduction_v1/PROCEDURE.md": "2ab246314c615be1842455819f7347199793cd28050e4136b80aba5d4a0f97f8",
+      "configs/ae_p45b_allocation_v1.json": "4e8ec7d530e207a91e91ae6ca6ec78efd4dedcb425a55775171d710fba8f8ddf",
+      "molicel_p45b_data.zip": "9d5d07892493e74822f0952846a9071cac41ac22e3aced806c034eaa660ebc53",
+      "Molicel_INR-21700-P45B_ECM.csv": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e",
+      "ssrn-6861858.pdf": "0b872b05c28471a12fd3b004f9b98188da1074a11d35e6ab721ff9f250e8f258",
+      "reports/p45b_low_soc_v1/PROCEDURE.md": "c573cc70716e6ff8eb6fa34b7c0eba3f5b938e4cd47bee5ab7577c143eaa9674",
+      "reports/p45b_reproduction_v1/run_002/primary.csv": "b1c9a6ead62b1a002a94bba174b9c28609b33a1321a2399e06e554d23fc4c797",
+      "reports/p45b_author_comparison_v1/run_001/manifest.json": "bf367e90959c5ccdefc3a09dfaa688edca7b47f1cd46262c3ced1ccf75a46c72",
+      "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088"
+    }
+  },
+  "records": {
+    "co30": {
+      "samples": 2784,
+      "duration_s": 108592.198,
+      "time_interval_s": {
+        "min": 0.00400000000081491,
+        "median": 46.54300000000512,
+        "p95": 60.000999999999024,
+        "max": 60.00200000000768
+      },
+      "possible_gap_limit_s": 465.4300000000512,
+      "possible_gaps": 0,
+      "current_charge_positive_A": [
+        -0.15030328988264,
+        -0.0007470602414229
+      ],
+      "measured_voltage_V": [
+        2.4997770888808,
+        4.19028618633303
+      ],
+      "recorded_temperature_degC": [
+        25.0,
+        25.0
+      ],
+      "initial_state": "nominal SOC=1 at first sample assumed, not fitted",
+      "nominal_capacity_Ah": 4.5,
+      "final_soc_linear": -0.0054811703955808255,
+      "final_soc_left": -0.005481367718781087,
+      "integrated_discharge_Ah_linear": 4.524665266780113,
+      "max_soc_integration_convention_difference": 2.0057440966924842e-07,
+      "unknown_soc_rows": 0,
+      "unsupported_reference_rows": 0,
+      "temperature_deviation_rows": 0,
+      "first_protocol_2p5V_crossing": {
+        "source_line": 2784,
+        "time_s": 108592.19,
+        "voltage_V": 2.4997770888808,
+        "nominal_soc_linear": -0.005481096322523372
+      },
+      "reference_errors_by_phase": {
+        "discharge": {
+          "samples": 2783,
+          "covered_duration_s": 108592.19399999987,
+          "sample_rmse_mV": 0.40195699124748696,
+          "sample_bias_mV": -0.13216977431004076,
+          "max_abs_mV": 1.9633993179142273,
+          "time_rmse_mV": 0.20154037577179273,
+          "time_bias_mV": -0.02866575204027155,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        },
+        "rest": {
+          "samples": 1,
+          "covered_duration_s": 0.0,
+          "sample_rmse_mV": 2.7561904116506497,
+          "sample_bias_mV": -2.7561904116506497,
+          "max_abs_mV": 2.7561904116506497,
+          "time_rmse_mV": null,
+          "time_bias_mV": null,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        }
+      },
+      "discharge_reference_errors_by_soc": {
+        "0-0.2": {
+          "samples": 1042,
+          "covered_duration_s": 21555.123999999996,
+          "sample_rmse_mV": 0.49187703959859186,
+          "sample_bias_mV": -0.2597099583116547,
+          "max_abs_mV": 1.7097386604940645,
+          "time_rmse_mV": 0.32151131269207284,
+          "time_bias_mV": -0.1201823661257148,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        },
+        "0.2-0.8": {
+          "samples": 1219,
+          "covered_duration_s": 64746.965999999986,
+          "sample_rmse_mV": 0.11873736827996922,
+          "sample_bias_mV": -0.0013229371414582554,
+          "max_abs_mV": 0.5861744223993881,
+          "time_rmse_mV": 0.11070059865500972,
+          "time_bias_mV": -0.0036840068883917786,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        },
+        "0.8-1": {
+          "samples": 418,
+          "covered_duration_s": 21599.999000000003,
+          "sample_rmse_mV": 0.17718253074976004,
+          "sample_bias_mV": 0.04044391341474448,
+          "max_abs_mV": 1.0380734417418935,
+          "time_rmse_mV": 0.14014666396372888,
+          "time_bias_mV": 0.016717926387429468,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        },
+        "<0": {
+          "samples": 104,
+          "covered_duration_s": 585.7870000000112,
+          "sample_rmse_mV": 1.268078427673652,
+          "sample_bias_mV": -1.0817653920771608,
+          "max_abs_mV": 1.9633993179142273,
+          "time_rmse_mV": 1.2814572375183462,
+          "time_bias_mV": -1.1090658988056505,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        }
+      },
+      "segments": 2,
+      "pulse_rest_pairs": 0
+    },
+    "gitt": {
+      "samples": 98426,
+      "duration_s": 68515.68,
+      "time_interval_s": {
+        "min": 0.001999999993131496,
+        "median": 1.0,
+        "p95": 1.0,
+        "max": 1.009000000002004
+      },
+      "possible_gap_limit_s": 120.0,
+      "possible_gaps": 0,
+      "current_charge_positive_A": [
+        -5.28209698436341,
+        0.0
+      ],
+      "measured_voltage_V": [
+        2.49984612874984,
+        4.18731418297844
+      ],
+      "recorded_temperature_degC": [
+        25.0,
+        25.0
+      ],
+      "initial_state": "nominal SOC=1 at first sample assumed, not fitted",
+      "nominal_capacity_Ah": 4.5,
+      "final_soc_linear": 0.016014973293560227,
+      "final_soc_left": 0.015438865479619389,
+      "integrated_discharge_Ah_linear": 4.427932620178979,
+      "max_soc_integration_convention_difference": 0.0005761078139408377,
+      "unknown_soc_rows": 0,
+      "unsupported_reference_rows": 0,
+      "temperature_deviation_rows": 0,
+      "first_protocol_2p5V_crossing": {
+        "source_line": 83548,
+        "time_s": 55654.119,
+        "voltage_V": 2.49984612874984,
+        "nominal_soc_linear": 0.042653629497019035
+      },
+      "reference_errors_by_phase": {
+        "discharge": {
+          "samples": 18618,
+          "covered_duration_s": 3705.112000000012,
+          "sample_rmse_mV": 101.28256972110073,
+          "sample_bias_mV": 85.56804976708885,
+          "max_abs_mV": 450.2531039792137,
+          "time_rmse_mV": 101.16294608164586,
+          "time_bias_mV": 85.54089496222558,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        },
+        "rest": {
+          "samples": 79808,
+          "covered_duration_s": 64807.05899998154,
+          "sample_rmse_mV": 21.817701377533375,
+          "sample_bias_mV": 0.24709945418685705,
+          "max_abs_mV": 374.42095356722893,
+          "time_rmse_mV": 19.467709595419194,
+          "time_bias_mV": -2.6550951883367606,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        }
+      },
+      "discharge_reference_errors_by_soc": {
+        "0-0.2": {
+          "samples": 4163,
+          "covered_duration_s": 826.5240000000049,
+          "sample_rmse_mV": 170.50968096446908,
+          "sample_bias_mV": 143.98440581887766,
+          "max_abs_mV": 450.2531039792137,
+          "time_rmse_mV": 170.35257971326294,
+          "time_bias_mV": 144.0020160523814,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        },
+        "0.2-0.8": {
+          "samples": 10831,
+          "covered_duration_s": 2158.9090000000106,
+          "sample_rmse_mV": 71.21640977102194,
+          "sample_bias_mV": 70.39367798094159,
+          "max_abs_mV": 88.02197925470611,
+          "time_rmse_mV": 71.21656131660217,
+          "time_bias_mV": 70.400026676627,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        },
+        "0.8-1": {
+          "samples": 3624,
+          "covered_duration_s": 719.2789999999986,
+          "sample_rmse_mV": 64.38019993833996,
+          "sample_bias_mV": 63.81482972629526,
+          "max_abs_mV": 79.57137214294718,
+          "time_rmse_mV": 64.37426785606306,
+          "time_bias_mV": 63.81819261226445,
+          "interpretation": "table discharge reference minus measured voltage; NOT dynamic prediction error"
+        }
+      },
+      "segments": 65,
+      "pulse_rest_pairs": 32
+    }
+  },
+  "cross_record_oneC_final_sample": {
+    "oneC_source_line": 3434,
+    "oneC_time_s": 3433.786,
+    "oneC_nominal_soc": 0.046178093232155194,
+    "oneC_measured_voltage_V": 2.49948773457863,
+    "oneC_predicted_voltage_V": 2.835526306459522,
+    "co30_loaded_value_V": 2.966783892627306,
+    "co30_loaded_status": "interpolated at assumed shared nominal SOC",
+    "co30_loaded_source_line_a": 2239,
+    "co30_loaded_source_line_b": 2240,
+    "co30_loaded_minus_oneC_loaded_mV": 467.29615804867564,
+    "gitt_late_rest_value_V": 2.976899960190025,
+    "gitt_late_rest_status": "interpolated at assumed shared nominal SOC",
+    "gitt_late_rest_source_line_a": 83246,
+    "gitt_late_rest_source_line_b": 85833,
+    "gitt_late_rest_minus_oneC_loaded_mV": 477.4122256113946
+  },
+  "cross_record_covered_oneC_samples": {
+    "co30_loaded": 3431,
+    "gitt_late_rest": 3359
+  },
+  "reference_comparisons_are_terminal_prediction_errors": false,
+  "cross_record_same_cell_and_preparation_verified": false,
+  "late_rest_is_equilibrium_OCV": false,
+  "model_parameters_changed": false,
+  "initial_states_fitted": false,
+  "remaining_unopened_members": 48,
+  "validation_workbook_opened": false,
+  "requirement_status": "requirement not configured",
+  "implementation_sha256": {
+    "scripts/ae_p45b_low_soc.py": "42129b98769e6a4e2c3c5e1b764ed4aa7fd3688c7eda03ea5579e3b8e957a936",
+    "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
+    "scripts/ae_p45b_intake.py": "9a0e7fc1571d639b0af1fd06bfa9baa42a35c889fce7c6d6204feab219318a73"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": "voltforge.ae_p45b_low_soc_verification/1",
+  "new_tests_before_record_access": 12,
+  "focused_tests": 86,
+  "failures": 0,
+  "experimental_families_newly_opened": 2,
+  "experimental_rows_newly_opened": 101210,
+  "remaining_unopened_members": 48,
+  "remaining_unopened_filename_families": 40,
+  "validation_workbook_opened": false,
+  "charge_optimized_table_opened": false,
+  "model_parameters_changed": false,
+  "initial_states_fitted": false,
+  "new_model_adopted": false,
+  "previous_author_comparison_artifacts_preserved": 17,
+  "protected_LG_artifacts": 112,
+  "unused_LG_cells": [
+    "P11",
+    "P12",
+    "P14",
+    "P15",
+    "P18",
+    "P20",
+    "P3",
+    "P6",
+    "P9"
+  ],
+  "unused_FreeTwinEV_records": 13,
+  "original_P45B_files_unchanged": 6,
+  "original_FreeTwinEV_files_unchanged": 32,
+  "independent_recomputations": {
+    "co30": {
+      "samples": 2784,
+      "final_soc_linear": -0.0054811703955859326,
+      "final_soc_left": -0.005481367718777497,
+      "integrated_discharge_Ah": 4.524665266780136,
+      "reference_minus_loaded_voltage": {
+        "sample_rmse_mV": 0.40195699124748696,
+        "time_rmse_mV": 0.20154037577179265,
+        "sample_bias_mV": -0.13216977431004076,
+        "max_abs_mV": 1.9633993179142273
+      },
+      "segments_cover_every_sample": true
+    },
+    "gitt": {
+      "samples": 98426,
+      "final_soc_linear": 0.016014973293598245,
+      "final_soc_left": 0.015438865479713071,
+      "integrated_discharge_Ah": 4.427932620178808,
+      "reference_minus_loaded_voltage": {
+        "sample_rmse_mV": 101.28256972110073,
+        "time_rmse_mV": 101.1629460816459,
+        "sample_bias_mV": 85.56804976708885,
+        "max_abs_mV": 450.2531039792137
+      },
+      "segments_cover_every_sample": true,
+      "complete_pairs": 32,
+      "max_recomputed_recovery_difference_mV": 0.0
+    }
+  },
+  "experimental_module_validation": "awaiting suitable measurements",
+  "artifacts": {
+    "configs/ae_p45b_low_soc_v1.json": "5caf4362c086884b3fac92131ae2ac103eb19cff4820b298a8514657c3492795",
+    "README.md": "2bfafb404e581a50789ec27117f42032cf3c9cf9f574c8fa25c585e7265101b4",
+    "reports/p45b_low_soc_v1/DECISION.md": "adee18c7eb24022f7c031413c4d149e225a22cc057a2b211d5461c8d83dee3f8",
+    "reports/p45b_low_soc_v1/INTERPRETATION.json": "a05ffdddfc2b45bd673a849fdce223284382833c76c684e8a665054fed80b856",
+    "reports/p45b_low_soc_v1/preaccess_pytest.xml": "e65f2342e98f82ba4d76e36fc07290733c983dbae77d6650ed31f23a763cb07d",
+    "reports/p45b_low_soc_v1/previous/README.md": "63db0590940f7d575535da0052a60259dbdbd3e171f04cc14acb21189ccef2f3",
+    "reports/p45b_low_soc_v1/PROCEDURE.md": "c573cc70716e6ff8eb6fa34b7c0eba3f5b938e4cd47bee5ab7577c143eaa9674",
+    "reports/p45b_low_soc_v1/pytest.xml": "791a607ce762801760132758c7b0d213e894ae7e49cf6f8c0e1ece8d2c0a5276",
+    "reports/p45b_low_soc_v1/run_001/co30_pairs.csv": "5f7a302cd4f5237891b7dddd7aae85f79bf60b684986736dc690f32dafd8f6a5",
+    "reports/p45b_low_soc_v1/run_001/co30_samples.csv": "9bea0449b6a2df25a0c2d54533512c237303fe3d224e7b1a68cecc1f6ff29b75",
+    "reports/p45b_low_soc_v1/run_001/co30_segments.csv": "439ef78b8c5c5a1672650581e10406d8e5ea949202e169349821831604b42a2b",
+    "reports/p45b_low_soc_v1/run_001/cross_record.csv": "20820349cf37e13c137b6dda822cefae167153a448161a869725c5a11976f05d",
+    "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv": "7fb7e3ba700918e44f3b37e96ffcef975dbbd771d3652e76333951bed350293d",
+    "reports/p45b_low_soc_v1/run_001/gitt_recovery.png": "f67fb4bfe2365a1a92035ace8815bcc1267a2b2a35520ed9893e6d98834263d8",
+    "reports/p45b_low_soc_v1/run_001/gitt_samples.csv": "7a2306a4746afc30bd138d9113e1f91555debf6a1ef1b2a9fdc063ea576e2ea6",
+    "reports/p45b_low_soc_v1/run_001/gitt_segments.csv": "84ab839b717285efc939c92c785687bf8e9b0da5e66026f535b3162abe84083d",
+    "reports/p45b_low_soc_v1/run_001/gitt_sequence.png": "63fa333b078b3805252d686f97bcb1e057619d16e533309f2c9ac0496edd0f9d",
+    "reports/p45b_low_soc_v1/run_001/manifest.json": "04c202328da98432bc50cbdada212a6f53c661b1a38d578ba74bde918122371f",
+    "reports/p45b_low_soc_v1/run_001/reference_comparison.png": "5674f0e8f15ba8c791dca937cfa5099b0daafc392f950867b19645b31715387a",
+    "reports/p45b_low_soc_v1/run_001/summary.json": "5829b71c51b56aab5b5ebc79d7246cb90e03b0c3c37499817232657f6a5214ca",
+    "scripts/ae_p45b_low_soc.py": "42129b98769e6a4e2c3c5e1b764ed4aa7fd3688c7eda03ea5579e3b8e957a936",
+    "scripts/verify_p45b_low_soc.py": "7cd6329beb3ba640b5e01d4ff0d05fd214b7ee33e23e8e3894952861d9508d2e",
+    "tests/test_ae_p45b_low_soc.py": "df71fba1270de57800e39ac57ad6b8fb5afd9703071929ac90a5727cec5b271a"
+  }
+}

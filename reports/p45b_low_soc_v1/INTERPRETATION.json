@@ -1,0 +1,30 @@
+{
+  "schema_version": "voltforge.ae_p45b_low_soc_interpretation/1",
+  "model_parameters_changed": false,
+  "initial_states_fitted": false,
+  "new_model_adopted": false,
+  "evidence_role": "development characterization; not fresh independent assessment",
+  "reference": {
+    "observation": "published discharge reference closely matches C/30 loaded voltage at assumed nominal SOC",
+    "is_terminal_prediction_accuracy": false,
+    "is_equilibrium_OCV_validation": false
+  },
+  "gitt_recovery": {
+    "observation": "low-charge recovery exceeds unchanged table steady-current drop scale",
+    "scale_is_full_transient_prediction": false,
+    "apparent_transition_resistance_identifies_R0": false,
+    "late_rest_is_equilibrium_OCV": false,
+    "physical_cause_uniquely_identified": false
+  },
+  "cross_record_same_cell_and_preparation_verified": false,
+  "temperature_support": "recorded constant 25 degC; no cell-temperature transient or thermal law established",
+  "remaining_unopened_members": 48,
+  "remaining_unopened_filename_families": 40,
+  "charge_optimized_table_opened": false,
+  "validation_workbook_opened": false,
+  "next_action": "predeclare full-sequence frozen-model GITT transient diagnosis before any revision",
+  "voltage_limit_design_decision": "insufficient evidence: shared low-charge model error and initial-state uncertainty",
+  "requirement_status": "requirement not configured",
+  "experimental_module_validation": "awaiting suitable measurements",
+  "Q_sim_W_definition": "unresolved; not used for electrical power or heat"
+}

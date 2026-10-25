@@ -54,16 +54,26 @@ A separate two-RC/hysteresis implementation now reproduces the declared 25 degC
 1C discharge using the published base table. See the
 [reproduction results and plots](reports/p45b_reproduction_v1/DECISION.md): full-record
 RMSE is 35.86 mV and maximum error reaches 336.04 mV near discharge termination.
-This requires diagnosis before voltage-limit or P45B module decisions. The other
-50 measurement files and author validation workbook remain unopened. The frozen
-LG model and editor physics are unchanged; 59 focused synthetic tests pass.
+This requires diagnosis before voltage-limit or P45B module decisions. At that
+stage, the other 50 measurement files and author validation workbook remained
+unopened. The frozen LG model and editor physics are unchanged.
 
 The [same-record author comparison](reports/p45b_author_comparison_v1/DECISION.md)
 now shows that our voltage prediction matches the authors' output to 0.0183 mV
 RMSE. Their prediction has the same approximately 336 mV end-of-discharge miss
 against measurement. This confirms close reproduction for this case, not battery
-accuracy. The focused suite now has 74 passing tests. The remaining 50 measurement
-files remain protected; no fitted parameters or initial states were adjusted.
+accuracy. That stage passed 74 focused tests without adjusting parameters or
+initial states.
+
+The [bounded low-charge diagnosis](reports/p45b_low_soc_v1/DECISION.md) now uses
+the separately declared 25 degC C/30 and GITT development records. The published
+reference closely matches C/30 loaded voltage. Near 4% nominal SOC, GITT voltage
+recovers about 461 mV after unloading, while the table's steady-current drop
+scale is about 128 mV. That scale is not a transient prediction, and finite-rest
+voltage is not established equilibrium OCV. No model revision was adopted.
+All **86 focused tests** pass; **48 other measurement files** and the validation
+workbook remain protected. The next step is a declared full-sequence GITT replay
+through the frozen model before considering a change to its low-charge response.
 
 ## First product workflow and frontend handoff
 
