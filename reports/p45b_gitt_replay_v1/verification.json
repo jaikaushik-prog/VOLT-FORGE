@@ -1,0 +1,132 @@
+{
+  "schema_version": "voltforge.ae_p45b_gitt_replay_verification/1",
+  "pre_replay_tests": 13,
+  "focused_tests": 99,
+  "failures": 0,
+  "scenario_count": 5,
+  "new_measurement_families_opened": 0,
+  "remaining_unopened_members": 48,
+  "remaining_unopened_filename_families": 40,
+  "model_parameters_changed": false,
+  "initial_states_fitted": false,
+  "previous_low_soc_artifacts_preserved": 23,
+  "protected_LG_artifacts": 112,
+  "unused_LG_cells": [
+    "P11",
+    "P12",
+    "P14",
+    "P15",
+    "P18",
+    "P20",
+    "P3",
+    "P6",
+    "P9"
+  ],
+  "unused_FreeTwinEV_records": 13,
+  "original_P45B_files_unchanged": 6,
+  "original_FreeTwinEV_files_unchanged": 32,
+  "validation_workbook_opened": false,
+  "charge_optimized_table_opened": false,
+  "independent_recomputations": {
+    "primary": {
+      "metrics": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 29.883582946503996,
+        "sample_bias_mV": 0.8515289602892738,
+        "max_abs_error_mV": 333.3674920539833,
+        "time_rmse_mV": 22.1900699276989,
+        "time_bias_mV": -3.2981853486172947
+      },
+      "source_alignment_exact": true,
+      "max_recomputed_pair_recovery_difference_mV": 0.0
+    },
+    "fine_step": {
+      "metrics": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 29.883700682941974,
+        "sample_bias_mV": 0.8512923771422254,
+        "max_abs_error_mV": 333.3674920540108,
+        "time_rmse_mV": 22.190118101122916,
+        "time_bias_mV": -3.2982563110595877
+      },
+      "source_alignment_exact": true,
+      "max_recomputed_pair_recovery_difference_mV": 0.0
+    },
+    "linear_current_sensitivity": {
+      "metrics": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 30.461397841946184,
+        "sample_bias_mV": 1.905831669782787,
+        "max_abs_error_mV": 335.99550447426105,
+        "time_rmse_mV": 22.613480783008516,
+        "time_bias_mV": -2.0855407822428127
+      },
+      "source_alignment_exact": true,
+      "max_recomputed_pair_recovery_difference_mV": 0.0
+    },
+    "initial_soc_minus_0p005": {
+      "metrics": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 30.556798734040473,
+        "sample_bias_mV": -11.206240234146469,
+        "max_abs_error_mV": 308.32671562268075,
+        "time_rmse_mV": 27.97814430070829,
+        "time_bias_mV": -16.88500438657683
+      },
+      "source_alignment_exact": true,
+      "max_recomputed_pair_recovery_difference_mV": 0.0
+    },
+    "initial_soc_plus_0p005": {
+      "metrics": {
+        "samples": 0,
+        "covered_duration_s": 0.0,
+        "sample_rmse_mV": null,
+        "sample_bias_mV": null,
+        "max_abs_error_mV": null,
+        "time_rmse_mV": null,
+        "time_bias_mV": null
+      },
+      "source_alignment_exact": true,
+      "max_recomputed_pair_recovery_difference_mV": 0.0
+    }
+  },
+  "experimental_module_validation": "awaiting suitable measurements",
+  "artifacts": {
+    "configs/ae_p45b_gitt_replay_v1.json": "7cf6b48f429a54507e63a102c58b68657740cc37e4c70f96d4994eb67a1fbf6c",
+    "README.md": "54c54a96ab8fd79c9c0ea0e5c1edc60470e7e6a619989c771487d623ac37bad4",
+    "reports/p45b_gitt_replay_v1/DECISION.md": "68f5cd3feacb74d9adea824b32a45e013d5bc2480417c530ce78f5cc090fc8a4",
+    "reports/p45b_gitt_replay_v1/INTERPRETATION.json": "303203f56e5d24f03e0f814bfd3e1fc362b3cd04101b864e158c5cd423e17e3a",
+    "reports/p45b_gitt_replay_v1/pre_replay_pytest.xml": "14ea553146f7117989649e1e5ddd5f88d9b82f84c297d94a0204e71a1e254ba1",
+    "reports/p45b_gitt_replay_v1/pre_replay_pytest_02.xml": "164ea3905b0481d53c39573752e216d003eaa7c2aa57546454d9490477b850e1",
+    "reports/p45b_gitt_replay_v1/previous/README.md": "2bfafb404e581a50789ec27117f42032cf3c9cf9f574c8fa25c585e7265101b4",
+    "reports/p45b_gitt_replay_v1/PROCEDURE.md": "f07716c324d763b09f9ccd770d668731e91f71aeeb166df824f592ecae78dc70",
+    "reports/p45b_gitt_replay_v1/pytest.xml": "9835d9c7b617bcefff8ff96a3dc4239700cfb61426bc7fbf235ee893934f2bc0",
+    "reports/p45b_gitt_replay_v1/run_001/complete_replay.png": "2fb0f3db5979fc2db3281aeb3fb79dbdf450fe4514c9f3e9dcd472eefbae2b30",
+    "reports/p45b_gitt_replay_v1/run_001/fine_step.csv.gz": "0f05cecaacec7407f8b360145131d79b80a8a1ded94d91fbff7099cba45f6266",
+    "reports/p45b_gitt_replay_v1/run_001/fine_step_pairs.csv": "d3cd6fe865117caad9eca8cf69e89520477c8e665e7c0d8e9f3d1ad4c5fd953b",
+    "reports/p45b_gitt_replay_v1/run_001/fine_step_segments.csv": "348079e42074508c509683b774267539e9626dfba800d082a07f16fc44c6ae64",
+    "reports/p45b_gitt_replay_v1/run_001/initial_soc_minus_0p005.csv.gz": "e1e7a6fe702f367cef6f9c69a41821e01356948dd01bf93959bf3f8c89e88fe1",
+    "reports/p45b_gitt_replay_v1/run_001/initial_soc_minus_0p005_pairs.csv": "cd148a0e82cff5ad3158983af9735c26b17b695df4c67f349a0ac3e5e860e8ab",
+    "reports/p45b_gitt_replay_v1/run_001/initial_soc_minus_0p005_segments.csv": "427a4e1070119487b67e822caa15b5b6de12b198dacfdfdf358fef6509ac8da2",
+    "reports/p45b_gitt_replay_v1/run_001/initial_soc_plus_0p005.csv.gz": "0344b48975282053cd79c70e983af0289ebb6774d7b79ebd8aea3fb49f882c89",
+    "reports/p45b_gitt_replay_v1/run_001/initial_soc_plus_0p005_pairs.csv": "c9b926f76550eb8de2a01f90d11b1ebd2915e4e00a6f3169d7cf990de32cbde7",
+    "reports/p45b_gitt_replay_v1/run_001/initial_soc_plus_0p005_segments.csv": "e08fd3af08c127f0518ccff525797b8461dbf22b4c814e75e82ef0b52f57b664",
+    "reports/p45b_gitt_replay_v1/run_001/linear_current_sensitivity.csv.gz": "e33983d8b7a730302489126d5c907da29d273676de47510417ad1106fb901321",
+    "reports/p45b_gitt_replay_v1/run_001/linear_current_sensitivity_pairs.csv": "4afe4464b69a599f4353f8886a6e2d50d1b755935a865028fa3263074153937e",
+    "reports/p45b_gitt_replay_v1/run_001/linear_current_sensitivity_segments.csv": "f5c5449d4809940508f678024f25536dc94b08626b89af9a945641f88b53c782",
+    "reports/p45b_gitt_replay_v1/run_001/manifest.json": "42991b17d269b19936198c9f4c1c03e4f93c5e4c16b7e8b921a819db1e887e9a",
+    "reports/p45b_gitt_replay_v1/run_001/pair_diagnostics.png": "b8ae71d14ccf4300d0d4f0db19f4f2c161e2363378507c3d69cd4dd5b7340d08",
+    "reports/p45b_gitt_replay_v1/run_001/primary.csv.gz": "2f97ce8b7e3c8615a74a2ddc40ba5440f9d4ecbe0087e88c98b01ecdfc5a605b",
+    "reports/p45b_gitt_replay_v1/run_001/primary_pairs.csv": "ee3c4ff4347c8c62daedd47f37ca3b02ea150d980d93ae6f4c8a533f0debc99e",
+    "reports/p45b_gitt_replay_v1/run_001/primary_segments.csv": "88d10645959f12637feb05270417fad1f995f1f65a4350d7b1a2872f6fcb5a9b",
+    "reports/p45b_gitt_replay_v1/run_001/selected_sequences.png": "acbe59d62a744ae6f80d426d87a58f22cc77f4ad007e286449a09cd8a4e518eb",
+    "reports/p45b_gitt_replay_v1/run_001/summary.json": "c1562a72682127aeaf9ba3f271e2a868662438cefffb5a6bd5314aceb51215ec",
+    "scripts/ae_p45b_gitt_replay.py": "c9173e7da9966038d28d01530b0f08ac9607236f35f63919c8f35a8a6e24908f",
+    "scripts/verify_p45b_gitt_replay.py": "46c1be7be34b504527919a3ec374a613cad856ab142b2922f099cfdbce35cc02",
+    "tests/test_ae_p45b_gitt_replay.py": "2e792ac4ce463ce52fd3f2c508978b46ace4a190d0a3f929cf063d218912fca6"
+  }
+}

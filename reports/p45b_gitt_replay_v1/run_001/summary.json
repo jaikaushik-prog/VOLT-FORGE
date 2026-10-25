@@ -1,0 +1,1214 @@
+{
+  "schema_version": "voltforge.ae_p45b_gitt_replay/1",
+  "source_lock": {
+    "schema_version": "voltforge.ae_p45b_gitt_replay_allocation/1",
+    "procedure_commit": "9a40595",
+    "saved_samples": "reports/p45b_low_soc_v1/run_001/gitt_samples.csv",
+    "saved_segments": "reports/p45b_low_soc_v1/run_001/gitt_segments.csv",
+    "saved_pairs": "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv",
+    "frozen_files": {
+      "reports/p45b_gitt_replay_v1/PROCEDURE.md": "f07716c324d763b09f9ccd770d668731e91f71aeeb166df824f592ecae78dc70",
+      "reports/p45b_low_soc_v1/verification.json": "30eb8f6044f9172e831b159b9c3091de0781fc4663bac75a15f25fcab9e5a627",
+      "reports/p45b_low_soc_v1/run_001/manifest.json": "04c202328da98432bc50cbdada212a6f53c661b1a38d578ba74bde918122371f",
+      "reports/p45b_low_soc_v1/run_001/gitt_samples.csv": "7a2306a4746afc30bd138d9113e1f91555debf6a1ef1b2a9fdc063ea576e2ea6",
+      "reports/p45b_low_soc_v1/run_001/gitt_segments.csv": "84ab839b717285efc939c92c785687bf8e9b0da5e66026f535b3162abe84083d",
+      "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv": "7fb7e3ba700918e44f3b37e96ffcef975dbbd771d3652e76333951bed350293d",
+      "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
+      "scripts/ae_p45b_equations.py": "1bee15332127bfe86446d600b2af5d814e103380bb76f972748a12220500c40b",
+      "scripts/ae_p45b_low_soc.py": "42129b98769e6a4e2c3c5e1b764ed4aa7fd3688c7eda03ea5579e3b8e957a936",
+      "Molicel_INR-21700-P45B_ECM.csv": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e"
+    },
+    "new_measurement_families": 0,
+    "remaining_unopened_members": 48,
+    "remaining_unopened_filename_families": 40,
+    "validation_workbook_access": "protected_unopened",
+    "charge_optimized_table_access": "protected_unopened"
+  },
+  "runs": {
+    "primary": {
+      "configuration": {
+        "max_step_s": 0.25,
+        "current_mode": "left",
+        "reference_policy": "stop",
+        "initial_soc": 1.0,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25,
+        "initial_soc_offset": 0.0,
+        "evidence_role": "frozen-model development replay"
+      },
+      "stopped": null,
+      "coverage": {
+        "rows": 98426,
+        "predicted_rows": 98426,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "already-used complete GITT development record; no fresh assessment",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 29.883582946503992,
+        "sample_bias_mV": 0.8515289602892738,
+        "max_abs_error_mV": 333.3674920539833,
+        "time_rmse_mV": 22.190069927698918,
+        "time_bias_mV": -3.29818534861734
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 83546,
+        "covered_duration_s": 55654.049000000006,
+        "sample_rmse_mV": 18.24103695321968,
+        "sample_bias_mV": -4.1303336629677805,
+        "max_abs_error_mV": 332.71118772682894,
+        "time_rmse_mV": 15.53976221953448,
+        "time_bias_mV": -7.438050003147804
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 83548,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "0-0.2": {
+            "samples": 36013,
+            "covered_duration_s": 27831.59999999999,
+            "sample_rmse_mV": 48.75656672979708,
+            "sample_bias_mV": 4.469811376663489,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 34.10851691434018,
+            "time_bias_mV": -3.8101600968264875
+          },
+          "0.2-0.8": {
+            "samples": 38235,
+            "covered_duration_s": 23762.154,
+            "sample_rmse_mV": 6.9935923340405415,
+            "sample_bias_mV": -0.6513441886380875,
+            "max_abs_error_mV": 22.535000620328205,
+            "time_rmse_mV": 6.8396902171214045,
+            "time_bias_mV": -2.842595231478566
+          },
+          "0.8-1": {
+            "samples": 24178,
+            "covered_duration_s": 16921.526,
+            "sample_rmse_mV": 4.1526374289228905,
+            "sample_bias_mV": -2.1612450413505195,
+            "max_abs_error_mV": 14.84804563826092,
+            "time_rmse_mV": 3.8154086484572693,
+            "time_bias_mV": -3.0959810702718897
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 18618,
+            "covered_duration_s": 3705.112000000012,
+            "sample_rmse_mV": 55.32288322035298,
+            "sample_bias_mV": 19.5629572186609,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 55.20439134476189,
+            "time_bias_mV": 19.55663021855499
+          },
+          "rest": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 19.681511049726907,
+            "sample_bias_mV": -3.513564405217478,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 18.599243261529896,
+            "time_bias_mV": -4.606563769762298
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 19.681511049726907,
+            "sample_bias_mV": -3.513564405217478,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 18.599243261529896,
+            "time_bias_mV": -4.606563769762298
+          },
+          "0.5-3 A": {
+            "samples": 1308,
+            "covered_duration_s": 260.7740000000049,
+            "sample_rmse_mV": 178.10483376639303,
+            "sample_bias_mV": 162.349595197193,
+            "max_abs_error_mV": 289.8693973551714,
+            "time_rmse_mV": 177.89945994441757,
+            "time_bias_mV": 162.22838813532138
+          },
+          "3-5 A": {
+            "samples": 17280,
+            "covered_duration_s": 3438.3999999999896,
+            "sample_rmse_mV": 29.933364017497862,
+            "sample_bias_mV": 8.80820131452099,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 29.720249409124097,
+            "time_bias_mV": 8.783646089863012
+          },
+          ">5 A": {
+            "samples": 30,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 16.49122925348704,
+            "sample_bias_mV": -11.19505786074928,
+            "max_abs_error_mV": 41.749772922485384,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 3285,
+            "covered_duration_s": 645.3460000000216,
+            "sample_rmse_mV": 32.637921406120306,
+            "sample_bias_mV": 4.2933346350040065,
+            "max_abs_error_mV": 290.09453797061144,
+            "time_rmse_mV": 38.02682808794869,
+            "time_bias_mV": 6.406745573171087
+          },
+          "10-60 s": {
+            "samples": 15802,
+            "covered_duration_s": 3186.4710000000373,
+            "sample_rmse_mV": 41.04154371821798,
+            "sample_bias_mV": 11.604992195292938,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 43.91838742737446,
+            "time_bias_mV": 13.271746360449788
+          },
+          ">60 s": {
+            "samples": 79339,
+            "covered_duration_s": 64653.34400000001,
+            "sample_rmse_mV": 26.98664133106091,
+            "sample_bias_mV": -1.4327518811754008,
+            "max_abs_error_mV": 289.8693973551714,
+            "time_rmse_mV": 20.266386940376275,
+            "time_bias_mV": -4.2225211210539895
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 98426,
+            "covered_duration_s": 68515.68,
+            "sample_rmse_mV": 29.883582946503992,
+            "sample_bias_mV": 0.8515289602892738,
+            "max_abs_error_mV": 333.3674920539833,
+            "time_rmse_mV": 22.190069927698918,
+            "time_bias_mV": -3.29818534861734
+          }
+        }
+      },
+      "requirement_status": "requirement not configured",
+      "conditional_memory_bounds": {
+        "max_tau1_s": 4.5873905354198765,
+        "max_tau2_s": 80.64401946476097,
+        "min_gamma": 46.4235066696758,
+        "interpretation": "fixed SOC/current history only; not real-error or initial-SOC bounds"
+      },
+      "rest_windows": {
+        "0-1 s": {
+          "samples": 218,
+          "covered_duration_s": 31.211000000003878,
+          "sample_rmse_mV": 66.35140465482795,
+          "sample_bias_mV": 16.021902446857727,
+          "max_abs_error_mV": 290.09453797061144,
+          "time_rmse_mV": 69.85298870414334,
+          "time_bias_mV": 18.687534703958075
+        },
+        "1-10 s": {
+          "samples": 1407,
+          "covered_duration_s": 281.39600000001224,
+          "sample_rmse_mV": 40.09795242375454,
+          "sample_bias_mV": 7.685781088356561,
+          "max_abs_error_mV": 205.13188932065108,
+          "time_rmse_mV": 48.743983411335826,
+          "time_bias_mV": 11.73891298648852
+        },
+        "10-60 s": {
+          "samples": 7800,
+          "covered_duration_s": 1592.798000000011,
+          "sample_rmse_mV": 27.44896684663578,
+          "sample_bias_mV": 2.1759674659417567,
+          "max_abs_error_mV": 178.46832532957936,
+          "time_rmse_mV": 35.90843072642602,
+          "time_bias_mV": 5.792032742978491
+        },
+        "60-600 s": {
+          "samples": 24749,
+          "covered_duration_s": 17270.008000000013,
+          "sample_rmse_mV": 19.980681896324572,
+          "sample_bias_mV": -0.2656569763266471,
+          "max_abs_error_mV": 132.14517029501715,
+          "time_rmse_mV": 20.83599564384789,
+          "time_bias_mV": -0.4362862429507603
+        },
+        ">600 s": {
+          "samples": 45634,
+          "covered_duration_s": 45578.037999999964,
+          "sample_rmse_mV": 16.17227437774445,
+          "sample_bias_mV": -6.686133551815901,
+          "max_abs_error_mV": 63.44098112084673,
+          "time_rmse_mV": 16.17167154782339,
+          "time_bias_mV": -6.682816538164953
+        }
+      },
+      "max_voltage_decomposition_closure_mV": 0.0
+    },
+    "fine_step": {
+      "configuration": {
+        "max_step_s": 0.0625,
+        "current_mode": "left",
+        "reference_policy": "stop",
+        "initial_soc": 1.0,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25,
+        "initial_soc_offset": 0.0,
+        "evidence_role": "frozen-model development replay"
+      },
+      "stopped": null,
+      "coverage": {
+        "rows": 98426,
+        "predicted_rows": 98426,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "already-used complete GITT development record; no fresh assessment",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 29.883700682941978,
+        "sample_bias_mV": 0.8512923771422246,
+        "max_abs_error_mV": 333.3674920540108,
+        "time_rmse_mV": 22.190118101122668,
+        "time_bias_mV": -3.298256311059551
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 83546,
+        "covered_duration_s": 55654.049000000006,
+        "sample_rmse_mV": 18.241264188802194,
+        "sample_bias_mV": -4.130612382876239,
+        "max_abs_error_mV": 332.71118772685605,
+        "time_rmse_mV": 15.539846906049112,
+        "time_bias_mV": -7.438137364995397
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 83548,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "0-0.2": {
+            "samples": 36013,
+            "covered_duration_s": 27831.59999999999,
+            "sample_rmse_mV": 48.75677453531294,
+            "sample_bias_mV": 4.469260304268204,
+            "max_abs_error_mV": 333.3674920540108,
+            "time_rmse_mV": 34.10859781719143,
+            "time_bias_mV": -3.8103037084114018
+          },
+          "0.2-0.8": {
+            "samples": 38235,
+            "covered_duration_s": 23762.154,
+            "sample_rmse_mV": 6.993481936057851,
+            "sample_bias_mV": -0.6513671657990193,
+            "max_abs_error_mV": 22.53500062035263,
+            "time_rmse_mV": 6.839653241355721,
+            "time_bias_mV": -2.8426044866978697
+          },
+          "0.8-1": {
+            "samples": 24178,
+            "covered_duration_s": 16921.526,
+            "sample_rmse_mV": 4.152746401831054,
+            "sample_bias_mV": -2.161350990184662,
+            "max_abs_error_mV": 14.847109592938779,
+            "time_rmse_mV": 3.8154466803070846,
+            "time_bias_mV": -3.096019198309439
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 18618,
+            "covered_duration_s": 3705.112000000012,
+            "sample_rmse_mV": 55.32285740877217,
+            "sample_bias_mV": 19.562158648016933,
+            "max_abs_error_mV": 333.3674920540108,
+            "time_rmse_mV": 55.20436106398566,
+            "time_bias_mV": 19.555833701329522
+          },
+          "rest": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 19.681748443967972,
+            "sample_bias_mV": -3.5136698851766566,
+            "max_abs_error_mV": 290.09453797063856,
+            "time_rmse_mV": 18.599309001395994,
+            "time_bias_mV": -4.606593178637227
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 19.681748443967972,
+            "sample_bias_mV": -3.5136698851766566,
+            "max_abs_error_mV": 290.09453797063856,
+            "time_rmse_mV": 18.599309001395994,
+            "time_bias_mV": -4.606593178637227
+          },
+          "0.5-3 A": {
+            "samples": 1308,
+            "covered_duration_s": 260.7740000000049,
+            "sample_rmse_mV": 178.10483376643134,
+            "sample_bias_mV": 162.34959519723395,
+            "max_abs_error_mV": 289.869397355214,
+            "time_rmse_mV": 177.89945994445594,
+            "time_bias_mV": 162.22838813536237
+          },
+          "3-5 A": {
+            "samples": 17280,
+            "covered_duration_s": 3438.3999999999896,
+            "sample_rmse_mV": 29.93331261862596,
+            "sample_bias_mV": 8.807340910105316,
+            "max_abs_error_mV": 333.3674920540108,
+            "time_rmse_mV": 29.720188802327517,
+            "time_bias_mV": 8.782787819065916
+          },
+          ">5 A": {
+            "samples": 30,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 16.49122925349136,
+            "sample_bias_mV": -11.195057860757199,
+            "max_abs_error_mV": 41.749772922495595,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 3285,
+            "covered_duration_s": 645.3460000000216,
+            "sample_rmse_mV": 32.638626869097955,
+            "sample_bias_mV": 4.292547404092999,
+            "max_abs_error_mV": 290.09453797063856,
+            "time_rmse_mV": 38.02741830299937,
+            "time_bias_mV": 6.405973734088239
+          },
+          "10-60 s": {
+            "samples": 15802,
+            "covered_duration_s": 3186.4710000000373,
+            "sample_rmse_mV": 41.04171323161875,
+            "sample_bias_mV": 11.603956973724404,
+            "max_abs_error_mV": 333.3674920540108,
+            "time_rmse_mV": 43.91854293322334,
+            "time_bias_mV": 13.27072338651159
+          },
+          ">60 s": {
+            "samples": 79339,
+            "covered_duration_s": 64653.34400000001,
+            "sample_rmse_mV": 26.98671639904985,
+            "sample_bias_mV": -1.4328065996374797,
+            "max_abs_error_mV": 289.869397355214,
+            "time_rmse_mV": 20.266414678539427,
+            "time_bias_mV": -4.22253775394762
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 98426,
+            "covered_duration_s": 68515.68,
+            "sample_rmse_mV": 29.883700682941978,
+            "sample_bias_mV": 0.8512923771422246,
+            "max_abs_error_mV": 333.3674920540108,
+            "time_rmse_mV": 22.190118101122668,
+            "time_bias_mV": -3.298256311059551
+          }
+        }
+      },
+      "requirement_status": "requirement not configured",
+      "conditional_memory_bounds": {
+        "max_tau1_s": 4.5873905354198765,
+        "max_tau2_s": 80.64401946476097,
+        "min_gamma": 46.4235066696758,
+        "interpretation": "fixed SOC/current history only; not real-error or initial-SOC bounds"
+      },
+      "rest_windows": {
+        "0-1 s": {
+          "samples": 218,
+          "covered_duration_s": 31.211000000003878,
+          "sample_rmse_mV": 66.35224781543118,
+          "sample_bias_mV": 16.020520779316143,
+          "max_abs_error_mV": 290.09453797063856,
+          "time_rmse_mV": 69.85378409137819,
+          "time_bias_mV": 18.68617357891219
+        },
+        "1-10 s": {
+          "samples": 1407,
+          "covered_duration_s": 281.39600000001224,
+          "sample_rmse_mV": 40.09921364333775,
+          "sample_bias_mV": 7.684780828414622,
+          "max_abs_error_mV": 205.13188932069858,
+          "time_rmse_mV": 48.744998032319096,
+          "time_bias_mV": 11.73793621667695
+        },
+        "10-60 s": {
+          "samples": 7800,
+          "covered_duration_s": 1592.798000000011,
+          "sample_rmse_mV": 27.44993837645519,
+          "sample_bias_mV": 2.1754227712232077,
+          "max_abs_error_mV": 178.46832532962685,
+          "time_rmse_mV": 35.90915481911526,
+          "time_bias_mV": 5.791501570231267
+        },
+        "60-600 s": {
+          "samples": 24749,
+          "covered_duration_s": 17270.008000000013,
+          "sample_rmse_mV": 19.98084675434387,
+          "sample_bias_mV": -0.26575639182541333,
+          "max_abs_error_mV": 132.14517029506467,
+          "time_rmse_mV": 20.836055267780846,
+          "time_bias_mV": -0.43632830879480067
+        },
+        ">600 s": {
+          "samples": 45634,
+          "covered_duration_s": 45578.037999999964,
+          "sample_rmse_mV": 16.17227438029181,
+          "sample_bias_mV": -6.686133563262101,
+          "max_abs_error_mV": 63.44098112089425,
+          "time_rmse_mV": 16.171671550356276,
+          "time_bias_mV": -6.682816549554159
+        }
+      },
+      "max_voltage_decomposition_closure_mV": 0.0
+    },
+    "linear_current_sensitivity": {
+      "configuration": {
+        "max_step_s": 0.25,
+        "current_mode": "linear",
+        "reference_policy": "stop",
+        "initial_soc": 1.0,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25,
+        "initial_soc_offset": 0.0,
+        "evidence_role": "frozen-model development replay"
+      },
+      "stopped": null,
+      "coverage": {
+        "rows": 98426,
+        "predicted_rows": 98426,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "already-used complete GITT development record; no fresh assessment",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 30.461397841946177,
+        "sample_bias_mV": 1.9058316697827866,
+        "max_abs_error_mV": 335.99550447426105,
+        "time_rmse_mV": 22.61348078300906,
+        "time_bias_mV": -2.085540782242836
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 83546,
+        "covered_duration_s": 55654.049000000006,
+        "sample_rmse_mV": 18.12939254351651,
+        "sample_bias_mV": -3.6509689700846315,
+        "max_abs_error_mV": 335.33918965299756,
+        "time_rmse_mV": 15.184572321273105,
+        "time_bias_mV": -6.96046228603024
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 83548,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "0-0.2": {
+            "samples": 36005,
+            "covered_duration_s": 27829.999999999993,
+            "sample_rmse_mV": 49.742924135077224,
+            "sample_bias_mV": 6.962521180982081,
+            "max_abs_error_mV": 335.99550447426105,
+            "time_rmse_mV": 34.82228446827119,
+            "time_bias_mV": -1.1357523774167804
+          },
+          "0.2-0.8": {
+            "samples": 38239,
+            "covered_duration_s": 23762.954,
+            "sample_rmse_mV": 6.916604105252829,
+            "sample_bias_mV": -0.3310836797369837,
+            "max_abs_error_mV": 21.88638521927677,
+            "time_rmse_mV": 6.653273755344981,
+            "time_bias_mV": -2.528122326039973
+          },
+          "0.8-1": {
+            "samples": 24182,
+            "covered_duration_s": 16922.326,
+            "sample_rmse_mV": 4.12041287906877,
+            "sample_bias_mV": -2.0859266546090782,
+            "max_abs_error_mV": 15.053925740179608,
+            "time_rmse_mV": 3.753718378325573,
+            "time_bias_mV": -3.0261288564623583
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 18618,
+            "covered_duration_s": 3705.112000000012,
+            "sample_rmse_mV": 56.33929002546592,
+            "sample_bias_mV": 20.25838702905165,
+            "max_abs_error_mV": 335.99550447426105,
+            "time_rmse_mV": 56.2222415971984,
+            "time_bias_mV": 20.252089062637996
+          },
+          "rest": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 20.09696138964808,
+            "sample_bias_mV": -2.375542073186185,
+            "max_abs_error_mV": 293.51702747340045,
+            "time_rmse_mV": 18.96027953273201,
+            "time_bias_mV": -3.3643368303829506
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 20.09696138964808,
+            "sample_bias_mV": -2.375542073186185,
+            "max_abs_error_mV": 293.51702747340045,
+            "time_rmse_mV": 18.96027953273201,
+            "time_bias_mV": -3.3643368303829506
+          },
+          "0.5-3 A": {
+            "samples": 1308,
+            "covered_duration_s": 260.7740000000049,
+            "sample_rmse_mV": 181.72149861965755,
+            "sample_bias_mV": 166.19424266427797,
+            "max_abs_error_mV": 293.6237450483108,
+            "time_rmse_mV": 181.51661010477196,
+            "time_bias_mV": 166.07250259111083
+          },
+          "3-5 A": {
+            "samples": 17280,
+            "covered_duration_s": 3438.3999999999896,
+            "sample_rmse_mV": 30.32842014664284,
+            "sample_bias_mV": 9.265669865489237,
+            "max_abs_error_mV": 335.99550447426105,
+            "time_rmse_mV": 30.1152993434326,
+            "time_bias_mV": 9.240644405252093
+          },
+          ">5 A": {
+            "samples": 30,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 15.936146533412646,
+            "sample_bias_mV": -10.739832454864947,
+            "max_abs_error_mV": 40.831991055613855,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 3285,
+            "covered_duration_s": 645.3460000000216,
+            "sample_rmse_mV": 33.307328412665626,
+            "sample_bias_mV": 5.060576448619558,
+            "max_abs_error_mV": 293.51702747340045,
+            "time_rmse_mV": 38.87849301956474,
+            "time_bias_mV": 7.22152576153073
+          },
+          "10-60 s": {
+            "samples": 15802,
+            "covered_duration_s": 3186.4710000000373,
+            "sample_rmse_mV": 41.87026659284187,
+            "sample_bias_mV": 12.320797186476518,
+            "max_abs_error_mV": 335.99550447426105,
+            "time_rmse_mV": 44.885634473333624,
+            "time_bias_mV": 14.038260919268266
+          },
+          ">60 s": {
+            "samples": 79339,
+            "covered_duration_s": 64653.34400000001,
+            "sample_rmse_mV": 27.495863346521652,
+            "sample_bias_mV": -0.29914471879374027,
+            "max_abs_error_mV": 293.6237450483108,
+            "time_rmse_mV": 20.63648377646964,
+            "time_bias_mV": -2.983815511472324
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 98426,
+            "covered_duration_s": 68515.68,
+            "sample_rmse_mV": 30.461397841946177,
+            "sample_bias_mV": 1.9058316697827866,
+            "max_abs_error_mV": 335.99550447426105,
+            "time_rmse_mV": 22.61348078300906,
+            "time_bias_mV": -2.085540782242836
+          }
+        }
+      },
+      "requirement_status": "requirement not configured",
+      "conditional_memory_bounds": {
+        "max_tau1_s": 4.5873905354198765,
+        "max_tau2_s": 80.64401946476097,
+        "min_gamma": 46.4235066696758,
+        "interpretation": "fixed SOC/current history only; not real-error or initial-SOC bounds"
+      },
+      "rest_windows": {
+        "0-1 s": {
+          "samples": 218,
+          "covered_duration_s": 31.211000000003878,
+          "sample_rmse_mV": 67.42435190111995,
+          "sample_bias_mV": 17.03421391370647,
+          "max_abs_error_mV": 293.51702747340045,
+          "time_rmse_mV": 71.09988866862128,
+          "time_bias_mV": 19.775135837661715
+        },
+        "1-10 s": {
+          "samples": 1407,
+          "covered_duration_s": 281.39600000001224,
+          "sample_rmse_mV": 40.96557549807168,
+          "sample_bias_mV": 8.504283399894579,
+          "max_abs_error_mV": 210.1136831248751,
+          "time_rmse_mV": 49.867955467963924,
+          "time_bias_mV": 12.64767457876094
+        },
+        "10-60 s": {
+          "samples": 7800,
+          "covered_duration_s": 1592.798000000011,
+          "sample_rmse_mV": 28.178296900900257,
+          "sample_bias_mV": 2.8875518212748728,
+          "max_abs_error_mV": 183.35444539889733,
+          "time_rmse_mV": 36.95091561807469,
+          "time_bias_mV": 6.605548511020389
+        },
+        "60-600 s": {
+          "samples": 24749,
+          "covered_duration_s": 17270.008000000013,
+          "sample_rmse_mV": 20.70733810931715,
+          "sample_bias_mV": 0.4867696492479922,
+          "max_abs_error_mV": 137.01416330781234,
+          "time_rmse_mV": 21.618029510120298,
+          "time_bias_mV": 0.3527896185673617
+        },
+        ">600 s": {
+          "samples": 45634,
+          "covered_duration_s": 45578.037999999964,
+          "sample_rmse_mV": 16.267166046230596,
+          "sample_bias_mV": -5.255647399063534,
+          "max_abs_error_mV": 68.30640719539005,
+          "time_rmse_mV": 16.267088329183647,
+          "time_bias_mV": -5.25147112684592
+        }
+      },
+      "max_voltage_decomposition_closure_mV": 0.0
+    },
+    "initial_soc_minus_0p005": {
+      "configuration": {
+        "max_step_s": 0.25,
+        "current_mode": "left",
+        "reference_policy": "stop",
+        "initial_soc": 0.995,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25,
+        "initial_soc_offset": -0.005,
+        "evidence_role": "sensitivity scenario"
+      },
+      "stopped": null,
+      "coverage": {
+        "rows": 98426,
+        "predicted_rows": 98426,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "already-used complete GITT development record; no fresh assessment",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 98426,
+        "covered_duration_s": 68515.68,
+        "sample_rmse_mV": 30.55679873404047,
+        "sample_bias_mV": -11.20624023414647,
+        "max_abs_error_mV": 308.32671562268075,
+        "time_rmse_mV": 27.978144300708387,
+        "time_bias_mV": -16.885004386576853
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 83546,
+        "covered_duration_s": 55654.049000000006,
+        "sample_rmse_mV": 21.24712511667195,
+        "sample_bias_mV": -10.82232128402738,
+        "max_abs_error_mV": 307.6777512916271,
+        "time_rmse_mV": 20.85797130142354,
+        "time_bias_mV": -14.107949760710506
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 83548,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "0-0.2": {
+            "samples": 36103,
+            "covered_duration_s": 27849.59999999999,
+            "sample_rmse_mV": 49.172142976048264,
+            "sample_bias_mV": -20.28398428417353,
+            "max_abs_error_mV": 308.32671562268075,
+            "time_rmse_mV": 42.39525237532635,
+            "time_bias_mV": -30.49395039580302
+          },
+          "0.2-0.8": {
+            "samples": 38235,
+            "covered_duration_s": 23762.154000000002,
+            "sample_rmse_mV": 9.475605988205922,
+            "sample_bias_mV": -5.857839047462376,
+            "max_abs_error_mV": 30.80865101785335,
+            "time_rmse_mV": 10.582530918085958,
+            "time_bias_mV": -8.033441074411867
+          },
+          "0.8-1": {
+            "samples": 24088,
+            "covered_duration_s": 16903.526,
+            "sample_rmse_mV": 6.986256645555951,
+            "sample_bias_mV": -6.090096342363812,
+            "max_abs_error_mV": 16.832884224537104,
+            "time_rmse_mV": 7.359548603317236,
+            "time_bias_mV": -6.906754060150857
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 18618,
+            "covered_duration_s": 3705.112000000012,
+            "sample_rmse_mV": 46.106447269333096,
+            "sample_bias_mV": 10.777255154575718,
+            "max_abs_error_mV": 308.32671562268075,
+            "time_rmse_mV": 45.9734216471281,
+            "time_bias_mV": 10.771664004433305
+          },
+          "rest": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 25.60512021295806,
+            "sample_bias_mV": -16.33465739968413,
+            "max_abs_error_mV": 264.9331326699063,
+            "time_rmse_mV": 26.5784796012591,
+            "time_bias_mV": -18.468114942906162
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 79808,
+            "covered_duration_s": 64807.05899999998,
+            "sample_rmse_mV": 25.60512021295806,
+            "sample_bias_mV": -16.33465739968413,
+            "max_abs_error_mV": 264.9331326699063,
+            "time_rmse_mV": 26.5784796012591,
+            "time_bias_mV": -18.468114942906162
+          },
+          "0.5-3 A": {
+            "samples": 1308,
+            "covered_duration_s": 260.7740000000049,
+            "sample_rmse_mV": 144.3249597736881,
+            "sample_bias_mV": 125.93226925503792,
+            "max_abs_error_mV": 253.5806992799161,
+            "time_rmse_mV": 144.11849247930004,
+            "time_bias_mV": 125.82043514673352
+          },
+          "3-5 A": {
+            "samples": 17280,
+            "covered_duration_s": 3438.3999999999896,
+            "sample_rmse_mV": 26.69746495219448,
+            "sample_bias_mV": 2.11098290026646,
+            "max_abs_error_mV": 308.32671562268075,
+            "time_rmse_mV": 26.485941703163192,
+            "time_bias_mV": 2.090604453290618
+          },
+          ">5 A": {
+            "samples": 30,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": 23.514495108840567,
+            "sample_bias_mV": -18.208541143445213,
+            "max_abs_error_mV": 52.40263068741547,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 3285,
+            "covered_duration_s": 645.3460000000216,
+            "sample_rmse_mV": 28.63401670494102,
+            "sample_bias_mV": -4.41229161072142,
+            "max_abs_error_mV": 264.9331326699063,
+            "time_rmse_mV": 31.859832842594546,
+            "time_bias_mV": -2.770209120154743
+          },
+          "10-60 s": {
+            "samples": 15802,
+            "covered_duration_s": 3186.4710000000373,
+            "sample_rmse_mV": 34.34908376300888,
+            "sample_bias_mV": 2.7707043667402713,
+            "max_abs_error_mV": 308.32671562268075,
+            "time_rmse_mV": 35.801711002282566,
+            "time_bias_mV": 3.9489166826988726
+          },
+          ">60 s": {
+            "samples": 79339,
+            "covered_duration_s": 64653.34400000001,
+            "sample_rmse_mV": 29.822911776023968,
+            "sample_bias_mV": -14.271338102926812,
+            "max_abs_error_mV": 253.5806992799161,
+            "time_rmse_mV": 27.482010047260925,
+            "time_bias_mV": -18.06456866801279
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 98426,
+            "covered_duration_s": 68515.68,
+            "sample_rmse_mV": 30.55679873404047,
+            "sample_bias_mV": -11.20624023414647,
+            "max_abs_error_mV": 308.32671562268075,
+            "time_rmse_mV": 27.978144300708387,
+            "time_bias_mV": -16.885004386576853
+          }
+        }
+      },
+      "requirement_status": "requirement not configured",
+      "conditional_memory_bounds": {
+        "max_tau1_s": 4.5873905354198765,
+        "max_tau2_s": 80.64401946476097,
+        "min_gamma": 46.4235066696758,
+        "interpretation": "fixed SOC/current history only; not real-error or initial-SOC bounds"
+      },
+      "rest_windows": {
+        "0-1 s": {
+          "samples": 218,
+          "covered_duration_s": 31.211000000003878,
+          "sample_rmse_mV": 58.088049876563424,
+          "sample_bias_mV": 6.85037326772258,
+          "max_abs_error_mV": 264.9331326699063,
+          "time_rmse_mV": 59.68542801859739,
+          "time_bias_mV": 8.87735140748703
+        },
+        "1-10 s": {
+          "samples": 1407,
+          "covered_duration_s": 281.39600000001224,
+          "sample_rmse_mV": 33.51045415862711,
+          "sample_bias_mV": -1.0359834356467676,
+          "max_abs_error_mV": 157.22989480557814,
+          "time_rmse_mV": 39.26922052961681,
+          "time_bias_mV": 2.1282359823431385
+        },
+        "10-60 s": {
+          "samples": 7800,
+          "covered_duration_s": 1592.798000000011,
+          "sample_rmse_mV": 22.884897735555416,
+          "sample_bias_mV": -6.437404528881652,
+          "max_abs_error_mV": 129.62901543841943,
+          "time_rmse_mV": 27.65812710611857,
+          "time_bias_mV": -3.8072436371220433
+        },
+        "60-600 s": {
+          "samples": 24749,
+          "covered_duration_s": 17270.008000000013,
+          "sample_rmse_mV": 17.57779540642588,
+          "sample_bias_mV": -9.38628023958556,
+          "max_abs_error_mV": 83.30586040385724,
+          "time_rmse_mV": 18.15777141124354,
+          "time_bias_mV": -9.925292125880443
+        },
+        ">600 s": {
+          "samples": 45634,
+          "covered_duration_s": 45578.037999999964,
+          "sample_rmse_mV": 28.96151482318308,
+          "sample_bias_mV": -22.3771592553276,
+          "max_abs_error_mV": 68.43873190232452,
+          "time_rmse_mV": 28.966937772305776,
+          "time_bias_mV": -22.382133142182795
+        }
+      },
+      "max_voltage_decomposition_closure_mV": 0.0
+    },
+    "initial_soc_plus_0p005": {
+      "configuration": {
+        "max_step_s": 0.25,
+        "current_mode": "left",
+        "reference_policy": "stop",
+        "initial_soc": 1.005,
+        "initial_hysteresis": -1,
+        "initial_v1_V": 0,
+        "initial_v2_V": 0,
+        "capacity_Ah": 4.5,
+        "temperature_degC": 25,
+        "initial_soc_offset": 0.005,
+        "evidence_role": "sensitivity scenario"
+      },
+      "stopped": {
+        "reason": "SOC 1.005 outside reference [-0.00579559, 1]",
+        "source_line": 2
+      },
+      "coverage": {
+        "rows": 98426,
+        "predicted_rows": 0,
+        "extended_reference_rows": 0,
+        "extension_affected_state_rows": 0,
+        "recorded_temperature_deviation_rows": 0,
+        "initial_conditions": "author reproduction assumptions; not measured or fitted here",
+        "waveform_scope": "already-used complete GITT development record; no fresh assessment",
+        "experimental_module_validation": "awaiting suitable measurements"
+      },
+      "full_available_interval": {
+        "samples": 0,
+        "covered_duration_s": 0.0,
+        "sample_rmse_mV": null,
+        "sample_bias_mV": null,
+        "max_abs_error_mV": null,
+        "time_rmse_mV": null,
+        "time_bias_mV": null
+      },
+      "common_pre_protocol_cutoff": {
+        "samples": 0,
+        "covered_duration_s": 0.0,
+        "sample_rmse_mV": null,
+        "sample_bias_mV": null,
+        "max_abs_error_mV": null,
+        "time_rmse_mV": null,
+        "time_bias_mV": null
+      },
+      "protocol_cutoff_V": 2.5,
+      "protocol_cutoff_is_application_requirement": false,
+      "measured_cutoff_source_line": 83548,
+      "predicted_cutoff_source_line": null,
+      "by_group": {
+        "soc_region": {
+          "unpredicted": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "direction": {
+          "discharge": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          },
+          "rest": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "current_range": {
+          "0-0.5 A": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          },
+          "0.5-3 A": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          },
+          "3-5 A": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          },
+          ">5 A": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "transition_region": {
+          "0-10 s": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          },
+          "10-60 s": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          },
+          ">60 s": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        },
+        "temperature_evidence": {
+          "within 1.5 degC of nominal": {
+            "samples": 0,
+            "covered_duration_s": 0.0,
+            "sample_rmse_mV": null,
+            "sample_bias_mV": null,
+            "max_abs_error_mV": null,
+            "time_rmse_mV": null,
+            "time_bias_mV": null
+          }
+        }
+      },
+      "requirement_status": "requirement not configured",
+      "conditional_memory_bounds": {
+        "max_tau1_s": 4.5873905354198765,
+        "max_tau2_s": 80.64401946476097,
+        "min_gamma": 46.4235066696758,
+        "interpretation": "fixed SOC/current history only; not real-error or initial-SOC bounds"
+      },
+      "rest_windows": {
+        "0-1 s": {
+          "samples": 0,
+          "covered_duration_s": 0.0,
+          "sample_rmse_mV": null,
+          "sample_bias_mV": null,
+          "max_abs_error_mV": null,
+          "time_rmse_mV": null,
+          "time_bias_mV": null
+        },
+        "1-10 s": {
+          "samples": 0,
+          "covered_duration_s": 0.0,
+          "sample_rmse_mV": null,
+          "sample_bias_mV": null,
+          "max_abs_error_mV": null,
+          "time_rmse_mV": null,
+          "time_bias_mV": null
+        },
+        "10-60 s": {
+          "samples": 0,
+          "covered_duration_s": 0.0,
+          "sample_rmse_mV": null,
+          "sample_bias_mV": null,
+          "max_abs_error_mV": null,
+          "time_rmse_mV": null,
+          "time_bias_mV": null
+        },
+        "60-600 s": {
+          "samples": 0,
+          "covered_duration_s": 0.0,
+          "sample_rmse_mV": null,
+          "sample_bias_mV": null,
+          "max_abs_error_mV": null,
+          "time_rmse_mV": null,
+          "time_bias_mV": null
+        },
+        ">600 s": {
+          "samples": 0,
+          "covered_duration_s": 0.0,
+          "sample_rmse_mV": null,
+          "sample_bias_mV": null,
+          "max_abs_error_mV": null,
+          "time_rmse_mV": null,
+          "time_bias_mV": null
+        }
+      },
+      "max_voltage_decomposition_closure_mV": null
+    }
+  },
+  "differences_from_primary": {
+    "fine_step": {
+      "common_samples": 98426,
+      "max_abs_voltage_difference_mV": 0.03961121992590577,
+      "rmse_voltage_difference_mV": 0.0031052628828531106
+    },
+    "linear_current_sensitivity": {
+      "common_samples": 98426,
+      "max_abs_voltage_difference_mV": 5.049079074329388,
+      "rmse_voltage_difference_mV": 1.8126562044053804
+    },
+    "initial_soc_minus_0p005": {
+      "common_samples": 98426,
+      "max_abs_voltage_difference_mV": 48.83930989115992,
+      "rmse_voltage_difference_mV": 18.276086529015725
+    },
+    "initial_soc_plus_0p005": {
+      "common_samples": 0,
+      "max_abs_voltage_difference_mV": null,
+      "rmse_voltage_difference_mV": null
+    }
+  },
+  "numerical_convergence": {
+    "criterion_mV": 0.1,
+    "criterion_met": true,
+    "criterion_role": "proposed numerical check only"
+  },
+  "measurement_families_newly_opened": 0,
+  "remaining_unopened_members": 48,
+  "fitted_parameters_changed": false,
+  "initial_states_fitted": false,
+  "fresh_independent_assessment": false,
+  "requirement_status": "requirement not configured",
+  "experimental_module_validation": "awaiting suitable measurements",
+  "implementation_sha256": {
+    "scripts/ae_p45b_gitt_replay.py": "c9173e7da9966038d28d01530b0f08ac9607236f35f63919c8f35a8a6e24908f",
+    "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
+    "scripts/ae_p45b_equations.py": "1bee15332127bfe86446d600b2af5d814e103380bb76f972748a12220500c40b",
+    "scripts/ae_p45b_low_soc.py": "42129b98769e6a4e2c3c5e1b764ed4aa7fd3688c7eda03ea5579e3b8e957a936"
+  }
+}

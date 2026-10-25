@@ -71,9 +71,17 @@ reference closely matches C/30 loaded voltage. Near 4% nominal SOC, GITT voltage
 recovers about 461 mV after unloading, while the table's steady-current drop
 scale is about 128 mV. That scale is not a transient prediction, and finite-rest
 voltage is not established equilibrium OCV. No model revision was adopted.
-All **86 focused tests** pass; **48 other measurement files** and the validation
-workbook remain protected. The next step is a declared full-sequence GITT replay
-through the frozen model before considering a change to its low-charge response.
+That stage passed 86 focused tests without adopting a model revision.
+
+The [complete frozen-model GITT replay](reports/p45b_gitt_replay_v1/DECISION.md)
+now reports 29.88 mV sample RMSE, 22.19 mV time RMSE and 333.37 mV maximum error.
+Near empty, full transient simulation predicts about 114 mV recovery versus
+461 mV measured. The discrepancy persists under declared numerical, current
+sampling and supported starting-SOC sensitivities. All **99 focused tests** pass;
+**48 other measurement files** and the validation workbook remain protected.
+No new model was adopted. The next step is a bounded investigation of whether
+existing low-SOC parameters can identify both pulse and relaxation behavior.
+This remains cell-model development, with experimental module validation pending.
 
 ## First product workflow and frontend handoff
 
