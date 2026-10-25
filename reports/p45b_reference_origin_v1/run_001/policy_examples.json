@@ -1,0 +1,202 @@
+{
+  "co30": {
+    "request": {
+      "mode": "author_reproduction",
+      "record_id": "already_opened_25degC_co30",
+      "temperature_degC": 25,
+      "protocol": "discharge"
+    },
+    "response": {
+      "schema_version": "voltforge.p45b_initial_state_policy/1",
+      "mode": "author_reproduction",
+      "evidence_verified": false,
+      "experimental_accuracy_established": false,
+      "reference_kind": "published loaded C/30 pOCV",
+      "reference_equilibrium_verified": false,
+      "warning": "Loaded C/30 reference; finite rests are not verified equilibrium OCV. No module validation.",
+      "initial_state": {
+        "soc": 1.0,
+        "hysteresis": -1.0,
+        "polarization_V": [
+          0.0,
+          0.0
+        ]
+      },
+      "runnable": true,
+      "missing_evidence": [
+        "record-specific preparation trace and cell identity",
+        "independent charge-origin verification",
+        "equilibrium reference compatibility"
+      ],
+      "status": "conditional_author_reproduction",
+      "state_basis": "documented author simulation assumptions; NOT measured initial state",
+      "source": "SSRN 6861858, PDF pp.9,53",
+      "record_id": "already_opened_25degC_co30"
+    },
+    "evidence": "real record classification; no invented preparation metadata"
+  },
+  "gitt": {
+    "request": {
+      "mode": "author_reproduction",
+      "record_id": "already_opened_25degC_gitt",
+      "temperature_degC": 25,
+      "protocol": "discharge"
+    },
+    "response": {
+      "schema_version": "voltforge.p45b_initial_state_policy/1",
+      "mode": "author_reproduction",
+      "evidence_verified": false,
+      "experimental_accuracy_established": false,
+      "reference_kind": "published loaded C/30 pOCV",
+      "reference_equilibrium_verified": false,
+      "warning": "Loaded C/30 reference; finite rests are not verified equilibrium OCV. No module validation.",
+      "initial_state": {
+        "soc": 1.0,
+        "hysteresis": -1.0,
+        "polarization_V": [
+          0.0,
+          0.0
+        ]
+      },
+      "runnable": true,
+      "missing_evidence": [
+        "record-specific preparation trace and cell identity",
+        "independent charge-origin verification",
+        "equilibrium reference compatibility"
+      ],
+      "status": "conditional_author_reproduction",
+      "state_basis": "documented author simulation assumptions; NOT measured initial state",
+      "source": "SSRN 6861858, PDF pp.9,53",
+      "record_id": "already_opened_25degC_gitt"
+    },
+    "evidence": "real record classification; no invented preparation metadata"
+  },
+  "oneC": {
+    "request": {
+      "mode": "author_reproduction",
+      "record_id": "already_opened_25degC_oneC",
+      "temperature_degC": 25,
+      "protocol": "discharge"
+    },
+    "response": {
+      "schema_version": "voltforge.p45b_initial_state_policy/1",
+      "mode": "author_reproduction",
+      "evidence_verified": false,
+      "experimental_accuracy_established": false,
+      "reference_kind": "published loaded C/30 pOCV",
+      "reference_equilibrium_verified": false,
+      "warning": "Loaded C/30 reference; finite rests are not verified equilibrium OCV. No module validation.",
+      "initial_state": {
+        "soc": 1.0,
+        "hysteresis": -1.0,
+        "polarization_V": [
+          0.0,
+          0.0
+        ]
+      },
+      "runnable": true,
+      "missing_evidence": [
+        "record-specific preparation trace and cell identity",
+        "independent charge-origin verification",
+        "equilibrium reference compatibility"
+      ],
+      "status": "conditional_author_reproduction",
+      "state_basis": "documented author simulation assumptions; NOT measured initial state",
+      "source": "SSRN 6861858, PDF pp.9,53",
+      "record_id": "already_opened_25degC_oneC"
+    },
+    "evidence": "real record classification; no invented preparation metadata"
+  },
+  "synthetic_declared_anchor": {
+    "request": {
+      "mode": "declared_anchor",
+      "record_id": "SYNTHETIC",
+      "temperature_degC": 25,
+      "protocol": "discharge",
+      "cell_id": "SYNTHETIC_CELL",
+      "preparation_source": "SYNTHETIC fixture, not a real preparation log",
+      "anchor_definition": "25degC_charge_direction_4p2V_equilibrium",
+      "nominal_capacity_Ah": 4.5,
+      "history_source": "SYNTHETIC history",
+      "time_s": [
+        0.0,
+        60.0,
+        120.0
+      ],
+      "current_A": [
+        -4.5,
+        -4.5,
+        0.0
+      ],
+      "polarity": "charge_positive",
+      "integration": "left",
+      "max_gap_s": 60.0,
+      "anchor_time_s": 0.0,
+      "initial_time_s": 120.0,
+      "initial_hysteresis": -1.0,
+      "initial_polarization_V": [
+        -0.01,
+        -0.02
+      ],
+      "state_basis": "assumed",
+      "state_source": "SYNTHETIC assumed states",
+      "reference_compatibility_source": "SYNTHETIC declaration; not independently verified"
+    },
+    "response": {
+      "schema_version": "voltforge.p45b_initial_state_policy/1",
+      "mode": "declared_anchor",
+      "evidence_verified": false,
+      "experimental_accuracy_established": false,
+      "reference_kind": "published loaded C/30 pOCV",
+      "reference_equilibrium_verified": false,
+      "warning": "Loaded C/30 reference; finite rests are not verified equilibrium OCV. No module validation.",
+      "initial_state": {
+        "soc": 0.9666666666666667,
+        "hysteresis": -1.0,
+        "polarization_V": [
+          -0.01,
+          -0.02
+        ]
+      },
+      "runnable": true,
+      "missing_evidence": [
+        "independent verification of declared source identity, preparation and current calibration",
+        "reference compatibility with this physical cell and protocol",
+        "experimental accuracy for intended use"
+      ],
+      "status": "conditional_declared_anchor",
+      "state_basis": "assumed",
+      "record_id": "SYNTHETIC",
+      "declarations": {
+        "cell_id": "SYNTHETIC_CELL",
+        "preparation_source": "SYNTHETIC fixture, not a real preparation log",
+        "history_source": "SYNTHETIC history",
+        "state_source": "SYNTHETIC assumed states",
+        "reference_compatibility_source": "SYNTHETIC declaration; not independently verified"
+      }
+    },
+    "evidence": "SYNTHETIC SOFTWARE EXAMPLE ONLY"
+  },
+  "unknown": {
+    "request": {
+      "mode": "unknown",
+      "record_id": "unknown"
+    },
+    "response": {
+      "schema_version": "voltforge.p45b_initial_state_policy/1",
+      "mode": "unknown",
+      "evidence_verified": false,
+      "experimental_accuracy_established": false,
+      "reference_kind": "published loaded C/30 pOCV",
+      "reference_equilibrium_verified": false,
+      "warning": "Loaded C/30 reference; finite rests are not verified equilibrium OCV. No module validation.",
+      "initial_state": null,
+      "runnable": false,
+      "missing_evidence": [
+        "traceable charge-origin/preparation history",
+        "initial hysteresis and polarization assumptions"
+      ],
+      "status": "insufficient_evidence"
+    }
+  }
+}

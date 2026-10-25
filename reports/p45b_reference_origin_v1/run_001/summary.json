@@ -1,0 +1,400 @@
+{
+  "schema_version": "voltforge.p45b_reference_origin/1",
+  "source_lock": {
+    "schema_version": "voltforge.p45b_reference_origin_allocation/1",
+    "saved_records": {
+      "co30": "reports/p45b_low_soc_v1/run_001/co30_samples.csv",
+      "gitt": "reports/p45b_low_soc_v1/run_001/gitt_samples.csv",
+      "oneC": "reports/p45b_reproduction_v1/run_002/primary.csv"
+    },
+    "saved_segments": "reports/p45b_low_soc_v1/run_001/gitt_segments.csv",
+    "saved_pairs": "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv",
+    "parameter_table": "Molicel_INR-21700-P45B_ECM.csv",
+    "initial_soc_assumptions": [
+      1.0,
+      0.995
+    ],
+    "integration_conventions": [
+      "left",
+      "linear"
+    ],
+    "rest_windows_s": [
+      60,
+      300,
+      600
+    ],
+    "pair_allocation": "all 32 previously opened complete pulse/rest pairs; no outcome selection",
+    "new_measurement_families": 0,
+    "remaining_unopened_members": 48,
+    "remaining_unopened_families": 40,
+    "unused_LG_cells": 9,
+    "unused_FreeTwinEV_records": 13,
+    "protected_charge_table_and_validation_workbook": true,
+    "permitted_paper_pages": [
+      9,
+      12,
+      14,
+      15,
+      16,
+      17,
+      42,
+      53
+    ],
+    "parameter_fits": 0,
+    "frozen_files": {
+      "reports/p45b_low_soc_v1/run_001/co30_samples.csv": "9bea0449b6a2df25a0c2d54533512c237303fe3d224e7b1a68cecc1f6ff29b75",
+      "reports/p45b_low_soc_v1/run_001/gitt_samples.csv": "7a2306a4746afc30bd138d9113e1f91555debf6a1ef1b2a9fdc063ea576e2ea6",
+      "reports/p45b_reproduction_v1/run_002/primary.csv": "b1c9a6ead62b1a002a94bba174b9c28609b33a1321a2399e06e554d23fc4c797",
+      "reports/p45b_low_soc_v1/run_001/gitt_segments.csv": "84ab839b717285efc939c92c785687bf8e9b0da5e66026f535b3162abe84083d",
+      "reports/p45b_low_soc_v1/run_001/gitt_pairs.csv": "7fb7e3ba700918e44f3b37e96ffcef975dbbd771d3652e76333951bed350293d",
+      "Molicel_INR-21700-P45B_ECM.csv": "18ba1d8e8d1ec1af97bfc14ff8137b8699f6b62b16ec4b46baa882af19c8009e",
+      "reports/p45b_local_dynamics_v1/DECISION.md": "df04c034581f559bdacedd90fe63bb11f422b80986aa3e1d07185b4a194bc265",
+      "reports/p45b_local_dynamics_v1/verification.json": "995a2f8cd7252ac01febdedc4c18cbeea4e16b45f9283717cb3a1a0d1363ed4e",
+      "reports/p45b_paper_v1/DECISION.md": "55c13679c191a2c1258a586395d5ff3ab0c876309f8206a9aaa15e38f68fbe4a",
+      "reports/p45b_paper_v1/source.json": "496c6651ec1e6b4300d858451a75b78150987fdaab5474513b8fc26d761a621f",
+      "reports/p45b_intake_v1/DECISION.md": "b9ca9e776e7bb5933672df01bc7216efd4be3f6ae4fad239888b79b44fdeb999",
+      "reports/p45b_low_soc_v1/DECISION.md": "adee18c7eb24022f7c031413c4d149e225a22cc057a2b211d5461c8d83dee3f8",
+      "reports/p45b_reference_origin_v1/PROCEDURE.md": "b7d1ea2d60f3db64ceed4fa7e8a89479cc983106942a388fb4f2b9bb1317e789",
+      "reports/p45b_reference_origin_v1/pre_analysis_pytest.xml": "2b7a0cd3c24a3b105034ff42d0094e062e996643b255b7fb59aeef0886c5be6d",
+      "scripts/ae_p45b_reproduction.py": "8994eedae9eb6d15642e037119cef132677d88a62a3e02c61c9fed6f5eae6088",
+      "scripts/ae_p45b_low_soc.py": "42129b98769e6a4e2c3c5e1b764ed4aa7fd3688c7eda03ea5579e3b8e957a936",
+      "scripts/ae_p45b_identifiability.py": "31073acb6c4acd38117009e304a4427e7ee0e4ed2bbcd7fe4b8ea8b2eedd4496",
+      "readme_Molicel_P45B_dataset_AE.txt": "6f5917c9d6fe366993364f0a225d00621c6ff6e9cf98ed2cc10620960d0547d4",
+      "Molicel P45B Data Release Data Format Documentation.pdf": "1146673eb79699d2d3eb5b509ee100fc6f85fca82e08350fe61baccc51a0fbc1",
+      "ssrn-6861858.pdf": "0b872b05c28471a12fd3b004f9b98188da1074a11d35e6ab721ff9f250e8f258"
+    }
+  },
+  "implementation_sha256": {
+    "scripts/ae_p45b_reference_origin.py": "dc0f25396a57d2c902fb1c8f624e9891e5a9257d5a1d4fc649b266c820568ceb",
+    "scripts/verify_p45b_reference_origin.py": "251570ed1104da12e183b951c4bd6898f543115b44d8890f647af27ddcc579ef",
+    "tests/test_ae_p45b_reference_origin.py": "22eeab098702dfc9ea9e432872f86eaa602cd46c33055d3ad85ff6fd59f824b9"
+  },
+  "source": "Dickinson et al., About:Energy (2026), https://zenodo.org/records/19052626, CC BY 4.0",
+  "scenarios": {
+    "primary_left": {
+      "records": {
+        "co30": {
+          "samples": 2784,
+          "origin_soc": 1.0,
+          "integration": "left",
+          "final_nominal_soc": -0.005481367718777497,
+          "charge_passed_Ah": -4.524666154734499,
+          "reference_stop": null,
+          "full_reference_difference": {
+            "samples": 2784,
+            "duration_s": 108592.198,
+            "sample_rmse_mV": 0.4061003197016896,
+            "sample_bias_mV": -0.1336297764641231,
+            "max_abs_mV": 2.7561904116506497,
+            "time_rmse_mV": 0.20186292705400483,
+            "time_bias_mV": -0.028835491903213176
+          }
+        },
+        "gitt": {
+          "samples": 98426,
+          "origin_soc": 1.0,
+          "integration": "left",
+          "final_nominal_soc": 0.015438865479713071,
+          "charge_passed_Ah": -4.4305251053412915,
+          "reference_stop": null,
+          "full_reference_difference": {
+            "samples": 98426,
+            "duration_s": 68515.68,
+            "sample_rmse_mV": 47.669033639761224,
+            "sample_bias_mV": 15.342514258725068,
+            "max_abs_mV": 447.6255147837351,
+            "time_rmse_mV": 29.80160442030991,
+            "time_bias_mV": 0.9095788718201246
+          }
+        },
+        "oneC": {
+          "samples": 3433,
+          "origin_soc": 1.0,
+          "integration": "left",
+          "final_nominal_soc": 0.04617809323218691,
+          "charge_passed_Ah": -4.292198580455159,
+          "reference_stop": null,
+          "full_reference_difference": {
+            "samples": 3433,
+            "duration_s": 3433.786,
+            "sample_rmse_mV": 106.61059942392504,
+            "sample_bias_mV": 98.05557874677095,
+            "max_abs_mV": 467.08271309172255,
+            "time_rmse_mV": 106.11395864264892,
+            "time_bias_mV": 97.89398670641943
+          }
+        }
+      },
+      "endpoint_context": {
+        "oneC_source_line": 3434,
+        "nominal_soc": 0.04617809323218691,
+        "oneC_loaded_voltage_V": 2.49948773457863,
+        "co30_loaded": {
+          "value_V": 2.966784561951856,
+          "status": "interpolated at assumed shared nominal SOC",
+          "source_line_a": 2239,
+          "source_line_b": 2240
+        },
+        "gitt_finite_rest": {
+          "value_V": 2.9794264122903127,
+          "status": "interpolated at assumed shared nominal SOC",
+          "source_line_a": 83246,
+          "source_line_b": 85833
+        },
+        "co30_minus_oneC_mV": 467.29682737322565,
+        "gitt_minus_oneC_mV": 479.93867771168254,
+        "reference_minus_oneC_mV": 467.08271309172255,
+        "cross_record_cell_and_preparation_equivalence": "unverified; coordinate comparison only"
+      }
+    },
+    "primary_linear": {
+      "records": {
+        "co30": {
+          "samples": 2784,
+          "origin_soc": 1.0,
+          "integration": "linear",
+          "final_nominal_soc": -0.0054811703955859326,
+          "charge_passed_Ah": -4.524665266780136,
+          "reference_stop": null,
+          "full_reference_difference": {
+            "samples": 2784,
+            "duration_s": 108592.198,
+            "sample_rmse_mV": 0.4052654024827252,
+            "sample_bias_mV": -0.13311231047068098,
+            "max_abs_mV": 2.7561904116506497,
+            "time_rmse_mV": 0.20154076840657595,
+            "time_bias_mV": -0.028665820869872006
+          }
+        },
+        "gitt": {
+          "samples": 98426,
+          "origin_soc": 1.0,
+          "integration": "linear",
+          "final_nominal_soc": 0.016014973293598245,
+          "charge_passed_Ah": -4.427932620178808,
+          "reference_stop": null,
+          "full_reference_difference": {
+            "samples": 98426,
+            "duration_s": 68515.68,
+            "sample_rmse_mV": 48.23252983103538,
+            "sample_bias_mV": 16.386183161048102,
+            "max_abs_mV": 450.2531039793216,
+            "time_rmse_mV": 30.21146781143985,
+            "time_bias_mV": 2.119036746700633
+          }
+        },
+        "oneC": {
+          "samples": 3433,
+          "origin_soc": 1.0,
+          "integration": "linear",
+          "final_nominal_soc": 0.04617418371006232,
+          "charge_passed_Ah": -4.29221617330472,
+          "reference_stop": null,
+          "full_reference_difference": {
+            "samples": 3433,
+            "duration_s": 3433.786,
+            "sample_rmse_mV": 106.60517211804213,
+            "sample_bias_mV": 98.05056678141891,
+            "max_abs_mV": 467.0653818196455,
+            "time_rmse_mV": 106.10854219346086,
+            "time_bias_mV": 97.88898108136425
+          }
+        }
+      },
+      "endpoint_context": {
+        "oneC_source_line": 3434,
+        "nominal_soc": 0.04617418371006232,
+        "oneC_loaded_voltage_V": 2.49948773457863,
+        "co30_loaded": {
+          "value_V": 2.966769967584689,
+          "status": "interpolated at assumed shared nominal SOC",
+          "source_line_a": 2239,
+          "source_line_b": 2240
+        },
+        "gitt_finite_rest": {
+          "value_V": 2.976882277486816,
+          "status": "interpolated at assumed shared nominal SOC",
+          "source_line_a": 83246,
+          "source_line_b": 85833
+        },
+        "co30_minus_oneC_mV": 467.28223300605885,
+        "gitt_minus_oneC_mV": 477.3945429081858,
+        "reference_minus_oneC_mV": 467.0653818196455,
+        "cross_record_cell_and_preparation_equivalence": "unverified; coordinate comparison only"
+      }
+    },
+    "origin_minus_0p005_left": {
+      "records": {
+        "co30": {
+          "samples": 2784,
+          "origin_soc": 0.995,
+          "integration": "left",
+          "final_nominal_soc": -0.010481367718777501,
+          "charge_passed_Ah": -4.524666154734499,
+          "reference_stop": {
+            "source_line": 2695,
+            "reason": "SOC -0.00583701 outside reference [-0.00579559, 1]"
+          },
+          "full_reference_difference": {
+            "samples": 2693,
+            "duration_s": 108083.869,
+            "sample_rmse_mV": 23.96754168167976,
+            "sample_bias_mV": -15.092249573604889,
+            "max_abs_mV": 86.58857389497499,
+            "time_rmse_mV": 12.727129231291945,
+            "time_bias_mV": -8.222394603803622
+          }
+        },
+        "gitt": {
+          "samples": 98426,
+          "origin_soc": 0.995,
+          "integration": "left",
+          "final_nominal_soc": 0.010438865479713066,
+          "charge_passed_Ah": -4.4305251053412915,
+          "reference_stop": null,
+          "full_reference_difference": {
+            "samples": 98426,
+            "duration_s": 68515.68,
+            "sample_rmse_mV": 45.480800311749505,
+            "sample_bias_mV": 3.340474093363574,
+            "max_abs_mV": 422.47688868521925,
+            "time_rmse_mV": 33.27117976272662,
+            "time_bias_mV": -12.660810256646284
+          }
+        },
+        "oneC": {
+          "samples": 3433,
+          "origin_soc": 0.995,
+          "integration": "left",
+          "final_nominal_soc": 0.04117809323218691,
+          "charge_passed_Ah": -4.292198580455159,
+          "reference_stop": null,
+          "full_reference_difference": {
+            "samples": 3433,
+            "duration_s": 3433.786,
+            "sample_rmse_mV": 99.6219541229654,
+            "sample_bias_mV": 91.6261159868056,
+            "max_abs_mV": 443.5377025762253,
+            "time_rmse_mV": 99.14143213732828,
+            "time_bias_mV": 91.47818756803208
+          }
+        }
+      },
+      "endpoint_context": {
+        "oneC_source_line": 3434,
+        "nominal_soc": 0.04117809323218691,
+        "oneC_loaded_voltage_V": 2.49948773457863,
+        "co30_loaded": {
+          "value_V": 2.966784561951856,
+          "status": "interpolated at assumed shared nominal SOC",
+          "source_line_a": 2239,
+          "source_line_b": 2240
+        },
+        "gitt_finite_rest": {
+          "value_V": 2.9794264122903127,
+          "status": "interpolated at assumed shared nominal SOC",
+          "source_line_a": 83246,
+          "source_line_b": 85833
+        },
+        "co30_minus_oneC_mV": 467.29682737322565,
+        "gitt_minus_oneC_mV": 479.93867771168254,
+        "reference_minus_oneC_mV": 443.5377025762253,
+        "cross_record_cell_and_preparation_equivalence": "unverified; coordinate comparison only"
+      }
+    },
+    "origin_minus_0p005_linear": {
+      "records": {
+        "co30": {
+          "samples": 2784,
+          "origin_soc": 0.995,
+          "integration": "linear",
+          "final_nominal_soc": -0.010481170395585937,
+          "charge_passed_Ah": -4.524665266780136,
+          "reference_stop": {
+            "source_line": 2695,
+            "reason": "SOC -0.00583681 outside reference [-0.00579559, 1]"
+          },
+          "full_reference_difference": {
+            "samples": 2693,
+            "duration_s": 108083.869,
+            "sample_rmse_mV": 23.966582078420313,
+            "sample_bias_mV": -15.091772032104519,
+            "max_abs_mV": 86.58489680342197,
+            "time_rmse_mV": 12.726685723552649,
+            "time_bias_mV": -8.222225386221695
+          }
+        },
+        "gitt": {
+          "samples": 98426,
+          "origin_soc": 0.995,
+          "integration": "linear",
+          "final_nominal_soc": 0.01101497329359824,
+          "charge_passed_Ah": -4.427932620178808,
+          "reference_stop": null,
+          "full_reference_difference": {
+            "samples": 98426,
+            "duration_s": 68515.68,
+            "sample_rmse_mV": 45.33648928634891,
+            "sample_bias_mV": 4.491416894645962,
+            "max_abs_mV": 425.32761375881734,
+            "time_rmse_mV": 32.28088028576578,
+            "time_bias_mV": -11.314543352500449
+          }
+        },
+        "oneC": {
+          "samples": 3433,
+          "origin_soc": 0.995,
+          "integration": "linear",
+          "final_nominal_soc": 0.04117418371006232,
+          "charge_passed_Ah": -4.29221617330472,
+          "reference_stop": null,
+          "full_reference_difference": {
+            "samples": 3433,
+            "duration_s": 3433.786,
+            "sample_rmse_mV": 99.61644513351892,
+            "sample_bias_mV": 91.62107689546892,
+            "max_abs_mV": 443.51896012918377,
+            "time_rmse_mV": 99.13593626118558,
+            "time_bias_mV": 91.47315493103959
+          }
+        }
+      },
+      "endpoint_context": {
+        "oneC_source_line": 3434,
+        "nominal_soc": 0.04117418371006232,
+        "oneC_loaded_voltage_V": 2.49948773457863,
+        "co30_loaded": {
+          "value_V": 2.966769967584689,
+          "status": "interpolated at assumed shared nominal SOC",
+          "source_line_a": 2239,
+          "source_line_b": 2240
+        },
+        "gitt_finite_rest": {
+          "value_V": 2.976882277486816,
+          "status": "interpolated at assumed shared nominal SOC",
+          "source_line_a": 83246,
+          "source_line_b": 85833
+        },
+        "co30_minus_oneC_mV": 467.28223300605885,
+        "gitt_minus_oneC_mV": 477.3945429081858,
+        "reference_minus_oneC_mV": 443.51896012918377,
+        "cross_record_cell_and_preparation_equivalence": "unverified; coordinate comparison only"
+      }
+    }
+  },
+  "reference_support": [
+    -0.00579559117626349,
+    1.0
+  ],
+  "parameter_fits": 0,
+  "models_adopted": false,
+  "fresh_independent_assessment": false,
+  "new_measurement_families_opened": 0,
+  "remaining_unopened_members": 48,
+  "remaining_unopened_families": 40,
+  "initial_state_evidence": "author assumptions; record-specific preparation/cell mapping not verified",
+  "equilibrium_reference_established": false,
+  "experimental_module_validation": "awaiting suitable measurements",
+  "requirements": "requirement not configured",
+  "affected_design_decision": "insufficient evidence"
+}

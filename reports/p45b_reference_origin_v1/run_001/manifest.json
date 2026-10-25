@@ -1,0 +1,22 @@
+{
+  "complete_rests.png": "faee0f2de413e7e3bdb2270c354b51cbf0c2bc14399c816491cee56f51cceb56",
+  "origin_minus_0p005_left_co30.csv.gz": "2626e1a199e66eb254db999a209ed244bd1100fdcd5e9666b8b1a3288e0ef99f",
+  "origin_minus_0p005_left_gitt.csv.gz": "9ef7cf49f5890b980aa1c452ae914bb695ace5896c3bfbbd3ffed3c8f6197946",
+  "origin_minus_0p005_left_oneC.csv.gz": "7723afd7517fc620b8e96dbaadef299ff5612904bcec919d1ff216e2154ba066",
+  "origin_minus_0p005_left_rests.json": "25b08a01133949d09708f0dbaeaeef382c2f2efed186ea5fe095c79213dd4329",
+  "origin_minus_0p005_linear_co30.csv.gz": "fc1ef7e221f14ce8355842101ffe935264a0b13ff51ac961212b0ae164799697",
+  "origin_minus_0p005_linear_gitt.csv.gz": "27a01830c2fc823620f5a13e3b3effac027302f942159fd0fc8230b55d5f41df",
+  "origin_minus_0p005_linear_oneC.csv.gz": "abdc8d8e2a1c2a07218fc8ec074751a8261c49c1994f0083327f1376cfbf8a09",
+  "origin_minus_0p005_linear_rests.json": "f666e10a26486a4db5b90e8cd63a99904f64803a795bfbe70f7c08f9bce90a80",
+  "policy_examples.json": "8c45e651653ef62f6829117cac5180dfc5c14442c4ca9640afd7b49b1ab1a6ff",
+  "primary_left_co30.csv.gz": "da52205bdf5cd5a92912143b669eab7b823c10818241ae7431d303a23dba6314",
+  "primary_left_gitt.csv.gz": "049ea787362433618e16cbffa4bcb4fa1cdbf005350320077a1f1d1dcd3df876",
+  "primary_left_oneC.csv.gz": "3050b5bcde9956a5441442b28afbbf61eac3b89ca2fa26aa6fe36f89a135886d",
+  "primary_left_rests.json": "1bf7dba758e89618520cd74ea5bc150719714fffef2f1f59ebdff6e54349b8bb",
+  "primary_linear_co30.csv.gz": "0c161ba6e4d98f04fa1b71304d377629b5b44c062b52d90f169af2dee78d2684",
+  "primary_linear_gitt.csv.gz": "6d6f324bd865519164ea2549b91db749e3fde6fa5499b9233257d1c2a1de62e9",
+  "primary_linear_oneC.csv.gz": "be54cedf51191b485ed7694ed160551f0cc2951326dc6f9ef95649e5cf3a4366",
+  "primary_linear_rests.json": "5f9f5ad9950923eb645df3ccf28a5a10edcb13f46f5f24ea0fab7b7775781a94",
+  "reference_origin_diagnostics.png": "c8a38a4b44695dcf46f8fd6c22e3c049c5762debd26ee68c26b1f1ec5aa778b0",
+  "summary.json": "a8ac9365e11d35ff17b3de45532efa6125fb87bb93b43eb59fec3d546bb42b69"
+}

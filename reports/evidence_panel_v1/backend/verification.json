@@ -1,0 +1,49 @@
+{
+  "schema": "voltforge.evidence_panel_backend_verification/1",
+  "status": "passed",
+  "tests": {
+    "tests": "46",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "time": "48.524"
+  },
+  "command": "python -m pytest -q tests/test_editor_evidence.py tests/test_editor_server.py --junitxml=tmp/evidence_panel_backend_browser_numeric_tests.xml",
+  "scope": "Read-only HTTP evidence/explanation/preview, exact browser numeric representation bridge and explicit static assets plus existing editor regression; no raw measurement outcomes or solver-source changes",
+  "earlier_attempts": [
+    {
+      "receipt": "tests_before_static.junit.xml",
+      "passed": 37,
+      "failed": 0
+    },
+    {
+      "receipt": "tests_static_initial.junit.xml",
+      "passed": 36,
+      "failed": 2,
+      "finding": "Windows connection resets while rejecting unread POST bodies; bounded discard added before rejection"
+    },
+    {
+      "receipt": "tests_before_browser_bridge.junit.xml",
+      "passed": 38,
+      "failed": 0,
+      "subsequent_browser_finding": "Browser JSON serialization replaces integral float spelling; HTTP-only complete-context numeric representation bridge added and actual JavaScript serialization tested"
+    }
+  ],
+  "frozen_handoff_sha256_unchanged": {
+    "scripts/evidence_context.py": "b16d76679115554b4a891ecef289cbf16eb5cca420158bf773cf000d4ddb1122",
+    "scripts/copilot_contract.py": "99119c3a86cb22f803adbb226574d6f6c2491ab8eebdc813763ef4539580ccae"
+  },
+  "previous_server": {
+    "preserved_path": "reports/evidence_panel_v1/previous/scripts/run_editor.py",
+    "sha256": "223009374af5b5732fbf0c0e610cdafff1b101304d8c4ad950ccbf0eaf5adcd2"
+  },
+  "artifacts_sha256": {
+    "scripts/run_editor.py": "3095b037096b29aea0166bca3ecc3118fc35695c29bcd44bcb8e40878decdc99",
+    "tests/test_editor_evidence.py": "711fde493d0c3acaec9c743ac1aae1ee0c59dbd544cbc7515486a1c9d082e095",
+    "reports/evidence_panel_v1/backend/HTTP_CONTRACT.md": "2e32ecf48b928bb2b35351bfa2b567a18025d8ecc54b1d2c2ddc9cb805af5641",
+    "reports/evidence_panel_v1/backend/tests.junit.xml": "afdb0b761ab34afc3ccf66a554b2f26e6ba7195eb9e0be542b0a94d2cbfb2975",
+    "reports/evidence_panel_v1/backend/tests_before_browser_bridge.junit.xml": "47acae9af5a0423cadab86c9fc93c07c2746bc6b40540d87a73601e0f9d42595",
+    "reports/evidence_panel_v1/backend/tests_before_static.junit.xml": "c9e03ef15e07e29c5dd7203720f0cbc6fc9cece72c91cefc666b9f3932cb8489",
+    "reports/evidence_panel_v1/backend/tests_static_initial.junit.xml": "ce1d3734cde6bb199e2a527f2c35dd7b0b5863ee82093ad1587f46a07be10bc8"
+  }
+}

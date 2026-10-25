@@ -4,6 +4,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import argparse
 import json
+import math
 import mimetypes
 import secrets
 import shutil
@@ -18,17 +19,85 @@ sys.path.insert(0, str(ROOT / 'src'))
 sys.path.insert(0, str(ROOT / 'scripts'))
 from voltforge.project import Project, dispatch
 from measurement_viewer import MeasurementStore, MeasurementError
+from copilot_contract import handle_request as evidence_request, unique_object, MAX_REQUEST_BYTES
+from evidence_context import build_context
 
 ASSETS = ROOT / 'web/editor'
 OPERATIONS = {'inspect', 'validate_edit', 'apply_edit', 'create_variant', 'update_display', 'get_run', 'series', 'compare'}
 MUTATIONS = {'apply_edit', 'create_variant', 'update_display'}
+EVIDENCE_CONTEXT = '/api/evidence/context'
+EVIDENCE_REQUEST = '/api/evidence/request'
 STATIC = {'/': 'index.html', '/index.html': 'index.html', '/style.css': 'style.css',
           '/app.js': 'app.js', '/state.mjs': 'state.mjs', '/favicon.svg': 'favicon.svg',
+          '/evidence-panel.mjs': 'evidence-panel.mjs', '/evidence-state.mjs': 'evidence-state.mjs',
+          '/evidence.css': 'evidence.css',
           '/measurements': 'measurements.html', '/measurements.js': 'measurements.js', '/measurements.css': 'measurements.css'}
 
 
 def error(code, message):
     return {'status': 'error', 'error': {'code': code, 'message': message}}
+
+
+def evidence_http_status(response):
+    if response['status'] == 'ok':
+        return 200
+    return {'conflict': 409, 'stale_context': 409, 'integrity_error': 409,
+            'not_found': 404, 'context_too_large': 413,
+            'server_error': 500}.get(response['error']['code'], 400)
+
+
+def browser_json_equal(supplied, authoritative):
+    """Exact JSON value equality across the browser's single numeric type.
+
+    JSON.parse/stringify changes Python's 1.0 to 1. This is not numerical
+    tolerance: distinct finite values, booleans and unsafe integers never match.
+    """
+    numeric = (int, float)
+    if type(supplied) in numeric and type(authoritative) in numeric:
+        for number in (supplied, authoritative):
+            if not math.isfinite(number):
+                return False
+            if (type(number) is int or number.is_integer()) and abs(number) > 9007199254740991:
+                return False
+        return supplied == authoritative
+    if type(supplied) is not type(authoritative):
+        return False
+    if isinstance(supplied, dict):
+        return (supplied.keys() == authoritative.keys()
+                and all(browser_json_equal(value, authoritative[key]) for key, value in supplied.items()))
+    if isinstance(supplied, list):
+        return len(supplied) == len(authoritative) and all(
+            browser_json_equal(left, right) for left, right in zip(supplied, authoritative))
+    return supplied == authoritative
+
+
+def browser_evidence_request(project_path, request):
+    """Restore server numeric representation only after checking the full context."""
+    if (not isinstance(request, dict) or set(request) != {'operation', 'context', 'arguments'}
+            or request.get('operation') not in ('explain', 'preview_edit')):
+        return evidence_request(project_path, request)
+    supplied = request['context']
+    if (not isinstance(supplied, dict) or set(supplied) != {'status', 'result'}
+            or supplied.get('status') != 'ok' or not isinstance(supplied.get('result'), dict)):
+        return evidence_request(project_path, request)
+    selection = supplied['result'].get('selection')
+    if (supplied['result'].get('schema') != 'voltforge.evidence_context/1'
+            or not isinstance(selection, dict)
+            or set(selection) != {'variant_id', 'run_id', 'component_id', 'limit'}):
+        return evidence_request(project_path, request)
+    fresh = build_context(project_path, **selection)
+    if fresh['status'] != 'ok':
+        return fresh
+    try:
+        matches = browser_json_equal(supplied, fresh)
+    except (OverflowError, RecursionError):
+        matches = False
+    if not matches:
+        return error('stale_context',
+            'Evidence context changed or was modified; rebuild it before reviewing this request')
+    # Never pass client-provided evidence values to the frozen contract. Its own
+    # independent current-context check remains in force after this bridge.
+    return evidence_request(project_path, {**request, 'context': fresh})
 
 
 def project_destination(path):
@@ -132,6 +201,25 @@ class Handler(BaseHTTPRequestHandler):
     def send_json(self, value, status=200):
         self.send_bytes(json.dumps(value, allow_nan=False).encode(), 'application/json; charset=utf-8', status)
 
+    def discard_rejected_body(self):
+        # Closing a POST with unread incoming bytes can reset the connection on
+        # Windows before a browser receives the 403. Discard bounded bytes only:
+        # never parse or execute an untrusted request, and never wait indefinitely.
+        try:
+            length = int(self.headers.get('Content-Length', '0'))
+        except ValueError:
+            return
+        if not 0 < length <= MAX_REQUEST_BYTES or self.headers.get('Transfer-Encoding'):
+            return
+        previous_timeout = self.connection.gettimeout()
+        try:
+            self.connection.settimeout(1.0)
+            self.rfile.read(length)
+        except OSError:
+            pass
+        finally:
+            self.connection.settimeout(previous_timeout)
+
     def do_GET(self):
         if not self.trusted_origin():
             return self.send_json(error('forbidden', 'Use the local editor address.'), 403)
@@ -180,17 +268,36 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         if not self.trusted_origin() or not secrets.compare_digest(self.headers.get('X-Voltforge-Token', ''), self.server.token):
+            self.discard_rejected_body()
             return self.send_json(error('forbidden', 'Reload the local editor to establish a session.'), 403)
+        path = urlsplit(self.path).path
+        body_limit = MAX_REQUEST_BYTES if path == EVIDENCE_REQUEST else 131072
         try:
             length = int(self.headers.get('Content-Length', '0'))
-            if not 0 < length <= 131072 or self.headers.get('Content-Type', '').split(';')[0] != 'application/json':
-                raise ValueError('Expected JSON body of at most 128 KiB.')
-            request = json.loads(self.rfile.read(length), parse_constant=lambda value: (_ for _ in ()).throw(ValueError('Nonfinite JSON')))
-            if not isinstance(request, dict) or set(request) != {'operation', 'arguments'}:
-                raise ValueError('Expected operation and arguments.')
-        except (ValueError, UnicodeDecodeError) as exc:
+            if not 0 < length <= body_limit or self.headers.get('Content-Type', '').split(';')[0] != 'application/json':
+                raise ValueError(f'Expected JSON body of at most {body_limit // 1024} KiB.')
+            request = json.loads(self.rfile.read(length), object_pairs_hook=unique_object,
+                parse_constant=lambda value: (_ for _ in ()).throw(ValueError('Nonfinite JSON')))
+        except (ValueError, UnicodeDecodeError, RecursionError) as exc:
             return self.send_json(error('invalid_request', str(exc)), 400)
-        path = urlsplit(self.path).path
+        if path in (EVIDENCE_CONTEXT, EVIDENCE_REQUEST):
+            if path == EVIDENCE_CONTEXT and (not isinstance(request, dict)
+                    or set(request) != {'variant_id', 'run_id', 'component_id', 'limit'}):
+                return self.send_json(error('invalid_request',
+                    'Expected variant_id, run_id, component_id and limit.'), 400)
+            # Use the same gate as manual edits and job creation. Holding it for
+            # the read prevents a local editor mutation between context refresh
+            # and preview/explanation; an executing job is explicitly rejected.
+            # The evidence adapters also detect an external project writer lock.
+            with self.server.gate:
+                if self.server.active_job:
+                    return self.send_json(error('conflict',
+                        'A job is running. Wait before refreshing evidence or previewing edits.'), 409)
+                response = (build_context(self.server.project, **request) if path == EVIDENCE_CONTEXT
+                            else browser_evidence_request(self.server.project, request))
+            return self.send_json(response, evidence_http_status(response))
+        if not isinstance(request, dict) or set(request) != {'operation', 'arguments'}:
+            return self.send_json(error('invalid_request', 'Expected operation and arguments.'), 400)
         if path == '/api/jobs':
             response, status = self.server.start_job(request)
             return self.send_json(response, status)

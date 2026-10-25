@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "observations": [
+    "Configuration-only evidence has fitted/assumed inputs, expandable citations and no saved output.",
+    "Actual full A0 run displays current evidence and requirement-not-configured without acceptance.",
+    "Selected P17 evidence and source details render without document overflow at1440,1920,1024,390px.",
+    "Delayed genuine evidence responses cannot overwrite a later component selection.",
+    "Keyboard layout changes update component evidence while preserving the physics revision and current run.",
+    "Preview preserves every project byte; changing and reverting the input still requires a new preview.",
+    "An external revision invalidates preview; manual Apply rechecks and leaves the project unchanged.",
+    "Explicit manual Apply creates the declared A1 revision, preserves historical ownership and never starts a simulation.",
+    "Failed partial simulation retains its exact stop reason, partial status and evidence limitations.",
+    "Untrusted provenance is escaped as text in previews; no injected markup or script executes."
+  ],
+  "browser_errors": [],
+  "expected_conflict_responses": 2,
+  "project": "tmp\\evidence_browser_39d9c3148856\\project",
+  "scope": "Software integration only; synthetic fault/setup edits; no new experimental outcomes",
+  "screenshots": {
+    "01_configuration.png": "34c36818033e7a74e54012dd60a0cc80de9c12b5dcddaeeea7ed8f5076f0b8f9",
+    "02_evidence_desktop.png": "ddd0e7feae2bccb0103970fbb68c4660f589f4e797208cb5f8f457c4b36b9bf9",
+    "03_evidence_wide.png": "433de4adb87f94959381ffe96e033a4933441504d689968091966cc46a18d3b3",
+    "04_evidence_tablet.png": "d94774fb4a93d96c5bd22843c0c56b81e97a40249709931a93868761efeaf1fc",
+    "05_evidence_phone.png": "8c4d62160fa4b0190c437c0c27a7de166441da18fc115ccc6da835c31f8bed2f",
+    "06_review_preview.png": "70d2270087852cebfe7bc7a30a57cd48242542a6b6ff677abed749ae01a113fc",
+    "07_historical_evidence.png": "64b22940b5e471c83f720c21cd3b6d9cee0213cd4777f9530f0e2dfd7ed82346",
+    "08_failed_evidence.png": "0f0d8a9394c6ca1c8421e52b98ce8b2b05f15c7fac2617d687a471b6e75973a5"
+  }
+}

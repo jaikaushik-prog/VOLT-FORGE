@@ -1,4 +1,5 @@
 import {escapeHTML as h, chooseRun, viewLabel, bounds, RequestEpoch, number as n, finiteInput, failureMessage} from './state.mjs';
+import {createEvidencePanel, previewMarkup} from './evidence-panel.mjs';
 
 const $ = id => document.getElementById(id);
 const ids = ['cell_1','cell_2','cell_3','cell_4'];
@@ -9,6 +10,10 @@ const scenarios = {nominal:'Nominal design', soc_minus_2pp:'Sensitivity: SOC −
 const state = {token:'', info:null, variant:'A0', selected:'module', scenario:'nominal', run:null, series:null,
   index:0, offset:0, busy:false, action:false, preview:null, catalog:[], display:null};
 const designEpoch = new RequestEpoch(), seriesEpoch = new RequestEpoch();
+state.loading=false;state.previewEvidence=null;
+const evidence=createEvidencePanel({element:$('panel-evidence'),request,
+  getSelection:()=>state.info?{variant_id:state.variant,revision_id:state.info.revision_id,component_id:state.selected,run_id:state.run?.run_id||null}:null,
+  isReady:()=>Boolean(state.info)&&!state.busy&&!state.loading});
 
 function notice(message, kind='') { $('notice').textContent=message; $('notice').className='notice '+kind; $('notice').setAttribute('role',kind==='error'?'alert':'status'); }
 async function request(path, body) {
@@ -31,16 +36,18 @@ async function action(fn) {
   if(state.action||state.busy) return;
   state.action=true; buttons();
   try { await fn(); } catch(e) { notice(e.message,'error'); }
-  finally { state.action=false; buttons(); }
+  finally { state.action=false; state.loading=false; buttons(); }
 }
 
 async function refresh(variant=state.variant, preferred='') {
   const epoch=designEpoch.begin(); seriesEpoch.begin();
+  state.loading=true;evidence.changed({reload:false});invalidatePreview();
   state.run=null;state.series=null;state.preview=null; renderResults(); drawCanvas();
   $('comparison').textContent='';
   const info=await api('inspect',{variant_id:variant});
   if(!designEpoch.current(epoch)) return;
   state.info=info;state.variant=variant;state.display=structuredClone(info.display);
+  state.loading=false;
   $('variant-title').textContent=`${variant} / ${info.name}`;
   $('revision').textContent=`Revision ${info.revision_id.slice(4,12)} · 4 cells / 6 rail segments`;
   renderNavigation(); renderInspector(); renderRunPicker(); drawCanvas(); buttons();
@@ -49,6 +56,7 @@ async function refresh(variant=state.variant, preferred='') {
   if(picked) await loadRun(picked);
   if(!designEpoch.current(epoch)) return;
   await catalogRuns(epoch);
+  evidence.refreshIfVisible();
 }
 async function catalogRuns(epoch=designEpoch.value) {
   const infos=await Promise.all(Object.keys(state.info.variants).map(variant_id=>api('inspect',{variant_id})));
@@ -69,7 +77,7 @@ function renderNavigation() {
   $('components').innerHTML=items.map(([id,label,c])=>`<button class="nav-item component ${id===state.selected?'active':''}" data-component="${h(id)}"><i class="dot c${c}"></i>${h(label)}</button>`).join('');
   $('mobile-component').innerHTML=items.map(([id,label])=>`<option value="${h(id)}" ${id===state.selected?'selected':''}>${h(label)}</option>`).join('');
 }
-function selectComponent(id) { state.selected=id;state.preview=null;renderNavigation();renderInspector();drawCanvas(); }
+function selectComponent(id) { state.selected=id;state.preview=null;renderNavigation();renderInspector();drawCanvas();evidence.changed(); }
 
 function position(i) { return state.display?.positions[ids[i]] || [190+i*180,155]; }
 function drawCanvas() {
@@ -125,7 +133,7 @@ function renderEditFields() {
   if(prop==='requirements') html=field('Device minimum voltage (V), blank if unknown','minimum-voltage',d.requirements.minimum_terminal_voltage_V??'','number','step="any"')+field('Permitted excursion (s), blank if unknown','excursion',d.requirements.maximum_contiguous_excursion_s??'','number','min="0" step="any"')+field('Documented requirement source','requirement-source',d.requirements.documented_source??'','text')+'<p>Missing requirements produce “requirement not configured”. No project alarm is an authoritative device limit.</p>';
   $('edit-fields').innerHTML=html;invalidatePreview();
 }
-function invalidatePreview(){state.preview=null;if($('edit-feedback')) $('edit-feedback').textContent='';buttons();}
+function invalidatePreview(){state.preview=null;state.previewEvidence=null;evidence.invalidatePreview();if($('edit-feedback')) $('edit-feedback').textContent='';buttons();}
 function collectEdit() {
   const prop=$('edit-property').value,id=state.selected,d=state.info.design;
   const source=$('edit-source').value.trim(); if(!source) throw new Error('Add a source or reason for this input.');
@@ -141,16 +149,19 @@ function collectEdit() {
 }
 async function previewEdit() {
   const args={variant_id:state.variant,edit:collectEdit(),expected_revision:state.info.revision_id};
-  const preview=await api('validate_edit',args);
+  const saved=await evidence.preview(args.edit);
   if(args.variant_id!==state.variant || args.expected_revision!==state.info.revision_id || JSON.stringify(args.edit)!==JSON.stringify(collectEdit())) {
     notice('The input changed while validation was running. Preview it again.'); return;
   }
   state.preview=args;
-  $('edit-feedback').innerHTML=`<div class="preview"><strong>${preview.physics_changed?'Valid proposed revision':'No electrical change'}</strong><p>${preview.invalidated_run_ids.length} owned run(s) will become outdated. Previous outputs are retained.</p><details><summary>Exact proposed input</summary><pre>${h(JSON.stringify(args.edit,null,2))}</pre></details>${(preview.warnings||[]).map(x=>`<p>${h(x)}</p>`).join('')}</div>`;
+  state.previewEvidence=saved;
+  $('edit-feedback').innerHTML=previewMarkup(saved.model);
 }
 async function applyEdit() {
-  if(!state.preview) return;
+  if(!state.preview||!state.previewEvidence) return;
   const args=state.preview, preferred=state.run?.run_id||'';
+  try{await evidence.revalidate(state.previewEvidence,args.edit);}catch(error){invalidatePreview();throw error;}
+  if(state.preview!==args)throw new Error('The input changed. Preview again before applying.');
   await api('apply_edit',args); await refresh(args.variant_id,preferred);
   notice('Revision saved. Previous runs are retained; outdated results must be rerun for this design.');
 }
@@ -160,12 +171,14 @@ function renderRunPicker() {
 }
 async function loadRun(run_id,offset=0) {
   const epoch=seriesEpoch.begin(),variant=state.variant;
+  state.loading=true;invalidatePreview();evidence.changed({reload:false});
   state.run=null;state.series=null;state.index=0;renderResults();drawCanvas();
-  if(!run_id) return;
+  if(!run_id){state.loading=false;evidence.refreshIfVisible();return;}
   $('run-state').textContent='Loading this run’s saved outputs…';
   const [run,...series]=await Promise.all([api('get_run',{variant_id:variant,run_id}),...state.info.output_components.map(component_id=>api('series',{variant_id:variant,run_id,component_id,offset,limit:5000}))]);
   if(!seriesEpoch.current(epoch)||variant!==state.variant) return;
   state.run=run;state.series=Object.fromEntries(series.map(s=>[s.component_id,s]));state.offset=offset;
+  state.loading=false;evidence.changed();
   renderResults();drawCanvas();updateReadout();
 }
 function metric(label,value,unit,digits=3){return `<div class="metric"><span>${label}</span><strong>${n(value,digits)}</strong><small>${unit}</small></div>`;}
@@ -176,7 +189,7 @@ function renderResults() {
   if(!r) {
     $('run-state').textContent=state.info?.runs.length?'Select an explicit saved run. Inherited runs are historical, not current for this variant.':'Run the reference module to inspect its electrical behaviour.';
     $('plots').className='plots empty';$('plots').innerHTML='<div><h3>No run selected</h3><p>Run this design or select a saved run above.<br>Charts always use the selected run’s saved outputs.</p></div>';
-    $('panel-evidence').innerHTML='<div class="evidence-banner"><strong>Experimental validation pending</strong><p>Actual voltage requirements are unset unless supplied. Select a run to inspect its exact coverage and assumptions.</p></div>';return;
+    return;
   }
   $('run-state').classList.add(r.freshness==='outdated'?'outdated':r.execution_status);
   $('run-state').textContent=`${r.execution_status==='failed'?'Failed simulation — partial outputs only': 'Completed simulation'} / ${r.freshness==='outdated'?'Outdated for this design':'Current for this design'} · ${r.scenario_id} · ${r.run_id}${r.outdated_reasons.length?' · '+r.outdated_reasons.join(', '):''}${r.error?' · '+failureMessage(r.error):''}`;
@@ -188,8 +201,7 @@ function renderResults() {
     $('previous-page').disabled=state.offset===0;$('next-page').disabled=state.series.module.next_offset===null;
     setTime(0);
   } else { $('plots').className='plots empty';$('plots').innerHTML='<div><h3>No valid simulation samples</h3><p>Inspect the failure and assumptions before rerunning.</p></div>'; }
-  const coverage=summary.coverage?.cells||{};
-  $('panel-evidence').innerHTML=`<div class="evidence-banner"><strong>${h(summary.decision||'insufficient evidence')}</strong><p>${h(summary.voltage_requirement?.status||'requirement not configured')} · Experimental validation awaiting suitable measurements.</p></div><p>${h((summary.decision_reasons||[]).join('. '))}</p><p>Amplitude coverage alone does not validate waveform or duration. Electrical resistor losses do not predict temperature. Current sensors and module transfer remain unvalidated.</p><div class="table-wrap"><table><thead><tr><th>Cell</th><th>SOC range</th><th>Current range (A)</th><th>Reference support</th></tr></thead><tbody>${Object.entries(coverage).map(([id,c])=>`<tr><td>${h(id)}</td><td>${c.SOC_range.map(x=>n(x*100,1)).join('–')}%</td><td>${c.current_range_A.map(x=>n(x,2)).join(' to ')}</td><td>${c.mathematical_support?'Within reference':'Unsupported'}</td></tr>`).join('')}</tbody></table></div><details><summary>Per-cell fitting, assessment and unsupported intervals</summary><pre>${h(JSON.stringify(summary.coverage,null,2))}</pre></details><details><summary>Requirement check and loss accounting</summary><pre>${h(JSON.stringify({...summary,coverage:undefined},null,2))}</pre></details><details><summary>Run evidence identity</summary><pre>${h(JSON.stringify({variant:r.owner_variant_id,revision:r.revision_id,snapshot:r.snapshot_id,scenario:r.scenario_id,classification:r.classification,freshness:r.freshness},null,2))}</pre></details>`;
+
 }
 function chart(key,unit,terminal=false) {
   const rows=state.series.module.rows,t0=rows[0].time_s,t1=rows.at(-1).time_s;
@@ -231,7 +243,7 @@ async function runSimulation() {
     const result=await waitJob(job_id);
     if(state.variant===variant) await refresh(variant,result.run_id);else await catalogRuns();
     notice(result.execution_status==='failed'?`Simulation stopped. ${result.run_id} preserves the failure and any valid partial outputs.`:`Saved ${variant} / ${result.run_id}. Experimental module validation remains pending.`,result.execution_status==='failed'?'error':'');
-  }finally{state.busy=false;buttons();}
+  }finally{state.busy=false;buttons();evidence.refreshIfVisible();}
 }
 async function compareRuns() {
   const selections=[$('compare-first').value,$('compare-second').value].map(id=>state.catalog.find(r=>r.run_id===id)).map(r=>({variant_id:r.variant_id,run_id:r.run_id}));
@@ -280,7 +292,7 @@ $('canvas').addEventListener('click',e=>{const el=e.target.closest('[data-compon
 $('canvas').addEventListener('keydown',e=>{
   const id=e.target.closest('[data-component]')?.dataset.component;if(!id)return;
   if(e.key==='Enter'||e.key===' '){e.preventDefault();selectComponent(id);$('canvas').querySelector(`[data-component="${id}"]`)?.focus();}
-  if(id.startsWith('cell_')&&e.key.startsWith('Arrow')&&!state.busy&&!state.action){e.preventDefault();const [x,y]=position(ids.indexOf(id));state.selected=id;state.display.positions[id]=[Math.max(110,Math.min(780,x+(e.key==='ArrowRight'?10:e.key==='ArrowLeft'?-10:0))),Math.max(132,Math.min(176,y+(e.key==='ArrowDown'?5:e.key==='ArrowUp'?-5:0)))];drawCanvas();$('canvas').querySelector(`[data-component="${id}"]`)?.focus();action(saveDisplay);}
+  if(id.startsWith('cell_')&&e.key.startsWith('Arrow')&&!state.busy&&!state.action){e.preventDefault();const [x,y]=position(ids.indexOf(id));if(state.selected!==id)selectComponent(id);state.display.positions[id]=[Math.max(110,Math.min(780,x+(e.key==='ArrowRight'?10:e.key==='ArrowLeft'?-10:0))),Math.max(132,Math.min(176,y+(e.key==='ArrowDown'?5:e.key==='ArrowUp'?-5:0)))];drawCanvas();$('canvas').querySelector(`[data-component="${id}"]`)?.focus();action(saveDisplay);}
 });
 $('variants').addEventListener('click',e=>{const el=e.target.closest('[data-variant]');if(el)action(async()=>{await refresh(el.dataset.variant);notice(`Opened ${el.dataset.variant}. Only this variant’s current runs are selected automatically.`);});});
 $('components').addEventListener('click',e=>{const el=e.target.closest('[data-component]');if(el)selectComponent(el.dataset.component);});
@@ -297,6 +309,7 @@ $('next-page').addEventListener('click',()=>action(()=>loadRun(state.run.run_id,
 $('reset-layout').addEventListener('click',()=>action(async()=>{state.display.positions={};drawCanvas();await saveDisplay();}));
 for(const name of ['results','evidence','compare']) $('tab-'+name).addEventListener('click',()=>{
   for(const n of ['results','evidence','compare']){$('tab-'+n).setAttribute('aria-selected',n===name?'true':'false');$('panel-'+n).hidden=n!==name;}
+  if(name==='evidence')void evidence.refresh();
 });
 document.querySelector('.tabs').addEventListener('keydown',e=>{const tabs=[...document.querySelectorAll('[role=tab]')];let i=tabs.indexOf(document.activeElement);if(i<0)return;if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();i=e.key==='Home'?0:e.key==='End'?2:(i+(e.key==='ArrowRight'?1:2))%3;tabs[i].focus();tabs[i].click();}});
 $('compare').addEventListener('click',()=>action(async()=>{ $('comparison').textContent='';await compareRuns(); }));

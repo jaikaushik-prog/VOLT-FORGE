@@ -18,7 +18,29 @@ There is no optimizer or ranked repair result.
 Public project repository: https://github.com/jaikaushik-prog/VOLT-FORGE.
 Local upload preparation is described in [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md).
 
-## Latest parallel engineering sprint
+## Evidence panel and completed reference-origin investigation
+
+The 2D editor now has an [evidence and edit-preview panel](reports/evidence_panel_v1/READINESS.md).
+Select a component and open **Evidence** to inspect saved results, assumptions,
+coverage and source citations. Preview a supported edit, review its effect on
+result freshness, then apply the revision manually. Simulation remains a
+separate action. Current, historical, configuration-only and failed results
+have distinct states; missing requirements never imply a pass.
+
+The [bounded P45B reference-origin investigation](reports/p45b_reference_origin_v1/DECISION.md)
+is complete. No replacement model was adopted. The available records do not
+establish per-record preparation and charge history relative to the published
+reference; the final 9,000-second rest still evolves. Further exploratory fitting
+is paused pending that evidence. Frozen LG v2/P45B models and unused measurements
+remain preserved. The LG four-cell product workflow can continue independently.
+
+This release passes **387 Python tests and 22 JavaScript tests**, including
+evidence transport, stale edits, provenance and numerical regression checks.
+The [release report](reports/evidence_panel_v1/READINESS.md) includes browser
+checks, preserved historical sources and exact reproduction commands.
+Conversational AI, thermal simulation and optimization remain unavailable.
+
+## Previous parallel engineering handoff
 
 Three coordinated workstreams now deliver [local electrical diagnostics,
 backend evidence context and a deterministic copilot contract](reports/parallel_engineering_v1/READINESS.md).
@@ -42,7 +64,7 @@ against backend fields and 12 workflow invariants. The combined release passes
 ```
 
 This verifies the saved handoff; add `--out tmp/copilot_handoff_fresh` to create
-a new demonstration. Frontend redesign remains deferred; its future guide is
+a new demonstration. The full product redesign remains deferred; its guide is
 the [product design skill](web/editor/skills/volt-forge-product-design/SKILL.md).
 
 ## Open the 2D workspace
@@ -106,8 +128,8 @@ Near empty, full transient simulation predicts about 114 mV recovery versus
 461 mV measured. The discrepancy persists under declared numerical, current
 sampling and supported starting-SOC sensitivities. All **99 focused tests** pass;
 **48 other measurement files** and the validation workbook remain protected.
-No new model was adopted. The next step is a bounded investigation of whether
-existing low-SOC parameters can identify both pulse and relaxation behavior.
+No new model was adopted. The subsequent bounded local-dynamics and
+reference-origin investigations are linked above.
 This remains cell-model development, with experimental module validation pending.
 
 ## First product workflow and frontend handoff
@@ -134,7 +156,7 @@ load-voltage acceptance, thermal behaviour and repair benefits remain unvalidate
 
 ```powershell
 & C:\Users\DELL\anaconda3\python.exe -m pytest -q --junitxml=tmp/product_tests.xml
-& C:\Users\DELL\anaconda3\python.exe scripts\verify_editor_release.py --out tmp/editor_verification.json
+& C:\Users\DELL\anaconda3\python.exe scripts\verify_evidence_panel.py --browser reports/evidence_panel_v1/browser_005 --out tmp/evidence_panel_verification.json
 ```
 
 ## Four-cell electrical simulation backend

@@ -1,0 +1,142 @@
+﻿TAP version 13
+# Subtest: inherited and sensitivity runs cannot be selected as current nominal results
+ok 1 - inherited and sensitivity runs cannot be selected as current nominal results
+  ---
+  duration_ms: 1.1238
+  type: 'test'
+  ...
+# Subtest: late results fail the selection epoch after a variant change
+ok 2 - late results fail the selection epoch after a variant change
+  ---
+  duration_ms: 0.1517
+  type: 'test'
+  ...
+# Subtest: user content escapes markup and numeric edits reject empty or nonfinite input
+ok 3 - user content escapes markup and numeric edits reject empty or nonfinite input
+  ---
+  duration_ms: 0.3112
+  type: 'test'
+  ...
+# Subtest: chart bounds show negative charge and flat data without undefined scales
+ok 4 - chart bounds show negative charge and flat data without undefined scales
+  ---
+  duration_ms: 0.3424
+  type: 'test'
+  ...
+# Subtest: current presentation retains actual values, units, context and every citation
+ok 5 - current presentation retains actual values, units, context and every citation
+  ---
+  duration_ms: 20.878
+  type: 'test'
+  ...
+# Subtest: unconfigured requirements cannot become a pass or experimental acceptance
+ok 6 - unconfigured requirements cannot become a pass or experimental acceptance
+  ---
+  duration_ms: 6.9716
+  type: 'test'
+  ...
+# Subtest: configuration-only evidence never acquires simulated claims or an implied run
+ok 7 - configuration-only evidence never acquires simulated claims or an implied run
+  ---
+  duration_ms: 5.0142
+  type: 'test'
+  ...
+# Subtest: historical evidence preserves current design and historical output revision separately
+ok 8 - historical evidence preserves current design and historical output revision separately
+  ---
+  duration_ms: 3.0191
+  type: 'test'
+  ...
+# Subtest: failed and outdated flags coexist; missing coverage never means supported
+ok 9 - failed and outdated flags coexist; missing coverage never means supported
+  ---
+  duration_ms: 2.6341
+  type: 'test'
+  ...
+# Subtest: no response, rejected response and malformed response remain distinct
+ok 10 - no response, rejected response and malformed response remain distinct
+  ---
+  duration_ms: 1.5999
+  type: 'test'
+  ...
+# Subtest: every selection dimension prevents a response from being shown in another context
+ok 11 - every selection dimension prevents a response from being shown in another context
+  ---
+  duration_ms: 5.4987
+  type: 'test'
+  ...
+# Subtest: numerical claims require a citation, a unit and the actual bound run and snapshot
+ok 12 - numerical claims require a citation, a unit and the actual bound run and snapshot
+  ---
+  duration_ms: 14.251
+  type: 'test'
+  ...
+# Subtest: sample citations bind to selected component without treating module summary as cell output
+ok 13 - sample citations bind to selected component without treating module summary as cell output
+  ---
+  duration_ms: 5.1711
+  type: 'test'
+  ...
+# Subtest: request tickets reject late results after selection changes and reverse completion order
+ok 14 - request tickets reject late results after selection changes and reverse completion order
+  ---
+  duration_ms: 0.391
+  type: 'test'
+  ...
+# Subtest: editing any preview input invalidates the ticket, including edit then revert
+ok 15 - editing any preview input invalidates the ticket, including edit then revert
+  ---
+  duration_ms: 0.2164
+  type: 'test'
+  ...
+# Subtest: request keys are stable JSON identities and reject missing or extra selection fields
+ok 16 - request keys are stable JSON identities and reject missing or extra selection fields
+  ---
+  duration_ms: 0.3495
+  type: 'test'
+  ...
+# Subtest: a valid preview exposes exact before/proposed data and invalidated IDs without executing
+ok 17 - a valid preview exposes exact before/proposed data and invalidated IDs without executing
+  ---
+  duration_ms: 0.6096
+  type: 'test'
+  ...
+# Subtest: timestep preview derives seconds from the exact supported schema while preserving its source claim
+ok 18 - timestep preview derives seconds from the exact supported schema while preserving its source claim
+  ---
+  duration_ms: 0.3461
+  type: 'test'
+  ...
+# Subtest: other supported scalar edits retain their quantity-object units without inventing claim metadata
+ok 19 - other supported scalar edits retain their quantity-object units without inventing claim metadata
+  ---
+  duration_ms: 0.3731
+  type: 'test'
+  ...
+# Subtest: schema unit fallback cannot accept arbitrary unitless claims, edits or mismatched pointers
+ok 20 - schema unit fallback cannot accept arbitrary unitless claims, edits or mismatched pointers
+  ---
+  duration_ms: 2.1169
+  type: 'test'
+  ...
+# Subtest: preview rejects supplied outcomes or execution and cannot hide a revision mismatch
+ok 21 - preview rejects supplied outcomes or execution and cannot hide a revision mismatch
+  ---
+  duration_ms: 0.5209
+  type: 'test'
+  ...
+# Subtest: hostile strings stay inspectable data and are escaped only at the rendering boundary
+ok 22 - hostile strings stay inspectable data and are escaped only at the rendering boundary
+  ---
+  duration_ms: 2.0002
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 199.3648
