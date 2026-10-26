@@ -1,0 +1,12 @@
+{
+  "declared_before_import_004_utc": "2026-10-26T13:55:05.136801+00:00",
+  "sha256": {
+    "scripts/import_thermal_m50t_development.py": "d1d6fe5c28764fcfeab0b805639cdba7505333731891ab1f80f2e3ccc20c5dff",
+    "tests/test_thermal_m50t_development.py": "187d8854808a88a455ae264d653e5221b2a99c93f89d140759a4e73de30b5e7c",
+    "reports/thermal_m50t_import_v1/PROCEDURE.md": "d2ececeb036e0a43c9aaedaa4b5ce508b0b0ad544c8761f65ab412d3d21546f2",
+    "reports/thermal_m50t_import_v1/FORMAT_ADDENDUM.md": "4a9793ba2b3000d9304780e7089c68b061cad33f016e35b92c906357ffb02efe",
+    "reports/thermal_m50t_import_v1/ANALYSIS_DECLARATION.md": "025416fc58c27f9b381e2c4a4120b7df0fae0c609ebae77b6b39b0e56a435234",
+    "reports/thermal_m50t_import_v1/procedure_seal.json": "791c1ebd43705a2b3da6859a3935d67c049690f7903f0801110136540934fb4f"
+  },
+  "scope": "Finish already used development diagnostics and replay; no physical fit; exact same 3 permitted members"
+}

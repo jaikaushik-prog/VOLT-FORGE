@@ -1,0 +1,6 @@
+{
+  "implementation_sha256": "9493cb8d1e1d853b9a03f72fb0a2335e947066029864d039a8904d73be150d80",
+  "procedure_seal_sha256": "791c1ebd43705a2b3da6859a3935d67c049690f7903f0801110136540934fb4f",
+  "out": "data/processed/thermal_m50t/import_001",
+  "measurement_members_opened_before_declaration": 0
+}

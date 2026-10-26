@@ -1,0 +1,6 @@
+{
+  "implementation_sha256": "91891e030a7cf39c5913331d8552c3637ba094046e57dfa4b178d36e6833a2dc",
+  "analysis_declaration_sha256": "025416fc58c27f9b381e2c4a4120b7df0fae0c609ebae77b6b39b0e56a435234",
+  "out": "data/processed/thermal_m50t/import_003",
+  "read_scope": "same three used-development members only"
+}

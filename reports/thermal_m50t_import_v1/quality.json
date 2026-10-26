@@ -1,0 +1,284 @@
+{
+  "thermal": {
+    "rows": 258987,
+    "start": 0.0,
+    "end": 258986.0,
+    "span_s": 258986.0,
+    "duplicates": 440,
+    "reversals": 0,
+    "nonfinite": 0,
+    "dt_quantiles_s": [
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      60.0
+    ]
+  },
+  "electrical": {
+    "rows": 1048146,
+    "start": 0.0,
+    "end": 249598.973,
+    "span_s": 249598.973,
+    "duplicates": 0,
+    "reversals": 0,
+    "nonfinite": 0,
+    "dt_quantiles_s": [
+      0.0009999999892897904,
+      0.001999999978579581,
+      0.24799999999959255,
+      1.0,
+      60.02799999999843
+    ]
+  },
+  "representation": {
+    "raw_cell_columns_1_based": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "mat_storage_channel_axis": 0,
+    "basis": "Five decoded labels and five-channel storage dimension; no permutation search",
+    "alternatives": {
+      "omit_last_raw_row": [
+        {
+          "label": "CellH top",
+          "median_processed_minus_raw_degC": 0.16264528126451694,
+          "min_difference_degC": 0.0426452812645195,
+          "max_difference_degC": 0.2726452812645199,
+          "std_difference_degC": 0.008149786345776183,
+          "range_of_difference_degC": 0.23000000000000043
+        },
+        {
+          "label": "cell +ve",
+          "median_processed_minus_raw_degC": 0.21070044940340082,
+          "min_difference_degC": 0.1507004494034021,
+          "max_difference_degC": 0.2807004494034011,
+          "std_difference_degC": 0.008063767897568108,
+          "range_of_difference_degC": 0.129999999999999
+        },
+        {
+          "label": "cell mid",
+          "median_processed_minus_raw_degC": 0.28111111111109466,
+          "min_difference_degC": 0.22111111111109238,
+          "max_difference_degC": 0.34111111111109693,
+          "std_difference_degC": 0.008011959243350492,
+          "range_of_difference_degC": 0.12000000000000455
+        },
+        {
+          "label": "cell -ve",
+          "median_processed_minus_raw_degC": 0.3622640632263803,
+          "min_difference_degC": 0.30226406322637445,
+          "max_difference_degC": 0.42226406322638255,
+          "std_difference_degC": 0.007938927175682736,
+          "range_of_difference_degC": 0.1200000000000081
+        },
+        {
+          "label": "CellC bottom",
+          "median_processed_minus_raw_degC": 0.2539454517278763,
+          "min_difference_degC": 0.13394545172788241,
+          "max_difference_degC": 0.37394545172787375,
+          "std_difference_degC": 0.012429626091959772,
+          "range_of_difference_degC": 0.23999999999999133
+        }
+      ],
+      "omit_first_raw_row": [
+        {
+          "label": "CellH top",
+          "median_processed_minus_raw_degC": 0.16264528126451694,
+          "min_difference_degC": 0.16264528126451694,
+          "max_difference_degC": 0.1626452812645205,
+          "std_difference_degC": 9.048502379951157e-17,
+          "range_of_difference_degC": 3.552713678800501e-15
+        },
+        {
+          "label": "cell +ve",
+          "median_processed_minus_raw_degC": 0.21070044940340082,
+          "min_difference_degC": 0.21070044940340082,
+          "max_difference_degC": 0.21070044940340438,
+          "std_difference_degC": 1.7654991470124687e-15,
+          "range_of_difference_degC": 3.552713678800501e-15
+        },
+        {
+          "label": "cell mid",
+          "median_processed_minus_raw_degC": 0.28111111111109466,
+          "min_difference_degC": 0.28111111111109466,
+          "max_difference_degC": 0.2811111111110982,
+          "std_difference_degC": 1.2429443805420595e-16,
+          "range_of_difference_degC": 3.552713678800501e-15
+        },
+        {
+          "label": "cell -ve",
+          "median_processed_minus_raw_degC": 0.3622640632263803,
+          "min_difference_degC": 0.3622640632263767,
+          "max_difference_degC": 0.3622640632263803,
+          "std_difference_degC": 1.7511312880770303e-15,
+          "range_of_difference_degC": 3.552713678800501e-15
+        },
+        {
+          "label": "CellC bottom",
+          "median_processed_minus_raw_degC": 0.2539454517278763,
+          "min_difference_degC": 0.2539454517278763,
+          "max_difference_degC": 0.25394545172787986,
+          "std_difference_degC": 1.5412779882377347e-15,
+          "range_of_difference_degC": 3.552713678800501e-15
+        }
+      ]
+    },
+    "raw_rows_preserved": 258987,
+    "processed_samples": 258986,
+    "note": "Same-record representation diagnostics only; no cross-instrument alignment or correction applied"
+  },
+  "author_processing": {
+    "relationships": {
+      "SS_MaxT_equals_cap": {
+        "max_abs_residual": 0.0,
+        "residuals": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "SS_CST_equals_base": {
+        "max_abs_residual": 0.0,
+        "residuals": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "SS_delT_equals_cap_minus_base": {
+        "max_abs_residual": 5.861977570020827e-14,
+        "residuals": [
+          -1.2878587085651816e-14,
+          1.1546319456101628e-14,
+          3.2862601528904634e-14,
+          5.861977570020827e-14,
+          2.6645352591003757e-14,
+          4.618527782440651e-14
+        ]
+      },
+      "SS_CCC_equals_SS_Q_over_SS_delT": {
+        "max_abs_residual": 0.00014426254877453193,
+        "residuals": [
+          1.418398058877779e-05,
+          2.0107095008992104e-06,
+          8.885608256292699e-06,
+          8.134053739589087e-06,
+          6.654694762159297e-06,
+          -0.00014426254877453193
+        ]
+      },
+      "Qnet_equals_SS_Q_plus_Qgain_minus_Qloss": {
+        "max_abs_residual": 0.0,
+        "residuals": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "AltdelT_declared_tab_tab_insulation_order": {
+        "max_abs_residual": 15.593573508561413,
+        "residuals": [
+          [
+            1.285498770630543,
+            2.2564943280892145,
+            3.4358021564836925,
+            4.867427003484991,
+            6.54344523960139,
+            8.463907681490326
+          ],
+          [
+            -0.06574353902442454,
+            -0.23496422092782865,
+            -0.3724603509588107,
+            -0.631017572501051,
+            -0.947738248571639,
+            -1.397393252241777
+          ],
+          [
+            -2.1932014833372087,
+            -3.8717038651815407,
+            -5.93874665598204,
+            -8.540709630278371,
+            -11.717218398863956,
+            -15.593573508561413
+          ]
+        ]
+      }
+    },
+    "fin_temperature_difference_degC": [
+      1.5056128241345839,
+      2.64855560634296,
+      4.06462095353449,
+      5.791381969446359,
+      7.836989734092377,
+      10.204462207789557
+    ],
+    "implied_SS_Q_per_fin_deltaT": [
+      0.23565966101694025,
+      0.235659661016949,
+      0.23565966101694724,
+      0.23565966101694832,
+      0.23565966101695004,
+      0.23565966101694763
+    ],
+    "inferred_rod_conductivity_if_SS_Q_is_W": [
+      500.08533250941963,
+      500.08533250943816,
+      500.08533250943447,
+      500.08533250943674,
+      500.08533250944043,
+      500.08533250943526
+    ],
+    "geometry_source": "Primary paper section 3.2: rod diameter 6 mm, TC separation 60 mm",
+    "AltQ_over_AltdelT": [
+      [
+        0.0011424105000000001,
+        0.0011424105000000001,
+        0.0011424105000000001,
+        0.0011424105000000001,
+        0.0011424105000000001,
+        0.0011424105000000001
+      ],
+      [
+        0.0074571428571428575,
+        0.0074571428571428575,
+        0.007457142857142857,
+        0.0074571428571428575,
+        0.007457142857142857,
+        0.0074571428571428575
+      ],
+      [
+        0.013050000000000003,
+        0.01305,
+        0.01305,
+        0.01305,
+        0.01305,
+        0.013050000000000003
+      ]
+    ],
+    "classification": "Author-processing algebra; inferred constants are not independent calibration",
+    "notes": [
+      "SS_T has 15 rows but only 14 templabels; final raw cold-junction label remains unassigned in the author labels.",
+      "Amb is the author label for the first raw cold-junction position; physical ambient location unverified.",
+      "No averaging windows, synchronization, heat units or uncertainty propagation inferred from matching algebra."
+    ]
+  },
+  "alignment": {
+    "status": "unresolved",
+    "applied_offset_s": null,
+    "resampling_performed": false
+  }
+}

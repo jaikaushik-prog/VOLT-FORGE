@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-26T13:55:07.027621+00:00",
+  "implementation_sha256": "d1d6fe5c28764fcfeab0b805639cdba7505333731891ab1f80f2e3ccc20c5dff",
+  "procedure_seal_sha256": "791c1ebd43705a2b3da6859a3935d67c049690f7903f0801110136540934fb4f",
+  "allowed": [
+    "M50/M50_50SOC_20deg_cell1_test103.txt",
+    "M50/Electrical/M50_50SOC_20deg_cell1_test103_CF8.txt",
+    "M50/M50_50SOC_20deg_cell1_test103.mat"
+  ],
+  "procedure_sha256": {
+    "PROCEDURE.md": "d2ececeb036e0a43c9aaedaa4b5ce508b0b0ad544c8761f65ab412d3d21546f2",
+    "FORMAT_ADDENDUM.md": "4a9793ba2b3000d9304780e7089c68b061cad33f016e35b92c906357ffb02efe",
+    "ANALYSIS_DECLARATION.md": "025416fc58c27f9b381e2c4a4120b7df0fae0c609ebae77b6b39b0e56a435234",
+    "procedure_seal.json": "791c1ebd43705a2b3da6859a3935d67c049690f7903f0801110136540934fb4f"
+  }
+}

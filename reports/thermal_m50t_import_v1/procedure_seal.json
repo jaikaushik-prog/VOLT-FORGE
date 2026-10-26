@@ -1,0 +1,12 @@
+{
+  "schema": "voltforge.thermal_m50t_import_procedure/1",
+  "declared_utc": "2026-10-26T13:31:56.418524+00:00",
+  "measurement_members_opened_this_workstream": 0,
+  "sha256": {
+    "reports/thermal_m50t_import_v1/PROCEDURE.md": "d2ececeb036e0a43c9aaedaa4b5ce508b0b0ad544c8761f65ab412d3d21546f2",
+    "configs/thermal_m50t_allocation_v1.json": "289e6bd52ef7e9e2a43725f33f349d46782e09f8ae70acc91b59d3069cb9d951",
+    "reports/thermal_m50t_intake_v1/inventory.json": "a152ae5d660fa43a5c492f332e4a1c67662a72b933e29b6826430fb0a18a10b1",
+    "reports/thermal_m50t_intake_v1/development_schema_003.json": "608bf429913ce850e2b2cb9b2e021169185af071365eb35ac632e621d55c613d",
+    "reports/thermal_m50t_intake_v1/sources.json": "7ff4e99008f663f7bace33e71856cf6bc1ae5ff8659780d25c103ca0c90bb5b2"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "started_utc": "2026-10-26T13:55:07.027621+00:00",
+  "implementation_sha256": "d1d6fe5c28764fcfeab0b805639cdba7505333731891ab1f80f2e3ccc20c5dff",
+  "procedure_seal_sha256": "791c1ebd43705a2b3da6859a3935d67c049690f7903f0801110136540934fb4f",
+  "allowed": [
+    "M50/M50_50SOC_20deg_cell1_test103.txt",
+    "M50/Electrical/M50_50SOC_20deg_cell1_test103_CF8.txt",
+    "M50/M50_50SOC_20deg_cell1_test103.mat"
+  ],
+  "procedure_sha256": {
+    "PROCEDURE.md": "d2ececeb036e0a43c9aaedaa4b5ce508b0b0ad544c8761f65ab412d3d21546f2",
+    "FORMAT_ADDENDUM.md": "4a9793ba2b3000d9304780e7089c68b061cad33f016e35b92c906357ffb02efe",
+    "ANALYSIS_DECLARATION.md": "025416fc58c27f9b381e2c4a4120b7df0fae0c609ebae77b6b39b0e56a435234",
+    "procedure_seal.json": "791c1ebd43705a2b3da6859a3935d67c049690f7903f0801110136540934fb4f"
+  },
+  "status": "completed",
+  "opened": [
+    "M50/M50_50SOC_20deg_cell1_test103.txt",
+    "M50/Electrical/M50_50SOC_20deg_cell1_test103_CF8.txt",
+    "M50/M50_50SOC_20deg_cell1_test103.mat"
+  ],
+  "source_members_sha256": {
+    "M50/M50_50SOC_20deg_cell1_test103.txt": "d9fa4a25dca50dcc8fa44942a52f54cece73782601516260e2cb82850190b1af",
+    "M50/Electrical/M50_50SOC_20deg_cell1_test103_CF8.txt": "66ae86dc54f7ef98a905a5da523304daeacfa8654d18e15ab79fe8e9a0b54449",
+    "M50/M50_50SOC_20deg_cell1_test103.mat": "209edeae79c5c6688bd7d450c99fafec5bf4665b4850d54aae73c4f93570a345"
+  },
+  "archive_sha256": "960ac78db8005d6b33072bbafdea95eb473057037ac5df85cbd99cf690a8cbb9",
+  "allocation_sha256": "289e6bd52ef7e9e2a43725f33f349d46782e09f8ae70acc91b59d3069cb9d951",
+  "outputs_sha256": {
+    "coverage.json": "245c4d0aa5dd20efc9fe206a5d5fb0ef5298b67d5a1431ea59145e889896821d",
+    "electrical_record.png": "430622f542a32cdb21118e7a1c710165a2a858c4fa0e973a3b8b96a3a3a46946",
+    "imported_arrays.npz": "7f00753bba61b374b3c919c12cfdd663aa1f25bb91e6c3d73782eb7447ea20e2",
+    "processing_diagnostics.png": "cda533e72025ee7821d3863a4aec45bb033dad6b055bc6c93f22d12aac84c9d3",
+    "quality.json": "2b411ebf6b80e518b9db6f70ed13200dadf8408fc88e2d5dc8573e0aa40a8fc2",
+    "report.json": "c040903353c4214a078b764b2cbe36ca98ad19fa3d6f1a0fb73b35effb14ad42",
+    "schema.json": "7cf317553d7824c7254e9ad1e3cba7bbc28c10c1ad35eba9e2538cd892fd83a7",
+    "started.json": "2fe6e4dc8bf5f7df28f38c03605b680a74dbfa77b46eb51f375c8f11a8750409",
+    "thermal_record.png": "a12a78d411603dd66207001c0c57078d936d7dd4169cc3807cdfc55f6240acf5"
+  }
+}

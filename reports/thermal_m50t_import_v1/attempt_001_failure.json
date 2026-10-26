@@ -1,0 +1,23 @@
+{
+  "started_utc": "2026-10-26T13:35:04.890084+00:00",
+  "implementation_sha256": "9493cb8d1e1d853b9a03f72fb0a2335e947066029864d039a8904d73be150d80",
+  "procedure_seal_sha256": "791c1ebd43705a2b3da6859a3935d67c049690f7903f0801110136540934fb4f",
+  "allowed": [
+    "M50/M50_50SOC_20deg_cell1_test103.txt",
+    "M50/Electrical/M50_50SOC_20deg_cell1_test103_CF8.txt",
+    "M50/M50_50SOC_20deg_cell1_test103.mat"
+  ],
+  "status": "failed",
+  "opened": [
+    "M50/M50_50SOC_20deg_cell1_test103.txt",
+    "M50/Electrical/M50_50SOC_20deg_cell1_test103_CF8.txt",
+    "M50/M50_50SOC_20deg_cell1_test103.mat"
+  ],
+  "error_type": "ValueError",
+  "error": "Numeric row width/empty field differs from header",
+  "source_members_sha256": {
+    "M50/M50_50SOC_20deg_cell1_test103.txt": "d9fa4a25dca50dcc8fa44942a52f54cece73782601516260e2cb82850190b1af",
+    "M50/Electrical/M50_50SOC_20deg_cell1_test103_CF8.txt": "66ae86dc54f7ef98a905a5da523304daeacfa8654d18e15ab79fe8e9a0b54449",
+    "M50/M50_50SOC_20deg_cell1_test103.mat": "209edeae79c5c6688bd7d450c99fafec5bf4665b4850d54aae73c4f93570a345"
+  }
+}

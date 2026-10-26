@@ -18,6 +18,25 @@ There is no optimizer or ranked repair result.
 Public project repository: https://github.com/jaikaushik-prog/VOLT-FORGE.
 Local upload preparation is described in [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md).
 
+## M50T thermal development import
+
+A dedicated electrothermal engineering workstream now imports the designated
+LG M50T cell-1 test-103 thermal, electrical and processed MATLAB records. See
+[THERMAL_DATA_READINESS.md](THERMAL_DATA_READINESS.md) and the
+[engineering decision](reports/thermal_m50t_import_v1/DECISION.md).
+The importer preserves original clocks, unknown fields and raw measurements.
+It checks actual pulse/rest coverage and relationships between the raw and
+author-processed data. All six cell-2 experiments remain reserved for assessment.
+
+This is development evidence. No physical thermal model has been fitted or
+adopted: heat calibration, processing definitions and cross-instrument timing
+remain limitations. Module thermal prediction is still unavailable. The
+electrical model and its experimental limitations remain unchanged.
+
+The [engineering handoff](reports/thermal_m50t_handoff_v1/READINESS.md)
+provides replay and preservation commands. All **89 focused tests** passed:
+24 importer checks, 26 earlier intake checks and 39 synthetic thermal checks.
+
 ## Local commands and thermal feasibility
 
 The **Commands** button now opens a local command assistant in the existing
@@ -31,8 +50,8 @@ A separate [thermal feasibility study and prototype](reports/thermal_feasibility
 now checks a one-node prescribed-heat balance. Its 39 analytical tests pass,
 but its demonstration uses **synthetic inputs with no established real-cell
 applicability**. Thermal prediction remains unavailable in the module editor.
-Exact-part public M50T thermal evidence has been identified for a future
-documentation/inventory review; no numerical outcome from it was opened.
+The subsequent M50T archive intake and bounded development import are tracked
+in the thermal readiness report above. The synthetic prototype remains frozen.
 
 The command workflow demonstration checks 133 claims/references against the
 backend and reproduces both exported A0/A1 runs. Frozen electrical models,
