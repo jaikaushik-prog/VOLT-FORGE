@@ -1,0 +1,145 @@
+{
+  "schema": "voltforge.thermal_m50t_channel_map/1",
+  "source_member": "M50/M50_50SOC_20deg_cell1_test103.txt",
+  "readme_member": "M50/M50 Data ReadMe.txt",
+  "rows": [
+    {
+      "column_1_based": 1,
+      "raw_header": "Time",
+      "declared_unit": "s",
+      "readme_label": "Time",
+      "figure_3_tc": null,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 2,
+      "raw_header": "A0080/212 Cold Junction",
+      "declared_unit": "degC",
+      "readme_label": "Cold Junction",
+      "figure_3_tc": null,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 3,
+      "raw_header": "A0080/212 Channel 1",
+      "declared_unit": "degC",
+      "readme_label": "+ve clamp",
+      "figure_3_tc": null,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 4,
+      "raw_header": "A0080/212 Channel 2",
+      "declared_unit": "degC",
+      "readme_label": "Cell Hot top",
+      "figure_3_tc": 1,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 5,
+      "raw_header": "A0080/212 Channel 3",
+      "declared_unit": "degC",
+      "readme_label": "cell can +ve",
+      "figure_3_tc": 2,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 6,
+      "raw_header": "A0080/212 Channel 4",
+      "declared_unit": "degC",
+      "readme_label": "cell can mid",
+      "figure_3_tc": 3,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 7,
+      "raw_header": "A0080/212 Channel 5",
+      "declared_unit": "degC",
+      "readme_label": "cell can -ve",
+      "figure_3_tc": 4,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 8,
+      "raw_header": "A0080/212 Channel 6",
+      "declared_unit": "degC",
+      "readme_label": "Cell Cold bottom",
+      "figure_3_tc": 5,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 9,
+      "raw_header": "A0080/212 Channel 7",
+      "declared_unit": "degC",
+      "readme_label": "-ve clamp",
+      "figure_3_tc": null,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 10,
+      "raw_header": "A0080/212 Channel 8",
+      "declared_unit": "degC",
+      "readme_label": "Tab +ve",
+      "figure_3_tc": 10,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 11,
+      "raw_header": "AO027/105 Channel 1",
+      "declared_unit": "degC",
+      "readme_label": "fin Cold",
+      "figure_3_tc": 7,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 12,
+      "raw_header": "AO027/105 Channel 2",
+      "declared_unit": "degC",
+      "readme_label": "fin Hot",
+      "figure_3_tc": 6,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 13,
+      "raw_header": "AO027/105 Channel 3",
+      "declared_unit": "degC",
+      "readme_label": "Tab -ve Cold",
+      "figure_3_tc": 8,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 14,
+      "raw_header": "AO027/105 Channel 4",
+      "declared_unit": "degC",
+      "readme_label": "Tab -ve Hot",
+      "figure_3_tc": 9,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 15,
+      "raw_header": "AO027/105 Channel 5",
+      "declared_unit": "degC",
+      "readme_label": "Ins",
+      "figure_3_tc": 11,
+      "mapping_status": "README ordinal mapping; cross-check against MAT labels still pending"
+    },
+    {
+      "column_1_based": 16,
+      "raw_header": "AO027/105 Cold Junction",
+      "declared_unit": "degC",
+      "readme_label": null,
+      "figure_3_tc": null,
+      "mapping_status": "Additional raw cold-junction column absent from README mapping"
+    }
+  ],
+  "raw_column_count": 16,
+  "readme_label_count": 15,
+  "ambient_channel_verified": false,
+  "matlab_label_values_decoded": false,
+  "notes": [
+    "No cold-junction channel is assumed ambient.",
+    "Paper: TC1 positive cap, TC5 cooled base, TC6 hot fin, TC7 cold fin.",
+    "Physical rig is inverted in Figure 3; top/bottom column names are cell-relative, not room coordinates.",
+    "Mapping is documentation plus header evidence; no validated full numerical importer yet."
+  ]
+}

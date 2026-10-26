@@ -1,0 +1,20 @@
+{
+  "schema": "voltforge.thermal_m50t_readiness/1",
+  "status": "intake_complete; definition/calibration verification pending",
+  "used_development_families": [
+    "cell_1_test_103"
+  ],
+  "unopened_development_families": 4,
+  "unopened_assessment_families": 6,
+  "unopened_measurement_members": 30,
+  "heat_related_processed_fields_present": true,
+  "heat_calibration_verified": false,
+  "time_alignment_verified": false,
+  "faulty_setup_to_test_mapping_verified": false,
+  "thermal_model_fitted": false,
+  "temperature_requirement": null,
+  "error_requirement": null,
+  "module_thermal_validation": "awaiting suitable measurements",
+  "next_local_work": "Bounded full-header/channel/label importer for test 103; preserve all reserves",
+  "external_dependency_if_not_recoverable": "Traceable processing/calibration and protocol/fault mapping, or another suitable public dataset"
+}

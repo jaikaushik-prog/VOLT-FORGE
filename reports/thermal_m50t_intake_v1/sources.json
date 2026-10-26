@@ -1,0 +1,39 @@
+{
+  "schema": "voltforge.thermal_m50t_sources/1",
+  "dataset_doi": "10.5281/zenodo.6421061",
+  "paper_doi": "10.1016/j.est.2022.105217",
+  "sources": [
+    {
+      "kind": "archive",
+      "local_path": "data/raw/thermal_m50t/M50.zip",
+      "url": "https://zenodo.org/records/6421061/files/M50.zip?download=1",
+      "bytes": 90006795,
+      "sha256": "960ac78db8005d6b33072bbafdea95eb473057037ac5df85cbd99cf690a8cbb9"
+    },
+    {
+      "kind": "external_readme",
+      "local_path": "data/raw/thermal_m50t/ReadMe.txt",
+      "url": "https://zenodo.org/records/6421061/files/ReadMe.txt?download=1",
+      "bytes": 427,
+      "sha256": "521bf43ae6065a3c9ec795505dc4b78e05f2a8dc311ea52be5134c055c819f4b"
+    },
+    {
+      "kind": "main_paper",
+      "local_path": "data/raw/thermal_m50t/documentation/1-s2.0-S2352152X22012166-main.pdf",
+      "url": "https://spiral.imperial.ac.uk/server/api/core/bitstreams/7390acd4-1bea-47d3-8ecd-33adb1897777/content",
+      "bytes": 1395111,
+      "sha256": "c7a3848cef59b3d5f74e560503330913585d254375432dbd0b5856d0f488cd55"
+    },
+    {
+      "kind": "supplement",
+      "local_path": "data/raw/thermal_m50t/documentation/1-s2.0-S2352152X22012166-mmc1.docx",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S2352152X22012166-mmc1.docx",
+      "bytes": 2184838,
+      "sha256": "b865c46a471b0066c2a1e4b2cff080dbcceafad7a934b572db3c01088b6bb778"
+    }
+  ],
+  "paper_visual_review": "Printed page 4: Figure 3 sensor diagram and Table 1 color-coded conditions",
+  "supplement_review": "All paragraph text and three photos plus vector Figure 9 inspected; no document edits",
+  "publication_outcomes_known": true,
+  "raw_outcome_scope": "Only test-103 schema probe; one initial development row accidentally presented in attempt 002, recorded in correction note. No assessment outcomes opened."
+}

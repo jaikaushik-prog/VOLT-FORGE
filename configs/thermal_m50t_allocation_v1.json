@@ -1,0 +1,19 @@
+{
+  "schema": "voltforge.thermal_m50t_allocation/1",
+  "archive_path": "data/raw/thermal_m50t/M50.zip",
+  "archive_sha256": "960ac78db8005d6b33072bbafdea95eb473057037ac5df85cbd99cf690a8cbb9",
+  "archive_md5": "6c447759755ea0d184050c49e4a2687a",
+  "external_readme_path": "data/raw/thermal_m50t/ReadMe.txt",
+  "external_readme_sha256": "521bf43ae6065a3c9ec795505dc4b78e05f2a8dc311ea52be5134c055c819f4b",
+  "internal_document": "M50/M50 Data ReadMe.txt",
+  "internal_document_sha256": "51c5774b9516b0600dfa0de10b1a2326fbf2c47c068363073536be15de50c0bd",
+  "development_candidate": ["cell_1_test_103"],
+  "unused_development_reserve": ["cell_1_test_100", "cell_1_test_102", "cell_1_test_104", "cell_1_test_105"],
+  "assessment_reserve": ["cell_2_test_106", "cell_2_test_107", "cell_2_test_108", "cell_2_test_109", "cell_2_test_110", "cell_2_test_111"],
+  "allocation_basis": "Specimen and nominal conditions in filenames only; all representations of each test remain together. Test 103 is the central 50% SOC/20 degC development candidate. No numerical outcomes inspected.",
+  "assessment_opening_authorized": false,
+  "fitting_authorized_by_this_procedure": false,
+  "current_access": "directory_metadata_and_allowlisted_readme_only",
+  "future_assessment_label": "Additional specimen in the published base-cooled fixture; not module validation or population-level evidence.",
+  "known_literature": "The paper's aggregate CCC results were already reviewed. Reserved raw records are unused by this project, not blind to all published results."
+}

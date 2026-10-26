@@ -1,0 +1,48 @@
+{
+  "schema": "voltforge.thermal_m50t_intake_verification/1",
+  "status": "passed",
+  "focused_tests": 65,
+  "new_intake_probe_tests": 26,
+  "existing_synthetic_thermal_tests": 39,
+  "inventory_replayed": true,
+  "development_schema_replayed": true,
+  "used_development_families": [
+    "cell_1_test_103"
+  ],
+  "unopened_measurement_members": 30,
+  "unopened_assessment_families": 6,
+  "assessment_members_opened": 0,
+  "prior_release_artifacts_unchanged": 250,
+  "prior_receipt_sha256": "98f5fe0779cecdb432b826351edeaa5115ff16a20378c0b5997da7f0e39b4c0b",
+  "frozen_software_id": "5e7b36e03cfcf526d841d025ff49834bd9905fcff5f9731d6424be1580d38ac1",
+  "runtime": {
+    "scipy": "1.13.1",
+    "h5py": "3.11.0"
+  },
+  "thermal_model_fitted": false,
+  "electrical_model_changed": false,
+  "historic_probe_exposure": "One initial development row in attempt 002; preserved and corrected, no assessment exposure",
+  "experimental_module_validation": "awaiting suitable measurements",
+  "artifacts_sha256": {
+    "configs/thermal_m50t_allocation_v1.json": "289e6bd52ef7e9e2a43725f33f349d46782e09f8ae70acc91b59d3069cb9d951",
+    "reports/thermal_m50t_intake_v1/channel_map.json": "4cfed9be8a74db10a3c30e708d4ba09d8f52ec5732249d81556fd1c405a1eb95",
+    "reports/thermal_m50t_intake_v1/DECISION.md": "c1411c6757a247851d72ee37c503446ba7dfae22b9ceab96176a56539e87d09a",
+    "reports/thermal_m50t_intake_v1/development_schema.json": "86871e69d80dc6a77b8cd2df94fb8343974aadf6076055d820108605b4ef5c4c",
+    "reports/thermal_m50t_intake_v1/development_schema_003.json": "608bf429913ce850e2b2cb9b2e021169185af071365eb35ac632e621d55c613d",
+    "reports/thermal_m50t_intake_v1/inventory.json": "a152ae5d660fa43a5c492f332e4a1c67662a72b933e29b6826430fb0a18a10b1",
+    "reports/thermal_m50t_intake_v1/PROCEDURE.md": "82a007095c1a357499e512ada586342d7c798fb0f1a52ef4daff420dba160926",
+    "reports/thermal_m50t_intake_v1/readiness.json": "ff993aabf83be7ce39c210aac1d557e746196d343f6bb3295cb5ec97b6b9872a",
+    "reports/thermal_m50t_intake_v1/SCHEMA_PROBE_ADDENDUM.md": "a76f19bd69b48c7ad436bcc4030211fbe954a9c3135347952205d2b25113a79c",
+    "reports/thermal_m50t_intake_v1/schema_probe_attempt_001.py": "61f1f9f2c868ac57b46bd217b306914580d83f1dbf807d0b204f89e8a6ea979d",
+    "reports/thermal_m50t_intake_v1/schema_probe_attempt_002.py": "268952558312c4c119bbab8c5d249dfb8eb01537c94d3478c23fabceaf0cb785",
+    "reports/thermal_m50t_intake_v1/SCHEMA_PROBE_PROCEDURE.md": "eb69a9ec166acdde71f40a73e6eda08cb5115ffc818d0263db04c5c4aa884e35",
+    "reports/thermal_m50t_intake_v1/SCHEMA_PROBE_REDACTION_NOTE.md": "098c4ccad2b4e694f045fe2afa4b15619a08bdceac38f53a008eb945ac100240",
+    "reports/thermal_m50t_intake_v1/sources.json": "7ff4e99008f663f7bace33e71856cf6bc1ae5ff8659780d25c103ca0c90bb5b2",
+    "reports/thermal_m50t_intake_v1/tests_001.xml": "9cba796d222b05a0eea26fdf86d7ccc5371b5b9e908f4ce326516ae7b3f8d602",
+    "scripts/intake_thermal_m50t.py": "c277a5c87f80032150e505f270c0565a8dd0e00e7b24a0bb178b37b4a1e3a4f3",
+    "scripts/probe_thermal_m50t_schema.py": "1a81a18935ecee5d3311d29c24587af162f11d66174a9ee57aa2cfa367459c99",
+    "scripts/verify_thermal_m50t_intake.py": "52cd124bce1ec993a2b8d8df41c9adce25ac36545f35bfab4c1e38f61033318b",
+    "tests/test_thermal_m50t_intake.py": "0709dc6f2d9929dc237bc7fcfff4ad52446590f06860e8153fa77faed1d2e5ca",
+    "THERMAL_DATA_READINESS.md": "7f8b90a698dfc00ef1209c20c3b10ce7db9c13bb4bf47d6b1f2670b6575d4daf"
+  }
+}
