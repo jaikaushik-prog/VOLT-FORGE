@@ -72,7 +72,7 @@ from voltforge.project.replay import replay
 print(json.dumps(replay(root, sys.argv[1]), indent=2, allow_nan=False))
 '''
     (out / 'replay.py').write_text(launcher, encoding='utf-8', newline='\n')
-    (out / 'README.md').write_text('''# Reproducible electrical simulation package
+    (out / 'README.md').write_text('''# Reproducible electrical and thermal simulation package
 
 These are simulations, not validated repairs or battery-performance gains.
 The frozen cell models and reference arrays are included; no raw archive is needed.
@@ -82,7 +82,7 @@ Use Python 3.12 and the pinned requirements under `software/<id>/requirements.tx
 Run `python replay.py RUN_ID` from any working directory. The launcher imports the
 captured source version for that run. It checks all exported bytes and dependency
 versions, reruns the existing electrical backend, and compares every numeric
-trajectory column with the saved run (rtol=1e-10, atol=1e-10).
+trajectory column with the saved run (rtol=1e-10, atol=1e-10). A completed thermal result requires its declared inputs and a verified thermal.csv; replay recomputes that model with the same tolerance. A recorded thermal failure cannot be certified as full-run reproduction. The thermal model is not experimentally validated.
 It prints a software reproduction result and never overwrites saved outputs.
 Matching calculations do not establish experimental accuracy.
 

@@ -9,11 +9,11 @@ async function api(path) {
   return body.result;
 }
 function notice(text, error=false) {
-  $('#measurement-notice').textContent=text;
+  $('#measurement-notice').hidden=!text;$('#measurement-notice').textContent=text;
   $('#measurement-notice').className='notice'+(error?' error':'');
 }
 function chart(selector, name, width, css) {
-  const points=record.overview.channels[name], height=220, left=56, right=16, top=18, bottom=35;
+  const points=record.overview.channels[name].map(p=>[p[0],displayValue(name,p[1]),p[2],p[3]]), height=220, left=56, right=16, top=18, bottom=35;
   const [lo,hi]=bounds(points.map(p=>p[1]));
   const duration=record.summary.duration_s;
   const x=t=>left+t/duration*(width-left-right), y=v=>height-bottom-(v-lo)/(hi-lo)*(height-top-bottom);
@@ -24,7 +24,7 @@ function chart(selector, name, width, css) {
   }
   let segment=null;
   const d=points.map(p=>{const command=p[3]===segment?'L':'M';segment=p[3];return `${command}${x(p[0]).toFixed(2)},${y(p[1]).toFixed(2)}`;}).join(' ');
-  parts.push(`<path class="measurement-line ${css}" d="${d}"/><text class="measurement-axis" x="${width-right}" y="${height-1}" text-anchor="end">elapsed min</text>`);
+  parts.push(`<path class="measurement-line ${css}" d="${d}"/><text class="measurement-axis" x="${width-right}" y="${height-1}" text-anchor="end">Time (min)</text>`);
   if(selectedRow)parts.push(`<line class="measurement-cursor" x1="${x(selectedRow.elapsed_s)}" x2="${x(selectedRow.elapsed_s)}" y1="${top}" y2="${height-bottom}"/>`);
   $(selector).innerHTML=`<title>${esc(name)} (${esc(record.units[name])}), source measurements</title>`+parts.join('');
 }
@@ -38,7 +38,7 @@ function plots() {
 function sampleValues() {
   const sensor=$('#sensor-channel').value;
   const fields=['current','voltage',sensor,'SOC','liquid_flow'].filter((name,i,a)=>a.indexOf(name)===i);
-  $('#sample-values').innerHTML=fields.map(name=>`<div><span>${esc(name)}</span><strong>${number(selectedRow.values[name],4)} <small>${esc(record.units[name])}</small></strong></div>`).join('');
+  $('#sample-values').innerHTML=fields.map(name=>`<div><span>${esc(signalName(name))}</span><strong>${number(displayValue(name,selectedRow.values[name]),2)} <small>${esc(displayUnit(name))}</small></strong></div>`).join('');
 }
 async function sample(index) {
   if(!Number.isInteger(index)||index<0||index>=record.summary.sample_count) {
@@ -53,10 +53,10 @@ async function sample(index) {
     const data=await api(`/api/measurements/ID01?view=rows&offset=${index}&limit=1`);
     if(!epoch.current(request))return;
     selectedRow=data.rows[0];
-    $('#sample-position').textContent=`${number(selectedRow.elapsed_s,3)} s · CSV line ${selectedRow.source_line} · source time ${selectedRow.raw_timestamp}`;
+    $('#sample-position').textContent=`${number(selectedRow.elapsed_s/60,2)} minutes into the experiment`;
     $('#sample-previous').disabled=index===0;$('#sample-next').disabled=index===record.summary.sample_count-1;
     sampleValues();plots();
-    notice('ID01 open as development evidence. 13 complete records remain protected.');
+    notice('');
   }catch(error){if(epoch.current(request))notice(error.message,true);}
 }
 function downloadSummary() {
@@ -68,15 +68,17 @@ function downloadSummary() {
 async function start() {
   try {
     const catalogue=await api('/api/measurements');
-    $('#record-list').innerHTML=catalogue.records.map(r=>`<button ${r.access==='protected'?'disabled title="Protected: new evidence allocation required"':'aria-current="true"'}>${esc(r.id)}<small>${r.access==='protected'?'Protected':'Development'}</small></button>`).join('');
+    $('#source-access').textContent=catalogue.development_available?'A development experiment is available below. Other experiments are reserved for independent assessment.':'The original measurements are available from the published dataset.';
+    if(!catalogue.development_available)return;
     record=await api('/api/measurements/ID01?view=overview');
     const s=record.summary;
+    $('#measurement-metrics').hidden=false;
     const metrics=[['Recorded samples',s.sample_count.toLocaleString()],['Recorded span',number(s.duration_s/60,1)+' min'],['Source current range',number(s.ranges.current.min,2)+' to '+number(s.ranges.current.max,2)+' A'],['Source voltage range',number(s.ranges.voltage.min,3)+' to '+number(s.ranges.voltage.max,3)+' V']];
     $('#measurement-metrics').innerHTML=metrics.map(([label,value])=>`<div><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
-    $('#sensor-channel').innerHTML=Object.keys(record.units).filter(n=>!['timesamp','current','voltage'].includes(n)).map(n=>`<option value="${esc(n)}">${esc(n)} [${esc(record.units[n])}]</option>`).join('');
+    $('#sensor-channel').innerHTML=Object.keys(record.units).filter(n=>!['timesamp','current','voltage'].includes(n)).map(n=>`<option value="${esc(n)}">${esc(signalName(n))} (${esc(displayUnit(n))})</option>`).join('');
     $('#sensor-channel').value='temp_cell-1_TH20';
     $('#measurement-limitations').innerHTML=record.limitations.map(t=>`<li>${esc(t)}</li>`).join('');
-    $('#measurement-provenance').textContent=JSON.stringify({units:record.units,unit_source:record.unit_source,current_polarity:record.current_polarity,time_basis:record.time_basis,sampling:s.sampling,missing_readings:s.missing_readings,provenance:record.provenance},null,2);
+    $('#measurement-provenance').textContent='Source: Plzak, Berta, Urge and Bata, FreeTwinEV (2026). The original sample times and readings are preserved. No model predictions are overlaid on these measurements.';
     $('#sample-index').max=s.sample_count-1;$('#sample-number').max=s.sample_count-1;
     $('#measurement-content').hidden=false;
     await sample(0);
@@ -87,6 +89,10 @@ async function start() {
     $('#sensor-channel').addEventListener('change',()=>{plots();if(selectedRow)sampleValues();});
     $('#download-summary').addEventListener('click',downloadSummary);
     window.addEventListener('resize',plots);
-  }catch(error){notice(error.message,true);$('#measurement-metrics').innerHTML=`<div class="empty-source">${esc(error.message)}<br>The LG simulator remains available through the link above.</div>`;}
+  }catch(error){notice('The measured experiment could not be opened. The source dataset remains available through the link above.',true);}
 }
-start();
+function displayValue(name,value){return value===null?null:record.units[name]==='K'?value-273.15:value;}
+function displayUnit(name){return record.units[name]==='K'?'°C':record.units[name];}
+function signalName(name){const names={current:'Module current',voltage:'Module voltage',SOC:'Recorded state of charge',liquid_flow:'Coolant flow',temp_ambient:'Ambient temperature',temp_inlet:'Coolant inlet temperature',temp_outlet:'Coolant outlet temperature'};return names[name]||name.replace(/^temp_cell-(\d)_TH(\d+)$/,'Cell $1 · temperature sensor $2').replace(/^temp_TH(\d+)$/,'Temperature sensor $1');}
+async function modelSources(){try{const {result}=await fetch('/api/studio').then(r=>r.json());$('#model-data-rows').innerHTML=result.library.map((m,i)=>`<tr><td>Measured sample ${i+1}</td><td>${number(m.capacity_Ah,2)} Ah</td><td>${number(m.resistance_mohm,1)} mΩ</td></tr>`).join('');}catch{ $('#model-data-rows').innerHTML='<tr><td colspan="3">Open the published experiments to inspect the original source.</td></tr>';}}
+modelSources();start();

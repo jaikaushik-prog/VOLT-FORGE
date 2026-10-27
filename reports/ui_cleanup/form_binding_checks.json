@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "scope": "Preview binding only, disposable project; no model fitting or user-project edit",
+  "checks": [
+    {
+      "check": "Ambient and four independent starting temperatures retain cell order",
+      "status": "PASS"
+    },
+    {
+      "check": "Per-cell heat capacity",
+      "value": [
+        70,
+        71,
+        72,
+        73
+      ],
+      "unit": "J/K",
+      "status": "PASS"
+    },
+    {
+      "check": "Three neighbour-pair conductances",
+      "value": [
+        0.02,
+        0.03,
+        0.04
+      ],
+      "unit": "W/K",
+      "status": "PASS"
+    },
+    {
+      "check": "Rail heat fraction",
+      "value": 0.35,
+      "unit": "fraction",
+      "status": "PASS"
+    },
+    {
+      "check": "State of charge percent to fraction",
+      "value": 0.95,
+      "unit": "fraction",
+      "status": "PASS"
+    },
+    {
+      "check": "Polarization millivolts to volts",
+      "value": 0.0025,
+      "unit": "V",
+      "status": "PASS"
+    },
+    {
+      "check": "rail_p_1: expanded click target and milliohms to ohms",
+      "value": 0.0025,
+      "unit": "ohm",
+      "status": "PASS"
+    },
+    {
+      "check": "rail_p_2: expanded click target and milliohms to ohms",
+      "value": 0.0025,
+      "unit": "ohm",
+      "status": "PASS"
+    },
+    {
+      "check": "rail_p_3: expanded click target and milliohms to ohms",
+      "value": 0.0025,
+      "unit": "ohm",
+      "status": "PASS"
+    },
+    {
+      "check": "rail_n_1: expanded click target and milliohms to ohms",
+      "value": 0.0025,
+      "unit": "ohm",
+      "status": "PASS"
+    },
+    {
+      "check": "rail_n_2: expanded click target and milliohms to ohms",
+      "value": 0.0025,
+      "unit": "ohm",
+      "status": "PASS"
+    },
+    {
+      "check": "rail_n_3: expanded click target and milliohms to ohms",
+      "value": 0.0025,
+      "unit": "ohm",
+      "status": "PASS"
+    }
+  ]
+}

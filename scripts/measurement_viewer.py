@@ -137,6 +137,7 @@ class MeasurementStore:
         return dict(schema_version='voltforge.measurement_viewer/1', dataset='FreeTwinEV P45B 1s4p',
             doi=self.allocation['dataset_doi'], source_url='https://zenodo.org/records/18405243',
             allocation_sha256=self.allocation_hash, records=[dict(id=r['id'], access=r['access'], reason=r['reason']) for r in self.allocation['records']],
+            development_available=any((self.source/r['csv']).is_file() for r in self.allocation['records'] if r['access']=='development'),
             limitations=LIMITATIONS, predictions_available=False)
 
     def original(self, record_id):

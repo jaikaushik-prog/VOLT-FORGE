@@ -1,4 +1,34 @@
-# VOLT-FORGE battery-engineering workspace
+# VOLT-FORGE
+
+A visual battery-engineering workspace. Build a circuit, test its behaviour and understand what a design change does.
+
+## Current version: V2 studio
+
+Updated 27 October 2026. V2 adds modular cell-and-connection editing, a quieter Build / Test / Results workflow, interactive charts, guided what-if experiments, named comparisons and an AI copilot with review before apply.
+
+![VOLT-FORGE V2 studio](reports/experience_rebuild/build.png)
+
+**[Open the V2 guide](V2_RELEASE.md)** for the current features, demonstration, model scope and verification. The broader direction is in [PRODUCT.md](PRODUCT.md); the scientific work is in [SCIENCE_AND_VALIDATION_PLAN.md](SCIENCE_AND_VALIDATION_PLAN.md).
+
+### Run locally
+
+Use Python 3.12. From the repository root on macOS or Linux:
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+PYTHONPATH=src .venv/bin/python scripts/run_editor.py --project workspace/editor_project --port 8792
+```
+
+Open **http://127.0.0.1:8792**. There is no separate frontend build step. The solver uses reference assets included in this repository. AI requires a compatible locally installed Codex or Claude CLI, an authenticated account and available usage. Your saved designs and downloaded source data remain local.
+
+Verification recorded for the rebuild: **291 Python tests passed**, 8 archive-dependent checks skipped, **28 JavaScript tests passed**, and **17 browser workflow checks passed**. The [V2 guide](V2_RELEASE.md) links the records.
+
+This is a functioning research prototype. Its present nominal-temperature electrical fits, declared thermal assumptions and independent-validation gaps are described in the V2 guide. The physical assembly is an editable illustration; solid-model CAD is future work.
+
+## Earlier engineering stages and reproduction
+
+The sections below preserve the historical electrical-model and dataset work. They describe their own stages; the V2 guide above describes the current user experience.
 
 Executable inspection of the **real Piombo et al. parallel-cell dataset**, DOI
 [10.17632/zh58byr53c.2](https://data.mendeley.com/datasets/zh58byr53c/2).
@@ -29,7 +59,9 @@ variant, run it, inspect current/voltage and compare/export saved simulations.
 The editor keeps its working project in ignored `workspace/editor_project`;
 recorded demonstration runs stay untouched. See [EDITOR_GUIDE.md](EDITOR_GUIDE.md)
 for exact controls, limitations, local HTTP contract and verification commands.
-Thermal simulation and AI optimization remain unavailable.
+New schema-2 projects include the explicitly unvalidated thermal model described
+in [V1_RELEASE.md](V1_RELEASE.md). Existing schema-1 projects remain electrical-only.
+AI optimization remains unavailable.
 
 ## Inspect the added P45B measurements
 
@@ -77,7 +109,9 @@ coverage flags and future-measurement ingestion. Four manual cases and separate
 sensitivities are supplied; there is no automatic ranking. Device voltage and
 excursion requirements remain unset: **requirement not configured**, never pass.
 All design decisions return **insufficient evidence**; experimental validation
-is **awaiting suitable measurements**. No thermal model is included.
+is **awaiting suitable measurements**. This frozen electrical backend has no
+temperature feedback; the local v1 extension computes a separate one-way thermal
+trajectory without modifying those sealed algorithms.
 
 ```powershell
 $env:PYTHONPATH = 'src'

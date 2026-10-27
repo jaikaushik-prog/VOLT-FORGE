@@ -1,5 +1,10 @@
 # Four-cell frontend contract — version 1
 
+**26 October 2026:** the compatible schema-2 extension adds declared thermal outputs,
+engineering screens, investigation records and case reopening. New scope and executed
+verification are in [V1_RELEASE.md](V1_RELEASE.md). Schema-1 projects keep their original
+electrical behavior. The operation-envelope contract remains compatible.
+
 The local 2D editor now implements this contract. Start with
 `python scripts/run_editor.py --open`; see [EDITOR_GUIDE.md](EDITOR_GUIDE.md) for
 controls and the thin loopback HTTP/job adapter. The underlying Python interface,

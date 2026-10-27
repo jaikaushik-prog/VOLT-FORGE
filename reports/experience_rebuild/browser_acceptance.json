@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Quiet opening screen without a settings panel or backend run identifiers",
+      "status": "PASS"
+    },
+    {
+      "check": "Blank design starts empty",
+      "status": "PASS"
+    },
+    {
+      "check": "Two added cells are connected by genuine editable terminal edges",
+      "status": "PASS",
+      "cells": 2,
+      "connections": 2
+    },
+    {
+      "check": "Selected cell thumbnail, plain-language controls and saved 60 percent charge",
+      "status": "PASS"
+    },
+    {
+      "check": "Drag moves geometry while preserving the electrical graph",
+      "status": "PASS"
+    },
+    {
+      "check": "Removing a link invalidates wiring; Undo restores a solvable circuit",
+      "status": "PASS"
+    },
+    {
+      "check": "A custom design completes a 735-second test, beyond the old 360-second example",
+      "status": "PASS"
+    },
+    {
+      "check": "Chart hover shows numeric values and click pins a saved time",
+      "status": "PASS",
+      "time": "4:57"
+    },
+    {
+      "check": "Keyboard time navigation, series toggles and temperature chart work",
+      "status": "PASS"
+    },
+    {
+      "check": "Assembly values and selected-cell readings stay bound to the probed sample",
+      "status": "PASS"
+    },
+    {
+      "check": "Guided connection-wear scenario creates and solves a separate alternative",
+      "status": "PASS"
+    },
+    {
+      "check": "Comparison uses named tests with matching conditions",
+      "status": "PASS"
+    },
+    {
+      "check": "Live AI proposes and applies a reviewed cell edit",
+      "status": "PASS"
+    },
+    {
+      "check": "No horizontal page overflow: laptop-build",
+      "status": "PASS",
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "check": "No horizontal page overflow: phone-build",
+      "status": "PASS",
+      "width": 393,
+      "height": 852
+    },
+    {
+      "check": "Results remain usable on a phone",
+      "status": "PASS"
+    },
+    {
+      "check": "No browser runtime or content-security-policy errors",
+      "status": "PASS"
+    }
+  ]
+}

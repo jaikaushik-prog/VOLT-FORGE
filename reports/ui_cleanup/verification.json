@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "scope": "Clean workspace UI, engineering-input binding and software reproduction; not experimental validation",
+  "checks": [
+    {
+      "check": "Focused workspace: four key results, assembly default and advanced detail collapsed",
+      "status": "PASS"
+    },
+    {
+      "check": "Properties collapse to give the canvas more space",
+      "status": "PASS"
+    },
+    {
+      "check": "Load form, rest interval, invalid-duration recovery, preview/save and stale-result tracking",
+      "status": "PASS"
+    },
+    {
+      "check": "Draft preservation across component selection and explicit discard",
+      "status": "PASS"
+    },
+    {
+      "check": "Sourced engineering limit and fresh electrical/thermal screen",
+      "status": "PASS",
+      "run_id": "run_0003"
+    },
+    {
+      "check": "Saved-time readout and one selected chart at a time",
+      "status": "PASS"
+    },
+    {
+      "check": "Focused finite investigation and automatic return to a runnable case variant",
+      "status": "PASS",
+      "case_id": "case_0003",
+      "variant": "C1",
+      "run_id": "run_0004"
+    },
+    {
+      "check": "Six main comparison metrics, deeper accounting collapsed and honest evidence labels",
+      "status": "PASS"
+    },
+    {
+      "check": "Dedicated model/evidence view with readable assumptions and recorded coverage",
+      "status": "PASS"
+    },
+    {
+      "check": "Downloaded package and two standalone electrical/thermal replays",
+      "status": "PASS",
+      "replays": [
+        {
+          "run_id": "run_0003",
+          "reproduced": true,
+          "samples": 1441,
+          "solver_status": "completed",
+          "scope": "software reproduction only",
+          "experimental_validation": "awaiting suitable measurements",
+          "thermal_reproduced": true
+        },
+        {
+          "run_id": "run_0004",
+          "reproduced": true,
+          "samples": 1441,
+          "solver_status": "completed",
+          "scope": "software reproduction only",
+          "experimental_validation": "awaiting suitable measurements",
+          "thermal_reproduced": true
+        }
+      ]
+    },
+    {
+      "check": "Variant creation through the project menu and historical-result isolation",
+      "status": "PASS"
+    },
+    {
+      "check": "393px layout, scrollable assembly, focused investigation and reachable operating inputs",
+      "status": "PASS"
+    },
+    {
+      "check": "Keyboard tab navigation and view state in the URL",
+      "status": "PASS"
+    },
+    {
+      "check": "No uncaught exceptions or error-level browser logs during the workflow",
+      "status": "PASS"
+    }
+  ],
+  "baseline_run": "run_0003",
+  "candidate_run": "run_0004"
+}

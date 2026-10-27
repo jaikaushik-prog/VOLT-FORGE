@@ -1,0 +1,65 @@
+{
+  "method": "Trapezoidal integral of each discharge-positive channel over the longest >1 A discharge block and separately within each contiguous later charging block (<-0.05 A); never bridges excluded rows. Ratio = discharged / recharged on the same channel.",
+  "physical_bound": "For equivalent full-state endpoints the ideal charge-balance bound is ratio <= 1; endpoint equivalence and independent measurement uncertainty are not established by this diagnostic.",
+  "runs": {
+    "test_53": {
+      "source": "reports/reconciliation/M1_NMC_Unaged_R0_T25_residual.csv",
+      "discharge": {
+        "first_row": 13315,
+        "last_row": 18749,
+        "duration_s": 5433.768
+      },
+      "recharge": {
+        "first_row": 21451,
+        "last_row": 33078
+      },
+      "channels": {
+        "cycler_module_current": {
+          "column": "module_discharge_A",
+          "mean_discharge_current_A": 14.554388214364003,
+          "discharged_Ah": 21.9681044330438,
+          "recharged_Ah": 19.19491346940243,
+          "discharged_over_recharged": 1.144475304255055
+        },
+        "hall_branch_sum": {
+          "column": "branch_sum_discharge_A",
+          "mean_discharge_current_A": 12.87109668230095,
+          "discharged_Ah": 19.427370355499313,
+          "recharged_Ah": 19.46107798417916,
+          "discharged_over_recharged": 0.9982679464772071
+        }
+      },
+      "run": "M1_NMC_Unaged_R0_T25"
+    },
+    "test_28": {
+      "source": "reports/reconciliation/M1_NMC_Unaged_R3_T25_residual.csv",
+      "discharge": {
+        "first_row": 22338,
+        "last_row": 26561,
+        "duration_s": 4222.823700000001
+      },
+      "recharge": {
+        "first_row": 29263,
+        "last_row": 41688
+      },
+      "channels": {
+        "cycler_module_current": {
+          "column": "module_discharge_A",
+          "mean_discharge_current_A": 14.561025787483562,
+          "discharged_Ah": 17.08017924488195,
+          "recharged_Ah": 18.574640920179245,
+          "discharged_over_recharged": 0.9195429035899298
+        },
+        "hall_branch_sum": {
+          "column": "branch_sum_discharge_A",
+          "mean_discharge_current_A": 16.108949438341295,
+          "discharged_Ah": 18.895888134553385,
+          "recharged_Ah": 18.816440173011976,
+          "discharged_over_recharged": 1.00422226312793
+        }
+      },
+      "run": "M1_NMC_Unaged_R3_T25"
+    }
+  },
+  "interpretation": "Direction-dependent inconsistency; faulty direction is not uniquely identified. No channel is corrected, rescaled or admitted by this check."
+}

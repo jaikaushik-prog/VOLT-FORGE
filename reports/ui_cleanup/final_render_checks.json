@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "after_desktop",
+      "width": 1440,
+      "height": 900,
+      "page_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "check": "after_laptop",
+      "width": 1280,
+      "height": 800,
+      "page_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "check": "after_tablet",
+      "width": 820,
+      "height": 1180,
+      "page_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "check": "after_mobile",
+      "width": 393,
+      "height": 852,
+      "page_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "check": "Mobile guide through the project menu",
+      "status": "PASS"
+    },
+    {
+      "check": "Actual cell overlay text contrast",
+      "minimum_ratio": 4.8651369983530754,
+      "status": "PASS"
+    },
+    {
+      "check": "Unrun/inherited variant has no fabricated numerical colour scale",
+      "status": "PASS"
+    },
+    {
+      "check": "No browser errors after final refinements",
+      "status": "PASS"
+    }
+  ],
+  "source_sha256": {
+    "web/editor/measurements.css": "9e83c2ebab170a18c73f0b7e2dd0e7fbdc18e1798e7df610f772d2fe42224c69",
+    "web/editor/state.mjs": "7d7f8b7fc74754f527692227c8b38fbae1def59b26d1f1a7afa7ff01a412f4b1",
+    "web/editor/index.html": "d8740406c20fb556e998ae5c8913cc75b3c8f6c2082e113adf7b301c669a3256",
+    "web/editor/workspace.mjs": "8119bbd44130ce3c1a105ce71b88c43e9f5c9ae1360461f9b0bd6cf9ab8df852",
+    "web/editor/assembly.mjs": "30f5e6e29a3dc182586ab8cbaf1d2caacd1c1d2ebb678e190aca24a96aa9b98a",
+    "web/editor/measurements.js": "cae8263f943fabf335ab0d29ca41c214a5ca3c13f726f7da77b338f9e15adc79",
+    "web/editor/style.css": "e7743fc0bbb8fc918577951dad05128f5e15593778c901240079ae9194fa88f6",
+    "web/editor/measurements.html": "00f44b691a2fde7dbae2f81e4ae64394b665fbace67d55b87c19f4921c9f76fa",
+    "web/editor/panels.mjs": "70625a97dff08d1e9846251cc04d3a8b5cee3670749e6fd77babe48081139213",
+    "web/editor/app.js": "558fddc87ba9ed16fff3799438ca5729090c5630589d2ab54a1c1285383c8525"
+  }
+}

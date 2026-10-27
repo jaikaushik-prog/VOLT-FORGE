@@ -1,0 +1,62 @@
+{
+  "input": {
+    "file": "raw_M1_NMC_Unaged_R0_T25.xlsx",
+    "sha256": "4596d3fed65277b548176bca7dd3dfa9efcd0bd2167722effc87ac38975c24bc",
+    "run": "Piombo test 53, M1_NMC_Unaged_R0_T25"
+  },
+  "sensor_baselines_C": [
+    24.902231589303955,
+    25.037841947282907,
+    25.175305765297654,
+    25.315454033334063,
+    25.49446626848198
+  ],
+  "baseline_window": "last 120 samples of step 4 (pre-discharge rest)",
+  "fitted_segment": "step 6 (post-discharge rest), module-mean excess over each sensor baseline",
+  "module_mean_fit": {
+    "initial_excess_K": 2.8469686187668226,
+    "tau_s": 465.9265704130493,
+    "asymptote_K": -0.095483755311116,
+    "rms_residual_K": 0.172425749969566,
+    "samples": 2701
+  },
+  "per_cell_fits": [
+    {
+      "cell_position": 1,
+      "tau_s": 444.83429030455216,
+      "rms_residual_K": 0.17287416481192835
+    },
+    {
+      "cell_position": 2,
+      "tau_s": 500.3830905586729,
+      "rms_residual_K": 0.25324244601826923
+    },
+    {
+      "cell_position": 3,
+      "tau_s": 458.62857690755055,
+      "rms_residual_K": 0.16139238162469763
+    },
+    {
+      "cell_position": 4,
+      "tau_s": 471.0268680372215,
+      "rms_residual_K": 0.18276633394483674
+    }
+  ],
+  "derived": {
+    "heat_capacity_J_per_K": 69.25,
+    "ambient_conductance_W_per_K": 0.14862857024575582
+  },
+  "assumptions": {
+    "mass_kg": 0.06925,
+    "specific_heat_J_per_kgK": 1000.0,
+    "neighbour_conductance_W_per_K": 0.05,
+    "rail_heat_to_cells_fraction": 0.5,
+    "equal_cells": "Equal Cth and ambient conductance for all four cells"
+  },
+  "limitations": [
+    "In-sample fit to one already-opened run; no held-out thermal assessment",
+    "Specific heat assumed; ambient conductance scales with it",
+    "Chamber airflow and fixture specific",
+    "Discharge heating was not used to set any parameter"
+  ]
+}

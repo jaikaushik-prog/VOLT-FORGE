@@ -44,7 +44,7 @@ def test_explicit_ladder_and_original_model_identity(project):
     assert d['connections']['rail_p_1']['node_a'] == 'p1'
     assert d['connections']['rail_p_1']['node_b'] == 'p2'
     assert all(v is None for v in d['requirements'].values())
-    assert x['capabilities']['thermal'] is False
+    assert x['capabilities']['thermal'] is True
     base, manifest = project._inputs(project._state())
     for mutation in ['topology', 'terminal', 'rewire', 'identity', 'model']:
         bad = copy.deepcopy(d)

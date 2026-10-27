@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "model": "lumped_four_node_v1",
+  "derivation": "reports/thermal_v1/cooling_derivation.json",
+  "derivation_input_sha256": "4596d3fed65277b548176bca7dd3dfa9efcd0bd2167722effc87ac38975c24bc",
+  "heat_capacity_J_per_K": {
+    "value": [
+      69.25,
+      69.25,
+      69.25,
+      69.25
+    ],
+    "unit": "J/K",
+    "classification": "assumed",
+    "source": "Nominal mass 69.25 g (Piombo et al. 2024, Table 1) x assumed specific heat 1000 J/(kg K); not measured"
+  },
+  "ambient_conductance_W_per_K": {
+    "value": [
+      0.148629,
+      0.148629,
+      0.148629,
+      0.148629
+    ],
+    "unit": "W/K",
+    "classification": "assumed",
+    "source": "Cth/tau with tau = 465.9 s fitted to the measured post-discharge cooling of Piombo test 53 (reports/thermal_v1/cooling_derivation.json); in-sample, chamber-specific"
+  },
+  "neighbour_conductance_W_per_K": {
+    "value": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "unit": "W/K",
+    "classification": "assumed",
+    "source": "Assumed weak cell-to-cell coupling through copper bars and air; not identified from data"
+  },
+  "rail_heat_to_cells_fraction": {
+    "value": 0.5,
+    "unit": "fraction",
+    "classification": "assumed",
+    "source": "Assumed: half of each rail-segment loss heats its two adjacent cells equally; the rest leaves to ambient"
+  }
+}

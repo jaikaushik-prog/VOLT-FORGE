@@ -1,5 +1,9 @@
 # VOLT-FORGE first product workflow
 
+**Current local release, 26 October 2026:** [V1_RELEASE.md](V1_RELEASE.md)
+records the completed thermal, engineering-screen, investigator and assembly extension.
+The scientific and future-capability boundaries below remain explicit.
+
 The [product vision](VOLT_FORGE_Product_Vision.md) is the direction: a visual
 battery-engineering workspace connecting design choices, simulation and evidence.
 Its concept mockups and broader stage descriptions are not implemented features.
@@ -23,7 +27,8 @@ plots, evidence view and explicit run comparison. See [EDITOR_GUIDE.md](EDITOR_G
   four cell branches, six independently specified rail resistances, p1/n1 terminals.
 - Frozen v2 rested-reference/one-RC electrical dynamics through the existing solver.
   Current sharing, voltage, SOC/polarization, rail drops, charge, delivered service
-  and electrical resistor dissipation; no predicted temperature.
+  and electrical resistor dissipation. New schema-2 projects add a separate,
+  declared-parameter, unvalidated surface-equivalent thermal trajectory.
 - One shared versioned project, named variants, immutable design revisions and run
   snapshots, code/model/runtime hashes, explicit provenance and units.
 - Whitelisted resistance, initial-state, load, temperature-assumption, numerical
@@ -39,9 +44,10 @@ plots, evidence view and explicit run comparison. See [EDITOR_GUIDE.md](EDITOR_G
 - Automated tests including software equivalence, lifecycle/invalidation, failure
   preservation, synthetic ingestion and replay in a separate process.
 
-The exact editable properties and output channels are in
-[FRONTEND_CONTRACT.md](FRONTEND_CONTRACT.md). Temperature changes are assumptions
-used in coverage metadata only; they do not activate a temperature law.
+The original editable properties and output channels are in
+[FRONTEND_CONTRACT.md](FRONTEND_CONTRACT.md), with the schema-2 extension documented
+in [V1_RELEASE.md](V1_RELEASE.md). Temperature changes are declared initial/ambient
+conditions for the one-way thermal model; they do not activate an electrical temperature law.
 Capacity/reference changes are predeclared exploratory sensitivities, not new fits.
 
 ## Next implementation milestone
@@ -66,9 +72,9 @@ sequences before any further fitting or selection.
 
 ## Future, unavailable now
 
-General 3D CAD/assembly; arbitrary cell placement/rewiring/topologies/chemistries;
-geometry-to-resistance rules; thermal/contact/cooling models; current-density or
-stress fields; component cost/manufacturing feasibility; failure-case search;
+General 3D CAD; arbitrary cell placement/rewiring/topologies/chemistries;
+geometry-to-resistance rules; new cooling geometries and validated thermal/contact models; current-density or
+stress fields; component cost/manufacturing feasibility; advanced failure-case search;
 ranked repairs and optimization; natural-language copilot; collaborative editing;
 CAD/PDF manufacturing exports; pack-scale validation.
 

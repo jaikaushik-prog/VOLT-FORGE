@@ -1,0 +1,178 @@
+TAP version 13
+# Subtest: colorFor hits the palette stops, blends channels as worked by hand, and falls back to neutral
+ok 1 - colorFor hits the palette stops, blends channels as worked by hand, and falls back to neutral
+  ---
+  duration_ms: 2.234167
+  type: 'test'
+  ...
+# Subtest: textColorFor picks dark ink on light fills and white ink on dark fills
+ok 2 - textColorFor picks dark ink on light fills and white ink on dark fills
+  ---
+  duration_ms: 0.199958
+  type: 'test'
+  ...
+# Subtest: assemblySVG draws four selectable cells and six rail segments with hand-derived colours and legend
+ok 3 - assemblySVG draws four selectable cells and six rail segments with hand-derived colours and legend
+  ---
+  duration_ms: 2.90075
+  type: 'test'
+  ...
+# Subtest: markup in identities and units is escaped and can never appear raw
+ok 4 - markup in identities and units is escaped and can never appear raw
+  ---
+  duration_ms: 0.30725
+  type: 'test'
+  ...
+# Subtest: output has no style attribute and no inline event handler attribute
+ok 5 - output has no style attribute and no inline event handler attribute
+  ---
+  duration_ms: 2.641125
+  type: 'test'
+  ...
+# Subtest: overlay 'none' draws no legend, no time text and plain white cells
+ok 6 - overlay 'none' draws no legend, no time text and plain white cells
+  ---
+  duration_ms: 0.333208
+  type: 'test'
+  ...
+# Subtest: cell value text retains at least 4.5:1 contrast throughout both overlay scales
+ok 7 - cell value text retains at least 4.5:1 contrast throughout both overlay scales
+  ---
+  duration_ms: 14.131958
+  type: 'test'
+  ...
+# Subtest: inherited and sensitivity runs cannot be selected as current nominal results
+ok 8 - inherited and sensitivity runs cannot be selected as current nominal results
+  ---
+  duration_ms: 1.117292
+  type: 'test'
+  ...
+# Subtest: late results fail the selection epoch after a variant change
+ok 9 - late results fail the selection epoch after a variant change
+  ---
+  duration_ms: 0.218667
+  type: 'test'
+  ...
+# Subtest: user content escapes markup and numeric edits reject empty or nonfinite input
+ok 10 - user content escapes markup and numeric edits reject empty or nonfinite input
+  ---
+  duration_ms: 0.576834
+  type: 'test'
+  ...
+# Subtest: chart bounds show negative charge and flat data without undefined scales
+ok 11 - chart bounds show negative charge and flat data without undefined scales
+  ---
+  duration_ms: 0.261416
+  type: 'test'
+  ...
+# Subtest: investigation exposes thermal failures without concealing electrical results
+ok 12 - investigation exposes thermal failures without concealing electrical results
+  ---
+  duration_ms: 1.493208
+  type: 'test'
+  ...
+# Subtest: rangeOf collects finite values from cell_1..cell_4 only
+ok 13 - rangeOf collects finite values from cell_1..cell_4 only
+  ---
+  duration_ms: 1.534542
+  type: 'test'
+  ...
+# Subtest: thermalMetricsHTML shows an unavailable card with its reason, or three simulated metric cards
+ok 14 - thermalMetricsHTML shows an unavailable card with its reason, or three simulated metric cards
+  ---
+  duration_ms: 0.494875
+  type: 'test'
+  ...
+# Subtest: requirementsHTML maps every status to its class, keeps the fixed row order, and escapes the source
+ok 15 - requirementsHTML maps every status to its class, keeps the fixed row order, and escapes the source
+  ---
+  duration_ms: 1.281917
+  type: 'test'
+  ...
+# Subtest: parsePlan converts milliohms to ohms, keeps lists in order, and rejects bad input
+ok 16 - parsePlan converts milliohms to ohms, keeps lists in order, and rejects bad input
+  ---
+  duration_ms: 0.891417
+  type: 'test'
+  ...
+# Subtest: investigationFormHTML has the six segment checkboxes and the named inputs
+ok 17 - investigationFormHTML has the six segment checkboxes and the named inputs
+  ---
+  duration_ms: 0.528042
+  type: 'test'
+  ...
+# Subtest: investigationHTML lists coverage, per-requirement rankings and the exploration table, each case with an open button
+ok 18 - investigationHTML lists coverage, per-requirement rankings and the exploration table, each case with an open button
+  ---
+  duration_ms: 2.2075
+  type: 'test'
+  ...
+# Subtest: no output carries a style attribute or an inline event handler attribute
+ok 19 - no output carries a style attribute or an inline event handler attribute
+  ---
+  duration_ms: 1.522333
+  type: 'test'
+  ...
+# Subtest: Cell insertion, real terminal edges, removal and undo preserve graph meaning
+ok 20 - Cell insertion, real terminal edges, removal and undo preserve graph meaning
+  ---
+  duration_ms: 2.439375
+  type: 'test'
+  ...
+# Subtest: Geometry and names are separate from electrical changes
+ok 21 - Geometry and names are separate from electrical changes
+  ---
+  duration_ms: 0.567083
+  type: 'test'
+  ...
+# Subtest: Probe chooses nearest saved sample, including ends and unequal spacing
+ok 22 - Probe chooses nearest saved sample, including ends and unequal spacing
+  ---
+  duration_ms: 0.105208
+  type: 'test'
+  ...
+# Subtest: Long 16-cell trajectories render without spreading an array into function arguments
+ok 23 - Long 16-cell trajectories render without spreading an array into function arguments
+  ---
+  duration_ms: 89.466333
+  type: 'test'
+  ...
+# Subtest: Tooltips escape cell names and display the real chosen data point
+ok 24 - Tooltips escape cell names and display the real chosen data point
+  ---
+  duration_ms: 0.377625
+  type: 'test'
+  ...
+# Subtest: the load editor preserves discharge, rest and charging as exact contiguous intervals
+ok 25 - the load editor preserves discharge, rest and charging as exact contiguous intervals
+  ---
+  duration_ms: 2.248125
+  type: 'test'
+  ...
+# Subtest: empty, negative, nonfinite and subprecision durations cannot become solver inputs
+ok 26 - empty, negative, nonfinite and subprecision durations cannot become solver inputs
+  ---
+  duration_ms: 0.198667
+  type: 'test'
+  ...
+# Subtest: result labels preserve ownership, historical freshness and incomplete execution
+ok 27 - result labels preserve ownership, historical freshness and incomplete execution
+  ---
+  duration_ms: 0.226292
+  type: 'test'
+  ...
+# Subtest: display names explain components and retain unknown names without inventing a component
+ok 28 - display names explain components and retain unknown names without inventing a component
+  ---
+  duration_ms: 0.158125
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 234.294875

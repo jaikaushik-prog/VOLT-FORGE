@@ -121,9 +121,12 @@ def test_static_session_and_busy_mutations(server):
     with pytest.raises(OSError):
         editor.EditorServer(('127.0.0.1', server.server_port), server.project)
     status, body, headers = http(server, '/')
-    assert status == 200 and b'Four-cell workspace' in body
+    assert status == 200 and b'Battery workspace' in body
     assert "frame-ancestors 'none'" in headers['Content-Security-Policy']
     assert http(server, '/state.mjs')[2]['Content-Type'].startswith('text/javascript')
+    module_status, module_body, module_headers = http(server, '/workspace.mjs')
+    assert module_status == 200 and b'export function loadProfile' in module_body
+    assert module_headers['Content-Type'].startswith('text/javascript')
     assert http(server, '/api/session')[1]['result']['token'] == server.token
     # An explicit busy latch exercises the gate without relying on thread timing.
     with server.gate:

@@ -18,13 +18,18 @@ sys.path.insert(0, str(ROOT / 'src'))
 sys.path.insert(0, str(ROOT / 'scripts'))
 from voltforge.project import Project, dispatch
 from measurement_viewer import MeasurementStore, MeasurementError
+from voltforge.studio.store import Studio
+from voltforge.studio.copilot import Copilot
 
 ASSETS = ROOT / 'web/editor'
-OPERATIONS = {'inspect', 'validate_edit', 'apply_edit', 'create_variant', 'update_display', 'get_run', 'series', 'compare'}
-MUTATIONS = {'apply_edit', 'create_variant', 'update_display'}
+OPERATIONS = {'inspect', 'validate_edit', 'apply_edit', 'create_variant', 'update_display', 'get_run', 'series', 'compare',
+              'get_investigation', 'list_investigations', 'open_case'}
+MUTATIONS = {'apply_edit', 'create_variant', 'update_display', 'open_case'}
 STATIC = {'/': 'index.html', '/index.html': 'index.html', '/style.css': 'style.css',
-          '/app.js': 'app.js', '/state.mjs': 'state.mjs', '/favicon.svg': 'favicon.svg',
+          '/app.js': 'app.js', '/state.mjs': 'state.mjs', '/assembly.mjs': 'assembly.mjs', '/panels.mjs': 'panels.mjs', '/workspace.mjs': 'workspace.mjs', '/favicon.svg': 'favicon.svg',
           '/measurements': 'measurements.html', '/measurements.js': 'measurements.js', '/measurements.css': 'measurements.css'}
+STATIC.update({'/studio.js':'studio.js','/studio.css':'studio.css','/studio-canvas.mjs':'studio-canvas.mjs',
+               '/studio-charts.mjs':'studio-charts.mjs','/studio-state.mjs':'studio-state.mjs'})
 
 
 def error(code, message):
@@ -56,6 +61,8 @@ class EditorServer(ThreadingHTTPServer):
         self.downloads = {}
         self.gate = threading.Lock()
         self.active_job = None
+        self.studio = Studio(self.project)
+        self.copilot = Copilot(self.studio)
         self.worker = ThreadPoolExecutor(max_workers=1, thread_name_prefix='voltforge-editor')
         super().__init__(address, Handler)
 
@@ -67,9 +74,10 @@ class EditorServer(ThreadingHTTPServer):
         if not isinstance(request, dict) or set(request) != {'operation', 'arguments'}:
             return error('invalid_request', 'Expected operation and arguments.'), 400
         op, args = request['operation'], request['arguments']
-        if op not in ('run', 'export') or not isinstance(args, dict):
-            return error('unsupported_request', 'Only run and export are background jobs.'), 400
-        keys = {'variant_id', 'expected_revision', 'scenario_id'} if op == 'run' else {'selections'}
+        if op not in ('run', 'export', 'investigate') or not isinstance(args, dict):
+            return error('unsupported_request', 'Only run, export and investigate are background jobs.'), 400
+        keys = {'run': {'variant_id', 'expected_revision', 'scenario_id'}, 'export': {'selections'},
+                'investigate': {'variant_id', 'expected_revision', 'plan'}}[op]
         required = {'variant_id', 'expected_revision'} if op == 'run' else keys
         if set(args) - keys or not required <= set(args):
             return error('invalid_request', 'Invalid job arguments.'), 400
@@ -88,6 +96,8 @@ class EditorServer(ThreadingHTTPServer):
         try:
             if op == 'run':
                 response = dispatch(self.project, dict(operation='run', arguments={**args, 'plots': False}))
+            elif op == 'investigate':
+                response = dispatch(self.project, dict(operation='investigate', arguments=args))
             else:
                 folder = self.project.parent / 'editor_exports' / jid
                 response = dispatch(self.project, dict(operation='export', arguments={**args, 'out': str(folder)}))
@@ -166,6 +176,14 @@ class Handler(BaseHTTPRequestHandler):
                 active = self.server.active_job
             return self.send_json(dict(status='ok', result=dict(token=self.server.token, project=str(self.server.project),
                 adapter_version='voltforge.editor/1', active_job=active)))
+        if path == '/api/studio':
+            return self.send_json(dict(status='ok',result=dict(**self.server.studio.catalog(),copilot=self.server.copilot.status())))
+        if path.startswith('/api/studio/export/'):
+            try:
+                body=self.server.studio.export(path.rsplit('/',1)[-1])
+                return self.send_bytes(body,'application/zip',download='volt-forge-experiment.zip')
+            except ValueError as exc:
+                return self.send_json(error('invalid_request',str(exc)),400)
         if path.startswith('/api/jobs/'):
             with self.server.gate:
                 job = dict(self.server.jobs.get(path.rsplit('/', 1)[-1], {}))
@@ -191,6 +209,8 @@ class Handler(BaseHTTPRequestHandler):
         except (ValueError, UnicodeDecodeError) as exc:
             return self.send_json(error('invalid_request', str(exc)), 400)
         path = urlsplit(self.path).path
+        if path == '/api/studio':
+            return self.studio_request(request)
         if path == '/api/jobs':
             response, status = self.server.start_job(request)
             return self.send_json(response, status)
@@ -207,6 +227,24 @@ class Handler(BaseHTTPRequestHandler):
         else:
             response = dispatch(self.server.project, request)
         self.send_json(response, 200 if response['status'] == 'ok' else 400)
+
+    def studio_request(self, request):
+        op,args=request['operation'],request['arguments']
+        methods={'create':self.server.studio.create,'open':self.server.studio.document,
+                 'save':self.server.studio.save,'run':self.server.studio.run,'test':self.server.studio.test,
+                 'investigate':self.server.studio.investigate,'compare':self.server.studio.compare,
+                 'chat':self.server.copilot.chat,'apply_proposal':self.server.copilot.apply}
+        if not isinstance(op,str) or op not in methods or not isinstance(args,dict):
+            return self.send_json(error('invalid_request','Choose an available studio action.'),400)
+        try:
+            response=methods[op](**args)
+            return self.send_json(dict(status='ok',result=response))
+        except TypeError:
+            return self.send_json(error('invalid_request','This action has missing or unsupported inputs.'),400)
+        except ValueError as exc:
+            return self.send_json(error('invalid_request',str(exc)),400)
+        except Exception:
+            return self.send_json(error('server_error','This action could not finish. Your saved design is unchanged. Try again.'),500)
 
 
 def main():

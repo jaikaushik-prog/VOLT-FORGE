@@ -1,134 +1,73 @@
-# Local 2D four-cell workspace
+# VOLT-FORGE local workspace
 
-The editor runs the existing frozen-v2 project backend. It is a local, single-user
-electrical workbench, not experimental module validation. No new production
-dependencies, frontend build step or internet connection are required after the
-repository's Python requirements are installed.
+27 October 2026. The workspace connects a four-cell battery design to its simulated current, voltage and surface-equivalent temperature. It uses the existing frozen electrical models and declared one-way thermal assumptions. Experimental module and thermal validation remain pending.
 
-## Start
+## Open the application
 
-The **Measurements** link opens a separate P45B source-data viewer at
-`/measurements`. It reads allocated ID01 only and does not run the LG model on
-P45B measurements. See [measurement guide](reports/measurement_viewer_v1/USAGE.md)
-for source-folder setup, sensor/sample controls, exports and access restrictions.
+On the current Mac, from the repository root:
 
-From the repository root, using its existing Python environment:
-
-```powershell
-& C:\Users\DELL\anaconda3\python.exe scripts\run_editor.py --open
+```bash
+PYTHONPATH=src .venv/bin/python scripts/run_editor.py --project workspace/editor_project --port 8792
 ```
 
-Or, with an equivalent Python 3.12 environment, `python scripts/run_editor.py --open`.
-Open **http://127.0.0.1:8765**. Stop the server with Ctrl+C. Change the port with
-`--port 8766` if needed. The default project is `workspace/editor_project`, which
-is ignored by Git. Restarting reopens it. To start another working project:
+Open **http://127.0.0.1:8792**. The project persists under `workspace/editor_project`, which Git ignores. Stop the server with Ctrl+C. A new working project can use another `--project workspace/name` and `--port` value. The general launcher defaults to port 8765. Python 3.12 and the pinned requirements are needed; there is no frontend build step or runtime internet dependency.
 
-```powershell
-& C:\Users\DELL\anaconda3\python.exe scripts\run_editor.py --project workspace\another_project --port 8766 --open
-```
+The Measurements link opens the separate P45B source viewer. It does not run the LG model against P45B data. Its existing scope and source-access allocation remain in [the measurement guide](reports/measurement_viewer_v1/USAGE.md).
 
-The editor rejects working destinations inside reports, raw data or source
-directories. It never edits the recorded A0/A1 demonstration. Do not use the same
-working project concurrently from another process. A crashed process can leave
-the backend's exclusive writer lock: inspect the project and confirm no writer
-remains before recovering it; the editor does not silently remove locks.
+## Work through an experiment
 
-## Complete the first workflow
+1. **Set the operating conditions.** The properties pane starts with current and duration. Add intervals for a changing load or rest. Positive current discharges, negative current charges and zero current rests. Starting temperatures, limits and advanced model settings are available under Configure.
+2. **Preview and save a change.** Preview shows the proposed input and which results become outdated. Exact units, provenance and evidence notes are available underneath. Save creates the revision. A visible unsaved edit cannot become a simulation input; Run remains disabled until it is saved or discarded. Component selection retains a local draft, and leaving the page warns about unsaved drafts.
+3. **Run the selected design.** Whole-run extrema and delivered energy appear below the assembly. The assembly opens at the final saved time so you can see the calculated differences immediately. The time slider and selected-component readout show a specific saved instant. Four summary values lead; additional metrics and one selected chart are under Explore charts.
+4. **Inspect a component.** Select it in the assembly/circuit or Designs & components menu. A cell exposes starting charge/polarization and its read-only fitted model. A connection exposes effective resistance in mΩ. Geometry is illustrative and moving the circuit drawing changes no physical parameter.
+5. **Investigate conditions.** Configure a sourced limit, then open Investigate. Select connections and resistance additions. The preview states the real case count and budget. Load and ambient variations are under advanced conditions. Ambient tests also start all cells at the selected ambient. Results apply to the finite evaluated set. Open a case as a variant to run it normally.
+6. **Compare designs.** Select completed saved runs under common operating conditions. Six main metrics show alternative minus reference; power, losses, requirements and exact evidence are available below. Changed load, initial state, thermal parameters or software cannot silently enter a like-for-like comparison.
+7. **Export results.** Choose explicit saved runs, prepare the package and download it. It includes the recorded inputs, outputs, model/source references, source snapshot and replay code. In the extracted folder run `python replay.py RUN_ID` with the recorded Python environment. Reproduction verifies software output, not experimental accuracy.
 
-1. Run A0. The supplied proposed case is 14.55 A for 360 s, equal initial SOC,
-   assumed 23 °C conditions and six assumed 1 mΩ rail segments. Read the exact
-   module/cell properties and their provenance in the inspector.
-2. Create A1 with the plus button beside Design variants. Its inherited run is
-   explicitly outdated. It will not automatically appear as a current result.
-3. Select Positive rail 1. Enter **0.5 mΩ**, keep the classification as assumed,
-   and record the reason. Preview change, then Apply revision. The preview sends
-   0.0005 ohm to the backend. This is a hypothetical connection, not a repair claim.
-4. Run A1. Inspect current sharing and cell/module voltage. The time slider uses
-   actual saved solver samples. Select a cell for SOC and polarization or a rail
-   for current, voltage drop and electrical resistor loss.
-5. Open Evidence for requirement results, reference coverage, current ranges,
-   fitting and assessment records, contiguous intervals and unsupported transfer.
-6. Compare explicitly selected A0/A1 runs. The backend checks equal operating
-   conditions; only connection changes qualify for this comparison. Different
-   load or initial-state cases can be inspected/exported individually. No
-   automatically ranked winner is provided.
-7. Export results, select one or both comparable runs, then Prepare download.
-   Download the ZIP containing immutable configurations, output CSVs, provenance,
-   source snapshots, evidence and replay code. Unzip and run
-   `python replay.py run_0001` (use a run ID actually listed in that package).
+Designs & components also creates a separate variant. Inherited runs stay historical; they never become current owned results automatically. Closing Properties gives the canvas more width. On narrower screens the pane moves below the workspace; Edit operating conditions and selecting a component bring it into view. The assembly can scroll sideways without forcing the page to overflow.
 
-The run picker includes owner, scenario, completion and freshness. The results
-banner and circuit caption label historical or partial results explicitly.
-Switching variants automatically chooses only an owned, current run for the
-selected scenario. Selecting a sensitivity for the *next* run does not relabel
-the displayed old run. A failure retains its error and valid partial samples.
+## Read results correctly
 
-## Exact controls and boundaries
+- **Current** means the selected design, scenario and captured software still match. It does not establish validation or acceptance.
+- **Outdated** results are retained and explicitly labelled. Rerun for the edited design.
+- **Stopped/partial** simulations preserve available samples and their error. They do not become successful results because the HTTP request succeeded.
+- **No sampled exceedance** is a finite simulated screen, not a safety pass. A limit needs a documented source. Missing voltage requirements remain unconfigured too.
+- **Thermal output** is one surface-equivalent node per cell, with declared heat capacity, ambient/neighbour conductances and rail-loss allocation. It omits reversible heat and temperature feedback to electrical parameters. It is not a prediction of internal temperature gradients.
+- Model & evidence contains the selected run's coverage, thermal assumptions, detailed accounting and exact identity. The footer keeps the experimental-validation status visible.
 
-| Component | Editable inputs | Read-only / interpretation |
+Charts and the assembly use saved solver samples. Large runs page through at most 5,000 samples per window; exports contain the entire saved trajectory. Channel colours have cell identity labels, and overlay text has at least 4.5:1 contrast throughout the current and temperature palettes.
+
+## Supported inputs
+
+| Selection | Editable inputs | Fixed meaning |
 |---|---|---|
-| Six rails | Segment resistance in mΩ; source/classification | Exact node pairs. Geometry does not infer resistance. |
-| Four cells | Initial SOC in %, initial polarization in mV; source/classification | LG M50T P7/P17/P19/P13 identities, frozen v2 R0/R1/tau, capacity and voltage reference. |
-| Module | Contiguous piecewise load JSON (A, s); ambient/four surface temperature assumptions; dt (s); sourced voltage/excursion requirements | Discharge positive. Temperature does not scale parameters or predict heating. |
-| Next simulation | Nominal or one of seven already declared sensitivities | Assumption scenarios, not confidence intervals or replacement models. |
-| Display | Select and drag cells; arrow keys move a focused cell; reset layout | Arbitrary coordinates only. Same fixed electrical graph, same revision and freshness. |
+| Module | Current/duration intervals; ambient and four starting surface temperatures; sourced current, imbalance, temperature and voltage limits; thermal assumptions; solver step | Four fixed LG M50T cells in parallel. Electrical and thermal assumptions stay explicit. |
+| Cell | Starting state of charge and polarization, with classification/source | Cell identity, fitted R0/R1/tau, capacity and reference remain read-only. |
+| Connection | Effective segment resistance in mΩ, with classification/source | The exact node pair stays fixed. Visual geometry does not infer resistance. |
+| Sensitivity experiment | Nominal or a declared sensitivity for the next run | Changes only the effective snapshot. It does not refit the model or create a confidence interval. |
+| Display | Assembly/circuit, overlay, selected time, component, optional properties and circuit arrangement | Selection, viewing and layout do not invalidate physics. |
 
-Missing minimum voltage, permitted excursion or documented source remains
-**requirement not configured**. The illustrative 3.50 V alarm and 25 mV criterion
-are not defaults. Engineering acceptance remains **insufficient evidence**.
+General rewiring, cell substitution, free-form CAD, AI calculation, optimization, multiplayer editing and manufacturing export are outside this demonstrator. Existing schema-1 projects remain electrical-only without silent migration.
 
-Plots show up to 5,000 consecutive saved samples per window, with explicit sample
-indices and Previous/Next controls. They do not interpolate new physical outcomes
-or hide unsupported intervals. Metrics are the backend's whole-record metrics;
-failed-run metrics cover only the available partial record. Export contains the
-full saved trajectory. Chart colours also have cell identity labels. Keyboard
-selection, tab navigation, labelled controls and visible focus are provided.
-Narrow screens stack the inspector below results; the schematic scrolls sideways
-and a component selector provides access to all cells, rails and the module.
+## Local adapter and checks
 
-No thermal solver, general rewiring, cell substitution, broad CAD, AI calculation,
-optimizer, multi-user service or measurement-upload screen is included. The
-existing measurement-import CLI/API remains available under its documented
-provenance and calibration rules. No protected outcomes are opened by the editor.
+The loopback adapter is `scripts/run_editor.py`. It preserves the existing operation envelope and immutable project records. UI files live outside the solver source tree and do not change captured electrical software IDs.
 
-## Local HTTP adapter
+- `GET /api/session` returns the local process token, project location and current job.
+- `POST /api/request` carries inspection, edit preview/save, variants, series, comparison and investigation-record operations.
+- `POST /api/jobs` queues a run, finite investigation or export; the client polls `GET /api/jobs/<id>`.
+- `GET /api/download/<id>` returns a prepared package. The server chooses export destinations.
 
-The adapter lives in `scripts/run_editor.py`, outside the solver source tree.
-UI changes therefore do not change captured electrical software IDs. The
-browser uses the unchanged `voltforge.project/1` contract:
+POST requires JSON and the session token. The adapter retains loopback binding, foreign Host/Origin rejection, no CORS, self-only CSP and a single writer/worker. It does not remove interrupted-write evidence or locks automatically.
 
-- `GET /api/session`: per-process token, working-project location and active job.
-- `POST /api/request`: `inspect`, `validate_edit`, `apply_edit`, `create_variant`,
-  `update_display`, `get_run`, `series`, `compare` with the existing JSON envelope.
-- `POST /api/jobs`: `run` with variant, expected revision and optional scenario;
-  or `export` with explicit selections. Returns `{status:"ok",result:{job_id}}`.
-- `GET /api/jobs/<id>`: queued/running/completed/failed plus the exact backend
-  response. A successful transport can still contain a failed simulation.
-- `GET /api/download/<id>`: the generated reproducible ZIP. Destination paths
-  are server-selected, never browser-supplied. Job/download IDs are session-local;
-  saved runs and generated exports persist on disk after restart.
+Executed verification is in `reports/v1_release/release_verification.json`. The redesign's browser proof is also copied to `reports/ui_cleanup/verification.json`. Run:
 
-POST requests require JSON and `X-Voltforge-Token` from the session response.
-The server binds only to 127.0.0.1, rejects foreign Host/Origin and arbitrary file
-routes, has no CORS, uses a self-only content security policy and one job worker.
-This is not an authentication system or deployment architecture. Do not expose
-the server through a public proxy. Other same-machine processes are trusted.
-
-## Reproduce checks
-
-Use fresh output paths to preserve release evidence:
-
-```powershell
-$env:PYTHONPATH = 'src'
-& C:\Users\DELL\anaconda3\python.exe -m pytest -q --junitxml=tmp\editor_pytest.xml
-& 'C:\Program Files\nodejs\node.exe' --test tests\editor_state.test.mjs
-& C:\Users\DELL\anaconda3\python.exe scripts\check_editor_browser.py --out tmp\editor_browser_check
-& C:\Users\DELL\anaconda3\python.exe scripts\verify_editor_release.py --out tmp\editor_verification.json
+```bash
+PYTHONPATH=src .venv/bin/python -m pytest -q --junitxml=reports/v1_release/pytest.xml
+node --test tests/editor_state.test.mjs tests/assembly.test.mjs tests/panels.test.mjs tests/workspace.test.mjs
+.venv/bin/python scripts/verify_v1_release.py
 ```
 
-The optional browser check uses installed Chrome and the development-only
-`websocket-client` package. It launches an isolated headless profile, exercises
-the real DOM/HTTP workflow, captures desktop/mobile screenshots, rejects invalid
-edits and replays both downloaded full-duration runs. It never accesses an
-existing browser account. Set `--chrome PATH` if Chrome is elsewhere. Node is
-needed only for the four presentation-state tests, not to serve the application.
+The full browser check is `scripts/check_v1_browser.py`, followed by `scripts/check_workspace_forms.py` for property mappings and `scripts/check_workspace_render.py` for final layouts. All three run through the installed browser harness against a **fresh disposable** `tmp/v1-release-project...` project. Set `VOLT_FORGE_BROWSER_PORT` when the test editor uses another port. It exercises actual forms, stale runs, component drafts, limits, investigation, case variants, comparison, model evidence, downloaded replay, narrow viewports and keyboard tabs. It never operates on the user's saved project.
+
+The pre-redesign editor and guide are preserved under `reports/ui_cleanup/before_source/`.

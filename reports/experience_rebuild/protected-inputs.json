@@ -1,0 +1,17 @@
+[
+  {
+    "manifest": "reports/module_simulation_v1/manifest.json",
+    "checked": 3,
+    "mismatches": []
+  },
+  {
+    "manifest": "configs/reference_initial_state_v1.lock.json",
+    "checked": 112,
+    "mismatches": []
+  },
+  {
+    "manifest": "reports/improvement_v2/procedure_seal.json",
+    "checked": 9,
+    "mismatches": []
+  }
+]

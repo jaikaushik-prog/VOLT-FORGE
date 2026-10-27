@@ -15,10 +15,13 @@ import numpy as np
 import pandas as pd
 
 from voltforge.simulation import workflow as w
+from voltforge.models import thermal_v1
 from . import schema as s
+from . import engineering
 
 ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_REFERENCE = ROOT / 'reports/module_simulation_v1'
+THERMAL_CONFIG = ROOT / 'configs/thermal_v1.json'
 
 
 def read(path):
@@ -104,7 +107,8 @@ class Project:
             s.require(file_hash(ROOT / source['path']) == source['sha256'] == seal['artifacts'][source['path']], 'Frozen model seal mismatch', 'integrity_error')
             model = read(ROOT / source['path'])['C2_rest_reference_RC']
             s.require(base['models'][i] == {k: model[k] for k in base['models'][i]}, 'Configured model differs from sealed fit', 'integrity_error')
-        design = s.reference_design(base, manifest)
+        thermal = read(THERMAL_CONFIG)
+        design = s.reference_design(base, manifest, 2, thermal)
         s.validate_design(design, base, manifest)
         path.mkdir(parents=True)
         assets = path / 'assets'
@@ -117,6 +121,9 @@ class Project:
                      'MEASUREMENT_IMPORT_SPEC.md', 'reports/reconciliation/RECONCILIATION.md',
                      'reports/reference_initial_state_v1/LAB_REQUEST.md']:
             copies['evidence/' + name] = ROOT / name
+        copies['thermal_v1.json'] = THERMAL_CONFIG
+        copies['evidence/reports/thermal_v1/cooling_derivation.json'] = ROOT / 'reports/thermal_v1/cooling_derivation.json'
+        copies['evidence/reports/reconciliation/cycle_balance/CYCLE_BALANCE.md'] = ROOT / 'reports/reconciliation/cycle_balance/CYCLE_BALANCE.md'
         for name, original in copies.items():
             target = assets / name
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -124,18 +131,18 @@ class Project:
         record = dict(design=design, parent=None, change={'kind': 'reference_template'}, created_utc=now())
         revision_id = 'rev_' + digest(record)
         write_once(path / 'revisions' / (revision_id + '.json'), record)
-        state = dict(schema_version=s.SCHEMA, project_id='four_cell_reference', created_utc=now(),
+        state = dict(schema_version=s.SCHEMA_V2, project_id='four_cell_reference', created_utc=now(),
             assets={name: file_hash(assets / name) for name in copies},
             variants={'A0': dict(name='Reference A0', revision_id=revision_id, run_ids=[], inherited_run_ids=[])},
             runs={}, measurements={}, display=dict(positions={}, camera={}, selection=[]),
-            capabilities=dict(electrical=True, thermal=False, general_cad=False, optimizer=False, ai_physics=False),
-            evidence_status='awaiting suitable measurements')
+            capabilities=dict(electrical=True, thermal=True, engineering_screen=True, failure_investigator=True, general_cad=False, optimizer=False, ai_physics=False),
+            evidence_status='awaiting suitable measurements', thermal_status='lumped four-node surface-equivalent model; declared parameters; one-way coupled; not validated')
         write_once(path / 'project.json', state)
         return cls(path)
 
     def _state(self):
         p = read(self.path / 'project.json')
-        s.require(p.get('schema_version') == s.SCHEMA, 'Unsupported project schema; no implicit migration', 'unsupported_request')
+        s.require(p.get('schema_version') in s.PROJECT_SCHEMAS, 'Unsupported project schema; no implicit migration', 'unsupported_request')
         return p
 
     def _save(self, state):
@@ -190,15 +197,15 @@ class Project:
         for item in runs:
             if item['freshness'] == 'current' and item['execution_status'] == 'completed':
                 current_by_scenario.setdefault(item['scenario_id'], []).append(item['run_id'])
-        return dict(schema_version=s.SCHEMA, variant_id=variant_id, name=v['name'], revision_id=rid,
-            design=revision['design'], display=state['display'], editable_properties=copy.deepcopy(s.EDITABLE),
+        return dict(schema_version=state.get('schema_version', s.SCHEMA), variant_id=variant_id, name=v['name'], revision_id=rid,
+            design=revision['design'], display=state['display'], editable_properties=copy.deepcopy(s.editable_catalogue(revision['design'])),
             fitted_parameters={f'cell_{k}': dict(R0_ohm=m['parameters_ohm'][0], R1_ohm=m['parameters_ohm'][1], tau_s=m['tau_s'],
                 capacity_Ah=m['capacity_Ah'], classification='R0/R1/tau fitted; capacity derived from recorded C/20 integration; all read-only') for k, m in enumerate(base['models'], 1)},
             output_components=['module'] + list(revision['design']['cells']) + list(revision['design']['connections']),
             variants={k: {'name': x['name'], 'revision_id': x['revision_id']} for k, x in state['variants'].items()},
             runs=runs, current_run_ids=[x['run_id'] for x in runs if x['freshness'] == 'current' and x['execution_status'] == 'completed'],
             current_runs_by_scenario=current_by_scenario,
-            capabilities=state['capabilities'], experimental_validation=state['evidence_status'])
+            capabilities=state['capabilities'], experimental_validation=state['evidence_status'], thermal_parameters=s.thermal_parameters(revision['design']))
 
     def validate_edit(self, variant_id, edit, expected_revision):
         state = self._state()
@@ -278,6 +285,12 @@ class Project:
                 scenario_id=scenario_id, effective_case=case, assets=state['assets'], software=code,
                 classification='simulated; experimental module validation pending',
                 sensitivity_note='Sensitivity scenarios are not confidence intervals; SOC/reference origins are correlated')
+            params = s.thermal_parameters(revision['design'])
+            temperature = revision['design']['scenario']['temperature']
+            if params is None:
+                snapshot['thermal'] = None
+            else:
+                snapshot['thermal'] = dict(parameters=params, initial_C=temperature['assumed_surface_C'], ambient_C=temperature['assumed_ambient_C'], model=thermal_v1.VERSION)
             snapshot['snapshot_id'] = digest(snapshot)
             write_once(folder / 'snapshot.json', snapshot)
             write_once(folder / 'configuration.json', case)  # existing importer contract
@@ -290,12 +303,35 @@ class Project:
                 summary = w.summarize(result, case)
                 status = 'completed' if result.status == 'completed' else 'failed'
                 error = result.stop
+                thermal_frame = None
+                if params is None:
+                    summary['thermal'] = {'status': 'unavailable', 'reason': 'Electrical-only v1 design'}
+                elif not len(result.frame):
+                    summary['thermal'] = {'status': 'unavailable', 'reason': 'No electrical samples'}
+                else:
+                    try:
+                        thermal_frame = thermal_v1.simulate(result.frame, case['models'], params, temperature['assumed_surface_C'], temperature['assumed_ambient_C'])
+                        thermal_v1.validate_output(thermal_frame, result.frame)
+                        thermal_summary = thermal_v1.summarize(thermal_frame, params)
+                        staged_thermal = folder / 'thermal.csv.tmp'
+                        try:
+                            thermal_frame.to_csv(staged_thermal, index=False)
+                            staged_thermal.replace(folder / 'thermal.csv')
+                        finally:
+                            if staged_thermal.exists():
+                                staged_thermal.unlink()
+                        summary['thermal'] = dict(status='completed', **thermal_summary)
+                    except Exception as exc:
+                        thermal_frame = None
+                        summary['thermal'] = {'status': 'failed', 'error': {'type': type(exc).__name__, 'message': str(exc)}}
+                summary['engineering'] = engineering.screen(result.frame, thermal_frame, revision['design'].get('engineering_requirements'), completed=result.status == 'completed')
                 write_once(folder / 'summary.json', summary)
                 if plots and len(result.frame):
                     from voltforge.simulation.reporting import electrical_plots
                     electrical_plots(folder, case)
             except Exception as exc:
                 # Preserve a failed run and its exact inputs; never substitute success.
+                status = 'failed'
                 error = dict(type=type(exc).__name__, message=str(exc))
                 if not (folder / 'summary.json').exists():
                     write_once(folder / 'summary.json', dict(status='failed', error=error,
@@ -336,11 +372,19 @@ class Project:
         if snapshot['software']['id'] != software()['id']:
             reasons.append('software/runtime changed')
         summary = read(folder / 'summary.json')
+        thermal_summary = summary.get('thermal') or {}
+        s.require(isinstance(thermal_summary, dict), 'Malformed thermal summary', 'integrity_error')
+        completed_thermal = thermal_summary.get('status') == 'completed'
+        declared_thermal = snapshot.get('thermal') is not None
+        recorded_thermal = 'thermal.csv' in record['artifacts']
+        s.require(not completed_thermal or (declared_thermal and recorded_thermal),
+            'Completed thermal result has no declared inputs or verified artifact', 'integrity_error')
+        thermal_output = 'available' if completed_thermal and declared_thermal and recorded_thermal else 'unavailable'
         return dict(run_id=run_id, owner_variant_id=record['variant_id'], viewed_variant_id=variant_id,
             revision_id=record['revision_id'], scenario_id=record['scenario_id'], snapshot_id=record['snapshot_id'],
             execution_status=record['execution_status'], freshness='outdated' if reasons else 'current',
             outdated_reasons=reasons, error=record['error'], summary=summary,
-            thermal_output='unavailable', classification='simulated', artifact_paths=list(record['artifacts']))
+            thermal_output=thermal_output, classification='simulated', artifact_paths=list(record['artifacts']))
 
     def series(self, variant_id, run_id, component_id='module', offset=0, limit=256):
         view = self.get_run(variant_id, run_id)
@@ -350,8 +394,33 @@ class Project:
         frame = pd.read_csv(path) if path.exists() else pd.DataFrame()
         rows = frame.iloc[offset:offset+limit]
         data = [] if not len(rows) else rows[[a for a, _ in mapping.values()]].rename(columns={a: name for name, (a, _) in mapping.items()}).to_dict('records')
+        units = {k: unit for k, (_, unit) in mapping.items()}
+        tpath = self.path / 'runs' / run_id / 'thermal.csv'
+        if view['thermal_output'] == 'available' and (component_id == 'module' or component_id in [f'cell_{k}' for k in range(1, 5)]):
+            tframe = pd.read_csv(tpath)
+            try:
+                thermal_v1.validate_output(tframe, frame)
+            except (ValueError, KeyError) as exc:
+                raise s.RequestError('integrity_error', 'Invalid saved thermal output: ' + str(exc)) from exc
+            trows = tframe.iloc[offset:offset+limit]
+            if len(data) == len(trows):
+                if component_id == 'module':
+                    for i, tr in enumerate(trows.itertuples(index=False)):
+                        data[i]['ambient_C'] = float(tr.ambient_C)
+                        data[i]['heat_to_cells_W'] = float(tr.heat_to_cells_W)
+                        data[i]['thermal_ledger_residual_J'] = float(tr.ledger_residual_J)
+                    units['ambient_C'] = 'degC'
+                    units['heat_to_cells_W'] = 'W'
+                    units['thermal_ledger_residual_J'] = 'J'
+                elif component_id in [f'cell_{k}' for k in range(1, 5)]:
+                    k = int(component_id.split('_')[1])
+                    for i, tr in enumerate(trows.itertuples(index=False)):
+                        data[i]['temperature_C'] = float(getattr(tr, f'T{k}_C'))
+                        data[i]['heat_W'] = float(getattr(tr, f'heat{k}_W'))
+                    units['temperature_C'] = 'degC'
+                    units['heat_W'] = 'W'
         return dict(run_id=run_id, variant_id=variant_id, component_id=component_id, snapshot_id=view['snapshot_id'],
-            execution_status=view['execution_status'], freshness=view['freshness'], units={k: unit for k, (_, unit) in mapping.items()},
+            execution_status=view['execution_status'], freshness=view['freshness'], units=units,
             classification='simulated', total_samples=len(frame), offset=offset, rows=data,
             next_offset=offset+len(data) if offset+len(data) < len(frame) else None)
 
@@ -372,17 +441,29 @@ class Project:
             differences += [k for k in common if common[k] != other[k]]
             if snapshot['software']['id'] != snapshots[0]['software']['id']:
                 differences.append('software/runtime')
+            if snapshot.get('design', {}).get('thermal') != snapshots[0].get('design', {}).get('thermal'):
+                differences.append('thermal parameters')
         s.require(not differences, 'Comparison requires identical operating conditions; differ: ' + ', '.join(sorted(set(differences))), 'unsupported_request')
         metrics = ['maximum_branch_current_A', 'minimum_cell_voltage_V', 'minimum_terminal_voltage_V', 'mean_delivered_power_W',
             'delivered_net_Wh', 'delivered_charge_Ah', 'cell_R0_loss_Wh', 'rail_loss_Wh', 'R1_loss_Wh', 'above_4_9A_cell_seconds']
         rows = []
         for view in views:
-            rows.append(dict(variant_id=view['viewed_variant_id'], run_id=view['run_id'], snapshot_id=view['snapshot_id'],
-                freshness=view['freshness'], **{k: view['summary'][k] for k in metrics},
-                requirement=view['summary']['voltage_requirement']['status'], decision='insufficient evidence'))
+            summary = view['summary']
+            thermal_m = summary.get('thermal', {})
+            eng_m = summary.get('engineering', {}).get('metrics', {})
+            eng_req = summary.get('engineering', {}).get('requirements', {}) or {}
+            eng_req_map = {name: r.get('status') for name, r in eng_req.items()} if isinstance(eng_req, dict) else {}
+            row = dict(variant_id=view['viewed_variant_id'], run_id=view['run_id'], snapshot_id=view['snapshot_id'],
+                freshness=view['freshness'], **{k: summary[k] for k in metrics},
+                requirement=summary['voltage_requirement']['status'], decision='insufficient evidence',
+                peak_cell_temperature_C=thermal_m.get('peak_cell_temperature_C') if isinstance(thermal_m, dict) else None,
+                maximum_temperature_spread_K=thermal_m.get('maximum_spread_K') if isinstance(thermal_m, dict) else None,
+                current_imbalance_pct=(eng_m.get('current_imbalance_pct') or {}).get('value') if isinstance(eng_m.get('current_imbalance_pct'), dict) else None,
+                engineering_requirements=eng_req_map)
+            rows.append(row)
         return dict(kind='simulation comparison', conditions='identical operating conditions',
             condition_sha256=digest(common), ordered_results=rows,
-            deltas_vs_first=[dict(run_id=r['run_id'], **{k: r[k]-rows[0][k] for k in metrics}) for r in rows[1:]],
+            deltas_vs_first=[dict(run_id=r['run_id'], **{k: (r[k]-rows[0][k]) if (r[k] is not None and rows[0][k] is not None) else None for k in metrics + ['peak_cell_temperature_C', 'maximum_temperature_spread_K', 'current_imbalance_pct']}) for r in rows[1:]],
             evidence='Experimental validation awaiting suitable measurements; hypothetical changes, no repair ranking',
             historical_results=any(x['freshness'] == 'outdated' for x in views))
 
@@ -406,6 +487,22 @@ class Project:
             self._save(state)
         return dict(measurement_id=mid, run_id=run_id, freshness=view['freshness'], result=result)
 
+    def investigate(self, variant_id, expected_revision, plan):
+        from . import investigate
+        return investigate.run(self, variant_id, expected_revision, plan)
+
+    def get_investigation(self, investigation_id):
+        from . import investigate
+        return investigate.get(self, investigation_id)
+
+    def list_investigations(self):
+        state = self._state()
+        return [dict(investigation_id=k, **v) for k, v in sorted(state.get('investigations', {}).items())]
+
+    def open_case(self, investigation_id, case_id, variant_id, name):
+        from . import investigate
+        return investigate.open_case(self, investigation_id, case_id, variant_id, name)
+
     def export(self, selections, out):
         from .package import export_package
         return export_package(self, selections, out)
@@ -423,7 +520,8 @@ def dispatch(project_path, request):
             result = project.inspect()
         else:
             allowed = {'inspect', 'validate_edit', 'apply_edit', 'create_variant', 'update_display', 'run', 'get_run',
-                       'series', 'compare', 'run_sensitivities', 'compare_measurements', 'export'}
+                       'series', 'compare', 'run_sensitivities', 'compare_measurements', 'export',
+                       'investigate', 'get_investigation', 'list_investigations', 'open_case'}
             s.require(isinstance(operation, str) and operation in allowed, 'Operation unavailable: ' + str(operation), 'unsupported_request')
             project = Project(project_path)
             result = getattr(project, operation)(**args)
