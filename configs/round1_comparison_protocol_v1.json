@@ -1,0 +1,35 @@
+{
+  "version": "voltforge.round1-comparison/1",
+  "status": "Development comparison protocol; empirical gates remain open",
+  "application": "Four-cell low-voltage backup connection study",
+  "scope": "The same four existing LG M50T fitted sample profiles, cell assignments, external current duty and heat-transfer assumptions are used in every design. These previously used models are not independent validation data.",
+  "mission": {"current_A": 12.0, "duration_s": 600.0, "ambient_C": 23.0, "initial_charge_pct": 70.0, "initial_temperature_C": 23.0, "dt_s": 0.5, "minimum_output_voltage_V": 3.3},
+  "link_dimensions": {"length_mm": 30.0, "width_mm": 8.0, "thickness_mm": 0.08, "contact_mohm": 0.2},
+  "output_route": {"length_mm": 50.0, "width_mm": 8.0, "thickness_mm": 0.2, "contact_mohm": 0.2},
+  "options": [
+    {"key": "baseline", "name": "Original connections", "intervention": "Same-end outputs and the declared thin copper links."},
+    {"key": "thicker", "name": "Thicker copper links", "intervention": "Double each internal link thickness from 0.08 to 0.16 mm. Contact resistance and output routes stay unchanged."},
+    {"key": "opposite", "name": "Opposite-end collection", "intervention": "Move the negative takeoff to Cell 4 and lengthen its external return route from 50 to 140 mm. The extra 90 mm is a declared routing assumption, independent of canvas pixels."}
+  ],
+  "physical_assumptions": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified.",
+  "scenarios": [
+    {"key": "nominal", "name": "Declared starting conditions", "kind": "nominal"},
+    {"key": "first_charge_minus_2", "name": "Cell 1 starts two percentage points lower", "kind": "initial_charge", "cell_index": 0, "delta_pp": -2.0},
+    {"key": "first_charge_plus_2", "name": "Cell 1 starts two percentage points higher", "kind": "initial_charge", "cell_index": 0, "delta_pp": 2.0},
+    {"key": "all_charge_minus_2", "name": "All cells start two percentage points lower", "kind": "initial_charge", "cell_index": null, "delta_pp": -2.0},
+    {"key": "thermal_pair_half", "name": "Half heat capacity and cooling together", "kind": "thermal_pair", "factor": 0.5},
+    {"key": "thermal_pair_double", "name": "Double heat capacity and cooling together", "kind": "thermal_pair", "factor": 2.0},
+    {"key": "cooling_half", "name": "Half cooling at unchanged heat capacity", "kind": "cooling", "factor": 0.5},
+    {"key": "contact_double", "name": "Double total contact resistance", "kind": "contact", "factor": 2.0},
+    {"key": "room_plus_2", "name": "Room two degrees warmer", "kind": "ambient", "delta_C": 2.0},
+    {"key": "half_step", "name": "Half solver step", "kind": "step", "factor": 0.5},
+    {"key": "quarter_step", "name": "Quarter solver step", "kind": "step", "factor": 0.25}
+  ],
+  "scenario_basis": "Deterministic hypothetical sensitivity cases, including the prior audit's first-cell minus-two-percentage-point counterexample. These are not measured probability distributions, ageing predictions or confidence intervals. Thermal pair scaling preserves the isolated cooling time constant but changes forced heating.",
+  "decision": {
+    "priorities": ["Complete the identical requested duty", "Meet the declared 3.3 V output floor", "Compare cell current and temperature stress against delivered energy and specified-conductor mass"],
+    "numerical_resolution_budgets": {"peak_cell_current_A": 0.01, "peak_temperature_C": 0.05, "delivered_energy_Wh": 0.005, "minimum_voltage_V": 0.005},
+    "budget_meaning": "Declared numerical comparison resolutions, not measured model accuracy or safety margins. Nominal refinement checks do not bound every perturbed scenario.",
+    "recommendation_rule": "Do not force a winner. Exclude incomplete duty or target violations from a full-service comparison. Show paired changes and ordering reversals. A physical recommendation requires the open cell, fixture and module empirical gates."
+  }
+}

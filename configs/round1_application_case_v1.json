@@ -1,0 +1,15 @@
+{
+  "version": "voltforge.application-benchmark/1",
+  "name": "Four-cell low-voltage backup design study",
+  "audience": "Engineering students and early design engineers comparing connection arrangements",
+  "decision": "Compare same-end output collection, opposite-end negative collection and a physically specified lower-resistance conductor/contact alternative.",
+  "demand": {"current_A": 12, "duration_s": 600, "classification": "declared benchmark"},
+  "preparation": {"charge_pct": 70, "cell_temperature_C": 23, "ambient_C": 23, "polarization_V": 0, "classification": "declared initial state, not a measured initializer"},
+  "proposed_output_floor_V": 3.3,
+  "threshold_source": "Declared prototype comparison target; replace with an actual device specification before claiming device compatibility.",
+  "priorities": ["Complete the full mission", "Meet output requirement", "Reduce worst-cell current and imbalance", "Review conductor length, mass, resistance, space and cooling assumptions"],
+  "component_policy": "Use cell-specific direction and temperature limits, independently of user design targets.",
+  "model_policy": "Choose the cell family after assessment. Use the same cell model and preparation for physical alternatives. Do not treat published tables or assumed thermal properties as independent module validation.",
+  "thermal_policy": "Compare a declared lumped surface-equivalent heat model. Missing custom data may use the versioned example cylindrical preset. Measured thermal acceptance and a hardware safety rating require appropriate independent evidence.",
+  "release_state": "Benchmark specified and application records implemented; final cell-family selection and three-option evidence remain open."
+}

@@ -1,0 +1,29 @@
+{
+  "version": "voltforge.electrical-assessment/1",
+  "status": "draft",
+  "scope": "electrical_response_only",
+  "selection_basis": "Whole reserved warm-condition records selected by pre-existing allocation and nominal condition, before decoding observations. Rejected cold-condition model fits do not enter this version's assessment.",
+  "eligible_chamber_labels_C": [0, 10, 25, 40],
+  "records": [
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_19.05 824_UDDS_0degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_06.00 752_UDDS_10degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_16.26 734_UDDS_25degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-04-19_21.54 710_UDDS_40degC_IN21700_30T.mat"
+  ],
+  "window": "whole_record",
+  "voltage_state_reset": false,
+  "initialization": {"soc": 1.0, "relaxation_V": 0.0, "preparation_verified": false, "source_locator": ""},
+  "temperature_input": "measured_cell_surface",
+  "component_limits": "enforce",
+  "outside_support": "stop_and_fail_full_record",
+  "interpolation": "production_bilinear_no_extrapolation",
+  "integration": "held_current_exact_rc_per_source_interval",
+  "source_sampling": "retain_original_order_and_duplicate_time_events",
+  "acceptance": {"minimum_coverage": 1.0, "voltage_rmse_V": 0.05, "voltage_max_abs_V": 0.15},
+  "refit_after_assessment": false,
+  "freeze_blockers": [
+    "Verify preparation from source protocol metadata, without inspecting held-out voltage outcomes.",
+    "Recheck the independent numerical references and installed model-policy identity.",
+    "Freeze candidate, source archive, allocation, all numerical/assessment code, procedure, runtime and scoring before any reserved decode."
+  ]
+}

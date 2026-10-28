@@ -28,7 +28,7 @@ MUTATIONS = {'apply_edit', 'create_variant', 'update_display', 'open_case'}
 STATIC = {'/': 'index.html', '/index.html': 'index.html', '/style.css': 'style.css',
           '/app.js': 'app.js', '/state.mjs': 'state.mjs', '/assembly.mjs': 'assembly.mjs', '/panels.mjs': 'panels.mjs', '/workspace.mjs': 'workspace.mjs', '/favicon.svg': 'favicon.svg',
           '/measurements': 'measurements.html', '/measurements.js': 'measurements.js', '/measurements.css': 'measurements.css'}
-STATIC.update({'/studio.js':'studio.js','/studio.css':'studio.css','/studio-canvas.mjs':'studio-canvas.mjs',
+STATIC.update({'/studio.js':'studio.js','/studio.css':'studio.css','/studio-canvas.mjs':'studio-canvas.mjs','/studio-walkthrough.mjs':'studio-walkthrough.mjs','/studio-cells.mjs':'studio-cells.mjs','/studio-protection.mjs':'studio-protection.mjs','/studio-conductors.mjs':'studio-conductors.mjs','/custom-cell-format.md':'custom-cell-format.md',
                '/studio-charts.mjs':'studio-charts.mjs','/studio-state.mjs':'studio-state.mjs'})
 
 
@@ -233,7 +233,10 @@ class Handler(BaseHTTPRequestHandler):
         methods={'create':self.server.studio.create,'open':self.server.studio.document,
                  'save':self.server.studio.save,'run':self.server.studio.run,'test':self.server.studio.test,
                  'investigate':self.server.studio.investigate,'compare':self.server.studio.compare,
-                 'chat':self.server.copilot.chat,'apply_proposal':self.server.copilot.apply}
+                 'chat':self.server.copilot.chat,'apply_proposal':self.server.copilot.apply,
+                 'create_cell':self.server.studio.create_cell,
+                 'begin_investigation':self.server.studio.begin_investigation,'investigation':self.server.studio.investigation,
+                 'investigate_case':self.server.studio.investigate_case,'open_investigation_case':self.server.studio.open_investigation_case}
         if not isinstance(op,str) or op not in methods or not isinstance(args,dict):
             return self.send_json(error('invalid_request','Choose an available studio action.'),400)
         try:
@@ -244,7 +247,7 @@ class Handler(BaseHTTPRequestHandler):
         except ValueError as exc:
             return self.send_json(error('invalid_request',str(exc)),400)
         except Exception:
-            return self.send_json(error('server_error','This action could not finish. Your saved design is unchanged. Try again.'),500)
+            return self.send_json(error('server_error','This action could not finish. Reopen the design to check its saved state before retrying.'),500)
 
 
 def main():

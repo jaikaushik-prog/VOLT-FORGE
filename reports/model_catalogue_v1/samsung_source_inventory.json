@@ -1,0 +1,2957 @@
+{
+  "dataset": "10.17632/9xyvy2njj3.2",
+  "url": "https://data.mendeley.com/datasets/9xyvy2njj3/2",
+  "download_url": "https://data.mendeley.com/public-api/zip/9xyvy2njj3/download/2",
+  "licence": "CC BY 4.0",
+  "archive_sha256": "bad07e9df0ccd5b3e7805f2296b5d61a43c2013b56a7fd87b83d8744fa453f25",
+  "archive_bytes": 115155017,
+  "members": [
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/Readme IN21700-30T.txt",
+      "bytes": 4394,
+      "sha256": "d4408aef467bf27c59b88a9c8ec222f189742fbb2d3a5a13e0bd0df7ef55233a",
+      "role": "source_documentation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/IN21700-30T HPPC OCV CC_DIS Data.xlsx",
+      "bytes": 1809557,
+      "sha256": "7b30f3f1d4fd0f995858e1425c10198079bca75174b171e823e7b84946f20210",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/Technical Information and Experimental Test Results for Samsung IN21700-30T.pdf",
+      "bytes": 1242967,
+      "sha256": "3a360c0b44409ddf4539410a1baa3d140de48f70169dd91d2a09d198624239aa",
+      "role": "source_documentation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/LG_HG2_Reference Plot Spreadsheet.xlsx",
+      "bytes": 1604910,
+      "sha256": "124a9a5bb33d92d8613557e7cdb5f54355b41a59884aab46d69386677d3032ca",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-16-19_00.42 847_C20DisCh_-10degC_IN21700_30T.mat",
+      "bytes": 62877,
+      "sha256": "d8878e6a04c4cbb7e3a2aa9861c2529988f63d4357cf3c9b4190bb2a2055b558",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-17-19_16.06 847_Dis_0p5C_-10degC_IN21700_30T.mat",
+      "bytes": 11372,
+      "sha256": "69946ee6c8eab87b6364e569d40dc2ff711a41834ed8177cc689befd346cd8b4",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-18-19_00.31 847_Dis_2C_-10degC_IN21700_30T.mat",
+      "bytes": 5599,
+      "sha256": "b1b3b1fa335d5df1793041d83f04485c62ec94dbc637fb5db5eee6831b75166c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-23-19_11.02 859_Charge1_-10degC_IN21700_30T.mat",
+      "bytes": 2974,
+      "sha256": "170567cedc417872e77041732e86cc0da0c421eb4716ec35873eef13ae76e1aa",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-23-19_12.37 859_Cap_1C_-10degC_IN21700_30T.mat",
+      "bytes": 12340,
+      "sha256": "bdc141803a8bec8b65b878c54698eaef69c666b82f9b77a0e1d741c6ed543e8a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-23-19_13.40 859_Charge2_-10degC_IN21700_30T.mat",
+      "bytes": 5615,
+      "sha256": "3057fca8069ee62ceb0ccaa684512b92a9b34b4585d615c62f239b2977d37ef6",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-23-19_18.11 859_Charge3_-10degC_IN21700_30T.mat",
+      "bytes": 9210,
+      "sha256": "a15aaa159e63d14bb347dd5dc9db751fe6398d50ba735f94789eade9d2573e77",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-24-19_03.14 859_Charge4_-10degC_IN21700_30T.mat",
+      "bytes": 6828,
+      "sha256": "627d5c65111e208d2b196e0c8cdbdee0cac41c7093746df252a53b3c1eb68a38",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-24-19_08.49 859_Charge5_-10degC_IN21700_30T.mat",
+      "bytes": 7812,
+      "sha256": "8b29b3acf33178ed3bfda4ba947bfd05c9dc78b7fbd27fc603b9f02d7c737eda",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-14-19_17.40 847_HPPC_-10degC_IN21700_30T.mat",
+      "bytes": 575686,
+      "sha256": "0f68be7b64d5f612cee2ef4f63f1aaee9e26ca3fe34b3eb7a9b5247cd1481176",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-24-19_15.37 859_Charge6_-10degC_IN21700_30T.mat",
+      "bytes": 6371,
+      "sha256": "24c6ae23302a8564a67de343dc87991d65f2fa58e0713a5c2cbcf56d13994b65",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-24-19_20.37 859_Charge7_-10degC_IN21700_30T.mat",
+      "bytes": 7346,
+      "sha256": "5e3b339d62e4f0a4fd23ab26c5e8367badd46717266c1ccb6b20ffff794d30ab",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-25-19_03.02 859_Charge8_-10degC_IN21700_30T.mat",
+      "bytes": 7413,
+      "sha256": "2916364d3c15ae777990c0b37158c4746de2010e1e35b57f0abb94eef8e26ba1",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-25-19_08.36 863_Charge9_-10degC_IN21700_30T.mat",
+      "bytes": 2578,
+      "sha256": "ab91ab996d56be06e9fb6166766c5a40f692da129c69b37884f18f7d3cc0aced",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-25-19_09.58 863_Cap_1C_-10degC_IN21700_30T.mat",
+      "bytes": 12210,
+      "sha256": "91c189f64e6c4e3ee12e29c012b8ec2069aa6bb112669faca3559e76d541c42e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-25-19_11.00 863_Charge10_-10degC_IN21700_30T.mat",
+      "bytes": 5050,
+      "sha256": "9c0457c5892374deee2b1fd05a9d39ede74ee0920bb3751b43021ee08b53da5d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-25-19_14.04 863_Charge11_-10degC_IN21700_30T.mat",
+      "bytes": 7335,
+      "sha256": "02dc17ab09cedf5cceefaa6ebeafeafae1e3c95ea47698e334d374ba9ddf96b6",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-23-19_16.48 859_UDDS_-10degC_IN21700_30T.mat",
+      "bytes": 1213967,
+      "sha256": "ec5b1ebdad1b85a42a2adc90208e125d1b09518ecf0420ca84360fb15d9da462",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-24-19_07.58 859_LA92_-10degC_IN21700_30T.mat",
+      "bytes": 718582,
+      "sha256": "493868506da29eac1f4e2846c01633ea84303fec8d7fe0df1352abd45227379a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-24-19_02.36 859_HWFET_-10degC_IN21700_30T.mat",
+      "bytes": 515063,
+      "sha256": "25b08b15fd10513f08f39bc9cff2149157028833ee288cfbe2c412289eaa1d8c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-24-19_15.10 859_US06_-10degC_IN21700_30T.mat",
+      "bytes": 339196,
+      "sha256": "421da08710d83d4bdac241b054ed710e532ff1ce20220e39b4ee2bfd35b50c85",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-25-19_20.20 863_Charge12_-10degC_IN21700_30T.mat",
+      "bytes": 7177,
+      "sha256": "2f51eb5c644b30bb646a83a26c06b86bb9b1a125114c414d90d0eb4e97ec0ed3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-26-19_02.28 863_Charge13_-10degC_IN21700_30T.mat",
+      "bytes": 7214,
+      "sha256": "e4c57d9bd7fcc1660f0b760f974efefe8f1c0253a7c18af7d6403f672e4ec5b2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-24-19_19.52 859_Mixed1_-10degC_IN21700_30T.mat",
+      "bytes": 627807,
+      "sha256": "2cb80d625f53f71ce4cf195fc407e49287a451ec8e9d77b8d3055787924074dc",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-26-19_08.34 863_Charge14_-10degC_IN21700_30T.mat",
+      "bytes": 7395,
+      "sha256": "b1e61234b55e63143f99916062e035a4e384675bb2ca09197e5d04666d2dd600",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-26-19_14.44 863_Charge15_-10degC_IN21700_30T.mat",
+      "bytes": 7422,
+      "sha256": "8ecb53b5ff760cd49b2ebc3a7a5eb1ffa2d1b1058eee831db72f938ab47322c6",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-25-19_02.09 859_Mixed2_-10degC_IN21700_30T.mat",
+      "bytes": 775125,
+      "sha256": "25b31ea1a4c7b94442fabde050fa4a0a0a5baa56be7b017c227de8237755178d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-26-19_21.16 863_Charge16_-10degC_IN21700_30T.mat",
+      "bytes": 7390,
+      "sha256": "d93aff2bed52a368bc1f69cf82e9b71185dcdd47d3cd575ff45cd845dbea8e93",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-25-19_19.34 863_Mixed4_-10degC_IN21700_30T.mat",
+      "bytes": 635862,
+      "sha256": "b437b6eb4e1b386973f829fae5da435fe3e42595385eb45c95851dd40c285af9",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-25-19_13.31 863_Mixed3_-10degC_IN21700_30T.mat",
+      "bytes": 440278,
+      "sha256": "1fff042c46cd1a7a3de5385551a27d2a1477b9b0b312b26e3369115ff9c5eb88",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-26-19_07.50 863_Mixed6_-10degC_IN21700_30T.mat",
+      "bytes": 597048,
+      "sha256": "b1eee3adfcb449cc8db6a42fa2ae0cfc1775de52ce48d65f1107f84be57afd02",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-27-19_02.48 863_PausCycl_-10degC_IN21700_30T.mat",
+      "bytes": 174110,
+      "sha256": "ca16bbe96a3ddd7d6d18b8eb85ac36b1ac41967f04dae07041441f4cac770e0f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-26-19_14.07 863_Mixed7_-10degC_IN21700_30T.mat",
+      "bytes": 512612,
+      "sha256": "1b3885e6e20f5242d8c15d00cc9c6e620c3be292a930f4d5857764278e034403",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/847_Dis_0p5C.csv",
+      "bytes": 80314,
+      "sha256": "59fb0de3a4c761d20247a4a9b9865152bc127e2da796b4325b2e73cfe8bdab2f",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/847_Dis_2C.csv",
+      "bytes": 34041,
+      "sha256": "43c5cc01f0315b431d7441cc570fc6421b47ac8351fe6be6e75d77962c5b2336",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-26-19_01.46 863_Mixed5_-10degC_IN21700_30T.mat",
+      "bytes": 577125,
+      "sha256": "caf21f6ffd4e38e574374e9a4796abaf81ece90c7be812ded763c2a355a9039d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/847_C20DisCh.csv",
+      "bytes": 362941,
+      "sha256": "81a8a7f4000590114935d6234e9c13006e10b37c87720a206aee370b87112d74",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Charge2.csv",
+      "bytes": 33890,
+      "sha256": "970a05050461fc5b5f4e10f11e43c05d95a5d166da4b1b20f4ddc65f4308015f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Charge4.csv",
+      "bytes": 48869,
+      "sha256": "7473ce7e9b5143ad1a6be1f7228f4534d52d03c69a49830a41bfee0afa4d0b2c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Charge1.csv",
+      "bytes": 19776,
+      "sha256": "1982768b9f0cca69803040d53914d9974e346c5367a92a0853d26e8fe20545ea",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Charge3.csv",
+      "bytes": 83705,
+      "sha256": "cfb56f8e45dab3acea96c4484d83689a017880252c2287413ad07c21b00178f1",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Cap_1C.csv",
+      "bytes": 61971,
+      "sha256": "2ff1effd40e18fa0d1707a444ad5ce095a8ef40c353231a66cdc499979d034a3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-26-19_20.17 863_Mixed8_-10degC_IN21700_30T.mat",
+      "bytes": 842354,
+      "sha256": "0bf3c09625805e770e7bc63514a292bd35c9e5b6e114c14b4722c99379ffe110",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Charge6.csv",
+      "bytes": 44629,
+      "sha256": "f868edec15c86b9d89b8dec571e4768b546c16c56519606ecac62b2da8115464",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Charge5.csv",
+      "bytes": 64204,
+      "sha256": "97cd08954f3c814c22c117a281c1afe682dd2227c9ddb7aa72ee3d42d4b944f2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Charge8.csv",
+      "bytes": 56691,
+      "sha256": "323fa91c6f14d1882ccdc107a5619848c6a25eedcea453bfce652ddf09a836ca",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Charge7.csv",
+      "bytes": 56536,
+      "sha256": "e2fe6def8163a4af3e1481e8caf76f948058eac53d53e5ef5d4b84290c6a8eab",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Charge9.csv",
+      "bytes": 17764,
+      "sha256": "1855cc9ebb1a23c90016ab05156d27472ebe3badc18399d2e6aa87d237ec4a0a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Cap_1C.csv",
+      "bytes": 62164,
+      "sha256": "6d9d87015c6af379a574890c6ea6a22b2d5b6f41669d032129c67dbb83af9d28",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Charge10.csv",
+      "bytes": 28346,
+      "sha256": "7195b1d0bb0b0516d05908e0d943cd2dcf0b81a4632e6ac20805d0104c913ff0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/847_HPPC.csv",
+      "bytes": 6931430,
+      "sha256": "892784458f05ef5d64d41236598714f7f8fbe48f11779066865b94b6ecb28cee",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Charge11.csv",
+      "bytes": 56244,
+      "sha256": "5b0ba325ee2ac654ba5f2df35086aefe12557c1114464eeba117d5fc8619d5a2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Charge13.csv",
+      "bytes": 54790,
+      "sha256": "06f9ed152b1255a34c1f709ce27b245cc6ee619d4847ebb7cd4dd207836345a0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Charge12.csv",
+      "bytes": 55904,
+      "sha256": "a8b2962274134c270b5beca1ca9ea10f9625f59af294aeb5925985d30a466c92",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Charge14.csv",
+      "bytes": 56836,
+      "sha256": "2c5a83eb86a9df60414866d8552364ba7672c95c522862c7f71451356fab5291",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Charge15.csv",
+      "bytes": 56550,
+      "sha256": "a2475fd31e52a2a29c95ec48b6dc1adbcc3ca719068ffebb720585ee60c93f26",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_HWFET.csv",
+      "bytes": 3591138,
+      "sha256": "ce5aac090e7cb5f1312cc031b69b0ee0103c0f79a05ba661356c478564ec23e9",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Mixed1.csv",
+      "bytes": 4247495,
+      "sha256": "2b36e462b5010c64c2d8003bbbba087b976caf663a213449b320b82c8a3223fc",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Charge16.csv",
+      "bytes": 56685,
+      "sha256": "14b02df70670ee15da912141e55b0f5d65df695a4dcab7c1a67097557b3f5da7",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_US06.csv",
+      "bytes": 2504231,
+      "sha256": "a574e30ebb9fe279d240311f8d5129e7cae194ead4840077098b73b60b8ea6ff",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_UDDS.csv",
+      "bytes": 7950514,
+      "sha256": "945030cbca36b804492574df99affb6689331b2f87facc68e5c60f10241cfceb",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_Mixed2.csv",
+      "bytes": 5101101,
+      "sha256": "919c6747d0104867adb5a5a61b43001674ac3b856264d48c3db3097ba8093b90",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/859_LA92.csv",
+      "bytes": 4828094,
+      "sha256": "b12ecde012b061661b0a9049455888ed1df55a0d3c9a79d1a4a5fba590f42c47",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Mixed3.csv",
+      "bytes": 3173674,
+      "sha256": "fac52c19a63813b40bb3ee776cb34b1908ec283fb51e00c08c7d4d716e4f6d9f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Mixed7.csv",
+      "bytes": 3576752,
+      "sha256": "aa5912eecfa5d8a7da130bbfd972ada85eee444751502262488669fd9151939a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_PausCycl.csv",
+      "bytes": 1729647,
+      "sha256": "beef0fa5b6375e28664833369ce7498350224a760cd53932cf46316145de66ff",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Mixed4.csv",
+      "bytes": 4355878,
+      "sha256": "2aec884973c42abd65694bb5dd3d6eeefb137d3bcaf89c12550dfde037b3e9d3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Mixed5.csv",
+      "bytes": 3947389,
+      "sha256": "239da88f1f56d2893ee38ea56c29c7d406ebe2781dc73e87d7ae6d59d408dc0e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Mixed6.csv",
+      "bytes": 4195351,
+      "sha256": "edf68b0f60044e1e1dd083298eaaf982e929f948bff7ca4871078ae1161da8ec",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/863_Mixed8.csv",
+      "bytes": 5624739,
+      "sha256": "c6f4ae944999f8358de957e837fea16c42094e647615a63a9556e0c7d3402f7d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-05-19_17.31 873_Charge1_-20degC_IN21700_30T.mat",
+      "bytes": 377,
+      "sha256": "02403450c2e39d710f780eefa725c9c30acad2af5d3a11daa2b848ed5f52ffce",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-05-19_17.34 875_Charge1_-20degC_IN21700_30T.mat",
+      "bytes": 2466,
+      "sha256": "703c9ef76ca74315e75d414c43482a9b4ba0e460f1b45eb7f8e2e22ef4cfd5b8",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-04-19_04.11 866_Dis_0p5C_-20degC_IN21700_30T.mat",
+      "bytes": 12382,
+      "sha256": "9b092b56d78adfd308810198dec579407878ef2481a7289e2afbb601bb2a0dfb",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-05-19_18.52 875_Cap_1C_-20degC_IN21700_30T.mat",
+      "bytes": 11689,
+      "sha256": "c11aa33c46bb77cf46ea0c991dc5124c4f18aa3235c4ffc0a6bdefa7b6a9a847",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-02-19_14.28 866_C20DisCh_-20degC_IN21700_30T.mat",
+      "bytes": 71576,
+      "sha256": "12f69042e37883157dd13d719df531deeebd14626fe771337425a86a06a8448f",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-05-19_19.52 875_Charge2_-20degC_IN21700_30T.mat",
+      "bytes": 5157,
+      "sha256": "42e0b7232ebeb9ca6ced52c766be440213ff3d25299a99a6ce1de11fb0b21a7d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-04-19_12.43 866_Dis_2C_-20degC_IN21700_30T.mat",
+      "bytes": 22058,
+      "sha256": "fb85c97814d5695e7e8a2539e1a507434dd8524e0fd59ca8e63e52e2a570ec0b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/06-28-19_20.09 866_HPPC_-20degC_IN21700_30T.mat",
+      "bytes": 676579,
+      "sha256": "628f00682101b68f483c8a55cca3272dca523a7845a755c542977f81e3d39542",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_02.34 875_Charge4_-20degC_IN21700_30T.mat",
+      "bytes": 5049,
+      "sha256": "76d0fbf3507de3a93d3c6a6d51e72d17cc25b00308ab3f045dc0fa75284d94b3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-05-19_23.30 875_Charge3_-20degC_IN21700_30T.mat",
+      "bytes": 5141,
+      "sha256": "a4d2c94406cb69da48082b76a8c71bcc3391b46b26fc87df26cde461ea0c795c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_05.49 875_Charge5_-20degC_IN21700_30T.mat",
+      "bytes": 4962,
+      "sha256": "941d3fc073ac74e3b209381b154a3de1d70e9b8b447579c15a940ea8bc3378f6",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_08.44 875_Charge6_-20degC_IN21700_30T.mat",
+      "bytes": 5096,
+      "sha256": "8616f4a7c90a1a052c657019fbdf930ffbf51dd32976330643edf8f365dbc4bc",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_11.57 875_Charge7_-20degC_IN21700_30T.mat",
+      "bytes": 5072,
+      "sha256": "57ba2d7d5961f818d9e60293d12289da48d25bf75c30721cb132eae134406788",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_15.18 875_Charge8_-20degC_IN21700_30T.mat",
+      "bytes": 5096,
+      "sha256": "a42768a8c11407150e591067275a7b800202961efcd5c3ac07be7036c4fc777b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_17.48 879_Charge9_-20degC_IN21700_30T.mat",
+      "bytes": 2697,
+      "sha256": "03432663034cd6821b3a237d297a9e202e5516ed7e2e2e30c51aa52aaccc79f2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_08.19 875_US06_-20degC_IN21700_30T.mat",
+      "bytes": 322954,
+      "sha256": "1c109a45cbee1b367297490734bc618e8664a3bec3239cc6ea81a840f34543cd",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_19.16 879_Cap_1C_-20degC_IN21700_30T.mat",
+      "bytes": 11751,
+      "sha256": "e166bbad71b06e27f9d24f03f368ad11f862f345ff97f53d173774fb0b9d1d91",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-05-19_22.23 875_UDDS_-20degC_IN21700_30T.mat",
+      "bytes": 998867,
+      "sha256": "b0344549a743e25ea8288a4bdf1cf1b5ca78ac7f375bb7ea7de8d21c59ae41b1",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_20.16 879_Charge10_-20degC_IN21700_30T.mat",
+      "bytes": 5119,
+      "sha256": "03583da0d5684e7c8110fb24730a84cb05c85477476ffef267814cbfc421c764",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_23.15 879_Charge11_-20degC_IN21700_30T.mat",
+      "bytes": 5036,
+      "sha256": "eaa9c6c75cd821ae2ab7024119a0f3a1d35550e10ee0758e6baf821b838181b0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_02.28 879_Charge12_-20degC_IN21700_30T.mat",
+      "bytes": 5072,
+      "sha256": "4a4cb4cd4b79998e7d0487db81157838e7b8bc26d2b82f5b4e4139b622757842",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_05.04 875_LA92_-20degC_IN21700_30T.mat",
+      "bytes": 657985,
+      "sha256": "a20266b9f4cf3f25191f5590f60e3bf9291ef96c7de9726686ba0fc67adfc9e7",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_02.00 875_HWFET_-20degC_IN21700_30T.mat",
+      "bytes": 477523,
+      "sha256": "02ffedf8aa6d79cbad487de80bffcdf4f08ab3b2b0f7b56eb888ba8d19967de8",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_05.36 879_Charge13_-20degC_IN21700_30T.mat",
+      "bytes": 5052,
+      "sha256": "41fba2fb7cf3be359c8292cd0ab5c5207e433dd05d861da9484381934be01c9e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_08.39 879_Charge14_-20degC_IN21700_30T.mat",
+      "bytes": 5056,
+      "sha256": "a85e914f911a0ba14eabf2b30e586b08bac59f69a6764a2d6b7b9f3fbeeb1682",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_11.15 875_Mixed1_-20degC_IN21700_30T.mat",
+      "bytes": 618941,
+      "sha256": "8a2f2a22787b1ca110f313cb4edc74167c80eb4441afe02487137a8c2030d563",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_14.28 875_Mixed2_-20degC_IN21700_30T.mat",
+      "bytes": 742270,
+      "sha256": "1d07a712825a3e84298163bc7e4ba026e3b643ce81cb4201c43f7804b08a508f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_11.42 879_Charge15_-20degC_IN21700_30T.mat",
+      "bytes": 4936,
+      "sha256": "7a6f8766915199e8a4d7e498ffb3a6a16f99c91d0a614edcf606b84b5711cc0e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_15.04 879_Charge16_-20degC_IN21700_30T.mat",
+      "bytes": 5089,
+      "sha256": "4657b91e4f8620fd6ea3b487a298e249be16578159f0cc26b6e4535ff4c782d5",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-06-19_22.47 879_Mixed3_-20degC_IN21700_30T.mat",
+      "bytes": 371201,
+      "sha256": "c9f4aa8cfffac31f5e98f2185bc8fe9b3b6f6940ed21e3b56c76595bccc6670d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_01.45 879_Mixed4_-20degC_IN21700_30T.mat",
+      "bytes": 622261,
+      "sha256": "15bd05ff3a81f4d9eb5749bec339323ce7c74fad2bf572fb50d1019826844b81",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_08.06 879_Mixed6_-20degC_IN21700_30T.mat",
+      "bytes": 465894,
+      "sha256": "b13ae476ce53cc274ba4c95beff6b2575bc5d5185a1530f6239171b534c636e1",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_17.33 879_PausCycl_-20degC_IN21700_30T.mat",
+      "bytes": 159285,
+      "sha256": "4dfaa0af47f3ee802418c57592dd906a664a87942bbff0e84e7f1791c9de272f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_11.08 879_Mixed7_-20degC_IN21700_30T.mat",
+      "bytes": 474099,
+      "sha256": "419bb6c0da4b1b694fde03729ebdb7c657ce9348f783fb6ea0e26b16a377fd72",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/873_Charge1.csv",
+      "bytes": 1323,
+      "sha256": "0db00681a03569aee38795337b119be601ea17951518e76bb4353d7fa1f82165",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/866_Dis_0p5C.csv",
+      "bytes": 114485,
+      "sha256": "b993862a74931310f8ab346eb7393c0314a0b5fd036eee071b3dd6529955db9b",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/866_C20DisCh.csv",
+      "bytes": 484722,
+      "sha256": "86d8cb13fa4612ec8141490bc8c70fd5e35dff8e5e147554b888870427b981a9",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_04.57 879_Mixed5_-20degC_IN21700_30T.mat",
+      "bytes": 558049,
+      "sha256": "0f99814ad3671f5640fedbd053c6eff21c374c0d41f1ba1e1a21342b0fb1ec35",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Charge1.csv",
+      "bytes": 16457,
+      "sha256": "3d7f7899629c89c0d19604a663efd6a5238ba46525c713bc4b601ae02653e333",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-07-19_14.11 879_Mixed8_-20degC_IN21700_30T.mat",
+      "bytes": 781635,
+      "sha256": "60fd8ca0a32f79065118449b2122329761ddbe882dc921a12c6089f828f1d3e4",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Cap_1C.csv",
+      "bytes": 59700,
+      "sha256": "0cc4dbef71ab5fd87a4811e1aecf8689d7f24e38b21977123b2dbdf023c6c90b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Charge3.csv",
+      "bytes": 27692,
+      "sha256": "5742e4379bd92103188a7a8a9b2c71ca1f006e8f172dbb737aae768cafd9226b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Charge2.csv",
+      "bytes": 27811,
+      "sha256": "0bffce86e8a36f839108b32cf551bbd045daeaa1500bc36bf541d477a2604a9e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/866_Dis_2C.csv",
+      "bytes": 364251,
+      "sha256": "0a41d34916fb62979e90c3ac16d69898828f9e93bf619b64a5d44adf6b23887c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Charge5.csv",
+      "bytes": 27614,
+      "sha256": "37aca42047c22f578d580755626e1d544f5baa5d6b3197505239846c3870dcd2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Charge4.csv",
+      "bytes": 27458,
+      "sha256": "edd3399f40e5216c42cf85b0f2835844f7418cb41055fde56c8692d6f23991e4",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Charge6.csv",
+      "bytes": 27709,
+      "sha256": "c5fe30d7b6aec2d9ae588910e24030a93adf461059b808f81b8b588079d3eaa5",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Charge8.csv",
+      "bytes": 27775,
+      "sha256": "636bebd9927e3ac095673105755e545a677b675f584e871e24f4d253b7df4966",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Charge7.csv",
+      "bytes": 27678,
+      "sha256": "70ef4345696e8bdecbff1ededc1225f7f0bc5f0c44d35406bbd2da867a033045",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Charge9.csv",
+      "bytes": 18007,
+      "sha256": "671514a1d418c4c50eeadef58a01c8ccc20b5e208105716d41d02b209f0c68a1",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Cap_1C.csv",
+      "bytes": 59701,
+      "sha256": "7fa6afad214181ce8991453e6fd87c9f7dfa147b52fdad11d35ee4642657c15c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Charge10.csv",
+      "bytes": 27996,
+      "sha256": "5051bc4209295a4c9b5a5286af4756178c16af9ded0c5741d46c205b5ff3f768",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Charge11.csv",
+      "bytes": 27726,
+      "sha256": "65d5973596f17822fce14a215fe5fb621f5c6b1eeaa4431e4adb74de44933f80",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Charge12.csv",
+      "bytes": 27304,
+      "sha256": "d4bf85da88bca7e481377003090897cbca677d90a6fe708e0eb27e6f064ff6a6",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Charge13.csv",
+      "bytes": 27460,
+      "sha256": "afa03c34fc1f79b1ada5e8f1fa33ac91820f2b1f00714f7fea8f58c96bbfd3bd",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/866_HPPC.csv",
+      "bytes": 10433276,
+      "sha256": "28eb3f9f245f610f1124366d41369ea3a49d3c7e2ff78c8c7e6ddd561a03cc43",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Charge15.csv",
+      "bytes": 27384,
+      "sha256": "ba81512fcb7cbbfed2b111cbf670d0bd6452822f1357a27cb47903eb69e6c8fc",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Charge14.csv",
+      "bytes": 27394,
+      "sha256": "d43bb3cf3aa57b82a25dffc371cc100984e441d5120835f0042df694bb28c01a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Charge16.csv",
+      "bytes": 27304,
+      "sha256": "1b625e7ab4d358bee56dcd0afe67f15c992880fa119b9909f9e451080a77ec19",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_US06.csv",
+      "bytes": 2403912,
+      "sha256": "716c7d9a2458e27c8e634bcc01d2bc1ce0a551cfcf523d6af777d304f8fa6294",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Mixed1.csv",
+      "bytes": 4150326,
+      "sha256": "0178e6b8e6edb3c712c9da276f4c7dbd04c4c1af94c00d3e626b883da4893941",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_HWFET.csv",
+      "bytes": 3293972,
+      "sha256": "a806767e7af26abf1aa94a4d73ac0b30ad253feadef8bb4f21f53677fac850e9",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_Mixed2.csv",
+      "bytes": 4842770,
+      "sha256": "006b721f15ff03c8c8a8b5a36f15302194bfd957301eb6877d17cacb13d632b6",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_LA92.csv",
+      "bytes": 4395589,
+      "sha256": "af7365663b08927df8d730a21563a6938e88f92bc9aa79653a8c5dbce705e252",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Mixed3.csv",
+      "bytes": 2719607,
+      "sha256": "086032aa33c73cf6a3ae072387aedcf1171bb291781d7a081cf8fe1f965ea298",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/875_UDDS.csv",
+      "bytes": 6536271,
+      "sha256": "b542ca5f834dcd15556a1dfd11935bcbcfcc24ae8e2cbb90374d074710b38cd5",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Mixed5.csv",
+      "bytes": 3776734,
+      "sha256": "8d815bdc8d6042be00946ef18911430c5df6d9f9b78b234d4b34ce07112e8cd2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Mixed7.csv",
+      "bytes": 3332953,
+      "sha256": "bf6493ddb42b5a335f5f9c4d3976af10a2632b5b4fb0d8cb3a5f44e623be554d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Mixed4.csv",
+      "bytes": 4216648,
+      "sha256": "8bdf102cda2ac88808215312acd115d94331425b9d12f7e4ef3909bb2a1a610b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Mixed6.csv",
+      "bytes": 3277165,
+      "sha256": "53f44ca0c523e8f952ee294c6a21095400b2f3c726769f8521eca6123c807262",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_PausCycl.csv",
+      "bytes": 1580580,
+      "sha256": "a768444f4391f5e033733451e8f2b9acf94a7c582961e54fea63da1a6cf23b90",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/879_Mixed8.csv",
+      "bytes": 5190191,
+      "sha256": "3d4098433101283550c0b0f357f4134a976ca8beb3edb888da3483720c26e7a2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_14.27 824_Charge1_0degC_IN21700_30T.mat",
+      "bytes": 2565,
+      "sha256": "3a21610b230b99b78749cb9db9a3515f7865d5c22d8ae0fe2a94d6e4783f9ce8",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_20.29 824_Charge3_0degC_IN21700_30T.mat",
+      "bytes": 4473,
+      "sha256": "26ec0c352e1c1c61c87c2c390d0e400962ce7b1f5b8a6e23cb8207000be6682d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_11.54 819_Dis_2C_0degC_IN21700_30T.mat",
+      "bytes": 5630,
+      "sha256": "008810c69a8ac748c04f5b3ae3b2c292d4fb7ad2b08cbfdeb886fba442a46568",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_15.59 824_Cap_1C_0degC_IN21700_30T.mat",
+      "bytes": 12477,
+      "sha256": "fe21998efebfb8533134b58e3d0004fa1b44bb567609a57642a18339ee104efd",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_17.03 824_Charge2_0degC_IN21700_30T.mat",
+      "bytes": 4560,
+      "sha256": "fae7deaac44ef7088c0bbfd0eed987a31d89c41686f05681f62eda754a5c44fd",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_07.21 819_Dis_0p5C_0degC_IN21700_30T.mat",
+      "bytes": 8975,
+      "sha256": "09e672d104abb8dc1d9d9f9782fcff03faab85f3642f24dad658cf6da4076ba7",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/05-31-19_14.26 819_C20DisCh_0degC_IN21700_30T.mat",
+      "bytes": 77361,
+      "sha256": "71cd92722fff573a21116c036d592c1292def8a1ef64b84a032e55acc3dc11a7",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/05-28-19_19.04 814_HPPC_0degC_IN21700_30T.mat",
+      "bytes": 674397,
+      "sha256": "eea515b985fc2e181a78ca69d980b13c4fced1bfd2d8ab1ca7c0f2322679a7b6",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_23.09 824_Charge4_0degC_IN21700_30T.mat",
+      "bytes": 4534,
+      "sha256": "ca1e8788c6abb852ecc97393adb9b073a3eb6ce53f5a89f8aee6e99cbf15e538",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-03-19_02.05 824_Charge5_0degC_IN21700_30T.mat",
+      "bytes": 4517,
+      "sha256": "25a1760b1a939d467dfaa8a1a47a7a50a354b436a4700b5959adff3555efeb7e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-03-19_04.38 824_Charge6_0degC_IN21700_30T.mat",
+      "bytes": 4483,
+      "sha256": "5767ad9567cba1a486270b5970cebe85ccce7a4d0e25d78966033d525c1eb4e8",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-03-19_07.35 824_Charge7_0degC_IN21700_30T.mat",
+      "bytes": 4471,
+      "sha256": "7cfeee71cf7e55232ff076b96d227cf34398acae0c7d6ff08f6984100c5953e7",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-03-19_10.40 824_Charge8_0degC_IN21700_30T.mat",
+      "bytes": 4560,
+      "sha256": "9e83aba610ffb31b0b177fe4c625ad0f17447b0c9b8d17ee21d4a2890f3f563d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-04-19_15.50 832_Charge9_0degC_IN21700_30T.mat",
+      "bytes": 4758,
+      "sha256": "d7fe3c3ddc99ccbeb7cfa217483143ece824355ca85cea304e288988f0e64e94",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-04-19_18.14 832_Cap_1C_0degC_IN21700_30T.mat",
+      "bytes": 12426,
+      "sha256": "0f6eac8491705ac7c43129f01f3f294fc4427916f190029baa72b8d83acff040",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_22.28 824_HWFET_0degC_IN21700_30T.mat",
+      "bytes": 542360,
+      "sha256": "695945f28dc5d4081f758594037898ccf44ae6d89b2ad59c37d7e16ab3c6e835",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-04-19_19.19 832_Charge10_0degC_IN21700_30T.mat",
+      "bytes": 4934,
+      "sha256": "b9019517893a4652149fb0cc99bc7dffb0f6c7d2848a4ffd5ba1521ec5cf498a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-04-19_22.19 832_Charge11_0degC_IN21700_30T.mat",
+      "bytes": 7080,
+      "sha256": "f5d3bce69aa6064e65d3c31492c1ff19a42f2f103b6ca09f399cb4ceff78190c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_19.05 824_UDDS_0degC_IN21700_30T.mat",
+      "bytes": 1200759,
+      "sha256": "edee23e92b74b9b46550efa0bc285a8a75924006f6c815dd1ca9dc25f016b5f2",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-05-19_04.36 832_Charge12_0degC_IN21700_30T.mat",
+      "bytes": 6808,
+      "sha256": "d73ba3d67a892dab15c1b443917132f72987b0ca33f5504198c171a2bd186449",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-05-19_10.34 832_Charge13_0degC_IN21700_30T.mat",
+      "bytes": 7025,
+      "sha256": "3374312a737e9495f9c559f2ced449f52be7dc4b334b3dd5dd63e318142d29ec",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-03-19_01.11 824_LA92_0degC_IN21700_30T.mat",
+      "bytes": 754197,
+      "sha256": "b79222540cf21bee50b624f762e69249730a77b48cefbcadd58575d89737365c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-04-19_21.43 832_Mixed3_0degC_IN21700_30T.mat",
+      "bytes": 448747,
+      "sha256": "d953f2e4ccc76468eb249cf8eaa2535f30d7c4dc8d274e9c40bfcf29f6bfa7ae",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-03-19_09.44 824_Mixed2_0degC_IN21700_30T.mat",
+      "bytes": 787355,
+      "sha256": "9dea403d60290a8a68707762c0093b648b675039b78d5db278c93a9a5f0f0a12",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-05-19_16.52 832_Charge14_0degC_IN21700_30T.mat",
+      "bytes": 6760,
+      "sha256": "fa6dba85e3b405bb7aec3b59752581d9f9201398d326dc5deb3a1f66550ecd6e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-03-19_04.11 824_US06_0degC_IN21700_30T.mat",
+      "bytes": 348922,
+      "sha256": "f86860981d25d2a419e0945344e6ce62df69b68a6e3cd92f74978ee23aa27432",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-05-19_22.43 832_Charge15_0degC_IN21700_30T.mat",
+      "bytes": 6937,
+      "sha256": "4ea1f5febf1ec22f027da92434a71d026aaa8466e5130f0bc5b0d53c47ae73c0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-05-19_03.49 832_Mixed4_0degC_IN21700_30T.mat",
+      "bytes": 657070,
+      "sha256": "497124a1fb59cad2d7736cb6d511455b471031a5fc7aa16b7aa37d7162f30b58",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-06-19_05.11 832_Charge16_0degC_IN21700_30T.mat",
+      "bytes": 6769,
+      "sha256": "16f0ffe4a9fd6947d8e3f4f43610c7310d92e601ba263c439b093fb1fc2e7b5f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-03-19_06.49 824_Mixed1_0degC_IN21700_30T.mat",
+      "bytes": 619720,
+      "sha256": "660e784d32e4f3fbd2af17c35a5fa8985e886f00d8c858b342fa75c879baf428",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-05-19_09.52 832_Mixed5_0degC_IN21700_30T.mat",
+      "bytes": 578367,
+      "sha256": "63063bbe1a14d2a8765c392cf358663eea9ab8ac1f0bf2f94dceadf2f00ae599",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-05-19_16.01 832_Mixed6_0degC_IN21700_30T.mat",
+      "bytes": 709504,
+      "sha256": "046c22f4f70f55e91d41b467c5efd5fb2adc57aa1aa0f46d6f1c33865c3cc8c4",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/819_Dis_2C.csv",
+      "bytes": 37672,
+      "sha256": "26d328c7dd80f3073d55b08f5dfa2704c38ef98890dc60ee89810ad410a49ce6",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/819_Dis_0p5C.csv",
+      "bytes": 62513,
+      "sha256": "9b36b09963cb5cbcdaf9367fe7f50b7d4f4e5ec61187807d3ebe0b4772aa93bd",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-05-19_22.02 832_Mixed7_0degC_IN21700_30T.mat",
+      "bytes": 550567,
+      "sha256": "4eeb5ed8295d2d0e40ca8228efc44e3b5c6bf5e6fca204aebe46f04977e85604",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Charge1.csv",
+      "bytes": 18532,
+      "sha256": "d8bc17c62f749e09b6ca317d09c6aa7a51aa14e5e9c179d0f836ab454464cab5",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Charge2.csv",
+      "bytes": 23411,
+      "sha256": "3851edf60e6eaf3672ce2daf4705aeb52610a8c5a0a54bf04c94b70fe56f0fad",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-06-19_10.15 832_PausCycl_0degC_IN21700_30T.mat",
+      "bytes": 203771,
+      "sha256": "04e139a5c1a9cd3379b98baa01294655218bc3380194a75ed387c1b3989d0dcf",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Charge3.csv",
+      "bytes": 22928,
+      "sha256": "6d043ab35e91b111e72865535fe7164fce1510ff51024f0d451f58ba64aaef8c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Cap_1C.csv",
+      "bytes": 63540,
+      "sha256": "e3c57131b29830c2e6fe0327f325546ea341027ec15a6a9432952c4be2829fa8",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Charge4.csv",
+      "bytes": 23465,
+      "sha256": "14456afc06b00f8ce6e5d57fc63336ed2f5bfc0f6397523ff6a23c0946d66aa0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Charge5.csv",
+      "bytes": 24118,
+      "sha256": "91c5b813b2e308f7cf17ad6be751c39cac91b37e974540620f2e8ae85123b090",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Charge6.csv",
+      "bytes": 24585,
+      "sha256": "bda6c02c743c2c1e48024651c7a53ede484f3aaa22221b17b48b29a0d023fa8d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Charge8.csv",
+      "bytes": 24742,
+      "sha256": "527e28c3cd7065e56ec83b6484a62291757bf524d73d959d711249d5658de86e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/819_C20DisCh.csv",
+      "bytes": 521459,
+      "sha256": "ccce071d5c4030aa2d5e099643aac36caad16f210c3e7240c2f463f19cae4e04",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Charge7.csv",
+      "bytes": 24574,
+      "sha256": "82daa5e571bbda7056479f27bad1fada3255a65b4e777b07fdd976e423f6537d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-06-19_04.09 832_Mixed8_0degC_IN21700_30T.mat",
+      "bytes": 887422,
+      "sha256": "d1f1b60ff56c30b32a61fa2bf5b3f7893c5eb36091e0a8fe11d6d60a8971fb44",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Charge9.csv",
+      "bytes": 27092,
+      "sha256": "5cab1158464dae3c992996de9f4b9811616c47b023fdfab560064fed56b00cff",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Cap_1C.csv",
+      "bytes": 62799,
+      "sha256": "ac9a6bc523f1e385e1ea1c04143e4e79bca9084044c9e201ebda35d3bd78ad68",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Charge10.csv",
+      "bytes": 27007,
+      "sha256": "87f1ec2bfa52ad4748d0d43187e2d306c119fbb06fe685ea6633fc5e2531812b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Charge11.csv",
+      "bytes": 55906,
+      "sha256": "caaf22595d0487daa3de7141c368f552c9585571b4aa92ff64fb4f485c01ddec",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Charge12.csv",
+      "bytes": 53412,
+      "sha256": "1964e215f02cb4e5f9f28fcfbdc269c53c37d39c7deaf660ed0b431c175de383",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Charge13.csv",
+      "bytes": 55271,
+      "sha256": "ed6300cef283d8f23a058316f19db6a5977b8a4073350695166fef1c96fc0984",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/814_HPPC.csv",
+      "bytes": 10462375,
+      "sha256": "8952f81cf8ae94b2b27fedbd7a83bed43fafcb6b82db8df334a008859895dec9",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Charge14.csv",
+      "bytes": 52655,
+      "sha256": "febc79a0dfc49893bd586236290371d4743ba81d3d3793461602d8a9e0dc18fb",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Charge15.csv",
+      "bytes": 55107,
+      "sha256": "66e5bb336aae21cc8e10eb3916a309d1b5b79dc602aecd6fa3476ac2d8425ee5",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Charge16.csv",
+      "bytes": 51594,
+      "sha256": "d418bc00a10b71d5eee42f998da11c638ba0538864254a93a161d0c0a73810b3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Mixed1.csv",
+      "bytes": 4312150,
+      "sha256": "5a11e7cdc84a7c9c0ceb84c21f97d1f63cddf2f5b5b0061ca43fefa6c451a7b7",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_HWFET.csv",
+      "bytes": 3828457,
+      "sha256": "2d306d2013cae9ef2ffe3722c011744a22743b762d3143cdaec2a076a461229d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_US06.csv",
+      "bytes": 2571976,
+      "sha256": "9747b669d02bdf6b70fa9f9a6de1fae7c5ca540a0b22b9d267791640097db51e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_Mixed2.csv",
+      "bytes": 5313462,
+      "sha256": "2f3fde3eea596a05888c55326a0340047267517fde1e85c7e9c727521fd0cf93",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_LA92.csv",
+      "bytes": 5109258,
+      "sha256": "d6c142df5b3abdb2ef32698332e3b96ac57a8911da89c1fd47544be4dc8e06b4",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/824_UDDS.csv",
+      "bytes": 8057537,
+      "sha256": "3507451c193ac6e0c7d9528ba0cf377310e51d2ba119a066a0af405e9c86eb47",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Mixed4.csv",
+      "bytes": 4516126,
+      "sha256": "4b3f29fa84c3ad57133dccf70dbbe89f80626ade31fccca157fe26e18b1bd611",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Mixed5.csv",
+      "bytes": 3998153,
+      "sha256": "bc9625d09cab3eebc22c5d592a7fa72547c1bc897c5bb677fa520c8da38aead8",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Mixed3.csv",
+      "bytes": 3356206,
+      "sha256": "1bdd2222e89d3cca68f1916757ee2936a917c1b1ba36bb2d07e5f156e1b1a56c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_PausCycl.csv",
+      "bytes": 1903621,
+      "sha256": "ce0dc7d0434d7a22d449f5dac247f996cc9ef732198c612b5ccc2a4dc508b087",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Mixed6.csv",
+      "bytes": 4817453,
+      "sha256": "70b8c58b2241dab9b3f6777231663d7a07985578a968ad34456538f3c354f9a7",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Mixed7.csv",
+      "bytes": 3830032,
+      "sha256": "48d9a541fc51b179411d9aeb3fd07e19576fb687feb4c44a89edd05b71cde498",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/832_Mixed8.csv",
+      "bytes": 5932254,
+      "sha256": "438a413f34e5d9ef3cf5e6ef879c5f14237a3687e83319b986a1c0b16ae15139",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_07.44 752_Charge3_10degC_IN21700_30T.mat",
+      "bytes": 6652,
+      "sha256": "365858f978889fca24ca63e24c25f10f7cbd4007091c0a156c1507129666215c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_01.36 752_Cap_1C_10degC_IN21700_30T.mat",
+      "bytes": 12237,
+      "sha256": "6b5fcd3bd0be1cc12b13f2c586f54d64cb7907ba62a09128d9d4fb81489f56fa",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-27-19_23.52 752_Charge1_10degC_IN21700_30T.mat",
+      "bytes": 4038,
+      "sha256": "5d4a0c4cb30e064b37b64e0cb31931abf109eeaf27440d04cfb2fa307410804e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-26-19_09.58 746_Dis_2C_10degC_IN21700_30T.mat",
+      "bytes": 15630,
+      "sha256": "ee8431168baae0a2c916aa2c2b681aa820cf6b5b67ff7c62a26fd0a651a181c0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-24-19_06.06 746_C20DisCh_10degC_IN21700_30T.mat",
+      "bytes": 76170,
+      "sha256": "e73c5206759a4ef7a1cb4162f81063a26836b6561c89d8a2f3cc5278887d9a6a",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_02.43 752_Charge2_10degC_IN21700_30T.mat",
+      "bytes": 5568,
+      "sha256": "5e6bc55e9a68065d4d79925ac4bf9febd842f09d240fda2b869ab32a5d6e8397",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-26-19_00.33 746_Dis_0p5C_10degC_IN21700_30T.mat",
+      "bytes": 12652,
+      "sha256": "e67658b261cea811339c9767066bee5001e4b1398dde8164f6708720f9ae8c25",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_13.25 752_Charge4_10degC_IN21700_30T.mat",
+      "bytes": 5706,
+      "sha256": "b9f693baeb7ff21bd713ffaf574816a991f5d42a15c4b0676a971b9f96a67377",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-22-19_15.28 746_HPPC_10degC_IN21700_30T.mat",
+      "bytes": 722275,
+      "sha256": "9fe6a7fdc9f208c739cd24c0c34d78ec8157193b8c3143d9b7d9a6fbdf1386c3",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_18.10 752_Charge5_10degC_IN21700_30T.mat",
+      "bytes": 6177,
+      "sha256": "9b2c83752b1608870558c0105af4558f0c0ea6b50a357b28c8f0f9265ed75ffe",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_22.53 752_Charge6_10degC_IN21700_30T.mat",
+      "bytes": 5630,
+      "sha256": "36c81e1b994b698e658f9a142d30a989d8cb4d4e35a492b2d78777755314d920",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-29-19_03.12 752_Charge7_10degC_IN21700_30T.mat",
+      "bytes": 6115,
+      "sha256": "f8169118632086f9870be7158390e008254825d687450240b94d500937eb82fe",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-29-19_08.21 752_Charge8_10degC_IN21700_30T.mat",
+      "bytes": 6033,
+      "sha256": "807572e6fd874beb95746078ebc668c3ee54a221900823e13fb3f6a1c8cdbd9d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-29-19_13.55 756_Cap_1C_10degC_IN21700_30T.mat",
+      "bytes": 12801,
+      "sha256": "629b3f076b3f57508359217fbcd659f30d1080fce48c1b1cba6270659814966e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-29-19_15.02 756_Charge10_10degC_IN21700_30T.mat",
+      "bytes": 5587,
+      "sha256": "ce4ab764d0c3c6aef0333696405da198471fdd84ff9ba7d26baa56ed76b5e918",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-29-19_18.57 756_Charge11_10degC_IN21700_30T.mat",
+      "bytes": 6108,
+      "sha256": "b67d5295509082ee3c2c02140b9edfdb3762f678c51e02d5076402fc3a012d68",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_12.43 752_HWFET_10degC_IN21700_30T.mat",
+      "bytes": 527748,
+      "sha256": "db7a082943974de7d00da32a62a2c2d74a1dffc6276e2efac7617c76e0f4d0a3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_22.22 752_US06_10degC_IN21700_30T.mat",
+      "bytes": 374431,
+      "sha256": "a72a3bd5dcc0557b8602fcc9ca53ef498c19ae80deef2a3fd23640930f5b7543",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-29-19_23.53 756_Charge12_10degC_IN21700_30T.mat",
+      "bytes": 6208,
+      "sha256": "2d0cfd30f94b1ff6c096674917226c38055ff783f92de85aa2e6b0ff0e0d927b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_06.00 752_UDDS_10degC_IN21700_30T.mat",
+      "bytes": 1394538,
+      "sha256": "f031ac7955df7a47cdb500a2d691fb1fdcbe487a77fe1f52bba9c7480b88fc11",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-29-19_02.25 752_Mixed1_10degC_IN21700_30T.mat",
+      "bytes": 599877,
+      "sha256": "df5e3c53d058780a8b752ae3b09a88c50748658469841b73e6219b5125985f2d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_17.06 752_LA92_10degC_IN21700_30T.mat",
+      "bytes": 836012,
+      "sha256": "37e5a4b31b483673b87d57db2c557ea52b7830e3f41838285a43cd0a71b66e5e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-30-19_04.44 756_Charge13_10degC_IN21700_30T.mat",
+      "bytes": 6195,
+      "sha256": "c256f1def4cab03812efa4758d09c259bb1226a0cd83306d5dfc4883872e8f1a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-30-19_09.53 756_Charge14_10degC_IN21700_30T.mat",
+      "bytes": 6068,
+      "sha256": "47e486b72450c99ad35cb2a17609eba19279a533b6f813557005f10419ac7e05",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-30-19_14.37 756_Charge15_10degC_IN21700_30T.mat",
+      "bytes": 6242,
+      "sha256": "bcdeeb6b224d6d6f15225671634f9bda92d85e31f72e996dc177223425f33be2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-29-19_18.17 756_Mixed3_10degC_IN21700_30T.mat",
+      "bytes": 502896,
+      "sha256": "523db900705f89823cf846b90eaa3ac1ef40879ab6bce355c597475c8b881e9a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-30-19_19.57 756_Charge16_10degC_IN21700_30T.mat",
+      "bytes": 3644,
+      "sha256": "a8d7c178a9f603fbaf58885af844abedb97602761044f9ad1359db152f3e0d1c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-30-19_04.00 756_Mixed5_10degC_IN21700_30T.mat",
+      "bytes": 554679,
+      "sha256": "5fcdb07f315f5a4896288e6c40ba8183ba24054c6b87cd7f340b8420f3f99ec0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-29-19_07.22 752_Mixed2_10degC_IN21700_30T.mat",
+      "bytes": 771218,
+      "sha256": "222dc6e21135974555dbb0fd3544a8d114f8f141ad3bab724ab9c1b8b51e1e61",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-29-19_22.58 756_Mixed4_10degC_IN21700_30T.mat",
+      "bytes": 689415,
+      "sha256": "8dbff87a5c6b9f823038927e3af2436008edf2d4f75369c8cce6455df3ccb2d3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/746_Dis_0p5C.csv",
+      "bytes": 95215,
+      "sha256": "e364b739558e7c6adc6b9441f11c7b4a62e915f14fcc75e9786981024901e46f",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-30-19_08.57 756_Mixed6_10degC_IN21700_30T.mat",
+      "bytes": 732608,
+      "sha256": "899239bd88161e68066cf92bfc0a2e08cda85ad753d866867bbbec15b5e5c091",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-31-19_00.16 756_PausCycl_10degC_IN21700_30T.mat",
+      "bytes": 236940,
+      "sha256": "b8a4d3e67deaee7fd157fc7a617f5a7ac5b91ee6345fe7c4eb8388e4cf396478",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Charge1.csv",
+      "bytes": 17642,
+      "sha256": "dac1d177365b8d0c540489b724d7d1ba5babae57924d2be7a22e0d875d1efd4f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Cap_1C.csv",
+      "bytes": 54137,
+      "sha256": "0b38c1f4ed062db22af6330752a2789a9af66298aa395bf582729f5ad81ccc74",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-30-19_13.50 756_Mixed7_10degC_IN21700_30T.mat",
+      "bytes": 602096,
+      "sha256": "cfab80167c58b31270bc3bec648f5eb023af68b7d3c6a0b9de775b8e0c042405",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Charge2.csv",
+      "bytes": 29144,
+      "sha256": "1aa4b05d8c54f81a6f82f62532233d3bb68842e9530b091c154b9381af18f2c2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/746_Dis_2C.csv",
+      "bytes": 159132,
+      "sha256": "5ba3d0db8dfeaadc2cb4efd59c75a50698b659f84ee894188cb68ca8cf0d1694",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Charge3.csv",
+      "bytes": 42436,
+      "sha256": "4cdf5ac4b936f9e44f78632b651aad7e6a1f29becf63ee91e98962bdb50d15ac",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-30-19_18.49 756_Mixed8_10degC_IN21700_30T.mat",
+      "bytes": 894498,
+      "sha256": "eed3b703469c2ab3f0bdc828d479a79a11a46c79bf33274e3ab301b0dea22c3f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/746_C20DisCh.csv",
+      "bytes": 415870,
+      "sha256": "a8ab780f6d9a50c5071be05ae20f646b15d0f4720d7ab4b0c012c674acb3f7eb",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Charge4.csv",
+      "bytes": 32288,
+      "sha256": "851d41a90e5bb4e87e99ddb7e9e52f5e388d86183d0b3d2bca9c1824c469c5ed",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Charge6.csv",
+      "bytes": 31548,
+      "sha256": "f5d1f1896ad9f2a6b199c8c2d9cfe45c314d7c4972f70ce247efa87f6cb3228a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Charge7.csv",
+      "bytes": 36084,
+      "sha256": "f9874ca328cc2c17f88e8c53e5ed9dadd480b783013d325b3169c8e625386a4f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Charge5.csv",
+      "bytes": 36371,
+      "sha256": "7e9336cf53a27faaff5b2413af783df11271129e599e1982466129f4db4e07d5",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Charge8.csv",
+      "bytes": 36014,
+      "sha256": "c3046525a00e53599da2ab76e0299bb00f7d4b4135d5e2158363cae24d3245a9",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Charge9.csv",
+      "bytes": 13309,
+      "sha256": "5556d6b3c984ed586b19bdbca8babdfcee57ac436172eaf8240a2f099cd6dcb5",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Cap_1C.csv",
+      "bytes": 66435,
+      "sha256": "5cd1dc075284159768bda6dacd8bd9e51fd926ec02acb36dda501b6da24d2814",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Charge10.csv",
+      "bytes": 35495,
+      "sha256": "5fdc2057e8b35486fbf02cb0838be350846ee80ca6892b1b274cc74993a07132",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Charge12.csv",
+      "bytes": 43526,
+      "sha256": "1ecfa0663a09016c85aa66f2990e8f0abb863990223eae6e69dffefa5359676e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Charge13.csv",
+      "bytes": 44409,
+      "sha256": "e58639355366269ad74195aac0e605a7eb6863fd87200d342dd6c81efaf3649f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Charge11.csv",
+      "bytes": 42905,
+      "sha256": "05129b39eeb8ddd606400ffd2cfefbd028de5bd76900b0d0a93bec95c6efce80",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/746_HPPC.csv",
+      "bytes": 8354820,
+      "sha256": "ab73cb9a51ba69fb4d750b2337243b670dc47af78de6ce9770683484abd0d61f",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Charge14.csv",
+      "bytes": 42255,
+      "sha256": "e31956d96549c5932033005fa3a9dce03c3c8cde3b725446da0a123e4e547366",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Charge15.csv",
+      "bytes": 44426,
+      "sha256": "157e4cea9ee3f732242fb223b7da005517d8d38a4c6d6d3a035e702dcf5bc2e3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_LA92.csv",
+      "bytes": 5075493,
+      "sha256": "2f45102b45d97c9346cf184ce740d5c21db9e9a75c94f264fe1b595df4ed72d0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_HWFET.csv",
+      "bytes": 3314391,
+      "sha256": "09c3567fdcb0373b3904e5c31c735337d5595927e980456778fdca307e48e160",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Charge16.csv",
+      "bytes": 20440,
+      "sha256": "ec786a8ae1f6afaeb56926ce2fcd9514e467071130a2f512526a3c7e2cf3a5dd",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Mixed1.csv",
+      "bytes": 3682598,
+      "sha256": "7a05dd819a5eda965e774457babf7b0513809b5599cd593dac61893f31b85a0e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_US06.csv",
+      "bytes": 2385032,
+      "sha256": "a709bb0722a3abeec19126c5be577adf04db2c45aba6d364b84fcd3d027a32a3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_UDDS.csv",
+      "bytes": 8227167,
+      "sha256": "ad85cb967401aefe6608c7f5e334cf9d0f1b1cf2af99792cee747818f6be0bda",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Mixed3.csv",
+      "bytes": 3129755,
+      "sha256": "e6ff8f50fc17170fc12bc38f9089ef1928576c77ad0ddd6c22f37db99f425e84",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Mixed5.csv",
+      "bytes": 3432902,
+      "sha256": "3dbc702d098d82034963ff76046471ac80a15ac040ed1eccced507ab078b3b34",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/752_Mixed2.csv",
+      "bytes": 4654177,
+      "sha256": "457788f6f9d0c15cb297f343f4d6592f5723bb69c5a2064894a31a926aec9867",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_PausCycl.csv",
+      "bytes": 1842447,
+      "sha256": "2e79316ec4dcf6ee9175fcc7ac46cb1d08f47039cb51dc6999516378a07255fa",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Mixed8.csv",
+      "bytes": 5327660,
+      "sha256": "ad0d0f3653eb7f00425191a2da565740d9cfb2767b213e9b61dd45ca262eb360",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Mixed4.csv",
+      "bytes": 4351013,
+      "sha256": "8717905d7099bca95b636e327879c330d88cbde3b9200fbf4a9b9072133743c8",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Mixed6.csv",
+      "bytes": 4408073,
+      "sha256": "2c20a15e05df92c26d71802fa1dfd2b481d7d88471ca271b821d2c840de74b0c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/756_Mixed7.csv",
+      "bytes": 3662723,
+      "sha256": "3c8012096fe037bd649b2d13dbeebbd9e8cba82891887ddfa0206641fcb0c7b4",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_14.47 734_Charge2_25degC_IN21700_30T.mat",
+      "bytes": 3515,
+      "sha256": "5ef4c1c0a395ff461d3ff605ddc0ac9169265b2324eb39211f5f52a58b7dcb5a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_13.37 734_Cap_1C_25degC_IN21700_30T.mat",
+      "bytes": 12427,
+      "sha256": "5f2d14d4443c6384d108d06f329a0396605dcf6e5d93d6d1807774280a234a5c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_18.16 734_Charge3_25degC_IN21700_30T.mat",
+      "bytes": 3463,
+      "sha256": "e06ba3f9d83a3a2634d04d212b6a3402a232c4e0b8b18c96d8e726a7ea5171bb",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-17-19_23.07 729_Dis_0p5C_25degC_IN21700_30T.mat",
+      "bytes": 7585,
+      "sha256": "cdd52ed5d375dfff7779137b4a8580fc625c5351065698e482513c035f126f6f",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-16-19_04.00 729_C20DisCh_25degC_IN21700_30T.mat",
+      "bytes": 77658,
+      "sha256": "6040e52f02005ef5278a966ea5be0b48717881fc71b58ea3a6d2bf50eaef1cc4",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_02.46 729_Dis_2C_25degC_IN21700_30T.mat",
+      "bytes": 9320,
+      "sha256": "506d61cbd7bf3cf82eea7caa8e20e2f9153cf03d46cb0eb629d042d8685cf73a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_13.03 734_Charge1_25degC_IN21700_30T.mat",
+      "bytes": 1119,
+      "sha256": "0c80c8c636b1ca4616ee2f19a62d8504383a23675fff724790a9ccc663a267f2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_20.36 734_Charge4_25degC_IN21700_30T.mat",
+      "bytes": 3478,
+      "sha256": "6baa23e0350e5c323363909dc72435e6ac74887e2f643b96e8c9bd0158f8bd88",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_23.25 734_Charge5_25degC_IN21700_30T.mat",
+      "bytes": 3436,
+      "sha256": "4f4bbaef1787aa9f76c2f86b24d3e6996d03ebc60b18a9a392369a968d058797",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-19-19_04.07 734_Charge7_25degC_IN21700_30T.mat",
+      "bytes": 3415,
+      "sha256": "43620b8629abcf1131133356636c55395a07c3347909929840c06d7a2e516c96",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-19-19_01.36 734_Charge6_25degC_IN21700_30T.mat",
+      "bytes": 3445,
+      "sha256": "577caf9a149fa6523ae70aa7653fcea424b26951b0cfbb2ccce20f54877ddb4c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_19.53 734_HWFET_25degC_IN21700_30T.mat",
+      "bytes": 525362,
+      "sha256": "cbd910b02942e355b81413a0b7a6eac747ac964d88b399fd5c1f1813b1d22135",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-19-19_06.45 734_Charge8_25degC_IN21700_30T.mat",
+      "bytes": 3476,
+      "sha256": "23b36fda69ab9041b4170338e177b4bb0c4fab02bae931c5fe4e3b5ef2d1eb88",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-20-19_17.52 740_Charge9_25degC_IN21700_30T.mat",
+      "bytes": 1129,
+      "sha256": "2b5b0e6c2c7fd6989bc6ddaa3a4c56a47d1d65bcb6cf76b0662726592d31d0e0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-14-19_17.34 729_HPPC_25degC_IN21700_30T.mat",
+      "bytes": 770294,
+      "sha256": "4ae3d81a765ea5f232a8ea8d307b15b29d0b9ab82e1c85513a2abc67053c8c81",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-20-19_19.37 740_Charge10_25degC_IN21700_30T.mat",
+      "bytes": 3556,
+      "sha256": "6b6efc606932d383ea9b53a2bced8f326831ce14ea086de08ba37b6e91f73409",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-20-19_22.00 740_Charge11_25degC_IN21700_30T.mat",
+      "bytes": 3393,
+      "sha256": "a4652ccb24416464c201b2542c265682951e213e71ebdca582249e9c30b25fc3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_16.26 734_UDDS_25degC_IN21700_30T.mat",
+      "bytes": 1479141,
+      "sha256": "136f3311aa9312cecd4b27b21defebacac7ed8a4219e6dc410fe5bbb4ed1a48b",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-21-19_00.39 740_Charge12_25degC_IN21700_30T.mat",
+      "bytes": 3380,
+      "sha256": "04bfa323f0fc3054533b52e9c7979ce67a702ede6188477a5f96bc6d9c9a8e8f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-21-19_03.00 740_Charge13_25degC_IN21700_30T.mat",
+      "bytes": 3361,
+      "sha256": "69e6ade55d7675217d8f861d1f25c74ec034e04a05c3991bec246f0f274959cb",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-21-19_05.35 740_Charge14_25degC_IN21700_30T.mat",
+      "bytes": 3419,
+      "sha256": "9c7070065f4310f5fbd20cd563e90b796793bf3a6802f9e65f9905ff845fd694",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-19-19_01.03 734_US06_25degC_IN21700_30T.mat",
+      "bytes": 434520,
+      "sha256": "2133faa52ee32dce48467566a2432828360630b33812894aad38e1af82bcad87",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-19-19_05.44 734_Mixed2_25degC_IN21700_30T.mat",
+      "bytes": 802827,
+      "sha256": "39a03c859e8ece89a3477b46de503919dd48c2a8da11b0a23d272196018779d0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-21-19_08.01 740_Charge15_25degC_IN21700_30T.mat",
+      "bytes": 3409,
+      "sha256": "41a5a45f8a99aebd22a57ffe4907b375b88c0ddd6be6c2793f2afed70318c9e0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-19-19_03.13 734_Mixed1_25degC_IN21700_30T.mat",
+      "bytes": 707092,
+      "sha256": "590eb5330880cae182eef4a3f5eff542df8be98b68009bac59fc03ef620201e8",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-21-19_10.49 740_Charge16_25degC_IN21700_30T.mat",
+      "bytes": 3444,
+      "sha256": "16662e0d316e956e9093fc0a92fa49ba61400c20510654dec40551415b56a794",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-20-19_23.37 740_Mixed4_25degC_IN21700_30T.mat",
+      "bytes": 825568,
+      "sha256": "dbb0c8e2651afff5efa8f8658a641107ca64a474d0973c1de6b241c9539b2db3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-20-19_21.16 740_Mixed3_25degC_IN21700_30T.mat",
+      "bytes": 567056,
+      "sha256": "728fbd054f758cf7d0e40744053113ee40563d37c97dfd82cd1b4b53215a7e81",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-21-19_02.16 740_Mixed5_25degC_IN21700_30T.mat",
+      "bytes": 579336,
+      "sha256": "a85aeb3d5fce6efb5cdcc1a08e2cd445e329533a744d18191ba4b1b5c9cc769b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/729_Dis_0p5C.csv",
+      "bytes": 37095,
+      "sha256": "263a7482d7c4b56e4259bf1823eccdc8bb5be0c3de5ad22243d5c4fb2c6b6827",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Charge1.csv",
+      "bytes": 5684,
+      "sha256": "7de3584dbca6caf9689c3b0b2ff3fa12e8094f5eab728a47fce387d7d16cdd37",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/729_Dis_2C.csv",
+      "bytes": 48137,
+      "sha256": "c0fcfd0dc3b30bc048c98fdb6fa4977995fbc4cabb3bece4afa232024bd80703",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-21-19_04.37 740_Mixed6_25degC_IN21700_30T.mat",
+      "bytes": 769936,
+      "sha256": "43fd6c1d8a192423c788706974fab8e694e578c5546af92c205d808b806aefda",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-21-19_12.26 740_PausCycl_25degC_IN21700_30T.mat",
+      "bytes": 256145,
+      "sha256": "f0e2d375845ffe10211dd4a40ad3b2ba10e35b98256f63d6f04563933fd1e095",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_22.13 734_LA92_25degC_IN21700_30T.mat",
+      "bytes": 972290,
+      "sha256": "58fb413ad6fbcdf15ac323c65745d4d1736f3ece875b9c970dcf64208fc82b3f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-21-19_07.12 740_Mixed7_25degC_IN21700_30T.mat",
+      "bytes": 648481,
+      "sha256": "2d38ecd615eca7aed532275ceca7f3cc26eec80ba6702c6ecf8a5196202e4dc2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Charge2.csv",
+      "bytes": 13707,
+      "sha256": "71c866e4bcc3ce4dfdfedb711e37ae193dbfa891908df6f2e81bd958510303f8",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Cap_1C.csv",
+      "bytes": 56122,
+      "sha256": "3005c4efc271e0d16994cb4abbabadaa4688bfb1823ee91237fd07dbc97404bd",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Charge3.csv",
+      "bytes": 13335,
+      "sha256": "b882585aefbf5e078b7da2116b0004dbff4d6f0faa15ae8a252be6408505cf82",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Charge4.csv",
+      "bytes": 13350,
+      "sha256": "12443012c61e140c82d2bf569fe788caac45fd2ac608b35a57ff1d061cd89237",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Charge5.csv",
+      "bytes": 13434,
+      "sha256": "899b24476b043a879ef590801634898958cdbcb7781b9d73ba9f993b9369e823",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Charge6.csv",
+      "bytes": 13335,
+      "sha256": "509a0429b07e8dda395a2163ac1ff21d41ddf8a047c6058253b550ac3c8dd953",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Charge7.csv",
+      "bytes": 13335,
+      "sha256": "65ad7e7d64f1caffdfddc5ed218bc5a3b59629a9517e5b067078b152d09fdc68",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-21-19_09.39 740_Mixed8_25degC_IN21700_30T.mat",
+      "bytes": 922684,
+      "sha256": "a79b4f3e9bf28e2be5170b71de7821b35637325413bfda4300e3020c12d178a0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/729_C20DisCh.csv",
+      "bytes": 424910,
+      "sha256": "aa22956e34566038277fd9eba6951c0139df8b499543d8dac293a414f294dbf1",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Charge8.csv",
+      "bytes": 13465,
+      "sha256": "11db9a9d6f33981f7bfb134a81fab0714d49f52b404a40e181af96b6c3766183",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Charge9.csv",
+      "bytes": 6098,
+      "sha256": "ef593c56977ee78eb87577bd128cede93c6c03795f4e70a2ff2674907baf4011",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Charge10.csv",
+      "bytes": 13815,
+      "sha256": "173fc46f8b054c66d4d92c5468d983bdaa661cb0719a1861971763f975ed62b4",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Charge11.csv",
+      "bytes": 13550,
+      "sha256": "b114f9abb08f468982b1d5798c84bab523bbfa02614c3f9625f17c58f098b09d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Charge12.csv",
+      "bytes": 13339,
+      "sha256": "d09a74f48527686a69cc4f199efeaffacb56b9835bb0ed045ecaaa4fb3bc352a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Charge13.csv",
+      "bytes": 13317,
+      "sha256": "127bf6ed5d9a8809540a251abc4819c0cb8104dd53cadb164fbbc48a76fd610b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Charge14.csv",
+      "bytes": 13440,
+      "sha256": "e1862b091ac1e2a4690b24d92d60712bdb1ac16c06c9c5d069917e4db64d3873",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Charge15.csv",
+      "bytes": 13440,
+      "sha256": "caec6109bc87655bb067c4e69c9ac701a501e6bd0de124bff4a6a3dde6d44f0a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Charge16.csv",
+      "bytes": 13544,
+      "sha256": "ada8e8d0a9877e931d45af4b3e1ce64f8f39c185763fa00621a5542fc4a0537c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_HWFET.csv",
+      "bytes": 3446767,
+      "sha256": "b8b69ce4042f4fea7f8de0a72bfb65eae87f7102bd8cca5f942f4a5fe8770336",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_LA92.csv",
+      "bytes": 5780179,
+      "sha256": "3635d9b9ae86ea814a56a6200853c8494f8aaba94110b1a5e5eb6ef24bb6357b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/729_HPPC.csv",
+      "bytes": 9055911,
+      "sha256": "c4d492e7baaaf0ac1fd6d14396a8f206e6621f331744a5684766157dbd9d4954",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Mixed2.csv",
+      "bytes": 4816299,
+      "sha256": "c08f431b17bade8d9e78dd99301812c3e750200a55af28342bccd4b9def8836d",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_US06.csv",
+      "bytes": 2634039,
+      "sha256": "6a5ce5c8f100c1104accb54a9086bfae6222e73df38872a4ace01981f8a150ef",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Mixed3.csv",
+      "bytes": 3494975,
+      "sha256": "65c815e32f3d4b2e37026ff567ae93830b2ba22702f2b1ebe26a9189035e0fcb",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_UDDS.csv",
+      "bytes": 8709737,
+      "sha256": "eb2d7effad147b02cbc2efab014ca81966ebcee066d02c99366eb50926f10c8a",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/734_Mixed1.csv",
+      "bytes": 4291296,
+      "sha256": "5850e2e98fbdaf138bc86bd985687f3796ce2e5c418258a4ede749a44c778879",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Mixed4.csv",
+      "bytes": 4976042,
+      "sha256": "0b2b9ba8fc05d0e4232dd206951a981ce212a3b0881780dc6b4a62ebbb824c3e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Mixed5.csv",
+      "bytes": 3554599,
+      "sha256": "df453d7aaedad088d4f3fdb79401656d4adbffc22a9a348554ede15cf7f8cd8b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Mixed6.csv",
+      "bytes": 4641639,
+      "sha256": "46950aa2c63edb119b0e4a8f75245a87795fed0888fa958b825028eea184e858",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Mixed7.csv",
+      "bytes": 3943968,
+      "sha256": "e88f81bbd34f8266f8c79a02a177d8047a8343f47f71bd3e726b61db89153db3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_PausCycl.csv",
+      "bytes": 1973244,
+      "sha256": "c381ecc85bdba0dae8acb601ebf748ab53fe74e0273d768448828f3b4beb7914",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/740_Mixed8.csv",
+      "bytes": 5658589,
+      "sha256": "1ba7547103434c1bf132b8e1abff273cf1b91cb00b15fb297036021c64e31755",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-04-19_23.50 710_Charge3_40degC_IN21700_30T.mat",
+      "bytes": 14723,
+      "sha256": "84d5e14d399307f2458ac3a4fa8d62ba65b7e1fdbd48abf858d8ecfeb0ffb9a0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/02-26-19_22.18 697_Dis_2C_40degC_IN21700_30T.mat",
+      "bytes": 47767,
+      "sha256": "28c1dfda20f49ff466cc70e22cba411544b45a0d6eeb0c20389cc8d5da17a089",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-04-19_11.31 710_Charge1_40degC_IN21700_30T.mat",
+      "bytes": 5253,
+      "sha256": "37cae2fcaa7b7d70f79bd6354065cb56ff95a61791f8cab1ad7541fd9f3f218e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-06-19_13.43 710_Charge4_40degC_IN21700_30T.mat",
+      "bytes": 6839,
+      "sha256": "55521636a49153895a174735fde5198918622d4f0a055bf6c0fa85c986e84c0b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-04-19_18.25 710_Charge2_40degC_IN21700_30T.mat",
+      "bytes": 5708,
+      "sha256": "dd7d14906f93311df3a7fbe804310faa1c14a9253f59f11c12c6a3485572b573",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-06-19_20.13 710_Charge5_40degC_IN21700_30T.mat",
+      "bytes": 7437,
+      "sha256": "6a4e9dd0842946fe2a2a7642cf0e401d4bb8ac38574c0ff2bdf4b5c2f3e4067c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/02-26-19_12.33 697_Dis_0p5C_40degC_IN21700_30T.mat",
+      "bytes": 14175,
+      "sha256": "c2b4b46105e1ed29b6601007caa582e37bfc580497d3ecdf37f4490fdc9fdb99",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-07-19_02.56 710_Charge6_40degC_IN21700_30T.mat",
+      "bytes": 6630,
+      "sha256": "ddd17ebfc94868852ab6dc77ab5e88a87f6db88c2c904b48d906cbbad22be284",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-07-19_08.44 710_Charge7_40degC_IN21700_30T.mat",
+      "bytes": 7888,
+      "sha256": "9787afdabf96ce0eb7358a0ea320e1aad30f42a906565266c3c8c9687d633970",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/02-24-19_17.19 697_C20DisCh_40degC_IN21700_30T.mat",
+      "bytes": 77043,
+      "sha256": "6fd7441960ad884fd4757c828d738c36b20f69cdbf7e4cdd04abeb87bc91e862",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-07-19_16.33 710_Charge8_40degC_IN21700_30T.mat",
+      "bytes": 7860,
+      "sha256": "61c9e5aa5c1604cc63f5b0b65dc1dff7205f199029aedd3c52985908a67dc01b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-08-19_11.03 722_Charge9_40degC_IN21700_30T.mat",
+      "bytes": 2049,
+      "sha256": "9f4ca7719d9ff1f2d094942b572fbdb2280f52cd074cd595c6ddd5b6fcca77c0",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-08-19_12.02 722_Cap_1C_40degC_IN21700_30T.mat",
+      "bytes": 12603,
+      "sha256": "e98c6c07bbc283fec5411c1ac05b096d4e70c725459b422413b181a33b00c35c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-08-19_13.14 722_Charge10_40degC_IN21700_30T.mat",
+      "bytes": 5822,
+      "sha256": "9a0eaf5630f60d92faa5a5da0e204e6d7b027c40ca3eae99c67b4c606eca1b7c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-08-19_17.34 722_Charge11_40degC_IN21700_30T.mat",
+      "bytes": 7885,
+      "sha256": "9c8306bc5085efbf50900c4a2a292262ca26bdf3a7e15dda17a7d0aeff049bff",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-09-19_01.05 722_Charge12_40degC_IN21700_30T.mat",
+      "bytes": 7764,
+      "sha256": "7b458d87a354107c1dbb85e4e284b2ababe472b98a0fd4e1e7ec36a07db2c592",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-06-19_12.58 710_HWFET_40degC_IN21700_30T.mat",
+      "bytes": 544902,
+      "sha256": "3d9cd1891546649c8d848fb6454b41b0185d4955616458abb33093f016a9c624",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-07-19_07.48 710_Mixed1_40degC_IN21700_30T.mat",
+      "bytes": 707473,
+      "sha256": "620083c186758162fd2536c1c6836ec1f00d96013bedfd21a98c37638f3e0834",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-06-19_19.00 710_LA92_40degC_IN21700_30T.mat",
+      "bytes": 956469,
+      "sha256": "fdc1d18a090110486f89fc5dbac72743d897cda492cbc3f5d2c377c24805c4c4",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-01-19_19.23 705_HPPC_40degC_IN21700_30T.mat",
+      "bytes": 761143,
+      "sha256": "922e9c6f142e54efeb06514f9dc2ca6fea65853c74d1a4184a5b4d171a068b03",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-09-19_08.22 722_Charge13_40degC_IN21700_30T.mat",
+      "bytes": 8023,
+      "sha256": "23dfffaa318756719435be1e50dce51b7fcbce26ce7069366256f8e2beb1896a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-07-19_15.31 710_Mixed2_40degC_IN21700_30T.mat",
+      "bytes": 775897,
+      "sha256": "a87f9a006342c52cfb2e87bcce330f52bc143137992c78339f95a74243f9b09e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-09-19_16.26 722_Charge14_40degC_IN21700_30T.mat",
+      "bytes": 44741,
+      "sha256": "36dc2e1871d39e48d9b19d5151e5cb8b574cae5ca3cd82e3d0fa4b9f5126151b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-13-19_20.03 722_Charge15_40degC_IN21700_30T.mat",
+      "bytes": 7009,
+      "sha256": "3b0c9cb16248212a3ca6cf4252ec36c7f16bf62e6b1adbd12cee1c1be93fafc5",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-08-19_16.45 722_Mixed3_40degC_IN21700_30T.mat",
+      "bytes": 666041,
+      "sha256": "6f2ea96b1fe40dd5f48bdba7f6b91040c7d3863ae32acd78b1f0f8b068377d06",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-07-19_02.21 710_US06_40degC_IN21700_30T.mat",
+      "bytes": 421170,
+      "sha256": "f1eaf2f8d34b466f9b87d6ca8d07a93c3936c1c7ac7ecbfcd7f1f42c344fca69",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-14-19_03.31 722_Charge16_40degC_IN21700_30T.mat",
+      "bytes": 7253,
+      "sha256": "7dee366a530ee6d6ed44d867555c20d4cecf20c08c95500ee42c65b598a0b38c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-09-19_07.34 722_Mixed5_40degC_IN21700_30T.mat",
+      "bytes": 536007,
+      "sha256": "0eea888634a92e7a1761dd37dda765b114f2d4f0b6a2d402f34c4eee35a26ae2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-09-19_00.02 722_Mixed4_40degC_IN21700_30T.mat",
+      "bytes": 824702,
+      "sha256": "59baebc2f59c9ca9cac006536ef03b35fe42014e503e5a04caf3a61adb7e980e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-04-19_21.54 710_UDDS_40degC_IN21700_30T.mat",
+      "bytes": 1533762,
+      "sha256": "942ea3cefe9c04f5e7d0df019041d20f8d56fe618b9af81f9a2a042574e750ec",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_Charge1.csv",
+      "bytes": 48525,
+      "sha256": "93f45ed5171885d8e937a9c92f5962c34190243e0a4a85c96bce612a70f227e1",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-13-19_18.56 722_Mixed7_40degC_IN21700_30T.mat",
+      "bytes": 657428,
+      "sha256": "81ad38f4c4289994be6a063dacae45602cee41c640b81653896c8e5897c48899",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_Charge2.csv",
+      "bytes": 32050,
+      "sha256": "0dd93ef69204dda18b6cc23faf85f333058cde5ce61aa4658c5af46319ccd405",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-09-19_15.10 722_Mixed6_40degC_IN21700_30T.mat",
+      "bytes": 769797,
+      "sha256": "6e5aa51daf6c2f418189853a6e9e31c9a72e44d99a185a5a4f88af03eda64cb4",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/697_Dis_0p5C.csv",
+      "bytes": 100851,
+      "sha256": "2a740a39793e1e60ac962e068352a20d3bca21c3b9906f50a85b8e089f654647",
+      "role": "development_validation",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-14-19_09.51 722_PausCycl_40degC_IN21700_30T.mat",
+      "bytes": 263789,
+      "sha256": "d934ca8b44e66c01becab8e043247f892d94ec2076aa9bb7f0ec4138b71e829f",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-14-19_02.03 722_Mixed8_40degC_IN21700_30T.mat",
+      "bytes": 945443,
+      "sha256": "0ed60e9f1af8e05479fb1c0fc3207570cb6056986f22d6863668753b67185e5a",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/697_C20DisCh.csv",
+      "bytes": 426156,
+      "sha256": "f7dc92fdd2f25934e30709c585ac136aed26f1bce9b6175be39bd9e77cbf79bf",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_Charge4.csv",
+      "bytes": 45039,
+      "sha256": "e20cfff69ba27099bab30642403c170b760ee064f3f19872b1167bfebd12c611",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_Charge6.csv",
+      "bytes": 42424,
+      "sha256": "b1088603a5fa0c8e4aa8bc09eecbd48b60b9fe0846f294f5ee87c2537d1a0fe9",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_Charge3.csv",
+      "bytes": 141001,
+      "sha256": "f0bab26a2721cbe519e3b7a5072c5c1acdb0c4687dbf02ebeda7a127fa60f838",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_Charge7.csv",
+      "bytes": 56607,
+      "sha256": "1932fb23192af08acf0fea23b35bca20623eeae67fc80daab94c1e327b8c295c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/697_Dis_2C.csv",
+      "bytes": 646586,
+      "sha256": "60f8c58928629ccacb3bea89f70e7450d17496c37daaeacb9303de9fe1f28069",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_Charge8.csv",
+      "bytes": 55908,
+      "sha256": "432e17a7dac29d70329acd9400b21d83fb813a78ff1425ccf80194eaa8ea3d69",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_Charge5.csv",
+      "bytes": 51855,
+      "sha256": "f3b111f633cac6f3fbf34eaea74e1ef33b75be9f18aa3291bbf78d2b7a7a5f25",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Charge9.csv",
+      "bytes": 12964,
+      "sha256": "605b186cc6938109c401ed7371ad20095965b50aafe0db3e26ad56bb71dc4623",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Cap_1C.csv",
+      "bytes": 57661,
+      "sha256": "79d897a282256821506dfba95b3174a9ebe66222f99d1159bf08a419ef0bcf82",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Charge10.csv",
+      "bytes": 32432,
+      "sha256": "01eff57a0256c3efdfc3ad28537d8c9699ede0ec1ce647a20ba7ecd853c9d8a3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Charge12.csv",
+      "bytes": 54731,
+      "sha256": "3a0c9ffdc62707a257587e00a1ed0bb7497cd4cd366d998356a2e65f99da4d34",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Charge11.csv",
+      "bytes": 54888,
+      "sha256": "2b75e665ad303eb9ef101ccc483579abea1c84c3371aa7a790ee88c97891a450",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Charge15.csv",
+      "bytes": 51152,
+      "sha256": "58bdf0206bea3866d00264598c7955d7265297a32a726ca0359b2b457dd4ecd7",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Charge13.csv",
+      "bytes": 57313,
+      "sha256": "901d3cd8f4c285f22e290a194500846539fc8c05efea8dfa8dfd6349ed157d6b",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/705_HPPC.csv",
+      "bytes": 9093720,
+      "sha256": "24702808b26ed0b0b0f68283c27987b7c14f4bedc6dcd46007d8f824c708c8d0",
+      "role": "calibration",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Charge16.csv",
+      "bytes": 53660,
+      "sha256": "8aad4a59d41eed27faed59f71ae11595bf72e2ce7ef6ed3f29b0171ce9fd7b12",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Charge14.csv",
+      "bytes": 513707,
+      "sha256": "f4241d4634137101c706eb6c98b2b17c9a086239a7cadf23e65cd2233f364a85",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_HWFET.csv",
+      "bytes": 3502977,
+      "sha256": "1d7c85604a23dbe21356a6c88f73c2a7347c81391e13868187e409c2d6111359",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_US06.csv",
+      "bytes": 2668692,
+      "sha256": "99bb94450bd666a71f34a5aa20ab54821cffece0237ef1a79e90e63992b23b14",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_LA92.csv",
+      "bytes": 5720782,
+      "sha256": "30fed5896f3770150dd22a0fe8ea649242053b9defa1481f42fabac422b0daa2",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_UDDS.csv",
+      "bytes": 9139525,
+      "sha256": "5cf904c2fd039bd7d26599900589ee3b20bcb005cac5c0c2923b0372daff3fc1",
+      "role": "final_assessment_reserved",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_Mixed2.csv",
+      "bytes": 4850711,
+      "sha256": "95cf137c80f2ecd52fa38676e12f1354f56e56f0ef9e3b078c30b393a214aaa1",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/710_Mixed1.csv",
+      "bytes": 4344092,
+      "sha256": "7c92f6d7d0a9ee0114f1cf147da3bb74b3d4989ea50bab08824dfb213b49a883",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Mixed3.csv",
+      "bytes": 3767094,
+      "sha256": "0e6b03755ef52dee0fee5763168ccd920f489c88ba50889ed698cc85d127498e",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Mixed5.csv",
+      "bytes": 3741687,
+      "sha256": "40ebc61dd64737f3ce7a1c7556ee499fabd8691b5cb49b68162a7b634946e484",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Mixed4.csv",
+      "bytes": 4978137,
+      "sha256": "405ec7d1e757b1ab617d0fbcdbc90b976c137d85b2f53314c221e84a5297a237",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Mixed7.csv",
+      "bytes": 4050173,
+      "sha256": "2980236e6829adb7508651d1b2cd9e0c4cf5d611bc59665aea94158082b1415c",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Mixed6.csv",
+      "bytes": 4714346,
+      "sha256": "f24adf720268edf145a53a0f0e05a12e69d2a7df1e68f65935edb531113747f3",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_Mixed8.csv",
+      "bytes": 5782193,
+      "sha256": "8e7a65143cf004dc1dfa2dd9c580da666079cdd04e45c7aaccb5c5fceb77ac36",
+      "role": "reserved_unused",
+      "decoded": false
+    },
+    {
+      "path": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/722_PausCycl.csv",
+      "bytes": 2060045,
+      "sha256": "f73d980d50043f11406ede137c9281efdc05134478a8a35ab0ca9f5f6fd09588",
+      "role": "reserved_unused",
+      "decoded": false
+    }
+  ]
+}

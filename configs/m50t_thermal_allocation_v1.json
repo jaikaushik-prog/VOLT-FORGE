@@ -1,0 +1,287 @@
+{
+  "version": "voltforge.thermal-source-allocation/1",
+  "status": "allocated_before_observation_decode",
+  "source": {
+    "doi": "10.5281/zenodo.6421061",
+    "record": "https://zenodo.org/records/6421061",
+    "archive": "M50.zip",
+    "bytes": 90006795,
+    "publisher_md5": "6c447759755ea0d184050c49e4a2687a",
+    "licence": "CC BY 4.0"
+  },
+  "identity": "LG INR21700 M50T; top-level ReadMe distinguishes it from the separate Samsung 30Q archive.",
+  "paper": {
+    "url": "https://spiral.imperial.ac.uk/server/api/core/bitstreams/7390acd4-1bea-47d3-8ecd-33adb1897777/content",
+    "sha256": "c7a3848cef59b3d5f74e560503330913585d254375432dbd0b5856d0f488cd55",
+    "locator": "Page 4, sections 3.2-3.3, Figure 3 and Table 1; visually checked."
+  },
+  "split_unit": "Whole specimen, with all raw/processed/electrical duplicates of one test sharing one role.",
+  "final_access": "Requires frozen thermal candidate, numerical/measurement mapping, objective, initialization, scoring, evidence contract, complete role ledger and source/runtime hashes before any Cell 2 signal decode. No frozen final procedure exists yet.",
+  "independent_source_claim": "Different published experiment from the Stanford module campaign. PyECN/Imperial parameter lineage and specimen overlap are unverified; independent-laboratory validation is not claimed.",
+  "records": {
+    "M50T_cell1_test102": {
+      "cell": "cell1",
+      "test_number": 102,
+      "role": "development_validation",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_25SOC_20deg_cell1_test102_CF8.txt",
+          "bytes": 11698061,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_25SOC_20deg_cell1_test102.mat",
+          "bytes": 1236155,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_25SOC_20deg_cell1_test102.txt",
+          "bytes": 31824384,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "Different operating-condition development check on the calibration cell."
+    },
+    "M50T_cell2_test111": {
+      "cell": "cell2",
+      "test_number": 111,
+      "role": "final_assessment_reserved",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_25SOC_20deg_cell2_test111_CF8.txt",
+          "bytes": 40240848,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_25SOC_20deg_cell2_test111.mat",
+          "bytes": 1721751,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_25SOC_20deg_cell2_test111.txt",
+          "bytes": 33477448,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "Whole-cell holdout: all Cell 2 observations reserved before fitting."
+    },
+    "M50T_cell1_test104": {
+      "cell": "cell1",
+      "test_number": 104,
+      "role": "development_validation",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_50SOC_10deg_cell1_test104_CF8.txt",
+          "bytes": 60297175,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_50SOC_10deg_cell1_test104.mat",
+          "bytes": 1482282,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_50SOC_10deg_cell1_test104.txt",
+          "bytes": 32695584,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "Different operating-condition development check on the calibration cell."
+    },
+    "M50T_cell2_test107": {
+      "cell": "cell2",
+      "test_number": 107,
+      "role": "final_assessment_reserved",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_50SOC_10deg_cell2_test107_CF8.txt",
+          "bytes": 41514076,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_50SOC_10deg_cell2_test107.mat",
+          "bytes": 1138749,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_50SOC_10deg_cell2_test107.txt",
+          "bytes": 24136315,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "Whole-cell holdout: all Cell 2 observations reserved before fitting."
+    },
+    "M50T_cell2_test108": {
+      "cell": "cell2",
+      "test_number": 108,
+      "role": "final_assessment_reserved",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_50SOC_10deg_cell2_test108_CF8.txt",
+          "bytes": 50109038,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_50SOC_10deg_cell2_test108.mat",
+          "bytes": 1441603,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_50SOC_10deg_cell2_test108.txt",
+          "bytes": 23861466,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "Whole-cell holdout: all Cell 2 observations reserved before fitting."
+    },
+    "M50T_cell1_test103": {
+      "cell": "cell1",
+      "test_number": 103,
+      "role": "calibration",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_50SOC_20deg_cell1_test103_CF8.txt",
+          "bytes": 60311254,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_50SOC_20deg_cell1_test103.mat",
+          "bytes": 1215910,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_50SOC_20deg_cell1_test103.txt",
+          "bytes": 25270046,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "20 C / 50 percent SOC model-identification run."
+    },
+    "M50T_cell2_test106": {
+      "cell": "cell2",
+      "test_number": 106,
+      "role": "final_assessment_reserved",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_50SOC_20deg_cell2_test106_CF8.txt",
+          "bytes": 31371666,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_50SOC_20deg_cell2_test106.mat",
+          "bytes": 1483137,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_50SOC_20deg_cell2_test106.txt",
+          "bytes": 32809774,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "Whole-cell holdout: all Cell 2 observations reserved before fitting."
+    },
+    "M50T_cell1_test105": {
+      "cell": "cell1",
+      "test_number": 105,
+      "role": "development_validation",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_50SOC_30deg_cell1_test105_CF8.txt",
+          "bytes": 60206773,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_50SOC_30deg_cell1_test105.mat",
+          "bytes": 1290243,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_50SOC_30deg_cell1_test105.txt",
+          "bytes": 25263196,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "Different operating-condition development check on the calibration cell."
+    },
+    "M50T_cell2_test109": {
+      "cell": "cell2",
+      "test_number": 109,
+      "role": "final_assessment_reserved",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_50SOC_30deg_cell2_test109_CF8.txt",
+          "bytes": 45891121,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_50SOC_30deg_cell2_test109.mat",
+          "bytes": 1871110,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_50SOC_30deg_cell2_test109.txt",
+          "bytes": 33984794,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "Whole-cell holdout: all Cell 2 observations reserved before fitting."
+    },
+    "M50T_cell2_test110": {
+      "cell": "cell2",
+      "test_number": 110,
+      "role": "final_assessment_reserved",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_75SOC_20deg_cell2_test110_CC3.txt",
+          "bytes": 13257600,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_75SOC_20deg_cell2_test110.mat",
+          "bytes": 1308902,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_75SOC_20deg_cell2_test110.txt",
+          "bytes": 24045732,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "Whole-cell holdout: all Cell 2 observations reserved before fitting."
+    },
+    "M50T_cell1_test100": {
+      "cell": "cell1",
+      "test_number": 100,
+      "role": "development_validation",
+      "members": [
+        {
+          "name": "M50/Electrical/M50_75SOC_cell1_test100_CF8.txt",
+          "bytes": 4623938,
+          "format": "raw_electrical_text"
+        },
+        {
+          "name": "M50/M50_75SOC_20deg_cell1_test100.mat",
+          "bytes": 1002430,
+          "format": "processed_thermal_mat"
+        },
+        {
+          "name": "M50/M50_75SOC_20deg_cell1_test100.txt",
+          "bytes": 23152266,
+          "format": "raw_thermal_text"
+        }
+      ],
+      "signal_exposure": "unopened",
+      "rationale": "Different operating-condition development check on the calibration cell."
+    }
+  }
+}

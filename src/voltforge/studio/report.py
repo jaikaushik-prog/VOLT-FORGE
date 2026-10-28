@@ -12,7 +12,7 @@ def html_report(record):
     def val(value,unit='',digits=2):
         return 'Not applicable' if value is None else f'{value:.{digits}f} {unit}'.strip()
     values=[('Highest cell temperature',val(metrics['peak_temperature_C'],'°C')),
-            ('Warmest cell',names[metrics['warmest_cell']]),
+            ('Warmest cell',names.get(metrics['warmest_cell'],'Temperature not modeled')),
             ('Largest cell current',val(metrics['peak_cell_current_A'],'A')),
             ('Lowest battery voltage',val(metrics['minimum_voltage_V'],'V',3)),
             ('Energy delivered',val(metrics['delivered_energy_Wh'],'Wh')),
@@ -27,16 +27,62 @@ def html_report(record):
     time=[r['time_s']/60 for r in record['rows']]
     with _plot_lock:
         for field,title,unit in [('cell_current_A','Cell currents','A'),('temperature_C','Cell temperatures','°C'),('cell_voltage_V','Cell voltages','V')]:
+            if field=='temperature_C' and not record['summary'].get('thermal_available',True):continue
             fig=Figure(figsize=(9,3.2),layout='constrained');ax=fig.subplots()
             for i,c in enumerate(graph['cells']):ax.plot(time,[r[field][i] for r in record['rows']],label=c['name'],linewidth=1.6)
             ax.set(xlabel='Time (min)',ylabel=unit,title=title);ax.grid(alpha=.2);ax.spines[['top','right']].set_visible(False)
             ax.legend(fontsize=8,ncols=min(4,len(graph['cells'])),frameon=False)
             stream=StringIO();FigureCanvasSVG(fig).print_svg(stream)
             svg=stream.getvalue();plots.append(svg[svg.index('<svg'):]);fig.clear()
-    cells=[(c['name'],'LG M50T sample '+str(('P7','P17','P19','P13').index(c['model'])+1),val(c['charge_pct'],'%'),val(c['temperature_C'],'°C')) for c in graph['cells']]
+    cards=record.get('model_cards',{})
+    legacy_names={key:f'Original LG M50T sample {i+1}' for i,key in enumerate(('P7','P17','P19','P13'))}
+    cells=[(c['name'],cards.get(c['model'],{}).get('name',legacy_names.get(c['model'],c['model'])),val(c['charge_pct'],'%'),val(c['temperature_C'],'°C')) for c in graph['cells']]
     def terminal(t):
         cid,pole=t.split(':');return names[cid]+(' positive' if pole=='p' else ' negative')
     links=[(terminal(w['a']),terminal(w['b']),val(w['resistance_mohm'],'mΩ'),w['source']) for w in graph['connections']]
     loads=[(val(p['start_s']/60,'min'),val(p['end_s']/60,'min'),val(p['current_A'],'A')) for p in settings['profile']]
     stopped='<p class="notice">'+escape(record['stop']['message'])+'</p>' if record['stop'] else ''
-    return '''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>VOLT-FORGE experiment report</title><style>body{font:15px/1.65 system-ui;color:#213247;max-width:900px;padding:40px 24px;margin:auto}h1{font-size:32px;line-height:1.2}h2{font-size:21px;margin:34px 0 12px}p{max-width:80ch;color:#52647a}table{width:100%;border-collapse:collapse;font-size:13px}td{padding:10px 14px 10px 0;border-bottom:1px solid #dfe6ee}svg{max-width:100%;height:auto}a{color:#2458c5}.notice{padding:14px;background:#f5f0e7}.meta{font-size:12px}footer{margin-top:40px;border-top:1px solid #dfe6ee;font-size:12px;color:#596b80}@media print{body{padding:0}svg,table{break-inside:avoid}h2{break-after:avoid}}</style>'''+f'<h1>{escape(record["design_name"])}</h1><p>{escape(record["name"])}</p><p class="meta">Saved {escape(record["created_utc"])} · Numerical simulation</p>'+stopped+'<h2>Results</h2>'+table(values)+'<h2>What this experiment shows</h2>'+''.join('<p>'+escape(i)+'</p>' for i in record['summary']['insights'])+''.join(plots)+'<h2>Test conditions</h2><p>Positive current discharges through the chosen battery output. Negative current charges. Room temperature: '+val(settings['ambient_C'],'°C')+'. Solver step: '+val(settings['dt_s'],'s')+'.</p>'+table([('Start','End','Battery current')]+loads)+'<h2>Cells and starting states</h2>'+table([('Cell','Model profile','Starting charge','Starting temperature')]+cells)+'<h2>Electrical connections</h2>'+table([('First terminal','Second terminal','Resistance','Source')]+links)+'<h2>Model and evidence</h2><p>Electrical behaviour uses fitted LG M50T reference and relaxation models. Heat comes from electrical resistor losses and the saved heat-transfer network. The current model uses nominal-temperature electrical parameters; independent module prediction accuracy and wider temperature operation require the calibration and assessment described in the project science plan.</p><p><a href="https://data.mendeley.com/datasets/zh58byr53c/2">Original cell and module experimental campaign</a>. The experiment file contains all thermal properties, contacts, targets, model hashes and conservation diagnostics. This report does not constitute a hardware safety assessment.</p><footer>Open results.csv for the numeric series. Run replay.py with requirements.txt to reproduce this experiment using its captured model and source versions.</footer></html>'
+    coverage=record['summary'].get('coverage',{})
+    checks=[('Quantity','Calculated value','Target','Outcome')]
+    check_names={'temperature_C':'Highest cell temperature (°C)','current_A':'Largest cell current (A)','min_voltage_V':'Lowest battery voltage (V)','imbalance_pct':'Current difference (%)'}
+    status_names={'within_target':'Within nominal model target','exceeded':'Exceeded','inconclusive':'Incomplete mission; inconclusive','not_applicable':'Not applicable','not_modeled':'Not modeled'}
+    for c in record['summary']['checks']:
+        checks.append((check_names.get(c['metric'],c['metric']),val(c['value']),val(c['target']),status_names.get(c['status'],c['status'])))
+    complete=coverage.get('complete',record['status']=='completed')
+    service_met=record['summary'].get('assessment',{}).get('requested_demand_met',complete)
+    completion='The full time horizon was calculated. '+('The requested current duty was served.' if service_met else 'The requested duty was not fully served.') if complete else 'This partial calculation cannot establish requirements for the uncalculated remainder.'
+    assessment='<h2>Requirements and coverage</h2><p>Calculated '+val(coverage.get('completed_duration_s',metrics['duration_s']),'s')+' of '+val(coverage.get('requested_duration_s',metrics['duration_s']),'s')+'. '+completion+'</p>'+ (table(checks) if len(checks)>1 else '<p>No application targets were configured. Component and model-use checks still apply.</p>')
+    control=record['summary'].get('protection');service=record['summary'].get('service')
+    if control:
+        config=control['config'];event=control['event']
+        assessment+='<h2>Virtual sensing and protection</h2><p>'+escape(control['sensing'])+'. '+escape(control['actuator'])+'.</p>'
+        assessment+=table([('Sensor sample interval',val(config['sample_period_s'],'s')),('Declared response delay',val(config['response_delay_s'],'s')),
+                           ('Cell-current threshold',val(config['current_max_A'],'A')),('Cell-voltage floor',val(config['voltage_min_V'],'V')),
+                           ('Cell-temperature ceiling',val(config['temperature_max_C'],'°C')),('Source or assumption',config['source'])])
+        if event:
+            assessment+=table([('Triggering cell',names.get(event['cell'],'Cell')),('Detected at',val(event['detected_time_s'],'s')),
+                               ('True simulated value',val(event['true_value'],event['unit'])),('Virtual measured value',val(event['measured_value'],event['unit'])),
+                               ('Threshold',val(event['threshold'],event['unit'])),('Scheduled disconnect',val(event['disconnect_time_s'],'s')),
+                               ('Actuated within calculated horizon','Yes' if control['actuated'] else 'No')])
+        assessment+=table([('Requested demand met','Yes' if service['requested_demand_met'] else 'Not established or not met'),
+                           ('Known unserved demand',val(service['unserved_demand_s'],'s')),('Unconfirmed remaining demand',val(service['unconfirmed_requested_demand_s'],'s')),
+                           ('Unserved requested charge',val(service['unserved_requested_charge_As'],'A·s'))])
+        assessment+='<p>Calculating the time horizon does not establish delivery of the requested duty after a disconnect. Parallel-cell currents can continue internally while external current is zero.</p>'
+    physical=record['summary'].get('physical_components',{})
+    if physical.get('conductors') or physical.get('output_routes'):
+        assessment+='<h2>Physical connection trade-offs</h2>'+table([('Dimensioned conductor mass',val(physical['conductor_mass_g'],'g')),('Connections without dimensions',physical['undimensioned_connections'])])
+        for link in physical['conductors']+physical.get('output_routes',[]):
+            c=link['definition']
+            assessment+='<h3>'+escape(link['connection'])+'</h3>'+table([('Material',c['material']),('Length × width × thickness',f'{c["length_mm"]:g} × {c["width_mm"]:g} × {c["thickness_mm"]:g} mm'),
+                ('Bulk resistance',val(link['bulk_resistance_mohm'],'mΩ',4)),('Total end-contact resistance',val(link['contact_mohm'],'mΩ',4)),
+                ('Total connection resistance',val(link['resistance_mohm'],'mΩ',4)),('Conductor mass',val(link['mass_g'],'g',3)),
+                ('Material reference temperature',val(c['reference_temperature_C'],'°C')),('Material source',c['material_source']),('Dimension/contact source or assumption',c['assumption_source'])])
+        assessment+='<p>'+escape(physical['scope'])+'</p>'
+    card_rows=[('Cell model','Source','Evidence')]+[(c.get('name',key),c.get('source_url','Source recorded with model'),c.get('status','User-provided or historical model')) for key,c in cards.items()]
+    model_text=escape(record['summary'].get('model','Saved equivalent electrical and thermal model'))
+    thermal_assumptions=record['summary'].get('thermal_assumptions',[])
+    evidence='<h2>Model and evidence</h2><p>'+model_text+'. Heat-transfer parameters and contacts are the saved fixture assumptions. Numerical reproduction does not establish physical module accuracy or a hardware safety rating.</p>'+(table(card_rows) if len(card_rows)>1 else '')+(''.join('<p>'+escape(names.get(a['cell'],'Cell')+': '+a['status']+'. '+str(a.get('source','')))+'.</p>' for a in thermal_assumptions))
+    case=record.get('case',record['summary'].get('case'))
+    if case:
+        assessment='<h2>'+escape(case['description']['name'])+'</h2><p>'+escape(case['description']['purpose'])+'</p><p>'+escape(case['description']['source'])+'</p><p class="meta">Application record '+escape(case['fingerprint'])+'; requirements '+escape(case['requirements_fingerprint'])+'</p>'+assessment
+    return '''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>VOLT-FORGE experiment report</title><style>body{font:15px/1.65 system-ui;color:#213247;max-width:900px;padding:40px 24px;margin:auto}h1{font-size:32px;line-height:1.2}h2{font-size:21px;margin:34px 0 12px}p{max-width:80ch;color:#52647a}table{width:100%;border-collapse:collapse;font-size:13px}td{padding:10px 14px 10px 0;border-bottom:1px solid #dfe6ee}svg{max-width:100%;height:auto}a{color:#2458c5}.notice{padding:14px;background:#f5f0e7}.meta{font-size:12px}footer{margin-top:40px;border-top:1px solid #dfe6ee;font-size:12px;color:#596b80}@media print{body{padding:0}svg,table{break-inside:avoid}h2{break-after:avoid}}</style>'''+f'<h1>{escape(record["design_name"])}</h1><p>{escape(record["name"])}</p><p class="meta">Saved {escape(record["created_utc"])} · Numerical simulation</p>'+stopped+assessment+'<h2>Results</h2>'+table(values)+'<h2>What this experiment shows</h2>'+''.join('<p>'+escape(i)+'</p>' for i in record['summary']['insights'])+''.join(plots)+'<h2>Test conditions</h2><p>Positive current discharges through the chosen battery output. Negative current charges. Room temperature: '+val(settings['ambient_C'],'°C')+'. Solver step: '+val(settings['dt_s'],'s')+'.</p>'+table([('Start','End','Battery current')]+loads)+'<h2>Cells and starting states</h2>'+table([('Cell','Model profile','Starting charge','Starting temperature')]+cells)+'<h2>Electrical connections</h2>'+table([('First terminal','Second terminal','Resistance','Source')]+links)+evidence+'<footer>Open results.csv for the numeric series. Run replay.py with requirements.txt to reproduce this experiment using its captured model and source versions.</footer></html>'

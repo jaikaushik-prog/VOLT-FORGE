@@ -1,0 +1,65 @@
+{
+  "version": "voltforge.catalogue-upgrade/1",
+  "created_date": "2026-10-28",
+  "baseline_commit": "8ba2037e5eb141ff3f831e1c36df16151480a3db",
+  "dataset_doi": "10.17632/9xyvy2njj3.2",
+  "archive_sha256": "bad07e9df0ccd5b3e7805f2296b5d61a43c2013b56a7fd87b83d8744fa453f25",
+  "purpose": "Add independent battery families and temperature-dependent cell models without changing frozen earlier scientific artifacts.",
+  "calibration": [
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-16-19_00.42 847_C20DisCh_-10degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-14-19_17.40 847_HPPC_-10degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-02-19_14.28 866_C20DisCh_-20degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/06-28-19_20.09 866_HPPC_-20degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/05-31-19_14.26 819_C20DisCh_0degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/05-28-19_19.04 814_HPPC_0degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-24-19_06.06 746_C20DisCh_10degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-22-19_15.28 746_HPPC_10degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-16-19_04.00 729_C20DisCh_25degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-14-19_17.34 729_HPPC_25degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/02-24-19_17.19 697_C20DisCh_40degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-01-19_19.23 705_HPPC_40degC_IN21700_30T.mat"
+  ],
+  "development_validation": [
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-17-19_16.06 847_Dis_0p5C_-10degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-04-19_04.11 866_Dis_0p5C_-20degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_07.21 819_Dis_0p5C_0degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-26-19_00.33 746_Dis_0p5C_10degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-17-19_23.07 729_Dis_0p5C_25degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/02-26-19_12.33 697_Dis_0p5C_40degC_IN21700_30T.mat"
+  ],
+  "final_assessment_reserved": [
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-23-19_16.48 859_UDDS_-10degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-05-19_22.23 875_UDDS_-20degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_19.05 824_UDDS_0degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-28-19_06.00 752_UDDS_10degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-18-19_16.26 734_UDDS_25degC_IN21700_30T.mat",
+    "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/03-04-19_21.54 710_UDDS_40degC_IN21700_30T.mat"
+  ],
+  "roles": "Whole source tests are the split unit. CSV duplicates retain the same role as their MAT test. No reserved data may be decoded for fitting or model selection.",
+  "method": {
+    "model": "SOC-temperature lookup OCV plus positive RC dynamics; model complexity selected on calibration data only.",
+    "capacity_coordinate": "Conserved charge referenced to a fixed identified capacity; do not change SOC merely by changing temperature.",
+    "electrical_temperature": "Use measured cell temperature when identifying dependence; chamber labels are conditions, not the cell temperature measurement.",
+    "thermal": "Identify heat-transfer parameters only from predeclared calibration evidence, or retain their declared-assumption status.",
+    "domain": "Use supported model/state domains. Ambient temperature is a thermal boundary condition, not an electrical-model lookup coordinate.",
+    "numerical": "Conservation, exact constant-parameter limits, event handling, refinement and independent single-cell reference checks precede empirical assessment."
+  },
+  "proposed_application_error_budget": {
+    "voltage_rmse_V": 0.05,
+    "voltage_max_abs_V": 0.15,
+    "status": "Predeclared research-prototype target, not a manufacturer rating or universal engineering acceptance."
+  },
+  "assessment_rule": "Use only records explicitly selected by the frozen assessment procedure. Freeze model, code, procedure, preprocessing, scoring, initialization, source and runtime before reserved access. The six allocated UDDS records remain reserved; they are not an instruction to open all six. Failure is retained; no refit against final traces under this version.",
+  "sources": [
+    {
+      "name": "Samsung 30T McMaster raw experiments",
+      "doi": "10.17632/9xyvy2njj3.2",
+      "role": "calibration and independent whole-test assessment"
+    },
+    {
+      "name": "Imperial PyECN Cylindrical_Cell1",
+      "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+      "role": "Published whole-cell electrical parameter import; not independent experimental validation"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "condition": "0degC",
+      "pass_budget": true,
+      "voltage_rmse_V": 0.02430994836578025,
+      "voltage_max_abs_V": 0.1384074186376285,
+      "phase_fraction": 0.9541284403669725
+    },
+    {
+      "condition": "10degC",
+      "pass_budget": true,
+      "voltage_rmse_V": 0.018924674644143623,
+      "voltage_max_abs_V": 0.07122672211159209,
+      "phase_fraction": 0.9122807017543859
+    },
+    {
+      "condition": "25degC",
+      "pass_budget": true,
+      "voltage_rmse_V": 0.014967017752219921,
+      "voltage_max_abs_V": 0.045813753519936995,
+      "phase_fraction": 0.8666666666666667
+    },
+    {
+      "condition": "40degC",
+      "pass_budget": true,
+      "voltage_rmse_V": 0.009380352484668014,
+      "voltage_max_abs_V": 0.023290320284214516,
+      "phase_fraction": 0.8524590163934426
+    }
+  ],
+  "production_catalogue_sha256": "a27d325c1cdb86261f65174ed638493a8f9f1de1ee149b6c339e54f7e012ce2d"
+}

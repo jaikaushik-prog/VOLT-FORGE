@@ -1,0 +1,114 @@
+{
+  "candidate_sha256": "b6b4a2f4aa09d757b4d272718b0c9668727319ad5aa9f46cfe70f6560526676f",
+  "results": [
+    {
+      "source": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-10degC/06-17-19_16.06 847_Dis_0p5C_-10degC_IN21700_30T.mat",
+      "source_sha256": "69946ee6c8eab87b6364e569d40dc2ff711a41834ed8177cc689befd346cd8b4",
+      "total_rows": 517,
+      "discharge_phase_rows": 88,
+      "predicted_rows": 0,
+      "fraction_rows_predicted": 0.0,
+      "stop": {
+        "row": 1,
+        "reason": "outside_model_state",
+        "soc": 1.0,
+        "temperature_C": -9.3591
+      },
+      "voltage_rmse_V": null,
+      "voltage_max_abs_V": null,
+      "state_initialization": "Documented full-charge preparation, zero initial relaxation",
+      "temperature_input": "Measured cell surface temperature; this assesses electrical response only, not thermal prediction"
+    },
+    {
+      "source": "Samsung INR21700 30T 3Ah Li-ion Battery Data/-20degC/07-04-19_04.11 866_Dis_0p5C_-20degC_IN21700_30T.mat",
+      "source_sha256": "9b092b56d78adfd308810198dec579407878ef2481a7289e2afbb601bb2a0dfb",
+      "total_rows": 539,
+      "discharge_phase_rows": 96,
+      "predicted_rows": 0,
+      "fraction_rows_predicted": 0.0,
+      "stop": {
+        "row": 1,
+        "reason": "outside_model_state",
+        "soc": 1.0,
+        "temperature_C": -19.7698040613
+      },
+      "voltage_rmse_V": null,
+      "voltage_max_abs_V": null,
+      "state_initialization": "Documented full-charge preparation, zero initial relaxation",
+      "temperature_input": "Measured cell surface temperature; this assesses electrical response only, not thermal prediction"
+    },
+    {
+      "source": "Samsung INR21700 30T 3Ah Li-ion Battery Data/0degC/06-02-19_07.21 819_Dis_0p5C_0degC_IN21700_30T.mat",
+      "source_sha256": "09e672d104abb8dc1d9d9f9782fcff03faab85f3642f24dad658cf6da4076ba7",
+      "total_rows": 295,
+      "discharge_phase_rows": 109,
+      "predicted_rows": 104,
+      "fraction_rows_predicted": 0.9541284403669725,
+      "stop": {
+        "row": 105,
+        "reason": "outside_model_state",
+        "soc": 0.144546877110691,
+        "temperature_C": 0.5257926612
+      },
+      "voltage_rmse_V": 0.02430994836578025,
+      "voltage_max_abs_V": 0.1384074186376285,
+      "state_initialization": "Documented full-charge preparation, zero initial relaxation",
+      "temperature_input": "Measured cell surface temperature; this assesses electrical response only, not thermal prediction"
+    },
+    {
+      "source": "Samsung INR21700 30T 3Ah Li-ion Battery Data/10degC/03-26-19_00.33 746_Dis_0p5C_10degC_IN21700_30T.mat",
+      "source_sha256": "e67658b261cea811339c9767066bee5001e4b1398dde8164f6708720f9ae8c25",
+      "total_rows": 591,
+      "discharge_phase_rows": 114,
+      "predicted_rows": 104,
+      "fraction_rows_predicted": 0.9122807017543859,
+      "stop": {
+        "row": 105,
+        "reason": "outside_model_state",
+        "soc": 0.1444785382329016,
+        "temperature_C": 9.99006
+      },
+      "voltage_rmse_V": 0.018924674644143623,
+      "voltage_max_abs_V": 0.07122672211159209,
+      "state_initialization": "Documented full-charge preparation, zero initial relaxation",
+      "temperature_input": "Measured cell surface temperature; this assesses electrical response only, not thermal prediction"
+    },
+    {
+      "source": "Samsung INR21700 30T 3Ah Li-ion Battery Data/25degC/03-17-19_23.07 729_Dis_0p5C_25degC_IN21700_30T.mat",
+      "source_sha256": "cdd52ed5d375dfff7779137b4a8580fc625c5351065698e482513c035f126f6f",
+      "total_rows": 227,
+      "discharge_phase_rows": 120,
+      "predicted_rows": 104,
+      "fraction_rows_predicted": 0.8666666666666667,
+      "stop": {
+        "row": 105,
+        "reason": "outside_model_state",
+        "soc": 0.1444492907890138,
+        "temperature_C": 24.6071
+      },
+      "voltage_rmse_V": 0.014967017752219921,
+      "voltage_max_abs_V": 0.045813753519936995,
+      "state_initialization": "Documented full-charge preparation, zero initial relaxation",
+      "temperature_input": "Measured cell surface temperature; this assesses electrical response only, not thermal prediction"
+    },
+    {
+      "source": "Samsung INR21700 30T 3Ah Li-ion Battery Data/40degC/02-26-19_12.33 697_Dis_0p5C_40degC_IN21700_30T.mat",
+      "source_sha256": "c2b4b46105e1ed29b6601007caa582e37bfc580497d3ecdf37f4490fdc9fdb99",
+      "total_rows": 623,
+      "discharge_phase_rows": 122,
+      "predicted_rows": 104,
+      "fraction_rows_predicted": 0.8524590163934426,
+      "stop": {
+        "row": 105,
+        "reason": "outside_model_state",
+        "soc": 0.14440703120072523,
+        "temperature_C": 39.11897
+      },
+      "voltage_rmse_V": 0.009380352484668014,
+      "voltage_max_abs_V": 0.023290320284214516,
+      "state_initialization": "Documented full-charge preparation, zero initial relaxation",
+      "temperature_input": "Measured cell surface temperature; this assesses electrical response only, not thermal prediction"
+    }
+  ],
+  "kind": "development"
+}
