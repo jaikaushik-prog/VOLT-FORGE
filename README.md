@@ -2,9 +2,9 @@
 
 A visual battery-engineering workspace. Build a circuit, test its behaviour and understand what a design change does.
 
-## Current development version: V3
+## Current version: V3
 
-Updated 29 October 2026. V3 adds temperature-dependent cell models, custom-cell imports, coupled electrical/thermal calculations, physical copper links and routes, monitoring/protective-cutoff experiments, a resumable walkthrough and stronger numerical verification. Final installation and release checks are being completed.
+Updated 29 October 2026. V3 adds temperature-dependent cell models, custom-cell imports, coupled electrical/thermal calculations, physical copper links and routes, monitoring/protective-cutoff experiments, a resumable walkthrough and stronger numerical verification. A clean source-bundle installation, full software checks and the browser release workflow have passed.
 
 **[Open the V3 guide](V3_RELEASE.md)** for launch instructions, the user journey, model sources and release scope. The [V2 guide](V2_RELEASE.md) preserves the earlier published snapshot.
 
@@ -14,7 +14,7 @@ Use Python 3.12. From the complete source folder:
 
 ```sh
 python3.12 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip install -r requirements-lock.txt
 .venv/bin/python scripts/run_editor.py --project workspace/my_project --port 8794
 ```
 

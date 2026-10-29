@@ -1,0 +1,194 @@
+{
+  "version": "voltforge.brief-coverage/1",
+  "checked_utc": "2026-10-29T17:07:01.170709+00:00",
+  "source_file": "/Users/shubhra/Documents/Codex/volt-forge-v2-astra-2026-10-28/brief/Official_Case_Study_2.txt",
+  "source_sha256": "2ba87f09d21d47d19381be2fd265beda98a76797b270a5341334afe539689918",
+  "assessment": "Local requirement traceability check, not a new Astra audit or a rescore.",
+  "requirements": [
+    {
+      "id": "scope",
+      "requirement": "Manageable small cell group/module scope",
+      "status": "aligned",
+      "roadmap_items": [
+        "R01",
+        "R19"
+      ],
+      "remaining": "Four-cell reference case; full pack not required."
+    },
+    {
+      "id": "application",
+      "requirement": "Application, requirements and operating conditions",
+      "status": "partial",
+      "roadmap_items": [
+        "R01"
+      ],
+      "remaining": "The declared 12 A / 600 s / 3.3 V backup benchmark is recorded with its user-proposed requirements and common preparation. It is a bounded engineering study, not a demonstrated commercial hardware specification."
+    },
+    {
+      "id": "cell_electrical_thermal",
+      "requirement": "Cells, connections and temperature control",
+      "status": "partial",
+      "roadmap_items": [
+        "R03",
+        "R05",
+        "R06",
+        "R13",
+        "R14",
+        "R15",
+        "R16"
+      ],
+      "remaining": "Published LG model, separate Samsung model, actual connection graph, coupled heat feedback, sourced M50T capacity and used-fixture cooling are integrated and numerically checked. Independent matched physical accuracy remains open for Round 2."
+    },
+    {
+      "id": "sensing",
+      "requirement": "Sensing and signal meaning",
+      "status": "implemented_virtual_case",
+      "roadmap_items": [
+        "R17"
+      ],
+      "remaining": "Per-cell state-to-reading mapping, constant offset, sampling and response delay are implemented. Hardware sensor/monitor suitability and real uncertainty still require qualification."
+    },
+    {
+      "id": "protection_controls",
+      "requirement": "Protection and basic controls",
+      "status": "implemented_virtual_case",
+      "roadmap_items": [
+        "R17"
+      ],
+      "remaining": "A latched ideal external disconnect changes current and reports unserved duty, while internal parallel currents remain. Hardware behaviour/certification is not claimed."
+    },
+    {
+      "id": "mechanical_packaging",
+      "requirement": "Mechanical/packaging considerations",
+      "status": "partial",
+      "roadmap_items": [
+        "R17",
+        "R19"
+      ],
+      "remaining": "Conductor dimensions, contacts, DC resistance and mass, plus external routing voltage/energy penalties are now linked to the solver and comparison. Cell geometry is available. Ampacity, insulation/enclosure/clearance and implementation qualification remain."
+    },
+    {
+      "id": "subsystem_exchange",
+      "requirement": "Consistent exchange of parameters/results",
+      "status": "partial",
+      "roadmap_items": [
+        "R02",
+        "R03",
+        "R09",
+        "R17"
+      ],
+      "remaining": "Electrical/thermal states, sensor readings and actions, physical conductor/routing calculations and saved evidence exchange coherently. Full physical validation remains."
+    },
+    {
+      "id": "interface_conflicts",
+      "requirement": "Interface conflicts and incompatible assumptions",
+      "status": "partial",
+      "roadmap_items": [
+        "R03",
+        "R06",
+        "R17"
+      ],
+      "remaining": "Wiring, operating/model domains, missing thermal sensing and inconsistent conductor definitions are checked. Hardware compatibility and fixture assumptions still need qualification."
+    },
+    {
+      "id": "three_options",
+      "requirement": "Two options against a starting design",
+      "status": "implemented_development_study",
+      "roadmap_items": [
+        "R18",
+        "R19"
+      ],
+      "remaining": "Completed baseline, double-thickness copper and opposite-end collection with route/contact/material penalties, 31 paired scenarios, all 93 half-step repeats and three independently replayed nominal bundles."
+    },
+    {
+      "id": "indicators",
+      "requirement": "A few relevant measurable indicators",
+      "status": "aligned_but_qualification_open",
+      "roadmap_items": [
+        "R07",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R19"
+      ],
+      "remaining": "Duty energy/current/voltage/estimated temperature exist. Do not relabel duty energy as measured full usable capacity."
+    },
+    {
+      "id": "sources_evidence",
+      "requirement": "Sources, assumptions, precautions, results and limitations",
+      "status": "partial",
+      "roadmap_items": [
+        "R02",
+        "R07",
+        "R12",
+        "R17"
+      ],
+      "remaining": "Source/model registry, heat-parameter decision, source classifications, actual overrides, immutable experiment reports, numerical references and clean-install/replay records are captured. Hardware qualification remains separate."
+    },
+    {
+      "id": "balanced_recommendation",
+      "requirement": "Balanced design recommendation and risks",
+      "status": "partial",
+      "roadmap_items": [
+        "R18",
+        "R19"
+      ],
+      "remaining": "Conditional thicker-link preference is supported across all 31 tested scenarios. Opposite-end routing/preparation tradeoffs and ranking reversals are preserved; no universal physical winner is asserted."
+    },
+    {
+      "id": "variation_ageing",
+      "requirement": "Variation, ageing and operating-condition propagation",
+      "status": "partial",
+      "roadmap_items": [
+        "R18"
+      ],
+      "remaining": "Executed explicit capacity +/-5 percent, resistance +/-10 percent, voltage-reference +/-25 mV, preparation/contact/thermal/environmental and one combined scenario. These are deterministic assumptions, not measured ageing or population laws."
+    },
+    {
+      "id": "demo_next_step",
+      "requirement": "Prototype/visual demonstration and recommended next step",
+      "status": "partial",
+      "roadmap_items": [
+        "R19",
+        "R20",
+        "R24",
+        "R26"
+      ],
+      "remaining": "Guide/resume/import/live AI, three-option comparison, warm-cell series simulation, failure highlighting/open-case, export and clean install are browser/software verified. Next empirical step is matched initial-state/contact/cooling/module measurement."
+    },
+    {
+      "id": "user_value",
+      "requirement": "Desirability and practical adoption/value",
+      "status": "partial",
+      "roadmap_items": [
+        "R20",
+        "R21",
+        "R24"
+      ],
+      "remaining": "The working product is ready for the user-owned pitch and unfamiliar-user trials. No respondents, adoption metrics or business outcomes are invented."
+    }
+  ],
+  "v3_priority_clarifications": [
+    "Basic sensing/protection/control behavior and consequence-bearing assumptions are core V3 work.",
+    "Conductor alternatives need physical route/section/contact and implementation penalties.",
+    "Complete baseline plus two alternatives under one service contract.",
+    "Recommendation follows priorities and sensitivity; measured-validation status follows evidence."
+  ],
+  "v4_extensions": [
+    "Advanced 3D CAD and CAD export",
+    "Detailed stress/structural simulation",
+    "High-fidelity CFD cooling",
+    "Large pack/BMS/energy-management complexity",
+    "Long-term ageing/lifetime forecasts"
+  ],
+  "not_mandatory": [
+    "Full battery pack",
+    "Every example metric",
+    "Physical laboratory prototype if justified calculation/simulation evidence is used",
+    "Validated full-physics implementation of every discipline"
+  ],
+  "finish_line_implementation_complete": true,
+  "competition_score_claimed": false,
+  "independent_module_accuracy_established": false
+}

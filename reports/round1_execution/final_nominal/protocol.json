@@ -1,0 +1,72 @@
+{
+  "version": "voltforge.round1-comparison/1",
+  "status": "Source-backed Round 1 parameter-sensitivity study; conditional numerical predictions",
+  "application": "Four-cell low-voltage backup connection study",
+  "scope": "The same four published temperature-dependent LG M50T models, cell assignments, external duty and thermal-reference assumptions are used in each option. Explicit parameter scenarios are copied into immutable study-only model versions. This is not independent module validation. Final-source nominal numerical regression after input-range error hardening.",
+  "mission": {
+    "current_A": 12.0,
+    "duration_s": 600.0,
+    "ambient_C": 23.0,
+    "initial_charge_pct": 70.0,
+    "initial_temperature_C": 23.0,
+    "dt_s": 0.5,
+    "minimum_output_voltage_V": 3.3
+  },
+  "link_dimensions": {
+    "length_mm": 30.0,
+    "width_mm": 8.0,
+    "thickness_mm": 0.08,
+    "contact_mohm": 0.2
+  },
+  "output_route": {
+    "length_mm": 50.0,
+    "width_mm": 8.0,
+    "thickness_mm": 0.2,
+    "contact_mohm": 0.2
+  },
+  "options": [
+    {
+      "key": "baseline",
+      "name": "Original connections",
+      "intervention": "Same-end outputs and the declared thin copper links."
+    },
+    {
+      "key": "thicker",
+      "name": "Thicker copper links",
+      "intervention": "Double each internal link thickness from 0.08 to 0.16 mm. Contact resistance and output routes stay unchanged."
+    },
+    {
+      "key": "opposite",
+      "name": "Opposite-end collection",
+      "intervention": "Move the negative takeoff to Cell 4 and lengthen its external return route from 50 to 140 mm. The extra 90 mm is a declared routing assumption, independent of canvas pixels."
+    }
+  ],
+  "physical_assumptions": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified.",
+  "scenarios": [
+    {
+      "key": "nominal",
+      "name": "Declared starting conditions",
+      "kind": "nominal",
+      "basis": "Fixed common application and sourced model reference."
+    }
+  ],
+  "scenario_basis": "Paired deterministic cases distinguish measured source-parameter variation, fixture identification choices and hypothetical sample/preparation errors. No probability, confidence interval, life forecast or experimental hardware benefit is inferred. Every physical option is checked again at half its solver step.",
+  "decision": {
+    "priorities": [
+      "Complete the identical requested duty",
+      "Meet the declared 3.3 V output floor",
+      "Compare cell current and temperature stress against delivered energy and specified-conductor mass"
+    ],
+    "numerical_resolution_budgets": {
+      "peak_cell_current_A": 0.01,
+      "peak_temperature_C": 0.05,
+      "delivered_energy_Wh": 0.005,
+      "minimum_voltage_V": 0.005
+    },
+    "budget_meaning": "Declared numerical resolutions. Every scenario/option receives a half-step check; a failed check prevents a numerical recommendation for that case. These are not measured battery-error or safety margins.",
+    "recommendation_rule": "Do not force a winner. Exclude incomplete duty or target violations from a full-service comparison. Show paired changes and ordering reversals. A physical recommendation requires the open cell, fixture and module empirical gates."
+  },
+  "revision": 2,
+  "cell_model": "LG_M50T_ECN",
+  "refine_every_case": true
+}

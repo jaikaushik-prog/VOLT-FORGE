@@ -8,7 +8,7 @@ Use Python 3.12. Extract the complete source bundle or clone the source checkout
 
 ```sh
 python3.12 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip install -r requirements-lock.txt
 .venv/bin/python scripts/run_editor.py --project workspace/my_project --port 8794
 ```
 

@@ -1,0 +1,20 @@
+[
+  {
+    "option": "baseline",
+    "returncode": 0,
+    "stdout": "Reproduced 1201 samples. Numerical reproduction only; physical accuracy requires independent measurements.",
+    "stderr": ""
+  },
+  {
+    "option": "thicker",
+    "returncode": 0,
+    "stdout": "Reproduced 1201 samples. Numerical reproduction only; physical accuracy requires independent measurements.",
+    "stderr": ""
+  },
+  {
+    "option": "opposite",
+    "returncode": 0,
+    "stdout": "Reproduced 1201 samples. Numerical reproduction only; physical accuracy requires independent measurements.",
+    "stderr": ""
+  }
+]

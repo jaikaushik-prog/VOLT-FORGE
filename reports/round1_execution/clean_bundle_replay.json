@@ -1,0 +1,7 @@
+{
+  "export": "volt-forge-experiment.zip",
+  "sha256": "ac86dbf96c0487bcfe55deb928d6dcc1305d200f14d80bfc44d3e93079bfd6ad",
+  "returncode": 0,
+  "stdout": "Reproduced 121 samples. Numerical reproduction only; physical accuracy requires independent measurements.",
+  "stderr": ""
+}

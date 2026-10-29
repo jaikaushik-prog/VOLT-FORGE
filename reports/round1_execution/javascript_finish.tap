@@ -1,0 +1,47 @@
+✔ colorFor hits the palette stops, blends channels as worked by hand, and falls back to neutral (2.155791ms)
+✔ textColorFor picks dark ink on light fills and white ink on dark fills (0.177084ms)
+✔ assemblySVG draws four selectable cells and six rail segments with hand-derived colours and legend (3.330791ms)
+✔ markup in identities and units is escaped and can never appear raw (0.748292ms)
+✔ output has no style attribute and no inline event handler attribute (2.50075ms)
+✔ overlay 'none' draws no legend, no time text and plain white cells (0.36475ms)
+✔ cell value text retains at least 4.5:1 contrast throughout both overlay scales (7.003416ms)
+✔ inherited and sensitivity runs cannot be selected as current nominal results (0.541542ms)
+✔ late results fail the selection epoch after a variant change (0.286292ms)
+✔ user content escapes markup and numeric edits reject empty or nonfinite input (0.590208ms)
+✔ chart bounds show negative charge and flat data without undefined scales (1.377125ms)
+✔ investigation exposes thermal failures without concealing electrical results (1.14475ms)
+✔ rangeOf collects finite values from cell_1..cell_4 only (1.088416ms)
+✔ thermalMetricsHTML shows an unavailable card with its reason, or three simulated metric cards (0.318042ms)
+✔ requirementsHTML maps every status to its class, keeps the fixed row order, and escapes the source (1.105875ms)
+✔ parsePlan converts milliohms to ohms, keeps lists in order, and rejects bad input (2.933916ms)
+✔ investigationFormHTML has the six segment checkboxes and the named inputs (1.802666ms)
+✔ investigationHTML lists coverage, per-requirement rankings and the exploration table, each case with an open button (2.046625ms)
+✔ no output carries a style attribute or an inline event handler attribute (4.821083ms)
+✔ Dimension preview converts mm and SI material values to the hand-calculated mass and resistance (0.595ms)
+✔ Physical source text cannot turn into an executable URL or injected markup (40.930042ms)
+✔ A scheduled action beyond the computed horizon cannot be displayed as an actual disconnect (0.227667ms)
+✔ Graph probes distinguish a physical cutoff from an ordinary load transition (0.20725ms)
+✔ A flat current series keeps distinct readable axis ticks (0.593666ms)
+✔ Guide cannot treat the wrong design, an unprobed test or an unrelated comparison as complete (1.576292ms)
+✔ Denied browser storage does not prevent using or skipping the guide (0.115917ms)
+✔ Chart distinguishes both sides of an actual current event and defaults to after (24.7015ms)
+✔ Missing thermal evidence renders an unavailable state instead of a zero-degree graph (0.310416ms)
+✔ Cell insertion, real terminal edges, removal and undo preserve graph meaning (1.839916ms)
+✔ Geometry and names are separate from electrical changes (0.26475ms)
+✔ Probe chooses nearest saved sample, including ends and unequal spacing (0.109417ms)
+✔ Time labels distinguish fractional saved samples and preserve minute boundaries (39.404416ms)
+✔ Small nonzero comparison changes cannot look like negative zero (0.2475ms)
+✔ Long 16-cell trajectories render without spreading an array into function arguments (35.934666ms)
+✔ Tooltips escape cell names and display the real chosen data point (0.286459ms)
+✔ the load editor preserves discharge, rest and charging as exact contiguous intervals (4.374625ms)
+✔ empty, negative, nonfinite and subprecision durations cannot become solver inputs (0.796458ms)
+✔ result labels preserve ownership, historical freshness and incomplete execution (0.24675ms)
+✔ display names explain components and retain unknown names without inventing a component (0.185083ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 237.428625

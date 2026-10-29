@@ -1,0 +1,269 @@
+{
+  "version": "voltforge.execution-status/1",
+  "updated_utc": "2026-10-29T17:07:01.170709+00:00",
+  "roadmap": "/Users/shubhra/Documents/Codex/volt-forge-round1-roadmap-2026-10-28/work_items.json",
+  "branch": "round1-execution",
+  "implementation_started_packages": 22,
+  "total_packages": 27,
+  "note": "Implementation coverage is not package completion or a competition score. Software regression tests do not establish physical accuracy.",
+  "tasks": [
+    {
+      "id": "R00",
+      "title": "Freeze the reviewed baseline and reconcile the two audits",
+      "status": "complete",
+      "details": "Isolated worktree and source inventory; original live project is outside the test workspace."
+    },
+    {
+      "id": "R01",
+      "title": "Define the exact battery decision and requirements",
+      "status": "partial",
+      "details": "Versioned application/requirement records and benchmark contract implemented. Final application evidence and component choice remain open."
+    },
+    {
+      "id": "R02",
+      "title": "Build one scientific source and model registry",
+      "status": "partial",
+      "details": "Model provenance captured; custom versions immutable; reserved-access contract fails closed. Unified exposure and source qualification still need completion."
+    },
+    {
+      "id": "R03",
+      "title": "Use the same readiness and applicability checks everywhere",
+      "status": "partial",
+      "details": "Shared initial preflight used by saved designs, proposals and pressure cases. Full uncertainty/assessment eligibility remains open."
+    },
+    {
+      "id": "R04",
+      "title": "Correct load-event extrema and numerical event handling",
+      "status": "implemented_pending_release_recheck",
+      "details": "Both event sides retained in rows, checks, probes and CSV; analytical and independent ODE regressions pass."
+    },
+    {
+      "id": "R05",
+      "title": "Verify the temperature-dependent electrical and heat engine",
+      "status": "partial",
+      "details": "Native PyBaMM Thevenin/closed-form comparison passes all 15 cases; independent state-dependent coupled SciPy convergence and heat-sign/propagator checks pass. Full suite 393 passes. Physical accuracy gates remain separate."
+    },
+    {
+      "id": "R06",
+      "title": "Enforce cell limits and locate the first boundary",
+      "status": "partial",
+      "details": "Per-cell current, voltage and state boundaries enforced with quarter-step probes and localized first observed crossing. Full policy/event trace qualification remains open."
+    },
+    {
+      "id": "R07",
+      "title": "Make partial tests and uncertain requirements truthful",
+      "status": "partial",
+      "details": "Incomplete or disconnected duty is inconclusive; true violated targets retained. Virtual protective action records actual unserved requested current/time. Empirical uncertainty-qualified clearance remains open."
+    },
+    {
+      "id": "R08",
+      "title": "Make saves and recovery atomic",
+      "status": "implemented_pending_release_recheck",
+      "details": "Journal commits, directory sync and restart recovery tested; same transaction path used by designs, tests, custom cells and investigations. Complete migration/fault matrix remains to close."
+    },
+    {
+      "id": "R09",
+      "title": "Bind every action and response to its saved experiment",
+      "status": "partial",
+      "details": "Saved baseline used for interventions; client response epochs and immutable AI contexts implemented. Further adversarial browser race checks remain."
+    },
+    {
+      "id": "R10",
+      "title": "Make the real AI copilot reviewable and grounded",
+      "status": "partial",
+      "details": "Live comparison explanation and Home-to-canvas generation verified. Existing-design edits stay approval gated. New failure-investigation AI context has regression coverage."
+    },
+    {
+      "id": "R11",
+      "title": "Make test controls, probes and energy comparisons agree",
+      "status": "partial",
+      "details": "Canonical multiple-interval controls, event probes, unavailable thermal state and charge/received/net comparison implemented. Final interaction recheck remains."
+    },
+    {
+      "id": "R12",
+      "title": "Make every catalogue experiment export and replay",
+      "status": "implemented_pending_release_recheck",
+      "details": "Catalogue-aware reports, model/code capture, event CSV and numerical replay implemented, including custom cells. Final cross-model and attribution matrix remains."
+    },
+    {
+      "id": "R13",
+      "title": "Finish the LG temperature-model integration and assessment path",
+      "status": "partial",
+      "details": "LG published model integrated with temperature feedback and numerical references. Independent empirical accuracy assessment remains open."
+    },
+    {
+      "id": "R14",
+      "title": "Finish Samsung development and freeze a valid independent assessment",
+      "status": "partial",
+      "details": "Samsung candidate present; strengthened whole-record assessment gate and draft procedure. Preparation verification and final frozen assessment remain open; reserved traces untouched."
+    },
+    {
+      "id": "R15",
+      "title": "Identify heat-transfer parameters and verify temperature predictions",
+      "status": "partial",
+      "details": "Exact-M50T literature capacity 58.5 J/K integrated with separate recorded used-fixture cooling 0.1524918708 W/K. Observed ambient, offset and residual-heat scenarios are retained. Actual properties and overrides export/replay. Independent thermal/module forecast accuracy remains a Round 2 gate."
+    },
+    {
+      "id": "R16",
+      "title": "Resolve module-current evidence and assess a real assembly",
+      "status": "not_started",
+      "details": "Matched real-module current/temperature evidence and fixture validation remain open."
+    },
+    {
+      "id": "R17",
+      "title": "Connect sensing, protection, controls and packaging to the decision",
+      "status": "partial",
+      "details": "Virtual per-cell current/voltage/temperature sensing, offsets, sampling and delayed latched external disconnect implemented and browser checked. Real unserved duty and internal parallel current retained. Physical rectangular conductors and output routes affect circuit resistance, loss, material mass, reports and replay. Topology-appropriate hardware compatibility, ampacity, insulation/enclosure/clearance and physical parameter evidence remain open."
+    },
+    {
+      "id": "R18",
+      "title": "Test uncertainty and recommendation robustness",
+      "status": "partial",
+      "details": "31 paired scenarios across three options and 93 half-step repeats completed, including capacity/resistance/reference/preparation/thermal/contact variations. All numerical budgets passed. Conditional recommendation and five rankings reversals recorded; no statistical population or physical robustness claim."
+    },
+    {
+      "id": "R19",
+      "title": "Produce one baseline and two feasible design alternatives",
+      "status": "partial",
+      "details": "Three physical options use identical external duty and sourced model references. Route/contact/material penalties, conditional recommendation, final-source nominal regression and three isolated replay bundles are complete for the Round 1 study."
+    },
+    {
+      "id": "R20",
+      "title": "Observe whether intended users can make the right decision",
+      "status": "not_started",
+      "details": "Observed unfamiliar-user trials not yet conducted."
+    },
+    {
+      "id": "R21",
+      "title": "Build a defensible user and implementation value case",
+      "status": "not_started",
+      "details": "Measured user/value evidence and implementation economics remain open."
+    },
+    {
+      "id": "R22",
+      "title": "Make launch, locking and delivery reproducible",
+      "status": "partial",
+      "details": "Source bundle installed in a fresh macOS/Python 3.12 environment; 393 Python passes, 8 original-archive skips and 39 JavaScript passes. Full dependency lock matches the exercised environment; pip check passes. Other OS execution remains unqualified."
+    },
+    {
+      "id": "R23",
+      "title": "Recheck the release against both audits and the science gates",
+      "status": "not_started",
+      "details": "Final independent release re-audit must use the new artifact."
+    },
+    {
+      "id": "R24",
+      "title": "Package and rehearse the final engineering demonstration",
+      "status": "not_started",
+      "details": "Round 1 engineering package contains captured source/models, three physical alternatives, 186-calculation sensitivity evidence, numerical/thermal sources, reproducibility records and actual browser proof. User-owned pitch/submission remain external."
+    },
+    {
+      "id": "R25",
+      "title": "Let users create, reuse and import custom cell models",
+      "status": "partial",
+      "details": "Basic four-field path, measured-curve CSV and JSON format errors checked in-browser; valid imported 2 Ah reference appears in the reusable library. Numerical extreme-input rejection, immutable versions, thermal preset/own-data/electrical-only and replay checks pass."
+    },
+    {
+      "id": "R26",
+      "title": "Add a short interactive first-use walkthrough",
+      "status": "partial",
+      "details": "Seven-step actual-action guide completed including resume after reload, chart probing, controlled comparison, real AI explanation, downloaded export/replay and Finish. 390/1024 px layouts checked."
+    }
+  ],
+  "reaudit_constraint": {
+    "source": "Latest user instruction",
+    "instruction": "No audit planning, preparation or launch until all four finish-line workstreams are complete.",
+    "audit_preparation_started": false,
+    "audit_launched": false
+  },
+  "source_scout": {
+    "agent_id": "01a183aa-d7f1-7783-ad5b-c275fea8cc3e",
+    "nickname": "Fermat",
+    "model_verified": "gpt-6.1-sol",
+    "effort_verified": "high",
+    "scope": "Read-only primary-source and dataset research, not an audit.",
+    "status": "completed; handoff reviewed; agent closed",
+    "handoff": "../volt-forge-science-source-scout-2026-10-28/RECOMMENDED_UNLOCKS.md"
+  },
+  "brief_coverage": "brief_coverage.json",
+  "v3_priority_clarifications": [
+    "Basic sensing/protection/control behavior and consequence-bearing assumptions are core V3 work.",
+    "Conductor alternatives need physical route/section/contact and implementation penalties.",
+    "Complete baseline plus two alternatives under one service contract.",
+    "Recommendation follows priorities and sensitivity; measured-validation status follows evidence."
+  ],
+  "round1_release": "V3 Final; development builds are not final submission releases.",
+  "comparison_study": "../round1_comparison_development_v1/READ_ME.md",
+  "thermal_qualification": "../round1_source_qualification/READ_ME.md",
+  "source_checkpoint": "db662bb",
+  "finish_line_workstreams": [
+    {
+      "id": "temperature",
+      "name": "Strengthen temperature predictions",
+      "percent": 100,
+      "status": "complete_for_round1",
+      "evidence": [
+        "configs/thermal_sources_v1.json",
+        "reports/thermal_fixture_reanalysis_v1/run1/identification.json",
+        "reports/round1_execution/python_finish.xml"
+      ],
+      "outcome": "Exact-M50T whole-cell heat capacity integrated; used-fixture cooling reidentified with observed ambient and separately supplied capacity; actual defaults/overrides captured in reports and replay."
+    },
+    {
+      "id": "independent_calculations",
+      "name": "Finish independent calculation checks",
+      "percent": 100,
+      "status": "complete_for_round1",
+      "evidence": [
+        "reports/numerical_reference_v1/run2_final/verification.json",
+        "reports/round1_execution/python_finish.xml",
+        "reports/round1_execution/final_nominal/replay_verification.json"
+      ],
+      "outcome": "15 native PyBaMM/analytic cases pass; independent coupled SciPy reference and event/accounting tests pass; extreme finite imports fail usefully before NaN results can be saved."
+    },
+    {
+      "id": "recommendation",
+      "name": "Make the design recommendation defensible",
+      "percent": 100,
+      "status": "complete_for_round1",
+      "evidence": [
+        "reports/round1_robustness_v1/run1/comparison.json",
+        "reports/round1_execution/engineering_decision/RECOMMENDATION.md"
+      ],
+      "outcome": "31 paired scenarios across three designs plus all 93 half-step repeats completed. Conditional thicker-link preference, routing/material penalties and ranking reversals documented."
+    },
+    {
+      "id": "release",
+      "name": "Verify and package the final version",
+      "percent": 100,
+      "status": "checks_complete_final_bundle_being_frozen",
+      "evidence": [
+        "reports/round1_execution/clean_install.json",
+        "reports/round1_execution/browser_finish.json",
+        "reports/round1_execution/clean_bundle_replay.json"
+      ],
+      "outcome": "Fresh source-bundle installation and full test suite pass. Guide, resume, actual live AI, imports, small screens, save recovery, warm-cell series test, failure case and exported replay verified. Final ZIP identity is recorded separately in release_receipt.json."
+    }
+  ],
+  "finish_line_scope": "The four user-requested Round 1 finish-line deliverables. Their completion is separate from the broader empirical hardware-validation roadmap and a competition score.",
+  "verification": {
+    "python_passed": 393,
+    "python_skipped": 8,
+    "javascript_passed": 39,
+    "real_browser_checks": 15,
+    "pybamm_cases": 15,
+    "robustness_calculations": 186,
+    "clean_install_passed": true
+  },
+  "round1_finish_line_exclusions": [
+    "Advanced CAD/CFD/structural/large-pack work",
+    "Independent measured module accuracy and broader hardware validation agreed for Round 2",
+    "User-owned pitch slide, human trials and external submission"
+  ],
+  "scientific_open_gates": [
+    "LG independent electrical accuracy on matching measurements",
+    "Samsung independently eligible full-record assessment; reserved observations remain unopened",
+    "Independent thermal/module forecast validation and resolved measurement calibration",
+    "Hardware ampacity, insulation/enclosure and monitor/control-device qualification"
+  ]
+}

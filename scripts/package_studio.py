@@ -13,7 +13,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def build(output, evidence=None):
+def build(output, evidence=None, verification=None):
     if output.exists():
         raise ValueError('Choose a new bundle path; existing releases are preserved.')
     names = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode().split('\0')
@@ -42,10 +42,42 @@ def build(output, evidence=None):
             files[target] = path.read_bytes()
     hashes = {name: hashlib.sha256(value).hexdigest() for name, value in sorted(files.items())}
     tree_hash = hashlib.sha256(json.dumps(hashes, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-    manifest = dict(version='voltforge.source-bundle/1', status='Candidate; verify its clean-install record',
+    verified = None
+    if verification:
+        proof = json.loads(verification.read_text())
+        if (proof.get('status') != 'passed' or proof.get('dependency_install_returncode') != 0
+                or proof.get('full_suite_returncode') != 0 or proof.get('pip_check_returncode') != 0
+                or not proof.get('lock_matches_installed_environment')
+                or not proof.get('browser_checks_passed') or proof.get('browser_export_replay_returncode') != 0):
+            raise ValueError('The clean installation, browser workflow and replay must pass before release packaging.')
+        candidate = Path(proof['bundle'])
+        if hashlib.sha256(candidate.read_bytes()).hexdigest() != proof['bundle_sha256']:
+            raise ValueError('The clean-install candidate no longer matches its recorded hash.')
+        with zipfile.ZipFile(candidate) as archive:
+            original = json.loads(archive.read('VOLT-FORGE-v3/BUNDLE_MANIFEST.json'))
+        # Documentation, the complete dependency lock and this packaging tool
+        # can be finalized after the application was exercised. Every existing
+        # runtime, test, source-model and evidence input must remain identical.
+        permitted = {'README.md', 'V3_RELEASE.md', 'scripts/package_studio.py'}
+        changed = [name for name, wanted in original['files'].items()
+                   if hashes.get(name) != wanted and name not in permitted]
+        if changed:
+            raise ValueError('Recheck changed release inputs before packaging: ' + ', '.join(changed[:8]))
+        lock = [s.lower().replace('_', '-') for s in files['requirements-lock.txt'].decode().splitlines()
+                if s and not s.startswith('#')]
+        installed = [s.lower().replace('_', '-') for s in proof['distributions']]
+        if sorted(lock) != sorted(installed):
+            raise ValueError('The final dependency lock differs from the exercised environment.')
+        verified = dict(record_sha256=hashlib.sha256(verification.read_bytes()).hexdigest(),
+                        installed_candidate_sha256=proof['bundle_sha256'],
+                        unchanged_captured_inputs=len(original['files'])-len(permitted),
+                        permitted_postcheck_changes=sorted(permitted))
+    manifest = dict(version='voltforge.source-bundle/1',
+                    status='Round 1 locally verified release' if verified else 'Candidate; verify its clean-install record',
                     git_head=subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT).decode().strip(),
                     content_sha256=tree_hash, files=hashes,
-                    raw_data_included=False, user_projects_included=False, credentials_included=False)
+                    raw_data_included=False, user_projects_included=False, credentials_included=False,
+                    clean_install_verification=verified)
     files['BUNDLE_MANIFEST.json'] = (json.dumps(manifest, indent=2) + '\n').encode()
     output.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(output, 'x', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
@@ -65,5 +97,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--evidence', type=Path)
+    parser.add_argument('--verification', type=Path)
     args = parser.parse_args()
-    build(args.out.resolve(), args.evidence.resolve() if args.evidence else None)
+    build(args.out.resolve(), args.evidence.resolve() if args.evidence else None,
+          args.verification.resolve() if args.verification else None)

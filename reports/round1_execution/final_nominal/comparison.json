@@ -1,0 +1,2406 @@
+{
+  "manifest": {
+    "protocol_sha256": "89367137ec5d3f8b376f72dfb7ad8972ecadbd577f4877f93812da3e4da70530",
+    "driver_sha256": "ac9c1b87c6458ab3de6677daaa77c9ac19e01ed81e574e0435bb52ace6bf600e",
+    "software_hash": "3a250c46c5f7a6fbf45b6f145e2c75d85c372d224cee4a769f65e686a3eca22c",
+    "classification": "Source-backed Round 1 parameter-sensitivity study; conditional numerical predictions",
+    "raw_observations_accessed": false
+  },
+  "analysis": {
+    "paired_changes": [
+      {
+        "scenario": "nominal",
+        "option": "thicker",
+        "equal_requested_duty": true,
+        "complete_service": true,
+        "both_within_declared_targets": true,
+        "delta": {
+          "peak_cell_current_A": -0.28549541945775525,
+          "peak_temperature_C": -0.24410706466554188,
+          "delivered_energy_Wh": 0.015445399021166928,
+          "minimum_voltage_V": 0.007550226009532146,
+          "conductor_mass_g": 1.0298880000000001
+        }
+      },
+      {
+        "scenario": "nominal",
+        "option": "opposite",
+        "equal_requested_duty": true,
+        "complete_service": true,
+        "both_within_declared_targets": true,
+        "delta": {
+          "peak_cell_current_A": -0.647225846237907,
+          "peak_temperature_C": -0.458279263662817,
+          "delivered_energy_Wh": -0.024943466041950302,
+          "minimum_voltage_V": -0.012801204267419486,
+          "conductor_mass_g": 1.2873600000000005
+        }
+      }
+    ],
+    "ordering_reversals": [],
+    "nominal_step_refinement": [],
+    "empirical_validation": false,
+    "robust_physical_winner": null,
+    "conclusion": "Choice depends on preparation, conductor/routing assumptions and the priority between cell stress, energy and material. Review the recorded paired cases; measured model and fixture accuracy are still required for a physical recommendation.",
+    "all_case_step_refinement": [
+      {
+        "option": "baseline",
+        "scenario": "nominal",
+        "coarse_id": "test_33d1c6d35f7181dd",
+        "fine_id": "test_039a171bb6a9e5b9",
+        "same_execution_status": true,
+        "checks": {
+          "peak_cell_current_A": {
+            "difference": 0.0,
+            "budget": 0.01,
+            "passed": true
+          },
+          "peak_temperature_C": {
+            "difference": 2.0503629194479345e-06,
+            "budget": 0.05,
+            "passed": true
+          },
+          "delivered_energy_Wh": {
+            "difference": 4.216774541099255e-06,
+            "budget": 0.005,
+            "passed": true
+          },
+          "minimum_voltage_V": {
+            "difference": 7.78786666710829e-06,
+            "budget": 0.005,
+            "passed": true
+          }
+        }
+      },
+      {
+        "option": "thicker",
+        "scenario": "nominal",
+        "coarse_id": "test_ebaa1e6089f95b5b",
+        "fine_id": "test_ac83ddfb4f1100c3",
+        "same_execution_status": true,
+        "checks": {
+          "peak_cell_current_A": {
+            "difference": 0.0,
+            "budget": 0.01,
+            "passed": true
+          },
+          "peak_temperature_C": {
+            "difference": 6.356541252827697e-05,
+            "budget": 0.05,
+            "passed": true
+          },
+          "delivered_energy_Wh": {
+            "difference": 3.815278827090651e-06,
+            "budget": 0.005,
+            "passed": true
+          },
+          "minimum_voltage_V": {
+            "difference": 8.722070401034898e-06,
+            "budget": 0.005,
+            "passed": true
+          }
+        }
+      },
+      {
+        "option": "opposite",
+        "scenario": "nominal",
+        "coarse_id": "test_af3c27597d1198e6",
+        "fine_id": "test_06500cab41446b49",
+        "same_execution_status": true,
+        "checks": {
+          "peak_cell_current_A": {
+            "difference": 0.0,
+            "budget": 0.01,
+            "passed": true
+          },
+          "peak_temperature_C": {
+            "difference": 0.00014506863876917464,
+            "budget": 0.05,
+            "passed": true
+          },
+          "delivered_energy_Wh": {
+            "difference": 3.6631331941094913e-06,
+            "budget": 0.005,
+            "passed": true
+          },
+          "minimum_voltage_V": {
+            "difference": 9.694163740192607e-06,
+            "budget": 0.005,
+            "passed": true
+          }
+        }
+      }
+    ],
+    "all_case_step_refinement_passed": true
+  },
+  "experiments": [
+    {
+      "option": "baseline",
+      "scenario": "nominal",
+      "id": "test_33d1c6d35f7181dd",
+      "payload_hash": "999e854513c80e39b8c356dd736ea82547bafb202f7fe4a8a05950c08443749a",
+      "graph": {
+        "version": "studio.graph.1",
+        "name": "Original connections",
+        "cells": [
+          {
+            "id": "cell1",
+            "name": "Cell 1",
+            "model": "LG_M50T_ECN",
+            "x": 180,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell2",
+            "name": "Cell 2",
+            "model": "LG_M50T_ECN",
+            "x": 390,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell3",
+            "name": "Cell 3",
+            "model": "LG_M50T_ECN",
+            "x": 600,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell4",
+            "name": "Cell 4",
+            "model": "LG_M50T_ECN",
+            "x": 810,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          }
+        ],
+        "connections": [
+          {
+            "id": "wire1",
+            "a": "cell1:p",
+            "b": "cell2:p",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire2",
+            "a": "cell1:n",
+            "b": "cell2:n",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire3",
+            "a": "cell2:p",
+            "b": "cell3:p",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire4",
+            "a": "cell2:n",
+            "b": "cell3:n",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire5",
+            "a": "cell3:p",
+            "b": "cell4:p",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire6",
+            "a": "cell3:n",
+            "b": "cell4:n",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          }
+        ],
+        "output": {
+          "positive": "cell1:p",
+          "negative": "cell1:n"
+        },
+        "thermal": {
+          "heat_capacity_J_K": 69.25,
+          "ambient_conductance_W_K": 0.148629,
+          "wire_heat_fraction": 0.5,
+          "contacts": []
+        },
+        "output_leads": {
+          "positive": {
+            "version": "voltforge.rectangular-conductor/1",
+            "material": "Fully dense copper reference",
+            "length_mm": 50.0,
+            "width_mm": 8.0,
+            "thickness_mm": 0.2,
+            "contact_mohm": 0.2,
+            "resistivity_ohm_m": 1.71e-08,
+            "density_kg_m3": 8940.0,
+            "reference_temperature_C": 20.0,
+            "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+            "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+          },
+          "negative": {
+            "version": "voltforge.rectangular-conductor/1",
+            "material": "Fully dense copper reference",
+            "length_mm": 50.0,
+            "width_mm": 8.0,
+            "thickness_mm": 0.2,
+            "contact_mohm": 0.2,
+            "resistivity_ohm_m": 1.71e-08,
+            "density_kg_m3": 8940.0,
+            "reference_temperature_C": 20.0,
+            "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+            "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+          }
+        }
+      },
+      "settings": {
+        "profile": [
+          {
+            "start_s": 0.0,
+            "end_s": 600.0,
+            "current_A": 12.0
+          }
+        ],
+        "ambient_C": 23.0,
+        "dt_s": 0.5,
+        "limits": {
+          "temperature_C": null,
+          "current_A": null,
+          "min_voltage_V": 3.3,
+          "imbalance_pct": null
+        },
+        "case": {
+          "name": "Low-voltage backup design study",
+          "purpose": "Compare four-cell connection arrangements under the saved load, duration and starting conditions.",
+          "source": "Declared Round 1 design-study benchmark. The proposed 3.3 V output floor is not a manufacturer rating or a connected-device specification."
+        }
+      },
+      "model_hash": "258a93f291eb9a376bc58ca4667229e41bc305c827bb4adff3e491459d617311",
+      "software_hash": "3a250c46c5f7a6fbf45b6f145e2c75d85c372d224cee4a769f65e686a3eca22c",
+      "summary": {
+        "metrics": {
+          "peak_temperature_C": 25.963140649812168,
+          "warmest_cell": "cell1",
+          "warmest_time_s": 600.0,
+          "peak_cell_current_A": 3.764935200999848,
+          "busiest_cell": "cell1",
+          "minimum_voltage_V": 3.600370310272322,
+          "final_voltage_V": 3.600370310272322,
+          "delivered_energy_Wh": 7.352572994257788,
+          "received_energy_Wh": 0.0,
+          "net_energy_Wh": 7.352572994257788,
+          "duration_s": 600.0,
+          "maximum_temperature_spread_C": 0.9236595701250181,
+          "imbalance_pct": 43.14838974919456,
+          "current_gap_A": 1.2944516924758367,
+          "conductor_mass_g": 2.460288
+        },
+        "checks": [
+          {
+            "metric": "min_voltage_V",
+            "value": 3.600370310272322,
+            "target": 3.3,
+            "status": "within_target"
+          }
+        ],
+        "insights": [
+          "Cell 1 is warmest at 26.0 \u00b0C.",
+          "Cell 1 carries the largest current: 3.76 A.",
+          "The largest difference between cells is 1.29 A. Lower-resistance paths can carry more of the load."
+        ],
+        "verification": {
+          "max_kcl_A": 7.562839243746566e-13,
+          "max_kvl_V": 1.7763568394002505e-15,
+          "max_power_residual_W": 1.7916224059888464e-14,
+          "max_cell_charge_residual_As": 2.9331204132176936e-11,
+          "final_energy_residual_Wh": 5.786747939772062e-07,
+          "max_thermal_residual_J": 2.3874235921539366e-10
+        },
+        "case": {
+          "version": "voltforge.application-case/1",
+          "fingerprint": "a4d77464763f257b0d38c100690776a78498e068f2eef40b31297573c673972e",
+          "requirements_fingerprint": "63ef4726918d337e661d196243b9289ceadf313e73783ae4ba4cb2db76abcd49",
+          "description": {
+            "name": "Low-voltage backup design study",
+            "purpose": "Compare four-cell connection arrangements under the saved load, duration and starting conditions.",
+            "source": "Declared Round 1 design-study benchmark. The proposed 3.3 V output floor is not a manufacturer rating or a connected-device specification."
+          },
+          "mission": {
+            "profile": [
+              {
+                "start_s": 0.0,
+                "end_s": 600.0,
+                "current_A": 12.0
+              }
+            ],
+            "ambient_C": 23.0,
+            "monitoring_and_protection": null,
+            "initial_cells": [
+              {
+                "id": "cell1",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              },
+              {
+                "id": "cell2",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              },
+              {
+                "id": "cell3",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              },
+              {
+                "id": "cell4",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              }
+            ],
+            "preparation": "Declared starting charge, cell temperature and electrical relaxation; not a measured hardware initializer."
+          },
+          "targets": [
+            {
+              "quantity": "min_voltage_V",
+              "value": 3.3,
+              "kind": "declared_design_target",
+              "source": "Declared Round 1 design-study benchmark. The proposed 3.3 V output floor is not a manufacturer rating or a connected-device specification."
+            }
+          ],
+          "priorities": [
+            "Complete the requested service",
+            "Meet declared output targets",
+            "Compare cell stress and connection trade-offs"
+          ],
+          "physical_validation": false
+        },
+        "coverage": {
+          "requested_duration_s": 600.0,
+          "completed_duration_s": 600.0,
+          "complete": true
+        },
+        "assessment": {
+          "execution": "completed",
+          "target_basis": "Calculated samples, interval endpoints and both sides of load events",
+          "requested_demand_met": true,
+          "physical_clearance": false,
+          "interval_boundary_checks": "Quarter-step domain/operating probes with localized first observed crossing; timestep refinement remains required for continuous claims."
+        },
+        "thermal_available": true,
+        "classification": "simulation",
+        "model": "Temperature-dependent equivalent circuits with cell-temperature feedback",
+        "temperature_range_C": [
+          15.0,
+          55.0
+        ],
+        "experimental_validation": false,
+        "cell_models": [
+          {
+            "cell": "cell1",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          },
+          {
+            "cell": "cell2",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          },
+          {
+            "cell": "cell3",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          },
+          {
+            "cell": "cell4",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          }
+        ],
+        "numerical_method": "Held-current RC steps; exact within-step linear thermal response; state-dependent parameters updated each step",
+        "reversible_heat": "Included only for models with an attributed entropy coefficient",
+        "thermal_mode": "Coupled declared heat-transfer model",
+        "thermal_assumptions": [
+          {
+            "cell": "cell1",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          },
+          {
+            "cell": "cell2",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          },
+          {
+            "cell": "cell3",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          },
+          {
+            "cell": "cell4",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          }
+        ],
+        "physical_components": {
+          "conductors": [
+            {
+              "connection": "wire1",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire2",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire3",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire4",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire5",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire6",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            }
+          ],
+          "output_routes": [
+            {
+              "output": "positive",
+              "connection": "positive output route",
+              "resistance_mohm": 0.7343750000000002,
+              "bulk_resistance_mohm": 0.5343750000000002,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.5999999999999999,
+              "volume_mm3": 80.0,
+              "mass_g": 0.7152,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 50.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.2,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "output": "negative",
+              "connection": "negative output route",
+              "resistance_mohm": 0.7343750000000002,
+              "bulk_resistance_mohm": 0.5343750000000002,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.5999999999999999,
+              "volume_mm3": 80.0,
+              "mass_g": 0.7152,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 50.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.2,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            }
+          ],
+          "conductor_mass_g": 2.460288,
+          "dimensioned_connections": 6,
+          "undimensioned_connections": 0,
+          "cells": [
+            {
+              "cell": "cell1",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            },
+            {
+              "cell": "cell2",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            },
+            {
+              "cell": "cell3",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            },
+            {
+              "cell": "cell4",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            }
+          ],
+          "cell_mass_g": 280.0,
+          "listed_component_mass_g": 282.460288,
+          "complete_assembly_mass": false,
+          "scope": "Listed cell and specified-conductor mass only. Unspecified external routing, terminals, insulation, enclosure, cooling hardware and fabrication are not included. Material volume is not an assembly bounding box. Resistance uses the declared material reference temperature; conductor self-heating and ampacity are not modeled. Specified output-route losses go to the surroundings rather than into the cells."
+        }
+      },
+      "status": "completed",
+      "stop": null
+    },
+    {
+      "option": "thicker",
+      "scenario": "nominal",
+      "id": "test_ebaa1e6089f95b5b",
+      "payload_hash": "40da703d7a1f05282e1204e47569417d675de4c640c001de5e8b8d7785afdc33",
+      "graph": {
+        "version": "studio.graph.1",
+        "name": "Thicker copper links",
+        "cells": [
+          {
+            "id": "cell1",
+            "name": "Cell 1",
+            "model": "LG_M50T_ECN",
+            "x": 180,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell2",
+            "name": "Cell 2",
+            "model": "LG_M50T_ECN",
+            "x": 390,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell3",
+            "name": "Cell 3",
+            "model": "LG_M50T_ECN",
+            "x": 600,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell4",
+            "name": "Cell 4",
+            "model": "LG_M50T_ECN",
+            "x": 810,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          }
+        ],
+        "connections": [
+          {
+            "id": "wire1",
+            "a": "cell1:p",
+            "b": "cell2:p",
+            "resistance_mohm": 0.60078125,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.16,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire2",
+            "a": "cell1:n",
+            "b": "cell2:n",
+            "resistance_mohm": 0.60078125,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.16,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire3",
+            "a": "cell2:p",
+            "b": "cell3:p",
+            "resistance_mohm": 0.60078125,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.16,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire4",
+            "a": "cell2:n",
+            "b": "cell3:n",
+            "resistance_mohm": 0.60078125,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.16,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire5",
+            "a": "cell3:p",
+            "b": "cell4:p",
+            "resistance_mohm": 0.60078125,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.16,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire6",
+            "a": "cell3:n",
+            "b": "cell4:n",
+            "resistance_mohm": 0.60078125,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.16,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          }
+        ],
+        "output": {
+          "positive": "cell1:p",
+          "negative": "cell1:n"
+        },
+        "thermal": {
+          "heat_capacity_J_K": 69.25,
+          "ambient_conductance_W_K": 0.148629,
+          "wire_heat_fraction": 0.5,
+          "contacts": []
+        },
+        "output_leads": {
+          "positive": {
+            "version": "voltforge.rectangular-conductor/1",
+            "material": "Fully dense copper reference",
+            "length_mm": 50.0,
+            "width_mm": 8.0,
+            "thickness_mm": 0.2,
+            "contact_mohm": 0.2,
+            "resistivity_ohm_m": 1.71e-08,
+            "density_kg_m3": 8940.0,
+            "reference_temperature_C": 20.0,
+            "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+            "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+          },
+          "negative": {
+            "version": "voltforge.rectangular-conductor/1",
+            "material": "Fully dense copper reference",
+            "length_mm": 50.0,
+            "width_mm": 8.0,
+            "thickness_mm": 0.2,
+            "contact_mohm": 0.2,
+            "resistivity_ohm_m": 1.71e-08,
+            "density_kg_m3": 8940.0,
+            "reference_temperature_C": 20.0,
+            "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+            "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+          }
+        }
+      },
+      "settings": {
+        "profile": [
+          {
+            "start_s": 0.0,
+            "end_s": 600.0,
+            "current_A": 12.0
+          }
+        ],
+        "ambient_C": 23.0,
+        "dt_s": 0.5,
+        "limits": {
+          "temperature_C": null,
+          "current_A": null,
+          "min_voltage_V": 3.3,
+          "imbalance_pct": null
+        },
+        "case": {
+          "name": "Low-voltage backup design study",
+          "purpose": "Compare four-cell connection arrangements under the saved load, duration and starting conditions.",
+          "source": "Declared Round 1 design-study benchmark. The proposed 3.3 V output floor is not a manufacturer rating or a connected-device specification."
+        }
+      },
+      "model_hash": "258a93f291eb9a376bc58ca4667229e41bc305c827bb4adff3e491459d617311",
+      "software_hash": "3a250c46c5f7a6fbf45b6f145e2c75d85c372d224cee4a769f65e686a3eca22c",
+      "summary": {
+        "metrics": {
+          "peak_temperature_C": 25.719033585146626,
+          "warmest_cell": "cell1",
+          "warmest_time_s": 600.0,
+          "peak_cell_current_A": 3.4794397815420925,
+          "busiest_cell": "cell1",
+          "minimum_voltage_V": 3.607920536281854,
+          "final_voltage_V": 3.607920536281854,
+          "delivered_energy_Wh": 7.368018393278955,
+          "received_energy_Wh": 0.0,
+          "net_energy_Wh": 7.368018393278955,
+          "duration_s": 600.0,
+          "maximum_temperature_spread_C": 0.573281857872324,
+          "imbalance_pct": 27.180417702492026,
+          "current_gap_A": 0.8154125310747609,
+          "conductor_mass_g": 3.490176
+        },
+        "checks": [
+          {
+            "metric": "min_voltage_V",
+            "value": 3.607920536281854,
+            "target": 3.3,
+            "status": "within_target"
+          }
+        ],
+        "insights": [
+          "Cell 1 is warmest at 25.7 \u00b0C.",
+          "Cell 1 carries the largest current: 3.48 A.",
+          "The largest difference between cells is 0.82 A. Lower-resistance paths can carry more of the load."
+        ],
+        "verification": {
+          "max_kcl_A": 1.5289991495137656e-12,
+          "max_kvl_V": 1.3322676295501878e-15,
+          "max_power_residual_W": 2.1399548799649892e-14,
+          "max_cell_charge_residual_As": 4.18367562815547e-11,
+          "final_energy_residual_Wh": 3.5851233563890774e-07,
+          "max_thermal_residual_J": 2.2794210963184014e-10
+        },
+        "case": {
+          "version": "voltforge.application-case/1",
+          "fingerprint": "a4d77464763f257b0d38c100690776a78498e068f2eef40b31297573c673972e",
+          "requirements_fingerprint": "63ef4726918d337e661d196243b9289ceadf313e73783ae4ba4cb2db76abcd49",
+          "description": {
+            "name": "Low-voltage backup design study",
+            "purpose": "Compare four-cell connection arrangements under the saved load, duration and starting conditions.",
+            "source": "Declared Round 1 design-study benchmark. The proposed 3.3 V output floor is not a manufacturer rating or a connected-device specification."
+          },
+          "mission": {
+            "profile": [
+              {
+                "start_s": 0.0,
+                "end_s": 600.0,
+                "current_A": 12.0
+              }
+            ],
+            "ambient_C": 23.0,
+            "monitoring_and_protection": null,
+            "initial_cells": [
+              {
+                "id": "cell1",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              },
+              {
+                "id": "cell2",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              },
+              {
+                "id": "cell3",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              },
+              {
+                "id": "cell4",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              }
+            ],
+            "preparation": "Declared starting charge, cell temperature and electrical relaxation; not a measured hardware initializer."
+          },
+          "targets": [
+            {
+              "quantity": "min_voltage_V",
+              "value": 3.3,
+              "kind": "declared_design_target",
+              "source": "Declared Round 1 design-study benchmark. The proposed 3.3 V output floor is not a manufacturer rating or a connected-device specification."
+            }
+          ],
+          "priorities": [
+            "Complete the requested service",
+            "Meet declared output targets",
+            "Compare cell stress and connection trade-offs"
+          ],
+          "physical_validation": false
+        },
+        "coverage": {
+          "requested_duration_s": 600.0,
+          "completed_duration_s": 600.0,
+          "complete": true
+        },
+        "assessment": {
+          "execution": "completed",
+          "target_basis": "Calculated samples, interval endpoints and both sides of load events",
+          "requested_demand_met": true,
+          "physical_clearance": false,
+          "interval_boundary_checks": "Quarter-step domain/operating probes with localized first observed crossing; timestep refinement remains required for continuous claims."
+        },
+        "thermal_available": true,
+        "classification": "simulation",
+        "model": "Temperature-dependent equivalent circuits with cell-temperature feedback",
+        "temperature_range_C": [
+          15.0,
+          55.0
+        ],
+        "experimental_validation": false,
+        "cell_models": [
+          {
+            "cell": "cell1",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          },
+          {
+            "cell": "cell2",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          },
+          {
+            "cell": "cell3",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          },
+          {
+            "cell": "cell4",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          }
+        ],
+        "numerical_method": "Held-current RC steps; exact within-step linear thermal response; state-dependent parameters updated each step",
+        "reversible_heat": "Included only for models with an attributed entropy coefficient",
+        "thermal_mode": "Coupled declared heat-transfer model",
+        "thermal_assumptions": [
+          {
+            "cell": "cell1",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          },
+          {
+            "cell": "cell2",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          },
+          {
+            "cell": "cell3",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          },
+          {
+            "cell": "cell4",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          }
+        ],
+        "physical_components": {
+          "conductors": [
+            {
+              "connection": "wire1",
+              "resistance_mohm": 0.60078125,
+              "bulk_resistance_mohm": 0.40078125,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.28,
+              "volume_mm3": 38.4,
+              "mass_g": 0.343296,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.16,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire2",
+              "resistance_mohm": 0.60078125,
+              "bulk_resistance_mohm": 0.40078125,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.28,
+              "volume_mm3": 38.4,
+              "mass_g": 0.343296,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.16,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire3",
+              "resistance_mohm": 0.60078125,
+              "bulk_resistance_mohm": 0.40078125,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.28,
+              "volume_mm3": 38.4,
+              "mass_g": 0.343296,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.16,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire4",
+              "resistance_mohm": 0.60078125,
+              "bulk_resistance_mohm": 0.40078125,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.28,
+              "volume_mm3": 38.4,
+              "mass_g": 0.343296,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.16,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire5",
+              "resistance_mohm": 0.60078125,
+              "bulk_resistance_mohm": 0.40078125,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.28,
+              "volume_mm3": 38.4,
+              "mass_g": 0.343296,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.16,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire6",
+              "resistance_mohm": 0.60078125,
+              "bulk_resistance_mohm": 0.40078125,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.28,
+              "volume_mm3": 38.4,
+              "mass_g": 0.343296,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.16,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            }
+          ],
+          "output_routes": [
+            {
+              "output": "positive",
+              "connection": "positive output route",
+              "resistance_mohm": 0.7343750000000002,
+              "bulk_resistance_mohm": 0.5343750000000002,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.5999999999999999,
+              "volume_mm3": 80.0,
+              "mass_g": 0.7152,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 50.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.2,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "output": "negative",
+              "connection": "negative output route",
+              "resistance_mohm": 0.7343750000000002,
+              "bulk_resistance_mohm": 0.5343750000000002,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.5999999999999999,
+              "volume_mm3": 80.0,
+              "mass_g": 0.7152,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 50.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.2,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            }
+          ],
+          "conductor_mass_g": 3.490176,
+          "dimensioned_connections": 6,
+          "undimensioned_connections": 0,
+          "cells": [
+            {
+              "cell": "cell1",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            },
+            {
+              "cell": "cell2",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            },
+            {
+              "cell": "cell3",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            },
+            {
+              "cell": "cell4",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            }
+          ],
+          "cell_mass_g": 280.0,
+          "listed_component_mass_g": 283.490176,
+          "complete_assembly_mass": false,
+          "scope": "Listed cell and specified-conductor mass only. Unspecified external routing, terminals, insulation, enclosure, cooling hardware and fabrication are not included. Material volume is not an assembly bounding box. Resistance uses the declared material reference temperature; conductor self-heating and ampacity are not modeled. Specified output-route losses go to the surroundings rather than into the cells."
+        }
+      },
+      "status": "completed",
+      "stop": null
+    },
+    {
+      "option": "opposite",
+      "scenario": "nominal",
+      "id": "test_af3c27597d1198e6",
+      "payload_hash": "0b90e481469995c63570bc55c4c46996839576cc737655c14adea9f14a6036f8",
+      "graph": {
+        "version": "studio.graph.1",
+        "name": "Opposite-end collection",
+        "cells": [
+          {
+            "id": "cell1",
+            "name": "Cell 1",
+            "model": "LG_M50T_ECN",
+            "x": 180,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell2",
+            "name": "Cell 2",
+            "model": "LG_M50T_ECN",
+            "x": 390,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell3",
+            "name": "Cell 3",
+            "model": "LG_M50T_ECN",
+            "x": 600,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell4",
+            "name": "Cell 4",
+            "model": "LG_M50T_ECN",
+            "x": 810,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          }
+        ],
+        "connections": [
+          {
+            "id": "wire1",
+            "a": "cell1:p",
+            "b": "cell2:p",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire2",
+            "a": "cell1:n",
+            "b": "cell2:n",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire3",
+            "a": "cell2:p",
+            "b": "cell3:p",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire4",
+            "a": "cell2:n",
+            "b": "cell3:n",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire5",
+            "a": "cell3:p",
+            "b": "cell4:p",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          },
+          {
+            "id": "wire6",
+            "a": "cell3:n",
+            "b": "cell4:n",
+            "resistance_mohm": 1.0015625,
+            "source": "Calculated from rectangular-conductor dimensions and total end-contact resistance; full sources saved with this connection.",
+            "conductor": {
+              "version": "voltforge.rectangular-conductor/1",
+              "material": "Fully dense copper reference",
+              "length_mm": 30.0,
+              "width_mm": 8.0,
+              "thickness_mm": 0.08,
+              "contact_mohm": 0.2,
+              "resistivity_ohm_m": 1.71e-08,
+              "density_kg_m3": 8940.0,
+              "reference_temperature_C": 20.0,
+              "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+              "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+            }
+          }
+        ],
+        "output": {
+          "positive": "cell1:p",
+          "negative": "cell4:n"
+        },
+        "thermal": {
+          "heat_capacity_J_K": 69.25,
+          "ambient_conductance_W_K": 0.148629,
+          "wire_heat_fraction": 0.5,
+          "contacts": []
+        },
+        "output_leads": {
+          "positive": {
+            "version": "voltforge.rectangular-conductor/1",
+            "material": "Fully dense copper reference",
+            "length_mm": 50.0,
+            "width_mm": 8.0,
+            "thickness_mm": 0.2,
+            "contact_mohm": 0.2,
+            "resistivity_ohm_m": 1.71e-08,
+            "density_kg_m3": 8940.0,
+            "reference_temperature_C": 20.0,
+            "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+            "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+          },
+          "negative": {
+            "version": "voltforge.rectangular-conductor/1",
+            "material": "Fully dense copper reference",
+            "length_mm": 140.0,
+            "width_mm": 8.0,
+            "thickness_mm": 0.2,
+            "contact_mohm": 0.2,
+            "resistivity_ohm_m": 1.71e-08,
+            "density_kg_m3": 8940.0,
+            "reference_temperature_C": 20.0,
+            "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+            "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+          }
+        }
+      },
+      "settings": {
+        "profile": [
+          {
+            "start_s": 0.0,
+            "end_s": 600.0,
+            "current_A": 12.0
+          }
+        ],
+        "ambient_C": 23.0,
+        "dt_s": 0.5,
+        "limits": {
+          "temperature_C": null,
+          "current_A": null,
+          "min_voltage_V": 3.3,
+          "imbalance_pct": null
+        },
+        "case": {
+          "name": "Low-voltage backup design study",
+          "purpose": "Compare four-cell connection arrangements under the saved load, duration and starting conditions.",
+          "source": "Declared Round 1 design-study benchmark. The proposed 3.3 V output floor is not a manufacturer rating or a connected-device specification."
+        }
+      },
+      "model_hash": "258a93f291eb9a376bc58ca4667229e41bc305c827bb4adff3e491459d617311",
+      "software_hash": "3a250c46c5f7a6fbf45b6f145e2c75d85c372d224cee4a769f65e686a3eca22c",
+      "summary": {
+        "metrics": {
+          "peak_temperature_C": 25.50486138614935,
+          "warmest_cell": "cell1",
+          "warmest_time_s": 600.0,
+          "peak_cell_current_A": 3.1177093547619408,
+          "busiest_cell": "cell1",
+          "minimum_voltage_V": 3.5875691060049024,
+          "final_voltage_V": 3.5875691060049024,
+          "delivered_energy_Wh": 7.327629528215838,
+          "received_energy_Wh": 0.0,
+          "net_energy_Wh": 7.327629528215838,
+          "duration_s": 600.0,
+          "maximum_temperature_spread_C": 0.03903889246035064,
+          "imbalance_pct": 7.847290317462466,
+          "current_gap_A": 0.235418709523874,
+          "conductor_mass_g": 3.7476480000000003
+        },
+        "checks": [
+          {
+            "metric": "min_voltage_V",
+            "value": 3.5875691060049024,
+            "target": 3.3,
+            "status": "within_target"
+          }
+        ],
+        "insights": [
+          "Cell 1 is warmest at 25.5 \u00b0C.",
+          "Cell 1 carries the largest current: 3.12 A.",
+          "The largest difference between cells is 0.24 A. Lower-resistance paths can carry more of the load."
+        ],
+        "verification": {
+          "max_kcl_A": 7.740474927686591e-13,
+          "max_kvl_V": 1.3322676295501878e-15,
+          "max_power_residual_W": 2.248201624865942e-14,
+          "max_cell_charge_residual_As": 3.774403012357652e-11,
+          "final_energy_residual_Wh": 2.0311995056390389e-07,
+          "max_thermal_residual_J": 2.2737367544323206e-10
+        },
+        "case": {
+          "version": "voltforge.application-case/1",
+          "fingerprint": "a4d77464763f257b0d38c100690776a78498e068f2eef40b31297573c673972e",
+          "requirements_fingerprint": "63ef4726918d337e661d196243b9289ceadf313e73783ae4ba4cb2db76abcd49",
+          "description": {
+            "name": "Low-voltage backup design study",
+            "purpose": "Compare four-cell connection arrangements under the saved load, duration and starting conditions.",
+            "source": "Declared Round 1 design-study benchmark. The proposed 3.3 V output floor is not a manufacturer rating or a connected-device specification."
+          },
+          "mission": {
+            "profile": [
+              {
+                "start_s": 0.0,
+                "end_s": 600.0,
+                "current_A": 12.0
+              }
+            ],
+            "ambient_C": 23.0,
+            "monitoring_and_protection": null,
+            "initial_cells": [
+              {
+                "id": "cell1",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              },
+              {
+                "id": "cell2",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              },
+              {
+                "id": "cell3",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              },
+              {
+                "id": "cell4",
+                "charge_pct": 70.0,
+                "temperature_C": 23.0,
+                "polarization_V": 0.0
+              }
+            ],
+            "preparation": "Declared starting charge, cell temperature and electrical relaxation; not a measured hardware initializer."
+          },
+          "targets": [
+            {
+              "quantity": "min_voltage_V",
+              "value": 3.3,
+              "kind": "declared_design_target",
+              "source": "Declared Round 1 design-study benchmark. The proposed 3.3 V output floor is not a manufacturer rating or a connected-device specification."
+            }
+          ],
+          "priorities": [
+            "Complete the requested service",
+            "Meet declared output targets",
+            "Compare cell stress and connection trade-offs"
+          ],
+          "physical_validation": false
+        },
+        "coverage": {
+          "requested_duration_s": 600.0,
+          "completed_duration_s": 600.0,
+          "complete": true
+        },
+        "assessment": {
+          "execution": "completed",
+          "target_basis": "Calculated samples, interval endpoints and both sides of load events",
+          "requested_demand_met": true,
+          "physical_clearance": false,
+          "interval_boundary_checks": "Quarter-step domain/operating probes with localized first observed crossing; timestep refinement remains required for continuous claims."
+        },
+        "thermal_available": true,
+        "classification": "simulation",
+        "model": "Temperature-dependent equivalent circuits with cell-temperature feedback",
+        "temperature_range_C": [
+          15.0,
+          55.0
+        ],
+        "experimental_validation": false,
+        "cell_models": [
+          {
+            "cell": "cell1",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          },
+          {
+            "cell": "cell2",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          },
+          {
+            "cell": "cell3",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          },
+          {
+            "cell": "cell4",
+            "model": "LG_M50T_ECN",
+            "temperature_range_C": [
+              15.0,
+              55.0
+            ],
+            "source": {
+              "url": "https://github.com/ImperialCollegeLondon/PyECN",
+              "commit": "32540fe0819bfc4d099bcd601d1ab0625cb524a3",
+              "path": "pyecn/Input_LUTs/Cylindrical_Cell1",
+              "licence": "BSD-3-Clause",
+              "paper": "https://doi.org/10.31224/2972",
+              "interpretation": "Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah."
+            },
+            "evidence": "Published temperature-dependent model; independent experimental assessment pending"
+          }
+        ],
+        "numerical_method": "Held-current RC steps; exact within-step linear thermal response; state-dependent parameters updated each step",
+        "reversible_heat": "Included only for models with an attributed entropy coefficient",
+        "thermal_mode": "Coupled declared heat-transfer model",
+        "thermal_assumptions": [
+          {
+            "cell": "cell1",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          },
+          {
+            "cell": "cell2",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          },
+          {
+            "cell": "cell3",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          },
+          {
+            "cell": "cell4",
+            "version": "lg_m50t_lumped_reference/1",
+            "status": "Literature heat capacity; fixture cooling estimate",
+            "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+            "parameters": {
+              "heat_capacity_J_K": {
+                "value": 58.5,
+                "classification": "published_reference_parameter",
+                "source": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation."
+              },
+              "ambient_conductance_W_K": {
+                "value": 0.1524918708333803,
+                "classification": "fixture_calibration_estimate",
+                "source": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+              }
+            },
+            "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+          }
+        ],
+        "physical_components": {
+          "conductors": [
+            {
+              "connection": "wire1",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire2",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire3",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire4",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire5",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "connection": "wire6",
+              "resistance_mohm": 1.0015625,
+              "bulk_resistance_mohm": 0.8015625,
+              "contact_mohm": 0.2,
+              "area_mm2": 0.64,
+              "volume_mm3": 19.2,
+              "mass_g": 0.171648,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 30.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.08,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            }
+          ],
+          "output_routes": [
+            {
+              "output": "positive",
+              "connection": "positive output route",
+              "resistance_mohm": 0.7343750000000002,
+              "bulk_resistance_mohm": 0.5343750000000002,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.5999999999999999,
+              "volume_mm3": 80.0,
+              "mass_g": 0.7152,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 50.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.2,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            },
+            {
+              "output": "negative",
+              "connection": "negative output route",
+              "resistance_mohm": 1.6962500000000005,
+              "bulk_resistance_mohm": 1.4962500000000005,
+              "contact_mohm": 0.2,
+              "area_mm2": 1.5999999999999999,
+              "volume_mm3": 224.00000000000003,
+              "mass_g": 2.0025600000000003,
+              "reference_temperature_C": 20.0,
+              "definition": {
+                "version": "voltforge.rectangular-conductor/1",
+                "material": "Fully dense copper reference",
+                "length_mm": 140.0,
+                "width_mm": 8.0,
+                "thickness_mm": 0.2,
+                "contact_mohm": 0.2,
+                "resistivity_ohm_m": 1.71e-08,
+                "density_kg_m3": 8940.0,
+                "reference_temperature_C": 20.0,
+                "material_source": "https://copper.org/resource-library/characteristics-and-properties-of-copper-and-copper-alloy-p-m-materials/ Table 3: 1.71 microohm-cm and 8.94 g/cm\u00b3 at 20 \u00b0C.",
+                "assumption_source": "Rectangular fully dense copper; properties at 20 C from Copper Development Association Table 3. Dimensions and total contact resistances are declared scenarios, not measured joints. Routing losses are dissipated outside the cell thermal network. No conductor ampacity, insulation, enclosure, fatigue or fabrication clearance has been qualified."
+              }
+            }
+          ],
+          "conductor_mass_g": 3.7476480000000003,
+          "dimensioned_connections": 6,
+          "undimensioned_connections": 0,
+          "cells": [
+            {
+              "cell": "cell1",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            },
+            {
+              "cell": "cell2",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            },
+            {
+              "cell": "cell3",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            },
+            {
+              "cell": "cell4",
+              "geometry": {
+                "form": "cylindrical",
+                "diameter_mm": 21.44,
+                "height_mm": 70.8,
+                "mass_kg": 0.07,
+                "status": "Manufacturer maximum dimensions and mass, draft Rev 0"
+              },
+              "source": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf"
+            }
+          ],
+          "cell_mass_g": 280.0,
+          "listed_component_mass_g": 283.747648,
+          "complete_assembly_mass": false,
+          "scope": "Listed cell and specified-conductor mass only. Unspecified external routing, terminals, insulation, enclosure, cooling hardware and fabrication are not included. Material volume is not an assembly bounding box. Resistance uses the declared material reference temperature; conductor self-heating and ampacity are not modeled. Specified output-route losses go to the surroundings rather than into the cells."
+        }
+      },
+      "status": "completed",
+      "stop": null
+    }
+  ]
+}

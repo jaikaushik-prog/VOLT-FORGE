@@ -1,0 +1,122 @@
+{
+  "version": "voltforge.browser-release-checks/1",
+  "checked_utc": "2026-10-29T17:04:48.807796+00:00",
+  "checks": [
+    {
+      "id": "walkthrough_resumes",
+      "passed": true,
+      "observed": "Reload preserved step and reopened the actual saved experiment.",
+      "image": "guide_resumed_ready.png",
+      "sha256": "c89e9993e0d5338b2465ba847378f3e330e5ee607181d8aa57adee45de8aae94"
+    },
+    {
+      "id": "walkthrough_comparison",
+      "passed": true,
+      "observed": "Preview created a separate design and compared its saved test under matching conditions.",
+      "image": "guide_comparison_current.png",
+      "sha256": "ec17528b151c3c66a4f92e66f9c2d5ce7c374359cb8c53c254ad8bdad322274b"
+    },
+    {
+      "id": "walkthrough_live_ai",
+      "passed": true,
+      "observed": "Real local Codex inference explained the selected saved comparison; guide recorded aiAnswered.",
+      "image": "guide_ai_answer_current.png",
+      "sha256": "a6547de4e0b97e4279789d797435b8b7f0ad89f38bfa1bce445a9d2fea6e42e7"
+    },
+    {
+      "id": "walkthrough_export_finish",
+      "passed": true,
+      "observed": "Browser export downloaded a valid ZIP; 1,201 samples replayed; Finish closed the guide.",
+      "image": "guide_export_current.png",
+      "sha256": "7907609150370a84af9fc5238af6bc252e7def7cf3b168309c3b553c6ef01249"
+    },
+    {
+      "id": "small_phone",
+      "passed": true,
+      "observed": "390 px view had document width 390 px and accessible bottom navigation/Test form.",
+      "image": "mobile_test_current.png",
+      "sha256": "bba23bef16b0718c78e77cd39c5ccc8b82f6505fe4e5fd6c02a5f79da37c596c"
+    },
+    {
+      "id": "small_laptop",
+      "passed": true,
+      "observed": "1024 px view had document width 1024 px and no fixed controls beyond the viewport.",
+      "image": "test_laptop_1024.png",
+      "sha256": "be151e40672e47729e5a95de2e3eece63fa6f636dbb80cfdc01292a7db77aac3"
+    },
+    {
+      "id": "invalid_json",
+      "passed": true,
+      "observed": "Malformed JSON produced a syntax message while retaining the form and supplied name.",
+      "image": "import_invalid_error.png",
+      "sha256": "a2271c54da883c27143e6336a4ea328333d75db04c122d2839ac58e78cef3834"
+    },
+    {
+      "id": "invalid_csv",
+      "passed": true,
+      "observed": "Incorrect CSV headings produced the required-column message; the form remained usable.",
+      "image": "import_csv_wrong_ready.png",
+      "sha256": "8b941ba294f7dead2597f56f6f48241eb560280737a1931ba6ef2791568352bd"
+    },
+    {
+      "id": "valid_csv",
+      "passed": true,
+      "observed": "A two-point-plus-middle measured reference was saved as the reusable Imported 2 Ah reference cell.",
+      "image": "import_success_current.png",
+      "sha256": "639dd41f4dae95547bc3f222283b54b036af7d2471a035d97b46ccb5030557e7"
+    },
+    {
+      "id": "connection_failure_preserves_edit",
+      "passed": true,
+      "observed": "Disconnected save showed Save failed and retained 69 percent in the cell input.",
+      "image": "offline_edit_error.png",
+      "sha256": "71a6ec0c604b57193ed27ec771fbc1c27bfcf6c60011e29e40ef54dabf5aae1c"
+    },
+    {
+      "id": "connection_recovery",
+      "passed": true,
+      "observed": "Restoring the connection and navigating saved the pending edit; summary showed 69-70 percent.",
+      "image": "offline_edit_recovered.png",
+      "sha256": "320a9dbd3e6762bd49d3d686da63bb895f4558ea942bbc493258f711a7b960f2"
+    },
+    {
+      "id": "clean_bundle_creation",
+      "passed": true,
+      "observed": "New two-cell series circuit created from the extracted source bundle.",
+      "image": "clean_bundle_two_cells.png",
+      "sha256": "f2b64b26642c63b8e136b2fa955c2d4810deb0d7b8d3a81674240116ba3110b9"
+    },
+    {
+      "id": "clean_bundle_warm_test",
+      "passed": true,
+      "observed": "Two cells at 30 C, room 35 C, 3 A for 60 s completed; predicted peak 31.1 C.",
+      "image": "clean_bundle_result.png",
+      "sha256": "0cb1bb392edfbd17f2b2890735e229d304e7abadf0b6dcf9014456c37193e6d5"
+    },
+    {
+      "id": "clean_bundle_failure_search",
+      "passed": true,
+      "observed": "All five demand cases completed; 9 A case exceeded sourced 7.275 A limit and highlighted Cell 1.",
+      "image": "clean_bundle_failure_found.png",
+      "sha256": "08f8e58d07aa9a4541c653d3843a47040cc9e615ae6f6a219158cfaa6ea0fa3c"
+    },
+    {
+      "id": "clean_bundle_failure_to_design",
+      "passed": true,
+      "observed": "Failure case opened as a separate editable two-cell design; affected cell selected and readiness requested review.",
+      "image": "clean_bundle_opened_failure.png",
+      "sha256": "b03e854bab2afe98909ace3df04da2118b6cc25e4e8dfe34ef24cc0055e09f4d"
+    }
+  ],
+  "passed": true,
+  "walkthrough_test_ids": [
+    "test_4bbebf5f5f0c3c30",
+    "test_589409d02cede11c"
+  ],
+  "clean_bundle_test_id": "test_593de69babd4f74a",
+  "browser": "Local Chromium through browser-harness/CDP",
+  "platform": "macOS",
+  "kind": "Automated real-browser workflow checks",
+  "human_user_trials_conducted": false,
+  "audit_launched": false
+}
