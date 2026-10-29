@@ -236,7 +236,7 @@
       "id": "release",
       "name": "Verify and package the final version",
       "percent": 100,
-      "status": "checks_complete_final_bundle_being_frozen",
+      "status": "complete_for_round1",
       "evidence": [
         "reports/round1_execution/clean_install.json",
         "reports/round1_execution/browser_finish.json",
@@ -265,5 +265,11 @@
     "Samsung independently eligible full-record assessment; reserved observations remain unopened",
     "Independent thermal/module forecast validation and resolved measurement calibration",
     "Hardware ampacity, insulation/enclosure and monitor/control-device qualification"
-  ]
+  ],
+  "final_release": {
+    "bundle": "releases/VOLT-FORGE-v3-round1.zip",
+    "sha256": "830823ef93e047688341f4936f6576c9181df3feaadb7157589edf5d6a2022f6",
+    "source_commit": "fc8819760a68372d2e47e7781a0cf5b911ae0e2c",
+    "verification": "release_receipt.json"
+  }
 }
