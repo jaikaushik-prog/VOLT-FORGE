@@ -1,0 +1,38 @@
+{
+  "version": "voltforge.thermal-sources/1",
+  "m50t_fixture_cooling": {
+    "source_doi": "10.17632/zh58byr53c.2",
+    "source_member": "M1_NMC_Unaged_R0_T25.xlsx",
+    "source_sha256": "4596d3fed65277b548176bca7dd3dfa9efcd0bd2167722effc87ac38975c24bc",
+    "heat_capacity_J_K": 58.5,
+    "ambient_conductance_W_K": 0.1524918708333803,
+    "method": "Joint module-mean fit to already-used rest steps 4 and 6, driven by recorded chamber temperature, with one constant equilibrium offset. Zero residual heat is the reference scenario, not a measured absence of internal heat.",
+    "fit_rmse_C": 0.11537988188633426,
+    "maximum_abs_residual_C": 0.7124124284687277,
+    "equilibrium_offset_C": -0.4043735966449047,
+    "observed_scenario_conductance_W_K": [0.07636608544985142, 0.18042153349476536],
+    "scenario_interpretation": "Range across pre-rest, post-rest and joint fits with declared residual-heat scenarios. Not a confidence interval or universal physical bound.",
+    "classification": "Used-fixture calibration estimate; transfer to a new assembly is assumed",
+    "reproducer": "scripts/reanalyze_fixture_cooling.py",
+    "limitations": ["One already-exposed fixture, no independent thermal prediction assessment.", "Sensor/fixture equilibrium offset and constant internal heat are not separately identified.", "Module mean does not identify individual contacts, spatial gradients or core temperature."]
+  },
+  "m50t_heat_capacity": {
+    "component": "LG INR21700 M50T",
+    "source": {"authors": "Steinhardt et al.", "year": 2021, "doi": "10.1016/j.est.2021.103065", "url": "https://mediatum.ub.tum.de/doc/1651438/1651438.pdf", "article": "Low-effort determination of heat capacity and thermal conductivity for cylindrical 18650 and 21700 lithium-ion cells", "locators": "Article Table 1, Table 2, Table 9 and Appendix Table A.14; reproduced on PDF pages 60, 61, 68 and 71"},
+    "quantity": "Whole-cell lumped heat capacity, not jelly-roll specific heat",
+    "temperature_K": [283.0, 298.0, 313.0],
+    "open_circuit_voltage_V": [3.42, 3.63, 3.93],
+    "approximate_soc": [0.15, 0.34, 0.71],
+    "heat_capacity_J_K_by_temperature_then_soc": [[56.8, 57.1, 56.7], [58.3, 58.4, 58.5], [59.7, 60.1, 60.1]],
+    "tabulated_95_percent_interval_J_K": [[0.27, 0.31, 0.16], [0.16, 0.05, 0.13], [0.27, 0.66, 0.13]],
+    "internal_thermal_resistance_K_W": [[0.358, 0.302, 0.339], [0.396, 0.375, 0.363], [0.437, 0.415, 0.395]],
+    "method_systematic_C_fraction": 0.0162,
+    "method_simplification_example_fraction": 0.059,
+    "uncertainty_interpretation": "Tabulated intervals and systematic/method estimates are separate quantities. The 5.9 percent simplification example is from a simulated 18650 analysis, not a measured M50T error bound. No universal confidence distribution is inferred.",
+    "specimen": "One investigated 21700 specimen; the paper reports about 96 percent average state of health. No population or ageing law is identified.",
+    "reference": {"temperature_K": 298.0, "open_circuit_voltage_V": 3.93, "approximate_soc": 0.71, "heat_capacity_J_K": 58.5, "tabulated_95_percent_interval_J_K": 0.13},
+    "implementation": "Use the 58.5 J/K literature reference as a constant lumped heat-capacity approximation. Source temperature/SOC dependence and sample transfer are evaluated with scenarios, not silently extrapolated as a measured function.",
+    "fixture": "Wind tunnel with two air velocities; thermally insulated surface/terminal sensors. Thermal capacitance is behind an internal resistance; the source's shell-temperature observation is not identical to a single effective-temperature state.",
+    "cooling_policy": "Do not import the source's external thermal resistance as universal room-air cooling. Each fixture or user-declared conductance remains separate."
+  }
+}

@@ -554,7 +554,7 @@ class Studio:
             z.writestr('results.csv',stream.getvalue())
             z.writestr('replay.py',REPLAY)
             z.writestr('evidence.json',json.dumps(dict(model_cards=record.get('model_cards',{}),
-                models={k:{field:v for field,v in m.items() if field in ('source','evidence_status','operating_limits','thermal_defaults','development_assessment','reference','kind')} for k,m in models.items()},
+                models={k:{field:v for field,v in m.items() if field in ('source','evidence_status','operating_limits','thermal_defaults','thermal_provenance','development_assessment','reference','kind')} for k,m in models.items()},
                 coverage=record['summary'].get('coverage'),assessment=record['summary'].get('assessment'),
                 current_convention='Positive current discharges the cell or battery.',
                 classification='Numerical model reproduction; independent physical assessment is separate.'),indent=2))

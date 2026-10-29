@@ -1,0 +1,22 @@
+{
+  "version": "voltforge.numerical-reference/1",
+  "scope": "Synthetic electrical verification against native PyBaMM Thevenin and closed-form RC solutions; not experimental or thermal validation",
+  "library": {"name": "pybamm", "version": "26.4.2", "source": "https://docs.pybamm.org/en/v26.4.2/source/api/models/equivalent_circuit/thevenin.html"},
+  "rc_orders": [0, 1, 3],
+  "current_A": [3.0, -1.5, 0.0],
+  "initial_total_polarization_V": [0.0, 0.03],
+  "initial_soc": 0.7,
+  "capacity_Ah": 2.0,
+  "temperature_C": 25.0,
+  "duration_s": 120.0,
+  "step_s": 0.5,
+  "ocv_intercept_V": 3.3,
+  "ocv_soc_slope_V": 0.8,
+  "r0_ohm": 0.02,
+  "rc_resistance_ohm": [0.01, 0.006, 0.003],
+  "rc_time_constant_s": [5.0, 30.0, 300.0],
+  "solver": {"rtol": 1e-11, "atol": 1e-12},
+  "acceptance": {"maximum_voltage_difference_V": 1e-7, "maximum_soc_difference": 1e-9},
+  "temperature_scope": "All electrical coefficients are independent of temperature. Studio runs isothermally. PyBaMM's separate jig thermal state is not compared or used as battery temperature evidence.",
+  "heat_scope": "PyBaMM RC heat is current times overpotential; Studio separately accounts for RC resistor dissipation and effective capacitor storage. No equivalence of these heat interpretations is asserted."
+}

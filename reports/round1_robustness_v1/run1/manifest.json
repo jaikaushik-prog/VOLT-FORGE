@@ -1,0 +1,7 @@
+{
+  "protocol_sha256": "293661a922b1557e8c53c0d428f425b8c5ad6cbfc23f439bfe7be8a19090b261",
+  "driver_sha256": "ac9c1b87c6458ab3de6677daaa77c9ac19e01ed81e574e0435bb52ace6bf600e",
+  "software_hash": "64608e257643203c1309dd6b0f95e18e4b7b493ac91adcde63ecb85060e6f3a7",
+  "classification": "Source-backed Round 1 parameter-sensitivity study; conditional numerical predictions",
+  "raw_observations_accessed": false
+}

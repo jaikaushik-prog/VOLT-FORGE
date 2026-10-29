@@ -34,6 +34,18 @@ publication does not establish the accuracy of a new module or operating regime.
   reads only allocated calibration observations. Its base-cooling conductance
   is distinct from cell heat capacity or room-air convection. No new thermal
   parameter from this experiment has been automatically promoted into the app.
+- **M50T whole-cell heat capacity:** M. Steinhardt and colleagues,
+  [Low-effort determination of heat capacity and thermal conductivity for cylindrical 18650 and 21700 lithium-ion cells](https://doi.org/10.1016/j.est.2021.103065),
+  Journal of Energy Storage 42 (2021), 103065. The primary article is reproduced
+  in the author's [TUM thesis](https://mediatum.ub.tum.de/doc/1651438/1651438.pdf).
+  Table 1 identifies INR21700 M50T; Table A.14 supplies the whole-cell lumped
+  heat capacities. The reference is 58.5 J/K at 298 K and about 71 percent charge.
+  Its tabulated interval, systematic uncertainty and model limitations are
+  distinct. It is used as a constant reference approximation, not a measured
+  temperature-dependent law or new-specimen accuracy claim. Cooling is separately
+  estimated from already-exposed Piombo rests with measured chamber temperature;
+  transferring that fixture parameter to a new assembly remains an assumption.
+  Source values and method are recorded in `configs/thermal_sources_v1.json`.
 
 Manufacturer datasheet links, revisions and operating-policy interpretations
 are attached to the individual model records. Geometry maxima, hardware limits,

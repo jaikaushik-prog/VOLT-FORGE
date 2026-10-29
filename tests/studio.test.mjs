@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {addCell,connect,removePart,History,samePhysics,esc} from '../web/editor/studio-state.mjs';
+import {addCell,connect,removePart,History,samePhysics,esc,timeLabel,deltaLabel} from '../web/editor/studio-state.mjs';
 import {chartSvg,nearestIndex,pointValues,probeSvg} from '../web/editor/studio-charts.mjs';
 const blank=()=>({name:'My design',cells:[],connections:[],output:{positive:null,negative:null},thermal:{contacts:[]}});
 test('Cell insertion, real terminal edges, removal and undo preserve graph meaning',()=>{
@@ -16,6 +16,16 @@ test('Geometry and names are separate from electrical changes',()=>{
 });
 test('Probe chooses nearest saved sample, including ends and unequal spacing',()=>{
  const rows=[0,.5,1.3,2.1,5].map(time_s=>({time_s}));assert.equal(nearestIndex(rows,-4),0);assert.equal(nearestIndex(rows,1.2),2);assert.equal(nearestIndex(rows,4.9),4);
+});
+test('Time labels distinguish fractional saved samples and preserve minute boundaries',()=>{
+ assert.equal(timeLabel(301),'5:01');assert.equal(timeLabel(301.5),'5:01.5');
+ assert.notEqual(timeLabel(301),timeLabel(301.5));assert.equal(timeLabel(59.999999),'1 min');
+ assert.equal(timeLabel(.5),'0.5 s');assert.equal(timeLabel(.0001),'<0.01 s');
+});
+test('Small nonzero comparison changes cannot look like negative zero',()=>{
+ assert.equal(deltaLabel(-.00123),'−0.0012');assert.equal(deltaLabel(.000014),'+0.000014');
+ assert.equal(deltaLabel(0),'0.00');assert.equal(deltaLabel(-.46),'−0.46');
+ assert.equal(deltaLabel(null),'—');
 });
 test('Long 16-cell trajectories render without spreading an array into function arguments',()=>{
  const test={graph:{cells:Array.from({length:16},(_,i)=>({name:'Cell '+i}))},rows:Array.from({length:12000},(_,j)=>({time_s:j*.5,cell_current_A:Array.from({length:16},(_,i)=>i===4&&j===6017?120:3+i*.1)}))};

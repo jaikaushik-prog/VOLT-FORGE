@@ -2125,9 +2125,9 @@
         "source_revision": "2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4"
       },
       "thermal_defaults": {
-        "heat_capacity_J_K": 69.25,
-        "ambient_conductance_W_K": 0.148629,
-        "status": "Declared fixture assumptions, not a validated cell property set"
+        "heat_capacity_J_K": 58.5,
+        "ambient_conductance_W_K": 0.1524918708333803,
+        "status": "Literature heat capacity and a fixture-specific cooling estimate"
       },
       "source": {
         "url": "https://github.com/ImperialCollegeLondon/PyECN",
@@ -2140,9 +2140,31 @@
       "evidence_status": "Published temperature-dependent model; independent experimental assessment pending",
       "limitations": [
         "Same-cell-type parameter import does not establish batch-specific accuracy.",
-        "Surface-equivalent thermal network uses declared fixture assumptions.",
+        "A constant published heat capacity and used-fixture cooling estimate do not establish a new assembly temperature forecast.",
         "No ageing model or core-temperature validation."
-      ]
+      ],
+      "thermal_provenance": {
+        "version": "lg_m50t_lumped_reference/1",
+        "status": "Literature heat capacity; fixture cooling estimate",
+        "source": "Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.",
+        "source_registry_sha256": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b",
+        "parameter_sources": {
+          "heat_capacity_J_K": "58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation.",
+          "ambient_conductance_W_K": "0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed."
+        },
+        "parameter_classification": {
+          "heat_capacity_J_K": "published_reference_parameter",
+          "ambient_conductance_W_K": "fixture_calibration_estimate"
+        },
+        "limitations": [
+          "Use the 58.5 J/K literature reference as a constant lumped heat-capacity approximation. Source temperature/SOC dependence and sample transfer are evaluated with scenarios, not silently extrapolated as a measured function.",
+          "Wind tunnel with two air velocities; thermally insulated surface/terminal sensors. Thermal capacitance is behind an internal resistance; the source's shell-temperature observation is not identical to a single effective-temperature state.",
+          "One already-exposed fixture, no independent thermal prediction assessment.",
+          "Sensor/fixture equilibrium offset and constant internal heat are not separately identified.",
+          "Module mean does not identify individual contacts, spatial gradients or core temperature."
+        ],
+        "current_fixture_accuracy": "Not independently assessed"
+      }
     },
     "SAMSUNG_30T": {
       "kind": "temperature_dependent_ecm/1",

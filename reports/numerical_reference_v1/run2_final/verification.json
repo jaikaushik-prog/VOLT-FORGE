@@ -1,0 +1,309 @@
+{
+  "version": "voltforge.numerical-reference-results/1",
+  "created_utc": "2026-10-29T16:38:38.408100+00:00",
+  "scope": "Synthetic electrical verification against native PyBaMM Thevenin and closed-form RC solutions; not experimental or thermal validation",
+  "protocol_sha256": "f660d268aca7227f2d5f453da693d82939c966f2cd9680fa60b0eef0931eccb3",
+  "driver_sha256": "34de97b879ca33ee7b43adda34e02442e7cc5c3310cd4be62bc57b5685582da6",
+  "runtime": {
+    "pybamm": "26.4.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "casadi": "3.7.2",
+    "pandas": "2.2.2",
+    "matplotlib": "3.9.2"
+  },
+  "passed": true,
+  "checks": [
+    {
+      "rc_order": 0,
+      "current_A": 3.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 6.217248937900877e-15,
+        "maximum_soc_difference": 7.216449660063518e-15
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 6.661338147750939e-15,
+        "maximum_soc_difference": 7.771561172376096e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 8.881784197001252e-16,
+        "maximum_soc_difference": 7.771561172376096e-16
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 0,
+      "current_A": -1.5,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 4.107825191113079e-15
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.885780586188048e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 3.3306690738754696e-16
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 0,
+      "current_A": 0.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 0.0,
+        "maximum_soc_difference": 0.0
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": 3.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 1.2986500763645381e-11,
+        "maximum_soc_difference": 5.440092820663267e-15
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 6.661338147750939e-15,
+        "maximum_soc_difference": 7.771561172376096e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 1.2986500763645381e-11,
+        "maximum_soc_difference": 9.2148511043888e-15
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": 3.0,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 6.217248937900877e-15,
+        "maximum_soc_difference": 7.105427357601002e-15
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 6.661338147750939e-15,
+        "maximum_soc_difference": 7.771561172376096e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 8.881784197001252e-16,
+        "maximum_soc_difference": 6.661338147750939e-16
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": -1.5,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 1.616040634644378e-11,
+        "maximum_soc_difference": 6.217248937900877e-15
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.885780586188048e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 1.616040634644378e-11,
+        "maximum_soc_difference": 3.6637359812630166e-15
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": -1.5,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.297984190770876e-11,
+        "maximum_soc_difference": 5.329070518200751e-15
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.885780586188048e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 4.298028599691861e-11,
+        "maximum_soc_difference": 2.7755575615628914e-15
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": 0.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 0.0,
+        "maximum_soc_difference": 0.0
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": 0.0,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 3.452038654927492e-11,
+        "maximum_soc_difference": 0.0
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 3.452083063848477e-11,
+        "maximum_soc_difference": 0.0
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": 3.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.441957912604266e-11,
+        "maximum_soc_difference": 1.354472090042691e-14
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 6.661338147750939e-15,
+        "maximum_soc_difference": 7.771561172376096e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 4.441869094762296e-11,
+        "maximum_soc_difference": 5.88418203051333e-15
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": 3.0,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 1.376454505930269e-11,
+        "maximum_soc_difference": 8.326672684688674e-15
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 6.661338147750939e-15,
+        "maximum_soc_difference": 7.771561172376096e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 1.376410097009284e-11,
+        "maximum_soc_difference": 2.1094237467877974e-15
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": -1.5,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 1.8043788685417894e-11,
+        "maximum_soc_difference": 9.992007221626409e-15
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.885780586188048e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 1.8043788685417894e-11,
+        "maximum_soc_difference": 6.217248937900877e-15
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": -1.5,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.062261638182463e-11,
+        "maximum_soc_difference": 1.021405182655144e-14
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.885780586188048e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 4.062261638182463e-11,
+        "maximum_soc_difference": 6.328271240363392e-15
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": 0.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 0.0,
+        "maximum_soc_difference": 0.0
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": 0.0,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.714895140978115e-11,
+        "maximum_soc_difference": 0.0
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 8.881784197001252e-16,
+        "maximum_soc_difference": 0.0
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 4.7149395498991e-11,
+        "maximum_soc_difference": 0.0
+      },
+      "passed": true
+    }
+  ],
+  "experimental_observations_accessed": false,
+  "thermal_comparison_performed": false,
+  "limitations": [
+    "All electrical coefficients are independent of temperature. Studio runs isothermally. PyBaMM's separate jig thermal state is not compared or used as battery temperature evidence.",
+    "PyBaMM RC heat is current times overpotential; Studio separately accounts for RC resistor dissipation and effective capacitor storage. No equivalence of these heat interpretations is asserted."
+  ]
+}

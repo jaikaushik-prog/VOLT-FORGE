@@ -1,0 +1,11 @@
+{
+  "version": "voltforge.thermal-fixture-reanalysis/1",
+  "role": "Reanalysis of previously exposed calibration/development observations, never fresh assessment",
+  "source": {"doi": "10.17632/zh58byr53c.2", "filename": "M1_NMC_Unaged_R0_T25.xlsx", "test": 53, "sha256": "4596d3fed65277b548176bca7dd3dfa9efcd0bd2167722effc87ac38975c24bc"},
+  "cell_assignment": ["P7", "P17", "P19", "P13"],
+  "allowed_steps": [4, 6],
+  "allocation_basis": "The complete source run was already exposed in earlier cooling and channel work. Raw and processed representations remain the same used experiment. This does not consume or relabel any reserved cell or module test.",
+  "channels": {"time": "Test_Time(s)", "step": "Step_Index", "temperature_prefix": "Aux_Temperature", "cell_channel_suffixes": [1, 2, 3, 4], "ambient_channel_suffix": 5, "units": "Degrees Celsius from the primary experiment description; preserve the original raw header encoding."},
+  "calculation": "Use measured ambient forcing and independently sourced whole-cell heat capacity. Examine remaining internal/relaxation heat and unknown sensor offsets as identification limitations. Never infer all heat capacity, ambient conductance, contacts and heat partition from one cooling constant.",
+  "promotion": "No automatic production promotion. Any adopted fixture parameter needs a recorded method, source, residual and limitation; a calibration residual is not predictive accuracy."
+}

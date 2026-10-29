@@ -11,6 +11,8 @@ import json
 from pathlib import Path
 import sys
 
+import numpy as np
+
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 from voltforge.project.service import Project
@@ -20,13 +22,14 @@ from voltforge.studio.cases import BENCHMARK
 from voltforge.studio.conductors import copper_reference,apply
 
 
-def make_inputs(protocol,option,scenario):
+def make_inputs(protocol,option,scenario,model_bank=None):
     mission=protocol['mission'];graph=template('parallel',4,option['name'])
     settings=settings_default();settings.update(profile=[dict(start_s=0.,end_s=mission['duration_s'],current_A=mission['current_A'])],
                                                 ambient_C=mission['ambient_C'],dt_s=mission['dt_s'],case=deepcopy(BENCHMARK))
     settings['limits']['min_voltage_V']=mission['minimum_output_voltage_V']
     for cell in graph['cells']:
         cell.update(charge_pct=mission['initial_charge_pct'],temperature_C=mission['initial_temperature_C'])
+        if protocol.get('cell_model'):cell['model']=protocol['cell_model']
     for wire in graph['connections']:
         c=copper_reference();c.update(protocol['link_dimensions'])
         c['assumption_source']=protocol['physical_assumptions']
@@ -43,16 +46,64 @@ def make_inputs(protocol,option,scenario):
         for index,cell in enumerate(graph['cells']):
             if scenario['cell_index'] is None or index==scenario['cell_index']:cell['charge_pct']+=scenario['delta_pp']
     elif kind in ('thermal_pair','cooling'):
-        graph['thermal']['ambient_conductance_W_K']*=scenario['factor']
-        if kind=='thermal_pair':graph['thermal']['heat_capacity_J_K']*=scenario['factor']
+        graph['thermal'].setdefault('cell_parameters',{})
+        for cell in graph['cells']:
+            defaults=(model_bank or {}).get(cell['model'],{}).get('thermal_defaults') or graph['thermal']
+            values=dict(ambient_conductance_W_K=defaults['ambient_conductance_W_K']*scenario['factor'])
+            if kind=='thermal_pair':values['heat_capacity_J_K']=defaults['heat_capacity_J_K']*scenario['factor']
+            graph['thermal']['cell_parameters'][cell['id']]=values
+    elif kind in ('heat_capacity','cooling_value'):
+        graph['thermal'].setdefault('cell_parameters',{})
+        key='heat_capacity_J_K' if kind=='heat_capacity' else 'ambient_conductance_W_K'
+        for cell in graph['cells']:graph['thermal']['cell_parameters'][cell['id']]={key:scenario['value']}
+    elif kind=='heat_partition':graph['thermal']['wire_heat_fraction']=scenario['value']
+    elif kind=='polarization':
+        for index,cell in enumerate(graph['cells']):
+            if scenario['cell_index'] is None or index==scenario['cell_index']:cell['polarization_V']=scenario['value_V']
     elif kind=='contact':
         for wire in graph['connections']:
             c=wire['conductor'];c['contact_mohm']*=scenario['factor'];apply(wire,c)
         for c in graph['output_leads'].values():c['contact_mohm']*=scenario['factor']
     elif kind=='ambient':settings['ambient_C']+=scenario['delta_C']
     elif kind=='step':settings['dt_s']*=scenario['factor']
-    elif kind!='nominal':raise ValueError('Unknown comparison scenario.')
+    elif kind not in ('nominal','cell_parameters'):raise ValueError('Unknown comparison scenario.')
     return graph,settings
+
+
+def scenario_models(studio,graph,scenario,cache):
+    """Register explicit, reusable hypothetical model versions in this study.
+
+    Manufacturer limits are copied deliberately with a conservative LG charge
+    policy; this is not the normal custom-cell default or new empirical data.
+    All three design options receive the same perturbed specimen model.
+    """
+    if scenario['kind']!='cell_parameters':return
+    for index,cell in enumerate(graph['cells']):
+        if scenario['cell_index'] is not None and index!=scenario['cell_index']:continue
+        parent=studio.models[cell['model']]
+        if parent.get('kind')!='temperature_dependent_ecm/1':raise ValueError('Sensitivity requires an explicit lookup cell model.')
+        allowed={'kind','capacity_Ah','soc','temperature_C','nrc','ocv_V','r0_ohm','r_ohm','tau_s','entropy','thermal_defaults'}
+        definition={k:deepcopy(v) for k,v in parent.items() if k in allowed}
+        definition['name']=parent['name']+' / '+scenario['name']
+        definition['name']=definition['name'][:80]
+        definition['source']=dict(url=parent['source']['url'],description='Declared parameter sensitivity: '+scenario['name']+'. '+scenario['basis']+' Electrical tables are copied from the recorded parent; heat capacity is the constant M50T literature reference (10.1016/j.est.2021.103065), with the separate recorded fixture-cooling estimate.')
+        limits=parent['operating_limits']
+        definition['operating_limits']={k:deepcopy(limits[k]) for k in ('voltage_V','max_charge_A','max_discharge_A') if k in limits}
+        if parent['key']=='LG_M50T_ECN':
+            definition['operating_limits'].update(max_charge_A=1.455,charge_temperature_C=[0.,45.])
+        elif parent['key']=='SAMSUNG_30T':
+            definition['operating_limits'].update(charge_temperature_C=[0.,50.],discharge_temperature_C=[-20.,80.])
+        definition['thermal_defaults']={k:definition['thermal_defaults'][k] for k in ('heat_capacity_J_K','ambient_conductance_W_K')}
+        definition['geometry']={k:parent['geometry'][k] for k in ('diameter_mm','height_mm','mass_kg')}
+        definition['capacity_Ah']*=scenario.get('capacity_factor',1.)
+        for field,factor in [('r0_ohm',scenario.get('r0_factor',1.)),('r_ohm',scenario.get('rc_factor',1.))]:
+            definition[field]=(np.asarray(definition[field])*factor).tolist()
+        definition['ocv_V']=(np.asarray(definition['ocv_V'])+scenario.get('reference_offset_V',0.)).tolist()
+        key=digest(definition)
+        if key not in cache:cache[key]=studio.create_cell(definition)['key']
+        cell['model']=cache[key]
+        cell['charge_pct']+=scenario.get('initial_charge_delta_pp',0.)
+        cell['polarization_V']=scenario.get('initial_polarization_V',cell['polarization_V'])
 
 
 def analyze(protocol,records):
@@ -79,6 +130,7 @@ def analyze(protocol,records):
                 reversals.append(dict(metric=metric,scenario=scenario['key'],nominal_thicker_minus_opposite=nominal,scenario_thicker_minus_opposite=delta))
     convergence=[]
     for option in protocol['options']:
+        if ('quarter_step',option['key']) not in by:continue
         original=by['nominal',option['key']]['summary']['metrics'];refined=by['quarter_step',option['key']]['summary']['metrics']
         for metric,budget in protocol['decision']['numerical_resolution_budgets'].items():
             error=abs(refined[metric]-original[metric])
@@ -101,10 +153,11 @@ def main():
     manifest=dict(protocol_sha256=hashlib.sha256(raw).hexdigest(),driver_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                   software_hash=studio.software_hash,classification=protocol['status'],raw_observations_accessed=False)
     (out/'manifest.json').write_text(json.dumps(manifest,indent=2))
-    records=[];table=[]
+    records=[];table=[];refinement=[];cache={}
     for scenario in protocol['scenarios']:
         for option in protocol['options']:
-            graph,settings=make_inputs(protocol,option,scenario)
+            graph,settings=make_inputs(protocol,option,scenario,studio.models)
+            scenario_models(studio,graph,scenario,cache)
             doc=studio.create_from_graph(graph,settings,origin=dict(kind='declared_three_option_study',protocol_sha256=manifest['protocol_sha256'],
                 option=option['key'],intervention=option['intervention'],scenario=scenario))
             record=studio.run(doc['id'],doc['version'],title=scenario['name'])
@@ -112,9 +165,23 @@ def main():
             row=dict(scenario=scenario['name'],design=option['name'],status=record['status'],**record['summary']['metrics'])
             table.append(row)
             if scenario['kind']=='nominal':(out/(option['key']+'.zip')).write_bytes(studio.export(record['id']))
+            if protocol.get('refine_every_case'):
+                finer=deepcopy(settings);finer['dt_s']*=.5
+                fine_doc=studio.create_from_graph(graph,finer,origin=dict(kind='numerical_refinement',parent_test=record['id']))
+                fine_record=studio.run(fine_doc['id'],fine_doc['version'],title=scenario['name']+' / finer step')
+                checks={}
+                for metric,budget in protocol['decision']['numerical_resolution_budgets'].items():
+                    a=record['summary']['metrics'].get(metric);b=fine_record['summary']['metrics'].get(metric)
+                    difference=abs(a-b) if a is not None and b is not None else None
+                    checks[metric]=dict(difference=difference,budget=budget,passed=difference is not None and difference<=budget)
+                refinement.append(dict(option=option['key'],scenario=scenario['key'],coarse_id=record['id'],fine_id=fine_record['id'],
+                    same_execution_status=record['status']==fine_record['status'],checks=checks))
             (out/'progress.json').write_text(json.dumps(dict(completed=len(records),total=len(protocol['scenarios'])*len(protocol['options'])),indent=2))
             print(f'{len(records)}/{len(protocol["scenarios"])*len(protocol["options"])} {scenario["key"]}: {option["key"]} {record["status"]}',flush=True)
     analysis=analyze(protocol,records)
+    if refinement:
+        analysis['all_case_step_refinement']=refinement
+        analysis['all_case_step_refinement_passed']=all(r['same_execution_status'] and all(c['passed'] for c in r['checks'].values()) for r in refinement)
     (out/'comparison.json').write_text(json.dumps(dict(manifest=manifest,analysis=analysis,
          experiments=[dict(option=r['option'],scenario=r['scenario'],id=r['id'],payload_hash=r['payload_hash'],
          graph=r['graph'],settings=r['settings'],model_hash=r['model_hash'],software_hash=r['software_hash'],summary=r['summary'],status=r['status'],stop=r['stop']) for r in records]),indent=2,allow_nan=False))
@@ -128,6 +195,8 @@ def main():
             '',protocol['scenario_basis'],'',protocol['decision']['budget_meaning'],'',
             'Open the three ZIP reports or reproduce them with their captured source and model files. All scenario records are in the isolated workspace. This study establishes conditional numerical comparisons, not measured hardware benefits.']
     (out/'READ_ME.md').write_text('\n'.join(lines)+'\n')
+    if refinement and not analysis['all_case_step_refinement_passed']:
+        raise SystemExit('One or more cases failed the declared refinement budget. Inspect results before recommending a design.')
 
 
 if __name__=='__main__':main()

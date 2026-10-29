@@ -82,6 +82,13 @@ def html_report(record):
     model_text=escape(record['summary'].get('model','Saved equivalent electrical and thermal model'))
     thermal_assumptions=record['summary'].get('thermal_assumptions',[])
     evidence='<h2>Model and evidence</h2><p>'+model_text+'. Heat-transfer parameters and contacts are the saved fixture assumptions. Numerical reproduction does not establish physical module accuracy or a hardware safety rating.</p>'+(table(card_rows) if len(card_rows)>1 else '')+(''.join('<p>'+escape(names.get(a['cell'],'Cell')+': '+a['status']+'. '+str(a.get('source','')))+'.</p>' for a in thermal_assumptions))
+    for entry in thermal_assumptions:
+        parameters=entry.get('parameters',{})
+        rows=[('Heat property','Value','Source or assumption')]
+        for key,title,unit in [('heat_capacity_J_K','Heat capacity','J/K'),('ambient_conductance_W_K','Cooling to surroundings','W/K')]:
+            if key in parameters:
+                item=parameters[key];rows.append((title,val(item['value'],unit,4),item['source']))
+        if len(rows)>1:evidence+='<h3>'+escape(names.get(entry['cell'],'Cell'))+'</h3>'+table(rows)
     case=record.get('case',record['summary'].get('case'))
     if case:
         assessment='<h2>'+escape(case['description']['name'])+'</h2><p>'+escape(case['description']['purpose'])+'</p><p>'+escape(case['description']['source'])+'</p><p class="meta">Application record '+escape(case['fingerprint'])+'; requirements '+escape(case['requirements_fingerprint'])+'</p>'+assessment

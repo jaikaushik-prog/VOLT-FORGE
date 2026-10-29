@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "voltforge"
-version = "0.1.0"
-description = "Traceable inspection of Piombo et al. parallel-cell measurements"
+version = "0.3.0"
+description = "Visual battery circuit design, electrothermal experiments and reproducible engineering comparisons"
 requires-python = ">=3.12,<3.13"
 dependencies = ["numpy==1.26.4", "scipy==1.13.1", "pandas==2.2.2", "matplotlib==3.9.2", "openpyxl==3.1.5"]
 

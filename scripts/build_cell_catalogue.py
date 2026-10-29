@@ -22,6 +22,23 @@ OUT = ROOT/'reports/model_catalogue_v1'
 def sha(data): return hashlib.sha256(data).hexdigest()
 
 
+def m50t_thermal_reference():
+    raw=(ROOT/'configs/thermal_sources_v1.json').read_bytes();sources=json.loads(raw)
+    heat=sources['m50t_heat_capacity'];cooling=sources['m50t_fixture_cooling']
+    defaults=dict(heat_capacity_J_K=heat['reference']['heat_capacity_J_K'],
+                  ambient_conductance_W_K=cooling['ambient_conductance_W_K'],
+                  status='Literature heat capacity and a fixture-specific cooling estimate')
+    provenance=dict(version='lg_m50t_lumped_reference/1',status='Literature heat capacity; fixture cooling estimate',
+        source='Steinhardt et al. 2021, Table A.14, supplies the whole-cell heat capacity. Cooling is a development estimate from the recorded chamber temperature and mean cooling of one Piombo four-cell fixture.',
+        source_registry_sha256=sha(raw),
+        parameter_sources=dict(heat_capacity_J_K='58.5 J/K at 298 K and approximately 71% charge, DOI 10.1016/j.est.2021.103065, Table A.14. Held constant as a lumped approximation.',
+            ambient_conductance_W_K='0.15249 W/K, joint fit to previously exposed Piombo test 53 rest steps 4 and 6 with measured ambient forcing. Transfer to a new arrangement is assumed.'),
+        parameter_classification=dict(heat_capacity_J_K='published_reference_parameter',ambient_conductance_W_K='fixture_calibration_estimate'),
+        limitations=[heat['implementation'],heat['fixture'],*cooling['limitations']],
+        current_fixture_accuracy='Not independently assessed')
+    return defaults,provenance
+
+
 def imported_m50t():
     p = RAW/'pyecn/pyecn/Input_LUTs/Cylindrical_Cell1'
     temps = [15., 25., 35., 45., 55.]
@@ -36,18 +53,19 @@ def imported_m50t():
         tables['r_ohm'].append(arrays['Ri'][:, 1:].tolist())
         tables['tau_s'].append((arrays['Ri'][:, 1:]*arrays['Ci'][:, 1:]).tolist())
     entropy = np.loadtxt(p/'dVdT-SoC.csv', delimiter=',', skiprows=1)[::-1]
+    thermal,thermal_provenance=m50t_thermal_reference()
     return dict(kind='temperature_dependent_ecm/1', key='LG_M50T_ECN', name='LG M50T', family='LG M50T',
                 capacity_Ah=5., nominal_capacity_Ah=5., nrc=3, soc=z.tolist(), temperature_C=temps, **tables,
                 entropy=dict(soc=entropy[:, 0].tolist(), dOCV_dT_V_K=entropy[:, 1].tolist(), status='Published PyECN lookup; independently unvalidated here'),
                 geometry=dict(form='cylindrical', diameter_mm=21.44, height_mm=70.8, mass_kg=.070, status='Manufacturer maximum dimensions and mass, draft Rev 0'),
                 operating_limits=dict(voltage_V=[2.5, 4.2], max_discharge_A=7.275, max_charge_A=3.395,
                     source_url='https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf', source_revision='2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4'),
-                thermal_defaults=dict(heat_capacity_J_K=69.25, ambient_conductance_W_K=.148629, status='Declared fixture assumptions, not a validated cell property set'),
+                thermal_defaults=thermal,thermal_provenance=thermal_provenance,
                 source=dict(url='https://github.com/ImperialCollegeLondon/PyECN', commit='32540fe0819bfc4d099bcd601d1ab0625cb524a3',
                     path='pyecn/Input_LUTs/Cylindrical_Cell1', licence='BSD-3-Clause', paper='https://doi.org/10.31224/2972',
                     interpretation='Unscaled whole-cell resistance/capacitance tables. No 4680 electrode-area or module scaling. Capacity_rated0=18000 coulombs is 5 Ah.'),
                 evidence_status='Published temperature-dependent model; independent experimental assessment pending',
-                limitations=['Same-cell-type parameter import does not establish batch-specific accuracy.', 'Surface-equivalent thermal network uses declared fixture assumptions.', 'No ageing model or core-temperature validation.'])
+                limitations=['Same-cell-type parameter import does not establish batch-specific accuracy.', 'A constant published heat capacity and used-fixture cooling estimate do not establish a new assembly temperature forecast.', 'No ageing model or core-temperature validation.'])
 
 
 def read_calibration(z, name, plan):

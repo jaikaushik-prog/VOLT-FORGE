@@ -1,0 +1,112 @@
+{
+  "version": "voltforge.round1-evidence-summary/1",
+  "input_sha256": {
+    "comparison": "29def6b5f6595d387ddd1c544cd236299a6eaf0ef1e7fe6eb1918c3919ce4422",
+    "protocol": "293661a922b1557e8c53c0d428f425b8c5ad6cbfc23f439bfe7be8a19090b261",
+    "replay": "3749c16a51d4fb1e0ef61df5a1c4bbe5f61d22f472d970310ca84fa019a53bc5",
+    "electrical_reference": "8bee3b0589a3cb35cfa957454098e0ef509e2315315815e535414d6c78be8ac1",
+    "cooling_identification": "f04567c6d0cfa8df0d6e70a9c45dfbb793baed974beb0b8d30bd153224982a50",
+    "thermal_sources": "33d05c89e18c3fcd813cc9a08c2392a4303cded8b0963bf16a5884fd6b6d152b"
+  },
+  "study_software_hash": "64608e257643203c1309dd6b0f95e18e4b7b493ac91adcde63ecb85060e6f3a7",
+  "scenarios": 31,
+  "design_options": 3,
+  "coarse_calculations": 93,
+  "refinement_calculations": 93,
+  "numerical_comparison_eligible": true,
+  "conditional_recommendation": "Use thicker internal copper links as the preferred candidate for the declared backup study. They reduced peak cell current and increased delivered energy in every tested scenario.",
+  "comparison_ranges": {
+    "thicker": {
+      "peak_cell_current_A": {
+        "minimum": -0.29696399566270903,
+        "maximum": -0.03239089117751437,
+        "improved_cases": 31,
+        "cases": 31
+      },
+      "peak_temperature_C": {
+        "minimum": -0.4950554760179884,
+        "maximum": -0.12334345379941425,
+        "improved_cases": 31,
+        "cases": 31
+      },
+      "delivered_energy_Wh": {
+        "minimum": 0.014804537779843585,
+        "maximum": 0.016830083071170066,
+        "improved_cases": 31,
+        "cases": 31
+      },
+      "minimum_voltage_V": {
+        "minimum": 0.007372177707769101,
+        "maximum": 0.00841195230439995,
+        "improved_cases": 31,
+        "cases": 31
+      }
+    },
+    "opposite": {
+      "peak_cell_current_A": {
+        "minimum": -0.7584210779374403,
+        "maximum": 0.2621906535978078,
+        "improved_cases": 30,
+        "cases": 31
+      },
+      "peak_temperature_C": {
+        "minimum": -0.9275594437039594,
+        "maximum": 0.05483831452807664,
+        "improved_cases": 30,
+        "cases": 31
+      },
+      "delivered_energy_Wh": {
+        "minimum": -0.026348418938114015,
+        "maximum": -0.02196302693075225,
+        "improved_cases": 0,
+        "cases": 31
+      },
+      "minimum_voltage_V": {
+        "minimum": -0.013480573363312764,
+        "maximum": -0.011072171103408301,
+        "improved_cases": 0,
+        "cases": 31
+      }
+    }
+  },
+  "maximum_refinement_difference": {
+    "peak_cell_current_A": 0.0,
+    "peak_temperature_C": 0.0002687184396528153,
+    "delivered_energy_Wh": 5.799137690942757e-06,
+    "minimum_voltage_V": 1.0338292679268335e-05
+  },
+  "ordering_reversals": [
+    {
+      "metric": "peak_cell_current_A",
+      "scenario": "first_charge_minus_2",
+      "nominal_thicker_minus_opposite": 0.36173042678015177,
+      "scenario_thicker_minus_opposite": -0.01598694306406312
+    },
+    {
+      "metric": "peak_cell_current_A",
+      "scenario": "reference_0_-0.025",
+      "nominal_thicker_minus_opposite": 0.36173042678015177,
+      "scenario_thicker_minus_opposite": -0.005477635853522234
+    },
+    {
+      "metric": "peak_cell_current_A",
+      "scenario": "reference_3_0.025",
+      "nominal_thicker_minus_opposite": 0.36173042678015177,
+      "scenario_thicker_minus_opposite": -0.42942979720818464
+    },
+    {
+      "metric": "peak_cell_current_A",
+      "scenario": "relaxation_1",
+      "nominal_thicker_minus_opposite": 0.36173042678015177,
+      "scenario_thicker_minus_opposite": -0.015527023362535086
+    },
+    {
+      "metric": "peak_temperature_C",
+      "scenario": "reference_3_0.025",
+      "nominal_thicker_minus_opposite": 0.21417219899727513,
+      "scenario_thicker_minus_opposite": -0.3076343996796247
+    }
+  ],
+  "experimental_accuracy_established": false,
+  "uncertainty_type": "Paired deterministic scenarios, not a probability distribution or measured accuracy interval"
+}

@@ -1,10 +1,19 @@
 export const clone = x => structuredClone(x);
 export const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const fmt = (n, digits=1) => Number.isFinite(n) ? new Intl.NumberFormat('en',{maximumFractionDigits:digits,minimumFractionDigits:digits}).format(n) : '—';
+export function deltaLabel(value) {
+  if(!Number.isFinite(value))return '—';
+  const absolute=Math.abs(value),number=absolute>0&&absolute<.005
+    ? new Intl.NumberFormat('en',{maximumSignificantDigits:2}).format(absolute) : fmt(absolute,2);
+  return (value<0?'−':value>0?'+':'')+number;
+}
 export function timeLabel(seconds) {
-  if (seconds < 60) return `${fmt(seconds,seconds%1 ? 1 : 0)} s`;
-  const minutes = Math.floor(seconds/60), rest = seconds%60;
-  return rest ? `${minutes}:${String(Math.floor(rest)).padStart(2,'0')}` : `${minutes} min`;
+  const rounded=Math.round(seconds*100)/100;
+  if(seconds>0&&rounded===0)return '<0.01 s';
+  if(rounded<60)return `${new Intl.NumberFormat('en',{maximumFractionDigits:2}).format(rounded)} s`;
+  const minutes=Math.floor(rounded/60),rest=Number((rounded%60).toFixed(2));
+  const [whole,fraction]=String(rest).split('.');
+  return rest?`${minutes}:${whole.padStart(2,'0')}${fraction?'.'+fraction:''}`:`${minutes} min`;
 }
 export function nextId(items,prefix) { let i=1; while(items.some(x=>x.id===prefix+i)) i++;return prefix+i; }
 export function addCell(graph,model='P7') {

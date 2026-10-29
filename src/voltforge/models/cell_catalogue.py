@@ -65,6 +65,17 @@ class CellModel:
             if a.shape != expected or not np.isfinite(a).all() or np.any(a <= 0):
                 raise ValueError('Invalid ' + key + ' lookup table.')
             self.tables[key] = a
+        # Finite entries can still have an unrepresentable capacitance or decay
+        # rate. These are floating-point requirements, not operating limits.
+        try:
+            with np.errstate(over='raise', divide='raise', invalid='raise', under='ignore'):
+                derived = (self.tables['tau_s'] / self.tables['r_ohm'],
+                           self.tables['r_ohm'] / self.tables['tau_s'],
+                           2. / self.tables['tau_s'])
+                if any(not np.isfinite(a).all() or np.any(a <= 0) for a in derived):
+                    raise FloatingPointError()
+        except FloatingPointError:
+            raise ValueError('RC resistance and time constants exceed the numerical range. Check their units and ratios.') from None
         self.soc_range = (float(self.z[0]), float(self.z[-1]))
         self.temperature_range = (float(self.t[0]), float(self.t[-1]))
         domain=record.get('deployment_domain')

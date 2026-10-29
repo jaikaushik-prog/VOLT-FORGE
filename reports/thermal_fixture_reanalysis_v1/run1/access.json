@@ -1,0 +1,11 @@
+{
+  "access_utc": "2026-10-28T23:45:26.734092+00:00",
+  "role": "Reanalysis of previously exposed calibration/development observations, never fresh assessment",
+  "source": {
+    "doi": "10.17632/zh58byr53c.2",
+    "filename": "M1_NMC_Unaged_R0_T25.xlsx",
+    "test": 53,
+    "sha256": "4596d3fed65277b548176bca7dd3dfa9efcd0bd2167722effc87ac38975c24bc"
+  },
+  "reserved_observations_accessed": false
+}

@@ -1,1 +1,1 @@
-"""VOLT-FORGE research data readiness; no battery model is implemented."""
+"""VOLT-FORGE battery design, electrothermal experiments and traceable results."""

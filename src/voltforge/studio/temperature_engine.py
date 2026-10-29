@@ -65,6 +65,16 @@ class ThermalResponse:
 
 
 def simulate(graph, settings, bank):
+    # Reject nonfinite arithmetic before a result can be saved. Underflow of
+    # decaying exponentials is expected for settled relaxation states.
+    try:
+        with np.errstate(over='raise', divide='raise', invalid='raise', under='ignore'):
+            return _simulate(graph, settings, bank)
+    except (FloatingPointError, OverflowError):
+        raise ValueError('These cell or connection values exceed the numerical range of the calculation. Check the imported units, resistance and time constants before testing again.') from None
+
+
+def _simulate(graph, settings, bank):
     from .network import Circuit, Result, summarize, validate_settings, integration_grid
     from .protection import VirtualProtection
     circuit = Circuit(graph,bank); duration = validate_settings(settings)
@@ -262,7 +272,28 @@ def simulate(graph, settings, bank):
                    reversible_heat='Included only for models with an attributed entropy coefficient',
                    experimental_validation=False)
     summary['thermal_mode']='Coupled declared heat-transfer model' if thermal_available else 'Isothermal electrical estimate; cell temperatures held at their starting values'
-    summary['thermal_assumptions']=[dict(cell=c['id'],**m.record['thermal_provenance']) for c,m in zip(cells,models) if m.record.get('thermal_provenance')]
+    # Record the properties actually used, including per-instance overrides.
+    # A source-backed default is not the provenance of a later user edit.
+    summary['thermal_assumptions']=[]
+    if thermal_available:
+        for i,(cell,model) in enumerate(zip(cells,models)):
+            provenance=model.record.get('thermal_provenance',{})
+            source=provenance.get('source','Declared heat-transfer assumptions for this fixture.')
+            if isinstance(source,dict):
+                source=' '.join(str(source[k]) for k in ('description','url') if source.get(k)) or 'User-provided heat-transfer values.'
+            entry=dict(cell=cell['id'],version=provenance.get('version','declared_fixture/1'),
+                       status=provenance.get('status','Assumed heat model'),source=source,parameters={})
+            if provenance.get('source_registry_sha256'):entry['source_registry_sha256']=provenance['source_registry_sha256']
+            changed=[]
+            for key,value in [('heat_capacity_J_K',C[i]),('ambient_conductance_W_K',G[i])]:
+                overridden=key in overrides.get(cell['id'],{})
+                entry['parameters'][key]=dict(value=float(value),
+                    classification='user_override' if overridden else provenance.get('parameter_classification',{}).get(key,'declared_assumption'),
+                    source='User-entered value for this cell instance.' if overridden else provenance.get('parameter_sources',{}).get(key,source))
+                if overridden:changed.append('heat capacity' if key=='heat_capacity_J_K' else 'cooling')
+            if changed:
+                entry['status']='User-adjusted heat model';entry['source']='User-entered '+ ' and '.join(changed)+'. Other parameters retain their recorded sources.'
+            summary['thermal_assumptions'].append(entry)
     from .conductors import physical_summary
     summary['physical_components']=physical_summary(graph,bank)
     summary['metrics']['conductor_mass_g']=summary['physical_components']['conductor_mass_g']

@@ -1,0 +1,167 @@
+{
+  "version": "voltforge.used-fixture-reanalysis/1",
+  "classification": "Reanalysis of previously exposed calibration/development observations, never fresh assessment",
+  "source": {
+    "doi": "10.17632/zh58byr53c.2",
+    "filename": "M1_NMC_Unaged_R0_T25.xlsx",
+    "test": 53,
+    "sha256": "4596d3fed65277b548176bca7dd3dfa9efcd0bd2167722effc87ac38975c24bc"
+  },
+  "source_capacity": {
+    "authors": "Steinhardt et al.",
+    "year": 2021,
+    "doi": "10.1016/j.est.2021.103065",
+    "url": "https://mediatum.ub.tum.de/doc/1651438/1651438.pdf",
+    "article": "Low-effort determination of heat capacity and thermal conductivity for cylindrical 18650 and 21700 lithium-ion cells",
+    "locators": "Article Table 1, Table 2, Table 9 and Appendix Table A.14; reproduced on PDF pages 60, 61, 68 and 71"
+  },
+  "heat_capacity_J_K": 58.5,
+  "channels": [
+    "Aux_Temperature(\u00a1\u00e6)_1",
+    "Aux_Temperature(\u00a1\u00e6)_2",
+    "Aux_Temperature(\u00a1\u00e6)_3",
+    "Aux_Temperature(\u00a1\u00e6)_4",
+    "Aux_Temperature(\u00a1\u00e6)_5"
+  ],
+  "boundary": "Observed chamber temperature through the complete selected rests, not a fixed setpoint",
+  "segment_metadata": [
+    {
+      "step": 4,
+      "samples": 1801,
+      "duration_s": 1799.0010999999995,
+      "ambient_min_C": 25.27108293428983,
+      "ambient_max_C": 25.78238053567985
+    },
+    {
+      "step": 6,
+      "samples": 2701,
+      "duration_s": 2699.0007000000005,
+      "ambient_min_C": 24.64821908789302,
+      "ambient_max_C": 27.397841184508472
+    }
+  ],
+  "parameter_cases": [
+    {
+      "rate_per_s": 0.0013054031700829303,
+      "time_constant_s": 766.0468604013513,
+      "heat_capacity_J_K": 58.5,
+      "ambient_conductance_W_K": 0.07636608544985142,
+      "equilibrium_offset_C": -0.4069161066104206,
+      "fit_rmse_C": 0.03462654684523707,
+      "max_abs_residual_C": 0.12209809800650362,
+      "assumed_initial_decaying_heat_W_per_cell": 0.0,
+      "jacobian_condition_number": 36.581916748885206,
+      "optimizer_bounds_meaning": "Numerical search limits only; no calibration or confidence interval is inferred.",
+      "fit_steps": [
+        4
+      ]
+    },
+    {
+      "rate_per_s": 0.0025082093979010007,
+      "time_constant_s": 398.69079544827946,
+      "heat_capacity_J_K": 58.5,
+      "ambient_conductance_W_K": 0.14673024977720855,
+      "equilibrium_offset_C": -0.4429340788251289,
+      "fit_rmse_C": 0.14070550140004834,
+      "max_abs_residual_C": 0.7035643290554603,
+      "assumed_initial_decaying_heat_W_per_cell": 0.0,
+      "jacobian_condition_number": 2.731264651378377,
+      "optimizer_bounds_meaning": "Numerical search limits only; no calibration or confidence interval is inferred.",
+      "fit_steps": [
+        6
+      ]
+    },
+    {
+      "rate_per_s": 0.0026295059848030302,
+      "time_constant_s": 380.2995717748509,
+      "heat_capacity_J_K": 58.5,
+      "ambient_conductance_W_K": 0.15382610011097728,
+      "equilibrium_offset_C": -0.43624275348316727,
+      "fit_rmse_C": 0.13542931684077827,
+      "max_abs_residual_C": 0.6908970896966622,
+      "assumed_initial_decaying_heat_W_per_cell": 0.05,
+      "jacobian_condition_number": 2.6684773094336705,
+      "optimizer_bounds_meaning": "Numerical search limits only; no calibration or confidence interval is inferred.",
+      "fit_steps": [
+        6
+      ]
+    },
+    {
+      "rate_per_s": 0.0030013405683751485,
+      "time_constant_s": 333.1844478220528,
+      "heat_capacity_J_K": 58.5,
+      "ambient_conductance_W_K": 0.17557842324994619,
+      "equilibrium_offset_C": -0.41847089039091545,
+      "fit_rmse_C": 0.12394819450782285,
+      "max_abs_residual_C": 0.6604111910664088,
+      "assumed_initial_decaying_heat_W_per_cell": 0.2,
+      "jacobian_condition_number": 2.514653964081797,
+      "optimizer_bounds_meaning": "Numerical search limits only; no calibration or confidence interval is inferred.",
+      "fit_steps": [
+        6
+      ]
+    },
+    {
+      "rate_per_s": 0.0026066986467244498,
+      "time_constant_s": 383.62700700235894,
+      "heat_capacity_J_K": 58.5,
+      "ambient_conductance_W_K": 0.1524918708333803,
+      "equilibrium_offset_C": -0.4043735966449047,
+      "fit_rmse_C": 0.11537988188633426,
+      "max_abs_residual_C": 0.7124124284687277,
+      "assumed_initial_decaying_heat_W_per_cell": 0.0,
+      "jacobian_condition_number": 2.894014287525181,
+      "optimizer_bounds_meaning": "Numerical search limits only; no calibration or confidence interval is inferred.",
+      "fit_steps": [
+        4,
+        6
+      ]
+    },
+    {
+      "rate_per_s": 0.0027239400265310536,
+      "time_constant_s": 367.11527796502304,
+      "heat_capacity_J_K": 58.5,
+      "ambient_conductance_W_K": 0.15935049155206663,
+      "equilibrium_offset_C": -0.4003260197178582,
+      "fit_rmse_C": 0.11121789063964836,
+      "max_abs_residual_C": 0.6988899406561302,
+      "assumed_initial_decaying_heat_W_per_cell": 0.05,
+      "jacobian_condition_number": 2.8470117519708,
+      "optimizer_bounds_meaning": "Numerical search limits only; no calibration or confidence interval is inferred.",
+      "fit_steps": [
+        4,
+        6
+      ]
+    },
+    {
+      "rate_per_s": 0.003084128777688297,
+      "time_constant_s": 324.24067608147936,
+      "heat_capacity_J_K": 58.5,
+      "ambient_conductance_W_K": 0.18042153349476536,
+      "equilibrium_offset_C": -0.38944023334633204,
+      "fit_rmse_C": 0.10202959369670095,
+      "max_abs_residual_C": 0.6661264856860534,
+      "assumed_initial_decaying_heat_W_per_cell": 0.2,
+      "jacobian_condition_number": 2.7283418853671275,
+      "optimizer_bounds_meaning": "Numerical search limits only; no calibration or confidence interval is inferred.",
+      "fit_steps": [
+        4,
+        6
+      ]
+    }
+  ],
+  "pre_rest_parameter_transfer": {
+    "rmse_C": 0.4420349945274499,
+    "maximum_abs_error_C": 1.0259963610197183,
+    "scope": "Already-exposed step 6; first observed module-mean temperature supplies its initializer."
+  },
+  "production_promoted": false,
+  "experimental_validation": false,
+  "limitations": [
+    "One previously exposed fixture, one effective mean state; no independent assessment.",
+    "A fitted equilibrium offset cannot separate sensor calibration, fixture gradients and constant internal heating.",
+    "Assumed residual-heat amplitudes are sensitivity scenarios, not measured heat input.",
+    "Mutual cell contacts cancel from an equal-capacity mean; no individual contact or core temperature is identified.",
+    "Heat capacity transfers from a different exact-model specimen; source and fixture uncertainty remain."
+  ]
+}

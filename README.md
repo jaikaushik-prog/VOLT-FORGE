@@ -2,33 +2,29 @@
 
 A visual battery-engineering workspace. Build a circuit, test its behaviour and understand what a design change does.
 
-## Current version: V2 studio
+## Current development version: V3
 
-Updated 27 October 2026. V2 adds modular cell-and-connection editing, a quieter Build / Test / Results workflow, interactive charts, guided what-if experiments, named comparisons and an AI copilot with review before apply.
+Updated 29 October 2026. V3 adds temperature-dependent cell models, custom-cell imports, coupled electrical/thermal calculations, physical copper links and routes, monitoring/protective-cutoff experiments, a resumable walkthrough and stronger numerical verification. Final installation and release checks are being completed.
 
-![VOLT-FORGE V2 studio](reports/experience_rebuild/build.png)
-
-**[Open the V2 guide](V2_RELEASE.md)** for the current features, demonstration, model scope and verification. The broader direction is in [PRODUCT.md](PRODUCT.md); the scientific work is in [SCIENCE_AND_VALIDATION_PLAN.md](SCIENCE_AND_VALIDATION_PLAN.md).
+**[Open the V3 guide](V3_RELEASE.md)** for launch instructions, the user journey, model sources and release scope. The [V2 guide](V2_RELEASE.md) preserves the earlier published snapshot.
 
 ### Run locally
 
-Use Python 3.12. From the repository root on macOS or Linux:
+Use Python 3.12. From the complete source folder:
 
-```bash
+```sh
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-PYTHONPATH=src .venv/bin/python scripts/run_editor.py --project workspace/editor_project --port 8792
+.venv/bin/python scripts/run_editor.py --project workspace/my_project --port 8794
 ```
 
-Open **http://127.0.0.1:8792**. There is no separate frontend build step. The solver uses reference assets included in this repository. AI requires a compatible locally installed Codex or Claude CLI, an authenticated account and available usage. Your saved designs and downloaded source data remain local.
+Open **http://127.0.0.1:8794**. There is no separate frontend build step. Reference assets are included. The real AI copilot uses a locally installed, authenticated Codex or Claude CLI with available usage. The circuit solver works independently of that connection.
 
-Verification recorded for the rebuild: **291 Python tests passed**, 8 archive-dependent checks skipped, **28 JavaScript tests passed**, and **17 browser workflow checks passed**. The [V2 guide](V2_RELEASE.md) links the records.
-
-This is a functioning research prototype. Its present nominal-temperature electrical fits, declared thermal assumptions and independent-validation gaps are described in the V2 guide. The physical assembly is an editable illustration; solid-model CAD is future work.
+V3 now has independent PyBaMM and SciPy numerical checks, exact-model thermal source records, and a 31-scenario comparison of one baseline and two conductor alternatives. These support conditional engineering comparisons. Independent measured module accuracy and manufacturing CAD remain outside the Round 1 release scope.
 
 ## Earlier engineering stages and reproduction
 
-The sections below preserve the historical electrical-model and dataset work. They describe their own stages; the V2 guide above describes the current user experience.
+The sections below preserve the historical electrical-model and dataset work. They describe their own stages; the V3 guide above describes the current user experience.
 
 Executable inspection of the **real Piombo et al. parallel-cell dataset**, DOI
 [10.17632/zh58byr53c.2](https://data.mendeley.com/datasets/zh58byr53c/2).

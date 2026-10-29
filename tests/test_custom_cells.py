@@ -128,3 +128,29 @@ def test_custom_operating_limit_is_used_without_builtin_fallback(studio):
     doc=studio.save(doc['id'],doc['version'],g,doc['settings'])
     assert not doc['readiness']['ready']
     with pytest.raises(ValueError,match='1 A operating limit'):studio.run(doc['id'],doc['version'])
+
+
+def advanced_extreme(resistance, time_constant):
+    return dict(kind='temperature_dependent_ecm/1',name='Extreme imported model',capacity_Ah=2.,
+                soc=[0.,1.],temperature_C=[0.,50.],nrc=1,
+                ocv_V=[[3.7,3.7],[3.7,3.7]],r0_ohm=[[.02,.02],[.02,.02]],
+                r_ohm=[[[resistance],[resistance]],[[resistance],[resistance]]],
+                tau_s=[[[time_constant],[time_constant]],[[time_constant],[time_constant]]],
+                thermal_defaults=dict(heat_capacity_J_K=70.,ambient_conductance_W_K=.15))
+
+
+@pytest.mark.parametrize('resistance,time_constant',[(1e-300,1e300),(1e300,1e-300),(1.,1e-320)])
+def test_finite_import_entries_with_unrepresentable_rc_ratios_are_rejected(studio,resistance,time_constant):
+    before=set(studio.models)
+    with pytest.raises(ValueError,match='numerical range'):
+        studio.create_cell(definition=advanced_extreme(resistance,time_constant))
+    assert set(Studio(studio.root.parent).models)==before
+
+
+def test_extreme_intermediate_arithmetic_has_a_useful_error_instead_of_nan():
+    from voltforge.studio.network import template,settings_default,simulate
+    definition=normalize(advanced_extreme(1e300,1e300),'custom_extreme')
+    graph=template('parallel',1);graph['cells'][0]['model']='custom_extreme'
+    settings=settings_default();settings['profile']=[dict(start_s=0.,end_s=1.,current_A=2.)]
+    with pytest.raises(ValueError,match='numerical range of the calculation'):
+        simulate(graph,settings,{'custom_extreme':definition})
