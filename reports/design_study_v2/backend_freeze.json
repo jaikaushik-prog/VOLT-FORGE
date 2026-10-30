@@ -1,0 +1,9 @@
+{
+  "version": "voltforge.backend-freeze/1",
+  "frozen_utc": "2026-10-30T12:49:58.912116+00:00",
+  "commit": "fb457371cada83fdeb83225cc1802b95646bcc10",
+  "software_hash": "dd8746b0898bcae0e4badbd8bdc1d8f99d94c05eb1521db2f9878ca2db61457f",
+  "catalogue_sha256": "79510cdf84dd1aae36521a762b7d9537ae8c122e468f0ace1b62c2ea64802824",
+  "parts_prices_sha256": "52c5221d3f6c1496224a012bc0345676732ca5928498601b342ca49640ee12aa",
+  "note": "Python in src/voltforge/studio and src/voltforge/models is fingerprinted. Any change after this point alters the software identity of the study."
+}
