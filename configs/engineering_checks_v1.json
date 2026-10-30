@@ -1,0 +1,49 @@
+{
+  "version": "voltforge.engineering-checks/1",
+  "status": "frozen_before_any_check_was_run",
+  "purpose": "Extra checks of the recommended 2-cell design. These are checks and never fits: no model, catalogue, thermal or solver value changes because of them.",
+  "rules": {
+    "keep_poor_results": "Every result is reported, including a miss.",
+    "reserved_records": "Only records already open under configs/measured_comparison_v1.json are read. Reserved records stay closed.",
+    "wording": "Say 'compared with published measurements'. Never say 'validated'."
+  },
+  "design": {"count": 2, "option": "opposite", "mission": "pi"},
+  "current_sharing": {
+    "question": "Does the model split current between cells the way the real module did?",
+    "records": ["test28_exact_m50t_module", "test53_used_fixture"],
+    "method": "Same simulation as the measured comparison: identical cells, ladder with both outputs at cell 1, the dataset's 3 mOhm links. Each cell's share is its current divided by the total, which cancels any gain error in the Hall sensors. Hall channels 1 to 4 are taken as ladder positions 1 to 4, the mapping the temperature channels already use.",
+    "bands": {"mean_absolute_share_error_points": 2.5, "busiest_cell_match_fraction": 0.8}
+  },
+  "error_budget": {
+    "question": "Are the known model errors smaller than the margins the 2-cell decision relies on?",
+    "voltage": {
+      "record": "test28_exact_m50t_module",
+      "charge_window_pct": [50, 70],
+      "method": "Signed error, simulated minus measured, inside the charge window the Pi job uses. Charge is counted from the starting charge at the case current over 20 Ah.",
+      "pass": "The largest error is smaller than the worst-case voltage margin of the design."
+    },
+    "temperature": {
+      "method": "Take the largest measured over simulated rise across all 12 cases and apply it to the design's worst-case rise above 23 C.",
+      "limit_C": 55,
+      "limit_source": "LG INR21700 M50T product specification, discharge operating range -20 to 55 C",
+      "pass": "The scaled temperature stays below the limit."
+    }
+  },
+  "constant_power": {
+    "question": "Is 8.42 A a fair stand-in for a real constant-power load?",
+    "method": "Three rounds of a 48-step current profile, each step 25 W divided by 0.9 and the voltage from the round before.",
+    "pass": "The constant-current case is at least as hard on peak current, lowest voltage and final charge."
+  },
+  "entropy_sensitivity": {
+    "question": "Does the open OCV slope against entropy finding (VF3-08) change the decision?",
+    "variants": ["as_deployed", "no_reversible_heat", "slope_from_ocv_table", "slope_from_ocv_table_reversed"],
+    "scenario": "Normal cooling and halved cooling with halved heat capacity.",
+    "pass": "Every variant stays below the 55 C limit."
+  },
+  "low_charge": {
+    "question": "Does the unvalidated LG low-charge table change touch the result?",
+    "threshold_pct": 18,
+    "scenario": "Normal design and the combined weak cell in either position.",
+    "pass": "No cell reaches the threshold during the Pi job."
+  }
+}

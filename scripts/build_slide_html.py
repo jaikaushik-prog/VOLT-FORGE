@@ -64,7 +64,7 @@ def main():
 <section class="proto"><h2>Prototype &amp; evidence<span>The real Pi design, then 4 cells against 2 under the same load</span></h2>
 <div class="shot one"><img src="assets/circuit.png" alt="The 4-cell Pi backup circuit in VOLT-FORGE with the properties of Cell 1 open"></div>
 <div class="shot two"><img src="assets/compare.png" alt="VOLT-FORGE comparing the 4-cell and 2-cell designs, with the full results table"></div>
-<div class="proofs"><div><b>{k['study_runs']:,} what-if runs.</b> Weak cells, bad links, poor cooling: we tried to break it first.</div><div><b>{k['lab_experiments']} lab experiments.</b> Real four-cell test data, with all {k['data_files']} files checked one by one.</div><div><b>{k['sealed_total']} tests kept sealed.</b> Held back from every fit, so the final exam uses unseen data.</div></div>
+<div class="proofs"><div><b>{k['study_runs']:,} what-if runs.</b> Weak cells, bad links, poor cooling: we tried to break it first.</div><div><b>{k['lab_experiments']} published lab experiments.</b> Real four-cell test data, with all {k['data_files']} files verified intact.</div><div><b>{k['sealed_total']} tests kept sealed.</b> Held back from every fit, so the final exam uses unseen data.</div></div>
 </section>
 <section class="col right">
 <div class="c"><h2>Engineering quality</h2><h3>Now, why should you trust that?</h3><p>Heat is just electricity that never reached the load. So every run has to balance: energy out of the cells equals energy delivered plus heat. If it doesn't, the result gets flagged. Cooling varies by rig, so temperature stays a <b>range</b>.</p></div>
