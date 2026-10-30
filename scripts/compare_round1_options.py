@@ -82,7 +82,7 @@ def scenario_models(studio,graph,scenario,cache):
         if scenario['cell_index'] is not None and index!=scenario['cell_index']:continue
         parent=studio.models[cell['model']]
         if parent.get('kind')!='temperature_dependent_ecm/1':raise ValueError('Sensitivity requires an explicit lookup cell model.')
-        allowed={'kind','capacity_Ah','soc','temperature_C','nrc','ocv_V','r0_ohm','r_ohm','tau_s','entropy','thermal_defaults'}
+        allowed={'kind','capacity_Ah','soc','temperature_C','nrc','ocv_V','r0_ohm','r_ohm','tau_s','entropy','thermal_defaults','deployment_domain'}
         definition={k:deepcopy(v) for k,v in parent.items() if k in allowed}
         definition['name']=parent['name']+' / '+scenario['name']
         definition['name']=definition['name'][:80]

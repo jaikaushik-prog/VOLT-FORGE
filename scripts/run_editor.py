@@ -3,6 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import argparse
+import errno
 import json
 import mimetypes
 import secrets
@@ -29,7 +30,7 @@ STATIC = {'/': 'index.html', '/index.html': 'index.html', '/style.css': 'style.c
           '/app.js': 'app.js', '/state.mjs': 'state.mjs', '/assembly.mjs': 'assembly.mjs', '/panels.mjs': 'panels.mjs', '/workspace.mjs': 'workspace.mjs', '/favicon.svg': 'favicon.svg',
           '/measurements': 'measurements.html', '/measurements.js': 'measurements.js', '/measurements.css': 'measurements.css'}
 STATIC.update({'/studio.js':'studio.js','/studio.css':'studio.css','/studio-canvas.mjs':'studio-canvas.mjs','/studio-walkthrough.mjs':'studio-walkthrough.mjs','/studio-cells.mjs':'studio-cells.mjs','/studio-protection.mjs':'studio-protection.mjs','/studio-conductors.mjs':'studio-conductors.mjs','/custom-cell-format.md':'custom-cell-format.md',
-               '/studio-charts.mjs':'studio-charts.mjs','/studio-state.mjs':'studio-state.mjs'})
+               '/studio-charts.mjs':'studio-charts.mjs','/studio-mission.mjs':'studio-mission.mjs','/studio-state.mjs':'studio-state.mjs'})
 
 
 def error(code, message):
@@ -256,7 +257,12 @@ def main():
     parser.add_argument('--project', type=Path, default=ROOT / 'workspace/editor_project')
     parser.add_argument('--open', action='store_true', help='Open the editor in your default browser')
     args = parser.parse_args()
-    server = EditorServer(('127.0.0.1', args.port), args.project)
+    try:
+        server = EditorServer(('127.0.0.1', args.port), args.project)
+    except OSError as exc:
+        if exc.errno in (errno.EADDRINUSE, errno.EACCES):
+            raise SystemExit(f'Port {args.port} is already in use. Close the other editor or choose another port with --port.') from None
+        raise
     url = f'http://127.0.0.1:{server.server_port}'
     print(f'VOLT-FORGE editor: {url}\nWorking project: {server.project}\nCtrl+C to stop.', flush=True)
     if args.open:

@@ -4,27 +4,87 @@
   "note": "Public listing prices. Each part is one exact item, and its price is the average of its own listings.",
   "items": {
     "cell:LG_M50T_ECN": {
-      "name": "LG INR21700-M50T cell", "slot": "cell", "checked": "2026-10-30",
+      "name": "LG INR21700-M50T cell",
+      "slot": "cell",
+      "checked": "2026-10-30",
       "exclusions": "Listing includes GST. Listed as out of stock when checked.",
       "listings": [
-        {"seller": "Robu", "price": 1206, "currency": "INR", "url": "https://robu.in/product/lg-inr21700-m50t-5000mah-1c-li-ion-battery/", "tax": "Includes GST", "availability": "Out of stock"}
+        {
+          "seller": "Robu",
+          "price": 1206,
+          "currency": "INR",
+          "url": "https://robu.in/product/lg-inr21700-m50t-5000mah-1c-li-ion-battery/",
+          "tax": "Includes GST",
+          "availability": "Out of stock"
+        }
       ]
     },
     "cell:SAMSUNG_30T": {
-      "name": "Samsung INR21700-30T cell", "slot": "cell", "checked": "2026-10-30",
+      "name": "Samsung INR21700-30T cell",
+      "slot": "cell",
+      "checked": "2026-10-30",
       "exclusions": "US listing. Not converted to rupees.",
       "listings": [
-        {"seller": "IMR Batteries", "price": 6.99, "currency": "USD", "url": "https://imrbatteries.com/products/samsung-30t-21700-3000mah-35a-battery", "tax": "Not stated", "availability": "Listed"}
+        {
+          "seller": "IMR Batteries",
+          "price": 6.99,
+          "currency": "USD",
+          "url": "https://imrbatteries.com/products/samsung-30t-21700-3000mah-35a-battery",
+          "tax": "Not stated",
+          "availability": "Listed"
+        }
       ]
     },
     "copper": {
-      "name": "ETP copper", "slot": "conductor", "checked": "2026-10-30",
+      "name": "ETP copper",
+      "slot": "conductor",
+      "checked": "2026-10-30",
       "exclusions": "Indicative rate per kg for a 12 mm busbar. Not a quote for thin fabricated links.",
       "listings": [
-        {"seller": "B B Electrotechnic", "price": 920, "currency": "INR", "url": "https://www.bbelectro.net/etp-copper-busbars.html", "tax": "Not stated", "availability": "Indicative"}
+        {
+          "seller": "B B Electrotechnic",
+          "price": 920,
+          "currency": "INR",
+          "url": "https://www.bbelectro.net/etp-copper-busbars.html",
+          "tax": "Not stated",
+          "availability": "Indicative"
+        }
       ]
     },
-    "converter": {"name": "Boost converter", "slot": "converter", "note": "Not priced yet", "listings": []},
-    "protection": {"name": "Fuse or protection board", "slot": "protection", "note": "Not priced yet", "listings": []}
+    "converter": {
+      "name": "Geekworm X1206 V2.0 UPS board",
+      "slot": "converter",
+      "checked": "2026-10-30",
+      "exclusions": "Batteries, shipping and import duty not included. The page showed both \"Only 37 items in stock\" and \"Out of stock\".",
+      "specification": "Four 21700 slots, 5.1 V ±5% at up to 6 A, for Raspberry Pi 5.",
+      "limits": "No battery-side cutoff or efficiency is published, and the listing does not confirm running with fewer than four cells fitted.",
+      "listings": [
+        {
+          "seller": "Geekworm",
+          "price": 52.0,
+          "currency": "USD",
+          "url": "https://geekworm.com/products/x1206",
+          "tax": "Not stated",
+          "availability": "Contradictory on the page"
+        }
+      ],
+      "not_averaged": [
+        {
+          "seller": "The Pi Hut",
+          "price": 45.9,
+          "currency": "GBP",
+          "url": "https://thepihut.com/products/suptronics-x1206-4-cell-21700-ups-for-raspberry-pi",
+          "reason": "Older V1.1 board in another currency, so it is a different part."
+        }
+      ]
+    },
+    "protection": {
+      "name": "Battery protection",
+      "slot": "protection",
+      "included_in": "Geekworm X1206 V2.0 UPS board",
+      "note": "Included in the UPS board",
+      "specification": "The maker lists battery overcurrent, overvoltage and reverse-cell protection. Not certified or independently tested here.",
+      "listings": []
+    }
   }
 }

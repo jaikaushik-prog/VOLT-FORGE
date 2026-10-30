@@ -27,7 +27,8 @@ def unit_price(item):
 
 def line(item, quantity, unit, multiplier=1.):
     price = unit_price(item)
-    row = dict(part=item['name'], slot=item['slot'], quantity=quantity, unit=unit, listings=item.get('listings', []), exclusions=item.get('exclusions', ''), checked=item.get('checked'))
+    row = dict(specification=item.get('specification'), limits=item.get('limits'), part=item['name'], slot=item['slot'], quantity=quantity, unit=unit, listings=item.get('listings', []), exclusions=item.get('exclusions', ''), checked=item.get('checked'))
+    if item.get('included_in'): return dict(row, priced=False, included=True, note=item['note'])
     if price is None: return dict(row, priced=False, note=item.get('note', 'Not priced yet'))
     return dict(row, priced=True, unit_price=price['value'], currency=price['currency'], listing_count=price['listing_count'], cost=price['value']*quantity*multiplier)
 
@@ -50,5 +51,5 @@ def estimate(graph, bank, prices):
     subtotals = {}
     for row in lines:
         if row['priced']: subtotals[row['currency']] = subtotals.get(row['currency'], 0.)+row['cost']
-    return dict(version=VERSION, lines=lines, subtotals=subtotals, unpriced=[r['part'] for r in lines if not r['priced']],
+    return dict(version=VERSION, lines=lines, subtotals=subtotals, unpriced=[r['part'] for r in lines if not r['priced'] and not r.get('included')],
                 cell_mass_g=physical['cell_mass_g'], listed_mass_g=physical['listed_component_mass_g'], scope=SCOPE, checked=prices.get('checked'))

@@ -36,8 +36,9 @@ export function cellImage({id='preview',selected=false,attention=false,name='',v
 export function thumbnail(cell) {
   return `<svg class="cell-thumbnail" viewBox="-70 -125 140 255" aria-label="${esc(cell.name)} selected">${cellImage({id:'thumbnail',name:'',small:true})}</svg>`;
 }
-export function renderCanvas(graph,{mode='assembly',selected=null,layer='none',row=null,tool='select',pending=null,prefix='main',alertCells=[],alertConnections=[],interactive=true}={}) {
-  const width=Math.max(1020,...graph.cells.map(c=>c.x+140)),height=Math.max(500,...graph.cells.map(c=>c.y+180));
+export function renderCanvas(graph,{mode='assembly',selected=null,layer='none',row=null,tool='select',pending=null,prefix='main',alertCells=[],alertConnections=[],interactive=true,load=null}={}) {
+  const loadX=Math.max(0,...graph.cells.map(c=>c.x))+215;
+  const width=Math.max(1020,...graph.cells.map(c=>c.x+140),load?loadX+130:0),height=Math.max(500,...graph.cells.map(c=>c.y+180));
   const cells=Object.fromEntries(graph.cells.map(c=>[c.id,c]));
   const point=t=>{const [id,pole]=t.split(':');return terminalPoint(cells[id],pole,mode);};
   const wires=graph.connections.map(w=>{
@@ -59,7 +60,13 @@ export function renderCanvas(graph,{mode='assembly',selected=null,layer='none',r
     const t=c.id+':'+p,{x,y}=point(t),output=Object.entries(graph.output).find(([k,v])=>v===t)?.[0];
     return `<g data-terminal="${t}" class="terminal ${pending===t?'pending':''}" tabindex="${interactive?'0':'-1'}" role="${interactive?'button':'img'}" aria-label="${esc(c.name)} ${p==='p'?'positive':'negative'} terminal${output?', battery '+output+' output':''}"><circle cx="${x}" cy="${y}" r="14" class="terminal-hit"/><circle cx="${x}" cy="${y}" r="${tool==='connect'||pending===t?7:5}" fill="${output?'#2458c5':'#fff'}" stroke="${output?'#2458c5':'#7489a3'}" stroke-width="2"/>${output?`<g transform="translate(${x+12} ${y-4})"><rect x="0" y="-10" width="29" height="18" rx="5" fill="#e8f0ff"/><text x="14" y="3" text-anchor="middle" font-size="10" fill="#2458c5" font-weight="650">${output==='positive'?'OUT+':'OUT−'}</text></g>`:''}</g>`;
   }).join('')).join('');
-  return `<svg id="battery-canvas" viewBox="0 0 ${width} ${height}" class="battery-canvas ${tool==='connect'?'connecting':''}" aria-label="Editable battery ${mode}" data-width="${width}" data-height="${height}">${wires}${bodies}${handles}</svg>`;
+  const loadBlock=()=>{
+    if(!load||!graph.output?.positive||!graph.output?.negative)return '';
+    const a=point(graph.output.positive),b=point(graph.output.negative),mid=(a.y+b.y)/2,top=mid-46,bottom=mid+46;
+    const wire=(p,edge,rail)=>`<path d="M ${p.x} ${p.y} V ${rail} H ${loadX} V ${edge}" class="load-wire"/>`;
+    return `<g class="load-block" data-act="view:test" role="button" tabindex="${interactive?'0':'-1'}" aria-label="Load: ${esc(load.name)}, ${esc(load.detail)}. Open the test settings."><title>The load this design is tested against. It is not part of the circuit you wire.</title>${wire(a,top,a.y-34)}${wire(b,bottom,b.y+34)}<rect x="${loadX-122}" y="${top}" width="244" height="92" rx="12"/><text x="${loadX}" y="${mid-20}" text-anchor="middle" class="load-kind">${load.charging?'CHARGER':'LOAD'}</text><text x="${loadX}" y="${mid+2}" text-anchor="middle" class="load-name">${esc(load.name.length>32?load.name.slice(0,31)+'…':load.name)}</text><text x="${loadX}" y="${mid+24}" text-anchor="middle" class="load-detail">${esc(load.detail)}</text></g>`;
+  };
+  return `<svg id="battery-canvas" viewBox="0 0 ${width} ${height}" class="battery-canvas ${tool==='connect'?'connecting':''}" aria-label="Editable battery ${mode}" data-width="${width}" data-height="${height}">${wires}${bodies}${handles}${loadBlock()}</svg>`;
 }
 export function heroBattery() {
   const graph={cells:[0,1,2,3].map(i=>({id:'hero'+i,name:'',x:150+i*155,y:205,charge_pct:70,temperature_C:23})),connections:[],output:{}};

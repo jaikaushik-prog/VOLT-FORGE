@@ -114,7 +114,8 @@ def test_cost_keeps_currencies_apart_and_never_prices_an_unknown_at_zero():
     g = design(2); g['cells'][1]['model'] = 'SAMSUNG_30T'
     result = estimate(g, BANK, prices)
     assert result['subtotals'] == {'INR': 1206, 'USD': 6.99}
-    assert 'Test converter' in result['unpriced']
+    assert 'Test converter' in result['unpriced'] and 'Battery protection' not in result['unpriced']
+    assert next(r for r in result['lines'] if r['part'] == 'Battery protection')['included'] is True
     assert next(r for r in result['lines'] if r['part'] == 'Test converter')['priced'] is False
 
 
@@ -210,3 +211,13 @@ def test_sizing_verdict_does_not_pass_an_untargeted_case():
     r = R(); r.stop = None
     r.summary = dict(checks=[], assessment=dict(requested_demand_met=True), thermal_available=True, verification={})
     assert sizing_verdict(r, None) == 'incomplete'
+
+
+def test_a_copied_cell_keeps_its_narrower_model_domain():
+    from voltforge.models.cell_catalogue import CellModel
+    from voltforge.models.custom_cells import normalize
+    parent = BANK['SAMSUNG_30T']
+    fields = ('kind', 'capacity_Ah', 'soc', 'temperature_C', 'nrc', 'ocv_V', 'r0_ohm', 'r_ohm', 'tau_s', 'deployment_domain')
+    clone = normalize(dict({k: deepcopy(parent[k]) for k in fields}, name='Samsung copy', thermal_preset='none'), 'copy')
+    assert CellModel(clone).soc_range == CellModel(parent).soc_range == (.15, 1.)
+    assert CellModel(clone).temperature_range == CellModel(parent).temperature_range

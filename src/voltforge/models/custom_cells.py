@@ -11,7 +11,7 @@ from .cell_catalogue import BASIC_KIND, KIND, CellModel
 VERSION = 'voltforge.custom-cell/1'
 FIELDS = {'version','kind','name','capacity_Ah','nominal_voltage_V','resistance_mohm',
           'source','thermal_defaults','operating_limits','reference','soc','temperature_C',
-          'nrc','ocv_V','r0_ohm','r_ohm','tau_s','geometry','entropy','thermal_preset'}
+          'nrc','ocv_V','r0_ohm','r_ohm','tau_s','geometry','entropy','thermal_preset','deployment_domain'}
 THERMAL_PRESET = dict(version='example_cylindrical/1',heat_capacity_J_K=70.,ambient_conductance_W_K=.15,
                       status='Assumed heat model',source='Illustrative cylindrical-cell heat capacity and room-cooling assumptions; not measurements of this custom cell.')
 

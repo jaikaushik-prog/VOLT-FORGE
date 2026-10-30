@@ -23,6 +23,7 @@ export function chartSvg(test,metric='current',index=0,hidden=new Set()) {
   const ticks=Array.from({length:5},(_,i)=>lo+(hi-lo)*i/4);
   const tickDigits=Math.min(4,Math.max(metric==='voltage'?2:1,-Math.floor(Math.log10((hi-lo)/4))));
   const grid=ticks.map(v=>`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#e4eaf1"/><text x="${L-12}" y="${y(v)+4}" text-anchor="end" fill="#5b6a7d" font-size="12">${fmt(v,tickDigits)}</text>`).join('');
+  const axes=`<text class="axis-unit" x="${L-34}" y="${T-10}" fill="#5b6a7d" font-size="12" font-weight="600">${esc(field.unit)}</text><text class="axis-unit" x="${W-R-30}" y="${H-28}" fill="#5b6a7d" font-size="12" font-weight="600">Time</text>`;
   const xticks=Array.from({length:5},(_,i)=>duration*i/4).map(t=>`<text x="${x(t)}" y="${H-12}" text-anchor="middle" fill="#5b6a7d" font-size="12">${esc(timeLabel(t))}</text>`).join('');
   // Extrema-preserving buckets retain spikes when trajectories exceed screen resolution.
   const paths=[];
@@ -39,7 +40,7 @@ export function chartSvg(test,metric='current',index=0,hidden=new Set()) {
   }
   const selected=rows[Math.min(index,rows.length-1)],cx=x(selected.time_s);
   const probes=selected[field.field].map((v,i)=>hidden.has(i)||v===null?'':`<circle cx="${cx}" cy="${y(v)}" r="4.6" fill="${palette[i%4]}" stroke="#fff" stroke-width="2"/>`).join('');
-  return `<svg id="result-chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${field.title}. Use the time control below or hover to inspect values." data-left="${L}" data-width="${pw}" data-total="${W}" data-duration="${duration}" data-min="${lo}" data-max="${hi}">${grid}${xticks}${paths.join('')}<g id="chart-probe"><line x1="${cx}" x2="${cx}" y1="${T}" y2="${H-B}" stroke="#7f92aa" stroke-dasharray="4 4"/>${probes}</g><rect x="${L}" y="${T}" width="${pw}" height="${ph}" fill="transparent" class="chart-hit"/></svg>`;
+  return `<svg id="result-chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${field.title}. Use the time control below or hover to inspect values." data-left="${L}" data-width="${pw}" data-total="${W}" data-duration="${duration}" data-min="${lo}" data-max="${hi}">${axes}${grid}${xticks}${paths.join('')}<g id="chart-probe"><line x1="${cx}" x2="${cx}" y1="${T}" y2="${H-B}" stroke="#7f92aa" stroke-dasharray="4 4"/>${probes}</g><rect x="${L}" y="${T}" width="${pw}" height="${ph}" fill="transparent" class="chart-hit"/></svg>`;
 }
 export function probeSvg(test,metric,index,hidden,lo,hi,duration){
   const field=chartFields[metric],row=test.rows[index],cx=58+row.time_s/duration*940;

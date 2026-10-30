@@ -350,7 +350,7 @@ class Studio:
         # The calculation has its own immutable snapshot, even if another tab edits meanwhile.
         tid='test_'+secrets.token_hex(8)
         current=s['profile'][0]['current_A']; duration=s['profile'][-1]['end_s']
-        generated=f'{duration/60:g} min · '+('changing load' if len(s['profile'])>1 else f'{abs(current):g} A '+('charge' if current<0 else 'discharge' if current>0 else 'rest'))
+        generated=f'{duration/60:g} min · '+('changing load' if len(s['profile'])>1 else f'{round(abs(current),2):g} A '+('charge' if current<0 else 'discharge' if current>0 else 'rest'))
         title=title.strip() if isinstance(title,str) and title.strip() else generated
         if len(title)>120: raise ValueError('Keep the test name under 120 characters.')
         record=dict(id=tid,design_id=design_id,name=title,created_utc=utc(),design_name=g['name'],

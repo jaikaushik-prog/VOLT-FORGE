@@ -37,10 +37,10 @@ def pi5_gateway_backup():
                 source='5 V, 5 A supply recommendation from Raspberry Pi. Converter efficiency, run time, voltage limit and room temperature are study assumptions.')
     return dict(case=case, load=dict(kind='power', power_W=power, converter_efficiency=efficiency, current_A=current), requirements=[
         requirement('device_power_W', 'Pi supply power', power, 'W', 'sourced', 'The 5 V, 5 A recommended supply, an upper envelope and not a measured draw.', PI_SUPPLY_URL),
-        requirement('converter_efficiency', 'Converter efficiency', efficiency, 'ratio', 'assumed', 'Typical assumption for a boost converter. Not a selected part yet.'),
+        requirement('converter_efficiency', 'Converter efficiency', efficiency, 'ratio', 'assumed', 'Typical assumption for a boost converter. The selected UPS board publishes no efficiency.'),
         requirement('load_current_A', 'Battery current', current, 'A', 'assumed', 'Power divided by efficiency and the voltage limit. Held constant as an approximation.'),
         requirement('duration_s', 'Run time', 600., 's', 'assumed', 'Covers a short outage or a safe shutdown.'),
-        requirement('voltage_floor_V', 'Lowest battery voltage', floor, 'V', 'assumed', 'Declared minimum at the converter input.'),
+        requirement('voltage_floor_V', 'Lowest battery voltage', floor, 'V', 'assumed', 'Declared minimum at the converter input. The selected UPS board publishes no numeric cutoff.'),
         requirement('ambient_C', 'Room temperature', 23., '°C', 'assumed', 'Declared study condition.')])
 
 
