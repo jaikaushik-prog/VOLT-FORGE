@@ -6,7 +6,63 @@ different from a component operating limit or an application target violation.
 from copy import deepcopy
 
 
+SIZING_CLAIM='Smallest qualifying design among the parallel arrangements tested'
+SIZING_SCOPE='Nominal conditions for the saved load. The design study adds cell mismatch and sensitivity cases.'
+
+
+def resize_parallel(graph,count):
+    """Rebuild a parallel ladder at another size, keeping models, states and link assumptions."""
+    from .network import template
+    cells=graph['cells'];ids=[c['id'] for c in cells];n=len(ids);out=graph['output']
+    problem=ValueError('Find the smallest design works on a simple parallel battery: each cell linked to the next, positive to positive and negative to negative.')
+    links={}
+    for w in graph['connections']:
+        a,pole_a=w['a'].split(':');b,pole_b=w['b'].split(':')
+        if pole_a!=pole_b or abs(ids.index(a)-ids.index(b))!=1:raise problem
+        links[(min(ids.index(a),ids.index(b)),pole_a)]=w
+    if set(links)!={(i,p) for i in range(n-1) for p in 'pn'}:raise problem
+    if not n or out['positive']!=ids[0]+':p' or out['negative'] not in (ids[0]+':n',ids[-1]+':n'):raise problem
+    opposite=n>1 and out['negative']==ids[-1]+':n'
+    g=deepcopy(graph);kept=deepcopy(cells[:count])
+    for k in range(n,count):
+        clone=deepcopy(cells[-1]);clone.update(id=f'cell{k+1}',name=f'Cell {k+1}',x=180+(k%4)*210,y=210+(k//4)*260)
+        kept.append(clone)
+    g['cells']=kept;fresh=template('parallel',2)['connections'][0];wires=[]
+    for i in range(count-1):
+        for pole in 'pn':
+            w=deepcopy(links.get((i,pole)) or links.get((n-2,pole)) or fresh)
+            w.update(id=f'wire{len(wires)+1}',a=f'{kept[i]["id"]}:{pole}',b=f'{kept[i+1]["id"]}:{pole}');wires.append(w)
+    g['connections']=wires
+    g['output']=dict(positive=kept[0]['id']+':p',negative=kept[-1 if opposite else 0]['id']+':n')
+    names={c['id'] for c in kept};th=g['thermal']
+    th['contacts']=[c for c in th['contacts'] if c['a'] in names and c['b'] in names]
+    if 'cell_parameters' in th:
+        last=th['cell_parameters'].get(ids[-1])
+        th['cell_parameters']={k:v for k,v in th['cell_parameters'].items() if k in names}
+        for c in kept[n:]:
+            if last:th['cell_parameters'][c['id']]=deepcopy(last)
+    return g
+
+
+def sizing_verdict(result,ready):
+    """Keep refused, unsupported and incomplete cases apart from cases that qualify."""
+    if result is None:return 'refused' if (ready or {}).get('violation') else 'unsupported'
+    summary=result.summary;checks={c['metric']:c['status'] for c in summary['checks']}
+    if result.stop:return 'unsupported' if result.stop['reason'] in ('charge_domain','temperature_domain') else 'failed'
+    if 'exceeded' in checks.values() or not summary['assessment']['requested_demand_met']:return 'failed'
+    if 'min_voltage_V' not in checks or not summary['thermal_available'] or summary['verification'].get('first_law_closed') is False:return 'incomplete'
+    return 'qualifies'
+
+
+def smallest(cases):
+    passing=[c for c in cases if c.get('sizing')=='qualifies']
+    return min(passing,key=lambda c:c['cell_count'],default=None)
+
+
 def scenarios(graph,settings,condition):
+    if condition=='cell_count':
+        resize_parallel(graph,1)
+        return [dict(name=f'{k} cell'+('s' if k>1 else ''),factor=1.,ambient_offset=0.,extra_resistance=0.,cell_count=k) for k in range(1,min(16,max(4,len(graph['cells'])))+1)]
     specs=[dict(name='Saved baseline',factor=1.,ambient_offset=0.,extra_resistance=0.)]
     if condition=='load':
         specs += [dict(name=f'{x:g}× battery demand',factor=x,ambient_offset=0.,extra_resistance=0.) for x in (1.25,1.5,2.,3.)
@@ -23,6 +79,7 @@ def scenarios(graph,settings,condition):
 
 def inputs(graph,settings,spec):
     g=deepcopy(graph);s=deepcopy(settings)
+    if spec.get('cell_count'):g=resize_parallel(g,spec['cell_count'])
     for p in s['profile']:p['current_A']*=spec['factor']
     s['ambient_C']+=spec['ambient_offset']
     if spec['extra_resistance']:

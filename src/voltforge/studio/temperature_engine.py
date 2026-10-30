@@ -99,7 +99,7 @@ def _simulate(graph, settings, bank):
     models = [CellModel(bank[c['model']]) for c in cells]
     thermal_available=all(m.has_thermal for m in models)
     protection=VirtualProtection(settings.get('protection'),duration)
-    if protection.config and protection.config['temperature_max_C'] is not None and not thermal_available:
+    if protection.config and (protection.config['temperature_max_C'] is not None or protection.config.get('charge_temperature_C') is not None) and not thermal_available:
         raise ValueError('Temperature-based protection needs a thermal model for every cell. Add thermal properties or disable that threshold.')
     q = np.array([m.capacity for m in models]); nrc = max(m.nrc for m in models)
     active = np.array([[j < m.nrc for j in range(nrc)] for m in models])
@@ -222,7 +222,9 @@ def _simulate(graph, settings, bank):
             for i, m in enumerate(models):
                 if not m.supported(float(zz[i]), float(tt[i])):
                     reason = 'charge_domain' if not m.soc_range[0] <= zz[i] <= m.soc_range[1] else 'temperature_domain'
-                    return None, dict(reason=reason, cell=cells[i]['id'], message=cells[i]['name']+' reached the edge of its recorded '+('charge' if reason=='charge_domain' else 'cell-temperature')+' data.')
+                    detail = f'charge data ({100*m.soc_range[0]:g}% to {100*m.soc_range[1]:g}%). Shorten the test, lower the load or change its starting charge.' if reason == 'charge_domain' else \
+                        f'cell-temperature data ({m.temperature_range[0]:g} to {m.temperature_range[1]:g} °C). Lower the load, shorten the test or change the cooling.'
+                    return None, dict(reason=reason, cell=cells[i]['id'], message=cells[i]['name']+' reached the edge of its recorded '+detail)
             vv, _, work = rc_interval(vp, active*current[:, None], resistance, tau, step)
             end = solution_at(zz, tt, vv, load)
             error = operating_error(tt, end[-1])
@@ -312,7 +314,21 @@ def _simulate(graph, settings, bank):
                 entry['status']='User-adjusted heat model';entry['source']='User-entered '+ ' and '.join(changed)+'. Other parameters retain their recorded sources.'
             summary['thermal_assumptions'].append(entry)
     from .conductors import physical_summary
+    from .design_rules import review
+    summary['design_warnings']=review(graph,bank)
+    if any(r['current_A']<0 for r in rows):
+        summary['charging']=dict(elapsed_s=rows[-1]['time_s'],charge_gained_Ah=float(-charges.sum()/3600),energy_received_Wh=rows[-1]['received_energy_Wh'],
+                                 stop_reason=stop['reason'] if stop else 'requested_time_reached',stop_message=stop['message'] if stop else 'The requested test time ended.',
+                                 note='Simulated time under this constant-current test, not a full recharge time.')
     summary['physical_components']=physical_summary(graph,bank)
     summary['metrics']['conductor_mass_g']=summary['physical_components']['conductor_mass_g']
+    # Reported for judgement. A generic A/mm2 figure is not a certified current rating.
+    links={link['connection']:link['area_mm2'] for link in summary['physical_components']['conductors']}
+    checks=[]
+    for j,w in enumerate(graph['connections']):
+        peak=max(abs(r['wire_current_A'][j] or 0.) for r in rows)
+        checks.append(dict(connection=w['id'],peak_current_A=peak,peak_loss_W=max(r['wire_loss_W'][j] for r in rows),area_mm2=links.get(w['id']),
+                           current_density_A_mm2=peak/links[w['id']] if w['id'] in links else None))
+    summary['link_checks']=dict(links=checks,note='Calculated current and loss. This is not a certified current rating.')
     summary['assessment']['interval_boundary_checks'] = 'Quarter-step domain/operating probes with localized first observed crossing; timestep refinement remains required for continuous claims.'
     return Result(rows, summary, 'stopped' if stop else 'completed', stop)

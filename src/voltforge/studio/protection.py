@@ -9,11 +9,13 @@ import math
 import numpy as np
 
 VERSION='voltforge.virtual-protection/1'
+# Added in V4. Saved V3 definitions without them stay valid and keep their meaning.
+OPTIONAL=('voltage_max_V','charge_temperature_C')
 
 
 def defaults():
     return dict(version=VERSION,sample_period_s=.5,response_delay_s=.5,current_max_A=4.5,
-                voltage_min_V=None,temperature_max_C=None,
+                voltage_min_V=None,voltage_max_V=None,temperature_max_C=None,charge_temperature_C=None,
                 sensor_bias=dict(current_A=0.,voltage_V=0.,temperature_C=0.),
                 source='Declared virtual sensing and ideal external-disconnect assumptions; not verified hardware settings.')
 
@@ -21,15 +23,22 @@ def defaults():
 def validate(config,duration):
     from .network import number
     if config is None:return
-    if not isinstance(config,dict) or set(config)!=set(defaults()) or config['version']!=VERSION:
+    if not isinstance(config,dict) or set(config)|set(OPTIONAL)!=set(defaults()) or config['version']!=VERSION:
         raise ValueError('Use a supported virtual monitoring and protection definition.')
     number(config['sample_period_s'],'Sensor sample interval',.05,60)
     number(config['response_delay_s'],'Protection response delay',0,30)
     if duration/config['sample_period_s']>50000:raise ValueError('Increase the sensor sample interval for this mission.')
-    if all(config[k] is None for k in ('current_max_A','voltage_min_V','temperature_max_C')):
+    if all(config.get(k) is None for k in ('current_max_A','voltage_min_V','voltage_max_V','temperature_max_C','charge_temperature_C')):
         raise ValueError('Set at least one threshold for the virtual protection experiment.')
-    for key,lo,hi in [('current_max_A',.001,200),('voltage_min_V',.001,1000),('temperature_max_C',-40,100)]:
-        if config[key] is not None:number(config[key],key,lo,hi)
+    for key,lo,hi in [('current_max_A',.001,200),('voltage_min_V',.001,1000),('voltage_max_V',.001,1000),('temperature_max_C',-40,100)]:
+        if config.get(key) is not None:number(config[key],key,lo,hi)
+    if config.get('voltage_min_V') is not None and config.get('voltage_max_V') is not None and config['voltage_max_V']<=config['voltage_min_V']:
+        raise ValueError('Set the voltage ceiling above the voltage floor.')
+    window=config.get('charge_temperature_C')
+    if window is not None:
+        if not isinstance(window,list) or len(window)!=2:raise ValueError('Give the charging temperature window as a low and high value.')
+        for value in window:number(value,'Charging temperature window',-40,100)
+        if window[1]<=window[0]:raise ValueError('Set the top of the charging temperature window above the bottom.')
     bias=config['sensor_bias']
     if not isinstance(bias,dict) or set(bias)!={'current_A','voltage_V','temperature_C'}:
         raise ValueError('Declare current, voltage and temperature sensor offsets.')
@@ -58,10 +67,11 @@ class VirtualProtection:
         if not self.config or self.event or round(time,10) not in self.sample_times:return
         self.samples+=1;c=self.config
         quantities=[('voltage_V','voltage_min_V',solution['voltage'],'V',False),
+                    ('voltage_V','voltage_max_V',solution['voltage'],'V',True),
                     ('current_A','current_max_A',solution['current'],'A',True),
                     ('temperature_C','temperature_max_C',temperature,'°C',True)]
         for quantity,threshold,values,unit,upper in quantities:
-            target=c[threshold]
+            target=c.get(threshold)
             if target is None:continue
             for i,true in enumerate(values):
                 measured=float(true)+c['sensor_bias'][quantity]
@@ -73,6 +83,16 @@ class VirtualProtection:
                         true_value=float(true),measured_value=measured,threshold=float(target),
                         source=c['source'],action='Latched ideal external disconnect; parallel-cell connections remain intact')
                     return
+        window=c.get('charge_temperature_C')
+        if window is None:return
+        for i,true in enumerate(temperature):
+            measured=float(true)+c['sensor_bias']['temperature_C']
+            if solution['current'][i]<-1e-9 and not window[0]<=measured<=window[1]:
+                self.event=dict(kind='virtual_protection',cell=cells[i]['id'],quantity='charge_temperature_C',unit='°C',
+                    detected_time_s=float(time),disconnect_time_s=round(float(time+c['response_delay_s']),10),
+                    true_value=float(true),measured_value=measured,threshold=float(window[0] if measured<window[0] else window[1]),
+                    source=c['source'],action='Latched ideal external disconnect; parallel-cell connections remain intact')
+                return
 
     def service(self,profile,final_time=None):
         final_time=self.duration if final_time is None else final_time

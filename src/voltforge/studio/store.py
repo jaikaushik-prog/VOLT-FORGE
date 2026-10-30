@@ -95,6 +95,8 @@ class Studio:
         src=Path(__file__).resolve().parents[1]
         self.software_files={str(p.relative_to(src)):p.read_bytes() for folder in ('studio','models') for p in sorted((src/folder).glob('*.py'))}
         self.software_hash=self._software_hash()
+        from .parts import load_prices
+        self.prices=load_prices(Path(__file__).resolve().parents[3])
         self._ensure()
         with self.lock:self._load_custom_models()
 
@@ -231,7 +233,9 @@ class Studio:
                 brief=deepcopy(index['tests'][tid]); brief['current']=brief['signature']==signature
                 tests.append(brief)
             ready=self.preflight(doc['graph'],doc['settings'])
-            return dict(**doc,readiness=ready,history=tests)
+            from .loads import application_view
+            from .parts import estimate
+            return dict(**doc,readiness=ready,history=tests,application=application_view(doc['settings']),parts=estimate(doc['graph'],self.models,self.prices))
 
     def preflight(self,graph,settings):
         ready=readiness(graph,self.models)
@@ -258,6 +262,8 @@ class Studio:
                                             voltage_V=float(solution['voltage'][i]),temperature_C=cell['temperature_C'],model=cell['model'])
                     raise ValueError(cell['name']+': '+problem[1])
             ready['operating_within_limits']=True
+            from .design_rules import review
+            ready['warnings']=review(graph,self.models)
         except ValueError as exc:
             ready.update(ready=False,message=str(exc))
             if ready['model_supported'] is None:ready['model_supported']=False
@@ -284,7 +290,7 @@ class Studio:
                                      thermal='Heat is calculated from electrical losses, explicit cell contacts and declared cooling settings.',
                                      calibration='Model source, operating range and assessment status are recorded per cell type. Independent module and fixture validation remain required.'))
 
-    def create(self, kind='parallel', count=4, name=None, copy_id=None):
+    def create(self, kind='parallel', count=4, name=None, copy_id=None, mission=None):
         with self.lock:
             if copy_id:
                 old=self._doc(copy_id); graph=deepcopy(old['graph']); graph['name']=name or old['graph']['name']+' copy'
@@ -297,6 +303,10 @@ class Studio:
                 if kind=='parallel' and count==4:
                     from .cases import BENCHMARK
                     settings['case']=deepcopy(BENCHMARK);settings['limits']['min_voltage_V']=3.3
+                if mission is not None:
+                    from .loads import apply_mission,build_mission
+                    if not isinstance(mission,dict):raise ValueError('Choose a test type and a load.')
+                    apply_mission(settings,build_mission(**mission))
             validate_graph(graph,self.models); doc=self._document(graph,settings,origin)
             index=read(self.index_path); index['documents'][doc['id']]=self._brief(doc)
             self._commit({'documents/'+doc['id']+'.json':doc},index)
@@ -340,7 +350,7 @@ class Studio:
         # The calculation has its own immutable snapshot, even if another tab edits meanwhile.
         tid='test_'+secrets.token_hex(8)
         current=s['profile'][0]['current_A']; duration=s['profile'][-1]['end_s']
-        generated=f'{duration/60:g} min · {abs(current):g} A '+('charge' if current<0 else 'discharge' if current>0 else 'rest')
+        generated=f'{duration/60:g} min · '+('changing load' if len(s['profile'])>1 else f'{abs(current):g} A '+('charge' if current<0 else 'discharge' if current>0 else 'rest'))
         title=title.strip() if isinstance(title,str) and title.strip() else generated
         if len(title)>120: raise ValueError('Keep the test name under 120 characters.')
         record=dict(id=tid,design_id=design_id,name=title,created_utc=utc(),design_name=g['name'],
@@ -348,6 +358,8 @@ class Studio:
                     status=result.status,stop=result.stop,summary=result.summary,rows=result.rows)
         record['model_cards']={key:public_model(key,models[key]) for key in models}
         record['case']=deepcopy(result.summary['case'])
+        from .parts import estimate
+        record['parts']=estimate(g,models,self.prices)
         import platform, numpy, scipy, pandas, matplotlib
         record['runtime']=dict(python=platform.python_version(),numpy=numpy.__version__,scipy=scipy.__version__,pandas=pandas.__version__,matplotlib=matplotlib.__version__)
         record['payload_hash']=digest(record)
@@ -439,7 +451,7 @@ class Studio:
         changes=input_changes(physics(tests[0]['graph']),physics(tests[1]['graph']))
         numeric_changes=[c for c in changes if not c['path'].endswith('.source')]
         return dict(tests=tests,identical_test_conditions=same,deltas=deltas,
-                    design_changes=changes,model_versions_match=tests[0]['model_hash']==tests[1]['model_hash'],
+                    design_changes=changes,settings_changes=input_changes(tests[0]['settings'],tests[1]['settings']),model_versions_match=tests[0]['model_hash']==tests[1]['model_hash'],
                     solver_versions_match=tests[0]['software_hash']==tests[1]['software_hash'],
                     single_factor_comparison=same and len(numeric_changes)==1 and tests[0]['model_hash']==tests[1]['model_hash'] and tests[0]['software_hash']==tests[1]['software_hash'],
                     comparable_duration=abs(metric['duration_s']-other['duration_s'])<1e-9,
@@ -484,13 +496,17 @@ class Studio:
                 raise ValueError('The saved investigation was modified. Create a new investigation from the baseline.')
             record['payload_hash']=saved
             if not include_rows:
+                if record['condition']=='cell_count':
+                    from .failure_search import SIZING_CLAIM,SIZING_SCOPE,smallest
+                    best=smallest(record['cases']) if record['complete'] else None
+                    record['sizing']=dict(claim=SIZING_CLAIM,scope=SIZING_SCOPE,smallest_cell_count=best['cell_count'] if best else None)
                 for case in record['cases']:
                     rows=case.pop('rows');position=case['outcome'].get('sample_index')
                     case['sample_row']=rows[position] if rows and position is not None else None
             return record
 
     def investigate_case(self,investigation_id,case_index):
-        from .failure_search import inputs,outcome
+        from .failure_search import inputs,outcome,sizing_verdict
         with self.lock:
             record=self.investigation(investigation_id,include_rows=True)
             if isinstance(case_index,bool) or not isinstance(case_index,int) or not 0<=case_index<len(record['planned']):
@@ -507,6 +523,9 @@ class Studio:
                   outcome=outcome(graph,settings,result,ready),status=result.status if result else 'not_started',
                   stop=result.stop if result else None,summary=result.summary if result else None,rows=result.rows if result else [],
                   affected_connections=[graph['connections'][0]['id']] if record['planned'][case_index]['extra_resistance'] else [])
+        if record['planned'][case_index].get('cell_count'):
+            from .parts import estimate
+            case.update(cell_count=record['planned'][case_index]['cell_count'],sizing=sizing_verdict(result,ready),parts=estimate(graph,models,self.prices))
         with self.lock:
             latest=self.investigation(investigation_id,include_rows=True)
             if len(latest['cases'])==case_index:

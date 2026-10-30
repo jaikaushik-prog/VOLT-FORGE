@@ -92,4 +92,22 @@ def html_report(record):
     case=record.get('case',record['summary'].get('case'))
     if case:
         assessment='<h2>'+escape(case['description']['name'])+'</h2><p>'+escape(case['description']['purpose'])+'</p><p>'+escape(case['description']['source'])+'</p><p class="meta">Application record '+escape(case['fingerprint'])+'; requirements '+escape(case['requirements_fingerprint'])+'</p>'+assessment
+    application=record['summary'].get('application')
+    if application:
+        rows=[('Requirement','Value','Basis','Why')]+[(r['label'],val(r['value'],r['unit'],4),r['basis'],r['reason']) for r in application['requirements']]
+        assessment='<h2>'+escape(application['name'])+'</h2><p>'+escape(application['purpose'])+'</p>'+table(rows)+('<p>'+escape(application['approximation'])+'</p>' if application['approximation'] else '')+assessment
+    warnings=record['summary'].get('design_warnings')
+    if warnings:
+        assessment+='<h2>Wiring warnings</h2><ul>'+''.join('<li>'+escape(w['message'])+'</li>' for w in warnings)+'</ul>'
+    charging=record['summary'].get('charging')
+    if charging:
+        assessment+='<h2>Charging result</h2>'+table([('Quantity','Value'),('Elapsed time',val(charging['elapsed_s'],'s',4)),('Charge gained',val(charging['charge_gained_Ah'],'Ah',4)),
+                                                      ('Energy received',val(charging['energy_received_Wh'],'Wh',4)),('Why it stopped',charging['stop_message'])])+'<p>'+escape(charging['note'])+'</p>'
+    parts=record.get('parts')
+    if parts:
+        rows=[('Part','Quantity','Unit price','Cost','Sellers averaged')]
+        for line in parts['lines']:
+            rows.append((line['part'],f'{line["quantity"]:.4g} {line["unit"]}',f'{line["currency"]} {line["unit_price"]:,.2f}' if line['priced'] else line['note'],
+                         f'{line["currency"]} {line["cost"]:,.2f}' if line['priced'] else 'Not priced',line.get('listing_count','')))
+        assessment+='<h2>Parts and listed cost</h2>'+table(rows)+'<p>'+escape(' + '.join(f'{k} {v:,.2f}' for k,v in parts['subtotals'].items()))+(' plus unpriced parts' if parts['unpriced'] else '')+'. '+escape(parts['scope'])+' Prices checked '+escape(str(parts.get('checked')))+'.</p>'
     return '''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>VOLT-FORGE experiment report</title><style>body{font:15px/1.65 system-ui;color:#213247;max-width:900px;padding:40px 24px;margin:auto}h1{font-size:32px;line-height:1.2}h2{font-size:21px;margin:34px 0 12px}p{max-width:80ch;color:#52647a}table{width:100%;border-collapse:collapse;font-size:13px}td{padding:10px 14px 10px 0;border-bottom:1px solid #dfe6ee}svg{max-width:100%;height:auto}a{color:#2458c5}.notice{padding:14px;background:#f5f0e7}.meta{font-size:12px}footer{margin-top:40px;border-top:1px solid #dfe6ee;font-size:12px;color:#596b80}@media print{body{padding:0}svg,table{break-inside:avoid}h2{break-after:avoid}}</style>'''+f'<h1>{escape(record["design_name"])}</h1><p>{escape(record["name"])}</p><p class="meta">Saved {escape(record["created_utc"])} · Numerical simulation</p>'+stopped+assessment+'<h2>Results</h2>'+table(values)+'<h2>What this experiment shows</h2>'+''.join('<p>'+escape(i)+'</p>' for i in record['summary']['insights'])+''.join(plots)+'<h2>Test conditions</h2><p>Positive current discharges through the chosen battery output. Negative current charges. Room temperature: '+val(settings['ambient_C'],'°C')+'. Solver step: '+val(settings['dt_s'],'s')+'.</p>'+table([('Start','End','Battery current')]+loads)+'<h2>Cells and starting states</h2>'+table([('Cell','Model profile','Starting charge','Starting temperature')]+cells)+'<h2>Electrical connections</h2>'+table([('First terminal','Second terminal','Resistance','Source')]+links)+evidence+'<footer>Open results.csv for the numeric series. Run replay.py with requirements.txt to reproduce this experiment using its captured model and source versions.</footer></html>'

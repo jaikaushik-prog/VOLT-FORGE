@@ -179,6 +179,8 @@ class Circuit:
         for c in self.cells:
             if roots[c['id']+':p'] == roots[c['id']+':n']:
                 raise ValueError(f'{c["name"]} has a short circuit. Remove the link joining its two terminals.')
+        from .design_rules import check_self_short
+        check_self_short(graph)
         edges = {r:set() for r in roots.values()}
         used = set(out.values())
         for w in self.wires:
@@ -264,11 +266,14 @@ def integration_grid(s):
 
 
 def validate_settings(s):
-    if not isinstance(s, dict) or set(s)-{'profile','ambient_C','dt_s','limits','case','protection'} or not {'profile','ambient_C','dt_s','limits'}<=set(s):
+    if not isinstance(s, dict) or set(s)-{'profile','ambient_C','dt_s','limits','case','protection','mission'} or not {'profile','ambient_C','dt_s','limits'}<=set(s):
         raise ValueError('Unsupported test settings.')
     if 'case' in s:
         from .cases import validate_case
         validate_case(s['case'])
+    if 'mission' in s:
+        from .loads import validate_mission
+        validate_mission(s['mission'])
     if not isinstance(s['profile'],list) or not 1 <= len(s['profile']) <= 48 or any(not isinstance(p,dict) or set(p) != {'start_s','end_s','current_A'} for p in s['profile']):
         raise ValueError('Use between 1 and 48 load intervals.')
     for p in s['profile']:
@@ -422,7 +427,9 @@ def summarize(rows,graph,settings,*,completed=True,service_met=True):
         residual,loss=rows[-1]['first_law_residual_J'],rows[-1]['electrical_dissipation_J']
         verification.update(first_law_residual_J=residual,electrical_dissipation_J=loss,
                             first_law_tolerance=FIRST_LAW_TOLERANCE,first_law_closed=bool(abs(residual)<=FIRST_LAW_TOLERANCE*max(1.,abs(loss))))
+    from .loads import application_view
     return dict(metrics=metrics,checks=checks,insights=insights,verification=verification,case=case_record(graph,settings),
+                application=application_view(settings),
                 coverage=dict(requested_duration_s=float(settings['profile'][-1]['end_s']),completed_duration_s=float(t[-1]),complete=bool(completed)),
                 assessment=dict(execution='completed' if completed else 'stopped',
                                 target_basis='Calculated samples, interval endpoints and both sides of load events',
