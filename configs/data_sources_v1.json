@@ -1,0 +1,13 @@
+{
+  "version": "voltforge.data-sources/1",
+  "updated": "2026-10-30",
+  "note": "Measured data considered for V4 checks. Nothing here was used to tune the model.",
+  "sources": [
+    {"id": "piombo_stanford_module", "doi": "10.17632/zh58byr53c.2", "licence": "CC BY 4.0", "cell": "LG INR21700-M50T", "conditions": "1s4p modules at 10/25/40 C with 0/1/3 mOhm added", "channels": "Module V and I, four Hall currents, four surface temperatures, chamber", "use": "Test 28 primary comparison, test 53 supporting. Final-assessment and quarantine records stay closed."},
+    {"id": "warwick_chen2020", "doi": "10.5281/zenodo.4032561", "licence": "CC BY 4.0", "cell": "LG M50", "conditions": "Single cells at C/10, C/2, 1C, 1.5C in a thermal chamber", "channels": "V, I, surface and chamber temperature at 30 s", "use": "Independent check on an adjacent variant, C/2 and 1C."},
+    {"id": "warwick_fibre", "doi": "10.17632/k86rymk5kn", "licence": "To confirm", "cell": "LG M50", "conditions": "Files named C05, C07 and C15", "channels": "Distributed surface temperature", "use": "Lead only, not used yet."},
+    {"id": "tu_berlin_drive_cycles", "url": "https://depositonce.tu-berlin.de/items/7f68932b-4d43-4f49-a5d8-914b00039f87/full", "licence": "To confirm", "cell": "LG M50LT, a different model", "conditions": "12 changing-load cycles at five temperatures", "channels": "Surface temperature not confirmed", "use": "Lead only, not used yet."},
+    {"id": "catenaro_onori", "doi": "10.17632/kxsbr4x3j2.2", "licence": "To confirm", "cell": "Not named on the page", "conditions": "Discharges at several rates and temperatures", "channels": "Skin temperature", "use": "Lead only, not used until the cell is identified."},
+    {"id": "imperial_marzook", "doi": "10.5281/zenodo.6421061", "licence": "CC BY 4.0", "cell": "LG INR21700-M50T", "conditions": "Base-cooled thermalisation", "channels": "Fixture temperatures and heat flow", "use": "Existing thermal sources only. Cell 2 stays closed."}
+  ]
+}

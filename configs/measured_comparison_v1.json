@@ -1,0 +1,140 @@
+{
+  "version": "voltforge.measured-comparison/1",
+  "status": "frozen_before_any_comparison_was_run",
+  "purpose": "Compare V4 simulations with published measurements. This is a check of the model, never a fit.",
+  "rules": {
+    "no_tuning": "No model, catalogue, thermal or solver value may change because of these results.",
+    "keep_poor_results": "Every case is reported, including poor matches, refusals and early stops.",
+    "wording": "Say 'compared with published measurements'. Never say 'validated'.",
+    "claims": "A case outside its band must be stated as an over- or under-prediction wherever its chart is used.",
+    "reserved_records": "Samsung final-assessment UDDS and Imperial Cell 2 stay closed. configs/splits.json final_assessment and quarantine records stay closed."
+  },
+  "shared_method": {
+    "model": "Deployed LG_M50T_ECN from configs/cell_catalogue_v2.json, one identical instance per cell. Published same-cell-type tables, not per-cell fits.",
+    "thermal": "Deployed defaults: 58.5 J/K per cell, 0.1525 W/K cooling, wire heat fraction 0.5, no cell-to-cell thermal contacts. Not adjusted for either rig.",
+    "starting_charge": "Invert the model OCV at the measured rested voltage on the last rest sample before discharge, at the mean measured surface temperature. Same value for every cell. Capped at 100%.",
+    "starting_polarization_V": 0,
+    "starting_temperature": "Measured surface temperature of each channel at the first discharge sample.",
+    "ambient": "Mean measured chamber temperature over the discharge step, held constant. Its measured range is reported.",
+    "solver_step_s": 0.5,
+    "alignment": "Zero time is the first discharge sample. No time shift. Simulation is interpolated to measured timestamps up to the earlier of the step end and the simulation end.",
+    "temperature_meaning": "The model has one lumped temperature per cell. Sensors read the surface. This difference is a limitation, not corrected."
+  },
+  "metrics": [
+    "coverage_pct",
+    "voltage_rmse_V",
+    "voltage_max_abs_V",
+    "temperature_rmse_K",
+    "peak_rise_measured_K",
+    "peak_rise_simulated_K",
+    "peak_rise_error_K"
+  ],
+  "bands": {
+    "voltage": {
+      "rmse_V": 0.05,
+      "max_abs_V": 0.15,
+      "source": "Existing research-prototype budget in configs/samsung_assessment_procedure_v1.json acceptance."
+    },
+    "temperature": {
+      "peak_rise_error": "abs(error) <= max(1 K, 25% of measured rise)",
+      "source": "Indicative band declared here before any comparison. It labels the result and establishes no accuracy claim."
+    }
+  },
+  "comparisons": [
+    {
+      "id": "test28_exact_m50t_module",
+      "role": "primary",
+      "file": "data/raw/measured_comparison_v1/test28/M1_NMC_Unaged_R3_T25.mat",
+      "sha256": "85076072c6057d11e3ddb793b5ae47d8d0065d3148fbd208de968f65a4a6cb1b",
+      "source": "10.17632/zh58byr53c.2, CC BY 4.0, test 28 M1_NMC_Unaged_R3_T25",
+      "cell_identity": "Exact LG INR21700-M50T, four cells, positions P17 P4 P10 P16",
+      "allocation": "development_validation in configs/splits.json",
+      "independence": "No catalogue or cooling value was fitted to this record. It was inspected earlier for electrical reconciliation and comes from the same rig as test 53, so it is not a blind holdout.",
+      "discharge_step": 5,
+      "topology": "1s4p same-side ladder, both outputs at cell 1",
+      "link_resistance_mohm": 3,
+      "link_basis": "The dataset's added 3 mOhm per segment. The rig's own baseline resistance is unknown and is not fitted.",
+      "current": "Mean cycler current over step 5, held constant",
+      "sensitivities": [
+        {
+          "id": "hall_sum_current",
+          "change": "Mean of the four author Hall branches replaces the cycler current",
+          "reason": "The cycler and Hall sum disagree by about 1.5 A. This remains unresolved."
+        },
+        {
+          "id": "link_plus_1_mohm",
+          "change": "4 mOhm per segment",
+          "reason": "Unknown rig baseline, using the project's existing 1 mOhm nominal assumption."
+        }
+      ]
+    },
+    {
+      "id": "test53_used_fixture",
+      "role": "supporting",
+      "file": "data/raw/measured_comparison_v1/test53/M1_NMC_Unaged_R0_T25.mat",
+      "sha256": "fa9e2344a40bf796fbb5aadec0aaf61885472ac16798023604f9dc3e45650f84",
+      "source": "10.17632/zh58byr53c.2, CC BY 4.0, test 53 M1_NMC_Unaged_R0_T25",
+      "cell_identity": "Exact LG INR21700-M50T, four cells, positions P7 P17 P19 P13",
+      "allocation": "calibration in configs/splits.json",
+      "independence": "Previously used. Deployed cooling was fitted from this test's rest steps, so this cannot count as independent.",
+      "discharge_step": 5,
+      "topology": "1s4p same-side ladder, both outputs at cell 1",
+      "link_resistance_mohm": 0,
+      "link_basis": "The dataset's 0 mOhm added resistance. The rig's own baseline resistance is unknown and is not fitted.",
+      "current": "Mean cycler current over step 5, held constant",
+      "sensitivities": [
+        {
+          "id": "hall_sum_current",
+          "change": "Mean of the four author Hall branches replaces the cycler current",
+          "reason": "The cycler and Hall sum disagree by about 1.7 A. This remains unresolved."
+        },
+        {
+          "id": "link_plus_1_mohm",
+          "change": "1 mOhm per segment",
+          "reason": "Unknown rig baseline, using the project's existing 1 mOhm nominal assumption."
+        }
+      ]
+    },
+    {
+      "id": "warwick_lg_m50_single_cell",
+      "role": "independent_adjacent_cell",
+      "files": [
+        "data/raw/measured_comparison_v1/warwick/LGM50_cell02.csv",
+        "data/raw/measured_comparison_v1/warwick/LGM50_cell03.csv",
+        "data/raw/measured_comparison_v1/warwick/LGM50_cell04.csv"
+      ],
+      "md5": [
+        "0bbf959cbfc367296ec69d7a74d2f5c1",
+        "a09cbd8eff0af55dfe9bc8728fa89908",
+        "f17615476283d2e15087165697ff9d7c"
+      ],
+      "source": "10.5281/zenodo.4032561, CC BY 4.0, Chen et al. 2020, J. Electrochem. Soc. 167 080534",
+      "cell_identity": "LG M50, not confirmed identical to M50T. Label every result 'LG M50 family'.",
+      "independence": "Never used for any value in this project. Adjacent cell variant and an unrelated, uncharacterized chamber fixture, so the temperature check speaks more to heating than to cooling.",
+      "topology": "Single cell",
+      "discharge_steps": [
+        {
+          "step": 12,
+          "nominal_A": 2.5
+        },
+        {
+          "step": 17,
+          "nominal_A": 5.0
+        }
+      ],
+      "excluded": [
+        {
+          "step": 22,
+          "nominal_A": 7.5,
+          "reason": "Above the deployed 7.275 A limit, so the product refuses it."
+        },
+        {
+          "step": 7,
+          "nominal_A": 0.5,
+          "reason": "Too gentle to test heating."
+        }
+      ],
+      "current": "Mean recorded current over the step, held constant"
+    }
+  ]
+}
