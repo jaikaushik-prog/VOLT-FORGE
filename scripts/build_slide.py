@@ -164,7 +164,7 @@ def main():
         x = left+(i % 3)*chip_w; y = row2+18+pic_h+4+(i//3)*13
         text(s, x, y, chip_w, 12, [[(value+' ', 'b'), (note, '')]], name='Requirement: '+value)
 
-    heading(s, rx, row2, rw, 'What the tool found')
+    heading(s, rx, row2, rw, 'What the tool found, with same-end outputs')
     stat_w = rw/4
     stats = [(f'{n} cells', 'smallest qualifying, from 4'), (inr(save['cost_inr']), f"less on cells, {inr(save['cost_from'])} to {inr(save['cost_to'])}"),
              (f"{save['mass_g']:.0f} g", f"less cell mass, {save['mass_from']:.0f} to {save['mass_to']:.0f} g"), (f"{best['required_passed']} of {best['required_cases']}", 'required Pi cases passed')]
@@ -202,10 +202,12 @@ def main():
     text(s, xs[1], row3+83, third, 40, [[('Free for students, paid for labs and teams. ', 'b'), (f"At an assumed {inr(m['licence_inr'])} a lab, that is ₹{m['som_inr']/1e5:.0f} lakh a year. ", ''), ('Works with any cell', 'b'), (' through custom imports.', '')]], name='Business')
 
     stress = best['samples'].get('stress', {}); pi_sample = best['samples'].get('pi', {}); pending = not stress.get('cases') or not pi_sample.get('cases')
+    effect = d['study']['option_effects'].get(f"{n}_{rec['option']}_pi", {}); same_end = d['baseline_best']['worst_required']['highest_cell_current_A']
     box(s, xs[2], row3, third, 124, line=ORANGE, radius=.05, name='Honest Finding')
-    text(s, xs[2]+7, row3+4, third-14, 118, [[('Honest finding', 'bo')],
-         [('Less margin: ', 'b'), ('mixed-mismatch samples are still running.' if pending else f"{stress['cases']-stress['passed']} of {stress['cases']} mixed samples failed the 12 A stress test, while {pi_sample['passed']} of {pi_sample['cases']} passed at the Pi load.", '')],
-         [('Not proven: ', 'b'), ('the board on two cells, a real Pi draw or measured accuracy. Cost saving is cells only.', '')],
+    text(s, xs[2]+6, row3+3, third-12, 120, [[('Honest finding', 'bo')],
+         [('Less margin: ', 'b'), ('mixed-mismatch samples are still running.' if pending else f"{stress['cases']-stress['passed']} of {stress['cases']} mixed samples were refused at 12 A, while all {pi_sample['cases']} passed at the Pi load.", '')],
+         [('No link option wins every case: ', 'b'), (f"moving the output to the far cell eased worst-case current from {same_end:.2f} to {best['worst_required']['highest_cell_current_A']:.2f} A, yet raised peak current in {effect.get('raised_peak_current', 0)} of {effect.get('pairs', 0)} pairs.", '')],
+         [('Not proven: ', 'b'), ('the board on two cells, a real Pi draw or measured accuracy. The saving is cells only.', '')],
          [('Next, Round 2: ', 'b'), ('bench-test two cells on the board and run user trials.', '')]], spacing=1.5, name='Honest Finding text')
 
     # So-what and sources.

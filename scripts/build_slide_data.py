@@ -17,7 +17,7 @@ def main():
     summary = read(f'{args.run}/summary.json'); market = read('configs/market_sizing_v1.json'); receipt = read('reports/v4_release/replay_receipt.json')
     pybamm = read('reports/numerical_reference_v2/run1/verification.json'); diagnostic = read('reports/measured_comparison_v1/post_hoc_diagnostic.json')
     prices = read('configs/parts_prices_v1.json'); gate = read('reports/model_catalogue_v2/gate.json')
-    measured = read('reports/measured_comparison_v1/pilot/result.json')
+    measured = read('reports/measured_comparison_v1/final/result.json')
     rec = summary['recommended'] or dict(count=None, option='baseline')
     designs = {(d['count'], d['option']): d for d in summary['designs']}
     table = []
@@ -41,7 +41,7 @@ def main():
     sam = s['electronics_engineering_enrolment']+s['mechanical_engineering_enrolment']+s['electrical_engineering_enrolment']
     colleges = s['engineering_technology_colleges']*a['first_stage_college_share']['value']
     data = dict(study=dict(cases=summary['cases'], refused=summary['refused'], recommended=rec, claim=summary['claim'], half_step=summary['half_step'], option_effects=summary['option_effects']),
-                best=best, four=four, table=table,
+                best=best, four=four, table=table, baseline_best=designs.get((rec['count'], 'baseline')),
                 saving=dict(cost_inr=four['cell_cost_inr']-best['cell_cost_inr'], mass_g=four['cell_mass_g']-best['cell_mass_g'], cost_from=four['cell_cost_inr'], cost_to=best['cell_cost_inr'], mass_from=four['cell_mass_g'], mass_to=best['cell_mass_g']) if best and four else None,
                 board=dict(name=prices['items']['converter']['name'], usd=prices['items']['converter']['listings'][0]['price']),
                 proof=proof, proof_cases_within_band=sum(1 for c in measured['cases'] if c.get('voltage_within_band') and c.get('temperature_within_band')), proof_cases=len(measured['cases']),

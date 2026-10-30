@@ -1,0 +1,1049 @@
+{
+  "version": "voltforge.design-study-summary/2",
+  "cases": 4006,
+  "refused": 42,
+  "claim": "Smallest qualifying design among the parallel arrangements tested",
+  "qualification_rule": "Every required Pi case passes.",
+  "smallest_qualifying_cell_count": 2,
+  "recommended": {
+    "count": 2,
+    "option": "opposite"
+  },
+  "designs": [
+    {
+      "count": 1,
+      "option": "baseline",
+      "required_cases": 15,
+      "required_passed": 0,
+      "qualifies": false,
+      "nominal": {
+        "passed": false,
+        "outcome": "refused",
+        "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit.",
+        "min_voltage_V": null,
+        "peak_cell_current_A": null,
+        "peak_temperature_C": null
+      },
+      "failures": [
+        {
+          "tier": "nominal",
+          "label": "nominal",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "cooling_low",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "cooling_high",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "cooling_half",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "thermal_pair_half",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "thermal_pair_double",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "heat_capacity_low",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "heat_capacity_high",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "wire_heat_none",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "wire_heat_all",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "contact_double",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        },
+        {
+          "tier": "shared_sensitivity",
+          "label": "room_plus_2",
+          "outcome": "refused",
+          "reason": "Cell 1: Cell current exceeds the 7.275 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+        }
+      ],
+      "failure_count": 15,
+      "worst_required": {
+        "calculated": 0
+      },
+      "current_margin_A": null,
+      "voltage_margin_V": null,
+      "stress": {
+        "cases": 13,
+        "passed": 0,
+        "first_failures": [
+          "nominal",
+          "cooling_low",
+          "cooling_high",
+          "cooling_half",
+          "thermal_pair_half",
+          "thermal_pair_double"
+        ],
+        "worst": {
+          "calculated": 0
+        }
+      },
+      "samples": {},
+      "cell_cost_inr": 1206.0,
+      "cell_mass_g": 70.0,
+      "listed_mass_g": 71.4304
+    },
+    {
+      "count": 2,
+      "option": "baseline",
+      "required_cases": 33,
+      "required_passed": 33,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.527779509741209,
+        "peak_cell_current_A": 4.373890789508884,
+        "peak_temperature_C": 27.470964491680874
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 33,
+        "lowest_voltage_V": 3.4989723035703193,
+        "highest_cell_current_A": 5.485359037716929,
+        "highest_temperature_C": 31.77641135305313
+      },
+      "current_margin_A": 1.7896409622830713,
+      "voltage_margin_V": 0.19897230357031948,
+      "stress": {
+        "cases": 31,
+        "passed": 30,
+        "first_failures": [
+          "cell 2 combined weak"
+        ],
+        "worst": {
+          "calculated": 30,
+          "lowest_voltage_V": 3.3503426623482584,
+          "highest_cell_current_A": 6.98492576770453,
+          "highest_temperature_C": 38.630795594624985
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.500039811286136,
+            "highest_cell_current_A": 6.5293846450309765,
+            "highest_temperature_C": 28.809193518018755
+          }
+        },
+        "stress": {
+          "cases": 62,
+          "passed": 59,
+          "worst": {
+            "calculated": 59,
+            "lowest_voltage_V": 3.3538328177282946,
+            "highest_cell_current_A": 7.249136488929801,
+            "highest_temperature_C": 33.1366598708708
+          }
+        }
+      },
+      "cell_cost_inr": 2412.0,
+      "cell_mass_g": 140.0,
+      "listed_mass_g": 141.773696
+    },
+    {
+      "count": 2,
+      "option": "combined",
+      "required_cases": 33,
+      "required_passed": 33,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.526615164353799,
+        "peak_cell_current_A": 4.208754208754234,
+        "peak_temperature_C": 27.352051517862705
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 33,
+        "lowest_voltage_V": 3.4983393456604412,
+        "highest_cell_current_A": 5.34538492126309,
+        "highest_temperature_C": 31.53776940134311
+      },
+      "current_margin_A": 1.9296150787369104,
+      "voltage_margin_V": 0.19833934566044142,
+      "stress": {
+        "cases": 31,
+        "passed": 31,
+        "first_failures": [],
+        "worst": {
+          "calculated": 31,
+          "lowest_voltage_V": 3.349353759145048,
+          "highest_cell_current_A": 7.226957373981543,
+          "highest_temperature_C": 38.20818658206675
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.4987096803984605,
+            "highest_cell_current_A": 6.3987328115492925,
+            "highest_temperature_C": 28.70805508994518
+          }
+        },
+        "stress": {
+          "cases": 62,
+          "passed": 60,
+          "worst": {
+            "calculated": 60,
+            "lowest_voltage_V": 3.352214301516394,
+            "highest_cell_current_A": 7.2604210112305125,
+            "highest_temperature_C": 32.864977253667966
+          }
+        }
+      },
+      "cell_cost_inr": 2412.0,
+      "cell_mass_g": 140.0,
+      "listed_mass_g": 142.546112
+    },
+    {
+      "count": 2,
+      "option": "opposite",
+      "required_cases": 33,
+      "required_passed": 33,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.5249590416923957,
+        "peak_cell_current_A": 4.208754208754234,
+        "peak_temperature_C": 27.37006938336244
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 33,
+        "lowest_voltage_V": 3.4966843238213334,
+        "highest_cell_current_A": 5.328425504372644,
+        "highest_temperature_C": 31.573201917793842
+      },
+      "current_margin_A": 1.946574495627356,
+      "voltage_margin_V": 0.1966843238213336,
+      "stress": {
+        "cases": 31,
+        "passed": 31,
+        "first_failures": [],
+        "worst": {
+          "calculated": 31,
+          "lowest_voltage_V": 3.347066160925359,
+          "highest_cell_current_A": 7.2086502128401495,
+          "highest_temperature_C": 38.27888259788301
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.49705671952552,
+            "highest_cell_current_A": 6.364375051498071,
+            "highest_temperature_C": 28.71933875489899
+          }
+        },
+        "stress": {
+          "cases": 62,
+          "passed": 60,
+          "worst": {
+            "calculated": 60,
+            "lowest_voltage_V": 3.3499217092602382,
+            "highest_cell_current_A": 7.2409883920240645,
+            "highest_temperature_C": 32.897528963258274
+          }
+        }
+      },
+      "cell_cost_inr": 2412.0,
+      "cell_mass_g": 140.0,
+      "listed_mass_g": 142.202816
+    },
+    {
+      "count": 2,
+      "option": "thicker",
+      "required_cases": 33,
+      "required_passed": 33,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.5293731299531363,
+        "peak_cell_current_A": 4.309390454552068,
+        "peak_temperature_C": 27.413015478772543
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 33,
+        "lowest_voltage_V": 3.500777763751426,
+        "highest_cell_current_A": 5.440946410625795,
+        "highest_temperature_C": 31.660670859583735
+      },
+      "current_margin_A": 1.8340535893742054,
+      "voltage_margin_V": 0.20077776375142609,
+      "stress": {
+        "cases": 31,
+        "passed": 30,
+        "first_failures": [
+          "cell 2 combined weak"
+        ],
+        "worst": {
+          "calculated": 30,
+          "lowest_voltage_V": 3.352849402892127,
+          "highest_cell_current_A": 7.0907249147460725,
+          "highest_temperature_C": 38.42145557621751
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.501619049401389,
+            "highest_cell_current_A": 6.499290436329961,
+            "highest_temperature_C": 28.76239366368323
+          }
+        },
+        "stress": {
+          "cases": 62,
+          "passed": 59,
+          "worst": {
+            "calculated": 59,
+            "lowest_voltage_V": 3.3560278685425753,
+            "highest_cell_current_A": 7.172746539374806,
+            "highest_temperature_C": 33.01961435988631
+          }
+        }
+      },
+      "cell_cost_inr": 2412.0,
+      "cell_mass_g": 140.0,
+      "listed_mass_g": 142.116992
+    },
+    {
+      "count": 3,
+      "option": "baseline",
+      "required_cases": 42,
+      "required_passed": 42,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.631529065328596,
+        "peak_cell_current_A": 3.1608231441926353,
+        "peak_temperature_C": 25.368936482455393
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 42,
+        "lowest_voltage_V": 3.6155707765352165,
+        "highest_cell_current_A": 3.8554803783633713,
+        "highest_temperature_C": 27.694595986104133
+      },
+      "current_margin_A": 3.419519621636629,
+      "voltage_margin_V": 0.3155707765352167,
+      "stress": {
+        "cases": 40,
+        "passed": 40,
+        "first_failures": [],
+        "worst": {
+          "calculated": 40,
+          "lowest_voltage_V": 3.5103100037143298,
+          "highest_cell_current_A": 5.239066447164612,
+          "highest_temperature_C": 31.71884648259975
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.6117580214603335,
+            "highest_cell_current_A": 5.18502173621906,
+            "highest_temperature_C": 26.34164776249797
+          }
+        },
+        "stress": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.5075158059584175,
+            "highest_cell_current_A": 6.660449690061209,
+            "highest_temperature_C": 28.728131704985834
+          }
+        }
+      },
+      "cell_cost_inr": 3618.0,
+      "cell_mass_g": 210.00000000000003,
+      "listed_mass_g": 212.11699200000004
+    },
+    {
+      "count": 3,
+      "option": "combined",
+      "required_cases": 42,
+      "required_passed": 42,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.6295534650366195,
+        "peak_cell_current_A": 2.828379428167012,
+        "peak_temperature_C": 25.183054387203626
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 42,
+        "lowest_voltage_V": 3.613773842238702,
+        "highest_cell_current_A": 3.53096230623505,
+        "highest_temperature_C": 27.322577934649733
+      },
+      "current_margin_A": 3.7440376937649504,
+      "voltage_margin_V": 0.3137738422387022,
+      "stress": {
+        "cases": 40,
+        "passed": 40,
+        "first_failures": [],
+        "worst": {
+          "calculated": 40,
+          "lowest_voltage_V": 3.5075377385800315,
+          "highest_cell_current_A": 4.773859030205525,
+          "highest_temperature_C": 30.9502736557278
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.6098313023178457,
+            "highest_cell_current_A": 4.902691263339256,
+            "highest_temperature_C": 26.155172944182723
+          }
+        },
+        "stress": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.5054230453731408,
+            "highest_cell_current_A": 6.234805643741772,
+            "highest_temperature_C": 28.351831615934167
+          }
+        }
+      },
+      "cell_cost_inr": 3618.0,
+      "cell_mass_g": 210.00000000000003,
+      "listed_mass_g": 213.66182400000002
+    },
+    {
+      "count": 3,
+      "option": "opposite",
+      "required_cases": 42,
+      "required_passed": 42,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.625865218209579,
+        "peak_cell_current_A": 2.8430194711162216,
+        "peak_temperature_C": 25.21149814895336
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 42,
+        "lowest_voltage_V": 3.610091682437755,
+        "highest_cell_current_A": 3.5376767052869584,
+        "highest_temperature_C": 27.380076908246238
+      },
+      "current_margin_A": 3.737323294713042,
+      "voltage_margin_V": 0.3100916824377551,
+      "stress": {
+        "cases": 40,
+        "passed": 40,
+        "first_failures": [],
+        "worst": {
+          "calculated": 40,
+          "lowest_voltage_V": 3.5023060455670576,
+          "highest_cell_current_A": 4.786005530826877,
+          "highest_temperature_C": 31.064300380429525
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.606084681639986,
+            "highest_cell_current_A": 4.8551723776615106,
+            "highest_temperature_C": 26.171672156588134
+          }
+        },
+        "stress": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.5001263711914854,
+            "highest_cell_current_A": 6.190216444501566,
+            "highest_temperature_C": 28.38866662730281
+          }
+        }
+      },
+      "cell_cost_inr": 3618.0,
+      "cell_mass_g": 210.00000000000003,
+      "listed_mass_g": 212.97523200000003
+    },
+    {
+      "count": 3,
+      "option": "thicker",
+      "required_cases": 42,
+      "required_passed": 42,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.635047480667813,
+        "peak_cell_current_A": 3.024951647612825,
+        "peak_temperature_C": 25.278289664727254
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 42,
+        "lowest_voltage_V": 3.619199426853879,
+        "highest_cell_current_A": 3.727534525680863,
+        "highest_temperature_C": 27.512882059983813
+      },
+      "current_margin_A": 3.547465474319137,
+      "voltage_margin_V": 0.31919942685387914,
+      "stress": {
+        "cases": 40,
+        "passed": 40,
+        "first_failures": [],
+        "worst": {
+          "calculated": 40,
+          "lowest_voltage_V": 3.5153446446164707,
+          "highest_cell_current_A": 5.054092386247475,
+          "highest_temperature_C": 31.347348103714214
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.6155719066270517,
+            "highest_cell_current_A": 5.106813668283124,
+            "highest_temperature_C": 26.25794476327884
+          }
+        },
+        "stress": {
+          "cases": 62,
+          "passed": 62,
+          "worst": {
+            "calculated": 62,
+            "lowest_voltage_V": 3.513014630324247,
+            "highest_cell_current_A": 6.52580254422975,
+            "highest_temperature_C": 28.55802868254559
+          }
+        }
+      },
+      "cell_cost_inr": 3618.0,
+      "cell_mass_g": 210.00000000000003,
+      "listed_mass_g": 212.80358400000003
+    },
+    {
+      "count": 4,
+      "option": "baseline",
+      "required_cases": 51,
+      "required_passed": 51,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.6891763307832686,
+        "peak_cell_current_A": 2.640947812149165,
+        "peak_temperature_C": 24.55148174848619
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 51,
+        "lowest_voltage_V": 3.6638327615882806,
+        "highest_cell_current_A": 3.340501313781926,
+        "highest_temperature_C": 26.11830720872382
+      },
+      "current_margin_A": 3.9344986862180744,
+      "voltage_margin_V": 0.3638327615882808,
+      "stress": {
+        "cases": 49,
+        "passed": 49,
+        "first_failures": [],
+        "worst": {
+          "calculated": 49,
+          "lowest_voltage_V": 3.584061641377139,
+          "highest_cell_current_A": 4.46448870263261,
+          "highest_temperature_C": 28.90263141658139
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 247,
+          "passed": 247,
+          "worst": {
+            "calculated": 247,
+            "lowest_voltage_V": 3.658365735549303,
+            "highest_cell_current_A": 4.575946713494613,
+            "highest_temperature_C": 25.32624413748703
+          }
+        },
+        "stress": {
+          "cases": 247,
+          "passed": 247,
+          "worst": {
+            "calculated": 247,
+            "lowest_voltage_V": 3.5735154743068014,
+            "highest_cell_current_A": 5.80518059175038,
+            "highest_temperature_C": 27.027566872492336
+          }
+        }
+      },
+      "cell_cost_inr": 4824.0,
+      "cell_mass_g": 280.0,
+      "listed_mass_g": 282.460288
+    },
+    {
+      "count": 4,
+      "option": "combined",
+      "required_cases": 51,
+      "required_passed": 51,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.686401371331741,
+        "peak_cell_current_A": 2.1546952272760382,
+        "peak_temperature_C": 24.324105773566423
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 51,
+        "lowest_voltage_V": 3.6609398578850394,
+        "highest_cell_current_A": 2.8785010359952024,
+        "highest_temperature_C": 25.89018289965051
+      },
+      "current_margin_A": 4.396498964004798,
+      "voltage_margin_V": 0.36093985788503957,
+      "stress": {
+        "cases": 49,
+        "passed": 49,
+        "first_failures": [],
+        "worst": {
+          "calculated": 49,
+          "lowest_voltage_V": 3.580534527703544,
+          "highest_cell_current_A": 3.7955393247238773,
+          "highest_temperature_C": 27.961699098219682
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 247,
+          "passed": 247,
+          "worst": {
+            "calculated": 247,
+            "lowest_voltage_V": 3.6553490204266157,
+            "highest_cell_current_A": 4.148256062576584,
+            "highest_temperature_C": 25.132212077884553
+          }
+        },
+        "stress": {
+          "cases": 247,
+          "passed": 247,
+          "worst": {
+            "calculated": 247,
+            "lowest_voltage_V": 3.5698148787433555,
+            "highest_cell_current_A": 5.162526239807599,
+            "highest_temperature_C": 26.61939451332996
+          }
+        }
+      },
+      "cell_cost_inr": 4824.0,
+      "cell_mass_g": 280.0,
+      "listed_mass_g": 284.777536
+    },
+    {
+      "count": 4,
+      "option": "opposite",
+      "required_cases": 51,
+      "required_passed": 51,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.6805667958341868,
+        "peak_cell_current_A": 2.186945394754448,
+        "peak_temperature_C": 24.356509864270677
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 51,
+        "lowest_voltage_V": 3.6551190704108505,
+        "highest_cell_current_A": 2.8864988963872085,
+        "highest_temperature_C": 25.922826773593652
+      },
+      "current_margin_A": 4.388501103612792,
+      "voltage_margin_V": 0.35511907041085067,
+      "stress": {
+        "cases": 49,
+        "passed": 49,
+        "first_failures": [],
+        "worst": {
+          "calculated": 49,
+          "lowest_voltage_V": 3.5722451128921504,
+          "highest_cell_current_A": 3.817262856394703,
+          "highest_temperature_C": 28.09309220372868
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 247,
+          "passed": 247,
+          "worst": {
+            "calculated": 247,
+            "lowest_voltage_V": 3.6496598094286417,
+            "highest_cell_current_A": 4.111229701318271,
+            "highest_temperature_C": 25.159940396164554
+          }
+        },
+        "stress": {
+          "cases": 247,
+          "passed": 247,
+          "worst": {
+            "calculated": 247,
+            "lowest_voltage_V": 3.5616443500038497,
+            "highest_cell_current_A": 5.12145717170638,
+            "highest_temperature_C": 26.676416398195247
+          }
+        }
+      },
+      "cell_cost_inr": 4824.0,
+      "cell_mass_g": 280.0,
+      "listed_mass_g": 283.747648
+    },
+    {
+      "count": 4,
+      "option": "thicker",
+      "required_cases": 51,
+      "required_passed": 51,
+      "qualifies": true,
+      "nominal": {
+        "passed": true,
+        "outcome": "completed",
+        "reason": null,
+        "min_voltage_V": 3.69468404352306,
+        "peak_cell_current_A": 2.44068447077869,
+        "peak_temperature_C": 24.441210674804232
+      },
+      "failures": [],
+      "failure_count": 0,
+      "worst_required": {
+        "calculated": 51,
+        "lowest_voltage_V": 3.6692617174443503,
+        "highest_cell_current_A": 3.164490279497855,
+        "highest_temperature_C": 26.007579803367257
+      },
+      "current_margin_A": 4.1105097205021455,
+      "voltage_margin_V": 0.36926171744435043,
+      "stress": {
+        "cases": 49,
+        "passed": 49,
+        "first_failures": [],
+        "worst": {
+          "calculated": 49,
+          "lowest_voltage_V": 3.5921705099023793,
+          "highest_cell_current_A": 4.203245590261256,
+          "highest_temperature_C": 28.450078981210048
+        }
+      },
+      "samples": {
+        "pi": {
+          "cases": 247,
+          "passed": 247,
+          "worst": {
+            "calculated": 247,
+            "lowest_voltage_V": 3.6636680564032815,
+            "highest_cell_current_A": 4.450693496184821,
+            "highest_temperature_C": 25.216214267005352
+          }
+        },
+        "stress": {
+          "cases": 247,
+          "passed": 247,
+          "worst": {
+            "calculated": 247,
+            "lowest_voltage_V": 3.5814727994637727,
+            "highest_cell_current_A": 5.593681045159496,
+            "highest_temperature_C": 26.807255303736657
+          }
+        }
+      },
+      "cell_cost_inr": 4824.0,
+      "cell_mass_g": 280.0,
+      "listed_mass_g": 283.490176
+    }
+  ],
+  "ranked": [
+    {
+      "count": 2,
+      "option": "opposite"
+    },
+    {
+      "count": 2,
+      "option": "combined"
+    },
+    {
+      "count": 2,
+      "option": "thicker"
+    },
+    {
+      "count": 2,
+      "option": "baseline"
+    },
+    {
+      "count": 3,
+      "option": "combined"
+    },
+    {
+      "count": 3,
+      "option": "opposite"
+    },
+    {
+      "count": 3,
+      "option": "thicker"
+    },
+    {
+      "count": 3,
+      "option": "baseline"
+    },
+    {
+      "count": 4,
+      "option": "combined"
+    },
+    {
+      "count": 4,
+      "option": "opposite"
+    },
+    {
+      "count": 4,
+      "option": "thicker"
+    },
+    {
+      "count": 4,
+      "option": "baseline"
+    }
+  ],
+  "half_step": {
+    "pairs": 24,
+    "max_voltage_change_V": 9.500055871747293e-06,
+    "max_current_change_A": 8.881784197001252e-16,
+    "max_temperature_change_K": 0.0009688105556016069
+  },
+  "option_effects": {
+    "2_thicker_pi": {
+      "pairs": 81,
+      "median_current_change_A": -0.0337455858654474,
+      "raised_peak_current": 35,
+      "median_temperature_change_K": -0.05213542755441125,
+      "raised_peak_temperature": 31
+    },
+    "2_thicker_stress": {
+      "pairs": 77,
+      "median_current_change_A": -0.052159435776414576,
+      "raised_peak_current": 27,
+      "median_temperature_change_K": -0.09630333712425454,
+      "raised_peak_temperature": 31
+    },
+    "3_thicker_pi": {
+      "pairs": 90,
+      "median_current_change_A": -0.10907102340964725,
+      "raised_peak_current": 36,
+      "median_temperature_change_K": -0.08685332049817696,
+      "raised_peak_temperature": 14
+    },
+    "3_thicker_stress": {
+      "pairs": 90,
+      "median_current_change_A": -0.16561893244739823,
+      "raised_peak_current": 31,
+      "median_temperature_change_K": -0.1759959974795926,
+      "raised_peak_temperature": 9
+    },
+    "4_thicker_pi": {
+      "pairs": 284,
+      "median_current_change_A": -0.14688346737606528,
+      "raised_peak_current": 65,
+      "median_temperature_change_K": -0.08331358365671804,
+      "raised_peak_temperature": 48
+    },
+    "4_thicker_stress": {
+      "pairs": 284,
+      "median_current_change_A": -0.2481250542328688,
+      "raised_peak_current": 43,
+      "median_temperature_change_K": -0.21936966738996055,
+      "raised_peak_temperature": 22
+    },
+    "2_opposite_pi": {
+      "pairs": 81,
+      "median_current_change_A": -0.09180839801059282,
+      "raised_peak_current": 35,
+      "median_temperature_change_K": -0.05687452352592004,
+      "raised_peak_temperature": 38
+    },
+    "2_opposite_stress": {
+      "pairs": 77,
+      "median_current_change_A": -0.136298722853188,
+      "raised_peak_current": 34,
+      "median_temperature_change_K": -0.14265927776673593,
+      "raised_peak_temperature": 36
+    },
+    "3_opposite_pi": {
+      "pairs": 90,
+      "median_current_change_A": -0.29199713524468396,
+      "raised_peak_current": 26,
+      "median_temperature_change_K": -0.10428810193945282,
+      "raised_peak_temperature": 33
+    },
+    "3_opposite_stress": {
+      "pairs": 90,
+      "median_current_change_A": -0.4197675008543791,
+      "raised_peak_current": 24,
+      "median_temperature_change_K": -0.22089891717182653,
+      "raised_peak_temperature": 32
+    },
+    "4_opposite_pi": {
+      "pairs": 284,
+      "median_current_change_A": -0.17533088454269796,
+      "raised_peak_current": 82,
+      "median_temperature_change_K": -0.10608791880725121,
+      "raised_peak_temperature": 75
+    },
+    "4_opposite_stress": {
+      "pairs": 284,
+      "median_current_change_A": -0.3522954044560682,
+      "raised_peak_current": 63,
+      "median_temperature_change_K": -0.22265021662356332,
+      "raised_peak_temperature": 65
+    },
+    "2_combined_pi": {
+      "pairs": 81,
+      "median_current_change_A": -0.0900885353387686,
+      "raised_peak_current": 35,
+      "median_temperature_change_K": -0.07384348957387488,
+      "raised_peak_temperature": 38
+    },
+    "2_combined_stress": {
+      "pairs": 77,
+      "median_current_change_A": -0.1356568207374993,
+      "raised_peak_current": 34,
+      "median_temperature_change_K": -0.18048356472997895,
+      "raised_peak_temperature": 35
+    },
+    "3_combined_pi": {
+      "pairs": 90,
+      "median_current_change_A": -0.2871655188291451,
+      "raised_peak_current": 37,
+      "median_temperature_change_K": -0.13072464132454797,
+      "raised_peak_temperature": 16
+    },
+    "3_combined_stress": {
+      "pairs": 90,
+      "median_current_change_A": -0.4225400720759378,
+      "raised_peak_current": 32,
+      "median_temperature_change_K": -0.27776331368567675,
+      "raised_peak_temperature": 15
+    },
+    "4_combined_pi": {
+      "pairs": 284,
+      "median_current_change_A": -0.13485023986422529,
+      "raised_peak_current": 80,
+      "median_temperature_change_K": -0.13373218497723904,
+      "raised_peak_temperature": 74
+    },
+    "4_combined_stress": {
+      "pairs": 284,
+      "median_current_change_A": -0.34544753733156397,
+      "raised_peak_current": 63,
+      "median_temperature_change_K": -0.2846513969660034,
+      "raised_peak_temperature": 51
+    }
+  },
+  "experimental_validation": false
+}
