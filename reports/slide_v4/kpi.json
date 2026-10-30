@@ -1,9 +1,8 @@
 {
  "study_runs": 4006,
- "overloads_caught": 42,
- "overload_reason": "Cell current exceeds the 7.275 A operating limit; the app refused the run",
- "simulated_s": 600,
- "seconds_16_cells": 3.073356207984034,
- "runs_timed": 7,
- "machine": "Apple M1, 8 GB, Darwin"
+ "lab_experiments": 54,
+ "data_files": 194,
+ "sealed_module_records": 3,
+ "sealed_cell_records": 6,
+ "sealed_total": 9
 }

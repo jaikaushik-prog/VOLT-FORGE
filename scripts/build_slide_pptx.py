@@ -21,8 +21,8 @@ Not proven: the Geekworm X1206 V2.0 board running on two cells, a real Pi draw, 
 Cost: cells only, Robu LG M50T Rs 1,206 including GST, listed out of stock, checked 30 Oct 2026. Excludes shipping and fabrication.
 Market: AISHE 2021-22. The price of Rs {d['market']['licence_inr']:,} a lab and 5% reach are assumptions, and counts do not show willingness to pay.
 Build cost: about Rs {d['cost']['total_crore']:.0f} crore over 3 years and {d['cost']['person_years']:g} person-years for the full product vision. An estimate from sourced salary rates and assumed staffing, cross-checked with COCOMO II. See reports/build_cost_v1/BUILD_COST.md. AspenTech fiscal 2024 R&D was US$206.1 million.
-KPIs: {d['kpi']['overloads_caught']} of {d['kpi']['study_runs']:,} study runs were refused because a cell would have exceeded 7.275 A. A 10-minute run of the 16-cell module took a median {d['kpi']['seconds_16_cells']:.2f} s on {d['kpi']['machine']}.
-Screens: real designs in the app. The 16-cell and 12-cell modules are examples of what it can handle, not the recommended design."""
+KPIs: {d['kpi']['lab_experiments']} module experiments and {d['kpi']['data_files']} data files in the Piombo et al. dataset, each file integrity-checked. {d['kpi']['sealed_total']} records are reserved for a final assessment and were never opened: {d['kpi']['sealed_module_records']} module tests and {d['kpi']['sealed_cell_records']} Samsung cell records.
+Screens: real designs in the app. The table compares the 4-cell starting design with the 2-cell design under the same 8.42 A load."""
 
 
 def main():
@@ -41,7 +41,7 @@ def main():
     slide.shapes.title.text_frame.text = 'Test a battery before you build it'
     picture = slide.shapes.add_picture(str(ROOT/'reports/slide_v4/VOLT-FORGE_Round1_Slide.png'), Emu(0), Emu(0), prs.slide_width, prs.slide_height)
     picture.name = 'VOLT-FORGE Round 1 slide'
-    picture._element.nvPicPr.cNvPr.set('descr', 'VOLT-FORGE: the seven rubric criteria around the working app, showing a 16-cell circuit with a cell properties panel, and a comparison of two circuits.')
+    picture._element.nvPicPr.cNvPr.set('descr', 'VOLT-FORGE: the seven rubric criteria around the working app, showing the 4-cell Pi circuit with a cell properties panel, and a comparison of the 4-cell and 2-cell designs.')
     slide.notes_slide.notes_text_frame.text = notes(d)
     prs.save(args.out)
 
