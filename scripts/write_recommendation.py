@@ -9,6 +9,7 @@ designs = {(d['count'], d['option']): d for d in s['designs']}
 rec = s['recommended']; best = designs[(rec['count'], rec['option'])]; base = designs[(rec['count'], 'baseline')]; four = designs[(4, 'baseline')]
 effect = s['option_effects'][f"{rec['count']}_{rec['option']}_pi"]
 stress, pi = best['samples']['stress'], best['samples']['pi']
+c = json.loads((ROOT/'reports/engineering_checks_v1/result.json').read_text())
 rows = '\n'.join(f"| {d['count']} | {'Qualifies' if d['qualifies'] else 'Refused'} | {d['required_passed']} of {d['required_cases']} | "
                  + (f"{d['nominal']['min_voltage_V']:.2f} V | {d['nominal']['peak_cell_current_A']:.2f} A | {d['worst_required']['highest_cell_current_A']:.2f} A | {d['worst_required']['highest_temperature_C']:.1f} °C" if d['qualifies'] else '— | — | — | —')
                  + f" | ₹{d['cell_cost_inr']:,.0f} | {d['cell_mass_g']:.0f} g |" for d in s['designs'] if d['option'] == 'baseline')
@@ -41,7 +42,19 @@ Rows use same-end outputs. The cell limit is 7.275 A.
 - **The 12 A stress test can fail.** {stress['cases']-stress['passed']} of {stress['cases']} combined mismatch samples were refused for exceeding the cell limit. All {pi['cases']} samples passed at the Pi load. Samples show sensitivity, not a probability.
 - **No link option wins everywhere.** The opposite-end output gave the best worst-case margin, {best['worst_required']['highest_cell_current_A']:.2f} A against {base['worst_required']['highest_cell_current_A']:.2f} A. It still raised peak current in {effect['raised_peak_current']} of {effect['pairs']} paired cases. The cell count is the real decision, and the output position is a small refinement.
 - **Temperatures are not validated.** All 12 pre-declared measured comparison cases missed their bands. Treat temperatures as a range.
-- **The board is unconfirmed.** The Geekworm X1206 V2.0 has four 21700 slots. Its listing does not confirm running with fewer than four cells fitted, and it publishes no battery cutoff or efficiency.
+- **The board fits, but its limits are unmeasured.** Geekworm sells a 2-cell Pi 5 board, the X1205: 5.1 V at up to 6 A, up to 95% efficiency and a 2.4 V cutoff on v1.1. It publishes no battery overcurrent threshold, and its cell layout is fixed, so the far-cell output needs your own wiring. The same-end layout also passes all {base['required_cases']} required cases, at {base['worst_required']['highest_cell_current_A']:.2f} A worst case.
+- **It needs warmth.** Below 10 °C the cell limit falls to 2.425 A, so two cells could not carry this load. The study holds 23 °C.
+
+## Checks on the decision
+
+Frozen in `configs/engineering_checks_v1.json` before running. Results are in `reports/engineering_checks_v1/result.json`.
+
+- **Is 8.42 A fair?** Yes, and it errs on the hard side. A true 25 W load peaks at {c['constant_power']['constant_power']['peak_load_A']:.2f} A, so the study overstates cell current by about {100*(c['constant_power']['constant_current']['peak_cell_current_A']/c['constant_power']['constant_power']['peak_cell_current_A']-1):.0f}%.
+- **Current sharing against a real module.** On test 28 each cell's share landed within {c['current_sharing'][0]['mean_absolute_share_error_points']:.1f} points on average, inside the 2.5 point band. The busiest cell was named in only {100*c['current_sharing'][0]['busiest_cell_match_fraction']:.0f}% of samples, against a required 80%, so the check as a whole missed. On test 53 the cells shared almost evenly, so naming the busiest cell means little there.
+- **Voltage error against margin.** In the charge range the Pi job uses, the largest error on test 28 was {c['error_budget']['voltage']['primary']['largest_abs_error_V']:.2f} V, always optimistic. The worst-case margin is {c['error_budget']['voltage']['margin_V']:.2f} V, so it clears, but only by {c['error_budget']['voltage']['margin_V']-c['error_budget']['voltage']['primary']['largest_abs_error_V']:.2f} V.
+- **Heat error against the limit.** Real rises reached {c['error_budget']['temperature']['largest_measured_over_simulated']:.2f} times the simulated rise. Scaling the worst case by that gives {c['error_budget']['temperature']['scaled_C']:.1f} °C against the {c['error_budget']['temperature']['limit_C']} °C limit.
+- **OCV slope against entropy (VF3-08).** The worst variant reaches {max(r['peak_temperature_C'] for r in c['entropy_sensitivity']['rows']):.1f} °C, so the open question does not change this decision. The mismatch itself is still unresolved.
+- **LG low-charge change.** The lowest charge reached is {min(r['lowest_charge_pct'] for r in c['low_charge']['rows']):.1f}%, well above the {c['low_charge']['threshold_pct']}% where the change applies.
 
 ## Next step
 

@@ -30,7 +30,19 @@ Rows use same-end outputs. The cell limit is 7.275 A.
 - **The 12 A stress test can fail.** 2 of 62 combined mismatch samples were refused for exceeding the cell limit. All 62 samples passed at the Pi load. Samples show sensitivity, not a probability.
 - **No link option wins everywhere.** The opposite-end output gave the best worst-case margin, 5.33 A against 5.49 A. It still raised peak current in 35 of 81 paired cases. The cell count is the real decision, and the output position is a small refinement.
 - **Temperatures are not validated.** All 12 pre-declared measured comparison cases missed their bands. Treat temperatures as a range.
-- **The board is unconfirmed.** The Geekworm X1206 V2.0 has four 21700 slots. Its listing does not confirm running with fewer than four cells fitted, and it publishes no battery cutoff or efficiency.
+- **The board fits, but its limits are unmeasured.** Geekworm sells a 2-cell Pi 5 board, the X1205: 5.1 V at up to 6 A, up to 95% efficiency and a 2.4 V cutoff on v1.1. It publishes no battery overcurrent threshold, and its cell layout is fixed, so the far-cell output needs your own wiring. The same-end layout also passes all 33 required cases, at 5.49 A worst case.
+- **It needs warmth.** Below 10 °C the cell limit falls to 2.425 A, so two cells could not carry this load. The study holds 23 °C.
+
+## Checks on the decision
+
+Frozen in `configs/engineering_checks_v1.json` before running. Results are in `reports/engineering_checks_v1/result.json`.
+
+- **Is 8.42 A fair?** Yes, and it errs on the hard side. A true 25 W load peaks at 7.81 A, so the study overstates cell current by about 8%.
+- **Current sharing against a real module.** On test 28 each cell's share landed within 1.1 points on average, inside the 2.5 point band. The busiest cell was named in only 62% of samples, against a required 80%, so the check as a whole missed. On test 53 the cells shared almost evenly, so naming the busiest cell means little there.
+- **Voltage error against margin.** In the charge range the Pi job uses, the largest error on test 28 was 0.17 V, always optimistic. The worst-case margin is 0.20 V, so it clears, but only by 0.03 V.
+- **Heat error against the limit.** Real rises reached 2.27 times the simulated rise. Scaling the worst case by that gives 42.4 °C against the 55 °C limit.
+- **OCV slope against entropy (VF3-08).** The worst variant reaches 35.0 °C, so the open question does not change this decision. The mismatch itself is still unresolved.
+- **LG low-charge change.** The lowest charge reached is 54.5%, well above the 18% where the change applies.
 
 ## Next step
 
