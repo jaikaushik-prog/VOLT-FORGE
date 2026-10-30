@@ -221,3 +221,12 @@ def test_a_copied_cell_keeps_its_narrower_model_domain():
     clone = normalize(dict({k: deepcopy(parent[k]) for k in fields}, name='Samsung copy', thermal_preset='none'), 'copy')
     assert CellModel(clone).soc_range == CellModel(parent).soc_range == (.15, 1.)
     assert CellModel(clone).temperature_range == CellModel(parent).temperature_range
+
+
+def test_compare_lists_settings_differences(studio):
+    doc = studio.create('parallel', 2, 'First', mission=dict(preset='pi5_gateway_backup'))
+    first = studio.run(doc['id'], doc['version'])
+    other = studio.create('parallel', 2, 'Second', mission=dict(preset='stress_12a'))
+    second = studio.run(other['id'], other['version'])
+    changes = studio.compare([first['id'], second['id']])['settings_changes']
+    assert any(c['path'].startswith('profile') and c['path'].endswith('current_A') for c in changes)

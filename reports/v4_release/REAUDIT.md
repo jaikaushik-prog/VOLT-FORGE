@@ -19,9 +19,9 @@ Checked 30 October 2026 at commit `6fea142` plus the release notes. Software ide
 | VF3-11 | Seeded design blocked | Fixed | Unchanged 14.55 A seed ran from a clean install |
 | VF3-12 | Keyboard focus lost | Fixed | Focus kept after a re-render with real key input |
 | VF3-13 | Stale session token | Fixed | Same page ran a test after a server restart |
-| VF3-14 | Compare hid settings differences | Fixed | Settings changes listed in Compare |
-| VF3-15 | AI saw little context | Fixed | Current settings and a bounded trace added |
-| VF3-16 | Sent draft not cleared | Fixed | Render no longer restores the old draft |
+| VF3-14 | Compare hid settings differences | Fixed | `test_compare_lists_settings_differences`; the list was not opened in a browser |
+| VF3-15 | AI saw little context | Fixed in code | Current settings and a bounded trace added, with a unit test on the trace |
+| VF3-16 | Sent draft not cleared | Fixed in code, not exercised | Render no longer restores the old draft. Not tried with a live AI reply |
 | VF3-17 | Restart traceback | Fixed | Clean message tested. The port can stay busy briefly after closing |
 | VF3-18 | Chart and naming polish | Fixed | Axis units, changing-load names, outputs in the guide |
 | VF3-19 | Identity source locators | Open, minor | Paper names M50T. Locator not added to the model record |
@@ -40,7 +40,7 @@ Summary: 15 fixed, 3 partly fixed or limited, 2 open.
 
 | Check | Result |
 | --- | --- |
-| Clean install, Python | 437 passed, 8 known skips |
+| Clean install, Python | 437 passed, 8 known skips, before one later test was added |
 | Clean install, JavaScript | 50 passed |
 | PyBaMM on frozen code | 15 of 15, voltage and heat |
 | Export replay | 5 of 5, tampered results and models refused |
