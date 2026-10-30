@@ -9,50 +9,52 @@ header{position:absolute;left:0;right:0;top:12px;text-align:center}
 h1{font-size:52px;font-weight:800;letter-spacing:-1.4px;line-height:1.08}
 h1 em{font-style:normal;color:#0091CC}
 header p{font-size:23px;font-weight:500;color:#566575;margin-top:4px}
-.col{position:absolute;top:118px;width:376px;height:872px;display:flex;flex-direction:column;justify-content:space-between}
+.col{position:absolute;top:118px;width:376px;height:792px;display:flex;flex-direction:column;justify-content:space-between}
 .left{left:36px}.right{right:36px}
 .c h2,.proto h2{font-size:16px;font-weight:800;color:#0091CC;letter-spacing:.3px;text-transform:uppercase}
-.c h3{font-size:29px;font-weight:800;letter-spacing:-.6px;line-height:1.16;margin-top:5px;text-wrap:balance}
-.c p{font-size:18.5px;font-weight:500;line-height:1.42;color:#3F4E5D;margin-top:7px}
-.c p b,.proofs b,.cap b{font-weight:800;color:#10202F}
-.proto{position:absolute;left:436px;top:118px;width:1048px;height:872px}
+.c h3{font-size:27px;font-weight:800;letter-spacing:-.5px;line-height:1.18;margin-top:5px;text-wrap:balance}
+.c p{font-size:18px;font-weight:500;line-height:1.42;color:#3F4E5D;margin-top:6px}
+.c p b,.kpi b{font-weight:800;color:#10202F}
+.proto{position:absolute;left:436px;top:118px;width:1048px;height:792px}
 .proto h2{text-align:center}
+.proto h2 span{color:#566575;font-weight:600;text-transform:none;letter-spacing:0;margin-left:10px}
 .shot{position:absolute;left:0;width:1048px;border:2px solid #D3DFE8;border-radius:12px;overflow:hidden;background:#fff}
 .shot img{display:block;width:100%}
-.one{top:27px}.two{top:448px}
-.cap{position:absolute;left:0;right:0;text-align:center;font-size:19px;font-weight:500;color:#3F4E5D}
-.cap1{top:411px}.cap2{top:753px}
-.proofs{position:absolute;left:0;right:0;top:793px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.proofs div{font-size:17.5px;font-weight:500;line-height:1.4;color:#3F4E5D}
-.market{display:flex;align-items:center;gap:16px;margin-top:9px}
+.one{top:27px}.two{top:362px}
+.kpis{position:absolute;left:36px;right:36px;top:920px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.kpi strong{display:block;font-size:30px;font-weight:800;letter-spacing:-.6px;color:#0B6FA8;line-height:1.15}
+.kpi span{font-size:17.5px;font-weight:500;color:#3F4E5D}
+.market{display:flex;align-items:center;gap:14px;margin-top:8px}
 .market svg{flex:none}
 .market ul{list-style:none}
-.market li{font-size:15px;font-weight:600;color:#3F4E5D;line-height:1.22;margin-bottom:5px}
-.market li b{font-size:20px;font-weight:800;color:#10202F;margin-right:5px}
-.cost{font-size:36px;font-weight:800;letter-spacing:-.8px;color:#0B6FA8;line-height:1.1;margin-top:9px}
-footer{position:absolute;left:36px;right:36px;bottom:20px;height:56px;border-radius:28px;background:#0B6FA8;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:600}
+.market li{font-size:14.5px;font-weight:600;color:#3F4E5D;line-height:1.22;margin-bottom:5px}
+.market li b{font-size:19px;font-weight:800;color:#10202F;margin-right:5px}
+.cost{font-size:34px;font-weight:800;letter-spacing:-.8px;color:#0B6FA8;line-height:1.1;margin-top:8px}
+footer{position:absolute;left:36px;right:36px;bottom:16px;height:52px;border-radius:26px;background:#0B6FA8;color:#fff;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:600}
 footer b{font-weight:800}
 </style></head><body><div class="slide">
 <img class="logo-left" src="assets/logo_teliport.png" alt="Teliport"><img class="logo-right" src="assets/logo_tata.png" alt="Tata Elxsi">
 <header><h1>Test a battery <em>before you build it</em></h1><p>VOLT-FORGE connects every battery design decision to what it physically changes</p></header>
 <section class="col left">
-<div class="c"><h2>Problem understanding</h2><h3>One change moves everything</h3><p>A battery design is scattered across datasheets, circuit tools, CAD and spreadsheets. Swap one copper link and current sharing, heat and cost all shift, and you usually find out on the bench. So we took one real job: keep a Raspberry Pi 5 gateway alive for <b>10 minutes at 25 W</b>.</p></div>
-<div class="c"><h2>Desirability</h2><h3>Break it here, not on the bench</h3><p>Students can't afford to burn parts just to learn what a bad connection does. Engineers can't afford to learn it late. Here you wire a real circuit, change one thing and see exactly what that decision changes, <b>before spending a rupee</b>.</p></div>
-<div class="c"><h2>Technical feasibility</h2><h3>Runs on a laptop, not in a lab</h3><p>Published LG M50T cell data and a local app. For the Pi job, 2 cells cleared <b>all 33 required cases</b>, with the busiest cell at 5.33 A against a 7.275 A limit, even with a mismatched cell in any position.</p></div>
+<div class="c"><h2>Problem understanding</h2><h3>Cells never share the load evenly</h3><p>Say you need a Raspberry Pi 5 gateway to survive a <b>10-minute power cut at 25 W</b>. Four cells in parallel sounds easy, until the cell closest to the output takes more current than the rest, runs hotter and sets the limit for the whole pack.</p></div>
+<div class="c"><h2>Desirability</h2><h3>You shouldn't need a lab to learn that</h3><p>Right now you find out by buying parts and hoping. A student can't afford that, and an engineer can't wait for it. Here you wire the circuit on screen, run it and see which cell struggles <b>before spending a rupee</b>.</p></div>
+<div class="c"><h2>Technical feasibility</h2><h3>So how few cells can do this job?</h3><p><b>2 LG M50T cells</b> passed all 33 required cases, even with a weak cell in either position. The busiest cell peaked at 5.33 A against its 7.275 A limit, and one cell alone was refused outright. All of it runs on a laptop.</p></div>
 </section>
-<section class="proto"><h2>Prototype &amp; evidence</h2>
+<section class="proto"><h2>Prototype &amp; evidence<span>A real 16-cell circuit, then two circuits compared under the same 16 A load</span></h2>
 <div class="shot one"><img src="assets/circuit.png" alt="A 16-cell circuit in VOLT-FORGE with the properties of Cell 6 open"></div>
-<div class="cap cap1"><b>Build.</b> A real 16-cell circuit with 36 links. Click any cell and its properties open on the side.</div>
-<div class="shot two"><img src="assets/compare.png" alt="VOLT-FORGE comparing a 16-cell and a 12-cell circuit"></div>
-<div class="cap cap2"><b>Compare.</b> Same 16 A load: 12 cells save ₹4,824 and 280 g, while the busiest cell works 0.25 A harder.</div>
-<div class="proofs"><div><b>4,006 what-if runs.</b> Weak cells, bad links, poor cooling: we tried to break it first.</div><div><b>15 of 15 PyBaMM checks.</b> The open-source battery simulator matched our voltage and heat.</div><div><b>5 of 5 replays.</b> Export a result and anyone can rerun it to the same numbers.</div></div>
+<div class="shot two"><img src="assets/compare.png" alt="VOLT-FORGE comparing a 16-cell and a 12-cell circuit, with the full results table"></div>
 </section>
 <section class="col right">
-<div class="c"><h2>Engineering quality</h2><h3>The AI suggests, the solver proves</h3><p>Every number comes from a circuit and heat solver, never a chatbot, and each run checks that heat matches electrical loss. Real-cell data showed cooling changes from rig to rig, so temperature stays a <b>range</b>, not a promise.</p></div>
-<div class="c"><h2>Innovation</h2><h3>It finds the answer for you</h3><p>Testing what you drew is the easy part. <b>Find the smallest design</b> rebuilds the circuit at every size, tests each one and shows what survives. Our Pi backup went from 4 cells to 2, at half the cell cost and mass.</p></div>
-<div class="c"><h2>Business viability</h2><div class="market"><svg width="128" height="128" viewBox="0 0 176 176" role="img" aria-label="TAM, SAM and SOM nested circles"><circle cx="88" cy="88" r="88" fill="#D5ECF8"/><circle cx="88" cy="118" r="58" fill="#59B9E6"/><circle cx="88" cy="146" r="30" fill="#0B6FA8"/></svg>
+<div class="c"><h2>Engineering quality</h2><h3>Now, why should you trust that?</h3><p>Heat is just electricity that never reached the load. So every run has to balance: energy out of the cells equals energy delivered plus heat. If it doesn't, the result gets flagged. Cooling varies by rig, so temperature stays a <b>range</b>.</p></div>
+<div class="c"><h2>Innovation</h2><h3>You don't have to guess the answer</h3><p>You could try every cell count by hand. Or press <b>Find the smallest design</b>: it rebuilds the circuit at each size, tests them all and shows what survives. For the Pi, that meant 2 cells, not 4, at half the cell cost.</p></div>
+<div class="c"><h2>Business viability</h2><div class="market"><svg width="118" height="118" viewBox="0 0 176 176" role="img" aria-label="TAM, SAM and SOM nested circles"><circle cx="88" cy="88" r="88" fill="#D5ECF8"/><circle cx="88" cy="118" r="58" fill="#59B9E6"/><circle cx="88" cy="146" r="30" fill="#0B6FA8"/></svg>
 <ul><li><b>41.3 lakh</b>TAM, engineering students</li><li><b>15.6 lakh</b>SAM, electrical, electronics, mechanical</li><li><b>130</b>SOM, colleges, 5% assumed</li></ul></div>
-<div class="cost">₹35 crore</div><p>to build all of it, from a measured dataset to the full app: 100 person-years, about 2% of AspenTech's yearly R&amp;D. Free for students, paid for labs.</p></div>
+<div class="cost">₹35 crore</div><p>to build all of it, from a measured dataset to the full app. 100 person-years, about 2% of AspenTech's yearly R&amp;D.</p></div>
+</section>
+<section class="kpis">
+<div class="kpi"><strong>4,006 what-if runs</strong><span>Weak cells, bad links, poor cooling: we tried to break it first.</span></div>
+<div class="kpi"><strong>42 overloads caught</strong><span>Cells pushed past their limit, stopped before anyone bought a part.</span></div>
+<div class="kpi"><strong>10 minutes in 3 seconds</strong><span>Even the 16-cell module, on an 8 GB laptop.</span></div>
 </section>
 <footer><span><b>Everything here is simulated.</b>&nbsp; Next we bench-test real cells and put it in front of students and engineers.</span></footer>
 </div></body></html>

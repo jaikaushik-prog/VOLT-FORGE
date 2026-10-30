@@ -44,3 +44,5 @@
 #main h1:focus{outline:none}
 .limit-status.ok{color:#1f6452;font-weight:600}
 .page-wrap:has(.compare-designs){max-width:1460px}.compare-designs svg,.compare-designs .battery-canvas{width:100%!important;height:auto!important;max-height:none!important}
+.compare-tables{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.compare-tables .compare-table{margin:0}.compare-tables th,.compare-tables td{padding:5px 10px;font-size:13px;white-space:nowrap}.page-wrap:has(.compare-designs) .compare-designs .battery-canvas{max-height:292px!important}
+@media(max-width:1100px){.compare-tables{grid-template-columns:1fr}.compare-tables th,.compare-tables td{white-space:normal}}

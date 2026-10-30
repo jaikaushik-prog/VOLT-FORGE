@@ -21,6 +21,7 @@ Not proven: the Geekworm X1206 V2.0 board running on two cells, a real Pi draw, 
 Cost: cells only, Robu LG M50T Rs 1,206 including GST, listed out of stock, checked 30 Oct 2026. Excludes shipping and fabrication.
 Market: AISHE 2021-22. The price of Rs {d['market']['licence_inr']:,} a lab and 5% reach are assumptions, and counts do not show willingness to pay.
 Build cost: about Rs {d['cost']['total_crore']:.0f} crore over 3 years and {d['cost']['person_years']:g} person-years for the full product vision. An estimate from sourced salary rates and assumed staffing, cross-checked with COCOMO II. See reports/build_cost_v1/BUILD_COST.md. AspenTech fiscal 2024 R&D was US$206.1 million.
+KPIs: {d['kpi']['overloads_caught']} of {d['kpi']['study_runs']:,} study runs were refused because a cell would have exceeded 7.275 A. A 10-minute run of the 16-cell module took a median {d['kpi']['seconds_16_cells']:.2f} s on {d['kpi']['machine']}.
 Screens: real designs in the app. The 16-cell and 12-cell modules are examples of what it can handle, not the recommended design."""
 
 

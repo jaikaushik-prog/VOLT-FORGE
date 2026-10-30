@@ -49,7 +49,7 @@ def main():
                 replay=dict(cases=len(receipt['checks']), passed=sum(c['replay_passed'] for c in receipt['checks'])),
                 samsung=gate['checks']['samsung']['6A'],
                 market=dict(tam_students=s['engineering_technology_enrolment'], sam_students=sam, colleges=s['engineering_technology_colleges'], som_colleges=colleges, licence_inr=a['annual_lab_licence_inr']['value'], som_inr=colleges*a['annual_lab_licence_inr']['value']))
-    data['cost'] = read('reports/build_cost_v1/result.json'); data['demo'] = read('reports/slide_v4/demo.json')
+    data['cost'] = read('reports/build_cost_v1/result.json'); data['demo'] = read('reports/slide_v4/demo.json'); data['kpi'] = read('reports/slide_v4/kpi.json')
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(data, indent=2, allow_nan=False)+'\n')
     print(json.dumps({k: data[k] for k in ('table', 'saving', 'proof')}, indent=0)[:1500])

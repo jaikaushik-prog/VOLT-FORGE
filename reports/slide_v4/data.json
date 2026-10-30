@@ -576,5 +576,14 @@
       25.317149409811343,
       25.91587548143268
     ]
+  },
+  "kpi": {
+    "study_runs": 4006,
+    "overloads_caught": 42,
+    "overload_reason": "Cell current exceeds the 7.275 A operating limit; the app refused the run",
+    "simulated_s": 600,
+    "seconds_16_cells": 3.073356207984034,
+    "runs_timed": 7,
+    "machine": "Apple M1, 8 GB, Darwin"
   }
 }

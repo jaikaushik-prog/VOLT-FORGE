@@ -82,7 +82,7 @@ export function sizingTable(inv,busy,openButton){
 
 export function tradeoffRows(a,b,deltaLabel){
  const margin=t=>{const target=t.settings.limits.min_voltage_V;return target==null?null:t.summary.metrics.minimum_voltage_V-target;};
- const cell=t=>t.parts?.cell_mass_g,rows=[['Cells',a.graph.cells.length,b.graph.cells.length,''],['Listed cost',costLabel(a.parts),costLabel(b.parts),null],['Cell mass',cell(a),cell(b),'g'],['Margin above voltage target',margin(a),margin(b),'V']];
+ const cell=t=>t.parts?.cell_mass_g,priced=t=>costLabel(t.parts).replace(' + unpriced parts',''),rows=[['Cells',a.graph.cells.length,b.graph.cells.length,''],['Listed cost, priced parts',priced(a),priced(b),null],['Cell mass',cell(a),cell(b),'g'],['Margin above voltage target',margin(a),margin(b),'V']];
  return rows.filter(([, x,y])=>x!=null||y!=null).map(([label,x,y,unit])=>unit===null?`<tr><td>${label}</td><td>${esc(x)}</td><td>${esc(y)}</td><td></td></tr>`:`<tr><td>${label}</td><td>${x==null?'—':fmt(x,unit==='V'?2:0)} <small>${unit}</small></td><td>${y==null?'—':fmt(y,unit==='V'?2:0)} <small>${unit}</small></td><td>${x==null||y==null?'':deltaLabel(y-x)} <small>${unit}</small></td></tr>`).join('');
 }
 
