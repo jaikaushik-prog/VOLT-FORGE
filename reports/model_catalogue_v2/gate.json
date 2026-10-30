@@ -1,6 +1,6 @@
 {
   "version": "voltforge.model-gate/2",
-  "created_utc": "2026-10-30T11:12:35.983817+00:00",
+  "created_utc": "2026-10-30T22:50:57.352197+00:00",
   "deployed_catalogue": "configs/cell_catalogue_v2.json",
   "deployed_catalogue_sha256": "79510cdf84dd1aae36521a762b7d9537ae8c122e468f0ace1b62c2ea64802824",
   "parent_sha256": "773697a5f58aa075e9c5556267022f5db5a6387327bb4d5319d59653a834ad16",

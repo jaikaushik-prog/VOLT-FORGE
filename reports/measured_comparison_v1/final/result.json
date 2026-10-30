@@ -2,7 +2,7 @@
   "version": "voltforge.measured-comparison-results/1",
   "protocol_sha256": "a0e8d72f19d6a7ffb25afdc7e155dc7f9166fda03926ac4cb7d3329fda337020",
   "catalogue_sha256": "79510cdf84dd1aae36521a762b7d9537ae8c122e468f0ace1b62c2ea64802824",
-  "source_commit": "75f48969ab3becd9c4d7c334a144ec0a3f617f74",
+  "source_commit": "4d96fe03f2119019fb3f59a2e5a413667cedb890",
   "experimental_validation": false,
   "cases": [
     {

@@ -1,19 +1,19 @@
 # V4 re-audit against the 20 V3 findings
 
-Checked 30 October 2026 at commit `6fea142` plus the release notes. Software identity `dd8746b0898bcae0`.
+Checked 30 October 2026 at commit `6fea142` plus the release notes, and updated 31 October for the locked code, software `97ca199f2fd21aac`.
 
-**This is not an independent audit.** The same reviewer audited V3 and built V4. Treat it as a self-check and have Codex or a fresh reviewer repeat it.
+**This table is a self-check.** The same reviewer audited V3 and built V4. A fresh reviewer then audited V4: see `INDEPENDENT_AUDIT.md`.
 
 | ID | V3 finding | V4 status | Evidence |
 | --- | --- | --- | --- |
 | VF3-01 | Heat created energy | Fixed | `tests/test_first_law.py`; Samsung 6 A stops at 1,001.9 s at its charge limit, peak 27.94 °C; check fails on the V3 form |
 | VF3-02 | LG table step | Fixed, unvalidated | `configs/cell_catalogue_v2.json`; no step at fixed current and temperature; modification recorded as unvalidated |
-| VF3-03 | AI creation failed | Fixed on Claude | 4 of 4 audit prompts opened drafts through the Claude route. Codex route untested because the account reached its limit |
+| VF3-03 | AI creation failed | Fixed | 4 of 4 audit prompts opened drafts through Claude and through Codex. See `ai_codex_route.jsonl` |
 | VF3-04 | Recommendation did not generalise | Addressed | 4,006-case study; conditional recommendation; no link option wins every case |
 | VF3-05 | Application, mass, cost, charging hidden | Mostly fixed | Application, requirements, cost, mass and charging result on screen. Cell dimensions are not shown |
 | VF3-06 | Checks could not see heat | Fixed for numerics | First-law check closed in every calculated study case. Measured accuracy is still not established |
 | VF3-07 | Cooling weakly identified | Partly addressed | Relabelled, range shown, low-cooling assumption added. The value stays rig-specific, and the measured comparison shows this matters |
-| VF3-08 | OCV slope contradicts entropy | Open | Not changed. Needs a sensitivity check before any claim |
+| VF3-08 | OCV slope contradicts entropy | Bounded | Still unresolved, but the worst variant peaks at 35.0 °C against the 55 °C limit, so it does not change the decision. See `reports/engineering_checks_v1/result.json` |
 | VF3-09 | Interface conflicts unflagged | Fixed | `studio/design_rules.py`, in the shared simulation path |
 | VF3-10 | No over-voltage threshold | Fixed | Voltage ceiling and charge window tested in the browser |
 | VF3-11 | Seeded design blocked | Fixed | Unchanged 14.55 A seed ran from a clean install |
@@ -24,15 +24,15 @@ Checked 30 October 2026 at commit `6fea142` plus the release notes. Software ide
 | VF3-16 | Sent draft not cleared | Fixed in code, not exercised | Render no longer restores the old draft. Not tried with a live AI reply |
 | VF3-17 | Restart traceback | Fixed | Clean message tested. The port can stay busy briefly after closing |
 | VF3-18 | Chart and naming polish | Fixed | Axis units, changing-load names, outputs in the guide |
-| VF3-19 | Identity source locators | Open, minor | Paper names M50T. Locator not added to the model record |
+| VF3-19 | Identity source locators | Fixed | `configs/source_locators_v1.json` gives PyECN Section 3.1 and the LG sections. No first-party copy of the sheet is public |
 | VF3-20 | Stop messages | Fixed | Messages name the range and next actions |
 
-Summary: 15 fixed, 3 partly fixed or limited, 2 open.
+Summary: 16 fixed, 3 partly fixed or limited, 1 bounded.
 
 ## New limits V4 introduced or exposed
 
 - All 12 pre-declared measured comparison cases missed their bands. Single-cell runs fit the low end of the cooling range; the module rig ran cooler than the whole range.
-- The Geekworm X1206 V2.0 is not confirmed to run with fewer than four cells, and it publishes no battery cutoff or efficiency.
+- The 2-cell design now uses the Geekworm X1205, a 2-cell board. It publishes no battery overcurrent threshold, so its limit at about 8 A must be measured.
 - Only one exact-part listing was found for that board, so its price is not an average.
 - 8.42 A is a constant-current approximation, not a constant-power load.
 
@@ -40,11 +40,11 @@ Summary: 15 fixed, 3 partly fixed or limited, 2 open.
 
 | Check | Result |
 | --- | --- |
-| Clean install, Python | 437 passed, 8 known skips, before one later test was added |
+| Clean install, Python | 442 passed, 8 known skips, on the locked code |
 | Clean install, JavaScript | 50 passed |
 | PyBaMM on frozen code | 15 of 15, voltage and heat |
 | Export replay | 5 of 5, tampered results and models refused |
 | Study | 4,006 cases, 42 refused, first law closed in every calculated case |
 | Browser, clean copy | Setup, load block, warnings, live cost, verdict, seeded design, protection, restart recovery, 1024 px, 390 px |
 
-Not tested: Windows, browsers other than Chrome, hardware, real users, and the Codex AI route.
+Not tested: Windows, hardware and real users. The core flow ran in WebKit, Firefox, Edge and Chrome: see `browser_check.json`.

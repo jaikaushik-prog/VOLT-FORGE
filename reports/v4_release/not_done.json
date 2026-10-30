@@ -1,0 +1,13 @@
+[
+ "Nothing has been built. All results are simulated.",
+ "No hardware test and no real user trial yet. No user has tried the app.",
+ "No accuracy figure exists: the published-data checks missed, and the sealed records stay closed.",
+ "Not tested: Windows.",
+ "The X1205 publishes no battery overcurrent threshold, so its limit at about 8 A is unknown.",
+ "The LG low-charge table change is unvalidated. The Pi job never reaches it.",
+ "OCV slope against entropy (VF3-08) is unresolved. It does not change the decision.",
+ "Not in scope for Round 1: ageing, packaging, energy management and full charge modelling.",
+ "Find the smallest design tests normal conditions only. The weak-cell tests are in the study.",
+ "Salary inputs are approximate: principals use a senior-engineer average and senior physics a 3 to 5 year band.",
+ "The number of paying teams in India has not been sized."
+]

@@ -16,7 +16,7 @@ def main():
     parser.add_argument('--out', type=Path, default=ROOT/'reports/slide_v4/data.json')
     args = parser.parse_args()
     summary = read(f'{args.run}/summary.json'); market = read('configs/market_sizing_v1.json'); receipt = read('reports/v4_release/replay_receipt.json')
-    pybamm = read('reports/numerical_reference_v2/run1/verification.json'); diagnostic = read('reports/measured_comparison_v1/post_hoc_diagnostic.json')
+    pybamm = read('reports/numerical_reference_v2/locked_97ca199/verification.json'); diagnostic = read('reports/measured_comparison_v1/post_hoc_diagnostic.json')
     prices = read('configs/parts_prices_v1.json'); gate = read('reports/model_catalogue_v2/gate.json')
     measured = read('reports/measured_comparison_v1/final/result.json')
     rec = summary['recommended'] or dict(count=None, option='baseline')
@@ -52,11 +52,16 @@ def main():
                 market=dict(tam_students=s['engineering_technology_enrolment'], sam_students=sam, colleges=s['engineering_technology_colleges'], som_colleges=colleges, licence_inr=a['annual_lab_licence_inr']['value'], som_inr=colleges*a['annual_lab_licence_inr']['value']))
     data['cost'] = read('reports/build_cost_v1/result.json'); data['kpi'] = read('reports/slide_v4/kpi.json')
     data['checks'] = read('reports/engineering_checks_v1/result.json')
-    plan = read('configs/business_case_v1.json'); cost = data['cost']; work = {w['id']: w['crore'] for w in cost['work']}
-    first = sum(work[w] for w in plan['stages'][0]['workstreams'])/cost['breakdown_crore']['people']*cost['total_crore']
-    revenue = int(colleges)*a['annual_lab_licence_inr']['value']/1e7
-    data['business'] = dict(stage1_crore=first, team_price_inr=plan['team_plan']['annual_price_inr'], repay_years=plan['repay_years']['value'],
-                            stage1_teams=ceil((first/plan['repay_years']['value']-revenue)*1e7/plan['team_plan']['annual_price_inr']))
+    data['designs'] = len(summary['designs'])
+    plan = read('configs/business_case_v1.json'); price = plan['team_plan']['annual_price_inr']; years = plan['repay_years']['value']
+    build = read('configs/build_cost_v1.json'); cost = data['cost']; share = cost['breakdown_crore']; work = {w['id']: w['crore'] for w in cost['work']}
+    lab_running = build['recurring_lakh_per_year'][0]['value']*build['duration_years']/100
+    people = sum(work[w] for w in plan['stages'][0]['workstreams'])
+    shared = (share['recurring']-lab_running+share['one_off'])*people/share['people']
+    first = (people+share['lab']+lab_running+shared)*(1+build['contingency']['value'])
+    labs = int(colleges); revenue = labs*a['annual_lab_licence_inr']['value']/1e7
+    data['business'] = dict(stage1_crore=first, team_price_inr=price, repay_years=years, labs=labs, lab_lakh=revenue*100, yearly_crore=first/years,
+                            stage1_teams=ceil((first/years-revenue)*1e7/price), teams_without_labs=ceil(first/years*1e7/price), labs_alone=ceil(first/years*1e7/a['annual_lab_licence_inr']['value']))
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(data, indent=2, allow_nan=False)+'\n')
     print(json.dumps({k: data[k] for k in ('table', 'saving', 'proof')}, indent=0)[:1500])

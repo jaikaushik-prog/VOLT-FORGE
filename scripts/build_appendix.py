@@ -115,7 +115,7 @@ put(b, r, 1, 'Difference from our people cost'); put(b, r, 2, f'=B{cc}/J{people_
 r = section(b, r, 'Benchmark: AspenTech')
 put(b, r, 1, 'Research and development, FY2024, US$ million'); put(b, r, 2, cost['benchmark']['usd_million'], 'input', '0.0'); bm = r; r += 1
 put(b, r, 1, 'In ₹ crore'); put(b, r, 2, f'=B{bm}*{inputs["usd_inr"]}/10', fmt='#,##0'); bmc = r; r += 1
-put(b, r, 1, 'Our whole build as a share of one AspenTech year', 'bold'); put(b, r, 2, f'=B{total_row}/B{bmc}', 'bold', '0.0%'); share_row = r
+put(b, r, 1, 'Our whole build as a share of one AspenTech year', 'bold'); put(b, r, 2, f'=B{total_row}/B{bmc}', 'bold', '0.0%'); aside(b, r, 3, 'Scale check only. AspenTech is not a battery tool, so this is not a like-for-like price.'); share_row = r
 
 # Market
 m = tab('Market', 'Who could use it, India first', 'Students use it free, so revenue comes from labs and teams. Counts size the audience; they do not show anyone will pay.', [50, 16, 62, 16, 16])
@@ -147,11 +147,16 @@ put(m, r, 1, 'Years to repay'); put(m, r, 2, business['repay_years']['value'], '
 r = header(m, r, ['Stage', 'Cost, ₹ crore', 'What is in it', 'Running total, ₹ crore', 'Paying teams needed'])
 names = {x['id']: x['name'] for x in cost['work_breakdown_person_years']}
 stage_first = r
-for stage in business['stages']:
+for number, stage in enumerate(business['stages']):
     share = '+'.join(f"'Build cost'!J{stream[w]}" for w in stage['workstreams'])
-    put(m, r, 1, stage['name'], 'bold'); put(m, r, 2, f"=({share})/'Build cost'!J{people_row}*'Build cost'!B{total_row}", 'link', '0.0'); put(m, r, 3, ', '.join(names[w] for w in stage['workstreams']))
+    lab = f"('Build cost'!F{lab_row}+'Build cost'!D{run_first})/100" if number == 0 else '0'
+    other = f"('Build cost'!D{run_row}-'Build cost'!D{run_first}+'Build cost'!D{one_row})/100*({share})/'Build cost'!J{people_row}"
+    put(m, r, 1, stage['name'], 'bold'); put(m, r, 2, f"=({share}+{lab}+{other})*(1+'Build cost'!{inputs['contingency']})", 'link', '0.0'); put(m, r, 3, ', '.join(names[w] for w in stage['workstreams']))
     put(m, r, 4, f'=SUM(B${stage_first}:B{r})', fmt='0.0'); put(m, r, 5, f'=ROUNDUP(MAX(0,(D{r}*100/$B${years}-$B${rev})*100000/$B${plan}),0)', fmt='0'); r += 1
-put(m, r, 1, business['stage_rule']); m.merge_cells(start_row=r, start_column=1, end_row=r, end_column=5); m.row_dimensions[r].height = 28; stage_note = r
+put(m, r, 1, business['stage_rule']); m.merge_cells(start_row=r, start_column=1, end_row=r, end_column=5); m.row_dimensions[r].height = 42; r += 2
+put(m, r, 1, 'Stage one, needed a year, ₹ crore'); put(m, r, 2, f'=B{stage_first}/B{years}', fmt='0.0'); r += 1
+put(m, r, 1, 'Paying teams needed with no lab income'); put(m, r, 2, f'=ROUNDUP(B{stage_first}*10000000/B{years}/B{plan},0)', fmt='0'); r += 1
+put(m, r, 1, 'Labs needed with no team income'); put(m, r, 2, f'=ROUNDUP(B{stage_first}*10000000/B{years}/B{price},0)', fmt='0'); put(m, r, 3, f"Against {s['engineering_technology_colleges']:,} colleges, so labs alone are unlikely to carry it.")
 
 # Parts
 p = tab('Parts', 'What the backup would cost in parts', 'Public listings checked 30 Oct 2026. One exact part per line. Two cells halve the cell bill, not the whole unit.', [34, 16, 12, 10, 16, 24, 54])
@@ -202,8 +207,10 @@ facts = [('Cases run', study['cases'], '#,##0'), ('Refused by the product, all f
 for label, value, fmt in facts:
     put(d, r, 1, label); d.merge_cells(start_row=r, start_column=1, end_row=r, end_column=8); put(d, r, 9, value, fmt=fmt); r += 1
 r += 1; r = section(d, r, 'What argues against two cells')
-for text in ['Less margin: 5.33 A worst case, against 3.34 A for four cells.', 'Cold rooms: below 10 °C the LG sheet limits each cell to 2.425 A, so two cells could not carry this load. The study holds 23 °C.', 'A bought board has a fixed cell layout, so the far-cell output needs your own wiring. The same-end layout also passes all 33 required tests.', 'The X1205 publishes no battery overcurrent threshold, so its limit at about 8 A must be measured.', 'The 12 A stress test can fail: 2 of 62 mixed samples were refused. All 62 passed at the Pi load.', 'No link layout wins everywhere: the far-cell output raised peak current in 35 of 81 paired cases.', 'Temperatures are a range, not a prediction. See Evidence.']:
+for text in ['No spare: if one cell or its contact fails, the backup fails. Three cells is the smallest design that survives losing a cell.', 'Less margin: 5.33 A worst case, against 3.34 A for four cells.', 'Cold rooms: below 10 °C the LG sheet limits each cell to 2.425 A, so two cells could not carry this load. The study holds 23 °C.', 'A bought board has a fixed cell layout, so the far-cell output needs your own wiring. The same-end layout also passes all 33 required tests.', 'The X1205 publishes no battery overcurrent threshold, so its limit at about 8 A must be measured.', 'The 12 A stress test can fail: 2 of 62 mixed samples were refused. All 62 passed at the Pi load.', 'No link layout wins everywhere: the far-cell output raised peak current in 35 of 81 paired cases.', 'Temperatures are a range, not a prediction. See Evidence.']:
     put(d, r, 1, text); d.merge_cells(start_row=r, start_column=1, end_row=r, end_column=12); r += 1
+r += 1; r = section(d, r, 'If the Pi draws less than 25 W')
+put(d, r, 1, 'One cell stays under its limit below, W'); d.merge_cells(start_row=r, start_column=1, end_row=r, end_column=2); put(d, r, 3, f'={job["lim"]}*{job["v"]}*{job["e"]}', fmt='0.0'); aside(d, r, 4, '25 W is the supply rating, not a measured draw. Published readings are about 8.8 W on a CPU stress test and up to 16 W with an SSD and video.'); r += 1
 r += 1; r = section(d, r, 'Recharge after a 10-minute outage')
 put(d, r, 1, 'Charge used, Ah'); d.merge_cells(start_row=r, start_column=1, end_row=r, end_column=2); put(d, r, 3, f'={job["w"]}/{job["e"]}/{job["v"]}*10/60', fmt='0.0'); used = r; r += 1
 put(d, r, 1, 'Charge current, A'); d.merge_cells(start_row=r, start_column=1, end_row=r, end_column=2); put(d, r, 3, 2.91, 'input', '0.00', True); aside(d, r, 4, 'Two cells at the LG 1.455 A limit up to 25 °C. The X1205 can charge at up to 3 A, so it should be set just below that.'); rate = r; r += 1
@@ -250,7 +257,7 @@ rows += [("Voltage error in the Pi's charge range", f"{volt['primary']['largest_
          ('Temperature at the worst known error', f"{heat['scaled_C']:.1f} °C, at {heat['largest_measured_over_simulated']:.2f} times the rise", f"{heat['limit_C']} °C, LG sheet", 'Pass' if heat['passed'] else 'Miss'),
          ('8.42 A against a true 25 W load', f"Cell peak {power['constant_current']['peak_cell_current_A']:.2f} A against {power['constant_power']['peak_cell_current_A']:.2f} A", 'Must be the harder case', 'Pass' if power['passed'] else 'Miss'),
          ('OCV slope against entropy (VF3-08)', f"{max(x['peak_temperature_C'] for x in entropy['rows']):.1f} °C, worst variant", f"{heat['limit_C']} °C", 'Pass' if entropy['passed'] else 'Miss'),
-         ('LG low-charge table change', f"Lowest charge {min(x['lowest_charge_pct'] for x in low['rows']):.1f}%", f"Above {low['threshold_pct']}%", 'Pass' if low['passed'] else 'Miss')]
+         ('LG low-charge table change', f"Lowest charge {checks['post_hoc']['required_charge']['lowest_charge_pct']:.1f}% across all {checks['post_hoc']['required_charge']['cases']} tests", f"Above {low['threshold_pct']}%", 'Pass' if low['passed'] else 'Miss')]
 for row in rows:
     put(e, r, 1, row[0]); put(e, r, 2, row[1]); put(e, r, 3, row[2]); e.merge_cells(start_row=r, start_column=3, end_row=r, end_column=6); put(e, r, 7, row[3]); e.merge_cells(start_row=r, start_column=7, end_row=r, end_column=10); r += 1
 r += 1; r = section(e, r, 'Test 28: share of the current in a real four-cell module, % (added after the run)')
@@ -258,7 +265,15 @@ r = header(e, r, ['Cell, from nearest the output', 'Measured, first 10%', 'Model
 detail = checks['post_hoc']['share_detail'][0]; share_first = r
 for i in range(4):
     put(e, r, 1, f'Cell {i+1}'); put(e, r, 2, detail['first_10pct']['measured'][i], fmt='0.0'); put(e, r, 3, detail['first_10pct']['simulated'][i], fmt='0.0'); put(e, r, 4, detail['last_10pct']['measured'][i], fmt='0.0'); put(e, r, 5, detail['last_10pct']['simulated'][i], fmt='0.0'); r += 1
-put(e, r, 1, f"The model's average error is {detail['model_error_points']:.2f} points, against {detail['equal_share_error_points']:.2f} for a guess that every cell carries 25%. The assumed sensor order fits best of all {detail['channel_orders_tried']} possible orders. On test 53, with no added link resistance, the cells shared almost evenly and the model did no better than that guess. One module is not proof, and the Hall sensors' calibration is still unresolved, though shares cancel any overall gain error."); e.merge_cells(start_row=r, start_column=1, end_row=r, end_column=10); e.row_dimensions[r].height = 56
+put(e, r, 1, f"The model's average error is {detail['model_error_points']:.2f} points, against {detail['equal_share_error_points']:.2f} for a guess that every cell carries 25%. The assumed sensor order fits best of all {detail['channel_orders_tried']} possible orders. On test 53, with no added link resistance, the cells shared almost evenly and the model did no better than that guess. One module is not proof. The sensors' calibration is unresolved, and shares cancel only a gain common to all sensors. That test used 3 mΩ links, three times the design's."); e.merge_cells(start_row=r, start_column=1, end_row=r, end_column=10); e.row_dimensions[r].height = 56; r += 2
+r = section(e, r, 'Real heating over the first 10 minutes, the length of the Pi job (added after the run)')
+r = header(e, r, ['Measured discharge', 'Measured rise, K', 'Model rise, K', 'Real over model'])
+tenmin = checks['post_hoc']['ten_minute_rise']; first_rise = r
+for row in tenmin:
+    put(e, r, 1, row['case'].replace('test28_exact_m50t_module', 'Test 28, M50T module').replace('test53_used_fixture', 'Test 53, M50T module').replace('LGM50_cell0', 'Warwick cell ')); put(e, r, 2, row['measured_rise_K'], fmt='0.00'); put(e, r, 3, row['simulated_rise_K'], fmt='0.00'); put(e, r, 4, f'=B{r}/C{r}', fmt='0.00'); r += 1
+put(e, r, 1, 'Highest', 'bold'); put(e, r, 4, f'=MAX(D{first_rise}:D{r-1})', 'bold', '0.00'); tenmin_row = r; r += 1
+put(e, r, 1, 'Warwick cells are LG M50 family, not confirmed M50T. The 2.27 in the table above comes from a full discharge taken close to empty, so it is the harsher figure.'); e.merge_cells(start_row=r, start_column=1, end_row=r, end_column=10); r += 2
+put(e, r, 1, f"Virtual protection: with cutoffs of {checks['post_hoc']['virtual_protection']['settings']}, the design finished the job without tripping."); e.merge_cells(start_row=r, start_column=1, end_row=r, end_column=10)
 
 # Limits and sources
 NOT_DONE = read('reports/v4_release/not_done.json')
@@ -295,15 +310,16 @@ heads = [
     ('Simulated cases', f"='Design study'!I{top+len(study['designs'])+2}", '#,##0', 'Frozen plan, run once, every result kept'),
     ('Nearest cell, real share of current at the start, %', f"=Evidence!B{share_first}", '0.0', 'Published four-cell test. The model predicted 34.4'),
     ('Farthest cell, real share of current at the start, %', f"=Evidence!B{share_first+3}", '0.0', 'Same test. The model predicted 18.7'),
-    ('Measured cases inside both bands', f"=Evidence!I{inband}", '0', 'Out of 12, mostly on temperature. The model was not tuned to close this gap'),
+    ('Measured cases inside both bands', f"=Evidence!I{inband}", '0', 'Out of 12 full-discharge checks. Voltage and temperature both missed. The model was not tuned'),
+    ('Highest real over model heating, first 10 minutes', f"=Evidence!D{tenmin_row}", '0.00', 'Eight measured discharges, the length of the Pi job'),
     ('Cost to build the full product, ₹ crore', f"='Build cost'!B{total_row}", '0.0', 'Three years, from own lab data to a full engineering app'),
     ('Person-years', f"='Build cost'!H{people_row}", '0.0', 'About 34 people on average'),
     ('Share of one AspenTech R&D year', f"='Build cost'!B{share_row}", '0.0%', 'Scale check against an established engineering software company'),
     ('TAM, students (lakh)', f"=Market!B{tam}", '0.0', 'All engineering and technology students in India'),
     ('SAM, students (lakh)', f"=Market!B{sam}", '0.0', 'Electrical, electronics and mechanical'),
     ('SOM, colleges', f"=Market!B{som}", '0', 'Assumed 5% of engineering colleges'),
-    ('First stage of the build, ₹ crore', f"=Market!B{stage_first}", '0.0', 'Dataset, results and quality, about a quarter of the whole'),
-    ('Paying teams to repay it in 5 years', f"=Market!E{stage_first}", '0', 'At an assumed ₹5 lakh a year, on top of lab licences'),
+    ('First stage of the build, ₹ crore', f"=Market!B{stage_first}", '0.0', 'Dataset, results, quality and the lab'),
+    ('Paying teams to repay it in 5 years', f"=Market!E{stage_first}", '0', 'At an assumed ₹5 lakh a year, plus 130 labs, before running costs'),
 ]
 for label, formula, fmt, meaning in heads:
     put(u, r, 1, label); put(u, r, 2, formula, 'link', fmt); aside(u, r, 3, meaning); r += 1

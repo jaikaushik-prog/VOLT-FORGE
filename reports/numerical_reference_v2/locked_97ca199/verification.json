@@ -1,0 +1,355 @@
+{
+  "version": "voltforge.numerical-reference-results/1",
+  "created_utc": "2026-10-30T22:53:07.390179+00:00",
+  "scope": "Synthetic electrical and heat-generation verification against native PyBaMM Thevenin and closed-form RC solutions; not experimental or thermal validation",
+  "protocol_sha256": "55317e7a2638b657dbdada7e6cf3397672d92b66372b8415f8c375ab958339b9",
+  "driver_sha256": "7c2e9f2fd79ca24dded13dbc90e40c39456b06397571a9d4a259d38b9459fd87",
+  "runtime": {
+    "pybamm": "26.4.2",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "casadi": "3.7.2",
+    "pandas": "2.2.2",
+    "matplotlib": "3.9.2"
+  },
+  "passed": true,
+  "checks": [
+    {
+      "rc_order": 0,
+      "current_A": 3.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 7.105427357601002e-15,
+        "maximum_soc_difference": 8.215650382226158e-15,
+        "maximum_heat_energy_difference_J": 3.9612757518625585e-13
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 6.661338147750939e-15,
+        "maximum_soc_difference": 7.771561172376096e-15,
+        "maximum_heat_energy_difference_J": 2.4868995751603507e-14
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 8.881784197001252e-16,
+        "maximum_soc_difference": 6.661338147750939e-16,
+        "maximum_heat_energy_difference_J": 3.836930773104541e-13
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 0,
+      "current_A": -1.5,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.6637359812630166e-15,
+        "maximum_heat_energy_difference_J": 9.903189379656396e-14
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.885780586188048e-15,
+        "maximum_heat_energy_difference_J": 6.217248937900877e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 3.3306690738754696e-16,
+        "maximum_heat_energy_difference_J": 9.592326932761353e-14
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 0,
+      "current_A": 0.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 0.0,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": 3.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 1.8058443629342946e-11,
+        "maximum_soc_difference": 5.440092820663267e-15,
+        "maximum_heat_energy_difference_J": 9.391308104511609e-07
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 6.661338147750939e-15,
+        "maximum_soc_difference": 7.771561172376096e-15,
+        "maximum_heat_energy_difference_J": 3.552713678800501e-14
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 1.8057555450923246e-11,
+        "maximum_soc_difference": 4.9960036108132044e-15,
+        "maximum_heat_energy_difference_J": 9.39130842425584e-07
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": 3.0,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 6.217248937900877e-15,
+        "maximum_soc_difference": 7.438494264988549e-15,
+        "maximum_heat_energy_difference_J": 1.872280108727864e-12
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 6.661338147750939e-15,
+        "maximum_soc_difference": 7.771561172376096e-15,
+        "maximum_heat_energy_difference_J": 4.263256414560601e-14
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 8.881784197001252e-16,
+        "maximum_soc_difference": 8.881784197001252e-16,
+        "maximum_heat_energy_difference_J": 1.907807245515869e-12
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": -1.5,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 2.3651747227404485e-11,
+        "maximum_soc_difference": 4.884981308350689e-15,
+        "maximum_heat_energy_difference_J": 2.349535241918943e-07
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.885780586188048e-15,
+        "maximum_heat_energy_difference_J": 8.881784197001252e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 2.3651747227404485e-11,
+        "maximum_soc_difference": 2.1094237467877974e-15,
+        "maximum_heat_energy_difference_J": 2.3495353218550008e-07
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": -1.5,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.297984190770876e-11,
+        "maximum_soc_difference": 1.2545520178264269e-14,
+        "maximum_heat_energy_difference_J": 7.044458447680313e-07
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.885780586188048e-15,
+        "maximum_heat_energy_difference_J": 7.105427357601002e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 4.298028599691861e-11,
+        "maximum_soc_difference": 9.658940314238862e-15,
+        "maximum_heat_energy_difference_J": 7.044458509852802e-07
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": 0.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 0.0,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 1,
+      "current_A": 0.0,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 3.459499353652973e-11,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 3.459543762573958e-11,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": 3.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.1304293318944474e-11,
+        "maximum_soc_difference": 1.0103029524088925e-14,
+        "maximum_heat_energy_difference_J": 1.0348054289011088e-06
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 6.661338147750939e-15,
+        "maximum_soc_difference": 7.771561172376096e-15,
+        "maximum_heat_energy_difference_J": 2.842170943040401e-14
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 4.1303849229734624e-11,
+        "maximum_soc_difference": 3.6637359812630166e-15,
+        "maximum_heat_energy_difference_J": 1.034805450217391e-06
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": 3.0,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 1.376099234562389e-11,
+        "maximum_soc_difference": 6.661338147750939e-15,
+        "maximum_heat_energy_difference_J": 4.906472454990762e-07
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 6.661338147750939e-15,
+        "maximum_soc_difference": 7.771561172376096e-15,
+        "maximum_heat_energy_difference_J": 2.842170943040401e-14
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 1.376054825641404e-11,
+        "maximum_soc_difference": 3.4416913763379853e-15,
+        "maximum_heat_energy_difference_J": 4.906472668153583e-07
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": -1.5,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 1.8422596781419998e-11,
+        "maximum_soc_difference": 2.886579864025407e-15,
+        "maximum_heat_energy_difference_J": 2.5897560540499853e-07
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.885780586188048e-15,
+        "maximum_heat_energy_difference_J": 7.105427357601002e-15
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 1.8422596781419998e-11,
+        "maximum_soc_difference": 3.774758283725532e-15,
+        "maximum_heat_energy_difference_J": 2.5897561073406905e-07
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": -1.5,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.061950775735568e-11,
+        "maximum_soc_difference": 3.3306690738754696e-15,
+        "maximum_heat_energy_difference_J": 5.308649448920733e-07
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 3.1086244689504383e-15,
+        "maximum_soc_difference": 3.885780586188048e-15,
+        "maximum_heat_energy_difference_J": 1.1546319456101628e-14
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 4.061950775735568e-11,
+        "maximum_soc_difference": 3.885780586188048e-15,
+        "maximum_heat_energy_difference_J": 5.308649555502143e-07
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": 0.0,
+      "initial_polarization_V": 0.0,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 4.440892098500626e-16,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 0.0,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "passed": true
+    },
+    {
+      "rc_order": 3,
+      "current_A": 0.0,
+      "initial_polarization_V": 0.03,
+      "samples": 241,
+      "studio_to_library": {
+        "maximum_voltage_difference_V": 4.71502836774107e-11,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "studio_to_analytic": {
+        "maximum_voltage_difference_V": 8.881784197001252e-16,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "library_to_analytic": {
+        "maximum_voltage_difference_V": 4.715072776662055e-11,
+        "maximum_soc_difference": 0.0,
+        "maximum_heat_energy_difference_J": 0.0
+      },
+      "passed": true
+    }
+  ],
+  "experimental_observations_accessed": false,
+  "heat_comparison_performed": true,
+  "temperature_comparison_performed": false,
+  "limitations": [
+    "All electrical coefficients are independent of temperature. Studio runs isothermally. PyBaMM's separate jig thermal state is not compared or used as battery temperature evidence.",
+    "Studio and PyBaMM both use I*sum(v) for RC heat. Heat energy is compared directly: Studio's accumulated loss against PyBaMM's irreversible heat variable and a closed-form integral. The comparison uses constant coefficients, so it complements the variable-resistance first-law tests rather than replacing them."
+  ]
+}

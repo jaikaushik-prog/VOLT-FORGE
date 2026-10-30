@@ -38,7 +38,13 @@ Open **http://127.0.0.1:8794**. Choose a new design, then a test type, a load an
 | Measured comparison protocol | `configs/measured_comparison_v1.json` |
 | Measured results and post-hoc diagnostic | `reports/measured_comparison_v1/` |
 | PyBaMM results | `reports/numerical_reference_v2/` |
-| Replay receipt and re-audit | `reports/v4_release/` |
+| Replay receipt, re-audit and independent audit | `reports/v4_release/` |
+| Extra checks on the decision, frozen before running | `configs/engineering_checks_v1.json`, `reports/engineering_checks_v1/` |
+| Source locators | `configs/source_locators_v1.json` |
+| Business case, a hypothesis | `configs/business_case_v1.json` |
+| Appendix workbook | `reports/appendix_v1/` |
+| Demo video | `reports/demo_v1/` |
+| User trial kit, not run yet | `reports/user_trial_v1/` |
 | Slide and its data file | `reports/slide_v4/` |
 
 ## Limits
