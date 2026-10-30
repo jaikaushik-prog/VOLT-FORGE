@@ -2,7 +2,11 @@
 
 A visual battery-engineering workspace. Build a circuit, test its behaviour and understand what a design change does.
 
-## Current version: V3
+## Current version: V4
+
+Updated 30 October 2026. **[Open the V4 guide](V4_RELEASE.md)** for launch instructions, the design result, evidence and limits. The sections below describe V3 and earlier stages.
+
+## Previous version: V3
 
 Updated 29 October 2026. V3 adds temperature-dependent cell models, custom-cell imports, coupled electrical/thermal calculations, physical copper links and routes, monitoring/protective-cutoff experiments, a resumable walkthrough and stronger numerical verification. A clean source-bundle installation, full software checks and the browser release workflow have passed.
 

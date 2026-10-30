@@ -261,7 +261,7 @@ def main():
         server = EditorServer(('127.0.0.1', args.port), args.project)
     except OSError as exc:
         if exc.errno in (errno.EADDRINUSE, errno.EACCES):
-            raise SystemExit(f'Port {args.port} is already in use. Close the other editor or choose another port with --port.') from None
+            raise SystemExit(f'Port {args.port} is busy. If you just closed the editor, wait a minute and try again. Otherwise close the other editor or choose another port with --port.') from None
         raise
     url = f'http://127.0.0.1:{server.server_port}'
     print(f'VOLT-FORGE editor: {url}\nWorking project: {server.project}\nCtrl+C to stop.', flush=True)
