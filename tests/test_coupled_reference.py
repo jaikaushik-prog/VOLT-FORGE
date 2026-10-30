@@ -57,8 +57,10 @@ def independent_state_rhs(_,state):
     current=np.array([(p[0]-vp.sum()-inc@potentials)/p[1] for inc,p,vp in zip(incidence,pars,v)])
     vp_dot=[(current[i]*pars[i][2]-v[i])/pars[i][3] for i in range(2)]
     wire_loss=(potentials[0]-potentials[1])**2/.001+potentials[2]**2/.001
-    # Half of each rail's heat enters the two cells, shared equally.
-    heating=np.array([pars[i][1]*current[i]**2+np.sum(v[i]**2/pars[i][2]) for i in range(2)])+.25*wire_loss
+    # Cell heat from the energy identity, not a branch formula: open-circuit power
+    # minus the power crossing the cell's own terminals.
+    terminal=np.array([inc@potentials for inc in incidence])
+    heating=np.array([(pars[i][0]-terminal[i])*current[i] for i in range(2)])+.25*wire_loss
     heat_flow=np.array([.2*(T[1]-T[0]),.2*(T[0]-T[1])])
     T_dot=(heating+np.array([.3,.4])*(40.-T)+heat_flow)/np.array([40.,60.])
     return np.r_[-current/(3600*np.array([2.,2.5])),*vp_dot,T_dot]

@@ -1,0 +1,46 @@
+{
+  "version": "voltforge.model-gate/2",
+  "created_utc": "2026-10-30T11:12:35.983817+00:00",
+  "deployed_catalogue": "configs/cell_catalogue_v2.json",
+  "deployed_catalogue_sha256": "79510cdf84dd1aae36521a762b7d9537ae8c122e468f0ace1b62c2ea64802824",
+  "parent_sha256": "773697a5f58aa075e9c5556267022f5db5a6387327bb4d5319d59653a834ad16",
+  "lg_revision_status": "Unvalidated low-SOC modification; regularized published model",
+  "passed": true,
+  "checks": {
+    "table_lint_findings": 0,
+    "lg_continuity": [
+      {
+        "current_A": 1.0,
+        "largest_upward_voltage_step_V": 0.0
+      },
+      {
+        "current_A": 3.0,
+        "largest_upward_voltage_step_V": 0.0
+      },
+      {
+        "current_A": 5.0,
+        "largest_upward_voltage_step_V": 0.0
+      }
+    ],
+    "samsung": {
+      "6A": {
+        "status": "stopped",
+        "stop": "charge_domain",
+        "stop_time_s": 1001.8700999999987,
+        "peak_temperature_C": 27.93633400200879,
+        "first_law_residual_J": -0.002206430693490802,
+        "electrical_loss_J": 858.2658001017844
+      },
+      "4A": {
+        "status": "stopped",
+        "stop": "charge_domain",
+        "stop_time_s": 1502.8051499999015,
+        "peak_temperature_C": 25.418704408884878,
+        "first_law_residual_J": 0.0005345784910559814,
+        "electrical_loss_J": 595.2145494487086
+      }
+    }
+  },
+  "measured_accuracy_established": false,
+  "note": "This binds the repaired checks to the exact deployed hash. The V1 gate recorded a stale production hash; it is retained unchanged."
+}

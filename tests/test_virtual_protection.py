@@ -171,7 +171,7 @@ def test_temperature_threshold_samples_actual_predicted_heating():
 def test_virtual_switch_does_not_authorize_unsupported_initial_current():
     graph,settings,_=configuration()
     root=Path(__file__).resolve().parents[1]
-    bank=json.loads((root/'configs/cell_catalogue_v1.json').read_text())['models'];graph['cells'][0]['model']='LG_M50T_ECN'
+    bank=json.loads((root/'configs/cell_catalogue_v2.json').read_text())['models'];graph['cells'][0]['model']='LG_M50T_ECN'
     settings['profile']=[dict(start_s=0.,end_s=1.,current_A=200.)]
     settings['protection']['response_delay_s']=0.
     with pytest.raises(ValueError,match='cutoff|operating limit'):simulate(graph,settings,bank)

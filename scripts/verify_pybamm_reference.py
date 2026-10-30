@@ -1,4 +1,4 @@
-"""Independent library and closed-form electrical checks on synthetic cells.
+"""Independent library and closed-form electrical and heat checks on synthetic cells.
 
 Run in an isolated environment with the pinned PyBaMM version. This script never
 opens experimental observations and never uses a PyBaMM default battery model
@@ -48,7 +48,10 @@ def exact_response(p, nrc, current, total, time):
     tau = np.asarray(p['rc_time_constant_s'][:nrc], float)
     vp = current * r + (branch_initial(p, nrc, total) - current * r) * np.exp(-time[:, None] / tau)
     voltage = p['ocv_intercept_V'] + p['ocv_soc_slope_V'] * soc - current * p['r0_ohm'] - vp.sum(axis=1)
-    return voltage, soc
+    # Heat energy by integrating I*v in closed form for each branch, plus R0 loss.
+    d = branch_initial(p, nrc, total) - current * r
+    work = current * np.sum(current * r * time[:, None] + d * tau * -np.expm1(-time[:, None] / tau), axis=1)
+    return voltage, soc, current**2 * p['r0_ohm'] * time + work
 
 
 def library_response(p, nrc, current, total, time):
@@ -69,10 +72,17 @@ def library_response(p, nrc, current, total, time):
                        f'R{i+1} [Ohm]': r, f'C{i+1} [F]': p['rc_time_constant_s'][i] / r})
     params.update(values, check_already_exists=False)
     solver = pybamm.CasadiSolver(mode='safe', **p['solver'])
-    solution = pybamm.Simulation(model, parameter_values=params, solver=solver).solve(t_eval=time)
+    # Sample densely: PyBaMM interpolates linearly between requested times, which
+    # would otherwise add quadrature error to the heat integral below.
+    dense = np.linspace(0, p['duration_s'], 20*(len(time)-1)+1)
+    solution = pybamm.Simulation(model, parameter_values=params, solver=solver).solve(t_eval=dense)
     if solution.termination != 'final time':
         raise ValueError('PyBaMM stopped before the reference horizon: ' + solution.termination)
-    return np.asarray(solution['Voltage [V]'](time)), np.asarray(solution['SoC'](time))
+    # PyBaMM's own heat variable. Its sign convention is handled by the library,
+    # so a sign or formula mismatch fails this comparison.
+    rate = np.asarray(solution['Irreversible heat generation [W]'](dense))
+    energy = np.interp(time, dense, np.r_[0, np.cumsum((rate[1:]+rate[:-1])/2*np.diff(dense))])
+    return np.asarray(solution['Voltage [V]'](time)), np.asarray(solution['SoC'](time)), energy
 
 
 def studio_response(p, nrc, current, total, time):
@@ -88,12 +98,13 @@ def studio_response(p, nrc, current, total, time):
     actual_time = np.array([r['time_s'] for r in result.rows])
     if actual_time.shape != time.shape or not np.allclose(actual_time, time, atol=1e-12, rtol=0):
         raise ValueError('Reference sample clocks differ.')
-    return np.array([r['voltage_V'] for r in result.rows]), np.array([r['charge_pct'][0]/100 for r in result.rows])
+    return (np.array([r['voltage_V'] for r in result.rows]), np.array([r['charge_pct'][0]/100 for r in result.rows]),
+            np.array([3600*r['loss_energy_Wh'] for r in result.rows]))
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--protocol', type=Path, default=ROOT/'configs/numerical_reference_v1.json')
+    parser.add_argument('--protocol', type=Path, default=ROOT/'configs/numerical_reference_v2.json')
     parser.add_argument('--out', type=Path, required=True)
     args = parser.parse_args()
     raw = args.protocol.read_bytes(); p = json.loads(raw)
@@ -118,7 +129,8 @@ def main():
                                        ('studio_to_analytic', studio, independent),
                                        ('library_to_analytic', library, independent)]:
                         row[name] = dict(maximum_voltage_difference_V=float(np.max(abs(a[0]-b[0]))),
-                                         maximum_soc_difference=float(np.max(abs(a[1]-b[1]))))
+                                         maximum_soc_difference=float(np.max(abs(a[1]-b[1]))),
+                                         maximum_heat_energy_difference_J=float(np.max(abs(a[2]-b[2]))))
                     row['passed'] = all(row[key][metric] <= bound for key in
                                         ('studio_to_library', 'studio_to_analytic', 'library_to_analytic')
                                         for metric, bound in p['acceptance'].items())
@@ -131,7 +143,7 @@ def main():
                    driver_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                    runtime={k: version(k) for k in ('pybamm', 'numpy', 'scipy', 'casadi', 'pandas', 'matplotlib')},
                    passed=all(r['passed'] for r in records), checks=records,
-                   experimental_observations_accessed=False, thermal_comparison_performed=False,
+                   experimental_observations_accessed=False, heat_comparison_performed=True, temperature_comparison_performed=False,
                    limitations=[p['temperature_scope'], p['heat_scope']])
     (out/'verification.json').write_text(json.dumps(summary, indent=2, allow_nan=False)+'\n')
     print(json.dumps(dict(passed=summary['passed'], cases=len(records), output=str(out)), indent=2))

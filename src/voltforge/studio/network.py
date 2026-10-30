@@ -19,6 +19,7 @@ from voltforge.models.thermal_v1 import rc_propagator
 from voltforge.models.cell_catalogue import ALL_KEYS, KIND as TEMPERATURE_MODEL_KIND
 
 VERSION = 'studio.graph.1'
+FIRST_LAW_TOLERANCE = 1e-3  # Largest accepted heat mismatch, as a share of electrical loss.
 MODEL_KEYS = ('P7', 'P17', 'P19', 'P13')
 ID = re.compile(r'^[a-zA-Z][a-zA-Z0-9_-]{0,47}$')
 
@@ -417,6 +418,10 @@ def summarize(rows,graph,settings,*,completed=True,service_met=True):
                       max_power_residual_W=max(abs(r['power_residual_W']) for r in rows),
                       max_cell_charge_residual_As=max(max(abs(v) for v in r['cell_charge_residual_As']) for r in rows),
                       final_energy_residual_Wh=rows[-1]['energy_residual_Wh'],max_thermal_residual_J=max(abs(r['thermal_residual_J']) for r in rows) if thermal_available else None)
+    if thermal_available and 'first_law_residual_J' in rows[-1]:
+        residual,loss=rows[-1]['first_law_residual_J'],rows[-1]['electrical_dissipation_J']
+        verification.update(first_law_residual_J=residual,electrical_dissipation_J=loss,
+                            first_law_tolerance=FIRST_LAW_TOLERANCE,first_law_closed=bool(abs(residual)<=FIRST_LAW_TOLERANCE*max(1.,abs(loss))))
     return dict(metrics=metrics,checks=checks,insights=insights,verification=verification,case=case_record(graph,settings),
                 coverage=dict(requested_duration_s=float(settings['profile'][-1]['end_s']),completed_duration_s=float(t[-1]),complete=bool(completed)),
                 assessment=dict(execution='completed' if completed else 'stopped',

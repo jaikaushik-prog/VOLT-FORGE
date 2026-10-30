@@ -1,15 +1,20 @@
 """Partitioned electro-thermal integration for temperature-dependent cell models.
 
 Electrical parameters are evaluated at the current cell state. Charge and RC
-states use held branch current within a step. The linear heat-transfer network
-receives the exact constant-parameter RC resistor heat, including its exponential
-transients. Temperature feeds back into the following electrical solve.
+states use held branch current within a step. The RC branches are fitted
+polarization terms, not physical capacitors, so their heat is the work I*sum(v)
+that Kirchhoff's voltage law assigns to them (PyBaMM's ECM convention). Resistor
+heat v**2/R is not used: with R(SOC) and a held v it creates heat with no source.
+The linear heat-transfer network receives that work, including its exponential
+transient. Temperature feeds back into the following electrical solve.
 Convergence is assessed separately from the accounting residuals.
 """
 import numpy as np
 
 from voltforge.models.cell_catalogue import CellModel
 from voltforge.models.coupling_v2 import rc_interval
+
+HEAT_CONVENTION = 'ecm_polarization_work/1'
 
 
 def phi1(x):
@@ -62,6 +67,18 @@ class ThermalResponse:
         end = np.exp(self.rates*h)*modes+first*constant+np.sum(forcing*convolution(a, b, h), axis=1)
         integral = first*modes+second*constant+np.sum(forcing*integrated_convolution(a, b, h), axis=1)
         return (self.vectors@end)/self.sqrt, (self.vectors@integral)/self.sqrt
+
+
+def branch_forcing(current, b, d, active, tau):
+    """Polarization work I*(b+d*exp(-t/tau)) as constant and decaying heat terms."""
+    n, nrc = b.shape
+    constant = current*np.sum(active*b, axis=1)
+    coefficients = np.zeros((n, n*nrc)); decay = np.empty(n*nrc)
+    for i in range(n):
+        for k in range(nrc):
+            coefficients[i, i*nrc+k] = active[i, k]*current[i]*d[i, k]
+            decay[i*nrc+k] = -1/tau[i, k]
+    return constant, coefficients, decay
 
 
 def simulate(graph, settings, bank):
@@ -125,8 +142,7 @@ def _simulate(graph, settings, bank):
         for end in ('a', 'b'): share[ids[w[end].split(':')[0]], j] += th['wire_heat_fraction']/2
     profile = settings['profile']; starts = np.array([p['start_s'] for p in profile])
     grid = integration_grid(settings)
-    charges = np.zeros(n); energy = np.zeros(6); parameter_exchange = 0.; generated = exchanged = 0.
-    initial_storage = float(.5*np.sum(active*tau/resistance*vp**2))
+    charges = np.zeros(n); energy = np.zeros(6); generated = exchanged = reversible = outside = 0.
     rows = []; stop = None
 
     def operating_error(state_t, solution):
@@ -142,10 +158,9 @@ def _simulate(graph, settings, bank):
 
     def row_at(time, load, z, t, polarization, pp, event_side='sample'):
         uu, rr, rj, tj, s = pp; current = s['current']
-        storage = float(.5*np.sum(active*tj/rj*polarization**2))
-        resistor_power = float(np.sum(active*polarization**2/rj))
-        storage_power = float(np.sum(active*polarization*(current[:, None]-polarization/rj)))
+        branch_power = float(np.sum(active*polarization*current[:, None]))
         p = float(s['terminal']*load)
+        dissipated = energy[0]-energy[1]
         return dict(time_s=float(time), event_side=event_side, current_A=float(load), requested_current_A=requested_load,
                     external_disconnected=interval_external_open,voltage_V=s['terminal'], power_W=p,
                     cell_side_voltage_V=s['cell_side_voltage_V'],output_route_loss_W=s['output_loss_W'],
@@ -153,12 +168,16 @@ def _simulate(graph, settings, bank):
                     parameter_temperature_C=t.tolist(),
                     wire_current_A=[float(v) if w['resistance_mohm'] > 0 else None for v, w in zip(s['wire_current'], graph['connections'])],
                     wire_loss_W=s['wire_loss'].tolist(), kcl_residual_A=s['kcl'], kvl_residual_V=s['kvl'],
-                    power_residual_W=float(uu@current-p-rr@(current**2)-s['wire_loss'].sum()-s['output_loss_W']-resistor_power-storage_power),
+                    power_residual_W=float(uu@current-p-rr@(current**2)-s['wire_loss'].sum()-s['output_loss_W']-branch_power),
                     cell_charge_residual_As=(3600*q*(initial_soc-z)-charges).tolist(), source_energy_Wh=float(energy[0]/3600),
                     delivered_energy_Wh=float(energy[1]/3600), delivered_positive_Wh=float(energy[4]/3600), received_energy_Wh=float(energy[5]/3600),
-                    loss_energy_Wh=float((energy[2]+energy[3])/3600), parameter_storage_exchange_Wh=float(parameter_exchange/3600),
-                    energy_residual_Wh=float((energy[0]-energy[1]-energy[2]-energy[3]-(storage-initial_storage)+parameter_exchange)/3600),
-                    thermal_residual_J=float(C@(t-initial_temperature)-(generated-exchanged)) if thermal_available else None)
+                    loss_energy_Wh=float((energy[2]+energy[3])/3600),
+                    energy_residual_Wh=float((energy[0]-energy[1]-energy[2]-energy[3])/3600),
+                    thermal_residual_J=float(C@(t-initial_temperature)-(generated-exchanged)) if thermal_available else None,
+                    electrical_dissipation_J=float(dissipated),
+                    # Links the two sides: heat the cells actually gained or lost
+                    # must equal the electrical loss that entered them.
+                    first_law_residual_J=float(dissipated-(C@(t-initial_temperature)+exchanged-reversible+outside)) if thermal_available else None)
 
     t = 0.
     for j, target in enumerate(grid):
@@ -194,14 +213,8 @@ def _simulate(graph, settings, bank):
         h = float(grid[j+1]-t); current = solution['current']
         b = active*resistance*current[:, None]; d = vp-b
         qrev = np.array([m.reversible_heat(float(soc[i]), float(temperature[i]), float(current[i])) for i, m in enumerate(models)])
-        constant = r0*current**2+share@solution['wire_loss']+np.sum(active*b*b/resistance, axis=1)+G*settings['ambient_C']+qrev
-        coefficients = np.zeros((n, 2*n*nrc)); decay = np.empty(2*n*nrc)
-        for i in range(n):
-            for k in range(nrc):
-                index = 2*(i*nrc+k)
-                coefficients[i, index] = active[i, k]*2*b[i, k]*d[i, k]/resistance[i, k]
-                coefficients[i, index+1] = active[i, k]*d[i, k]**2/resistance[i, k]
-                decay[index:index+2] = [-1/tau[i, k], -2/tau[i, k]]
+        polarization_heat, coefficients, decay = branch_forcing(current, b, d, active, tau)
+        constant = r0*current**2+share@solution['wire_loss']+polarization_heat+G*settings['ambient_C']+qrev
 
         def trial(step):
             zz = soc-current*step/(3600*q)
@@ -210,10 +223,10 @@ def _simulate(graph, settings, bank):
                 if not m.supported(float(zz[i]), float(tt[i])):
                     reason = 'charge_domain' if not m.soc_range[0] <= zz[i] <= m.soc_range[1] else 'temperature_domain'
                     return None, dict(reason=reason, cell=cells[i]['id'], message=cells[i]['name']+' reached the edge of its recorded '+('charge' if reason=='charge_domain' else 'cell-temperature')+' data.')
-            vv, losses, _ = rc_interval(vp, active*current[:, None], resistance, tau, step)
+            vv, _, work = rc_interval(vp, active*current[:, None], resistance, tau, step)
             end = solution_at(zz, tt, vv, load)
             error = operating_error(tt, end[-1])
-            return (zz, tt, vv, losses, integral_t, end), error
+            return (zz, tt, vv, work, integral_t, end), error
 
         # Examine the held-forcing trajectory inside the proposed interval too.
         # Bracket the first observed domain/operating violation, rather than
@@ -238,8 +251,8 @@ def _simulate(graph, settings, bank):
                 stop = dict(**error, time_s=float(t)); break
             h = lo; candidate, _ = trial(h)
             stop = dict(**error, time_s=float(t+h))
-        zz, tt, vv, losses, integral_t, end = candidate
-        end_u, end_r0, end_r, end_tau, end_s = end
+        zz, tt, vv, work, integral_t, end = candidate
+        end_u, _, _, _, end_s = end
         # Simpson integration along the state path. The energy residual remains
         # visible; it is not assigned to an invented physical loss term.
         mid_u = parameters((soc+zz)/2, (temperature+tt)/2)[0]
@@ -249,10 +262,11 @@ def _simulate(graph, settings, bank):
         energy[4] += .5*(max(p0, 0)+max(p1, 0))*h
         energy[5] += .5*(max(-p0, 0)+max(-p1, 0))*h
         energy[2] += float(r0@(current**2)+solution['wire_loss'].sum()+solution['output_loss_W'])*h
-        energy[3] += float(np.sum(active*losses))
-        parameter_exchange += float(.5*np.sum(active*(end_tau/end_r-tau/resistance)*vv**2))
-        generated += float(r0@(current**2)+(share@solution['wire_loss']).sum()+qrev.sum())*h+float(np.sum(active*losses))
+        energy[3] += float(np.sum(active*work))
+        generated += float(r0@(current**2)+(share@solution['wire_loss']).sum()+qrev.sum())*h+float(np.sum(active*work))
         exchanged += float(G@(integral_t-settings['ambient_C']*h))
+        reversible += float(qrev.sum())*h
+        outside += float(solution['wire_loss'].sum()-(share@solution['wire_loss']).sum()+solution['output_loss_W'])*h
         charges += current*h
         soc, temperature, vp = zz, tt, vv
         t = float(t+h) if stop else float(grid[j+1])
@@ -260,6 +274,8 @@ def _simulate(graph, settings, bank):
         if stop: break
     service=protection.service(profile,rows[-1]['time_s'])
     summary = summarize(rows, graph, settings, completed=stop is None,service_met=service['requested_demand_met'])
+    if summary['verification'].get('first_law_closed') is False:
+        summary['insights'].insert(0,'The electrical loss and calculated heat disagree by more than the accepted tolerance. Reduce the solver step before using these temperatures.')
     if protection.config:
         summary['protection']=protection.summary(rows[-1]['time_s']);summary['service']=service
         if service['unserved_demand_s']>0:
@@ -270,6 +286,7 @@ def _simulate(graph, settings, bank):
                                      source=bank[c['model']].get('source'), evidence=bank[c['model']].get('evidence_status', 'Original nominal fit')) for c, m in zip(cells, models)],
                    numerical_method='Held-current RC steps; exact within-step linear thermal response; state-dependent parameters updated each step',
                    reversible_heat='Included only for models with an attributed entropy coefficient',
+                   heat_convention=HEAT_CONVENTION,
                    experimental_validation=False)
     summary['thermal_mode']='Coupled declared heat-transfer model' if thermal_available else 'Isothermal electrical estimate; cell temperatures held at their starting values'
     # Record the properties actually used, including per-instance overrides.

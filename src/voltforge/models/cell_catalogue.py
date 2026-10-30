@@ -161,12 +161,25 @@ class CellModel:
         return None
 
 
+def lint_tables(record, ratio=1e3):
+    """Return jumps between neighbouring SOC nodes too large to be a real cell trend."""
+    if record.get('kind') != KIND: return []
+    found = []
+    for key in ('r_ohm', 'tau_s'):
+        table = np.asarray(record[key], float)
+        step = np.maximum(table[:, 1:]/table[:, :-1], table[:, :-1]/table[:, 1:])
+        for i, j, k in zip(*np.nonzero(step > ratio)):
+            found.append(dict(table=key, temperature_C=record['temperature_C'][i], soc=[record['soc'][j], record['soc'][j+1]],
+                              branch=int(k), ratio=float(step[i, j, k])))
+    return found
+
+
 def load_additional(root):
-    path = Path(root) / 'configs' / 'cell_catalogue_v1.json'
+    path = Path(root) / 'configs' / 'cell_catalogue_v2.json'
     if not path.exists():
         return {}
     data = json.loads(path.read_text())
-    if data.get('version') != 'voltforge.cell-catalogue/1':
+    if data.get('version') != 'voltforge.cell-catalogue/2':
         raise ValueError('Unsupported cell catalogue.')
     models = data['models']
     if not set(ADDITIONAL_KEYS)<=set(models):

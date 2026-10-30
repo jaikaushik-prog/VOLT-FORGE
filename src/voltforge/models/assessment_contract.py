@@ -48,7 +48,7 @@ def validate_procedure(procedure,allocation):
 
 def input_fingerprints(root,archive,procedure_path):
     root=Path(root);archive=Path(archive)
-    paths=['configs/model_catalogue_upgrade_v1.plan.json','configs/cell_catalogue_v1.json',
+    paths=['configs/model_catalogue_upgrade_v1.plan.json','configs/cell_catalogue_v1.json','configs/cell_catalogue_v2.json',
            'reports/model_catalogue_v1/candidate_catalogue.json','scripts/assess_cell_catalogue.py',
            'tests/test_temperature_models.py','tests/test_coupled_reference.py']
     paths += [str(p.relative_to(root)) for folder in ('models','studio') for p in sorted((root/'src/voltforge'/folder).glob('*.py'))]

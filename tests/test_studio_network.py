@@ -62,11 +62,12 @@ def test_all_topologies_conserve_current_power_charge_heat(bank,kind):
     assert all(np.isfinite(list(row['temperature_C'])).all() for row in r.rows)
 
 
-def test_single_cell_adiabatic_heat_matches_exact_rc_loss(constant_bank):
+def test_single_cell_adiabatic_heat_matches_polarization_work(constant_bank):
     g=template('parallel',1);g['thermal']['ambient_conductance_W_K']=0
     r=simulate(g,short(120,1,.5),constant_bank)
-    _,loss,_=coupling_v2.rc_interval(0.,1.,.02,60.,120.)
-    expected=23+(.025*120+loss)/69.25
+    # Work of a rested branch under constant current: integral of I*R*(1-exp(-t/tau)).
+    work=1*.02*1*(120-60*(1-np.exp(-120/60)))
+    expected=23+(.025*120+work)/69.25
     assert r.rows[-1]['temperature_C'][0]==pytest.approx(expected,abs=1e-11)
     assert abs(r.rows[-1]['thermal_residual_J'])<1e-9
 
