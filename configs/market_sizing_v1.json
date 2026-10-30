@@ -1,0 +1,36 @@
+{
+  "version": "voltforge.market-sizing/1",
+  "checked": "2026-10-30",
+  "scope": "India first. Bottom-up from official counts. Student use is free, so revenue comes only from labs and teams.",
+  "source": {
+    "name": "All India Survey on Higher Education 2021-22, Ministry of Education",
+    "url": "https://education.gov.in/sites/upload_files/mhrd/files/statistics-new/AISHE%20Book_2021-22_4.pdf",
+    "section": "2.2.7.1 Engineering and Technology Stream; colleges by specialisation",
+    "read_from": "https://educationforallinindia.com/wp-content/uploads/2024/04/AISHE_Report_2021-22_Ministry_of_Education.pdf",
+    "note": "Read from this hosted copy of the ministry report because education.gov.in refused automated access. Report page 23, Figure 20, and the colleges section.",
+    "colleges_base": "2,610 of 42,825 responding colleges are specialised in Engineering & Technology. Universities and non-responding colleges are not counted."
+  },
+  "sourced": {
+    "engineering_technology_enrolment": 4131303,
+    "electronics_engineering_enrolment": 605023,
+    "mechanical_engineering_enrolment": 574940,
+    "electrical_engineering_enrolment": 375360,
+    "engineering_technology_colleges": 2610
+  },
+  "assumed": {
+    "annual_lab_licence_inr": {
+      "value": 50000,
+      "reason": "Placeholder price for the free-for-students, paid-for-labs hypothesis. No customer has seen this price."
+    },
+    "first_stage_college_share": {
+      "value": 0.05,
+      "reason": "Placeholder reach for the first three years. Not based on adoption data."
+    }
+  },
+  "funnel": {
+    "tam": "All engineering and technology students",
+    "sam": "Electrical, electronics and mechanical students, the branches that design battery systems",
+    "som": "Assumed 5% of engineering colleges buying one lab licence"
+  },
+  "limits": "Counts size the audience. They do not show willingness to pay. Enrolment is 2021-22. A Lok Sabha reply reported in August 2026 puts engineering enrolment at 62.17 lakh for 2023-24, which uses a wider definition and is secondary here."
+}
