@@ -1,7 +1,7 @@
 {
   "version": "voltforge.engineering-check-results/1",
   "protocol_sha256": "a14957bcaa8f3c30e9fbc8af8d947eeebf49f58c99023b4a416b30f728ded8ba",
-  "source_commit": "b9fce82c691004b8d153e42a5946f605d7a8e779",
+  "source_commit": "68601a58abb09f1b5ce1b9ccc423f56423cc4797",
   "experimental_validation": false,
   "current_sharing": [
     {
@@ -53,6 +53,88 @@
       "within_band": false
     }
   ],
+  "post_hoc": {
+    "label": "Written after seeing the frozen results. Nothing here changed the model.",
+    "share_detail": [
+      {
+        "record": "test28_exact_m50t_module",
+        "model_error_points": 1.1275549521265122,
+        "equal_share_error_points": 2.3759240819348206,
+        "assumed_channel_order_rank": 1,
+        "channel_orders_tried": 24,
+        "first_10pct": {
+          "measured": [
+            33.61320975256265,
+            26.8654951172848,
+            20.76905359111908,
+            18.752241539033445
+          ],
+          "simulated": [
+            34.39582055766475,
+            26.001728987366455,
+            20.922339607685252,
+            18.68011084728352
+          ]
+        },
+        "last_10pct": {
+          "measured": [
+            15.925648569601435,
+            21.525854045702275,
+            29.186022743742004,
+            33.362474640954254
+          ],
+          "simulated": [
+            17.19166171976501,
+            24.52471497548719,
+            28.63166361324064,
+            29.65195969150714
+          ]
+        }
+      },
+      {
+        "record": "test53_used_fixture",
+        "model_error_points": 0.2061363332919273,
+        "equal_share_error_points": 0.20689404670392414,
+        "assumed_channel_order_rank": 7,
+        "channel_orders_tried": 24,
+        "first_10pct": {
+          "measured": [
+            25.13066783742445,
+            25.100425617534857,
+            24.55905890028393,
+            25.209847644756767
+          ],
+          "simulated": [
+            24.963856780915243,
+            24.99529653101107,
+            25.008355791088817,
+            25.032490896984893
+          ]
+        },
+        "last_10pct": {
+          "measured": [
+            25.369681679095162,
+            25.158596407947027,
+            25.237367098667182,
+            24.23435481429061
+          ],
+          "simulated": [
+            25.00093731945634,
+            25.00012695183923,
+            24.99978437614585,
+            24.999151352558552
+          ]
+        }
+      }
+    ],
+    "voltage_window_50_to_75": {
+      "case": "test28_exact_m50t_module",
+      "samples": 70,
+      "mean_error_V": 0.14460657142857145,
+      "largest_optimistic_error_V": 0.17022000000000004,
+      "largest_abs_error_V": 0.17022000000000004
+    }
+  },
   "error_budget": {
     "voltage": {
       "margin_V": 0.1966843238213336,

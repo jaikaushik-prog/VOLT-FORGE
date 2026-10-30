@@ -1,0 +1,50 @@
+{
+ "webkit": {
+  "version": "26.0",
+  "guide": true,
+  "load_block": true,
+  "cell_size": true,
+  "live_cost": "₹4,824 + US$52 + unpriced parts",
+  "verdict": "✓ / Backup time / Full 10 min / ✓ / Lowest voltage / 3.70 V / Target 3.30 V / • / Busiest cell / Cell 1: 2.64 A / 25% above an even share / • / Warmest cell / Cell 1: 24.6 °C / ",
+  "chart": true,
+  "preset_kept": true,
+  "phone_scroll_ok": true,
+  "console_errors": []
+ },
+ "firefox": {
+  "version": "141.0",
+  "guide": true,
+  "load_block": true,
+  "cell_size": true,
+  "live_cost": "₹4,824 + US$52 + unpriced parts",
+  "verdict": "✓ / Backup time / Full 10 min / ✓ / Lowest voltage / 3.70 V / Target 3.30 V / • / Busiest cell / Cell 1: 2.64 A / 25% above an even share / • / Warmest cell / Cell 1: 24.6 °C",
+  "chart": true,
+  "preset_kept": true,
+  "phone_scroll_ok": true,
+  "console_errors": []
+ },
+ "edge": {
+  "version": "154.0.4258.62",
+  "guide": true,
+  "load_block": true,
+  "cell_size": true,
+  "live_cost": "₹4,824 + US$52 + unpriced parts",
+  "verdict": "✓ / Backup time / Full 10 min / ✓ / Lowest voltage / 3.70 V / Target 3.30 V / • / Busiest cell / Cell 1: 2.64 A / 25% above an even share / • / Warmest cell / Cell 1: 24.6 °C",
+  "chart": true,
+  "preset_kept": true,
+  "phone_scroll_ok": true,
+  "console_errors": []
+ },
+ "chrome": {
+  "version": "156.0.8078.74",
+  "guide": true,
+  "load_block": true,
+  "cell_size": true,
+  "live_cost": "₹4,824 + US$52 + unpriced parts",
+  "verdict": "✓ / Backup time / Full 10 min / ✓ / Lowest voltage / 3.70 V / Target 3.30 V / • / Busiest cell / Cell 1: 2.64 A / 25% above an even share / • / Warmest cell / Cell 1: 24.6 °C",
+  "chart": true,
+  "preset_kept": true,
+  "phone_scroll_ok": true,
+  "console_errors": []
+ }
+}

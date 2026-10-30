@@ -50,7 +50,8 @@ def main():
     parser.add_argument('--data', type=Path, default=ROOT/'reports/slide_v4/data.json')
     parser.add_argument('--out', type=Path, default=ROOT/'reports/slide_v4/slide.html')
     args = parser.parse_args()
-    d = json.loads(args.data.read_text()); best, m, cost = d['best'], d['market'], d['cost']
+    d = json.loads(args.data.read_text()); best, m, cost, biz = d['best'], d['market'], d['cost'], d['business']
+    share, heat = d['checks']['post_hoc']['share_detail'][0]['first_10pct'], d['checks']['error_budget']['temperature']['largest_measured_over_simulated']
     n = best['count']; k = d['kpi']
     html = f"""<!doctype html><html><head><meta charset="utf-8"><title>VOLT-FORGE Round 1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><style>{CSS}</style></head><body><div class="slide">
@@ -59,7 +60,7 @@ def main():
 <section class="col left">
 <div class="c"><h2>Problem understanding</h2><h3>Cells never share the load evenly</h3><p>Say you need a Raspberry Pi 5 gateway to survive a <b>10-minute power cut at 25 W</b>. Four cells in parallel sounds easy, until the cell closest to the output takes more current than the rest, runs hotter and sets the limit for the whole pack.</p></div>
 <div class="c"><h2>Desirability</h2><h3>You shouldn't need a lab to learn that</h3><p>Right now you find out by buying parts and hoping. A student can't afford that, and an engineer can't wait for it. Here you wire the circuit on screen, run it and see which cell struggles <b>before spending a rupee</b>.</p></div>
-<div class="c"><h2>Technical feasibility</h2><h3>So how few cells can do this job?</h3><p>We tested it. <b>Two cells</b> kept the Pi running for the full 10 minutes in all {best['required_cases']} tests, even with one weak cell, and never hit their limit. One cell couldn't: the app refused it before it started. And the whole thing runs on a normal laptop.</p></div>
+<div class="c"><h2>Technical feasibility</h2><h3>So how few cells can do this job?</h3><p>We compared 3 and 2 cells against the <span style="white-space:nowrap">4-cell</span> start. <b>Two cells</b> kept the Pi running for all 10 minutes in all {best['required_cases']} tests, even with one weak cell, and never hit their limit. One cell was refused outright. You can build it today on a two-cell Pi UPS board, and the tool runs on a normal laptop.</p></div>
 </section>
 <section class="proto"><h2>Prototype &amp; evidence<span>The real Pi design, then 4 cells against 2 under the same load</span></h2>
 <div class="shot one"><img src="assets/circuit.png" alt="The 4-cell Pi backup circuit in VOLT-FORGE with the properties of Cell 1 open"></div>
@@ -67,11 +68,11 @@ def main():
 <div class="proofs"><div><b>{k['study_runs']:,} what-if runs.</b> Weak cells, bad links, poor cooling: we tried to break it first.</div><div><b>{k['lab_experiments']} published lab experiments.</b> Real four-cell test data, with all {k['data_files']} files verified intact.</div><div><b>{k['sealed_total']} tests kept sealed.</b> Held back from every fit, so the final exam uses unseen data.</div></div>
 </section>
 <section class="col right">
-<div class="c"><h2>Engineering quality</h2><h3>Now, why should you trust that?</h3><p>Heat is just electricity that never reached the load. So every run has to balance: energy out of the cells equals energy delivered plus heat. If it doesn't, the result gets flagged. Cooling varies by rig, so temperature stays a <b>range</b>.</p></div>
-<div class="c"><h2>Innovation</h2><h3>You don't have to guess the answer</h3><p>You could try every cell count by hand. Or press <b>Find the smallest design</b>: it rebuilds the circuit at each size, tests them all and shows what survives. For the Pi, that meant {n} cells, not 4, at half the cell cost.</p></div>
+<div class="c"><h2>Engineering quality</h2><h3>Why should you trust it?</h3><p>Every run has to balance its energy or it gets flagged. In a published four-cell test, the nearest cell took <b>{share['measured'][0]:.0f}%</b> of the current and the farthest {share['measured'][3]:.0f}%. Our model said <b>{share['simulated'][0]:.0f}%</b> and {share['simulated'][3]:.0f}%. Temperature is weaker: all {d['proof_cases']} real tests missed, so we use a range, and 2 cells stay under their limit even at {heat:.1f} times the heat.</p></div>
+<div class="c"><h2>Innovation</h2><h3>You don't have to guess</h3><p>Press <b>Find the smallest design</b> and it rebuilds the circuit at each size, tests them all and shows what survives. For the Pi, that meant {n} cells, not 4, at half the cell cost.</p></div>
 <div class="c"><h2>Business viability</h2><div class="market"><svg width="118" height="118" viewBox="0 0 176 176" role="img" aria-label="TAM, SAM and SOM nested circles"><circle cx="88" cy="88" r="88" fill="#D5ECF8"/><circle cx="88" cy="118" r="58" fill="#59B9E6"/><circle cx="88" cy="146" r="30" fill="#0B6FA8"/></svg>
 <ul><li><b>{lakh(m['tam_students'])}</b>TAM, engineering students</li><li><b>{lakh(m['sam_students'])}</b>SAM, electrical, electronics, mechanical</li><li><b>{m['som_colleges']:.0f}</b>SOM, colleges, 5% assumed</li></ul></div>
-<div class="cost">₹{cost['total_crore']:.0f} crore</div><p>to build all of it, from a measured dataset to the full app. {cost['person_years']:.0f} person-years, about 2% of AspenTech's yearly R&amp;D.</p></div>
+<div class="cost">₹{cost['total_crore']:.0f} crore</div><p>to build all of it, about 2% of AspenTech's yearly R&amp;D. Students use it free. Stage one is ₹{biz['stage1_crore']:.0f} crore, and {biz['stage1_teams']} teams paying ₹{biz['team_price_inr']/1e5:.0f} lakh a year repay it in {biz['repay_years']} years.</p></div>
 </section>
 <footer><span><b>These results are simulated.</b>&nbsp; Next we bench-test real cells and put it in front of students and engineers.</span></footer>
 </div></body></html>"""

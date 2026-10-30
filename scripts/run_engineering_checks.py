@@ -3,6 +3,7 @@
 These are checks and never fits: nothing here feeds back into a model.
 """
 from copy import deepcopy
+from itertools import permutations
 from pathlib import Path
 import csv
 import hashlib
@@ -32,7 +33,7 @@ def unique_rows(result):
 
 
 def current_sharing():
-    bands = C['current_sharing']['bands']; out = []
+    bands = C['current_sharing']['bands']; out = []; extra = []
     for record in C['current_sharing']['records']:
         c = next(x for x in COMPARE['comparisons'] if x['id'] == record)
         seg = module_segment(ROOT/c['file'], c['discharge_step'])
@@ -51,14 +52,25 @@ def current_sharing():
                    measured_peak_cell_A=float(np.abs(branch).max()), simulated_peak_cell_A=float(np.abs(simulated).max()))
         row['within_band'] = bool(row['mean_absolute_share_error_points'] <= bands['mean_absolute_share_error_points'] and row['busiest_cell_match_fraction'] >= bands['busiest_cell_match_fraction'])
         out.append(row)
-    return out
+        extra.append(share_detail(record, ms, ss))
+    return out, extra
 
 
-def voltage_window(name, ah):
+def share_detail(record, ms, ss):
+    """Written after seeing the frozen result, to ask whether it means anything."""
+    orders = sorted((float(np.abs(ss[:, list(o)]-ms).mean()), o) for o in permutations(range(4)))
+    n = len(ms); first, last = int(.1*n), int(.9*n)
+    return dict(record=record, model_error_points=float(np.abs(ss-ms).mean()), equal_share_error_points=float(np.abs(25-ms).mean()),
+                assumed_channel_order_rank=[o for _, o in orders].index((0, 1, 2, 3))+1, channel_orders_tried=len(orders),
+                first_10pct=dict(measured=ms[:first].mean(axis=0).tolist(), simulated=ss[:first].mean(axis=0).tolist()),
+                last_10pct=dict(measured=ms[last:].mean(axis=0).tolist(), simulated=ss[last:].mean(axis=0).tolist()))
+
+
+def voltage_window(name, ah, window=None):
     case = next(c for c in MEASURED['cases'] if c['case'] == name)
     rows = np.array([[float(x) for x in r] for r in list(csv.reader(open(ROOT/f'reports/measured_comparison_v1/final/{name}.csv')))[1:]])
     charge = case['starting_charge_pct']-100*case['current_A']*rows[:, 0]/3600/ah
-    low, high = C['error_budget']['voltage']['charge_window_pct']; mask = (charge >= low) & (charge <= high)
+    low, high = window or C['error_budget']['voltage']['charge_window_pct']; mask = (charge >= low) & (charge <= high)
     error = rows[mask, 2]-rows[mask, 1]
     return dict(case=name, samples=int(mask.sum()), mean_error_V=float(error.mean()), largest_optimistic_error_V=float(error.max()), largest_abs_error_V=float(np.abs(error).max()))
 
@@ -130,8 +142,10 @@ def low_charge():
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     commit = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+    sharing, detail = current_sharing()
     result = dict(version='voltforge.engineering-check-results/1', protocol_sha256=hashlib.sha256(RAW).hexdigest(), source_commit=commit, experimental_validation=False,
-                  current_sharing=current_sharing(), error_budget=error_budget(), constant_power=constant_power(), entropy_sensitivity=entropy_sensitivity(), low_charge=low_charge())
+                  current_sharing=sharing, post_hoc=dict(label='Written after seeing the frozen results. Nothing here changed the model.', share_detail=detail, voltage_window_50_to_75=voltage_window('test28_exact_m50t_module', 20., (50, 75))),
+                  error_budget=error_budget(), constant_power=constant_power(), entropy_sensitivity=entropy_sensitivity(), low_charge=low_charge())
     (OUT/'result.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
     print(json.dumps(result, indent=1)[:6000])
 

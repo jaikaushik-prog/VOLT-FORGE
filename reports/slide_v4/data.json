@@ -394,8 +394,8 @@
     "mass_to": 140.0
   },
   "board": {
-    "name": "Geekworm X1206 V2.0 UPS board",
-    "usd": 52.0
+    "name": "Geekworm X1205 2-cell UPS HAT",
+    "usd": 46.0
   },
   "proof": [
     {
@@ -557,5 +557,323 @@
     "sealed_module_records": 3,
     "sealed_cell_records": 6,
     "sealed_total": 9
+  },
+  "checks": {
+    "version": "voltforge.engineering-check-results/1",
+    "protocol_sha256": "a14957bcaa8f3c30e9fbc8af8d947eeebf49f58c99023b4a416b30f728ded8ba",
+    "source_commit": "68601a58abb09f1b5ce1b9ccc423f56423cc4797",
+    "experimental_validation": false,
+    "current_sharing": [
+      {
+        "record": "test28_exact_m50t_module",
+        "samples": 4223,
+        "mean_absolute_share_error_points": 1.1275549521265122,
+        "worst_share_error_points": 5.614736439542565,
+        "busiest_cell_match_fraction": 0.6237272081458679,
+        "measured_mean_share_pct": [
+          25.683901511804557,
+          25.10420635774285,
+          24.47458579457788,
+          24.737306335874774
+        ],
+        "simulated_mean_share_pct": [
+          26.280111011606213,
+          25.41379571828314,
+          24.444782471126352,
+          23.86131079898432
+        ],
+        "measured_spread_points": 6.797620248805178,
+        "simulated_spread_points": 5.744628754675309,
+        "measured_peak_cell_A": 6.035618781939604,
+        "simulated_peak_cell_A": 5.81564039775531,
+        "within_band": false
+      },
+      {
+        "record": "test53_used_fixture",
+        "samples": 4715,
+        "mean_absolute_share_error_points": 0.2061363332919273,
+        "worst_share_error_points": 1.378918860984065,
+        "busiest_cell_match_fraction": 0.48123011664899257,
+        "measured_mean_share_pct": [
+          25.140393255277463,
+          25.063621080464074,
+          25.041443310315685,
+          24.754542353942977
+        ],
+        "simulated_mean_share_pct": [
+          25.000010787479766,
+          25.000002530124053,
+          24.99999775664817,
+          24.999988925748138
+        ],
+        "measured_spread_points": 0.6487629779244869,
+        "simulated_spread_points": 0.014521767761969884,
+        "measured_peak_cell_A": 3.3742298424068053,
+        "simulated_peak_cell_A": 3.6461898853117787,
+        "within_band": false
+      }
+    ],
+    "post_hoc": {
+      "label": "Written after seeing the frozen results. Nothing here changed the model.",
+      "share_detail": [
+        {
+          "record": "test28_exact_m50t_module",
+          "model_error_points": 1.1275549521265122,
+          "equal_share_error_points": 2.3759240819348206,
+          "assumed_channel_order_rank": 1,
+          "channel_orders_tried": 24,
+          "first_10pct": {
+            "measured": [
+              33.61320975256265,
+              26.8654951172848,
+              20.76905359111908,
+              18.752241539033445
+            ],
+            "simulated": [
+              34.39582055766475,
+              26.001728987366455,
+              20.922339607685252,
+              18.68011084728352
+            ]
+          },
+          "last_10pct": {
+            "measured": [
+              15.925648569601435,
+              21.525854045702275,
+              29.186022743742004,
+              33.362474640954254
+            ],
+            "simulated": [
+              17.19166171976501,
+              24.52471497548719,
+              28.63166361324064,
+              29.65195969150714
+            ]
+          }
+        },
+        {
+          "record": "test53_used_fixture",
+          "model_error_points": 0.2061363332919273,
+          "equal_share_error_points": 0.20689404670392414,
+          "assumed_channel_order_rank": 7,
+          "channel_orders_tried": 24,
+          "first_10pct": {
+            "measured": [
+              25.13066783742445,
+              25.100425617534857,
+              24.55905890028393,
+              25.209847644756767
+            ],
+            "simulated": [
+              24.963856780915243,
+              24.99529653101107,
+              25.008355791088817,
+              25.032490896984893
+            ]
+          },
+          "last_10pct": {
+            "measured": [
+              25.369681679095162,
+              25.158596407947027,
+              25.237367098667182,
+              24.23435481429061
+            ],
+            "simulated": [
+              25.00093731945634,
+              25.00012695183923,
+              24.99978437614585,
+              24.999151352558552
+            ]
+          }
+        }
+      ],
+      "voltage_window_50_to_75": {
+        "case": "test28_exact_m50t_module",
+        "samples": 70,
+        "mean_error_V": 0.14460657142857145,
+        "largest_optimistic_error_V": 0.17022000000000004,
+        "largest_abs_error_V": 0.17022000000000004
+      }
+    },
+    "error_budget": {
+      "voltage": {
+        "margin_V": 0.1966843238213336,
+        "primary": {
+          "case": "test28_exact_m50t_module",
+          "samples": 56,
+          "mean_error_V": 0.15019071428571426,
+          "largest_optimistic_error_V": 0.17022000000000004,
+          "largest_abs_error_V": 0.17022000000000004
+        },
+        "others": [
+          {
+            "case": "test28_exact_m50t_module__hall_sum_current",
+            "samples": 52,
+            "mean_error_V": 0.08183884615384615,
+            "largest_optimistic_error_V": 0.09709999999999974,
+            "largest_abs_error_V": 0.09709999999999974
+          },
+          {
+            "case": "warwick_lg_m50_single_cell__LGM50_cell02__5A",
+            "samples": 24,
+            "mean_error_V": -0.01868041666666666,
+            "largest_optimistic_error_V": 0.0006800000000000139,
+            "largest_abs_error_V": 0.031129999999999658
+          },
+          {
+            "case": "warwick_lg_m50_single_cell__LGM50_cell03__5A",
+            "samples": 24,
+            "mean_error_V": -0.02561666666666664,
+            "largest_optimistic_error_V": -0.005929999999999769,
+            "largest_abs_error_V": 0.03805999999999976
+          },
+          {
+            "case": "warwick_lg_m50_single_cell__LGM50_cell04__5A",
+            "samples": 24,
+            "mean_error_V": -0.026989583333333306,
+            "largest_optimistic_error_V": -0.008010000000000073,
+            "largest_abs_error_V": 0.03941999999999979
+          }
+        ],
+        "passed": true
+      },
+      "temperature": {
+        "worst_rise_K": 8.573201917793842,
+        "largest_measured_over_simulated": 2.2681593308707213,
+        "scaled_C": 42.445387925282866,
+        "limit_C": 55,
+        "passed": true
+      }
+    },
+    "constant_power": {
+      "constant_current": {
+        "status": "completed",
+        "peak_cell_current_A": 4.208754208754234,
+        "minimum_voltage_V": 3.5249590416923957,
+        "peak_temperature_C": 27.37006938336244,
+        "final_lowest_charge_pct": 55.97081930415519,
+        "lowest_charge_pct": 55.97081930415519
+      },
+      "constant_power": {
+        "status": "completed",
+        "peak_cell_current_A": 3.9049351275023665,
+        "minimum_voltage_V": 3.555413143540937,
+        "peak_temperature_C": 26.71873566720426,
+        "final_lowest_charge_pct": 57.302192254067506,
+        "lowest_charge_pct": 57.302192254067506,
+        "peak_load_A": 7.809870255004726,
+        "lowest_load_A": 7.369052729831563
+      },
+      "rounds": [
+        {
+          "status": "completed",
+          "peak_cell_current_A": 3.938165006774106,
+          "minimum_voltage_V": 3.5527953546567983,
+          "peak_temperature_C": 26.7689065609806,
+          "final_lowest_charge_pct": 57.2071621793304,
+          "lowest_charge_pct": 57.2071621793304,
+          "peak_load_A": 7.876330013548184,
+          "lowest_load_A": 7.407653699833746
+        },
+        {
+          "status": "completed",
+          "peak_cell_current_A": 3.9075743018600915,
+          "minimum_voltage_V": 3.555224660358595,
+          "peak_temperature_C": 26.722148459643005,
+          "final_lowest_charge_pct": 57.29615482033067,
+          "lowest_charge_pct": 57.29615482033067,
+          "peak_load_A": 7.8151486037201625,
+          "lowest_load_A": 7.370418451537018
+        },
+        {
+          "status": "completed",
+          "peak_cell_current_A": 3.9049351275023665,
+          "minimum_voltage_V": 3.555413143540937,
+          "peak_temperature_C": 26.71873566720426,
+          "final_lowest_charge_pct": 57.302192254067506,
+          "lowest_charge_pct": 57.302192254067506,
+          "peak_load_A": 7.809870255004726,
+          "lowest_load_A": 7.369052729831563
+        }
+      ],
+      "passed": true
+    },
+    "entropy_sensitivity": {
+      "rows": [
+        {
+          "variant": "as_deployed",
+          "scenario": "normal",
+          "peak_temperature_C": 27.37006938336244,
+          "status": "completed"
+        },
+        {
+          "variant": "as_deployed",
+          "scenario": "halved_cooling_and_heat_capacity",
+          "peak_temperature_C": 31.573201917793842,
+          "status": "completed"
+        },
+        {
+          "variant": "no_reversible_heat",
+          "scenario": "normal",
+          "peak_temperature_C": 27.333380166335047,
+          "status": "completed"
+        },
+        {
+          "variant": "no_reversible_heat",
+          "scenario": "halved_cooling_and_heat_capacity",
+          "peak_temperature_C": 31.506291944612578,
+          "status": "completed"
+        },
+        {
+          "variant": "slope_from_ocv_table",
+          "scenario": "normal",
+          "peak_temperature_C": 25.594222110282182,
+          "status": "completed"
+        },
+        {
+          "variant": "slope_from_ocv_table",
+          "scenario": "halved_cooling_and_heat_capacity",
+          "peak_temperature_C": 28.030280360412657,
+          "status": "completed"
+        },
+        {
+          "variant": "slope_from_ocv_table_reversed",
+          "scenario": "normal",
+          "peak_temperature_C": 29.11267419019738,
+          "status": "completed"
+        },
+        {
+          "variant": "slope_from_ocv_table_reversed",
+          "scenario": "halved_cooling_and_heat_capacity",
+          "peak_temperature_C": 35.048554529205504,
+          "status": "completed"
+        }
+      ],
+      "passed": true
+    },
+    "low_charge": {
+      "rows": [
+        {
+          "case": "normal",
+          "lowest_charge_pct": 55.97081930415519
+        },
+        {
+          "case": "weak cell 1",
+          "lowest_charge_pct": 54.529908073300994
+        },
+        {
+          "case": "weak cell 2",
+          "lowest_charge_pct": 54.529908073300994
+        }
+      ],
+      "threshold_pct": 18,
+      "passed": true
+    }
+  },
+  "business": {
+    "stage1_crore": 9.268871383545509,
+    "team_price_inr": 500000,
+    "repay_years": 5,
+    "stage1_teams": 25
   }
 }
