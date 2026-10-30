@@ -240,3 +240,18 @@ def test_a_two_cell_design_is_priced_on_the_two_cell_board():
         return next(r for r in estimate(graph, bank, prices)['lines'] if r['slot'] == 'converter')
     assert 'X1205' in board(2)['part'] and board(2)['cost'] == 46.
     assert 'X1206' in board(4)['part'] and board(4)['cost'] == 52.
+
+
+def test_preflight_warns_about_a_later_load_step_without_blocking(tmp_path):
+    root = tmp_path/'project'; Project.create_reference(root); studio = Studio(root)
+    doc = studio.create('parallel', 2, 'Steps', mission=dict(current_A=4., duration_s=120.))
+    settings = deepcopy(doc['settings']); settings['profile'] = [dict(start_s=0., end_s=60., current_A=4.), dict(start_s=60., end_s=120., current_A=40.)]
+    ready = studio.preflight(doc['graph'], settings)
+    assert ready['ready'] is True and any(w['rule'] == 'later_step_limit' for w in ready['warnings'])
+
+
+def test_a_load_change_at_an_awkward_time_arrives_on_time():
+    g = design(2); s = settings_default(); third = 100/3
+    s.update(dt_s=1., profile=[dict(start_s=0., end_s=third, current_A=2.), dict(start_s=third, end_s=60., current_A=4.)])
+    rows = simulate(g, s, BANK).rows
+    assert next(r['time_s'] for r in rows if r['current_A'] == 4.) == pytest.approx(third, abs=1e-6)

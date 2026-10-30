@@ -15,8 +15,9 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
-from compare_measured import BANK, KEY, module_segment, run, starting_charge
-from run_design_study_v2 import build, simulate
+from compare_measured import BANK, KEY, module_segment, run, starting_charge, warwick_segment
+from run_design_study_v2 import build, enumerate_cases, simulate
+from voltforge.studio.protection import defaults
 
 RAW = (ROOT/'configs/engineering_checks_v1.json').read_bytes()
 C = json.loads(RAW)
@@ -139,12 +140,47 @@ def low_charge():
     return dict(rows=rows, threshold_pct=C['low_charge']['threshold_pct'], passed=bool(all(r['lowest_charge_pct'] > C['low_charge']['threshold_pct'] for r in rows)))
 
 
+def required_charge():
+    study = json.loads((ROOT/'configs/round1_design_study_v2.json').read_text()); required = set(study['qualification']['required_tiers']); rows = []
+    for case in enumerate_cases():
+        if case['count'] == C['design']['count'] and case['option'] == C['design']['option'] and case['mission'] == 'pi' and case['tier'] in required:
+            g, s, bank = build(case); rows.append(metrics(simulate(g, s, bank))['lowest_charge_pct'])
+    return dict(cases=len(rows), lowest_charge_pct=min(rows))
+
+
+def ten_minute_rise():
+    """Measured over simulated peak rise after 600 s, the length of the Pi job."""
+    rows = []
+    def one(name, seg, current, link):
+        charge = starting_charge(seg['rest_voltage'], float(np.mean(seg['rest_temperature'])))
+        r = run(seg['temperature'][0].tolist(), charge, current, min(700., float(seg['time'][-1])), seg['ambient'], link)
+        t = np.array([x['time_s'] for x in r.rows]); keep = np.r_[True, np.diff(t) > 0]; t = t[keep]; temperature = np.array([x['temperature_C'] for x in r.rows])[keep]
+        i = int(np.searchsorted(seg['time'], 600.)); measured = seg['temperature'][i]-seg['temperature'][0]
+        simulated = np.array([np.interp(600., t, temperature[:, k]) for k in range(temperature.shape[1])])-temperature[0]
+        rows.append(dict(case=name, measured_rise_K=float(measured.max()), simulated_rise_K=float(simulated.max()), ratio=float(measured.max()/simulated.max())))
+    for c in COMPARE['comparisons']:
+        if 'file' in c:
+            seg = module_segment(ROOT/c['file'], c['discharge_step']); one(c['id'], seg, seg['cycler_current'], c['link_resistance_mohm'])
+        else:
+            for name in c['files']:
+                for step in c['discharge_steps']:
+                    seg = warwick_segment(ROOT/name, step['step']); one(f"{Path(name).stem} {step['nominal_A']:g} A", seg, seg['cycler_current'], 0)
+    return rows
+
+
+def virtual_protection():
+    g, s, bank = build(design_case())
+    s['protection'] = dict(defaults(), current_max_A=7., voltage_min_V=3.3, temperature_max_C=45.)
+    m = metrics(simulate(g, s, bank))
+    return dict(settings='7 A a cell, 3.3 V and 45 C, with 0.5 s sensing and 0.5 s response', status=m['status'], peak_cell_current_A=m['peak_cell_current_A'], peak_temperature_C=m['peak_temperature_C'])
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     commit = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True).stdout.strip()
     sharing, detail = current_sharing()
     result = dict(version='voltforge.engineering-check-results/1', protocol_sha256=hashlib.sha256(RAW).hexdigest(), source_commit=commit, experimental_validation=False,
-                  current_sharing=sharing, post_hoc=dict(label='Written after seeing the frozen results. Nothing here changed the model.', share_detail=detail, voltage_window_50_to_75=voltage_window('test28_exact_m50t_module', 20., (50, 75))),
+                  current_sharing=sharing, post_hoc=dict(label='Written after seeing the frozen results. Nothing here changed the model.', share_detail=detail, voltage_window_50_to_75=voltage_window('test28_exact_m50t_module', 20., (50, 75)), required_charge=required_charge(), ten_minute_rise=ten_minute_rise(), virtual_protection=virtual_protection()),
                   error_budget=error_budget(), constant_power=constant_power(), entropy_sensitivity=entropy_sensitivity(), low_charge=low_charge())
     (OUT/'result.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
     print(json.dumps(result, indent=1)[:6000])

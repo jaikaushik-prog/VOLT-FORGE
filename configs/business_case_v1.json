@@ -5,16 +5,51 @@
   "model": "Free for students. Labs pay a yearly licence. Engineering teams pay a yearly team plan.",
   "benchmark": {
     "name": "One seat of the nearest commercial stack",
-    "prices_usd": {"MATLAB": 2625, "Simulink": 3965, "Simscape": 2625, "Simscape Battery": 3965},
+    "prices_usd": {
+      "MATLAB": 2625,
+      "Simulink": 3965,
+      "Simscape": 2625,
+      "Simscape Battery": 3965
+    },
     "term": "Perpetual, named user, North America Standard, September 2026, excluding tax",
     "url": "https://www.mathworks.com/content/dam/mathworks/price-lists/north-america-standard.pdf"
   },
-  "team_plan": {"annual_price_inr": 500000, "basis": "assumed", "reason": "Placeholder set below one seat of the benchmark stack. Not tested with any customer."},
-  "repay_years": {"value": 5, "basis": "assumed", "reason": "Planning horizon for the first stage."},
+  "team_plan": {
+    "annual_price_inr": 500000,
+    "basis": "assumed",
+    "reason": "One team, up to five seats. Placeholder set below one seat of the benchmark stack. Not tested with any customer."
+  },
+  "repay_years": {
+    "value": 5,
+    "basis": "assumed",
+    "reason": "Planning horizon for the first stage."
+  },
   "stages": [
-    {"name": "1. Trusted student and lab tool", "workstreams": ["dataset", "results", "quality"]},
-    {"name": "2. Team product", "workstreams": ["solvers", "library", "copilot", "platform"]},
-    {"name": "3. Full engineering suite", "workstreams": ["fidelity", "studio", "product"]}
+    {
+      "name": "1. Validated tool for labs and small teams",
+      "workstreams": [
+        "dataset",
+        "results",
+        "quality"
+      ]
+    },
+    {
+      "name": "2. Pack scale for larger teams",
+      "workstreams": [
+        "solvers",
+        "library",
+        "copilot",
+        "platform"
+      ]
+    },
+    {
+      "name": "3. Full engineering suite",
+      "workstreams": [
+        "fidelity",
+        "studio",
+        "product"
+      ]
+    }
   ],
-  "stage_rule": "Shared lab, running, one-off and contingency costs are split in proportion to people cost. Each stage starts only if the one before it is paying."
+  "stage_rule": "Stage one carries all lab equipment and lab running costs. Other shared costs are split by people cost, and contingency is added to each stage. Each stage starts only if the one before it is paying. Repayment leaves out running, support and sales costs after the build, and assumes customers from day one. The number of paying teams in India has not been sized."
 }

@@ -252,8 +252,8 @@ class Studio:
             if settings.get('protection') and (settings['protection']['temperature_max_C'] is not None or settings['protection'].get('charge_temperature_C') is not None) and not all(m.has_thermal for m in models):
                 raise ValueError('Temperature-based protection needs a thermal model for every cell. Add thermal properties or disable that threshold.')
             values=[m.parameters(c['charge_pct']/100,c['temperature_C']) for c,m in zip(graph['cells'],models)]
-            solution=Circuit(graph,self.models).solve(np.array([v[0]-c['polarization_V'] for v,c in zip(values,graph['cells'])]),
-                                          np.array([v[1] for v in values]),settings['profile'][0]['current_A'])
+            ocv=np.array([v[0]-c['polarization_V'] for v,c in zip(values,graph['cells'])]);resistance=np.array([v[1] for v in values])
+            solution=Circuit(graph,self.models).solve(ocv,resistance,settings['profile'][0]['current_A'])
             for i,(cell,model) in enumerate(zip(graph['cells'],models)):
                 problem=model.operating_error(cell['temperature_C'],solution['current'][i],solution['voltage'][i])
                 if problem:
@@ -264,6 +264,11 @@ class Studio:
             ready['operating_within_limits']=True
             from .design_rules import review
             ready['warnings']=review(graph,self.models)
+            # Later steps start from a state only the run can know, so they warn and never block.
+            for number,step in enumerate(settings['profile'][1:],2):
+                later=Circuit(graph,self.models).solve(ocv,resistance,step['current_A'])
+                over=[c for i,c in enumerate(graph['cells']) if models[i].operating_error(c['temperature_C'],later['current'][i],later['voltage'][i])]
+                if over:ready['warnings'].append(dict(rule='later_step_limit',severity='warning',message=f'Load step {number} may take {over[0]["name"]} past a limit. The test stops there if it does.',cells=[c['id'] for c in over]))
         except ValueError as exc:
             ready.update(ready=False,message=str(exc))
             if ready['model_supported'] is None:ready['model_supported']=False

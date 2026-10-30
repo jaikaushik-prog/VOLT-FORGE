@@ -154,3 +154,8 @@ def test_extreme_intermediate_arithmetic_has_a_useful_error_instead_of_nan():
     settings=settings_default();settings['profile']=[dict(start_s=0.,end_s=1.,current_A=2.)]
     with pytest.raises(ValueError,match='numerical range of the calculation'):
         simulate(graph,settings,{'custom_extreme':definition})
+
+
+def test_csv_in_millivolts_is_refused():
+    with pytest.raises(ValueError,match='millivolts'):
+        csv_definition('soc_pct,voltage_V\n10,3100\n50,3600\n90,4100\n',dict(basic(),nominal_voltage_V=3.6))

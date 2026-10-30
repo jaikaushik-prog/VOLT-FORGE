@@ -140,7 +140,7 @@ def _simulate(graph, settings, bank):
     share = np.zeros((n, len(graph['connections'])))
     for j, w in enumerate(graph['connections']):
         for end in ('a', 'b'): share[ids[w[end].split(':')[0]], j] += th['wire_heat_fraction']/2
-    profile = settings['profile']; starts = np.array([p['start_s'] for p in profile])
+    profile = settings['profile']; starts = np.round(np.array([p['start_s'] for p in profile]), 10)
     grid = integration_grid(settings)
     charges = np.zeros(n); energy = np.zeros(6); generated = exchanged = reversible = outside = 0.
     rows = []; stop = None

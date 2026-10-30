@@ -115,5 +115,8 @@ def csv_definition(text, metadata):
     except (ValueError,TypeError):raise ValueError('Use 2 to 2,048 numeric CSV rows with charge in percent and voltage in volts.') from None
     if len(z)<2:raise ValueError('The CSV needs at least two charge and voltage points.')
     if not isinstance(metadata,dict):raise ValueError('Include a name, capacity, nominal voltage and DC resistance with the CSV.')
+    nominal=metadata.get('nominal_voltage_V')
+    if isinstance(nominal,(int,float)) and nominal>0 and not .5<=sorted(u)[len(u)//2]/nominal<=1.5:
+        raise ValueError('These voltages do not match the nominal voltage. Give the CSV in volts, not millivolts.')
     data=deepcopy(metadata);data.update(kind=BASIC_KIND,reference=dict(soc=z,voltage_V=u))
     return data

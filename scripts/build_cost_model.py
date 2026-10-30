@@ -1,4 +1,4 @@
-"""Estimate the cost of building the full VOLT-FORGE vision, two independent ways."""
+"""Estimate the cost of building the full VOLT-FORGE vision, with a software-size cross-check."""
 from pathlib import Path
 import json
 

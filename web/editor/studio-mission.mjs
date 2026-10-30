@@ -60,7 +60,7 @@ export function verdictRows(test,timeLabel){
  else rows.push(['Backup time',served?'pass':'fail',served?`Full ${timeLabel(requested)}`:`Stopped at ${timeLabel(m.duration_s)} of ${timeLabel(requested)}`,'']);
  if(!s.charging)rows.push(['Lowest voltage',check?check.status==='exceeded'?'fail':check.status==='within_target'?'pass':'info':'info',`${fmt(m.minimum_voltage_V,2)} V`,target==null?'No target set':`Target ${fmt(target,2)} V`]);
  rows.push(['Busiest cell','info',`${esc(names[m.busiest_cell])}: ${fmt(m.peak_cell_current_A,2)} A`,above!==null&&above>.5?`${fmt(above,0)}% above an even share`:'']);
- rows.push(['Warmest cell','info',m.warmest_cell?`${esc(names[m.warmest_cell])}: ${fmt(m.peak_temperature_C)} °C`:'Temperature not modeled','']);
+ rows.push(['Warmest cell','info',m.warmest_cell?`${esc(names[m.warmest_cell])}: ${fmt(m.peak_temperature_C)} °C`:'Temperature not modeled',m.warmest_cell?'Rough estimate. Cooling varies by setup.':'']);
  return `<div class="verdict" aria-label="Test verdict">${rows.map(([label,state,value,note])=>`<div class="verdict-row">${mark(state)}<span class="verdict-label">${label}</span><strong>${value}</strong><span class="verdict-note">${esc(note)}</span></div>`).join('')}</div>`;
 }
 
