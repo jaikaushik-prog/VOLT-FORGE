@@ -43,3 +43,4 @@
 @media(max-width:700px){.verdict-row{grid-template-columns:26px minmax(0,1fr)}.verdict-row>strong,.verdict-row>.verdict-note{grid-column:2}.sizing-table td,.sizing-table th{white-space:normal}}
 #main h1:focus{outline:none}
 .limit-status.ok{color:#1f6452;font-weight:600}
+.page-wrap:has(.compare-designs){max-width:1460px}.compare-designs svg,.compare-designs .battery-canvas{width:100%!important;height:auto!important;max-height:none!important}

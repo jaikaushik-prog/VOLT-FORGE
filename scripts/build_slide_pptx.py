@@ -19,7 +19,9 @@ Mission: 25 W from the Raspberry Pi 5 supply recommendation, an assumed 90% conv
 Real data: all {d['proof_cases']} pre-declared comparison cases missed their bands. Sources: Chen et al. 2020 (LG M50, zenodo.4032561) and Piombo et al. 2024 test 28 (M50T, 10.17632/zh58byr53c.2).
 Not proven: the Geekworm X1206 V2.0 board running on two cells, a real Pi draw, or measured accuracy.
 Cost: cells only, Robu LG M50T Rs 1,206 including GST, listed out of stock, checked 30 Oct 2026. Excludes shipping and fabrication.
-Market: AISHE 2021-22. The price of Rs {d['market']['licence_inr']:,} a lab and 5% reach are assumptions, and counts do not show willingness to pay."""
+Market: AISHE 2021-22. The price of Rs {d['market']['licence_inr']:,} a lab and 5% reach are assumptions, and counts do not show willingness to pay.
+Build cost: about Rs {d['cost']['total_crore']:.0f} crore over 3 years and {d['cost']['person_years']:g} person-years for the full product vision. An estimate from sourced salary rates and assumed staffing, cross-checked with COCOMO II. See reports/build_cost_v1/BUILD_COST.md. AspenTech fiscal 2024 R&D was US$206.1 million.
+Screens: real designs in the app. The 16-cell and 12-cell modules are examples of what it can handle, not the recommended design."""
 
 
 def main():
@@ -38,7 +40,7 @@ def main():
     slide.shapes.title.text_frame.text = 'Test a battery before you build it'
     picture = slide.shapes.add_picture(str(ROOT/'reports/slide_v4/VOLT-FORGE_Round1_Slide.png'), Emu(0), Emu(0), prs.slide_width, prs.slide_height)
     picture.name = 'VOLT-FORGE Round 1 slide'
-    picture._element.nvPicPr.cNvPr.set('descr', 'VOLT-FORGE: the seven rubric criteria around the working app, with its canvas and test verdict at the centre.')
+    picture._element.nvPicPr.cNvPr.set('descr', 'VOLT-FORGE: the seven rubric criteria around the working app, showing a 16-cell circuit with a cell properties panel, and a comparison of two circuits.')
     slide.notes_slide.notes_text_frame.text = notes(d)
     prs.save(args.out)
 

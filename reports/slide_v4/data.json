@@ -440,5 +440,141 @@
     "som_colleges": 130.5,
     "licence_inr": 50000,
     "som_inr": 6525000.0
+  },
+  "cost": {
+    "version": "voltforge.build-cost-result/1",
+    "total_crore": 35.382839999999995,
+    "total_usd_million": 4.020777272727272,
+    "person_years": 100.5,
+    "average_team": 33.5,
+    "breakdown_crore": {
+      "people": 24.963399999999996,
+      "lab": 1.0223,
+      "recurring": 3.0,
+      "one_off": 0.5,
+      "contingency": 5.897139999999999
+    },
+    "work": [
+      {
+        "id": "dataset",
+        "name": "Measured dataset and validation",
+        "vision": "Sections 7, 12",
+        "person_years": 12.5,
+        "lakh": 244.29999999999998,
+        "crore": 2.4429999999999996
+      },
+      {
+        "id": "solvers",
+        "name": "Electrical and thermal solvers to pack scale",
+        "vision": "Sections 6, 13",
+        "person_years": 10,
+        "lakh": 337.82,
+        "crore": 3.3782
+      },
+      {
+        "id": "fidelity",
+        "name": "Electrochemistry, CFD and FEA",
+        "vision": "Section 13 extensions",
+        "person_years": 12,
+        "lakh": 407.82,
+        "crore": 4.0782
+      },
+      {
+        "id": "studio",
+        "name": "3D Design Studio and CAD exchange",
+        "vision": "Sections 4, 11",
+        "person_years": 17,
+        "lakh": 397.59999999999997,
+        "crore": 3.9759999999999995
+      },
+      {
+        "id": "library",
+        "name": "Component library and versioned model graph",
+        "vision": "Sections 5, 13",
+        "person_years": 9,
+        "lakh": 197.96,
+        "crore": 1.9796
+      },
+      {
+        "id": "results",
+        "name": "Simulation, results, failure search and comparison",
+        "vision": "Sections 6 to 9",
+        "person_years": 12,
+        "lakh": 283.64,
+        "crore": 2.8364
+      },
+      {
+        "id": "copilot",
+        "name": "AI copilot",
+        "vision": "Section 10",
+        "person_years": 3,
+        "lakh": 66.08,
+        "crore": 0.6607999999999999
+      },
+      {
+        "id": "platform",
+        "name": "Reports, projects, collaboration and security",
+        "vision": "Sections 3, 11, 14",
+        "person_years": 10,
+        "lakh": 203.7,
+        "crore": 2.037
+      },
+      {
+        "id": "quality",
+        "name": "Quality, documentation and support",
+        "vision": "Sections 12, 14",
+        "person_years": 9,
+        "lakh": 125.99999999999999,
+        "crore": 1.2599999999999998
+      },
+      {
+        "id": "product",
+        "name": "Product, design and management",
+        "vision": "All",
+        "person_years": 6,
+        "lakh": 231.42,
+        "crore": 2.3142
+      }
+    ],
+    "cross_check": {
+      "ksloc": 200,
+      "person_months": 997.2177879071667,
+      "person_years": 83.10148232559722,
+      "software_people_crore": 20.641746705341426,
+      "bottom_up_people_crore": 24.963399999999996,
+      "difference_pct": -17.3119578849779
+    },
+    "benchmark": {
+      "aspentech_rd_crore_per_year": 1813.8032,
+      "share_pct": 1.9507540840152886
+    },
+    "scope": "Everything in the final Product Vision, from a measured dataset to a full engineering application: own lab data, solvers to pack scale, higher-fidelity physics, 3D design studio, component library, simulation, failure investigation, comparison, AI copilot, reports and collaboration. India-based team over 36 months. Estimate, not a quote."
+  },
+  "demo": {
+    "load_A": 16.0,
+    "cells": [
+      16,
+      12
+    ],
+    "links": [
+      36,
+      26
+    ],
+    "cost_inr": [
+      19296.0,
+      14472.0
+    ],
+    "mass_g": [
+      1120.0,
+      840.0000000000001
+    ],
+    "peak_A": [
+      3.61140704736951,
+      3.859395450695261
+    ],
+    "warmest_C": [
+      25.317149409811343,
+      25.91587548143268
+    ]
   }
 }

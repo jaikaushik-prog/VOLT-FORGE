@@ -1,0 +1,48 @@
+{
+  "version": "voltforge.build-cost/1",
+  "checked": "2026-10-30",
+  "scope": "Everything in the final Product Vision, from a measured dataset to a full engineering application: own lab data, solvers to pack scale, higher-fidelity physics, 3D design studio, component library, simulation, failure investigation, comparison, AI copilot, reports and collaboration. India-based team over 36 months. Estimate, not a quote.",
+  "rates_lakh_per_year": {
+    "principal": {"value": 37, "basis": "sourced", "source": "PERSOL India 2026 average for a senior software engineer, used here for principal-level staff", "url": "https://www.persolindia.com/articles/salary-of-senior-software-engineer-in-india"},
+    "senior_physics": {"value": 25, "basis": "sourced", "source": "Top of the 12 to 25 LPA band for battery simulation engineers with 3 to 5 years, EVacad", "url": "https://www.evacad.com/blog/battery-modelling-simulation-in-electric-vehicles-tools-career-scope-and-industry-application"},
+    "senior_software": {"value": 18.1, "basis": "sourced", "source": "Glassdoor 75th percentile, senior software engineer, India, July 2026", "url": "https://www.glassdoor.co.in/Salaries/software-engineer-senior-software-developer-salary-SRCH_KO0,43_P4.htm"},
+    "engineer": {"value": 11, "basis": "sourced", "source": "Glassdoor average, same page", "url": "https://www.glassdoor.co.in/Salaries/software-engineer-senior-software-developer-salary-SRCH_KO0,43_P4.htm"},
+    "test_technician": {"value": 8, "basis": "sourced", "source": "Average CTC at 2 to 5 years for design-side mechanical and CAE roles, salaryinhand", "url": "https://salaryinhand.in/salaries/mechanical-engineer"}
+  },
+  "overhead_multiplier": {"value": 1.4, "basis": "assumed", "reason": "Employer contributions, insurance, hardware, office, hiring and attrition."},
+  "contingency": {"value": 0.2, "basis": "assumed", "reason": "A research-heavy build carries real schedule risk."},
+  "usd_inr": {"value": 88, "basis": "assumed", "reason": "Planning rate, for dollar listings and the benchmark only."},
+  "work_breakdown_person_years": [
+    {"id": "dataset", "name": "Measured dataset and validation", "vision": "Sections 7, 12", "principal": 0.5, "senior_physics": 3, "engineer": 3, "test_technician": 6},
+    {"id": "solvers", "name": "Electrical and thermal solvers to pack scale", "vision": "Sections 6, 13", "principal": 1, "senior_physics": 6, "senior_software": 3},
+    {"id": "fidelity", "name": "Electrochemistry, CFD and FEA", "vision": "Section 13 extensions", "principal": 1, "senior_physics": 8, "senior_software": 3},
+    {"id": "studio", "name": "3D Design Studio and CAD exchange", "vision": "Sections 4, 11", "principal": 1, "senior_software": 10, "engineer": 6},
+    {"id": "library", "name": "Component library and versioned model graph", "vision": "Sections 5, 13", "senior_physics": 1, "senior_software": 4, "engineer": 4},
+    {"id": "results", "name": "Simulation, results, failure search and comparison", "vision": "Sections 6 to 9", "senior_physics": 2, "senior_software": 6, "engineer": 4},
+    {"id": "copilot", "name": "AI copilot", "vision": "Section 10", "senior_software": 2, "engineer": 1},
+    {"id": "platform", "name": "Reports, projects, collaboration and security", "vision": "Sections 3, 11, 14", "senior_software": 5, "engineer": 5},
+    {"id": "quality", "name": "Quality, documentation and support", "vision": "Sections 12, 14", "engineer": 6, "test_technician": 3},
+    {"id": "product", "name": "Product, design and management", "vision": "All", "principal": 3, "senior_software": 3}
+  ],
+  "lab": [
+    {"item": "LG M50T cells", "quantity": 500, "unit_inr": 1206, "basis": "sourced", "source": "Robu listing, 30 Oct 2026"},
+    {"item": "Neware 8-channel 5 V 6 A cyclers", "quantity": 5, "unit_usd": 3000, "basis": "sourced", "source": "Midpoint of the US$2,000 to 4,000 listing on goldsupplier", "url": "https://www.goldsupplier.com/provide/p159048115.html"},
+    {"item": "High-current module cyclers", "quantity": 4, "unit_inr": 1200000, "basis": "assumed"},
+    {"item": "Sub-zero thermal chambers", "quantity": 4, "unit_inr": 500000, "basis": "assumed", "reason": "Listed 100 L chambers near Rs 1.45 lakh stop at 5 C; battery work needs sub-zero."},
+    {"item": "Sensors, fixtures and safety equipment", "quantity": 1, "unit_inr": 1500000, "basis": "assumed"}
+  ],
+  "recurring_lakh_per_year": [
+    {"item": "Lab space, power and safety", "value": 30, "basis": "assumed"},
+    {"item": "Cloud and compute", "value": 40, "basis": "assumed"},
+    {"item": "Software tools and AI usage", "value": 30, "basis": "assumed"}
+  ],
+  "one_off_lakh": [{"item": "Legal, IP and quality audits", "value": 50, "basis": "assumed"}],
+  "duration_years": 3,
+  "cross_check": {
+    "method": "COCOMO II, nominal: person-months = 2.94 x KSLOC^1.0997, at 152 hours a month",
+    "source": "https://ranger.uta.edu/~khalili/Overview%20of%20COCOMO.htm",
+    "ksloc": {"solvers_and_physics": 60, "studio_and_cad": 60, "library_and_data": 20, "results_and_failure_search": 30, "copilot_and_reports": 10, "platform": 20},
+    "ksloc_basis": "assumed"
+  },
+  "benchmark": {"name": "AspenTech research and development, fiscal 2024", "usd_million": 206.114, "revenue_usd_million": 1127.482, "source": "AspenTech fiscal 2024 results release", "url": "https://www.silicon.co.uk/press-release/aspen-technology-announces-financial-results-for-the-fourth-quarter-and-fiscal-2024"}
+}
