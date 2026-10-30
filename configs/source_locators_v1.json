@@ -1,0 +1,26 @@
+{
+  "version": "voltforge.source-locators/1",
+  "checked": "2026-10-30",
+  "note": "Where each identity and limit of the deployed LG model can be read. Kept beside the catalogue so its hash stays unchanged.",
+  "LG_M50T_ECN": {
+    "cell_identity": {
+      "paper": "Li S, Rawat SK, Zhu T, Offer GJ, Marinescu M. Python-based Equivalent Circuit Network (PyECN) Modelling Framework for Lithium-ion Batteries. engrXiv, https://doi.org/10.31224/2972",
+      "locator": "Section 3.1: the electrical parameters come from a parameterized commercial 2170 cylindrical cell (LG M50T 5 Ah), citing reference 6",
+      "cited": "Li S, Kirkaldy N, Zhang C, et al. J Power Sources 2021;492:229594, https://doi.org/10.1016/j.jpowsour.2021.229594",
+      "pdf_sha256": "5bbd56a36274c28d360a9c8f4875dc2e4587674cff56b1df49f2c699702b211d"
+    },
+    "operating_limits": {
+      "document": "LG INR21700 M50T product specification, Rev 0, July 2018",
+      "locators": {
+        "minimum_voltage": "Section 2.7: 2.50 V",
+        "charge_current": "Section 4.2.3: 0 to 25 C 1,455 mA; 25 to 45 C 3,395 mA",
+        "discharge_current": "Section 4.2.4: -20 to 10 C 2,425 mA; 10 to 25 C 14,550 mA; 25 to 55 C 7,275 mA",
+        "discharge_temperature": "Operating range -20 to 55 C"
+      },
+      "copies": ["https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf", "https://aws.robu.in/wp-content/uploads/2021/11/DATASHEET-LGM50T.pdf"],
+      "first_copy_sha256": "8088b8c6a8d8336a590bee0ab43b495128e0a98c1f208874bc8f9460bc62c76d",
+      "limit": "No first-party public copy was found, so both links are reseller copies.",
+      "deployed_rule": "The model applies 7,275 mA at every temperature above 10 C. That is stricter than the sheet between 10 and 25 C, so it errs on the safe side."
+    }
+  }
+}

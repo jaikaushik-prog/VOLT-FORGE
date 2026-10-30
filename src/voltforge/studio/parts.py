@@ -47,7 +47,7 @@ def estimate(graph, bank, prices):
     elif graph['connections']:
         lines.append(dict(part='Connections', slot='conductor', quantity=len(graph['connections']), unit='links', priced=False, listings=[], note='Give the links dimensions to price them.'))
     for slot in ('converter', 'protection'):
-        lines.append(line(items[slot], 1, 'part'))
+        lines.append(line(items.get(f'{slot}:{len(graph["cells"])}') or items[slot], 1, 'part'))
     subtotals = {}
     for row in lines:
         if row['priced']: subtotals[row['currency']] = subtotals.get(row['currency'], 0.)+row['cost']

@@ -110,7 +110,7 @@ def test_large_charge_mismatch_reports_circulating_current():
 
 def test_cost_keeps_currencies_apart_and_never_prices_an_unknown_at_zero():
     prices = deepcopy(load_prices(ROOT))
-    prices['items']['converter'] = dict(name='Test converter', slot='converter', listings=[])
+    prices['items']['converter:2'] = dict(name='Test converter', slot='converter', listings=[])
     g = design(2); g['cells'][1]['model'] = 'SAMSUNG_30T'
     result = estimate(g, BANK, prices)
     assert result['subtotals'] == {'INR': 1206, 'USD': 6.99}
@@ -230,3 +230,13 @@ def test_compare_lists_settings_differences(studio):
     second = studio.run(other['id'], other['version'])
     changes = studio.compare([first['id'], second['id']])['settings_changes']
     assert any(c['path'].startswith('profile') and c['path'].endswith('current_A') for c in changes)
+
+
+def test_a_two_cell_design_is_priced_on_the_two_cell_board():
+    prices = load_prices(ROOT); bank = load_additional(ROOT)
+    def board(count):
+        graph = template('parallel', count)
+        for cell in graph['cells']: cell['model'] = 'LG_M50T_ECN'
+        return next(r for r in estimate(graph, bank, prices)['lines'] if r['slot'] == 'converter')
+    assert 'X1205' in board(2)['part'] and board(2)['cost'] == 46.
+    assert 'X1206' in board(4)['part'] and board(4)['cost'] == 52.

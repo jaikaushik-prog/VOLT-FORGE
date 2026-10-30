@@ -1,7 +1,7 @@
 {
   "version": "voltforge.parts-prices/1",
   "checked": "2026-10-30",
-  "note": "Public listing prices. Each part is one exact item, and its price is the average of its own listings.",
+  "note": "Public listings. Each part is one exact item, and its price is the average of its own listings. A key ending in a cell count applies to designs of that size.",
   "items": {
     "cell:LG_M50T_ECN": {
       "name": "LG INR21700-M50T cell",
@@ -81,9 +81,35 @@
     "protection": {
       "name": "Battery protection",
       "slot": "protection",
-      "included_in": "Geekworm X1206 V2.0 UPS board",
+      "included_in": "The UPS board",
       "note": "Included in the UPS board",
       "specification": "The maker lists battery overcurrent, overvoltage and reverse-cell protection. Not certified or independently tested here.",
+      "listings": []
+    },
+    "converter:2": {
+      "name": "Geekworm X1205 2-cell UPS HAT",
+      "slot": "converter",
+      "checked": "2026-10-30",
+      "exclusions": "Batteries, shipping and import duty not included. The page showed both \"Only 118 items in stock\" and \"Out of stock\".",
+      "specification": "Two 21700 slots, 5.1 V ±5% at up to 6 A, for Raspberry Pi 5.",
+      "limits": "Lists up to 95% efficiency and a 2.4 V over-discharge cutoff on v1.1. No battery overcurrent threshold is published.",
+      "listings": [
+        {
+          "seller": "Geekworm",
+          "price": 46.0,
+          "currency": "USD",
+          "url": "https://geekworm.com/products/x1205",
+          "tax": "Not stated",
+          "availability": "Contradictory on the page"
+        }
+      ]
+    },
+    "protection:2": {
+      "name": "Battery protection",
+      "slot": "protection",
+      "included_in": "Geekworm X1205 2-cell UPS HAT",
+      "note": "Included in the UPS board",
+      "specification": "The maker lists battery overcurrent, overvoltage and reverse-cell protection, with a 2.4 V over-discharge cutoff on v1.1. Not certified or independently tested here.",
       "listings": []
     }
   }
