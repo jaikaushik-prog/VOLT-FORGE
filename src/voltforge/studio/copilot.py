@@ -191,7 +191,7 @@ def apply_actions(graph,settings,actions,*,default_model=MODEL_KEYS[0],model_ban
             graph.clear();graph.update(template(kind,count));labels.append(f'Build {count} cells in '+{'series':'a chain for higher voltage','parallel':'parallel to share the load','mixed':'series-connected pairs'}[kind])
             for cell in graph['cells']: cell['model']=default_model
             settings['profile']=[dict(start_s=0.,end_s=settings['profile'][-1]['end_s'],current_A=3. if kind in ('series','blank') else 6. if kind=='mixed' else 12.)]
-            labels.append(f'Set the initial test load to {settings["profile"][0]["current_A"]:g} A')
+            if not any(x['op']=='set_load' for x in actions): labels.append(f'Set the initial test load to {settings["profile"][0]["current_A"]:g} A')
         elif op in ('set_charge','set_temperature'):
             ids=chosen(target,cells)
             field='charge_pct' if op=='set_charge' else 'temperature_C'
