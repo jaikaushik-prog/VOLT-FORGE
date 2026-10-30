@@ -1,0 +1,725 @@
+{
+  "label": "Post-hoc diagnostic. Written after seeing the frozen result, which stays primary. Nothing here changed the model.",
+  "cases": [
+    {
+      "case": "test28 cycler",
+      "cooling": "deployed",
+      "cooling_W_K": null,
+      "peak_rise_measured_K": 5.337615373657972,
+      "peak_rise_simulated_K": 8.396824112888957,
+      "voltage_rmse_mV": 180.38964910550055,
+      "by_time": {
+        "20%": {
+          "measured_K": 1.7638199241443724,
+          "simulated_K": 4.773223344911751
+        },
+        "40%": {
+          "measured_K": 2.223616197230064,
+          "simulated_K": 6.682307179025875
+        },
+        "60%": {
+          "measured_K": 2.466195583343506,
+          "simulated_K": 5.08289157530095
+        },
+        "80%": {
+          "measured_K": 3.004891982500342,
+          "simulated_K": 4.492931110203094
+        },
+        "100%": {
+          "measured_K": 4.166997909545898,
+          "simulated_K": 6.42689961061923
+        }
+      }
+    },
+    {
+      "case": "test28 cycler",
+      "cooling": "declared_low",
+      "cooling_W_K": 0.07636608544985142,
+      "peak_rise_measured_K": 5.337615373657972,
+      "peak_rise_simulated_K": 13.46917995169644,
+      "voltage_rmse_mV": 190.0995638323767,
+      "by_time": {
+        "20%": {
+          "measured_K": 1.7638199241443724,
+          "simulated_K": 6.46232782488476
+        },
+        "40%": {
+          "measured_K": 2.223616197230064,
+          "simulated_K": 10.757551350794714
+        },
+        "60%": {
+          "measured_K": 2.466195583343506,
+          "simulated_K": 9.69035443088437
+        },
+        "80%": {
+          "measured_K": 3.004891982500342,
+          "simulated_K": 8.175933582669906
+        },
+        "100%": {
+          "measured_K": 4.166997909545898,
+          "simulated_K": 10.597899051197164
+        }
+      }
+    },
+    {
+      "case": "test28 cycler",
+      "cooling": "declared_high",
+      "cooling_W_K": 0.18042153349476536,
+      "peak_rise_measured_K": 5.337615373657972,
+      "peak_rise_simulated_K": 7.388195949556803,
+      "voltage_rmse_mV": 178.54226519677212,
+      "by_time": {
+        "20%": {
+          "measured_K": 1.7638199241443724,
+          "simulated_K": 4.344207720569169
+        },
+        "40%": {
+          "measured_K": 2.223616197230064,
+          "simulated_K": 5.850459759666375
+        },
+        "60%": {
+          "measured_K": 2.466195583343506,
+          "simulated_K": 4.318978604450896
+        },
+        "80%": {
+          "measured_K": 3.004891982500342,
+          "simulated_K": 3.9364387252821453
+        },
+        "100%": {
+          "measured_K": 4.166997909545898,
+          "simulated_K": 5.675351767603841
+        }
+      }
+    },
+    {
+      "case": "test28 cycler",
+      "cooling": "no_cooling",
+      "cooling_W_K": 0.0,
+      "peak_rise_measured_K": 3.370457069052854,
+      "peak_rise_simulated_K": 30.378121133456574,
+      "voltage_rmse_mV": 137.8521257947392,
+      "by_time": {
+        "20%": {
+          "measured_K": 1.0092945098876953,
+          "simulated_K": 3.217429596570388
+        },
+        "40%": {
+          "measured_K": 1.5951555123055963,
+          "simulated_K": 7.07656250467238
+        },
+        "60%": {
+          "measured_K": 1.8137949044333865,
+          "simulated_K": 11.73068617409916
+        },
+        "80%": {
+          "measured_K": 2.026687311792375,
+          "simulated_K": 16.954209247789564
+        },
+        "100%": {
+          "measured_K": 2.173499584197998,
+          "simulated_K": 22.004876248840617
+        }
+      }
+    },
+    {
+      "case": "test28 Hall sum",
+      "cooling": "deployed",
+      "cooling_W_K": null,
+      "peak_rise_measured_K": 5.1098175048828125,
+      "peak_rise_simulated_K": 9.861311540249005,
+      "voltage_rmse_mV": 80.22345717323049,
+      "by_time": {
+        "20%": {
+          "measured_K": 1.7024149894714355,
+          "simulated_K": 5.787571219736256
+        },
+        "40%": {
+          "measured_K": 2.213351959275064,
+          "simulated_K": 7.749881629626038
+        },
+        "60%": {
+          "measured_K": 2.405421816444398,
+          "simulated_K": 5.661213268837185
+        },
+        "80%": {
+          "measured_K": 2.873118070807859,
+          "simulated_K": 6.199675105902331
+        },
+        "100%": {
+          "measured_K": 3.9197394922010638,
+          "simulated_K": 8.011742879934225
+        }
+      }
+    },
+    {
+      "case": "test28 Hall sum",
+      "cooling": "declared_low",
+      "cooling_W_K": 0.07636608544985142,
+      "peak_rise_measured_K": 4.908842086791992,
+      "peak_rise_simulated_K": 15.687781270503855,
+      "voltage_rmse_mV": 90.05968745269541,
+      "by_time": {
+        "20%": {
+          "measured_K": 1.6911911964416504,
+          "simulated_K": 7.765225077620986
+        },
+        "40%": {
+          "measured_K": 2.2318516285997987,
+          "simulated_K": 12.560285410351401
+        },
+        "60%": {
+          "measured_K": 2.375658483216257,
+          "simulated_K": 11.00603874378413
+        },
+        "80%": {
+          "measured_K": 2.7736005526568315,
+          "simulated_K": 10.620068994301963
+        },
+        "100%": {
+          "measured_K": 3.86446475982666,
+          "simulated_K": 13.102370304796652
+        }
+      }
+    },
+    {
+      "case": "test28 Hall sum",
+      "cooling": "declared_high",
+      "cooling_W_K": 0.18042153349476536,
+      "peak_rise_measured_K": 5.1098175048828125,
+      "peak_rise_simulated_K": 8.680871288607904,
+      "voltage_rmse_mV": 78.39797768625515,
+      "by_time": {
+        "20%": {
+          "measured_K": 1.7024149894714355,
+          "simulated_K": 5.260345079546987
+        },
+        "40%": {
+          "measured_K": 2.1924495697021484,
+          "simulated_K": 6.759093939201232
+        },
+        "60%": {
+          "measured_K": 2.4999895095825195,
+          "simulated_K": 4.8013225689491055
+        },
+        "80%": {
+          "measured_K": 2.8468198171736505,
+          "simulated_K": 5.470874562034163
+        },
+        "100%": {
+          "measured_K": 3.9868333664482227,
+          "simulated_K": 7.1081056671328255
+        }
+      }
+    },
+    {
+      "case": "test28 Hall sum",
+      "cooling": "no_cooling",
+      "cooling_W_K": 0.0,
+      "peak_rise_measured_K": 3.2631325147209402,
+      "peak_rise_simulated_K": 30.380948649859455,
+      "voltage_rmse_mV": 97.37732356780934,
+      "by_time": {
+        "20%": {
+          "measured_K": 0.8526947927756341,
+          "simulated_K": 3.144654963218067
+        },
+        "40%": {
+          "measured_K": 1.4405861570291334,
+          "simulated_K": 6.830973573522369
+        },
+        "60%": {
+          "measured_K": 1.7312777124158316,
+          "simulated_K": 11.100087638061357
+        },
+        "80%": {
+          "measured_K": 1.8825136858777345,
+          "simulated_K": 15.979225790483756
+        },
+        "100%": {
+          "measured_K": 1.9856093226790854,
+          "simulated_K": 20.97830223819802
+        }
+      }
+    },
+    {
+      "case": "warwick cell02 5A",
+      "cooling": "deployed",
+      "cooling_W_K": null,
+      "peak_rise_measured_K": 15.846199999999996,
+      "peak_rise_simulated_K": 9.254780377620634,
+      "voltage_rmse_mV": 93.45112922018113,
+      "by_time": {
+        "20%": {
+          "measured_K": 5.349899999999998,
+          "simulated_K": 5.46667295575876
+        },
+        "40%": {
+          "measured_K": 9.744900000000001,
+          "simulated_K": 9.165023587016456
+        },
+        "60%": {
+          "measured_K": 12.088999999999999,
+          "simulated_K": 6.032782755133461
+        },
+        "80%": {
+          "measured_K": 14.5047,
+          "simulated_K": 8.78177323578447
+        },
+        "100%": {
+          "measured_K": 15.846199999999996,
+          "simulated_K": 9.254780377620634
+        }
+      }
+    },
+    {
+      "case": "warwick cell02 5A",
+      "cooling": "declared_low",
+      "cooling_W_K": 0.07636608544985142,
+      "peak_rise_measured_K": 15.846199999999996,
+      "peak_rise_simulated_K": 15.601049432738876,
+      "voltage_rmse_mV": 87.09485190068604,
+      "by_time": {
+        "20%": {
+          "measured_K": 5.349899999999998,
+          "simulated_K": 7.008446678043363
+        },
+        "40%": {
+          "measured_K": 9.744900000000001,
+          "simulated_K": 14.715924127339726
+        },
+        "60%": {
+          "measured_K": 12.088999999999999,
+          "simulated_K": 11.65409812706681
+        },
+        "80%": {
+          "measured_K": 14.5047,
+          "simulated_K": 14.887990983409722
+        },
+        "100%": {
+          "measured_K": 15.846199999999996,
+          "simulated_K": 15.601049432738876
+        }
+      }
+    },
+    {
+      "case": "warwick cell02 5A",
+      "cooling": "declared_high",
+      "cooling_W_K": 0.18042153349476536,
+      "peak_rise_measured_K": 15.846199999999996,
+      "peak_rise_simulated_K": 8.178911582363916,
+      "voltage_rmse_mV": 97.5241084748613,
+      "by_time": {
+        "20%": {
+          "measured_K": 5.349899999999998,
+          "simulated_K": 5.038925184049873
+        },
+        "40%": {
+          "measured_K": 9.744900000000001,
+          "simulated_K": 7.993865345821078
+        },
+        "60%": {
+          "measured_K": 12.088999999999999,
+          "simulated_K": 5.155318563812209
+        },
+        "80%": {
+          "measured_K": 14.5047,
+          "simulated_K": 7.722692372435915
+        },
+        "100%": {
+          "measured_K": 15.846199999999996,
+          "simulated_K": 8.178911582363916
+        }
+      }
+    },
+    {
+      "case": "warwick cell02 5A",
+      "cooling": "no_cooling",
+      "cooling_W_K": 0.0,
+      "peak_rise_measured_K": 9.370599999999996,
+      "peak_rise_simulated_K": 27.630950481268115,
+      "voltage_rmse_mV": 20.49888546250286,
+      "by_time": {
+        "20%": {
+          "measured_K": 0.5336999999999996,
+          "simulated_K": 0.7821149292301435
+        },
+        "40%": {
+          "measured_K": 3.689499999999999,
+          "simulated_K": 5.653691829226624
+        },
+        "60%": {
+          "measured_K": 6.163800000000002,
+          "simulated_K": 11.871173411525604
+        },
+        "80%": {
+          "measured_K": 7.8566999999999965,
+          "simulated_K": 19.648223717044935
+        },
+        "100%": {
+          "measured_K": 9.370599999999996,
+          "simulated_K": 27.630950481268115
+        }
+      }
+    },
+    {
+      "case": "warwick cell03 5A",
+      "cooling": "deployed",
+      "cooling_W_K": null,
+      "peak_rise_measured_K": 14.694899999999997,
+      "peak_rise_simulated_K": 9.76342624689893,
+      "voltage_rmse_mV": 97.69144881425035,
+      "by_time": {
+        "20%": {
+          "measured_K": 4.9636,
+          "simulated_K": 5.878131635387845
+        },
+        "40%": {
+          "measured_K": 8.912799999999997,
+          "simulated_K": 9.668071621998692
+        },
+        "60%": {
+          "measured_K": 11.025599999999997,
+          "simulated_K": 6.539211252821367
+        },
+        "80%": {
+          "measured_K": 13.2196,
+          "simulated_K": 9.289119115499673
+        },
+        "100%": {
+          "measured_K": 14.694899999999997,
+          "simulated_K": 9.76342624689893
+        }
+      }
+    },
+    {
+      "case": "warwick cell03 5A",
+      "cooling": "declared_low",
+      "cooling_W_K": 0.07636608544985142,
+      "peak_rise_measured_K": 14.694899999999997,
+      "peak_rise_simulated_K": 16.108425851919513,
+      "voltage_rmse_mV": 91.004653350296,
+      "by_time": {
+        "20%": {
+          "measured_K": 4.9636,
+          "simulated_K": 7.307350352780496
+        },
+        "40%": {
+          "measured_K": 8.912799999999997,
+          "simulated_K": 15.177753295994947
+        },
+        "60%": {
+          "measured_K": 11.025599999999997,
+          "simulated_K": 12.151332871015384
+        },
+        "80%": {
+          "measured_K": 13.2196,
+          "simulated_K": 15.393347085980054
+        },
+        "100%": {
+          "measured_K": 14.694899999999997,
+          "simulated_K": 16.108425851919513
+        }
+      }
+    },
+    {
+      "case": "warwick cell03 5A",
+      "cooling": "declared_high",
+      "cooling_W_K": 0.18042153349476536,
+      "peak_rise_measured_K": 14.694899999999997,
+      "peak_rise_simulated_K": 8.688102676890509,
+      "voltage_rmse_mV": 101.87825011177405,
+      "by_time": {
+        "20%": {
+          "measured_K": 4.9636,
+          "simulated_K": 5.474070683555986
+        },
+        "40%": {
+          "measured_K": 8.912799999999997,
+          "simulated_K": 8.499922923034859
+        },
+        "60%": {
+          "measured_K": 11.025599999999997,
+          "simulated_K": 5.66162799959444
+        },
+        "80%": {
+          "measured_K": 13.2196,
+          "simulated_K": 8.230087307555955
+        },
+        "100%": {
+          "measured_K": 14.694899999999997,
+          "simulated_K": 8.688102676890509
+        }
+      }
+    },
+    {
+      "case": "warwick cell03 5A",
+      "cooling": "no_cooling",
+      "cooling_W_K": 0.0,
+      "peak_rise_measured_K": 8.6203,
+      "peak_rise_simulated_K": 28.356705553982543,
+      "voltage_rmse_mV": 16.7792379781549,
+      "by_time": {
+        "20%": {
+          "measured_K": 0.48300000000000054,
+          "simulated_K": 0.7903749639100468
+        },
+        "40%": {
+          "measured_K": 3.380399999999998,
+          "simulated_K": 5.6862044958106495
+        },
+        "60%": {
+          "measured_K": 5.792499999999997,
+          "simulated_K": 12.611245121948144
+        },
+        "80%": {
+          "measured_K": 7.190100000000001,
+          "simulated_K": 20.433502603049334
+        },
+        "100%": {
+          "measured_K": 8.6203,
+          "simulated_K": 28.356705553982543
+        }
+      }
+    },
+    {
+      "case": "warwick cell04 5A",
+      "cooling": "deployed",
+      "cooling_W_K": null,
+      "peak_rise_measured_K": 18.1722,
+      "peak_rise_simulated_K": 9.649944192082163,
+      "voltage_rmse_mV": 98.71136544535125,
+      "by_time": {
+        "20%": {
+          "measured_K": 5.850300000000001,
+          "simulated_K": 5.794301013753294
+        },
+        "40%": {
+          "measured_K": 10.944999999999997,
+          "simulated_K": 9.55373150877713
+        },
+        "60%": {
+          "measured_K": 13.8625,
+          "simulated_K": 6.428337069374894
+        },
+        "80%": {
+          "measured_K": 16.682199999999998,
+          "simulated_K": 9.175823279340033
+        },
+        "100%": {
+          "measured_K": 18.1722,
+          "simulated_K": 9.649944192082163
+        }
+      }
+    },
+    {
+      "case": "warwick cell04 5A",
+      "cooling": "declared_low",
+      "cooling_W_K": 0.07636608544985142,
+      "peak_rise_measured_K": 18.1722,
+      "peak_rise_simulated_K": 15.997170883700381,
+      "voltage_rmse_mV": 91.9422967174689,
+      "by_time": {
+        "20%": {
+          "measured_K": 5.850300000000001,
+          "simulated_K": 7.255615018230802
+        },
+        "40%": {
+          "measured_K": 10.944999999999997,
+          "simulated_K": 15.078677311473054
+        },
+        "60%": {
+          "measured_K": 13.8625,
+          "simulated_K": 12.042095935001331
+        },
+        "80%": {
+          "measured_K": 16.682199999999998,
+          "simulated_K": 15.280987730661618
+        },
+        "100%": {
+          "measured_K": 18.1722,
+          "simulated_K": 15.997170883700381
+        }
+      }
+    },
+    {
+      "case": "warwick cell04 5A",
+      "cooling": "declared_high",
+      "cooling_W_K": 0.18042153349476536,
+      "peak_rise_measured_K": 18.1722,
+      "peak_rise_simulated_K": 8.580055183558432,
+      "voltage_rmse_mV": 103.17731659480894,
+      "by_time": {
+        "20%": {
+          "measured_K": 5.850300000000001,
+          "simulated_K": 5.383287591047942
+        },
+        "40%": {
+          "measured_K": 10.944999999999997,
+          "simulated_K": 8.383910655673862
+        },
+        "60%": {
+          "measured_K": 13.8625,
+          "simulated_K": 5.550773749750039
+        },
+        "80%": {
+          "measured_K": 16.682199999999998,
+          "simulated_K": 8.117984540005555
+        },
+        "100%": {
+          "measured_K": 18.1722,
+          "simulated_K": 8.580055183558432
+        }
+      }
+    },
+    {
+      "case": "warwick cell04 5A",
+      "cooling": "no_cooling",
+      "cooling_W_K": 0.0,
+      "peak_rise_measured_K": 10.716399999999997,
+      "peak_rise_simulated_K": 28.363022339130378,
+      "voltage_rmse_mV": 17.06621899031309,
+      "by_time": {
+        "20%": {
+          "measured_K": 0.5018999999999991,
+          "simulated_K": 0.80317826720729
+        },
+        "40%": {
+          "measured_K": 3.9396999999999984,
+          "simulated_K": 5.702786210069181
+        },
+        "60%": {
+          "measured_K": 6.879000000000001,
+          "simulated_K": 12.630603447706964
+        },
+        "80%": {
+          "measured_K": 8.756899999999998,
+          "simulated_K": 20.447029641311584
+        },
+        "100%": {
+          "measured_K": 10.716399999999997,
+          "simulated_K": 28.363022339130378
+        }
+      }
+    },
+    {
+      "case": "warwick cell02 2.5A",
+      "cooling": "deployed",
+      "cooling_W_K": null,
+      "peak_rise_measured_K": 6.472999999999999,
+      "peak_rise_simulated_K": 2.89865003734743,
+      "voltage_rmse_mV": 67.98982818324008,
+      "by_time": {
+        "20%": {
+          "measured_K": 2.485199999999999,
+          "simulated_K": 1.9766818712137457
+        },
+        "40%": {
+          "measured_K": 3.217399999999998,
+          "simulated_K": 2.609041729773761
+        },
+        "60%": {
+          "measured_K": 3.4452999999999996,
+          "simulated_K": 0.5662725925092502
+        },
+        "80%": {
+          "measured_K": 4.5685,
+          "simulated_K": 2.329841195429861
+        },
+        "100%": {
+          "measured_K": 6.472999999999999,
+          "simulated_K": 2.363691089562476
+        }
+      }
+    },
+    {
+      "case": "warwick cell02 2.5A",
+      "cooling": "declared_low",
+      "cooling_W_K": 0.07636608544985142,
+      "peak_rise_measured_K": 6.472999999999999,
+      "peak_rise_simulated_K": 5.055789787560929,
+      "voltage_rmse_mV": 56.545607942466724,
+      "by_time": {
+        "20%": {
+          "measured_K": 2.485199999999999,
+          "simulated_K": 3.0434321960313113
+        },
+        "40%": {
+          "measured_K": 3.217399999999998,
+          "simulated_K": 4.9844198841101885
+        },
+        "60%": {
+          "measured_K": 3.4452999999999996,
+          "simulated_K": 1.8210811075761484
+        },
+        "80%": {
+          "measured_K": 4.5685,
+          "simulated_K": 3.8168959935603937
+        },
+        "100%": {
+          "measured_K": 6.472999999999999,
+          "simulated_K": 4.066604558429766
+        }
+      }
+    },
+    {
+      "case": "warwick cell02 2.5A",
+      "cooling": "declared_high",
+      "cooling_W_K": 0.18042153349476536,
+      "peak_rise_measured_K": 6.472999999999999,
+      "peak_rise_simulated_K": 2.503072300744936,
+      "voltage_rmse_mV": 70.02505032564478,
+      "by_time": {
+        "20%": {
+          "measured_K": 2.485199999999999,
+          "simulated_K": 1.7442433309803071
+        },
+        "40%": {
+          "measured_K": 3.217399999999998,
+          "simulated_K": 2.20111258547524
+        },
+        "60%": {
+          "measured_K": 3.4452999999999996,
+          "simulated_K": 0.4357950359435634
+        },
+        "80%": {
+          "measured_K": 4.5685,
+          "simulated_K": 2.0428798002510327
+        },
+        "100%": {
+          "measured_K": 6.472999999999999,
+          "simulated_K": 2.0639622590240165
+        }
+      }
+    },
+    {
+      "case": "warwick cell02 2.5A",
+      "cooling": "no_cooling",
+      "cooling_W_K": 0.0,
+      "peak_rise_measured_K": 6.472999999999999,
+      "peak_rise_simulated_K": 26.731086127854063,
+      "voltage_rmse_mV": 23.849664479591848,
+      "by_time": {
+        "20%": {
+          "measured_K": 2.485199999999999,
+          "simulated_K": 5.636502224605543
+        },
+        "40%": {
+          "measured_K": 3.217399999999998,
+          "simulated_K": 15.819491940979013
+        },
+        "60%": {
+          "measured_K": 3.4452999999999996,
+          "simulated_K": 18.430610784234958
+        },
+        "80%": {
+          "measured_K": 4.5685,
+          "simulated_K": 23.3419086228943
+        },
+        "100%": {
+          "measured_K": 6.472999999999999,
+          "simulated_K": 26.731086127854063
+        }
+      }
+    }
+  ]
+}
