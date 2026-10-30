@@ -5,7 +5,7 @@ import argparse
 import json
 import sys
 
-from PIL import Image
+from PIL import Image, ImageFont
 from pptx import Presentation
 from pptx.chart.data import CategoryChartData
 from pptx.dml.color import RGBColor
@@ -15,10 +15,14 @@ from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
 from pptx.oxml.ns import qn
 from pptx.util import Pt
 
-BLUE, DEEP, TINT, INK, MUTED, LINE = '00A7E1', '3C90CE', 'F0F6FB', '231F20', '5B6673', 'D5E3EE'
-ORANGE, ORANGE_TINT, GREEN, WHITE = 'E2571E', 'FFF3EC', '12805C', 'FFFFFF'
-BIG, BODY, NOTE = 19, 9, 6.5
+# Sampled from the template: Teliport 00A0E0, Tata Elxsi 3880C0. NAVY is a darker
+# shade of that blue so white labels stay readable. Orange marks diagnosis only.
+BLUE, DEEP, NAVY, TINT, INK, MUTED, LINE = '00A0E0', '3880C0', '1B5E96', 'EAF4FB', '231F20', '56616E', 'C9D8E4'
+ORANGE, WHITE = 'D9480F', 'FFFFFF'
+BIG, BODY, NOTE = 23, 10, 7.5
 rgb = RGBColor.from_string
+FONT_DIR = Path('/opt/homebrew/share/fonts')
+REGULAR_FONT, BOLD_FONT = '', ''
 
 
 def text(slide, x, y, w, h, runs, size=BODY, color=INK, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP, bold=False, name=None, spacing=None):
@@ -34,7 +38,7 @@ def text(slide, x, y, w, h, runs, size=BODY, color=INK, align=PP_ALIGN.LEFT, anc
         for content, style in pieces:
             r = p.add_run(); r.text = content; r.font.size = Pt(size); r.font.name = 'Calibri'
             r.font.bold = 'b' in style or '#' in style
-            r.font.color.rgb = rgb(BLUE if '#' in style and color != WHITE else ORANGE if 'o' in style else GREEN if 'g' in style else color)
+            r.font.color.rgb = rgb(NAVY if '#' in style and color != WHITE else ORANGE if 'o' in style else color)
     return box
 
 
@@ -49,12 +53,22 @@ def box(slide, x, y, w, h, fill=None, line=None, radius=.08, name=None):
     return s
 
 
-def heading(slide, x, y, w, label):
-    text(slide, x, y, w, 12, label, size=BODY+1, bold=True, name='Section: '+label)
-    rule = slide.shapes.add_connector(1, Pt(x), Pt(y+13.5), Pt(x+w), Pt(y+13.5)); rule.line.color.rgb = rgb(BLUE); rule.line.width = Pt(1)
+def width_of(words, size, bold=False):
+    """Text width in points, so a rule can match its text exactly."""
+    return ImageFont.truetype(BOLD_FONT if bold else REGULAR_FONT, 100).getlength(words)*size/100
 
 
-def cell_set(cell, value, size=BODY-1, bold=False, color=INK, fill=None, align=PP_ALIGN.CENTER):
+def rule(slide, x, y, w, color=BLUE, weight=1):
+    line = slide.shapes.add_connector(1, Pt(x), Pt(y), Pt(x+w), Pt(y)); line.line.color.rgb = rgb(color); line.line.width = Pt(weight)
+    return line
+
+
+def heading(slide, x, y, w, label, color=INK, line=BLUE):
+    text(slide, x, y, w, 13, label, size=BODY+1, bold=True, color=color, name='Section: '+label)
+    rule(slide, x, y+14, min(w, width_of(label, BODY+1, True)), line)
+
+
+def cell_set(cell, value, size=BODY, bold=False, color=INK, fill=None, align=PP_ALIGN.CENTER):
     cell.margin_left = cell.margin_right = Pt(2.5); cell.margin_top = cell.margin_bottom = Pt(1.2); cell.vertical_anchor = MSO_ANCHOR.MIDDLE
     frame = cell.text_frame; p = frame.paragraphs[0]; p.alignment = align
     r = p.add_run(); r.text = str(value); r.font.size = Pt(size); r.font.bold = bold; r.font.name = 'Calibri'; r.font.color.rgb = rgb(color)
@@ -92,15 +106,18 @@ def inr(value): return f'₹{value:,.0f}'
 
 
 def main():
+    global REGULAR_FONT, BOLD_FONT
     parser = argparse.ArgumentParser()
     parser.add_argument('--data', type=Path, required=True)
     parser.add_argument('--template', type=Path, required=True)
     parser.add_argument('--canvas', type=Path, required=True)
     parser.add_argument('--out', type=Path, required=True)
+    parser.add_argument('--font', required=True, help='Regular metric-compatible Calibri font, for measuring rules')
+    parser.add_argument('--font-bold', required=True)
     args = parser.parse_args()
+    REGULAR_FONT, BOLD_FONT = args.font, args.font_bold
     d = json.loads(args.data.read_text()); prs = Presentation(args.template)
-    best, four, save = d['best'], d['four'], d['saving']; rec = d['study']['recommended']
-    n = best['count']; base2 = next(r for r in d['table'] if r['cells'] == n)
+    best, four, save = d['best'], d['four'], d['saving']; rec = d['study']['recommended']; n = best['count']
     cover, s = prs.slides[0], prs.slides[1]
     for shape in cover.shapes:
         if shape.has_text_frame and 'Case Study No' in shape.text_frame.text:
@@ -108,99 +125,99 @@ def main():
             for extra in shape.text_frame.paragraphs[0].runs[1:]: extra.text = ''
     for shape in list(s.placeholders):
         if shape.placeholder_format.idx != 0: shape._element.getparent().remove(shape._element)
-    title = s.shapes.title; title.left, title.top, title.width, title.height = Pt(192), Pt(4), Pt(690), Pt(29)
+
+    # Claim as the title, with a rule exactly as wide as the qualifier.
+    title = s.shapes.title; title.left, title.top, title.width, title.height = Pt(190), Pt(5), Pt(692), Pt(28)
     frame = title.text_frame; frame.word_wrap = True; frame.margin_left = frame.margin_right = frame.margin_top = frame.margin_bottom = 0; frame.vertical_anchor = MSO_ANCHOR.MIDDLE
-    p = frame.paragraphs[0]; p.alignment = PP_ALIGN.CENTER
-    for content, accent in (('VOLT-FORGE found a Raspberry Pi 5 backup passes on ', False), (f'{n} cells, not 4', True)):
+    p = frame.paragraphs[0]; p.alignment = PP_ALIGN.LEFT
+    for content, accent in (('A Raspberry Pi 5 backup passes on ', False), (f'{n} cells, not 4', True)):
         r = p.add_run(); r.text = content; r.font.size = Pt(BIG); r.font.bold = True; r.font.name = 'Calibri'; r.font.color.rgb = rgb(BLUE if accent else INK)
-    text(s, 192, 34, 690, 13, 'A virtual platform that helps students and engineers design, test, compare and improve battery systems before buying parts', size=BODY+.5, color=MUTED, align=PP_ALIGN.CENTER, name='Qualifier')
+    qualifier = 'VOLT-FORGE lets students and engineers test a battery design before buying parts'
+    text(s, 190, 34, 692, 13, qualifier, size=BODY+1, color=MUTED, name='Qualifier')
+    rule(s, 190, 49, width_of(qualifier, BODY+1), BLUE, 1.25)
 
-    # Headline numbers.
-    x0, gap, w = 14, 7, (932-4*7)/5
-    tiles = [(f'{n} cells', 'smallest qualifying design tested, from 4'), (inr(save['cost_inr']), f"less on cells: {inr(save['cost_from'])} to {inr(save['cost_to'])}"),
-             (f"{save['mass_g']:.0f} g", f"less cell mass: {save['mass_from']:.0f} g to {save['mass_to']:.0f} g"), (f"{d['study']['cases']:,}", 'simulated cases behind the result'),
-             (f"{d['replay']['passed']} of {d['replay']['cases']}", 'exports replay exactly; tampering refused')]
-    for i, (big, small) in enumerate(tiles):
-        x = x0+i*(w+gap); box(s, x, 59, w, 45, fill=BLUE, radius=.12, name='Tile: '+big)
-        text(s, x+4, 61, w-8, 24, big, size=BIG, color=WHITE, bold=True, align=PP_ALIGN.CENTER)
-        text(s, x+4, 86, w-8, 14, small, size=BODY-.5, color=WHITE, align=PP_ALIGN.CENTER)
+    # The story: solid nodes are labels, outlined cards are detail.
+    left, total, gap = 14, 932, 8
+    node_w = (total-4*gap)/5; d_ = 44; node_y = 56; card_y = node_y+d_+7; card_h = 50
+    stages = [('Define', [('Keep a Pi 5 gateway alive through a power cut: ', ''), ('10 minutes', 'b'), (' at ', ''), ('25 W', 'b')]),
+              ('Build', [('Wire real cells', 'b'), (' on a canvas, with the load shown on the design', '')]),
+              ('Test', [('Circuit and heat solved ', ''), ('in seconds', 'b'), (', with cell limits enforced', '')]),
+              ('Improve', [('Find the smallest design', 'b'), (' rebuilds and tests 1 to 4 cells', '')]),
+              ('Decide', [('Compare ', ''), ('cost, mass and margin', 'b'), (', then stress the winner', '')])]
+    line = rule(s, left+node_w/2, node_y+d_/2, 4*(node_w+gap), DEEP, 1.5); line.name = 'Chain'
+    for i, (label, runs) in enumerate(stages):
+        x = left+i*(node_w+gap); cx = x+node_w/2
+        stub = s.shapes.add_connector(1, Pt(cx), Pt(node_y+d_), Pt(cx), Pt(card_y)); stub.line.color.rgb = rgb(DEEP); stub.line.width = Pt(1.5)
+        c = s.shapes.add_shape(MSO_SHAPE.OVAL, Pt(cx-d_/2), Pt(node_y), Pt(d_), Pt(d_)); c.fill.solid(); c.fill.fore_color.rgb = rgb(NAVY); c.line.fill.background(); c.shadow.inherit = False; c.name = 'Node: '+label
+        text(s, cx-d_/2-8, node_y, d_+16, d_, label, size=BODY, color=WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+        box(s, x, card_y, node_w, card_h, line=NAVY, radius=.1, name='Card: '+label)
+        text(s, x+7, card_y, node_w-14, card_h, [runs], align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
 
-    cols = [14, 14+(932-20)/3+10, 14+2*((932-20)/3+10)]; cw = (932-20)/3
-    top, mid = 110, 303
+    # Hero row: the real product beside the result.
+    row2 = card_y+card_h+9; panel = 340; rx = left+panel+14; rw = total-panel-14
+    heading(s, left, row2, panel, f"The starting design: {d['board']['name'].split(' UPS')[0]}, four 21700 slots")
+    pic_h = panel*(BOX[3]-BOX[1])/(BOX[2]-BOX[0])
+    picture = s.shapes.add_picture(str(args.canvas), Pt(left), Pt(row2+17), Pt(panel), Pt(pic_h)); picture.name = 'Product screenshot'
+    chips = [('25 W', 'supply · sourced'), ('90%', 'converter · assumed'), ('8.42 A', '· calculated'), ('10 min', '· assumed'), ('3.3 V', 'floor · assumed'), ('23 °C', 'room · assumed')]
+    chip_w = panel/3
+    for i, (value, note) in enumerate(chips):
+        x = left+(i % 3)*chip_w; y = row2+18+pic_h+4+(i//3)*13
+        text(s, x, y, chip_w, 12, [[(value+' ', 'b'), (note, '')]], name='Requirement: '+value)
 
-    # 1. The job.
-    heading(s, cols[0], top, cw, '1  The job: keep a Pi 5 gateway alive in a power cut')
-    chip = lambda t: (t, BLUE if t == 'sourced' else ORANGE if t == 'assumed' else MUTED)
-    table(s, cols[0], top+17, cw, 13.2, [['Requirement', 'Value', 'Basis'], ['Pi supply power', '25 W', chip('sourced')], ['Converter efficiency', '90%', chip('assumed')],
-          ['Battery current at the floor', '8.42 A', chip('calculated')], ['Run time', '10 min', chip('assumed')], ['Lowest battery voltage', '3.3 V', chip('assumed')],
-          ['Room temperature', '23 °C', chip('assumed')]], [5, 2, 2], name='Requirements')
-    text(s, cols[0], top+113, cw, 60, [[('Why it is hard: ', 'b'), ('more cells cost more and weigh more, too few hit current limits, and ', ''), ('uneven sharing stresses some cells', 'b'), ('.', '')],
-         [('Real part: ', 'b'), (f"the {d['board']['name']} (US${d['board']['usd']:.0f}) holds ", ''), ('four 21700 cells', 'b'), (', so 4 cells is the starting design.', '')]], spacing=2, name='Challenge')
-
-    # 2. Build and test.
-    heading(s, cols[1], top, cw, '2  Build it, test it, read the verdict')
-    pic_w = cw; pic_h = pic_w*(BOX[3]-BOX[1])/(BOX[2]-BOX[0])
-    picture = s.shapes.add_picture(str(args.canvas), Pt(cols[1]), Pt(top+17), Pt(pic_w), Pt(pic_h)); picture.name = 'Product screenshot'
-    picture.line.color.rgb = rgb(LINE); picture.line.width = Pt(.75)
-    text(s, cols[1], top+21+pic_h, cw, 26, [[('Wire real cells', 'b'), (' on the canvas, pick a load, run. ', ''), ('Find the smallest design', '#'), (' then rebuilds and tests 1 to 4 cells by itself.', '')]], name='Workflow')
-
-    # 3. What the tool found.
-    heading(s, cols[2], top, cw, '3  What the tool found')
-    rows = [['Cells', 'Verdict', 'Lowest V', 'Peak A', 'Warmest', 'Cells cost', 'Mass']]
+    heading(s, rx, row2, rw, 'What the tool found')
+    stat_w = rw/4
+    stats = [(f'{n} cells', 'smallest qualifying, from 4'), (inr(save['cost_inr']), f"less on cells, {inr(save['cost_from'])} to {inr(save['cost_to'])}"),
+             (f"{save['mass_g']:.0f} g", f"less cell mass, {save['mass_from']:.0f} to {save['mass_to']:.0f} g"), (f"{best['required_passed']} of {best['required_cases']}", 'required Pi cases passed')]
+    for i, (big, small) in enumerate(stats):
+        x = rx+i*stat_w
+        text(s, x, row2+17, stat_w-6, 28, big, size=BIG, color=NAVY, bold=True, name='Stat: '+big)
+        text(s, x, row2+45, stat_w-4, 12, small, color=MUTED)
+    rows = [['Cells', 'Verdict', 'Lowest V', 'Peak cell A', 'Warmest', 'Worst-case A', 'Worst-case °C', 'Cell cost', 'Cell mass']]
     for r in d['table']:
-        ok = r['qualifies']; refused = r['outcome'] == 'refused'
-        rows.append([r['cells'], ('Refused', ORANGE) if refused else ('Qualifies', GREEN) if ok else ('Fails', ORANGE), '—' if refused else f"{r['voltage']:.2f}", '—' if refused else f"{r['current']:.2f}",
-                     '—' if refused else f"{r['temperature']:.1f} °C", inr(r['cost_inr']), f"{r['mass_g']:.0f} g"])
-    table(s, cols[2], top+17, cw, 15, rows, [1.1, 2, 1.6, 1.4, 1.7, 1.8, 1.3], highlight=n, first_left=False, name='Trade-offs')
-    effects = d['study']['option_effects'].get(f"{n}_{rec['option']}_pi", {})
-    text(s, cols[2], top+97, cw, 76, [[(f"{n} cells passed all {best['required_cases']} required Pi cases", 'b'), (f": every position mismatched, cooling, heat and converter sensitivities. Worst case {best['worst_required']['highest_cell_current_A']:.2f} A against a 7.275 A limit, and {best['worst_required']['highest_temperature_C']:.1f} °C.", '')],
-         [('One cell is refused', 'b'), (' because it would exceed that limit. Comparing with V3 links: ', ''), (OPTION[rec['option']], 'b'), (f" trims nominal peak current to {best['nominal']['peak_cell_current_A']:.2f} A.", '')]], spacing=2, name='Finding')
+        refused = r['outcome'] == 'refused'
+        rows.append([r['cells'], ('Refused', ORANGE) if refused else ('Qualifies', NAVY) if r['qualifies'] else ('Fails', ORANGE)]+(['—']*5 if refused else [f"{r['voltage']:.2f}", f"{r['current']:.2f}", f"{r['temperature']:.1f}", f"{r['worst_current']:.2f}", f"{r['worst_temperature']:.1f}"])+[inr(r['cost_inr']), f"{r['mass_g']:.0f} g"])
+    table(s, rx, row2+61, rw, 16.5, rows, [.7, 1.2, 1, 1.2, 1, 1.3, 1.4, 1.1, 1.1], highlight=n, first_left=False, name='Trade-offs')
 
-    # 4. Proof.
-    heading(s, cols[0], mid, cw, '4  Proof: how far to trust it')
-    chart = CategoryChartData(); chart.categories = [p_['name'] for p_ in d['proof']]
-    for label, key in (('Measured', 'measured'), ('Sim, low cooling', 'low'), ('Sim, default', 'default'), ('Sim, high cooling', 'high')):
-        chart.add_series(label, [round(p_[key], 1) for p_ in d['proof']])
-    frame = s.shapes.add_chart(XL_CHART_TYPE.COLUMN_CLUSTERED, Pt(cols[0]), Pt(mid+16), Pt(cw*.62), Pt(100), chart); frame.name = 'Peak temperature rise, measured and simulated'
-    c = frame.chart; c.has_legend = True; c.legend.position = XL_LEGEND_POSITION.BOTTOM; c.legend.include_in_layout = False; c.legend.font.size = Pt(NOTE); c.font.size = Pt(NOTE+.5); c.font.name = 'Calibri'
-    c.has_title = True; c.chart_title.text_frame.text = 'Peak temperature rise (K)'; c.chart_title.text_frame.paragraphs[0].runs[0].font.size = Pt(NOTE+1); c.chart_title.text_frame.paragraphs[0].runs[0].font.bold = True
-    axis = c.value_axis; axis.visible = False; axis.has_major_gridlines = False; c.category_axis.format.line.color.rgb = rgb(LINE)
-    plot = c.plots[0]; plot.gap_width = 45; plot.overlap = -5; plot.has_data_labels = True; plot.data_labels.font.size = Pt(NOTE); plot.data_labels.position = XL_LABEL_POSITION.OUTSIDE_END; plot.data_labels.number_format = '0.0'; plot.data_labels.number_format_is_linked = False
-    for series, color in zip(plot.series, (INK, 'A8DDF2', BLUE, DEEP)):
+    # Three supports.
+    row3 = row2+61+16.5*5+12; third = (total-2*14)/3; xs = [left, left+third+14, left+2*(third+14)]
+    heading(s, xs[0], row3, third, 'How far to trust it')
+    chart = CategoryChartData(); chart.categories = [p_['name'] for p_ in reversed(d['proof'])]
+    for label, key in (('Simulated, low cooling', 'low'), ('Simulated, default', 'default'), ('Measured', 'measured')):
+        chart.add_series(label, [round(p_[key], 1) for p_ in reversed(d['proof'])])
+    frame = s.shapes.add_chart(XL_CHART_TYPE.BAR_CLUSTERED, Pt(xs[0]-3), Pt(row3+17), Pt(third*.62), Pt(106), chart); frame.name = 'Peak temperature rise in K, measured and simulated'
+    c = frame.chart; c.has_title = False; c.has_legend = True; c.legend.position = XL_LEGEND_POSITION.BOTTOM; c.legend.include_in_layout = False; c.legend.font.size = Pt(NOTE-.5); c.font.size = Pt(NOTE); c.font.name = 'Calibri'
+    c.value_axis.visible = False; c.value_axis.has_major_gridlines = False; c.value_axis.minimum_scale = 0; c.category_axis.format.line.color.rgb = rgb(LINE)
+    plot = c.plots[0]; plot.gap_width = 40; plot.overlap = 0; plot.has_data_labels = True; plot.data_labels.font.size = Pt(NOTE); plot.data_labels.position = XL_LABEL_POSITION.OUTSIDE_END; plot.data_labels.number_format = '0.0'; plot.data_labels.number_format_is_linked = False
+    for series, color in zip(plot.series, ('A9D8F0', BLUE, INK)):
         series.format.fill.solid(); series.format.fill.fore_color.rgb = rgb(color)
-    tx = cols[0]+cw*.64; tw = cw*.36
-    text(s, tx, mid+17, tw, 100, [[(f"{d['pybamm']['passed']} of {d['pybamm']['cases']}", 'b'), (' PyBaMM voltage and heat checks passed.', '')], [('First-law check', 'b'), (' now ties electrical loss to heat, and fails on the V3 formula.', '')],
-         [('Real data missed', 'b'), (f": all {d['proof_cases']} pre-declared cases fell outside their bands.", '')]], size=BODY-.5, spacing=2, name='Verification')
-    text(s, cols[0], mid+118, cw, 24, [[('Heat tracks the single cell only at low cooling; the rig ran cooler. ', ''), ('So temperatures are a range, not a prediction.', 'b')]], name='Proof reading')
+    text(s, xs[0]+third*.62+2, row3+19, third*.38-2, 104, [[('Peak rise in K. ', 'b'), (f"All {d['proof_cases']} pre-set real-data cases ", ''), ('missed their bands', 'b'), (', so temperatures are a range.', '')],
+         [(f"PyBaMM {d['pybamm']['passed']} of {d['pybamm']['cases']}", 'b'), (' on voltage and heat. Energy balance closes.', '')]], spacing=2, name='Verification')
 
-    # 5. Value.
-    heading(s, cols[1], mid, cw, '5  Value: test before you buy')
-    m = d['market']; steps = [(lakh(m['tam_students']), 'TAM: engineering students in India'), (lakh(m['sam_students']), 'SAM: electrical, electronics, mechanical'), (f"{m['som_colleges']:.0f} colleges", f"SOM: 5% of {m['colleges']:,}, assumed")]
-    for i, (big, small) in enumerate(steps):
-        y = mid+17+i*21.5; inset = i*13; box(s, cols[1]+inset, y, cw*.60-2*inset, 19.5, fill=BLUE if i == 2 else DEEP if i == 1 else TINT, radius=.15, name='Funnel: '+big)
-        text(s, cols[1]+inset, y, cw*.60-2*inset, 19.5, big, size=BODY+1, bold=True, color=WHITE if i else INK, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-        text(s, cols[1]+cw*.62, y+1, cw*.38, 19, small, size=BODY-1, color=MUTED, anchor=MSO_ANCHOR.MIDDLE)
-    text(s, cols[1], mid+84, cw, 58, [[('Free for students, paid for teams and labs. ', 'b'), (f"At an assumed {inr(m['licence_inr'])} a lab, SOM is about ₹{m['som_inr']/1e5:.0f} lakh a year. Hypothesis, untested.", '')],
-         [('Works with any cell', 'b'), (' through custom imports. A test runs in ', ''), ('seconds', 'b'), (f". The saving above is cell purchase only, not a whole unit.", '')]], spacing=2, name='Business')
+    heading(s, xs[1], row3, third, 'Who it is for, and what it is worth')
+    m = d['market']; steps = [('TAM', lakh(m['tam_students']), 'engineering students in India'), ('SAM', lakh(m['sam_students']), 'electrical, electronics, mechanical'), ('SOM', f"{m['som_colleges']:.0f} colleges", f"5% of {m['colleges']:,}, assumed")]
+    for i, (tag, big, small) in enumerate(steps):
+        y = row3+20+i*20; box(s, xs[1], y, 34, 17, fill=NAVY, radius=.3, name='Label: '+tag)
+        text(s, xs[1], y, 34, 17, tag, color=WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+        text(s, xs[1]+40, y, 74, 17, big, bold=True, anchor=MSO_ANCHOR.MIDDLE); text(s, xs[1]+112, y, third-112, 17, small, color=MUTED, anchor=MSO_ANCHOR.MIDDLE)
+    text(s, xs[1], row3+83, third, 40, [[('Free for students, paid for labs and teams. ', 'b'), (f"At an assumed {inr(m['licence_inr'])} a lab, that is ₹{m['som_inr']/1e5:.0f} lakh a year. ", ''), ('Works with any cell', 'b'), (' through custom imports.', '')]], name='Business')
 
-    # 6. Honest finding.
-    heading(s, cols[2], mid, cw, '6  Honest finding and next step')
-    box(s, cols[2], mid+17, cw, 133, fill=ORANGE_TINT, radius=.05, name='Honest Finding')
-    stress = best['stress']; sample = best['samples'].get('stress', {}); pi_sample = best['samples'].get('pi', {})
-    text(s, cols[2]+7, mid+21, cw-14, 126, [[('The vulnerability: ', 'bo'), (f"{n} cells leave less margin. ", ''), (f"Under the 12 A stress test, {sample.get('cases', 0)-sample.get('passed', 0)} of {sample.get('cases', 0)} mixed-mismatch samples failed", 'b'), ('.', '')],
-         [('The reality: ', 'bo'), (f"all {pi_sample.get('cases', 0)} mixed samples passed at the Pi load." if pi_sample.get('passed') == pi_sample.get('cases') else f"{pi_sample.get('passed', 0)} of {pi_sample.get('cases', 0)} mixed samples passed at the Pi load.", '')],
-         [('Not proven: ', 'bo'), ('the board running on two cells, a real Pi draw, or measured accuracy. Voltage limit and run time are study assumptions.', '')],
-         [('Next, Round 2: ', 'bo'), ('bench-test two cells on the board, and run observed trials with students and engineers.', '')]], size=BODY-.5, spacing=2, name='Honest Finding text')
+    stress = best['samples'].get('stress', {}); pi_sample = best['samples'].get('pi', {}); pending = not stress.get('cases') or not pi_sample.get('cases')
+    box(s, xs[2], row3, third, 124, line=ORANGE, radius=.05, name='Honest Finding')
+    text(s, xs[2]+7, row3+4, third-14, 118, [[('Honest finding', 'bo')],
+         [('Less margin: ', 'b'), ('mixed-mismatch samples are still running.' if pending else f"{stress['cases']-stress['passed']} of {stress['cases']} mixed samples failed the 12 A stress test, while {pi_sample['passed']} of {pi_sample['cases']} passed at the Pi load.", '')],
+         [('Not proven: ', 'b'), ('the board on two cells, a real Pi draw or measured accuracy. Cost saving is cells only.', '')],
+         [('Next, Round 2: ', 'b'), ('bench-test two cells on the board and run user trials.', '')]], spacing=1.5, name='Honest Finding text')
 
     # So-what and sources.
-    box(s, 14, 459, 932, 25, fill=BLUE, radius=.2, name='So what')
-    text(s, 22, 459, 916, 25, [[('Test a design in seconds before you buy parts: ', 'b'), (f'the tool found a smaller battery that still does the job in simulation, at half the cell cost and mass.', '')]], size=BODY+2, color=WHITE, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE, name='So what text')
-    text(s, 14, 488, 932, 46, [[('Simulation, not hardware. ', 'b'), ('Published LG M50T tables, 4-cell parallel starting design with same-end outputs. 8.42 A is 25 W ÷ (0.9 × 3.3 V), held constant as an approximation. Prices: Robu LG M50T ₹1,206 incl. GST, listed out of stock; Geekworm, one listing; checked 30 Oct 2026, excluding shipping and fabrication. '
-         f"Measured data: Chen et al. 2020 (LG M50, a related cell; zenodo.4032561) and Piombo et al. 2024 test 28 (exact M50T; 10.17632/zh58byr53c.2). Bars show means; low, default and high cooling are 0.076, 0.15 and 0.18 W/K, compared after the frozen result. Market: AISHE 2021-22; price and 5% reach are assumptions, and counts do not show willingness to pay. {n}-cell claim: {d['study']['claim'].lower()}.", '')]], size=NOTE, color=MUTED, name='Sources')
+    so = row3+130
+    box(s, left, so, total, 24, fill=NAVY, radius=.25, name='So what')
+    text(s, left+8, so, total-16, 24, [[('Test a design in seconds before you buy parts: ', 'b'), ('the tool found a smaller battery that still does the job in simulation, at half the cell cost and mass.', '')]], size=BODY+1, color=WHITE, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE, name='So what text')
+    text(s, left, so+28, total, 30, [[('Simulation, not hardware. ', 'b'), (f"{d['study']['cases']:,} simulated cases on published LG M50T tables. {d['study']['claim']}. 8.42 A = 25 W ÷ (0.9 × 3.3 V), held constant. Prices checked 30 Oct 2026, excluding shipping and fabrication: Robu ₹1,206 incl. GST, out of stock; Geekworm US${d['board']['usd']:.0f}, one listing. "
+         "Measured: Chen et al. 2020 (LG M50, zenodo.4032561) and Piombo et al. 2024 test 28 (M50T, 10.17632/zh58byr53c.2); low-cooling bars are post-hoc. Market: AISHE 2021-22; price and 5% reach are assumptions.", '')]], size=NOTE, color=MUTED, name='Sources')
     prs.save(args.out)
 
 
 OPTION = dict(baseline='keeping the same-end links', thicker='thicker links', opposite='the opposite-end output', combined='thicker links with the opposite-end output')
-BOX = (0, 160, 2560, 1330)
+BOX = (220, 520, 2480, 1190)
 if __name__ == '__main__':
     main()
