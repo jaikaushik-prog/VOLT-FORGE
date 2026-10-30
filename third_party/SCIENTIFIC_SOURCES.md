@@ -53,3 +53,11 @@ model applicability, declared scenarios and measured accuracy have separate
 meanings. Exact raw archives and local observation arrays are excluded from
 this repository; reproduction requires the stated source revisions and access
 allocations.
+
+## V4 changes to the science
+
+**Heat convention (`ecm_polarization_work/1`).** RC branches are fitted polarization terms, not physical capacitors. Their heat is the work `I*sum(v)` that Kirchhoff's voltage law assigns to them, which is PyBaMM's stated ECM convention. V3 used `v**2/R` with a held `v` and an `R` that changes with charge, which created heat with no electrical source and hid it in a compensating term. `tests/test_first_law.py` proves the new check fails on the V3 form.
+
+**LG M50T low-charge table (`configs/cell_catalogue_v2.json`).** PyECN's branch 3 has `R = 1e-4` ohm and `C = 1e-4` F at or below 18% charge, then `tau = 350.1424873` s from 20%. V4 holds tau at that plateau in the 45 affected entries. The pattern looks like a switched-off branch, but no author statement confirms it, so this is an unvalidated low-charge modification, recorded with its parent hash in the catalogue's `revision` block. V1 stays unchanged.
+
+**Measured comparison.** `configs/measured_comparison_v1.json` was committed before the first comparison ran. All 12 first cases missed their bands. `reports/measured_comparison_v1/post_hoc_diagnostic.json` is a labelled follow-up written after seeing that result. It changed no model value.

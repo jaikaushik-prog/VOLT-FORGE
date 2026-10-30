@@ -38,3 +38,15 @@ authors' processed measurements; their calibration is unresolved. Integrals,
 linear calibration diagnostics, residuals, counts and plots are our derived
 analysis. No synthetic data are used as observations, and no model predictions
 appear in the measured-data figures.
+
+## Added in V4
+
+Access checked 30 October 2026.
+
+- Chen, C.-H.; Brosa Planella, F.; O'Regan, K.; Gastol, D.; Widanage, W. D.; Kendrick, E. (2020).
+  [Experimental data for "Development of Experimental Techniques for Parameterization of Multi-scale Lithium-ion Battery Models"](https://doi.org/10.5281/zenodo.4032561).
+  Zenodo. DOI **10.5281/zenodo.4032561**. Creative Commons Attribution 4.0. LG M50 cells, used unchanged as a check. Never used to set a model value.
+- Chen et al. (2020), *J. Electrochem. Soc.* 167, 080534. DOI [10.1149/1945-7111/ab9050](https://doi.org/10.1149/1945-7111/ab9050).
+- Ministry of Education, Government of India. [All India Survey on Higher Education 2021-22](https://education.gov.in/sites/upload_files/mhrd/files/statistics-new/AISHE%20Book_2021-22_4.pdf). Enrolment and college counts for the market estimate in `configs/market_sizing_v1.json`.
+- Raspberry Pi. [Raspberry Pi 5 product page](https://www.raspberrypi.com/products/raspberry-pi-5/). The 5 V, 5 A supply recommendation.
+- Geekworm. [X1206 V2.0 UPS HAT](https://geekworm.com/products/x1206). The selected UPS board and its listed specification. Part prices and every listing are in `configs/parts_prices_v1.json`.
