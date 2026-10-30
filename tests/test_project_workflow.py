@@ -1,5 +1,6 @@
 import copy
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -247,8 +248,10 @@ def test_existing_synthetic_measurement_importer_is_reused(project, tmp_path, mo
 
 def test_json_cli_and_unknown_schema(tmp_path):
     path = tmp_path / 'project'
+    # A fresh checkout runs from src without installing the package.
+    source = str(Path(__file__).resolve().parents[1]/'src')
     process = subprocess.run([sys.executable, '-m', 'voltforge.project', '--project', str(path)],
-        input=json.dumps({'operation': 'load_reference', 'arguments': {}}), capture_output=True, text=True)
+        input=json.dumps({'operation': 'load_reference', 'arguments': {}}), capture_output=True, text=True, env={**os.environ, 'PYTHONPATH': source})
     assert process.returncode == 0, process.stderr
     assert json.loads(process.stdout)['result']['variant_id'] == 'A0'
     state = read(path / 'project.json')
