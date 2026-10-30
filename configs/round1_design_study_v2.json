@@ -1,0 +1,59 @@
+{
+  "version": "voltforge.design-study/2",
+  "status": "frozen_before_any_case_was_run",
+  "scope": "Parallel LG M50T arrangements of 1 to 4 cells against the Raspberry Pi 5 gateway backup and a 12 A stress test. Simulation with published same-cell-type tables. Not hardware validation.",
+  "cell_model": "LG_M50T_ECN",
+  "counts": [1, 2, 3, 4],
+  "common": {"duration_s": 600.0, "ambient_C": 23.0, "charge_pct": 70.0, "temperature_C": 23.0, "voltage_floor_V": 3.3, "dt_s": 0.5, "half_step_dt_s": 0.25},
+  "missions": {
+    "pi": {"name": "Raspberry Pi 5 gateway backup", "power_W": 25.0, "converter_efficiency": 0.9, "role": "decides qualification"},
+    "stress": {"name": "12 A stress test", "current_A": 12.0, "role": "reported only"}
+  },
+  "link_dimensions": {"length_mm": 30.0, "width_mm": 8.0, "thickness_mm": 0.08, "contact_mohm": 0.2},
+  "output_route": {"length_mm": 50.0, "width_mm": 8.0, "thickness_mm": 0.2, "contact_mohm": 0.2},
+  "opposite_return_extra_mm_per_link": 30.0,
+  "options": {
+    "baseline": "Same-end outputs and 0.08 mm copper links",
+    "thicker": "0.16 mm copper links",
+    "opposite": "Negative output moved to the far cell, return route lengthened",
+    "combined": "Thicker links and the opposite-end output together"
+  },
+  "position_mismatch": {
+    "applies_to": "Every cell position in turn, both signs, every option, both missions",
+    "capacity_factor": [0.95, 1.05],
+    "resistance_factor": [0.9, 1.1],
+    "ocv_offset_V": [-0.025, 0.025],
+    "charge_delta_pp": [-2.0, 2.0],
+    "combined_weak": {"capacity_factor": 0.95, "resistance_factor": 1.1, "ocv_offset_V": -0.01, "charge_delta_pp": -2.0, "polarization_V": 0.02}
+  },
+  "shared_sensitivities": {
+    "cooling_low": {"cooling_W_K": 0.07636608544985142},
+    "cooling_high": {"cooling_W_K": 0.18042153349476536},
+    "cooling_half": {"cooling_factor": 0.5},
+    "thermal_pair_half": {"cooling_factor": 0.5, "heat_capacity_factor": 0.5},
+    "thermal_pair_double": {"cooling_factor": 2.0, "heat_capacity_factor": 2.0},
+    "heat_capacity_low": {"heat_capacity_J_K": 56.7},
+    "heat_capacity_high": {"heat_capacity_J_K": 60.1},
+    "wire_heat_none": {"wire_heat_fraction": 0.0},
+    "wire_heat_all": {"wire_heat_fraction": 1.0},
+    "contact_double": {"contact_factor": 2.0},
+    "room_plus_2": {"ambient_delta_C": 2.0},
+    "all_charge_minus_2": {"charge_delta_pp": -2.0}
+  },
+  "converter_efficiency_check": [0.85, 0.95],
+  "combined_samples": {
+    "note": "All cells vary at once: capacity 5%, R0 and RC 10%, OCV 25 mV, charge 2 points, contact factor 1 to 2. These are sensitivity samples, not a population or a probability.",
+    "seed": 20261030,
+    "four_cell": {"corners": 7, "random": 240},
+    "two_and_three_cell": {"corners": 2, "random": 60}
+  },
+  "qualification": {
+    "mission": "pi",
+    "required_tiers": ["nominal", "position_mismatch", "shared_sensitivity", "converter_efficiency"],
+    "a_case_passes_only_if": ["The product does not refuse it", "It serves the full 10 minutes", "No cell reaches an operating limit or the edge of model coverage", "Battery voltage stays at or above 3.3 V", "Temperature is calculated and the first-law check closes"],
+    "a_design_qualifies_only_if": "Every required Pi case passes.",
+    "reported_only": "Combined samples and the 12 A stress test. They are the Honest Finding, not a pass or fail gate.",
+    "ranking": "Compare qualifying designs on cell count, listed cell cost, cell mass and operating margins. Never rank on delivered Wh, because holding current constant lets higher-voltage designs deliver more without serving the Pi any better.",
+    "claim": "Smallest qualifying design among the parallel arrangements tested"
+  }
+}

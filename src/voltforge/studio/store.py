@@ -249,7 +249,7 @@ class Studio:
             from .network import Circuit
             import numpy as np
             models=[CellModel(self.models[c['model']]) for c in graph['cells']]
-            if settings.get('protection') and settings['protection']['temperature_max_C'] is not None and not all(m.has_thermal for m in models):
+            if settings.get('protection') and (settings['protection']['temperature_max_C'] is not None or settings['protection'].get('charge_temperature_C') is not None) and not all(m.has_thermal for m in models):
                 raise ValueError('Temperature-based protection needs a thermal model for every cell. Add thermal properties or disable that threshold.')
             values=[m.parameters(c['charge_pct']/100,c['temperature_C']) for c,m in zip(graph['cells'],models)]
             solution=Circuit(graph,self.models).solve(np.array([v[0]-c['polarization_V'] for v,c in zip(values,graph['cells'])]),
