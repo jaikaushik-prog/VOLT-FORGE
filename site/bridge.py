@@ -28,9 +28,16 @@ class NeedAI(BaseException):
 
 class WebCopilot(Copilot):
     def __init__(self, studio):
-        super().__init__(studio); self.provider = 'Gemini'; self.reply = None
+        super().__init__(studio); self.provider = None; self.reply = None
+        self.configured = False
+
+    def status(self):
+        return dict(available=self.configured,provider='Gemini' if self.configured else None,
+                    last_error=self.last_error,connection_verified=False,
+                    availability_basis='server_configuration' if self.configured else 'not_configured')
 
     def _infer(self, prompt):
+        if not self.configured: raise ValueError('AI is unavailable. Continue with manual editing and simulation.')
         if self.reply is None: raise NeedAI(prompt)
         reply, self.reply = self.reply, None
         if reply.get('error'): raise ValueError(reply['error'])
@@ -42,11 +49,17 @@ class WebCopilot(Copilot):
         return response
 
 
-studio = store.Studio(PROJECT)
+studio = store.Studio(PROJECT, runtime='browser_session')
 copilot = WebCopilot(studio)
-METHODS = dict(create=studio.create, open=studio.document, save=studio.save, run=studio.run, test=studio.test, investigate=studio.investigate, compare=studio.compare,
+METHODS = dict(create=studio.create, open=studio.document, save=studio.save, save_copy=studio.save_copy, run=studio.run, test=studio.test, investigate=studio.investigate, compare=studio.compare,
                chat=copilot.chat, apply_proposal=copilot.apply, create_cell=studio.create_cell, begin_investigation=studio.begin_investigation, investigation=studio.investigation,
                investigate_case=studio.investigate_case, open_investigation_case=studio.open_investigation_case)
+
+
+def configure_ai(available):
+    # Metadata supplied by our endpoint; no credential reaches the Python worker.
+    copilot.configured = available is True
+    copilot.provider = 'Gemini' if copilot.configured else None
 
 
 def real_plots():

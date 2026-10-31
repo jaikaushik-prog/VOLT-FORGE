@@ -114,8 +114,10 @@ def test_cost_keeps_currencies_apart_and_never_prices_an_unknown_at_zero():
     g = design(2); g['cells'][1]['model'] = 'SAMSUNG_30T'
     result = estimate(g, BANK, prices)
     assert result['subtotals'] == {'INR': 1206, 'USD': 6.99}
-    assert 'Test converter' in result['unpriced'] and 'Battery protection' not in result['unpriced']
-    assert next(r for r in result['lines'] if r['part'] == 'Battery protection')['included'] is True
+    assert 'Test converter' in result['unpriced'] and 'Battery protection' in result['unpriced']
+    protection = next(r for r in result['lines'] if r['part'] == 'Battery protection')
+    assert protection['included'] is False and protection['included_in_candidate'] is True
+    assert protection['compatibility']['status'] == 'not_assessed'
     assert next(r for r in result['lines'] if r['part'] == 'Test converter')['priced'] is False
 
 

@@ -36,7 +36,8 @@ export function cellImage({id='preview',selected=false,attention=false,name='',v
 export function thumbnail(cell) {
   return `<svg class="cell-thumbnail" viewBox="-70 -125 140 255" aria-label="${esc(cell.name)} selected">${cellImage({id:'thumbnail',name:'',small:true})}</svg>`;
 }
-export function renderCanvas(graph,{mode='assembly',selected=null,layer='none',row=null,tool='select',pending=null,prefix='main',alertCells=[],alertConnections=[],interactive=true,load=null}={}) {
+export function renderCanvas(graph,{mode='assembly',selected=null,layer='none',row=null,tool='select',pending=null,prefix='main',alertCells=[],alertConnections=[],interactive=true,load=null,models=null}={}) {
+  const library=models??cellLibrary;
   const loadX=Math.max(0,...graph.cells.map(c=>c.x))+215;
   const width=Math.max(1020,...graph.cells.map(c=>c.x+140),load?loadX+130:0),height=Math.max(500,...graph.cells.map(c=>c.y+180));
   const cells=Object.fromEntries(graph.cells.map(c=>[c.id,c]));
@@ -52,7 +53,7 @@ export function renderCanvas(graph,{mode='assembly',selected=null,layer='none',r
     let val=null;
     if(row)val=layer==='temperature'?(row.temperature_C[i]===null?'Not modeled':`${fmt(row.temperature_C[i])} °C`):layer==='current'?`${fmt(row.cell_current_A[i],2)} A`:layer==='charge'?`${fmt(row.charge_pct[i],0)}%`:layer==='voltage'?`${fmt(row.cell_voltage_V[i],3)} V`:null;
     const selectedCell=selected===c.id;
-    const body=mode==='assembly'?cellImage({id:prefix+'-'+c.id,selected:selectedCell,attention:alertCells.includes(c.id),name:c.name,value:val,label:cellLibrary[c.model]?.family||'Cell model'}):
+    const body=mode==='assembly'?cellImage({id:prefix+'-'+c.id,selected:selectedCell,attention:alertCells.includes(c.id),name:c.name,value:val,label:library[c.model]?.family||'Cell model'}):
       `<rect x="-66" y="-80" width="132" height="160" rx="12" fill="${selectedCell?'#eef4ff':'#fff'}" stroke="${selectedCell?'#2458c5':'#b9c8d9'}" stroke-width="${selectedCell?2.5:1.5}"/><path d="M0 -99 V-80 M0 80 V99" stroke="#788ca5" stroke-width="2"/><text x="0" y="-42" text-anchor="middle" font-weight="650" font-size="16" fill="#23364e">${esc(c.name)}</text><path d="M-16 -6 H16 M-8 6 H8" stroke="${palette[i%4]}" stroke-width="3"/><text x="0" y="47" text-anchor="middle" fill="#536379" font-size="12">${val||`${fmt(c.charge_pct,0)}% to start`}</text>`;
     return `<g data-cell="${esc(c.id)}" class="canvas-cell ${selectedCell?'is-selected':''}" transform="translate(${c.x} ${c.y})" tabindex="${interactive?'0':'-1'}" role="${interactive?'button':'img'}" aria-label="${esc(c.name)}, ${fmt(c.charge_pct,0)} percent starting charge. ${alertCells.includes(c.id)?'Limit highlighted. ':''}${interactive?'Select to edit.':''}">${body}</g>`;
   }).join('');

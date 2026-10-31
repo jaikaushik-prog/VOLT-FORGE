@@ -37,7 +37,7 @@ def pi5_gateway_backup():
                 source='5 V, 5 A supply recommendation from Raspberry Pi. Converter efficiency, run time, voltage limit and room temperature are study assumptions.')
     return dict(case=case, load=dict(kind='power', power_W=power, converter_efficiency=efficiency, current_A=current), requirements=[
         requirement('device_power_W', 'Pi supply power', power, 'W', 'sourced', 'The 5 V, 5 A recommended supply, an upper envelope and not a measured draw.', PI_SUPPLY_URL),
-        requirement('converter_efficiency', 'Converter efficiency', efficiency, 'ratio', 'assumed', 'Cautious assumption. The UPS board makers list up to 95% as a best case.'),
+        requirement('converter_efficiency', 'Backup converter efficiency', efficiency, 'ratio', 'assumed', 'Battery-to-Pi study assumption; no measured backup-efficiency curve is supplied. The X1205 advertised 95% refers to its external power-input step-down path.'),
         requirement('load_current_A', 'Battery current', current, 'A', 'assumed', 'Power divided by efficiency and the voltage limit. Held constant as an approximation.'),
         requirement('duration_s', 'Run time', 600., 's', 'assumed', 'Covers a short outage or a safe shutdown.'),
         requirement('voltage_floor_V', 'Lowest battery voltage', floor, 'V', 'assumed', 'Declared minimum at the converter input. Cautious: the X1205 board lists a 2.4 V cutoff.'),
@@ -115,14 +115,75 @@ def validate_mission(value):
     load = value['load']
     if not isinstance(load, dict) or load.get('kind') not in ('current', 'power') or set(load)-{'kind', 'current_A', 'power_W', 'converter_efficiency'}:
         raise ValueError('This load definition is not supported.')
-    number(load['current_A'], 'Battery current', 0, 200)
+    number(load.get('current_A'), 'Battery current', 0, 200)
+    if load['kind'] == 'power':
+        number(load.get('power_W'), 'Load power', .001, 100000)
+        number(load.get('converter_efficiency'), 'Converter efficiency', .01, 1)
     rows = value['requirements']
     if not isinstance(rows, list) or not 1 <= len(rows) <= 12: raise ValueError('List up to 12 requirements.')
+    keys = set()
+    ranges = {'load_current_A': (0, 200), 'duration_s': (.1, 86400), 'ambient_C': (-40, 100),
+              'device_power_W': (.001, 100000), 'converter_efficiency': (.01, 1), 'voltage_floor_V': (.1, 1000)}
     for row in rows:
         if not isinstance(row, dict) or set(row)-{'source_url'} != {'key', 'label', 'value', 'unit', 'basis', 'reason'} or row['basis'] not in BASES:
             raise ValueError('Each requirement needs a value and whether it is sourced, assumed or custom.')
-        number(row['value'], row['key'])
-    if {'load_current_A', 'duration_s', 'ambient_C'}-{r['key'] for r in rows}: raise ValueError('A mission needs a current, a run time and a room temperature.')
+        if not isinstance(row['key'], str) or not row['key'] or row['key'] in keys:
+            raise ValueError('Each requirement needs a unique text key.')
+        keys.add(row['key'])
+        number(row['value'], row['key'], *ranges.get(row['key'], (None, None)))
+    required = {'load_current_A', 'duration_s', 'ambient_C'}
+    if load['kind'] == 'power': required.update(('device_power_W', 'converter_efficiency', 'voltage_floor_V'))
+    if required-keys: raise ValueError('The mission is missing required current, duration, room temperature or power-conversion requirements.')
+
+
+def power_proxy_assessment(settings):
+    """Whether saved power metadata still describes the live current proxy.
+
+    Editing a current profile remains valid, but its old power label cannot
+    screen a converter. This helper also accepts malformed standalone inputs
+    without letting an unchecked power value reach a parts comparison.
+    """
+    from .network import number
+    unknown = lambda reason: dict(status='not_assessed', power_W=None, reason=reason)
+    if not isinstance(settings, dict):
+        return unknown('Regulated-output power is unspecified; battery current is not the board\'s 6 A output current.')
+    mission = settings.get('mission')
+    if not mission:
+        return unknown('Regulated-output power is unspecified; battery current is not the board\'s 6 A output current.')
+    try:
+        validate_mission(mission)
+        load = mission['load']
+        if load['kind'] != 'power':
+            return unknown('Regulated-output power is unspecified; battery current is not the board\'s 6 A output current.')
+        values = {r['key']: r['value'] for r in mission['requirements']}
+        limits = settings.get('limits')
+        if not isinstance(limits, dict): raise ValueError('The live battery voltage floor is missing.')
+        floor = number(limits.get('min_voltage_V'), 'Live battery voltage floor', .1, 1000)
+        profile = settings.get('profile')
+        if not isinstance(profile, list) or not 1 <= len(profile) <= 48:
+            raise ValueError('The live current profile is missing or malformed.')
+        currents = []; previous = 0.
+        for step in profile:
+            if not isinstance(step, dict): raise ValueError('A live current interval is malformed.')
+            start = number(step.get('start_s'), 'Interval start', 0, 86400)
+            end = number(step.get('end_s'), 'Interval end', 0, 86400)
+            if abs(start-previous)>ROUNDING or end<=start:
+                raise ValueError('The live current intervals are not contiguous.')
+            previous = end
+            currents.append(number(step.get('current_A'), 'Live battery current', -200, 200))
+        same = lambda a, b: abs(a-b) <= ROUNDING*max(1., abs(a), abs(b))
+        consistent = (same(load['power_W'], values['device_power_W'])
+                      and same(load['converter_efficiency'], values['converter_efficiency'])
+                      and same(floor, values['voltage_floor_V'])
+                      and same(load['current_A'], values['load_current_A'])
+                      and same(load['current_A'], battery_current(load['power_W'], load['converter_efficiency'], floor))
+                      and all(same(current, load['current_A']) for current in currents))
+        if not consistent or mission['test_type'] == 'charge':
+            return unknown('The live current profile, voltage floor or conversion assumptions no longer match the saved power proxy. Re-enter the power mission to assess the board output demand.')
+        return dict(status='consistent', power_W=float(load['power_W']),
+                    reason='Live discharge current and voltage floor match the recorded power and efficiency assumptions; this remains a constant-current proxy.')
+    except (ValueError, TypeError, KeyError) as exc:
+        return unknown('Power demand cannot be assessed from malformed mission/settings data: '+str(exc))
 
 
 def application_view(settings):

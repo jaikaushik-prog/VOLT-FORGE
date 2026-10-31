@@ -4,7 +4,7 @@ A visual battery-engineering workspace. Build a circuit, test its behaviour and 
 
 ## Current version: V4
 
-Updated 30 October 2026. **[Open the V4 guide](V4_RELEASE.md)** for launch instructions, the design result, evidence and limits. The sections below describe V3 and earlier stages.
+Updated 31 October 2026. **[Open the V4 guide](V4_RELEASE.md)** for launch instructions, the design result, evidence and limits. The [Round 1 corrections](reports/round1_improvements_v1/IMPLEMENTATION.md) address the independent electrical and UX review, with a separate revised slide and preservation record. The sections below describe V3 and earlier stages.
 
 ## Previous version: V3
 

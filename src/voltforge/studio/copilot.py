@@ -50,7 +50,9 @@ class Copilot:
         self.provider='Codex' if shutil.which('codex') else ('Claude' if shutil.which('claude') else None)
 
     def status(self):
-        return dict(available=bool(self.provider),provider=self.provider,last_error=self.last_error)
+        return dict(available=bool(self.provider),provider=self.provider,last_error=self.last_error,
+                    connection_verified=False,
+                    availability_basis='provider_executable_present' if self.provider else 'not_configured')
 
     def _infer(self,prompt):
         with tempfile.TemporaryDirectory(prefix='voltforge-copilot-') as folder:

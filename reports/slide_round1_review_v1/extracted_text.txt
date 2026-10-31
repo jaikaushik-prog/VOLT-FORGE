@@ -1,0 +1,47 @@
+VOLT-FORGE
+Fewer cells. Clearer trade-offs.
+CASE STUDY 2
+Two cells are a simulation candidate.
+Smallest qualifying count among the 1-4-cell parallel arrangements tested for this backup job.
+Half the four-cell baseline's cell cost and mass, with less current and voltage margin.
+COMMON BASE CASE Pi 5 backup | LG M50T cells | 25 W supply-rating scenario | 10 min | 23 °C | 70% starting charge
+90% converter assumed | 3.3 V floor | 8.42 A constant-current proxy | actual Pi draw not measured
+BUILD, TEST, UNDERSTAND BASELINE + TWO OPTIONS
+Original V4 editor view; illustrative circuit, not the study table.
+For students and lab instructors: edit a circuit, see how current and heat change,
+then compare alternatives. The search rebuilds and tests each cell count.
+Parallel
+design
+Required
+cases pass
+Worst cell
+current
+Worst cell
+temperature
+Cell
+mass
+Listed
+cell cost
+4 cells | baseline 51/51 3.34 A 26.1 °C 280 g ₹4,824
+3 cells 42/42 3.86 A 27.7 °C 210 g ₹3,618
+2 cells 33/33 5.49 A 31.8 °C 140 g ₹2,412
+Same-end outputs and declared study links throughout. Cases include mismatch, thermal and converter
+sensitivities; counts vary with cell positions. All temperatures are simulated. Cost and mass cover cells only.
+EVIDENCE
+15/15 numerical checks passed
+PyBaMM / analytic verification.
+All 12 comparison cases missed the voltage and
+temperature bands. Measured accuracy is not
+established.
+LIMITS THAT MATTER
+Conditional, not build-ready
+Two cells have no spare. Board battery-current limits
+remain unverified. Virtual cutoffs are modeled; physical
+protection has not been demonstrated.
+USER + BUYER HYPOTHESIS
+Start with teaching labs
+Free student use; paid lab licences are an untested pricing
+hypothesis. No observed user trials yet. Next user test:
+complete and explain a comparison.
+NEXT Measure actual load and converter behavior; bench-check a candidate with supervised cutoffs; observe student tasks.
+Try: volt-forge-app.vercel.app | Evidence: volt-forge-app.vercel.app/appendix Team StratWise | Revised submission draft | Frozen V4 study | Not submitted

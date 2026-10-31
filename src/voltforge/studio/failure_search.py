@@ -50,7 +50,9 @@ def sizing_verdict(result,ready):
     summary=result.summary;checks={c['metric']:c['status'] for c in summary['checks']}
     if result.stop:return 'unsupported' if result.stop['reason'] in ('charge_domain','temperature_domain') else 'failed'
     if 'exceeded' in checks.values() or not summary['assessment']['requested_demand_met']:return 'failed'
-    if 'min_voltage_V' not in checks or not summary['thermal_available'] or summary['verification'].get('first_law_closed') is False:return 'incomplete'
+    if ('min_voltage_V' not in checks or any(s != 'within_target' for s in checks.values())
+            or not summary['thermal_available'] or summary['verification'].get('first_law_closed') is not True
+            or summary.get('operating_limit_coverage', {}).get('complete') is not True):return 'incomplete'
     return 'qualifies'
 
 
@@ -132,8 +134,9 @@ def outcome(graph,settings,result=None,preflight=None):
         return dict(kind=kind,label={'design_target':'Design target exceeded','model_boundary':'Model coverage reached','component_limit':'Cell operating limit reached','protection':'Protection left demand unserved'}[kind],
                     message=first['message'],first_limit=first,affected_cells=sorted({f['cell'] for f in findings if f.get('cell')}),sample_index=first['sample_index'],findings=findings)
     targeted=bool(result.summary['checks'])
-    unavailable=any(c['status'] in ('not_modeled','not_applicable','inconclusive') for c in result.summary['checks'])
+    unavailable=(any(c['status'] in ('not_modeled','not_applicable','inconclusive') for c in result.summary['checks'])
+                 or result.summary.get('operating_limit_coverage', {}).get('complete') is not True)
     return dict(kind='within_targets' if targeted and not unavailable else 'unassessed',
                 label='Within selected model targets' if targeted and not unavailable else 'Calculated; targets incomplete',
-                message='No selected target was exceeded in this calculated case.' if targeted and not unavailable else 'Add design targets to judge this case. Unknown or unmodeled limits are not passes.',
+                message='No selected target was exceeded in this calculated case.' if targeted and not unavailable else 'Check application targets and cell operating-limit coverage. Unknown or unmodeled limits are not passes.',
                 first_limit=None,affected_cells=[],sample_index=len(result.rows)-1)

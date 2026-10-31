@@ -1,6 +1,10 @@
 # VOLT-FORGE V4
 
-V4 repairs the heat calculation, makes the Raspberry Pi 5 backup the visible application, and turns the tool into something that finds a better design.
+V4 repairs the heat calculation, makes the Raspberry Pi 5 backup the visible application, and supports comparison of simulated design alternatives.
+
+## Round 1 corrections, 31 October
+
+The [implementation report](reports/round1_improvements_v1/IMPLEMENTATION.md) records the subsequent qualification, component-compatibility, accounting and interface corrections. Existing fitted models and frozen studies are preserved. New runs carry a changed software identity; the historical study below was not rerun as experimental validation. A revised submission PDF is kept separately from the original.
 
 ## Run it
 
@@ -16,7 +20,7 @@ Open **http://127.0.0.1:8794**. Choose a new design, then a test type, a load an
 
 ## The result
 
-**Two LG M50T cells in parallel, with the output at the far cell, are the smallest qualifying design among the parallel arrangements tested** for a 25 W, 10-minute Raspberry Pi 5 backup. It passed 33 of 33 required cases. See [the recommendation](reports/design_study_v2/RECOMMENDATION.md). This is simulation only.
+**In the frozen study, two LG M50T cells in parallel, with the output at the far cell, were the smallest qualifying simulated candidate among the arrangements tested** for a 25 W, 10-minute Raspberry Pi 5 backup. It passed 33 of 33 required cases at the declared starting charge, temperature and converter assumptions. See [the original recommendation](reports/design_study_v2/RECOMMENDATION.md) and the [subsequent electrical review](reports/round1_review_20261031/ELECTRICAL_REVIEW.md) for corrected board-source interpretation and conditional limits. This is simulation only; board compatibility and measured module accuracy remain unestablished.
 
 ## What changed
 
@@ -49,4 +53,4 @@ Open **http://127.0.0.1:8794**. Choose a new design, then a test type, a load an
 
 ## Limits
 
-Everything here is simulation. The measured comparison missed its pre-declared bands, so temperatures are a range, not a prediction. V4 does not establish hardware safety, a certified current rating or measured accuracy. See [the re-audit](reports/v4_release/REAUDIT.md).
+Everything here is simulation. The measured comparison missed its pre-declared bands, so temperatures remain unvalidated scenario estimates, not calibrated prediction intervals. V4 does not establish hardware safety, a certified current rating or measured accuracy. See [the re-audit](reports/v4_release/REAUDIT.md) and [Round 1 corrections](reports/round1_improvements_v1/IMPLEMENTATION.md).

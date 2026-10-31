@@ -48,7 +48,20 @@ export function probeSvg(test,metric,index,hidden,lo,hi,duration){
 }
 export function pointValues(test,metric,index,hidden=new Set()) {
   const field=chartFields[metric],row=test.rows[index];
-  const change=row.event_kind==='protective_disconnect'?'protection disconnect':'load change';
-  const side=row.event_side==='before'?' · before '+change:row.event_side==='after'?' · after '+change:'';
-  return `<div class="probe-time">${esc(timeLabel(row.time_s)+side)}</div>`+test.graph.cells.map((c,i)=>hidden.has(i)?'':`<div class="probe-value"><span class="series-dot series-${i%4}"></span><span>${esc(c.name)}</span><strong>${row[field.field][i]===null?'Not modeled':fmt(row[field.field][i],metric==='voltage'?3:2)+' <small>'+field.unit+'</small>'}</strong></div>`).join('');
+  return `<div class="probe-time">${esc(sampleLabel(row))}</div>`+test.graph.cells.map((c,i)=>hidden.has(i)?'':`<div class="probe-value"><span class="series-dot series-${i%4}"></span><span>${esc(c.name)}</span><strong>${row[field.field][i]===null?'Not modeled':fmt(row[field.field][i],metric==='voltage'?3:2)+' <small>'+field.unit+'</small>'}</strong></div>`).join('');
+}
+
+export function sampleLabel(row) {
+  const event=row.event_kind==='protective_disconnect'?'protection disconnect':'load change';
+  const side=['before','after'].includes(row.event_side)?` · ${row.event_side} ${event}`:'';
+  return `${row.time_s} s${side}`;
+}
+export function sampleIndex(rows,index,direction,eventOnly=false) {
+  const step=direction<0?-1:1;
+  for(let i=index+step;i>=0&&i<rows.length;i+=step)if(!eventOnly||['before','after'].includes(rows[i].event_side))return i;
+  return index;
+}
+export function savedSampleTable(test,metric,index,hidden=new Set()) {
+  const row=test.rows[index],field=chartFields[metric];
+  return `<div class="sample-heading"><h3>Saved sample</h3><p id="sample-announcement" aria-live="polite" aria-atomic="true">${esc(sampleLabel(row))}</p></div><div class="sample-table-wrap"><table class="sample-table"><thead><tr><th>Cell</th><th>${esc(field.title)} (${esc(field.unit)})</th></tr></thead><tbody>${test.graph.cells.map((c,i)=>hidden.has(i)?'':`<tr><th scope="row"><span class="series-dot series-${i%4}"></span> ${esc(c.name)}</th><td>${Number.isFinite(row[field.field]?.[i])?esc(String(row[field.field][i])):'Not modeled'}</td></tr>`).join('')}</tbody></table></div><p class="helper">Exact saved values, without interpolation. Use the time slider or the sample buttons; before and after an event are separate samples.</p>`;
 }

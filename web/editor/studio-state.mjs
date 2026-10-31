@@ -41,7 +41,10 @@ export function describeConnection(graph,wire) {
   const terminal=t=>{const [id,p]=t.split(':');return `${graph.cells.find(c=>c.id===id)?.name||'Cell'} ${p==='p'?'positive':'negative'}`;};
   return `${terminal(wire.a)} to ${terminal(wire.b)}`;
 }
-export function actualTestName(test) { return `${test.design_name} · ${test.name}`; }
+export function actualTestName(test) {
+  const date=test.created_utc?String(test.created_utc).replace('T',' ').replace(/\+00:00$|Z$/,' UTC'):'';
+  return [test.design_name,test.name,date,test.current===false?'earlier version':null].filter(Boolean).join(' · ');
+}
 export function samePhysics(a,b) {
   const clean=g=>{g=clone(g);delete g.name;g.cells.forEach(c=>{delete c.x;delete c.y;delete c.name;});return g;};
   return JSON.stringify(clean(a))===JSON.stringify(clean(b));

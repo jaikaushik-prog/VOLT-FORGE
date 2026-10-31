@@ -9,7 +9,12 @@ async function start() {
   pyodide.unpackArchive(archive, 'zip', {extractDir: '/home/pyodide/volt'});
   pyodide.runPython("import sys; sys.path[:0] = ['/home/pyodide/volt', '/home/pyodide/volt/src']");
   postMessage({progress: 'Starting your private workspace…'});
-  return {pyodide, bridge: pyodide.pyimport('bridge')};
+  const bridge = pyodide.pyimport('bridge');
+  // Configuration lookup only. No provider inference, prompt, or key is sent.
+  const {readAIAvailability} = await import('./ai-status.mjs');
+  const configured = await readAIAvailability();
+  bridge.configure_ai(configured);
+  return {pyodide, bridge};
 }
 
 async function ask(prompt) {

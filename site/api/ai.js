@@ -12,6 +12,10 @@ function tooMany(ip) {
 }
 
 export default async function handler(req, res) {
+  if (req.method === 'GET') {
+    res.setHeader('Cache-Control', 'no-store');
+    return res.status(200).json({available: Boolean(process.env.GEMINI_API_KEY), connection_verified: false});
+  }
   if (req.method !== 'POST') return res.status(405).json({error: 'Use POST.'});
   const origin = req.headers.origin;
   if (origin && new URL(origin).host !== req.headers.host) return res.status(403).json({error: 'This AI only serves the VOLT-FORGE app.'});

@@ -83,7 +83,10 @@ class FileLock:
 
 
 class Studio:
-    def __init__(self, project):
+    def __init__(self, project, runtime='local_workspace'):
+        if runtime not in ('local_workspace','browser_session'):
+            raise ValueError('Choose a local workspace or browser session runtime.')
+        self.runtime=runtime
         self.legacy=Project(project); self.root=Path(project)/'studio'
         self.journal_path=self.root/'pending_commit.json'
         self.lock=FileLock(self.root/'write.lock',self._refresh)
@@ -235,7 +238,7 @@ class Studio:
             ready=self.preflight(doc['graph'],doc['settings'])
             from .loads import application_view
             from .parts import estimate
-            return dict(**doc,readiness=ready,history=tests,application=application_view(doc['settings']),parts=estimate(doc['graph'],self.models,self.prices))
+            return dict(**doc,readiness=ready,history=tests,application=application_view(doc['settings']),parts=estimate(doc['graph'],self.models,self.prices,settings=doc['settings']))
 
     def preflight(self,graph,settings):
         ready=readiness(graph,self.models)
@@ -290,6 +293,9 @@ class Studio:
                         investigations=[dict(id=k,**v) for k,v in index.get('investigations',{}).items()],
                         library=[public_model(k,v) for k,v in self.models.items()],
                         conductor_reference=copper_reference(),
+                        runtime=dict(persistence=self.runtime,project_import_supported=False,design_draft_import_supported=True,
+                                     description=('Saved by this workspace on this computer.' if self.runtime=='local_workspace'
+                                                  else 'This browser session is temporary. Export results before refreshing or closing it.')),
                         science=dict(status='Simulation estimates',
                                      electrical='Cell-specific voltage, resistance and relaxation models. Temperature-dependent models feed cell temperature back into the circuit.',
                                      thermal='Heat is calculated from electrical losses, explicit cell contacts and declared cooling settings.',
@@ -342,6 +348,26 @@ class Studio:
             self._commit({'documents/'+doc['id']+'.json':doc},index)
             return self.document(doc['id'])
 
+    def save_copy(self, graph, settings, name=None, source_design_id=None, source_version=None):
+        """Recover an explicit draft as a new document, never as a stale overwrite."""
+        with self.lock:
+            graph=deepcopy(graph);settings=deepcopy(settings)
+            if source_version is not None and (isinstance(source_version,bool) or not isinstance(source_version,int) or source_version<1):
+                raise ValueError('The draft source version must be a positive integer.')
+            if source_version is not None and source_design_id is None:
+                raise ValueError('Include the source design for the draft source version.')
+            source=self._doc(source_design_id) if source_design_id is not None else None
+            validate_graph(graph,self.models);validate_settings(settings)
+            suffix=' recovered copy'
+            chosen=name if name is not None else graph['name'][:100-len(suffix)]+suffix
+            if not isinstance(chosen,str) or not chosen.strip() or len(chosen.strip())>100:
+                raise ValueError('Give the recovered copy a name of 1 to 100 characters.')
+            graph['name']=chosen.strip()
+            origin=dict(kind='recovered_draft',source_design_id=source_design_id,
+                        source_version=source_version,
+                        saved_source_version=source['version'] if source else None)
+            return self.create_from_graph(graph,settings,origin=origin)
+
     def run(self, design_id, version, settings=None, title=None):
         if self._software_hash()!=self.software_hash:
             raise ValueError('The workspace code has been updated. Restart the local editor before running a new test.')
@@ -364,7 +390,7 @@ class Studio:
         record['model_cards']={key:public_model(key,models[key]) for key in models}
         record['case']=deepcopy(result.summary['case'])
         from .parts import estimate
-        record['parts']=estimate(g,models,self.prices)
+        record['parts']=estimate(g,models,self.prices,settings=s)
         import platform, numpy, scipy, pandas, matplotlib
         record['runtime']=dict(python=platform.python_version(),numpy=numpy.__version__,scipy=scipy.__version__,pandas=pandas.__version__,matplotlib=matplotlib.__version__)
         record['payload_hash']=digest(record)
@@ -530,7 +556,7 @@ class Studio:
                   affected_connections=[graph['connections'][0]['id']] if record['planned'][case_index]['extra_resistance'] else [])
         if record['planned'][case_index].get('cell_count'):
             from .parts import estimate
-            case.update(cell_count=record['planned'][case_index]['cell_count'],sizing=sizing_verdict(result,ready),parts=estimate(graph,models,self.prices))
+            case.update(cell_count=record['planned'][case_index]['cell_count'],sizing=sizing_verdict(result,ready),parts=estimate(graph,models,self.prices,settings=settings))
         with self.lock:
             latest=self.investigation(investigation_id,include_rows=True)
             if len(latest['cases'])==case_index:

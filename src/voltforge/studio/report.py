@@ -52,6 +52,15 @@ def html_report(record):
     service_met=record['summary'].get('assessment',{}).get('requested_demand_met',complete)
     completion='The full time horizon was calculated. '+('The requested current duty was served.' if service_met else 'The requested duty was not fully served.') if complete else 'This partial calculation cannot establish requirements for the uncalculated remainder.'
     assessment='<h2>Requirements and coverage</h2><p>Calculated '+val(coverage.get('completed_duration_s',metrics['duration_s']),'s')+' of '+val(coverage.get('requested_duration_s',metrics['duration_s']),'s')+'. '+completion+'</p>'+ (table(checks) if len(checks)>1 else '<p>No application targets were configured. Component and model-use checks still apply.</p>')
+    limit_coverage=record['summary'].get('operating_limit_coverage')
+    if limit_coverage:
+        rows=[('Cell','Calculated current directions','Operating-limit coverage')]
+        for entry in limit_coverage['cells']:
+            rows.append((names.get(entry['cell'],entry['cell']),', '.join(entry['directions']) or 'Rest',
+                         'Recorded for these directions' if entry['complete'] else 'Missing: '+', '.join(entry['missing'])))
+        assessment+='<h2>Cell operating-limit coverage</h2>'+table(rows)+'<p>'+escape(limit_coverage['note'])+'</p>'
+    else:
+        assessment+='<p>Cell operating-limit coverage was not recorded in this historical result; a completed calculation does not establish that all limits were assessed.</p>'
     control=record['summary'].get('protection');service=record['summary'].get('service')
     if control:
         config=control['config'];event=control['event']
@@ -101,13 +110,37 @@ def html_report(record):
         assessment+='<h2>Wiring warnings</h2><ul>'+''.join('<li>'+escape(w['message'])+'</li>' for w in warnings)+'</ul>'
     charging=record['summary'].get('charging')
     if charging:
-        assessment+='<h2>Charging result</h2>'+table([('Quantity','Value'),('Elapsed time',val(charging['elapsed_s'],'s',4)),('Charge gained',val(charging['charge_gained_Ah'],'Ah',4)),
-                                                      ('Energy received',val(charging['energy_received_Wh'],'Wh',4)),('Why it stopped',charging['stop_message'])])+'<p>'+escape(charging['note'])+'</p>'
+        rows=[('Quantity','Value'),('Elapsed time',val(charging['elapsed_s'],'s',4))]
+        if charging.get('version')=='voltforge.pack-charge/2':
+            rows += [('Pack charge received (gross)',val(charging['received_charge_Ah'],'Ah',4)),
+                     ('Pack charge delivered (gross)',val(charging['delivered_charge_Ah'],'Ah',4)),
+                     ('Net pack charge gained',val(charging['net_charge_gained_Ah'],'Ah',4))]
+            rows += [(names.get(cell,cell)+' net charge gained',val(value,'Ah',4)) for cell,value in charging['per_cell_charge_gained_Ah'].items()]
+        else:
+            rows.append(('Aggregate cell charge gained (historical; not pack Ah)',val(charging.get('charge_gained_Ah'),'Ah',4)))
+        rows += [('Energy received',val(charging['energy_received_Wh'],'Wh',4)),('Why it stopped',charging['stop_message'])]
+        assessment+='<h2>Charging result</h2>'+table(rows)+'<p>'+escape(charging['note'])+'</p>'
+    link_checks=record['summary'].get('link_checks')
+    if link_checks:
+        rows=[('Connection','Peak current','Peak resistive loss')]
+        for link in link_checks['links']:
+            # Historical zero-ohm summaries used zero for an uncomputed current.
+            wire=next((w for w in graph['connections'] if w['id']==link['connection']),None)
+            current=None if wire and wire['resistance_mohm']==0 else link.get('peak_current_A')
+            rows.append((link['connection'],'Not computed (ideal link)' if current is None else val(current,'A',4),val(link['peak_loss_W'],'W',4)))
+        assessment+='<h2>Calculated connection currents</h2>'+table(rows)+'<p>'+escape(link_checks['note'])+'</p>'
     parts=record.get('parts')
     if parts:
-        rows=[('Part','Quantity','Unit price','Cost','Sellers averaged')]
+        rows=[('Part','Quantity','Unit price','Cost','Compatibility')]
         for line in parts['lines']:
+            compatibility=line.get('compatibility')
+            status=compatibility['status'].replace('_',' ') if compatibility else 'Not assessed' if line.get('slot') in ('converter','protection') else 'Listed item'
             rows.append((line['part'],f'{line["quantity"]:.4g} {line["unit"]}',f'{line["currency"]} {line["unit_price"]:,.2f}' if line['priced'] else line['note'],
-                         f'{line["currency"]} {line["cost"]:,.2f}' if line['priced'] else 'Not priced',line.get('listing_count','')))
+                         f'{line["currency"]} {line["cost"]:,.2f}' if line['priced'] else 'Not priced',status))
         assessment+='<h2>Parts and listed cost</h2>'+table(rows)+'<p>'+escape(' + '.join(f'{k} {v:,.2f}' for k,v in parts['subtotals'].items()))+(' plus unpriced parts' if parts['unpriced'] else '')+'. '+escape(parts['scope'])+' Prices checked '+escape(str(parts.get('checked')))+'.</p>'
+        for line in parts['lines']:
+            compatibility=line.get('compatibility')
+            if compatibility:
+                details=compatibility.get('reasons',[])+compatibility.get('conditions',[])
+                assessment+='<p>'+escape(line['part']+': '+' '.join(details))+'</p>'
     return '''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>VOLT-FORGE experiment report</title><style>body{font:15px/1.65 system-ui;color:#213247;max-width:900px;padding:40px 24px;margin:auto}h1{font-size:32px;line-height:1.2}h2{font-size:21px;margin:34px 0 12px}p{max-width:80ch;color:#52647a}table{width:100%;border-collapse:collapse;font-size:13px}td{padding:10px 14px 10px 0;border-bottom:1px solid #dfe6ee}svg{max-width:100%;height:auto}a{color:#2458c5}.notice{padding:14px;background:#f5f0e7}.meta{font-size:12px}footer{margin-top:40px;border-top:1px solid #dfe6ee;font-size:12px;color:#596b80}@media print{body{padding:0}svg,table{break-inside:avoid}h2{break-after:avoid}}</style>'''+f'<h1>{escape(record["design_name"])}</h1><p>{escape(record["name"])}</p><p class="meta">Saved {escape(record["created_utc"])} · Numerical simulation</p>'+stopped+assessment+'<h2>Results</h2>'+table(values)+'<h2>What this experiment shows</h2>'+''.join('<p>'+escape(i)+'</p>' for i in record['summary']['insights'])+''.join(plots)+'<h2>Test conditions</h2><p>Positive current discharges through the chosen battery output. Negative current charges. Room temperature: '+val(settings['ambient_C'],'°C')+'. Solver step: '+val(settings['dt_s'],'s')+'.</p>'+table([('Start','End','Battery current')]+loads)+'<h2>Cells and starting states</h2>'+table([('Cell','Model profile','Starting charge','Starting temperature')]+cells)+'<h2>Electrical connections</h2>'+table([('First terminal','Second terminal','Resistance','Source')]+links)+evidence+'<footer>Open results.csv for the numeric series. Run replay.py with requirements.txt to reproduce this experiment using its captured model and source versions.</footer></html>'

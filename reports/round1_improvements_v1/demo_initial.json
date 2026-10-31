@@ -1,0 +1,1411 @@
+{
+  "scope": "Software workflow demonstration; three manually declared nominal cases. No measured module validation or robust design ranking.",
+  "project": "C:\\Users\\DELL\\Desktop\\volt-forge\\workspace\\v4_review_demo",
+  "software_hash": "46d085edff12e253f1228c8be3bade1e3c8fb97e36f6ab2d7a8812d98ccf817f",
+  "model_hash": "795101f9ec56948b15d1419c7c96784d854d182645aae365e1f0791f02b29276",
+  "declared_cases": [
+    {
+      "count": 4,
+      "name": "Review demo: 4-cell baseline"
+    },
+    {
+      "count": 3,
+      "name": "Review demo: 3-cell alternative"
+    },
+    {
+      "count": 2,
+      "name": "Review demo: 2-cell alternative"
+    }
+  ],
+  "runs": [
+    {
+      "id": "test_5eb91869e765abdd",
+      "design_id": "design_f610ccd5a622064e",
+      "name": "Review demo: 4-cell baseline",
+      "status": "completed",
+      "metrics": {
+        "peak_temperature_C": 24.551052526234535,
+        "warmest_cell": "cell1",
+        "warmest_time_s": 600.0,
+        "peak_cell_current_A": 2.6402001062558447,
+        "busiest_cell": "cell1",
+        "minimum_voltage_V": 3.701560696273785,
+        "final_voltage_V": 3.701560696273785,
+        "delivered_energy_Wh": 5.273593704292482,
+        "received_energy_Wh": 0.0,
+        "net_energy_Wh": 5.273593704292482,
+        "duration_s": 600.0,
+        "maximum_temperature_spread_C": 0.4040465743686177,
+        "imbalance_pct": 43.089090420742444,
+        "current_gap_A": 0.9067569532984523,
+        "conductor_mass_g": null
+      },
+      "operating_limit_coverage": {
+        "version": "voltforge.operating-limit-coverage/1",
+        "complete": true,
+        "cells": [
+          {
+            "cell": "cell1",
+            "directions": [
+              "discharge"
+            ],
+            "complete": true,
+            "missing": [],
+            "limits": {
+              "voltage_V": [
+                2.5,
+                4.2
+              ],
+              "max_discharge_A": 7.275,
+              "max_charge_A": 3.395,
+              "source_url": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf",
+              "source_revision": "2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4",
+              "charge_temperature_C": [
+                0.0,
+                45.0
+              ],
+              "discharge_temperature_C": [
+                -20.0,
+                55.0
+              ]
+            },
+            "current_rule": "Deployed LG temperature-dependent current limits",
+            "basis": "deployed_model"
+          },
+          {
+            "cell": "cell2",
+            "directions": [
+              "discharge"
+            ],
+            "complete": true,
+            "missing": [],
+            "limits": {
+              "voltage_V": [
+                2.5,
+                4.2
+              ],
+              "max_discharge_A": 7.275,
+              "max_charge_A": 3.395,
+              "source_url": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf",
+              "source_revision": "2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4",
+              "charge_temperature_C": [
+                0.0,
+                45.0
+              ],
+              "discharge_temperature_C": [
+                -20.0,
+                55.0
+              ]
+            },
+            "current_rule": "Deployed LG temperature-dependent current limits",
+            "basis": "deployed_model"
+          },
+          {
+            "cell": "cell3",
+            "directions": [
+              "discharge"
+            ],
+            "complete": true,
+            "missing": [],
+            "limits": {
+              "voltage_V": [
+                2.5,
+                4.2
+              ],
+              "max_discharge_A": 7.275,
+              "max_charge_A": 3.395,
+              "source_url": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf",
+              "source_revision": "2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4",
+              "charge_temperature_C": [
+                0.0,
+                45.0
+              ],
+              "discharge_temperature_C": [
+                -20.0,
+                55.0
+              ]
+            },
+            "current_rule": "Deployed LG temperature-dependent current limits",
+            "basis": "deployed_model"
+          },
+          {
+            "cell": "cell4",
+            "directions": [
+              "discharge"
+            ],
+            "complete": true,
+            "missing": [],
+            "limits": {
+              "voltage_V": [
+                2.5,
+                4.2
+              ],
+              "max_discharge_A": 7.275,
+              "max_charge_A": 3.395,
+              "source_url": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf",
+              "source_revision": "2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4",
+              "charge_temperature_C": [
+                0.0,
+                45.0
+              ],
+              "discharge_temperature_C": [
+                -20.0,
+                55.0
+              ]
+            },
+            "current_rule": "Deployed LG temperature-dependent current limits",
+            "basis": "deployed_model"
+          }
+        ],
+        "note": "Coverage of recorded operating limits for calculated branch-current directions; not hardware certification."
+      },
+      "requirement_checks": [
+        {
+          "metric": "min_voltage_V",
+          "value": 3.701560696273785,
+          "target": 3.3,
+          "status": "within_target"
+        }
+      ],
+      "parts": {
+        "version": "voltforge.parts-prices/1",
+        "lines": [
+          {
+            "specification": null,
+            "limits": null,
+            "part": "LG INR21700-M50T cell",
+            "slot": "cell",
+            "quantity": 4,
+            "unit": "cells",
+            "listings": [
+              {
+                "seller": "Robu",
+                "price": 1206,
+                "currency": "INR",
+                "url": "https://robu.in/product/lg-inr21700-m50t-5000mah-1c-li-ion-battery/",
+                "tax": "Includes GST",
+                "availability": "Out of stock"
+              }
+            ],
+            "exclusions": "Listing includes GST. Listed as out of stock when checked.",
+            "checked": "2026-10-30",
+            "priced": true,
+            "unit_price": 1206.0,
+            "currency": "INR",
+            "listing_count": 1,
+            "cost": 4824.0
+          },
+          {
+            "part": "Connections",
+            "slot": "conductor",
+            "quantity": 6,
+            "unit": "links",
+            "priced": false,
+            "listings": [],
+            "note": "Give the links dimensions to price them."
+          },
+          {
+            "specification": "Four 21700 slots, 5.1 V \u00c2\u00b15% at up to 6 A, for Raspberry Pi 5.",
+            "limits": "No battery-side cutoff or efficiency is published, and the listing does not confirm running with fewer than four cells fitted.",
+            "part": "Geekworm X1206 V2.0 UPS board",
+            "slot": "converter",
+            "quantity": 1,
+            "unit": "candidate part",
+            "listings": [
+              {
+                "seller": "Geekworm",
+                "price": 52.0,
+                "currency": "USD",
+                "url": "https://geekworm.com/products/x1206",
+                "tax": "Not stated",
+                "availability": "Contradictory on the page"
+              }
+            ],
+            "exclusions": "Batteries, shipping and import duty not included. The page showed both \"Only 37 items in stock\" and \"Out of stock\".",
+            "checked": "2026-10-30",
+            "priced": true,
+            "unit_price": 52.0,
+            "currency": "USD",
+            "listing_count": 1,
+            "cost": 52.0,
+            "selection": "candidate",
+            "compatibility": {
+              "status": "conditional",
+              "reasons": [],
+              "conditions": [
+                "Battery-side current limits, contact/trace losses, backup efficiency and actual charger/protection settings remain unassessed.",
+                "The drawn wiring and cell temperature sensing must match the assembled board; an ideal virtual switch is not its protection circuit."
+              ],
+              "demand": {
+                "status": "consistent",
+                "power_W": 25.0,
+                "reason": "Live discharge current and voltage floor match the recorded power and efficiency assumptions; this remains a constant-current proxy."
+              },
+              "source_url": "https://wiki.geekworm.com/X1206",
+              "note": "Candidate screening only; no board has been validated for this design."
+            }
+          },
+          {
+            "specification": "The maker lists battery overcurrent, overvoltage and reverse-cell protection. Not certified or independently tested here.",
+            "limits": null,
+            "part": "Battery protection",
+            "slot": "protection",
+            "quantity": 1,
+            "unit": "candidate part",
+            "listings": [],
+            "exclusions": "",
+            "checked": null,
+            "priced": false,
+            "included": false,
+            "note": "Listed on candidate board; compatibility and cell protection remain unassessed.",
+            "selection": "candidate",
+            "included_in_candidate": true,
+            "compatibility": {
+              "status": "not_assessed",
+              "reasons": [
+                "Protection listed on a candidate board does not establish protection of this drawn battery."
+              ],
+              "conditions": [
+                "Battery-side current limits, contact/trace losses, backup efficiency and actual charger/protection settings remain unassessed.",
+                "The drawn wiring and cell temperature sensing must match the assembled board; an ideal virtual switch is not its protection circuit."
+              ]
+            }
+          }
+        ],
+        "subtotals": {
+          "INR": 4824.0,
+          "USD": 52.0
+        },
+        "unpriced": [
+          "Connections",
+          "Battery protection"
+        ],
+        "cell_subtotals": {
+          "INR": 4824.0
+        },
+        "cell_cost_complete": true,
+        "cell_mass_g": 280.0,
+        "listed_mass_g": 280.0,
+        "scope": "Listed cells and candidate parts only; a price does not establish compatibility or protection. Shipping, fabrication, enclosure and assembly are not included.",
+        "checked": "2026-10-30"
+      },
+      "graph": {
+        "version": "studio.graph.1",
+        "name": "Review demo: 4-cell baseline",
+        "cells": [
+          {
+            "id": "cell1",
+            "name": "Cell 1",
+            "model": "LG_M50T_ECN",
+            "x": 180,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell2",
+            "name": "Cell 2",
+            "model": "LG_M50T_ECN",
+            "x": 390,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell3",
+            "name": "Cell 3",
+            "model": "LG_M50T_ECN",
+            "x": 600,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell4",
+            "name": "Cell 4",
+            "model": "LG_M50T_ECN",
+            "x": 810,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          }
+        ],
+        "connections": [
+          {
+            "id": "wire1",
+            "a": "cell1:p",
+            "b": "cell2:p",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          {
+            "id": "wire2",
+            "a": "cell1:n",
+            "b": "cell2:n",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          {
+            "id": "wire3",
+            "a": "cell2:p",
+            "b": "cell3:p",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          {
+            "id": "wire4",
+            "a": "cell2:n",
+            "b": "cell3:n",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          {
+            "id": "wire5",
+            "a": "cell3:p",
+            "b": "cell4:p",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          {
+            "id": "wire6",
+            "a": "cell3:n",
+            "b": "cell4:n",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          }
+        ],
+        "output": {
+          "positive": "cell1:p",
+          "negative": "cell1:n"
+        },
+        "thermal": {
+          "heat_capacity_J_K": 69.25,
+          "ambient_conductance_W_K": 0.148629,
+          "wire_heat_fraction": 0.5,
+          "contacts": []
+        }
+      },
+      "settings": {
+        "profile": [
+          {
+            "start_s": 0.0,
+            "end_s": 600.0,
+            "current_A": 8.417508417508419
+          }
+        ],
+        "ambient_C": 23.0,
+        "dt_s": 0.5,
+        "limits": {
+          "temperature_C": null,
+          "current_A": null,
+          "min_voltage_V": 3.3,
+          "imbalance_pct": null
+        },
+        "case": {
+          "name": "Raspberry Pi 5 gateway backup",
+          "purpose": "Keep a Raspberry Pi 5 monitoring gateway running through a short power cut.",
+          "source": "5 V, 5 A supply recommendation from Raspberry Pi. Converter efficiency, run time, voltage limit and room temperature are study assumptions."
+        },
+        "mission": {
+          "version": "voltforge.mission/1",
+          "preset": "pi5_gateway_backup",
+          "test_type": "discharge",
+          "case": {
+            "name": "Raspberry Pi 5 gateway backup",
+            "purpose": "Keep a Raspberry Pi 5 monitoring gateway running through a short power cut.",
+            "source": "5 V, 5 A supply recommendation from Raspberry Pi. Converter efficiency, run time, voltage limit and room temperature are study assumptions."
+          },
+          "load": {
+            "kind": "power",
+            "power_W": 25.0,
+            "converter_efficiency": 0.9,
+            "current_A": 8.417508417508419
+          },
+          "requirements": [
+            {
+              "key": "device_power_W",
+              "label": "Pi supply power",
+              "value": 25.0,
+              "unit": "W",
+              "basis": "sourced",
+              "reason": "The 5 V, 5 A recommended supply, an upper envelope and not a measured draw.",
+              "source_url": "https://www.raspberrypi.com/products/raspberry-pi-5/"
+            },
+            {
+              "key": "converter_efficiency",
+              "label": "Backup converter efficiency",
+              "value": 0.9,
+              "unit": "ratio",
+              "basis": "assumed",
+              "reason": "Battery-to-Pi study assumption; no measured backup-efficiency curve is supplied. The X1205 advertised 95% refers to its external power-input step-down path."
+            },
+            {
+              "key": "load_current_A",
+              "label": "Battery current",
+              "value": 8.417508417508419,
+              "unit": "A",
+              "basis": "assumed",
+              "reason": "Power divided by efficiency and the voltage limit. Held constant as an approximation."
+            },
+            {
+              "key": "duration_s",
+              "label": "Run time",
+              "value": 600.0,
+              "unit": "s",
+              "basis": "assumed",
+              "reason": "Covers a short outage or a safe shutdown."
+            },
+            {
+              "key": "voltage_floor_V",
+              "label": "Lowest battery voltage",
+              "value": 3.3,
+              "unit": "V",
+              "basis": "assumed",
+              "reason": "Declared minimum at the converter input. Cautious: the X1205 board lists a 2.4 V cutoff."
+            },
+            {
+              "key": "ambient_C",
+              "label": "Room temperature",
+              "value": 23.0,
+              "unit": "\u00b0C",
+              "basis": "assumed",
+              "reason": "Declared study condition."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test_2789ee3e71de263d",
+      "design_id": "design_59872935246ea841",
+      "name": "Review demo: 3-cell alternative",
+      "status": "completed",
+      "metrics": {
+        "peak_temperature_C": 25.368585083903714,
+        "warmest_cell": "cell1",
+        "warmest_time_s": 600.0,
+        "peak_cell_current_A": 3.160308260892891,
+        "busiest_cell": "cell1",
+        "minimum_voltage_V": 3.64390583728182,
+        "final_voltage_V": 3.64390583728182,
+        "delivered_energy_Wh": 5.215410505350657,
+        "received_energy_Wh": 0.0,
+        "net_energy_Wh": 5.215410505350657,
+        "duration_s": 600.0,
+        "maximum_temperature_spread_C": 0.32793577304844135,
+        "imbalance_pct": 22.62037034387901,
+        "current_gap_A": 0.6346905259225313,
+        "conductor_mass_g": null
+      },
+      "operating_limit_coverage": {
+        "version": "voltforge.operating-limit-coverage/1",
+        "complete": true,
+        "cells": [
+          {
+            "cell": "cell1",
+            "directions": [
+              "discharge"
+            ],
+            "complete": true,
+            "missing": [],
+            "limits": {
+              "voltage_V": [
+                2.5,
+                4.2
+              ],
+              "max_discharge_A": 7.275,
+              "max_charge_A": 3.395,
+              "source_url": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf",
+              "source_revision": "2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4",
+              "charge_temperature_C": [
+                0.0,
+                45.0
+              ],
+              "discharge_temperature_C": [
+                -20.0,
+                55.0
+              ]
+            },
+            "current_rule": "Deployed LG temperature-dependent current limits",
+            "basis": "deployed_model"
+          },
+          {
+            "cell": "cell2",
+            "directions": [
+              "discharge"
+            ],
+            "complete": true,
+            "missing": [],
+            "limits": {
+              "voltage_V": [
+                2.5,
+                4.2
+              ],
+              "max_discharge_A": 7.275,
+              "max_charge_A": 3.395,
+              "source_url": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf",
+              "source_revision": "2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4",
+              "charge_temperature_C": [
+                0.0,
+                45.0
+              ],
+              "discharge_temperature_C": [
+                -20.0,
+                55.0
+              ]
+            },
+            "current_rule": "Deployed LG temperature-dependent current limits",
+            "basis": "deployed_model"
+          },
+          {
+            "cell": "cell3",
+            "directions": [
+              "discharge"
+            ],
+            "complete": true,
+            "missing": [],
+            "limits": {
+              "voltage_V": [
+                2.5,
+                4.2
+              ],
+              "max_discharge_A": 7.275,
+              "max_charge_A": 3.395,
+              "source_url": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf",
+              "source_revision": "2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4",
+              "charge_temperature_C": [
+                0.0,
+                45.0
+              ],
+              "discharge_temperature_C": [
+                -20.0,
+                55.0
+              ]
+            },
+            "current_rule": "Deployed LG temperature-dependent current limits",
+            "basis": "deployed_model"
+          }
+        ],
+        "note": "Coverage of recorded operating limits for calculated branch-current directions; not hardware certification."
+      },
+      "requirement_checks": [
+        {
+          "metric": "min_voltage_V",
+          "value": 3.64390583728182,
+          "target": 3.3,
+          "status": "within_target"
+        }
+      ],
+      "parts": {
+        "version": "voltforge.parts-prices/1",
+        "lines": [
+          {
+            "specification": null,
+            "limits": null,
+            "part": "LG INR21700-M50T cell",
+            "slot": "cell",
+            "quantity": 3,
+            "unit": "cells",
+            "listings": [
+              {
+                "seller": "Robu",
+                "price": 1206,
+                "currency": "INR",
+                "url": "https://robu.in/product/lg-inr21700-m50t-5000mah-1c-li-ion-battery/",
+                "tax": "Includes GST",
+                "availability": "Out of stock"
+              }
+            ],
+            "exclusions": "Listing includes GST. Listed as out of stock when checked.",
+            "checked": "2026-10-30",
+            "priced": true,
+            "unit_price": 1206.0,
+            "currency": "INR",
+            "listing_count": 1,
+            "cost": 3618.0
+          },
+          {
+            "part": "Connections",
+            "slot": "conductor",
+            "quantity": 4,
+            "unit": "links",
+            "priced": false,
+            "listings": [],
+            "note": "Give the links dimensions to price them."
+          },
+          {
+            "specification": "Four 21700 slots, 5.1 V \u00c2\u00b15% at up to 6 A, for Raspberry Pi 5.",
+            "limits": "No battery-side cutoff or efficiency is published, and the listing does not confirm running with fewer than four cells fitted.",
+            "part": "Geekworm X1206 V2.0 UPS board",
+            "slot": "converter",
+            "quantity": 1,
+            "unit": "candidate part",
+            "listings": [
+              {
+                "seller": "Geekworm",
+                "price": 52.0,
+                "currency": "USD",
+                "url": "https://geekworm.com/products/x1206",
+                "tax": "Not stated",
+                "availability": "Contradictory on the page"
+              }
+            ],
+            "exclusions": "Batteries, shipping and import duty not included. The page showed both \"Only 37 items in stock\" and \"Out of stock\".",
+            "checked": "2026-10-30",
+            "priced": true,
+            "unit_price": 52.0,
+            "currency": "USD",
+            "listing_count": 1,
+            "cost": 52.0,
+            "selection": "candidate",
+            "compatibility": {
+              "status": "not_assessed",
+              "reasons": [
+                "Operation with 3 cells in this 4-slot board is not established."
+              ],
+              "conditions": [
+                "Battery-side current limits, contact/trace losses, backup efficiency and actual charger/protection settings remain unassessed.",
+                "The drawn wiring and cell temperature sensing must match the assembled board; an ideal virtual switch is not its protection circuit."
+              ],
+              "demand": {
+                "status": "consistent",
+                "power_W": 25.0,
+                "reason": "Live discharge current and voltage floor match the recorded power and efficiency assumptions; this remains a constant-current proxy."
+              },
+              "source_url": "https://wiki.geekworm.com/X1206",
+              "note": "Candidate screening only; no board has been validated for this design."
+            }
+          },
+          {
+            "specification": "The maker lists battery overcurrent, overvoltage and reverse-cell protection. Not certified or independently tested here.",
+            "limits": null,
+            "part": "Battery protection",
+            "slot": "protection",
+            "quantity": 1,
+            "unit": "candidate part",
+            "listings": [],
+            "exclusions": "",
+            "checked": null,
+            "priced": false,
+            "included": false,
+            "note": "Listed on candidate board; compatibility and cell protection remain unassessed.",
+            "selection": "candidate",
+            "included_in_candidate": true,
+            "compatibility": {
+              "status": "not_assessed",
+              "reasons": [
+                "Protection listed on a candidate board does not establish protection of this drawn battery."
+              ],
+              "conditions": [
+                "Battery-side current limits, contact/trace losses, backup efficiency and actual charger/protection settings remain unassessed.",
+                "The drawn wiring and cell temperature sensing must match the assembled board; an ideal virtual switch is not its protection circuit."
+              ]
+            }
+          }
+        ],
+        "subtotals": {
+          "INR": 3618.0,
+          "USD": 52.0
+        },
+        "unpriced": [
+          "Connections",
+          "Battery protection"
+        ],
+        "cell_subtotals": {
+          "INR": 3618.0
+        },
+        "cell_cost_complete": true,
+        "cell_mass_g": 210.00000000000003,
+        "listed_mass_g": 210.00000000000003,
+        "scope": "Listed cells and candidate parts only; a price does not establish compatibility or protection. Shipping, fabrication, enclosure and assembly are not included.",
+        "checked": "2026-10-30"
+      },
+      "graph": {
+        "version": "studio.graph.1",
+        "name": "Review demo: 3-cell alternative",
+        "cells": [
+          {
+            "id": "cell1",
+            "name": "Cell 1",
+            "model": "LG_M50T_ECN",
+            "x": 180,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell2",
+            "name": "Cell 2",
+            "model": "LG_M50T_ECN",
+            "x": 390,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell3",
+            "name": "Cell 3",
+            "model": "LG_M50T_ECN",
+            "x": 600,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          }
+        ],
+        "connections": [
+          {
+            "id": "wire1",
+            "a": "cell1:p",
+            "b": "cell2:p",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          {
+            "id": "wire2",
+            "a": "cell1:n",
+            "b": "cell2:n",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          {
+            "id": "wire3",
+            "a": "cell2:p",
+            "b": "cell3:p",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          {
+            "id": "wire4",
+            "a": "cell2:n",
+            "b": "cell3:n",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          }
+        ],
+        "output": {
+          "positive": "cell1:p",
+          "negative": "cell1:n"
+        },
+        "thermal": {
+          "heat_capacity_J_K": 69.25,
+          "ambient_conductance_W_K": 0.148629,
+          "wire_heat_fraction": 0.5,
+          "contacts": []
+        }
+      },
+      "settings": {
+        "profile": [
+          {
+            "start_s": 0.0,
+            "end_s": 600.0,
+            "current_A": 8.417508417508419
+          }
+        ],
+        "ambient_C": 23.0,
+        "dt_s": 0.5,
+        "limits": {
+          "temperature_C": null,
+          "current_A": null,
+          "min_voltage_V": 3.3,
+          "imbalance_pct": null
+        },
+        "case": {
+          "name": "Raspberry Pi 5 gateway backup",
+          "purpose": "Keep a Raspberry Pi 5 monitoring gateway running through a short power cut.",
+          "source": "5 V, 5 A supply recommendation from Raspberry Pi. Converter efficiency, run time, voltage limit and room temperature are study assumptions."
+        },
+        "mission": {
+          "version": "voltforge.mission/1",
+          "preset": "pi5_gateway_backup",
+          "test_type": "discharge",
+          "case": {
+            "name": "Raspberry Pi 5 gateway backup",
+            "purpose": "Keep a Raspberry Pi 5 monitoring gateway running through a short power cut.",
+            "source": "5 V, 5 A supply recommendation from Raspberry Pi. Converter efficiency, run time, voltage limit and room temperature are study assumptions."
+          },
+          "load": {
+            "kind": "power",
+            "power_W": 25.0,
+            "converter_efficiency": 0.9,
+            "current_A": 8.417508417508419
+          },
+          "requirements": [
+            {
+              "key": "device_power_W",
+              "label": "Pi supply power",
+              "value": 25.0,
+              "unit": "W",
+              "basis": "sourced",
+              "reason": "The 5 V, 5 A recommended supply, an upper envelope and not a measured draw.",
+              "source_url": "https://www.raspberrypi.com/products/raspberry-pi-5/"
+            },
+            {
+              "key": "converter_efficiency",
+              "label": "Backup converter efficiency",
+              "value": 0.9,
+              "unit": "ratio",
+              "basis": "assumed",
+              "reason": "Battery-to-Pi study assumption; no measured backup-efficiency curve is supplied. The X1205 advertised 95% refers to its external power-input step-down path."
+            },
+            {
+              "key": "load_current_A",
+              "label": "Battery current",
+              "value": 8.417508417508419,
+              "unit": "A",
+              "basis": "assumed",
+              "reason": "Power divided by efficiency and the voltage limit. Held constant as an approximation."
+            },
+            {
+              "key": "duration_s",
+              "label": "Run time",
+              "value": 600.0,
+              "unit": "s",
+              "basis": "assumed",
+              "reason": "Covers a short outage or a safe shutdown."
+            },
+            {
+              "key": "voltage_floor_V",
+              "label": "Lowest battery voltage",
+              "value": 3.3,
+              "unit": "V",
+              "basis": "assumed",
+              "reason": "Declared minimum at the converter input. Cautious: the X1205 board lists a 2.4 V cutoff."
+            },
+            {
+              "key": "ambient_C",
+              "label": "Room temperature",
+              "value": 23.0,
+              "unit": "\u00b0C",
+              "basis": "assumed",
+              "reason": "Declared study condition."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test_f73f59733e3676b1",
+      "design_id": "design_cfdc48d3b7217a1e",
+      "name": "Review demo: 2-cell alternative",
+      "status": "completed",
+      "metrics": {
+        "peak_temperature_C": 27.47073970860489,
+        "warmest_cell": "cell1",
+        "warmest_time_s": 600.0,
+        "peak_cell_current_A": 4.373643259213233,
+        "busiest_cell": "cell1",
+        "minimum_voltage_V": 3.5401489155294783,
+        "final_voltage_V": 3.5401489155294783,
+        "delivered_energy_Wh": 5.0999211720472974,
+        "received_energy_Wh": 0.0,
+        "net_energy_Wh": 5.0999211720472974,
+        "duration_s": 600.0,
+        "maximum_temperature_spread_C": 0.21152365035478127,
+        "imbalance_pct": 7.835527677812784,
+        "current_gap_A": 0.3297781009180465,
+        "conductor_mass_g": null
+      },
+      "operating_limit_coverage": {
+        "version": "voltforge.operating-limit-coverage/1",
+        "complete": true,
+        "cells": [
+          {
+            "cell": "cell1",
+            "directions": [
+              "discharge"
+            ],
+            "complete": true,
+            "missing": [],
+            "limits": {
+              "voltage_V": [
+                2.5,
+                4.2
+              ],
+              "max_discharge_A": 7.275,
+              "max_charge_A": 3.395,
+              "source_url": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf",
+              "source_revision": "2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4",
+              "charge_temperature_C": [
+                0.0,
+                45.0
+              ],
+              "discharge_temperature_C": [
+                -20.0,
+                55.0
+              ]
+            },
+            "current_rule": "Deployed LG temperature-dependent current limits",
+            "basis": "deployed_model"
+          },
+          {
+            "cell": "cell2",
+            "directions": [
+              "discharge"
+            ],
+            "complete": true,
+            "missing": [],
+            "limits": {
+              "voltage_V": [
+                2.5,
+                4.2
+              ],
+              "max_discharge_A": 7.275,
+              "max_charge_A": 3.395,
+              "source_url": "https://mytyva.com/wp-content/uploads/2023/05/M50T-LG-CHEM-.pdf",
+              "source_revision": "2018-07-16 Rev 0 draft; temperature-dependent current limits in sections 4.2.3 and 4.2.4",
+              "charge_temperature_C": [
+                0.0,
+                45.0
+              ],
+              "discharge_temperature_C": [
+                -20.0,
+                55.0
+              ]
+            },
+            "current_rule": "Deployed LG temperature-dependent current limits",
+            "basis": "deployed_model"
+          }
+        ],
+        "note": "Coverage of recorded operating limits for calculated branch-current directions; not hardware certification."
+      },
+      "requirement_checks": [
+        {
+          "metric": "min_voltage_V",
+          "value": 3.5401489155294783,
+          "target": 3.3,
+          "status": "within_target"
+        }
+      ],
+      "parts": {
+        "version": "voltforge.parts-prices/1",
+        "lines": [
+          {
+            "specification": null,
+            "limits": null,
+            "part": "LG INR21700-M50T cell",
+            "slot": "cell",
+            "quantity": 2,
+            "unit": "cells",
+            "listings": [
+              {
+                "seller": "Robu",
+                "price": 1206,
+                "currency": "INR",
+                "url": "https://robu.in/product/lg-inr21700-m50t-5000mah-1c-li-ion-battery/",
+                "tax": "Includes GST",
+                "availability": "Out of stock"
+              }
+            ],
+            "exclusions": "Listing includes GST. Listed as out of stock when checked.",
+            "checked": "2026-10-30",
+            "priced": true,
+            "unit_price": 1206.0,
+            "currency": "INR",
+            "listing_count": 1,
+            "cost": 2412.0
+          },
+          {
+            "part": "Connections",
+            "slot": "conductor",
+            "quantity": 2,
+            "unit": "links",
+            "priced": false,
+            "listings": [],
+            "note": "Give the links dimensions to price them."
+          },
+          {
+            "specification": "Two 21700 slots, 5.1 V \u00c2\u00b15% at up to 6 A, for Raspberry Pi 5.",
+            "limits": "Battery-to-Pi efficiency and battery overcurrent threshold are unmeasured. The advertised 95% refers to the external-input step-down path. The documented v1.1 cutoff is 2.4 V; charge-path compatibility remains unassessed.",
+            "part": "Geekworm X1205 2-cell UPS HAT",
+            "slot": "converter",
+            "quantity": 1,
+            "unit": "candidate part",
+            "listings": [
+              {
+                "seller": "Geekworm",
+                "price": 46.0,
+                "currency": "USD",
+                "url": "https://geekworm.com/products/x1205",
+                "tax": "Not stated",
+                "availability": "Contradictory on the page"
+              }
+            ],
+            "exclusions": "Batteries, shipping and import duty not included. The page showed both \"Only 118 items in stock\" and \"Out of stock\".",
+            "checked": "2026-10-30",
+            "priced": true,
+            "unit_price": 46.0,
+            "currency": "USD",
+            "listing_count": 1,
+            "cost": 46.0,
+            "selection": "candidate",
+            "compatibility": {
+              "status": "conditional",
+              "reasons": [],
+              "conditions": [
+                "Battery-side current limits, contact/trace losses, backup efficiency and actual charger/protection settings remain unassessed.",
+                "The drawn wiring and cell temperature sensing must match the assembled board; an ideal virtual switch is not its protection circuit.",
+                "The advertised 95% belongs to the external-input step-down converter, not a measured battery-to-Pi efficiency curve.",
+                "The advertised charger maximum is 3 A total. Check each cell's charge limit and unequal sharing; two LG M50T cells at 23 C have a deployed equal-share ceiling of 2.91 A before margin.",
+                "The documented v1.1 2.4 V hardware cutoff does not implement the mission's 3.3 V floor or the LG cell model's 2.5 V cutoff."
+              ],
+              "demand": {
+                "status": "consistent",
+                "power_W": 25.0,
+                "reason": "Live discharge current and voltage floor match the recorded power and efficiency assumptions; this remains a constant-current proxy."
+              },
+              "source_url": "https://wiki.geekworm.com/X1205",
+              "note": "Candidate screening only; no board has been validated for this design."
+            },
+            "listed_limits": "Lists up to 95% efficiency and a 2.4 V over-discharge cutoff on v1.1. No battery overcurrent threshold is published."
+          },
+          {
+            "specification": "The maker lists battery overcurrent, overvoltage and reverse-cell protection, with a 2.4 V over-discharge cutoff on v1.1. Not certified or independently tested here.",
+            "limits": null,
+            "part": "Battery protection",
+            "slot": "protection",
+            "quantity": 1,
+            "unit": "candidate part",
+            "listings": [],
+            "exclusions": "",
+            "checked": null,
+            "priced": false,
+            "included": false,
+            "note": "Listed on candidate board; compatibility and cell protection remain unassessed.",
+            "selection": "candidate",
+            "included_in_candidate": true,
+            "compatibility": {
+              "status": "not_assessed",
+              "reasons": [
+                "Protection listed on a candidate board does not establish protection of this drawn battery."
+              ],
+              "conditions": [
+                "Battery-side current limits, contact/trace losses, backup efficiency and actual charger/protection settings remain unassessed.",
+                "The drawn wiring and cell temperature sensing must match the assembled board; an ideal virtual switch is not its protection circuit.",
+                "The advertised 95% belongs to the external-input step-down converter, not a measured battery-to-Pi efficiency curve.",
+                "The advertised charger maximum is 3 A total. Check each cell's charge limit and unequal sharing; two LG M50T cells at 23 C have a deployed equal-share ceiling of 2.91 A before margin.",
+                "The documented v1.1 2.4 V hardware cutoff does not implement the mission's 3.3 V floor or the LG cell model's 2.5 V cutoff."
+              ]
+            }
+          }
+        ],
+        "subtotals": {
+          "INR": 2412.0,
+          "USD": 46.0
+        },
+        "unpriced": [
+          "Connections",
+          "Battery protection"
+        ],
+        "cell_subtotals": {
+          "INR": 2412.0
+        },
+        "cell_cost_complete": true,
+        "cell_mass_g": 140.0,
+        "listed_mass_g": 140.0,
+        "scope": "Listed cells and candidate parts only; a price does not establish compatibility or protection. Shipping, fabrication, enclosure and assembly are not included.",
+        "checked": "2026-10-30"
+      },
+      "graph": {
+        "version": "studio.graph.1",
+        "name": "Review demo: 2-cell alternative",
+        "cells": [
+          {
+            "id": "cell1",
+            "name": "Cell 1",
+            "model": "LG_M50T_ECN",
+            "x": 180,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          {
+            "id": "cell2",
+            "name": "Cell 2",
+            "model": "LG_M50T_ECN",
+            "x": 390,
+            "y": 210,
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          }
+        ],
+        "connections": [
+          {
+            "id": "wire1",
+            "a": "cell1:p",
+            "b": "cell2:p",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          {
+            "id": "wire2",
+            "a": "cell1:n",
+            "b": "cell2:n",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          }
+        ],
+        "output": {
+          "positive": "cell1:p",
+          "negative": "cell1:n"
+        },
+        "thermal": {
+          "heat_capacity_J_K": 69.25,
+          "ambient_conductance_W_K": 0.148629,
+          "wire_heat_fraction": 0.5,
+          "contacts": []
+        }
+      },
+      "settings": {
+        "profile": [
+          {
+            "start_s": 0.0,
+            "end_s": 600.0,
+            "current_A": 8.417508417508419
+          }
+        ],
+        "ambient_C": 23.0,
+        "dt_s": 0.5,
+        "limits": {
+          "temperature_C": null,
+          "current_A": null,
+          "min_voltage_V": 3.3,
+          "imbalance_pct": null
+        },
+        "case": {
+          "name": "Raspberry Pi 5 gateway backup",
+          "purpose": "Keep a Raspberry Pi 5 monitoring gateway running through a short power cut.",
+          "source": "5 V, 5 A supply recommendation from Raspberry Pi. Converter efficiency, run time, voltage limit and room temperature are study assumptions."
+        },
+        "mission": {
+          "version": "voltforge.mission/1",
+          "preset": "pi5_gateway_backup",
+          "test_type": "discharge",
+          "case": {
+            "name": "Raspberry Pi 5 gateway backup",
+            "purpose": "Keep a Raspberry Pi 5 monitoring gateway running through a short power cut.",
+            "source": "5 V, 5 A supply recommendation from Raspberry Pi. Converter efficiency, run time, voltage limit and room temperature are study assumptions."
+          },
+          "load": {
+            "kind": "power",
+            "power_W": 25.0,
+            "converter_efficiency": 0.9,
+            "current_A": 8.417508417508419
+          },
+          "requirements": [
+            {
+              "key": "device_power_W",
+              "label": "Pi supply power",
+              "value": 25.0,
+              "unit": "W",
+              "basis": "sourced",
+              "reason": "The 5 V, 5 A recommended supply, an upper envelope and not a measured draw.",
+              "source_url": "https://www.raspberrypi.com/products/raspberry-pi-5/"
+            },
+            {
+              "key": "converter_efficiency",
+              "label": "Backup converter efficiency",
+              "value": 0.9,
+              "unit": "ratio",
+              "basis": "assumed",
+              "reason": "Battery-to-Pi study assumption; no measured backup-efficiency curve is supplied. The X1205 advertised 95% refers to its external power-input step-down path."
+            },
+            {
+              "key": "load_current_A",
+              "label": "Battery current",
+              "value": 8.417508417508419,
+              "unit": "A",
+              "basis": "assumed",
+              "reason": "Power divided by efficiency and the voltage limit. Held constant as an approximation."
+            },
+            {
+              "key": "duration_s",
+              "label": "Run time",
+              "value": 600.0,
+              "unit": "s",
+              "basis": "assumed",
+              "reason": "Covers a short outage or a safe shutdown."
+            },
+            {
+              "key": "voltage_floor_V",
+              "label": "Lowest battery voltage",
+              "value": 3.3,
+              "unit": "V",
+              "basis": "assumed",
+              "reason": "Declared minimum at the converter input. Cautious: the X1205 board lists a 2.4 V cutoff."
+            },
+            {
+              "key": "ambient_C",
+              "label": "Room temperature",
+              "value": 23.0,
+              "unit": "\u00b0C",
+              "basis": "assumed",
+              "reason": "Declared study condition."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "identical_test_conditions": true,
+      "deltas": {
+        "peak_temperature_C": 0.8175325576691783,
+        "warmest_time_s": 0.0,
+        "peak_cell_current_A": 0.5201081546370463,
+        "minimum_voltage_V": -0.057654858991964986,
+        "final_voltage_V": -0.057654858991964986,
+        "delivered_energy_Wh": -0.05818319894182533,
+        "received_energy_Wh": 0.0,
+        "net_energy_Wh": -0.05818319894182533,
+        "duration_s": 0.0,
+        "maximum_temperature_spread_C": -0.07611080132017634,
+        "imbalance_pct": -20.468720076863434,
+        "current_gap_A": -0.272066427375921
+      },
+      "design_changes": [
+        {
+          "path": "cells.cell4",
+          "before": {
+            "id": "cell4",
+            "model": "LG_M50T_ECN",
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          "after": null
+        },
+        {
+          "path": "connections.wire5",
+          "before": {
+            "id": "wire5",
+            "a": "cell3:p",
+            "b": "cell4:p",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          "after": null
+        },
+        {
+          "path": "connections.wire6",
+          "before": {
+            "id": "wire6",
+            "a": "cell3:n",
+            "b": "cell4:n",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          "after": null
+        }
+      ],
+      "settings_changes": [],
+      "model_versions_match": true,
+      "solver_versions_match": true,
+      "single_factor_comparison": false,
+      "comparable_duration": true,
+      "requirements_match": true,
+      "note": "Same test settings"
+    },
+    {
+      "identical_test_conditions": true,
+      "deltas": {
+        "peak_temperature_C": 2.919687182370353,
+        "warmest_time_s": 0.0,
+        "peak_cell_current_A": 1.733443152957388,
+        "minimum_voltage_V": -0.16141178074430673,
+        "final_voltage_V": -0.16141178074430673,
+        "delivered_energy_Wh": -0.17367253224518464,
+        "received_energy_Wh": 0.0,
+        "net_energy_Wh": -0.17367253224518464,
+        "duration_s": 0.0,
+        "maximum_temperature_spread_C": -0.19252292401383642,
+        "imbalance_pct": -35.25356274292966,
+        "current_gap_A": -0.5769788523804058
+      },
+      "design_changes": [
+        {
+          "path": "cells.cell3",
+          "before": {
+            "id": "cell3",
+            "model": "LG_M50T_ECN",
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          "after": null
+        },
+        {
+          "path": "cells.cell4",
+          "before": {
+            "id": "cell4",
+            "model": "LG_M50T_ECN",
+            "charge_pct": 70.0,
+            "temperature_C": 23.0,
+            "polarization_V": 0.0
+          },
+          "after": null
+        },
+        {
+          "path": "connections.wire3",
+          "before": {
+            "id": "wire3",
+            "a": "cell2:p",
+            "b": "cell3:p",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          "after": null
+        },
+        {
+          "path": "connections.wire4",
+          "before": {
+            "id": "wire4",
+            "a": "cell2:n",
+            "b": "cell3:n",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          "after": null
+        },
+        {
+          "path": "connections.wire5",
+          "before": {
+            "id": "wire5",
+            "a": "cell3:p",
+            "b": "cell4:p",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          "after": null
+        },
+        {
+          "path": "connections.wire6",
+          "before": {
+            "id": "wire6",
+            "a": "cell3:n",
+            "b": "cell4:n",
+            "resistance_mohm": 1.0,
+            "source": "User design assumption"
+          },
+          "after": null
+        }
+      ],
+      "settings_changes": [],
+      "model_versions_match": true,
+      "solver_versions_match": true,
+      "single_factor_comparison": false,
+      "comparable_duration": true,
+      "requirements_match": true,
+      "note": "Same test settings"
+    }
+  ]
+}

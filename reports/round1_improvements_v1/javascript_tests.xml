@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="colorFor hits the palette stops, blends channels as worked by hand, and falls back to neutral" time="0.006518" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\assembly.test.mjs"/>
+	<testcase name="textColorFor picks dark ink on light fills and white ink on dark fills" time="0.000644" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\assembly.test.mjs"/>
+	<testcase name="assemblySVG draws four selectable cells and six rail segments with hand-derived colours and legend" time="0.004851" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\assembly.test.mjs"/>
+	<testcase name="markup in identities and units is escaped and can never appear raw" time="0.002087" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\assembly.test.mjs"/>
+	<testcase name="output has no style attribute and no inline event handler attribute" time="0.002187" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\assembly.test.mjs"/>
+	<testcase name="overlay 'none' draws no legend, no time text and plain white cells" time="0.000945" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\assembly.test.mjs"/>
+	<testcase name="cell value text retains at least 4.5:1 contrast throughout both overlay scales" time="0.046010" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\assembly.test.mjs"/>
+	<testcase name="inherited and sensitivity runs cannot be selected as current nominal results" time="0.001973" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\editor_state.test.mjs"/>
+	<testcase name="late results fail the selection epoch after a variant change" time="0.000467" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\editor_state.test.mjs"/>
+	<testcase name="user content escapes markup and numeric edits reject empty or nonfinite input" time="0.000863" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\editor_state.test.mjs"/>
+	<testcase name="chart bounds show negative charge and flat data without undefined scales" time="0.001528" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\editor_state.test.mjs"/>
+	<testcase name="investigation exposes thermal failures without concealing electrical results" time="0.005311" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\panels.test.mjs"/>
+	<testcase name="rangeOf collects finite values from cell_1..cell_4 only" time="0.001898" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\panels.test.mjs"/>
+	<testcase name="thermalMetricsHTML shows an unavailable card with its reason, or three simulated metric cards" time="0.021524" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\panels.test.mjs"/>
+	<testcase name="requirementsHTML maps every status to its class, keeps the fixed row order, and escapes the source" time="0.004987" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\panels.test.mjs"/>
+	<testcase name="parsePlan converts milliohms to ohms, keeps lists in order, and rejects bad input" time="0.002259" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\panels.test.mjs"/>
+	<testcase name="investigationFormHTML has the six segment checkboxes and the named inputs" time="0.003196" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\panels.test.mjs"/>
+	<testcase name="investigationHTML lists coverage, per-requirement rankings and the exploration table, each case with an open button" time="0.002981" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\panels.test.mjs"/>
+	<testcase name="no output carries a style attribute or an inline event handler attribute" time="0.003344" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\panels.test.mjs"/>
+	<testcase name="optional AI metadata times out even if a fetcher ignores cancellation" time="0.013238" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\site-ai.test.mjs"/>
+	<testcase name="optional AI metadata also bounds a stalled response body" time="0.036387" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\site-ai.test.mjs"/>
+	<testcase name="AI configuration metadata never sends a provider request or exposes credentials" time="0.091295" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\site-ai.test.mjs"/>
+	<testcase name="Dimension preview converts mm and SI material values to the hand-calculated mass and resistance" time="0.001726" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-engineering.test.mjs"/>
+	<testcase name="Physical source text cannot turn into an executable URL or injected markup" time="0.061446" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-engineering.test.mjs"/>
+	<testcase name="A scheduled action beyond the computed horizon cannot be displayed as an actual disconnect" time="0.000828" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-engineering.test.mjs"/>
+	<testcase name="Graph probes distinguish a physical cutoff from an ordinary load transition" time="0.000747" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-engineering.test.mjs"/>
+	<testcase name="A flat current series keeps distinct readable axis ticks" time="0.003282" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-engineering.test.mjs"/>
+	<testcase name="A preset sends only its name; custom loads send their values" time="0.003851" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="A changed preset value is written to settings and an unchanged one is left alone" time="0.000475" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="Charging setup does not ask for a voltage floor" time="0.001670" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="Requirements show their basis and escape text" time="0.036349" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="The verdict passes a full run and fails a stopped one" time="0.003574" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="Charging tests lead with charge gained, not backup time" time="0.001182" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="Cost keeps currencies apart and shows unpriced parts" time="0.001837" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="No warnings means no warning box" time="0.000424" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="Sizing separates outcomes and uses the qualified claim" time="0.001991" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="Trade-offs lead with cost, mass and margin" time="0.001841" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="The load block draws from settings and stays out of the circuit graph" time="0.004277" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-mission.test.mjs"/>
+	<testcase name="Blank mandatory numbers and invalid unit text cannot become physical zero" time="0.004269" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Unknown optional targets remain null, distinct from an explicit zero" time="0.000483" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Full proposal preview expands added/removed dependent objects and interval arrays" time="0.002750" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Proposal values are escaped and missing exact diff cannot masquerade as reviewable" time="0.000494" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Historical model details never fall back to the current catalog" time="0.004448" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Historical canvas labels use captured model cards and do not inherit a changed library" time="0.039252" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Equal settings do not hide model, requirement, preparation or partial-run mismatches" time="0.001677" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Absent and incomplete operating-limit coverage stay explicit, even on a completed run" time="0.000734" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="AI configuration does not assert a verified connection" time="0.000542" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Local, temporary and unreported persistence have different promises" time="0.000856" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Keyboard sample navigation reaches both saved event sides without interpolation" time="0.000873" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Saved probe renders unavailable values as unavailable and escapes cell names" time="0.000636" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Run names disambiguate repeated runs and their historical state" time="0.000618" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Recovery export and import make a detached new design, never impersonating workspace lineage" time="0.002725" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Three-option summary keeps the existing case indices and does not fabricate missing runs or cell costs" time="0.001628" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Charging quantity distinguishes current pack-terminal accounting from historical summed-cell Ah" time="0.001681" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Part candidates expose incompatibility instead of suggesting a ready BOM" time="0.003051" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Edited current does not claim it still represents the original device power" time="0.001199" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-review.test.mjs"/>
+	<testcase name="Guide cannot treat the wrong design, an unprobed test or an unrelated comparison as complete" time="0.003798" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-walkthrough.test.mjs"/>
+	<testcase name="Denied browser storage does not prevent using or skipping the guide" time="0.000417" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-walkthrough.test.mjs"/>
+	<testcase name="Chart distinguishes both sides of an actual current event and defaults to after" time="0.040565" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-walkthrough.test.mjs"/>
+	<testcase name="Missing thermal evidence renders an unavailable state instead of a zero-degree graph" time="0.001280" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio-walkthrough.test.mjs"/>
+	<testcase name="Cell insertion, real terminal edges, removal and undo preserve graph meaning" time="0.003707" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio.test.mjs"/>
+	<testcase name="Geometry and names are separate from electrical changes" time="0.000938" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio.test.mjs"/>
+	<testcase name="Probe chooses nearest saved sample, including ends and unequal spacing" time="0.000495" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio.test.mjs"/>
+	<testcase name="Time labels distinguish fractional saved samples and preserve minute boundaries" time="0.031664" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio.test.mjs"/>
+	<testcase name="Small nonzero comparison changes cannot look like negative zero" time="0.001207" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio.test.mjs"/>
+	<testcase name="Long 16-cell trajectories render without spreading an array into function arguments" time="0.097574" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio.test.mjs"/>
+	<testcase name="Tooltips escape cell names and display the real chosen data point" time="0.000599" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\studio.test.mjs"/>
+	<testcase name="the load editor preserves discharge, rest and charging as exact contiguous intervals" time="0.005326" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\workspace.test.mjs"/>
+	<testcase name="empty, negative, nonfinite and subprecision durations cannot become solver inputs" time="0.000897" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\workspace.test.mjs"/>
+	<testcase name="result labels preserve ownership, historical freshness and incomplete execution" time="0.002120" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\workspace.test.mjs"/>
+	<testcase name="display names explain components and retain unknown names without inventing a component" time="0.001075" classname="test" file="C:\Users\DELL\Desktop\volt-forge\tmp\round1_review_20261031\repo\tests\workspace.test.mjs"/>
+	<!-- tests 71 -->
+	<!-- suites 0 -->
+	<!-- pass 71 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 552.2096 -->
+</testsuites>

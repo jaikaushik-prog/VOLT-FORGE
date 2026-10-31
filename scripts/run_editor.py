@@ -31,6 +31,7 @@ STATIC = {'/': 'index.html', '/index.html': 'index.html', '/style.css': 'style.c
           '/measurements': 'measurements.html', '/measurements.js': 'measurements.js', '/measurements.css': 'measurements.css'}
 STATIC.update({'/studio.js':'studio.js','/studio.css':'studio.css','/studio-canvas.mjs':'studio-canvas.mjs','/studio-walkthrough.mjs':'studio-walkthrough.mjs','/studio-cells.mjs':'studio-cells.mjs','/studio-protection.mjs':'studio-protection.mjs','/studio-conductors.mjs':'studio-conductors.mjs','/custom-cell-format.md':'custom-cell-format.md',
                '/studio-charts.mjs':'studio-charts.mjs','/studio-mission.mjs':'studio-mission.mjs','/studio-state.mjs':'studio-state.mjs'})
+STATIC['/studio-review.mjs']='studio-review.mjs'
 
 
 def error(code, message):
@@ -232,7 +233,7 @@ class Handler(BaseHTTPRequestHandler):
     def studio_request(self, request):
         op,args=request['operation'],request['arguments']
         methods={'create':self.server.studio.create,'open':self.server.studio.document,
-                 'save':self.server.studio.save,'run':self.server.studio.run,'test':self.server.studio.test,
+                 'save':self.server.studio.save,'save_copy':self.server.studio.save_copy,'run':self.server.studio.run,'test':self.server.studio.test,
                  'investigate':self.server.studio.investigate,'compare':self.server.studio.compare,
                  'chat':self.server.copilot.chat,'apply_proposal':self.server.copilot.apply,
                  'create_cell':self.server.studio.create_cell,

@@ -1,0 +1,11 @@
+{
+  "pages": 1,
+  "required_text_present": true,
+  "render_files": [
+    "reviewed_slide.png",
+    "reviewed_slide_normal_view.png"
+  ],
+  "visual_review": "Required separately after generation; not asserted by automated checks",
+  "pdf_sha256": "0f29a951d31f7aa48cee8404da1055440d4012a1573d58723828d06d8c763afa",
+  "source_data_sha256": "8e7a29b803b4bd2d265b3d2e5f04afd8a207f59b17c25669ee0e994e4a4efd0f"
+}

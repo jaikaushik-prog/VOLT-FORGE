@@ -40,6 +40,39 @@ def parallel_pairs(graph):
             if root(a['id']+':p') == root(b['id']+':p') and root(a['id']+':n') == root(b['id']+':n')]
 
 
+def operating_limit_coverage(graph, bank, rows):
+    """Coverage of recorded limits for the directions each cell actually carried.
+
+    Lookup support and application targets are not cell operating limits. A
+    missing limit stays unknown, including charging caused by internal sharing.
+    """
+    from voltforge.models.cell_catalogue import CellModel
+    entries = []
+    for i, cell in enumerate(graph['cells']):
+        model = CellModel(bank[cell['model']])
+        limits = dict(model.record.get('operating_limits') or {})
+        lg_rule = model.legacy or model.record.get('key') == 'LG_M50T_ECN'
+        if lg_rule:
+            # Same deployed temperature-dependent rules as CellModel; these
+            # values describe coverage, and do not change the numerical model.
+            limits.update(charge_temperature_C=[0., 45.], discharge_temperature_C=[-20., 55.])
+            limits.setdefault('voltage_V', [2.5, 4.2])
+        directions = [direction for direction, sign in (('discharge', 1.), ('charge', -1.))
+                      if any(sign*row['cell_current_A'][i] > 1e-8 for row in rows)]
+        missing = [] if limits.get('voltage_V') is not None else ['voltage_V']
+        for direction in directions:
+            if not lg_rule and limits.get('max_'+direction+'_A') is None:
+                missing.append('max_'+direction+'_A')
+            if limits.get(direction+'_temperature_C') is None:
+                missing.append(direction+'_temperature_C')
+        entries.append(dict(cell=cell['id'], directions=directions, complete=not missing,
+                            missing=missing, limits=limits,
+                            current_rule='Deployed LG temperature-dependent current limits' if lg_rule else 'Recorded cell limits',
+                            basis='user_declared' if model.custom else 'deployed_model'))
+    return dict(version='voltforge.operating-limit-coverage/1', complete=all(e['complete'] for e in entries), cells=entries,
+                note='Coverage of recorded operating limits for calculated branch-current directions; not hardware certification.')
+
+
 def review(graph, bank):
     """Warnings for one design. Call only on a circuit that already solves."""
     from voltforge.models.cell_catalogue import CellModel
@@ -56,7 +89,8 @@ def review(graph, bank):
     for c in graph['cells']:
         limits = bank[c['model']].get('operating_limits') or {}
         if not models[c['id']].legacy and c['model'] != 'LG_M50T_ECN' and (limits.get('max_discharge_A') is None or limits.get('max_charge_A') is None):
-            found.append(warning('missing_limits', f'{c["name"]} has no current limit on record, so the test cannot confirm it stays within one.', [c['id']]))
+            missing=[direction for direction in ('charge','discharge') if limits.get('max_'+direction+'_A') is None]
+            found.append(warning('missing_limits', f'{c["name"]} has no '+ ' or '.join(missing)+' current limit on record. Tests using that direction have incomplete operating-limit coverage.', [c['id']]))
     states = {c['id']: models[c['id']].parameters(c['charge_pct']/100, c['temperature_C']) if models[c['id']].supported(c['charge_pct']/100, c['temperature_C']) else None for c in graph['cells']}
     if any(v is None for v in states.values()): return found
     emf = np.array([states[c['id']][0]-c['polarization_V'] for c in graph['cells']])

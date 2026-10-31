@@ -1,0 +1,37 @@
+{
+  "schema": "voltforge.review-improvements-verification/1",
+  "protected_artifacts_unchanged": 649,
+  "software_hash": "2437f14ea7f583a9d406ed365b9b920d6aa8a035f6b0f49332dab2b7f553a0d2",
+  "python": {
+    "tests": 523,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 8,
+    "passed": 515
+  },
+  "javascript": {
+    "tests": 71,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 71
+  },
+  "live_browser_status": "not_exercised_browser_host_unavailable",
+  "experimental_validation": "not_established",
+  "external_ai_inference_performed": false,
+  "revised_slide": {
+    "pages": 1,
+    "pdf_sha256": "0f29a951d31f7aa48cee8404da1055440d4012a1573d58723828d06d8c763afa",
+    "visual_review": "Recorded separately in slide_round1_review_v1/VISUAL_QA.md"
+  },
+  "public_build": {
+    "assets_matched": 11,
+    "engine_archive_verified": true,
+    "deployed": false
+  },
+  "artifact_hashes": {
+    "PRESERVATION.json": "b3a643afadf52dfc961c2f634bf08ce9c8f05f6582a16f1a4060c11a1d1f74cb",
+    "python_tests.xml": "3f9f5dc968557a89f4a787d0645cf99a9b97a2e227e6d4cd0471a55a5577f8f9",
+    "javascript_tests.xml": "bc34b9afd3b4ccefaa1aa3b19fd5dc82b70ab686eb89cbf689668f9c7cf9e223"
+  }
+}

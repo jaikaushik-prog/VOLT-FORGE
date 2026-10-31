@@ -18,7 +18,7 @@ if OUT.exists(): shutil.rmtree(OUT)
 shutil.copy(SITE/'index.html', OUT/'index.html'); shutil.copy(ROOT/'reports/demo_v1/VOLT-FORGE_demo.mp4', OUT/'demo.mp4')
 for file in (ROOT/'web/editor').iterdir():
     if file.name.startswith('studio') or file.name in ('favicon.svg', 'custom-cell-format.md'): shutil.copy(file, OUT/'app'/file.name)
-for name in ('backend.js', 'worker.js'): shutil.copy(SITE/name, OUT/'app'/name)
+for name in ('backend.js', 'worker.js', 'ai-status.mjs'): shutil.copy(SITE/name, OUT/'app'/name)
 page = (ROOT/'web/editor/index.html').read_text().replace('href="/', 'href="./').replace('src="/', 'src="./')
 page = page.replace('<script type="module"', '<script src="./backend.js"></script>\n  <script type="module"', 1)
 (OUT/'app/index.html').write_text(page)

@@ -143,6 +143,7 @@ def _simulate(graph, settings, bank):
     profile = settings['profile']; starts = np.round(np.array([p['start_s'] for p in profile]), 10)
     grid = integration_grid(settings)
     charges = np.zeros(n); energy = np.zeros(6); generated = exchanged = reversible = outside = 0.
+    received_charge_As = delivered_charge_As = 0.
     rows = []; stop = None
 
     def operating_error(state_t, solution):
@@ -270,6 +271,10 @@ def _simulate(graph, settings, bank):
         reversible += float(qrev.sum())*h
         outside += float(solution['wire_loss'].sum()-(share@solution['wire_loss']).sum()+solution['output_loss_W'])*h
         charges += current*h
+        # Terminal current is held over this accepted interval, including a
+        # shortened final interval or an external-protection disconnection.
+        received_charge_As += max(-load, 0.)*h
+        delivered_charge_As += max(load, 0.)*h
         soc, temperature, vp = zz, tt, vv
         t = float(t+h) if stop else float(grid[j+1])
         rows.append(row_at(t, load, soc, temperature, vp, end))
@@ -314,21 +319,31 @@ def _simulate(graph, settings, bank):
                 entry['status']='User-adjusted heat model';entry['source']='User-entered '+ ' and '.join(changed)+'. Other parameters retain their recorded sources.'
             summary['thermal_assumptions'].append(entry)
     from .conductors import physical_summary
-    from .design_rules import review
+    from .design_rules import review, operating_limit_coverage
     summary['design_warnings']=review(graph,bank)
+    summary['operating_limit_coverage']=operating_limit_coverage(graph,bank,rows)
     if any(r['current_A']<0 for r in rows):
-        summary['charging']=dict(elapsed_s=rows[-1]['time_s'],charge_gained_Ah=float(-charges.sum()/3600),energy_received_Wh=rows[-1]['received_energy_Wh'],
+        net_charge=(received_charge_As-delivered_charge_As)/3600
+        summary['charging']=dict(version='voltforge.pack-charge/2',elapsed_s=rows[-1]['time_s'],
+                                 received_charge_Ah=float(received_charge_As/3600),delivered_charge_Ah=float(delivered_charge_As/3600),
+                                 net_charge_gained_Ah=float(net_charge),charge_gained_Ah=float(net_charge),
+                                 per_cell_charge_gained_Ah={c['id']:float(-charges[i]/3600) for i,c in enumerate(cells)},
+                                 energy_received_Wh=rows[-1]['received_energy_Wh'],
                                  stop_reason=stop['reason'] if stop else 'requested_time_reached',stop_message=stop['message'] if stop else 'The requested test time ended.',
-                                 note='Simulated time under this constant-current test, not a full recharge time.')
+                                 note='Gross received and delivered charge are integrated at the battery output port; net charge is received minus delivered. Per-cell charge is separate. Simulated time under this current profile, not a full recharge time.')
     summary['physical_components']=physical_summary(graph,bank)
     summary['metrics']['conductor_mass_g']=summary['physical_components']['conductor_mass_g']
     # Reported for judgement. A generic A/mm2 figure is not a certified current rating.
     links={link['connection']:link['area_mm2'] for link in summary['physical_components']['conductors']}
     checks=[]
     for j,w in enumerate(graph['connections']):
-        peak=max(abs(r['wire_current_A'][j] or 0.) for r in rows)
+        values=[r['wire_current_A'][j] for r in rows]
+        known=all(v is not None for v in values)
+        peak=max(abs(v) for v in values) if known else None
         checks.append(dict(connection=w['id'],peak_current_A=peak,peak_loss_W=max(r['wire_loss_W'][j] for r in rows),area_mm2=links.get(w['id']),
-                           current_density_A_mm2=peak/links[w['id']] if w['id'] in links else None))
+                           current_density_A_mm2=peak/links[w['id']] if known and w['id'] in links else None,
+                           current_status='calculated' if known else 'not_computed',
+                           current_reason=None if known else 'Ideal zero-resistance links are contracted by the solver; their individual current is not computed. Zero loss does not imply zero current.'))
     summary['link_checks']=dict(links=checks,note='Calculated current and loss. This is not a certified current rating.')
     summary['assessment']['interval_boundary_checks'] = 'Quarter-step domain/operating probes with localized first observed crossing; timestep refinement remains required for continuous claims.'
     return Result(rows, summary, 'stopped' if stop else 'completed', stop)

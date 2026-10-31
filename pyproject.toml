@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "voltforge"
-version = "0.4.0"
+version = "0.4.1"
 description = "Visual battery circuit design, electrothermal experiments and reproducible engineering comparisons"
 requires-python = ">=3.12,<3.13"
 dependencies = ["numpy==1.26.4", "scipy==1.13.1", "pandas==2.2.2", "matplotlib==3.9.2", "openpyxl==3.1.5"]

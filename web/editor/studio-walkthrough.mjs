@@ -1,11 +1,11 @@
 export const TOUR_VERSION='voltforge.walkthrough/1';
 export const tourSteps=[
- {id:'open_example',title:'Start with an example',body:'Four cells are connected to share the load. This example is separate from your own designs.'},
+ {id:'open_example',title:'Start with the Pi backup example',body:'Four cells share the load for a 25 W, ten-minute Pi gateway backup. This editable example is separate from your own designs.'},
  {id:'inspect_cell',title:'Get to know a cell',body:'Select a cell on the canvas. Its starting charge tells you how full it is; its starting temperature tells you how warm it is.'},
  {id:'review_test',title:'Choose the test',body:'Open Test and review the load, duration and room temperature. These are the conditions the solver will use.'},
  {id:'run_and_probe',title:'See what happens',body:'Run the test, then point at the chart or move its time slider. You are inspecting values from the saved calculation.'},
  {id:'compare_one_change',title:'Compare one change',body:'Move the negative output to the other end of the battery. Preview the change, then test a copy under the same conditions.'},
- {id:'ask_copilot',title:'Ask why it changed',body:'Ask the copilot about the two saved tests. It receives their results and assumptions. You choose when to send the question.'},
+ {id:'ask_copilot',title:'Ask why it changed',body:'Optionally ask the copilot about the two saved tests and their assumptions. You choose when to send. If AI is unavailable, skip this step and continue to export.'},
  {id:'export_or_create',title:'Try your own idea',body:'Export the experiment, start your own design or add a custom cell. Your example and its results stay saved.'}
 ];
 export const comparisonQuestion='What changed between these two tests, and which assumptions matter for the comparison?';
