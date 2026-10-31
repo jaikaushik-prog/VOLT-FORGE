@@ -1,0 +1,60 @@
+{
+  "schema": "voltforge.thermal_alternative_sources/1",
+  "local_artifacts_sha256": {
+    "data/raw/thermal_public_evidence/alternatives_001/downloads.json": "d1318ca7677c1d61c225abeee5b531d9a1ca1da3551f4178923d402106a78867",
+    "data/raw/thermal_public_evidence/alternatives_002/downloads.json": "4227af203a96a44438a32dda25c31943859eeea6c7782b3ce298f5feb977456f",
+    "data/raw/thermal_public_evidence/alternatives_002/kokam_metadata.json": "4bf1d8887be8635ba2630b57341c1c8f2dc4c4fb4de9ff11d41b8878b1f2c786",
+    "data/raw/thermal_public_evidence/alternatives_002/oregan_metadata.json": "438f7d24cf6a796c0ee87243101400ed1cad186e1fe4dad39fa06f164c10bba9",
+    "data/raw/thermal_public_evidence/alternatives_002/chen_metadata.json": "f1f135219b6d3fc4a30662a64a52cf0e704017025bd00c9efa37b5b00493c57b",
+    "data/raw/thermal_public_evidence/alternatives_002/thenaisie_landing.html": "0ecfc6c0b51c6df1fed8319f5cf68308f9b20c4c362f4a548ba8be12bafd1283",
+    "data/raw/thermal_public_evidence/alternatives_002/nist_description.txt": "5b204910481804da73672468399ac7ab937c89dc7fd8b5834108771103dd7d7d",
+    "data/raw/thermal_public_evidence/alternatives_002/failure_databank.html": "5b7a567faf6849aacb66d9aa88faedd5483aa0b577da5c9cc085c33293f0e1fd",
+    "data/raw/thermal_public_evidence/metadata_followup_001/downloads.json": "2146bd4a7f04f317cb075355e3be8d675edfd906056beb4df4961e94f92ff91a",
+    "data/raw/thermal_public_evidence/alternatives_003/downloads.json": "b0dabcc42f62952e11b20119040a62013fa5f8ccf19f85667dbb35c9e108c2a5",
+    "data/raw/thermal_public_evidence/alternatives_003/thenaisie_files.json": "58a996c4ba0fcdfdcbe84270f702ed29ba335568372c36fba320db56b086ad67",
+    "data/raw/thermal_public_evidence/alternatives_003/thenaisie_crossref.json": "e1e6b578299e21aec1c06e6f7cc3e1aa1c6bb79f1929a65c1955776602e8606c",
+    "data/raw/thermal_public_evidence/calorimetry_docs_001/download_inventory.json": "52e90054dbf1d56998da2bee5faa6a04f06147f304fb3459e60534c191e440c4",
+    "data/raw/thermal_public_evidence/calorimetry_docs_001/raw_data_with_example_Python_usage.zip": "5e4ff4ddbfa6e51263f08ea1b3722e0dd3e30d526f2cf7b82ab345f6e37f71c1",
+    "data/raw/thermal_public_evidence/notebook_source_001/receipt.json": "8695c03dbaf7c2a3304dda254a155a242f4881f42ada9d7879b79d8e54d96872",
+    "data/raw/thermal_public_evidence/notebook_source_001/example_source.txt": "9839a55bd9e56ca909485e56616c51ee9ce1b087390d6614373a9bdc788f0e1f"
+  },
+  "download_receipts": [
+    "data/raw/thermal_public_evidence/alternatives_001/downloads.json",
+    "data/raw/thermal_public_evidence/alternatives_002/downloads.json",
+    "data/raw/thermal_public_evidence/metadata_followup_001/downloads.json",
+    "data/raw/thermal_public_evidence/alternatives_003/downloads.json",
+    "data/raw/thermal_public_evidence/calorimetry_docs_001/download_inventory.json",
+    "data/raw/thermal_public_evidence/notebook_source_001/receipt.json"
+  ],
+  "new_measurement_archives_downloaded": 1,
+  "numerical_members_opened": 0,
+  "saved_notebook_outputs_displayed": 0,
+  "notebook_source_members_opened": 1,
+  "uninspected_npy_members": 10,
+  "assessment_allocation_created": false,
+  "model_fitted": false,
+  "literature_exposure": "Published aggregate findings surfaced in web searches/readers; not independent assessment",
+  "primary_web_only_methods": [
+    {
+      "url": "https://www.researchgate.net/publication/349076809_Thermal_fault_detection_by_changes_in_electrical_behaviour_in_lithium-ion_cells",
+      "scope": "Author-uploaded primary paper; methods and model limitations; public results incidentally surfaced"
+    },
+    {
+      "url": "https://wrap.warwick.ac.uk/id/eprint/196287/2/WRAP-Thermal-electrochemical-parameters-high-energy-22.pdf",
+      "scope": "Methods/manuscript text through web reader; publication/version ambiguity recorded; local download failed"
+    }
+  ],
+  "queries": [
+    "battery thermal dataset calorimetry heat generation specific heat transient open data lithium ion dataset M50",
+    "lithium ion thermal parameter identification dataset heater heat flux Zenodo",
+    "battery thermal dataset \"heat capacity\" \"Zenodo\"",
+    "battery \"calorimetry\" \"dataset\" \"Mendeley\"",
+    "battery thermal dataset \"heater\" \"LG\"",
+    "\"Thermal fault detection by changes\" \"pdf\"",
+    "\"A calorimetric approach to fast entropy\" pdf",
+    "\"Thermal-electrochemical parameters of a high energy\" LG heat capacity",
+    "\"Thenaisie\" \"100097\" calorimeter calibration",
+    "\"Thermal fault detection by changes\" \"Thermal\" \"parameterisation\"",
+    "\"A calorimetric approach\" \"pdf\" \"2022\" \"Lee\""
+  ]
+}

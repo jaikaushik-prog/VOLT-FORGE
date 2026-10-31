@@ -1,0 +1,15 @@
+{
+  "schema": "voltforge.thermal_notebook_source_review/1",
+  "archive_sha256": "5e4ff4ddbfa6e51263f08ea1b3722e0dd3e30d526f2cf7b82ab345f6e37f71c1",
+  "opened_members": [
+    "example_code.ipynb"
+  ],
+  "member_sha256": "5d9b560443a82b5a7da1e8de5e77549e6294caeca548570d72fa8ad787fe8ece",
+  "code_executed": false,
+  "numerical_members_opened": 0,
+  "saved_outputs_displayed": 0,
+  "skipped_saved_outputs": 2,
+  "cells": 17,
+  "source_path": "data/raw/thermal_public_evidence/notebook_source_001/example_source.txt",
+  "source_sha256": "9839a55bd9e56ca909485e56616c51ee9ce1b087390d6614373a9bdc788f0e1f"
+}

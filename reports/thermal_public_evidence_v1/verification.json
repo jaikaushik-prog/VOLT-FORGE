@@ -1,0 +1,44 @@
+{
+  "schema": "voltforge.thermal_public_evidence_verification/1",
+  "status": "artifact_integrity_verified",
+  "preserved_receipts": {
+    "reports/assistant_thermal_v1/verification.json": {
+      "sha256": "98f5fe0779cecdb432b826351edeaa5115ff16a20378c0b5997da7f0e39b4c0b",
+      "artifacts_checked": 250
+    },
+    "reports/thermal_m50t_intake_v1/verification.json": {
+      "sha256": "a8919394d34e15d81274c4eb6e9d588020cddcf3ad1742caa6870cebe123aedf",
+      "artifacts_checked": 20
+    },
+    "reports/thermal_m50t_handoff_v1/verification.json": {
+      "sha256": "6d3803306dfdb410bb5b894a0615136cb0b7c3ab855c0fc5a137c9b4902a958b",
+      "artifacts_checked": 38
+    }
+  },
+  "frozen_software_id": "5e7b36e03cfcf526d841d025ff49834bd9905fcff5f9731d6424be1580d38ac1",
+  "synthetic_boundary_tests": 4,
+  "candidate_families_screened": 6,
+  "new_measurement_archives_downloaded": 1,
+  "numerical_members_opened_in_search": 0,
+  "local_source_hashes_checked": 58,
+  "engineering_decision": "insufficient evidence",
+  "meaning": "Documentation and preservation checks, not experimental prediction accuracy",
+  "artifacts_sha256": {
+    "reports/thermal_public_evidence_v1/alternative_sources.json": "502614fb9b679ef7c1a03ebf8cf0ae86622fdd8677a365192b0e9c633e62398a",
+    "reports/thermal_public_evidence_v1/ALTERNATIVES.md": "03bb31d6a99011772f029b108f83c580a2665b856b08193c6ac3ce1d3f4cfe16",
+    "reports/thermal_public_evidence_v1/AUTHOR_SEARCH.md": "82601cea663ba133b6280cac2df86dc0923320e795b059ec3cfbd9f146b215f4",
+    "reports/thermal_public_evidence_v1/author_sources.json": "ac015e86324156cfeafebecb8663a223716b3b2388cd2cb4ccec5cb3d1f510b0",
+    "reports/thermal_public_evidence_v1/CALORIMETRY_ARCHIVE_DECLARATION.md": "e919c8a2fd343d88047591a58fe753dd9789b7d12448ab2392197cbfc3709000",
+    "reports/thermal_public_evidence_v1/calorimetry_inventory.json": "2df7a4f163fc54d1c766a3096b1a48cc19f0ec7d70290a3ac01fa95d03b0ec9a",
+    "reports/thermal_public_evidence_v1/fetch_primary_metadata.py": "eb2ebac542c7541ab6c4c1486335a70630f816d4be006b6641b4608d01f1e60c",
+    "reports/thermal_public_evidence_v1/inspect_calorimetry_documentation.py": "91acd314d6c03e1327b4d2699a6fd290109e0e865f261db667b0fa37eddcddb3",
+    "reports/thermal_public_evidence_v1/NOTEBOOK_SOURCE_DECLARATION.md": "35219dd07c6a1bdbf2172484eb348e7265e1494c2f0f325b629f63803e428c67",
+    "reports/thermal_public_evidence_v1/notebook_source_receipt.json": "8695c03dbaf7c2a3304dda254a155a242f4881f42ada9d7879b79d8e54d96872",
+    "reports/thermal_public_evidence_v1/PLAN.md": "fd4809232de04e495fe757ea05aeefc998765b0c8c3b5c2293b2536ae949d4de",
+    "reports/thermal_public_evidence_v1/qualification.json": "e8500c690d13855abb30a6a0d140bee35e196c67a4fed7d3fdd9b6b1069ec6d0",
+    "reports/thermal_public_evidence_v1/tests.xml": "8246ab8cbe491e3c89772a62fca6e4f54b5b23a063a36cbf2b09db6e1fce88e5",
+    "scripts/verify_thermal_public_evidence.py": "4072e18f82d39460fb6a666bb07a88c5aae980c16625691156e62ec54e5d941b",
+    "tests/test_thermal_evidence_documentation.py": "7e04e32c79411110d3063d4e48dc082002b580dc6b1f0ec40970a9165f3b36a9",
+    "THERMAL_EVIDENCE_DECISION.md": "c0ec3700b555cd2d4fa02eed3d37a9fbcb286ce189e8a2eac0b328fd943cb23e"
+  }
+}

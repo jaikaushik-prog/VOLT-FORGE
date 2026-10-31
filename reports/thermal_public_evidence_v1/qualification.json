@@ -1,0 +1,90 @@
+{
+  "schema": "voltforge.thermal_evidence_screen/1",
+  "date_local": "2026-10-27",
+  "application": "LG M50T 1s4p module; installed cooling and thermal requirements unconfigured",
+  "decision": "insufficient evidence",
+  "physical_fitting_authorized": false,
+  "candidate_models_adopted": 0,
+  "module_thermal_validation": "awaiting suitable measurements",
+  "requirements": {
+    "application_temperature_limit_degC": null,
+    "permitted_temperature_error_degC": null,
+    "status": "requirement not configured"
+  },
+  "criteria": [
+    "specified specimen and preparation",
+    "justified heat scale, sign, dynamics and uncertainty",
+    "representative cell temperature and boundary history",
+    "documented clock relationship and sampling semantics",
+    "fixture and contact heat paths",
+    "prospective whole-sequence development and assessment allocation"
+  ],
+  "candidates": [
+    {
+      "id": "thenaisie_98thdkgp8z_v1",
+      "source": "https://data.mendeley.com/datasets/98thdkgp8z/1",
+      "cell": "1 Ah NMC811/graphite pouch; different application",
+      "access": "metadata and notebook source only; ten NPY members unopened",
+      "status": "documentation follow-up",
+      "heat_evidence": "top/bottom sensor voltages documented; watts conversion not established",
+      "temperature_boundary_evidence": "not supplied in documented notebook schema",
+      "next_required": "calorimeter calibration/response, timing and relevant temperature/boundary records",
+      "fitting_authorized": false
+    },
+    {
+      "id": "klink_13903526",
+      "source": "https://zenodo.org/records/13903526",
+      "cell": "Kokam 46 Ah pouch; different application",
+      "access": "metadata and published methodology only",
+      "status": "conditional fixture-method lead",
+      "heat_evidence": "electrical pulse heating and model-based overvoltage heat estimate",
+      "temperature_boundary_evidence": "sensor placement and fixture described; transfer/calibration unresolved",
+      "next_required": "explicit different-cell scope, heat-estimate uncertainty and prospective allocation",
+      "fitting_authorized": false
+    },
+    {
+      "id": "oregan_5171874",
+      "source": "https://zenodo.org/records/5171874",
+      "cell": "LG M50; equivalence to our M50T specimens unestablished",
+      "access": "metadata and published methods text only",
+      "status": "material-method reference",
+      "heat_evidence": "constituent DSC/LFA methods; no adopted whole-cell source model",
+      "temperature_boundary_evidence": "published model boundary coefficient tuned; not our fixture",
+      "next_required": "specimen transfer justification and independent installed-boundary evidence",
+      "fitting_authorized": false
+    },
+    {
+      "id": "chen_4032561",
+      "source": "https://zenodo.org/records/4032561",
+      "cell": "three LG M50 cells; equivalence to our specimens unestablished",
+      "access": "metadata and filenames only; CSVs undownloaded",
+      "status": "possible later transfer study",
+      "heat_evidence": "independent heat-input channel not advertised",
+      "temperature_boundary_evidence": "cell-surface and chamber temperatures advertised",
+      "next_required": "justified heat model and fixture/protocol/timing qualification",
+      "fitting_authorized": false
+    },
+    {
+      "id": "nist_mds2_4027",
+      "source": "https://data.nist.gov/od/id/mds2-4027",
+      "cell": "18650 and 21700 abuse-test cells",
+      "access": "experiment-description text only; workbook undownloaded",
+      "status": "outside operating-case scope",
+      "heat_evidence": "heater electrical power specified; absorbed cell heat not established",
+      "temperature_boundary_evidence": "surface thermocouple and abuse environment described",
+      "next_required": "different research objective; not selected for this case",
+      "fitting_authorized": false
+    },
+    {
+      "id": "nlr_failure_databank",
+      "source": "https://nrel.sitefinity.cloud/transportation/battery-failure",
+      "cell": "multiple cell types undergoing abuse",
+      "access": "primary landing-page metadata only",
+      "status": "outside operating-case scope",
+      "heat_evidence": "thermal-runaway heat output and ejected contents",
+      "temperature_boundary_evidence": "abuse protocols rather than this operating case",
+      "next_required": "different research objective; not selected for this case",
+      "fitting_authorized": false
+    }
+  ]
+}

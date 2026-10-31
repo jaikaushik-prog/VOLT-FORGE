@@ -1,0 +1,508 @@
+{
+  "schema": "voltforge.thermal_public_author_search/1",
+  "completed_utc": "2026-10-26T22:00:20.417790+00:00",
+  "status": "bounded_search_complete_no_physical_fit_authorized",
+  "scope": "Public metadata and selected methodology documentation; no new numerical record access",
+  "existing_inputs_sha256": {
+    "reports/thermal_m50t_import_v1/DECISION.md": "50ed279376c743eea9a9fd90c13512c9ce08607a1d38bd8be162b59c78a49cf5",
+    "reports/thermal_m50t_import_v1/verification.json": "48c2f8e899d2d06fddd57f305cd0463a7f165f39be5f5bf1a1903239b02687ab",
+    "reports/thermal_m50t_intake_v1/sources.json": "7ff4e99008f663f7bace33e71856cf6bc1ae5ff8659780d25c103ca0c90bb5b2"
+  },
+  "report_sha256": "82601cea663ba133b6280cac2df86dc0923320e795b059ec3cfbd9f146b215f4",
+  "retrievals": [
+    {
+      "name": "zenodo_record",
+      "url": "https://zenodo.org/api/records/6421061",
+      "retrieved_utc": "2026-10-26T21:52:24.120369+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "error": "URLError: <urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+    },
+    {
+      "name": "imperial_paper_item",
+      "url": "https://spiral.imperial.ac.uk/server/api/core/items/a90df784-a0be-4e2f-aa19-b6bae79703b0",
+      "retrieved_utc": "2026-10-26T21:52:24.123485+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "error": "URLError: <urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+    },
+    {
+      "name": "imperial_paper_bundles",
+      "url": "https://spiral.imperial.ac.uk/server/api/core/items/a90df784-a0be-4e2f-aa19-b6bae79703b0/bundles",
+      "retrieved_utc": "2026-10-26T21:52:24.124368+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "error": "URLError: <urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+    },
+    {
+      "name": "imperial_author_search",
+      "url": "https://spiral.imperial.ac.uk/server/api/discover/search/objects?query=Marzook&size=50",
+      "retrieved_utc": "2026-10-26T21:52:24.124368+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "error": "URLError: <urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+    },
+    {
+      "name": "github_ccc_search",
+      "url": "https://api.github.com/search/repositories?q=%22cell%20cooling%20coefficient%22",
+      "retrieved_utc": "2026-10-26T21:52:24.318789+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "error": "URLError: <urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+    },
+    {
+      "name": "github_marzook_search",
+      "url": "https://api.github.com/search/repositories?q=Marzook",
+      "retrieved_utc": "2026-10-26T21:52:24.333962+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "error": "URLError: <urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+    },
+    {
+      "name": "crossref_paper",
+      "url": "https://api.crossref.org/works/10.1016/j.est.2022.105217",
+      "retrieved_utc": "2026-10-26T21:52:24.349381+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "error": "URLError: <urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+    },
+    {
+      "name": "zenodo_author_search",
+      "url": "https://zenodo.org/api/records?q=creators.name%3AMarzook&size=100",
+      "retrieved_utc": "2026-10-26T21:52:24.365381+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "error": "URLError: <urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+    },
+    {
+      "name": "zenodo_record",
+      "url": "https://zenodo.org/api/records/6421061",
+      "retrieved_utc": "2026-10-26T21:52:50.575074+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "status": 200,
+      "final_url": "https://zenodo.org/api/records/6421061",
+      "content_type": "application/json",
+      "local_path": "data/raw/thermal_public_evidence/author_search/zenodo_record.response",
+      "bytes": 4129,
+      "sha256": "b5287ef3810fed491eeac53abd1feb78488e09836ce4970934d19fbfabc2e455"
+    },
+    {
+      "name": "imperial_paper_item",
+      "url": "https://spiral.imperial.ac.uk/server/api/core/items/a90df784-a0be-4e2f-aa19-b6bae79703b0",
+      "retrieved_utc": "2026-10-26T21:52:50.576092+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "status": 200,
+      "final_url": "https://spiral.imperial.ac.uk/server/api/core/items/a90df784-a0be-4e2f-aa19-b6bae79703b0",
+      "content_type": "application/json;charset=UTF-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/imperial_paper_item.response",
+      "bytes": 12174,
+      "sha256": "46ab4c53a0f610c689eb428f8a1121de7db8eb607eb04af3a0aba9df1ceef166"
+    },
+    {
+      "name": "imperial_paper_bundles",
+      "url": "https://spiral.imperial.ac.uk/server/api/core/items/a90df784-a0be-4e2f-aa19-b6bae79703b0/bundles",
+      "retrieved_utc": "2026-10-26T21:52:50.577543+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "status": 200,
+      "final_url": "https://spiral.imperial.ac.uk/server/api/core/items/a90df784-a0be-4e2f-aa19-b6bae79703b0/bundles",
+      "content_type": "application/json;charset=UTF-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/imperial_paper_bundles.response",
+      "bytes": 4406,
+      "sha256": "b704cc8adbbcc64a91223d8100a676d2572d94972d35e91b050de830df19c1aa"
+    },
+    {
+      "name": "imperial_author_search",
+      "url": "https://spiral.imperial.ac.uk/server/api/discover/search/objects?query=Marzook&size=50",
+      "retrieved_utc": "2026-10-26T21:52:50.578559+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "status": 200,
+      "final_url": "https://spiral.imperial.ac.uk/server/api/discover/search/objects?query=Marzook&size=50",
+      "content_type": "application/json;charset=UTF-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/imperial_author_search.response",
+      "bytes": 743108,
+      "sha256": "5f9e9576be493b65693a25f105bbd72bcb9c8855bf763274c815a51d773676eb"
+    },
+    {
+      "name": "github_ccc_search",
+      "url": "https://api.github.com/search/repositories?q=%22cell%20cooling%20coefficient%22",
+      "retrieved_utc": "2026-10-26T21:52:51.064560+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "status": 200,
+      "final_url": "https://api.github.com/search/repositories?q=%22cell%20cooling%20coefficient%22",
+      "content_type": "application/json; charset=utf-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/github_ccc_search.response",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    },
+    {
+      "name": "github_marzook_search",
+      "url": "https://api.github.com/search/repositories?q=Marzook",
+      "retrieved_utc": "2026-10-26T21:52:51.253032+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "status": 200,
+      "final_url": "https://api.github.com/search/repositories?q=Marzook",
+      "content_type": "application/json; charset=utf-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/github_marzook_search.response",
+      "bytes": 161541,
+      "sha256": "88dd2e5fa05851b009a1beedb8f26a759bd5912928dbf9fcd1e853d65d788cce"
+    },
+    {
+      "name": "crossref_paper",
+      "url": "https://api.crossref.org/works/10.1016/j.est.2022.105217",
+      "retrieved_utc": "2026-10-26T21:52:51.680574+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1016/j.est.2022.105217",
+      "content_type": "application/json",
+      "local_path": "data/raw/thermal_public_evidence/author_search/crossref_paper.response",
+      "bytes": 9906,
+      "sha256": "725e3416f311d52736bce1d6afc60d451a7cda8774e0ae76c69a3241a77b20a4"
+    },
+    {
+      "name": "zenodo_author_search",
+      "url": "https://zenodo.org/api/records?q=creators.name%3AMarzook&size=100",
+      "retrieved_utc": "2026-10-26T21:52:51.728940+00:00",
+      "scope": "public metadata only; no numerical payload",
+      "status": 400,
+      "error": "HTTP Error 400: BAD REQUEST",
+      "local_path": "data/raw/thermal_public_evidence/author_search/zenodo_author_search.response",
+      "bytes": 207,
+      "sha256": "8105c5098c3b8051ed4e35cc510a7c4af8dcca8edb46986c9a37ba5469c6985c"
+    },
+    {
+      "name": "zenodo_versions",
+      "url": "https://zenodo.org/api/records/6421061/versions",
+      "retrieved_utc": "2026-10-26T21:53:58.841165+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://zenodo.org/api/records/6421061/versions",
+      "content_type": "application/json",
+      "local_path": "data/raw/thermal_public_evidence/author_search/zenodo_versions.response",
+      "bytes": 4263,
+      "sha256": "483442ed28dd9eee789b81d089bbeb74612f6c8a733f46cdb2efc46d45f926f1"
+    },
+    {
+      "name": "zenodo_latest",
+      "url": "https://zenodo.org/api/records/6421061/versions/latest",
+      "retrieved_utc": "2026-10-26T21:53:58.843287+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://zenodo.org/api/records/6421061",
+      "content_type": "application/json",
+      "local_path": "data/raw/thermal_public_evidence/author_search/zenodo_latest.response",
+      "bytes": 4129,
+      "sha256": "b5287ef3810fed491eeac53abd1feb78488e09836ce4970934d19fbfabc2e455"
+    },
+    {
+      "name": "zenodo_author_search_25",
+      "url": "https://zenodo.org/api/records?q=creators.name%3AMarzook&size=25",
+      "retrieved_utc": "2026-10-26T21:53:58.844232+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://zenodo.org/api/records?q=creators.name%3AMarzook&size=25",
+      "content_type": "application/json",
+      "local_path": "data/raw/thermal_public_evidence/author_search/zenodo_author_search_25.response",
+      "bytes": 51283,
+      "sha256": "262a9d6b608a7fa10e675a102213a7c51e9177eb439589ccf6d1cb87db9ed83b"
+    },
+    {
+      "name": "imperial_paper_original",
+      "url": "https://spiral.imperial.ac.uk/server/api/core/bundles/46e97995-6f29-4703-833f-fc8a5229245d/bitstreams",
+      "retrieved_utc": "2026-10-26T21:53:58.844232+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://spiral.imperial.ac.uk/server/api/core/bundles/46e97995-6f29-4703-833f-fc8a5229245d/bitstreams",
+      "content_type": "application/json;charset=UTF-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/imperial_paper_original.response",
+      "bytes": 2397,
+      "sha256": "688107edefe4e543afba27a11943ab7a50dd5bab33419cdcec51be680fbf6bcd"
+    },
+    {
+      "name": "imperial_thesis_bundles",
+      "url": "https://spiral.imperial.ac.uk/server/api/core/items/3a1ccedc-3504-426d-a6b4-19f3b99c18c7/bundles",
+      "retrieved_utc": "2026-10-26T21:53:59.409394+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://spiral.imperial.ac.uk/server/api/core/items/3a1ccedc-3504-426d-a6b4-19f3b99c18c7/bundles",
+      "content_type": "application/json;charset=UTF-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/imperial_thesis_bundles.response",
+      "bytes": 4406,
+      "sha256": "506a7bdf7151141a9c3e2381f868e73787acb762a938987d32fb436e000046ad"
+    },
+    {
+      "name": "imperial_author_search_page2",
+      "url": "https://spiral.imperial.ac.uk/server/api/discover/search/objects?query=Marzook&size=50&page=1",
+      "retrieved_utc": "2026-10-26T21:53:59.668712+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://spiral.imperial.ac.uk/server/api/discover/search/objects?query=Marzook&size=50&page=1",
+      "content_type": "application/json;charset=UTF-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/imperial_author_search_page2.response",
+      "bytes": 253347,
+      "sha256": "a5d89ae1cd093f9b0d93b02aa5c6f1c130b2060838d5023573f6fecd9534f8d1"
+    },
+    {
+      "name": "imperial_hardware_bundles",
+      "url": "https://spiral.imperial.ac.uk/server/api/core/items/e519370f-329e-4ad2-92d1-fb9d3e4a4887/bundles",
+      "retrieved_utc": "2026-10-26T21:54:00.074133+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://spiral.imperial.ac.uk/server/api/core/items/e519370f-329e-4ad2-92d1-fb9d3e4a4887/bundles",
+      "content_type": "application/json;charset=UTF-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/imperial_hardware_bundles.response",
+      "bytes": 4406,
+      "sha256": "aec0015447fde689e81545f8b3b06651204ad49b99067dfc47ad8753ce1fc503"
+    },
+    {
+      "name": "github_waseem_marzook_search",
+      "url": "https://api.github.com/search/repositories?q=Waseem%20Marzook",
+      "retrieved_utc": "2026-10-26T21:54:00.388528+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://api.github.com/search/repositories?q=Waseem%20Marzook",
+      "content_type": "application/json; charset=utf-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/github_waseem_marzook_search.response",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    },
+    {
+      "name": "imperial_thesis_original",
+      "url": "https://spiral.imperial.ac.uk/server/api/core/bundles/5c6590f5-6350-47c9-8908-77e946c1755b/bitstreams",
+      "retrieved_utc": "2026-10-26T21:54:34.526880+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://spiral.imperial.ac.uk/server/api/core/bundles/5c6590f5-6350-47c9-8908-77e946c1755b/bitstreams",
+      "content_type": "application/hal+json;charset=UTF-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/imperial_thesis_original.response",
+      "bytes": 2531,
+      "sha256": "05116d31b1dc756a855343cc7ff32fe52d1e246db77793913e816fc6ddd3a8a1"
+    },
+    {
+      "name": "imperial_hardware_original",
+      "url": "https://spiral.imperial.ac.uk/server/api/core/bundles/8431f468-61c9-49b0-a8bd-7797a7ba9f89/bitstreams",
+      "retrieved_utc": "2026-10-26T21:54:34.848405+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://spiral.imperial.ac.uk/server/api/core/bundles/8431f468-61c9-49b0-a8bd-7797a7ba9f89/bitstreams",
+      "content_type": "application/hal+json;charset=UTF-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/imperial_hardware_original.response",
+      "bytes": 2370,
+      "sha256": "8f23483d196426b1c09902e67566acdcf21f68ca48628b8e2c7399a1e0b734ba"
+    },
+    {
+      "name": "zenodo_related_7385979",
+      "url": "https://zenodo.org/api/records/7385979",
+      "retrieved_utc": "2026-10-26T21:54:35.085865+00:00",
+      "scope": "public repository metadata only",
+      "status": 200,
+      "final_url": "https://zenodo.org/api/records/7385979",
+      "content_type": "application/json",
+      "local_path": "data/raw/thermal_public_evidence/author_search/zenodo_related_7385979.response",
+      "bytes": 4419,
+      "sha256": "b806b4e1ce8387dea8fba908f5cd1e097b5d67550042da2cd98b6631a31869c5"
+    },
+    {
+      "url": "https://spiral.imperial.ac.uk/server/api/core/bitstreams/bd5c3c34-bbd1-41e6-99cd-e2162913753d/content",
+      "status": 200,
+      "content_type": "application/pdf;charset=UTF-8",
+      "retrieved_utc": "2026-10-26T21:54:53.045324+00:00",
+      "local_path": "data/raw/thermal_public_evidence/author_search/Marzook-W-2024-PhD-Thesis.pdf",
+      "bytes": 10594464,
+      "sha256": "d97995bbd36c29208ce1c9a9e9ee4b1419a07e07376833d4274e9f309922e4c7",
+      "scope": "Documentation download. Review limited to contents/methods/calibration; results pages not opened."
+    },
+    {
+      "name": "hardware_article",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9058592/",
+      "retrieved_utc": "2026-10-26T21:56:41.794628+00:00",
+      "scope": "public documentation or repository file metadata only; no numerical measurement files",
+      "status": 200,
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9058592/",
+      "content_type": "text/html; charset=utf-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/hardware_article.response",
+      "bytes": 192830,
+      "sha256": "43d2cbb60ba29ef61b49cfb3fe7a4d582a14dea48c31c0c3501a39a6724db769"
+    },
+    {
+      "name": "osf_record",
+      "url": "https://api.osf.io/v2/nodes/zywvf/",
+      "retrieved_utc": "2026-10-26T21:56:41.795624+00:00",
+      "scope": "public documentation or repository file metadata only; no numerical measurement files",
+      "status": 200,
+      "final_url": "https://api.osf.io/v2/nodes/zywvf/",
+      "content_type": "application/vnd.api+json; charset=utf-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/osf_record.response",
+      "bytes": 4558,
+      "sha256": "15bc3c68ee3162e20fa5d6033273f126207c5d673aabf49ee2bac53e728d27e9"
+    },
+    {
+      "name": "osf_files",
+      "url": "https://api.osf.io/v2/nodes/zywvf/files/osfstorage/",
+      "retrieved_utc": "2026-10-26T21:56:41.795624+00:00",
+      "scope": "public documentation or repository file metadata only; no numerical measurement files",
+      "status": 200,
+      "final_url": "https://api.osf.io/v2/nodes/zywvf/files/osfstorage/",
+      "content_type": "application/vnd.api+json; charset=utf-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/osf_files.response",
+      "bytes": 6486,
+      "sha256": "bc994ea1fe87c6a306ac4bbfd1df17eb4aaf9c3a83c406a8465ed49cc7feb725"
+    },
+    {
+      "name": "zenodo_related_readme",
+      "url": "https://zenodo.org/records/7385979/files/ReadMe.txt?download=1",
+      "retrieved_utc": "2026-10-26T21:56:41.796622+00:00",
+      "scope": "public documentation or repository file metadata only; no numerical measurement files",
+      "status": 200,
+      "final_url": "https://zenodo.org/records/7385979/files/ReadMe.txt?download=1",
+      "content_type": "text/plain; charset=utf-8",
+      "local_path": "data/raw/thermal_public_evidence/author_search/zenodo_related_readme.response",
+      "bytes": 741,
+      "sha256": "8817dfe6c6d8e926362dd76dd0d89c405421bc1bc38767fa6dd958fbb13c0701"
+    }
+  ],
+  "local_artifacts_sha256": {
+    "data/raw/thermal_public_evidence/author_search/crossref_paper.response": "725e3416f311d52736bce1d6afc60d451a7cda8774e0ae76c69a3241a77b20a4",
+    "data/raw/thermal_public_evidence/author_search/github_ccc_search.response": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f",
+    "data/raw/thermal_public_evidence/author_search/github_marzook_search.response": "88dd2e5fa05851b009a1beedb8f26a759bd5912928dbf9fcd1e853d65d788cce",
+    "data/raw/thermal_public_evidence/author_search/github_waseem_marzook_search.response": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f",
+    "data/raw/thermal_public_evidence/author_search/hardware_article.response": "43d2cbb60ba29ef61b49cfb3fe7a4d582a14dea48c31c0c3501a39a6724db769",
+    "data/raw/thermal_public_evidence/author_search/hardware_methods_extract.json": "ac0c62ba83b11e65c8c8f89b1aae42ca27a82ce8b6d8e323466c3180799363da",
+    "data/raw/thermal_public_evidence/author_search/imperial_author_search.response": "5f9e9576be493b65693a25f105bbd72bcb9c8855bf763274c815a51d773676eb",
+    "data/raw/thermal_public_evidence/author_search/imperial_author_search_page2.response": "a5d89ae1cd093f9b0d93b02aa5c6f1c130b2060838d5023573f6fecd9534f8d1",
+    "data/raw/thermal_public_evidence/author_search/imperial_hardware_bundles.response": "aec0015447fde689e81545f8b3b06651204ad49b99067dfc47ad8753ce1fc503",
+    "data/raw/thermal_public_evidence/author_search/imperial_hardware_original.response": "8f23483d196426b1c09902e67566acdcf21f68ca48628b8e2c7399a1e0b734ba",
+    "data/raw/thermal_public_evidence/author_search/imperial_paper_bundles.response": "b704cc8adbbcc64a91223d8100a676d2572d94972d35e91b050de830df19c1aa",
+    "data/raw/thermal_public_evidence/author_search/imperial_paper_item.response": "46ab4c53a0f610c689eb428f8a1121de7db8eb607eb04af3a0aba9df1ceef166",
+    "data/raw/thermal_public_evidence/author_search/imperial_paper_original.response": "688107edefe4e543afba27a11943ab7a50dd5bab33419cdcec51be680fbf6bcd",
+    "data/raw/thermal_public_evidence/author_search/imperial_thesis_bundles.response": "506a7bdf7151141a9c3e2381f868e73787acb762a938987d32fb436e000046ad",
+    "data/raw/thermal_public_evidence/author_search/imperial_thesis_original.response": "05116d31b1dc756a855343cc7ff32fe52d1e246db77793913e816fc6ddd3a8a1",
+    "data/raw/thermal_public_evidence/author_search/Marzook-W-2024-PhD-Thesis.pdf": "d97995bbd36c29208ce1c9a9e9ee4b1419a07e07376833d4274e9f309922e4c7",
+    "data/raw/thermal_public_evidence/author_search/osf_files.response": "bc994ea1fe87c6a306ac4bbfd1df17eb4aaf9c3a83c406a8465ed49cc7feb725",
+    "data/raw/thermal_public_evidence/author_search/osf_record.response": "15bc3c68ee3162e20fa5d6033273f126207c5d673aabf49ee2bac53e728d27e9",
+    "data/raw/thermal_public_evidence/author_search/retrieval_001.json": "f8df0e099acd8963e20603f42283c06b929d258ed1b77d016a372ede4817b93e",
+    "data/raw/thermal_public_evidence/author_search/retrieval_002.json": "10e98d11311d8446f52934180e9708d35115849e6deb534fc1a0e7af3bdb518a",
+    "data/raw/thermal_public_evidence/author_search/retrieval_003.json": "eeff108785faedd1c441fb15dcbf0c41ce540f83a1fb56a66df128c49203ea36",
+    "data/raw/thermal_public_evidence/author_search/retrieval_004.json": "9e6c393a3f9f782606f5b8691b7e8dd78006c24b13c550bb63c20b9bb09965a4",
+    "data/raw/thermal_public_evidence/author_search/retrieval_005.json": "8cee5bfcab29ba34c509ebedfbeafd7c06bf164a0524e4517ce773749d282b70",
+    "data/raw/thermal_public_evidence/author_search/retrieval_006.json": "8ebba4820d2240ec73ab3ab7eccadc1f5ffa6a40b2c0025a8d38e8ce0cd17a7e",
+    "data/raw/thermal_public_evidence/author_search/thesis_bookmarks.json": "0187aef70059c664113cbfa102f77f3c54d4ae9ab71f55749e01e35468f89573",
+    "data/raw/thermal_public_evidence/author_search/thesis_method_read_001.json": "58f3596f7e6fbb2ddd420464581a2060334b20cca275f24a2cd27e36b3f1ddc8",
+    "data/raw/thermal_public_evidence/author_search/thesis_page_065.txt": "c49e1f4cc5dd3ddce390f609fff992975db2197f0af2fa62d42448ec080af60b",
+    "data/raw/thermal_public_evidence/author_search/thesis_page_066.txt": "6573d48141443f3e4fbb72e51f445fc7a5113c9b2765bda1db024c85250d40ba",
+    "data/raw/thermal_public_evidence/author_search/thesis_page_067.png": "eca7d63e11de9f690b6e9c54109d645238705645cbfc67ff3635ac292df6eb03",
+    "data/raw/thermal_public_evidence/author_search/thesis_page_067.txt": "a6a50af33c3b60ecb9cb44642ab9656ff2004f26ec7e276ad883cb630b2c67cb",
+    "data/raw/thermal_public_evidence/author_search/thesis_page_068.png": "9f0a4df956090f71545947391a0b58f4f5bbbf6ecdbf5b3e5332a2c197886253",
+    "data/raw/thermal_public_evidence/author_search/thesis_page_068.txt": "db1aef4802caa4152422d3506238d215504ef63624e9a2d90d155766b4142f6f",
+    "data/raw/thermal_public_evidence/author_search/thesis_page_097.txt": "72f8e636a9b618637fd3c4c60e14fad2e4892a2994e41a898ada8eb5fec4d7cf",
+    "data/raw/thermal_public_evidence/author_search/thesis_page_200.txt": "53df89b3ba30e3506c3dc33c96fcdf9c544502076e7a7bce1155c12375ab7916",
+    "data/raw/thermal_public_evidence/author_search/thesis_page_201.txt": "e07fa49922c8b79e5022acae5bc4aa984b32311767a1247ee9f5a230f6c91a52",
+    "data/raw/thermal_public_evidence/author_search/zenodo_author_search.response": "8105c5098c3b8051ed4e35cc510a7c4af8dcca8edb46986c9a37ba5469c6985c",
+    "data/raw/thermal_public_evidence/author_search/zenodo_author_search_25.response": "262a9d6b608a7fa10e675a102213a7c51e9177eb439589ccf6d1cb87db9ed83b",
+    "data/raw/thermal_public_evidence/author_search/zenodo_latest.response": "b5287ef3810fed491eeac53abd1feb78488e09836ce4970934d19fbfabc2e455",
+    "data/raw/thermal_public_evidence/author_search/zenodo_record.response": "b5287ef3810fed491eeac53abd1feb78488e09836ce4970934d19fbfabc2e455",
+    "data/raw/thermal_public_evidence/author_search/zenodo_related_7385979.response": "b806b4e1ce8387dea8fba908f5cd1e097b5d67550042da2cd98b6631a31869c5",
+    "data/raw/thermal_public_evidence/author_search/zenodo_related_readme.response": "8817dfe6c6d8e926362dd76dd0d89c405421bc1bc38767fa6dd958fbb13c0701",
+    "data/raw/thermal_public_evidence/author_search/zenodo_versions.response": "483442ed28dd9eee789b81d089bbeb74612f6c8a733f46cdb2efc46d45f926f1"
+  },
+  "search_queries": [
+    "\"Thermal Evaluation of Lithium-ion Batteries\" \"code\"",
+    "\"Waseem Marzook\" github",
+    "\"6421061\" calibration",
+    "\"Cell Cooling Coefficient\" \"M50\" MATLAB",
+    "\"Marzook\" \"Thermal characterisation\" thesis",
+    "\"cylindrical cell cooling coefficient\" github",
+    "\"M50_50SOC_20deg_cell1_test103\"",
+    "\"Marzook\" \"brass\" calibration",
+    "\"A system for determining Li-ion cell cooling coefficients\" github",
+    "\"A system for determining Li-ion cell cooling coefficients\" calibration",
+    "\"Marzook\" \"SS_Q\""
+  ],
+  "web_only_sources_checked": [
+    {
+      "url": "https://zenodo.org/records/6421061",
+      "kind": "original release page"
+    },
+    {
+      "url": "https://profiles.imperial.ac.uk/mohamed.marzook13/publications",
+      "kind": "author publications list"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.est.2022.105217",
+      "kind": "previously known primary paper returned in search"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9058592/",
+      "kind": "methodology paper; exact HTML separately preserved"
+    }
+  ],
+  "web_access_failures": [
+    {
+      "url": "https://zenodo.org/api/records/6421061",
+      "result": "not accessible via browser-search tool; public direct GET later succeeded"
+    },
+    {
+      "url": "https://spiral.imperial.ac.uk/entities/publication/2b0eedfd-0e50-45d8-8bc7-0b4fef3a4e52",
+      "result": "unverified/incorrect guessed locator not accessible; corrected using existing repository item metadata a90df784-a0be-4e2f-aa19-b6bae79703b0"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.ohx.2022.e00257",
+      "result": "not accessible via browser-search tool; primary PMC copy used"
+    }
+  ],
+  "findings": {
+    "zenodo_versions_count": 1,
+    "zenodo_latest_record": 6421061,
+    "imperial_author_search_hits_metadata_only": 64,
+    "zenodo_author_query_hits": 8,
+    "github_exact_ccc_repository_hits": 0,
+    "github_waseem_marzook_repository_hits": 0,
+    "github_marzook_repository_hits": 47,
+    "github_marzook_metadata_titles_reviewed": 30,
+    "osf_storage_files": [
+      "license.txt",
+      "CCC-CAD.zip",
+      "CCC-BOM.xlsx"
+    ],
+    "related_release_metadata_only": 7385979,
+    "test103_clock_alignment_resolved": false,
+    "test103_temperature_offset_calibration_resolved": false,
+    "test103_heat_scale_resolved": false,
+    "test103_processing_windows_resolved": false,
+    "test103_setup_fault_mapping_resolved": false
+  },
+  "document_access": {
+    "thesis_pdf_pages_1based_extracted": [
+      65,
+      66,
+      67,
+      68,
+      97,
+      200,
+      201
+    ],
+    "thesis_pdf_pages_rendered": [
+      67,
+      68
+    ],
+    "thesis_bookmarks_read": true,
+    "thesis_results_sections_read": false,
+    "hardware_sections_extracted": [
+      "CCC calculation",
+      "Fins",
+      "Data processing"
+    ],
+    "hardware_validation_section_read": false,
+    "incidental_published_exposure": [
+      "Previously known main-paper aggregate outcomes in search response",
+      "HardwareX search response Kokam example caption and qualitative repeatability statement",
+      "Thesis protocol matrix on PDF page 68 already published in the original article"
+    ],
+    "evidence_classification": "Published method/background, never fresh independent assessment"
+  },
+  "protection": {
+    "numerical_measurement_files_opened": 0,
+    "numerical_measurement_files_downloaded": 0,
+    "reserved_raw_outcomes_opened": 0,
+    "models_fitted": 0,
+    "outreach_sent": false,
+    "external_AI_calls": false,
+    "existing_files_edited": false
+  },
+  "verification": {
+    "download_bytes_and_sha256_match": true,
+    "report_hash_pinned": true,
+    "read_boundaries_recorded": true
+  }
+}

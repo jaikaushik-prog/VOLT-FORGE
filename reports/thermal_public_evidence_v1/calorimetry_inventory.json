@@ -1,0 +1,70 @@
+{
+  "url": "https://data.mendeley.com/public-files/datasets/98thdkgp8z/files/8f1c2470-88ef-46af-9b9f-a806248b3a06/file_downloaded",
+  "started_utc": "2026-10-26T21:59:06.870110+00:00",
+  "numerical_members_opened": 0,
+  "sha256": "5e4ff4ddbfa6e51263f08ea1b3722e0dd3e30d526f2cf7b82ab345f6e37f71c1",
+  "local_path": "data/raw/thermal_public_evidence/calorimetry_docs_001/raw_data_with_example_Python_usage.zip",
+  "bytes": 16213529,
+  "inventory": [
+    {
+      "name": "example_code.ipynb",
+      "size": 343779,
+      "crc": 562079815
+    },
+    {
+      "name": "__MACOSX/._example_code.ipynb",
+      "size": 176,
+      "crc": 3629867683
+    },
+    {
+      "name": "heat_sensor_tr_4mins.npy",
+      "size": 2924391,
+      "crc": 2113376980
+    },
+    {
+      "name": "heat_sensor_tr_8mins.npy",
+      "size": 4846682,
+      "crc": 11676460
+    },
+    {
+      "name": "heat_sensor_tr_10mins.npy",
+      "size": 5731588,
+      "crc": 1849144255
+    },
+    {
+      "name": "heat_sensor_tr_16mins.npy",
+      "size": 8551841,
+      "crc": 2599048533
+    },
+    {
+      "name": "heat_sensor_tr_32mins.npy",
+      "size": 16232552,
+      "crc": 3982446915
+    },
+    {
+      "name": "I-V_cycler_tr_4mins.npy",
+      "size": 1335081,
+      "crc": 4054759241
+    },
+    {
+      "name": "I-V_cycler_tr_8mins.npy",
+      "size": 2311260,
+      "crc": 1446000979
+    },
+    {
+      "name": "I-V_cycler_tr_10mins.npy",
+      "size": 2796194,
+      "crc": 1059762091
+    },
+    {
+      "name": "I-V_cycler_tr_16mins.npy",
+      "size": 4258910,
+      "crc": 3080313415
+    },
+    {
+      "name": "I-V_cycler_tr_32mins.npy",
+      "size": 8163630,
+      "crc": 3468629545
+    }
+  ]
+}
