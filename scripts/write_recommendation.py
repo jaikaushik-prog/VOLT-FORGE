@@ -65,7 +65,7 @@ Bench-test two cells on the board at a measured Pi draw, then run observed trial
 
 ## Numerical check
 
-Halving the time step moved results by at most {s['half_step']['max_voltage_change_V']:.5f} V and {s['half_step']['max_temperature_change_K']:.4f} K across {s['half_step']['pairs']} pairs. {s['refused']} of {s['cases']:,} cases were refused by the product's limits. The first-law check closed in every calculated case.
+A full rerun on the locked code matched the earlier run in all 4,006 cases, with no change in any of 19,820 numbers. Halving the time step moved results by at most {s['half_step']['max_voltage_change_V']:.5f} V and {s['half_step']['max_temperature_change_K']:.4f} K across {s['half_step']['pairs']} pairs. {s['refused']} of {s['cases']:,} cases were refused by the product's limits. The first-law check closed in every calculated case.
 """
 (ROOT/'reports/design_study_v2/RECOMMENDATION.md').write_text(text)
 print(text[:1500])

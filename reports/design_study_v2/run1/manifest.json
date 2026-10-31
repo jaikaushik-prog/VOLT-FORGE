@@ -1,12 +1,12 @@
 {
   "version": "voltforge.design-study-run/2",
-  "created_utc": "2026-10-30T13:33:42.404692+00:00",
+  "created_utc": "2026-10-30T23:16:33.467555+00:00",
   "cases_planned": 4006,
   "cases_run": 4006,
   "pilot": false,
-  "seconds": 2622.0471003055573,
+  "seconds": 2095.9775729179382,
   "protocol_sha256": "8dcfc8f11f944f073c8aa137309c43fd6c2f597496dae06f0a40ce8222176a88",
-  "software_hash": "dd8746b0898bcae0e4badbd8bdc1d8f99d94c05eb1521db2f9878ca2db61457f",
+  "software_hash": "97ca199f2fd21aacbc25cb51ea9e497ec4111cb0031d6064a40267e5d9be74e8",
   "model_hash": "795101f9ec56948b15d1419c7c96784d854d182645aae365e1f0791f02b29276",
   "parts": "2026-10-30",
   "experimental_validation": false

@@ -1,6 +1,7 @@
 """Record a short captioned walkthrough of the real app on a fresh project."""
 from pathlib import Path
 import shutil
+import socket
 import subprocess
 import sys
 import tempfile
@@ -11,7 +12,12 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'reports/demo_v1/VOLT-FORGE_demo.mp4'
-PORT = 8799
+def free_port():
+    with socket.socket() as probe:
+        probe.bind(('127.0.0.1', 0)); return probe.getsockname()[1]
+
+
+PORT = free_port()
 SIZE = dict(width=1600, height=900)
 CAPTION = """(text)=>{let c=document.querySelector('#demo-caption');if(!c){c=document.createElement('div');c.id='demo-caption';c.style.cssText='position:fixed;left:50%;bottom:28px;transform:translateX(-50%);max-width:1180px;background:#0B6FA8;color:#fff;font:600 25px/1.35 Arial,sans-serif;padding:14px 28px;border-radius:14px;z-index:99999;text-align:center;box-shadow:0 8px 28px rgba(0,0,0,.25)';document.body.append(c)}c.textContent=text}"""
 

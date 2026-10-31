@@ -561,7 +561,7 @@
   "checks": {
     "version": "voltforge.engineering-check-results/1",
     "protocol_sha256": "a14957bcaa8f3c30e9fbc8af8d947eeebf49f58c99023b4a416b30f728ded8ba",
-    "source_commit": "68601a58abb09f1b5ce1b9ccc423f56423cc4797",
+    "source_commit": "089c6490c80698d63fb2a7025673d5b08c193955",
     "experimental_validation": false,
     "current_sharing": [
       {
@@ -693,6 +693,66 @@
         "mean_error_V": 0.14460657142857145,
         "largest_optimistic_error_V": 0.17022000000000004,
         "largest_abs_error_V": 0.17022000000000004
+      },
+      "required_charge": {
+        "cases": 33,
+        "lowest_charge_pct": 53.97081930415521
+      },
+      "ten_minute_rise": [
+        {
+          "case": "test28_exact_m50t_module",
+          "measured_rise_K": 2.6474898153305055,
+          "simulated_rise_K": 6.388445301027954,
+          "ratio": 0.41441848377484
+        },
+        {
+          "case": "test53_used_fixture",
+          "measured_rise_K": 0.8141933065050502,
+          "simulated_rise_K": 3.0099509065815653,
+          "ratio": 0.27050052701016924
+        },
+        {
+          "case": "LGM50_cell02 2.5 A",
+          "measured_rise_K": 1.250899999999998,
+          "simulated_rise_K": 1.1029599243160995,
+          "ratio": 1.134130055337804
+        },
+        {
+          "case": "LGM50_cell02 5 A",
+          "measured_rise_K": 5.545200000000001,
+          "simulated_rise_K": 5.478391690730923,
+          "ratio": 1.0121948763506838
+        },
+        {
+          "case": "LGM50_cell03 2.5 A",
+          "measured_rise_K": 1.165700000000001,
+          "simulated_rise_K": 1.4578156149841561,
+          "ratio": 0.7996210138088486
+        },
+        {
+          "case": "LGM50_cell03 5 A",
+          "measured_rise_K": 5.1587,
+          "simulated_rise_K": 5.895096554748868,
+          "ratio": 0.8750832072197944
+        },
+        {
+          "case": "LGM50_cell04 2.5 A",
+          "measured_rise_K": 1.3887,
+          "simulated_rise_K": 1.4411185710167622,
+          "ratio": 0.9636264690005494
+        },
+        {
+          "case": "LGM50_cell04 5 A",
+          "measured_rise_K": 6.029900000000001,
+          "simulated_rise_K": 5.801001766841768,
+          "ratio": 1.039458397421391
+        }
+      ],
+      "virtual_protection": {
+        "settings": "7 A a cell, 3.3 V and 45 C, with 0.5 s sensing and 0.5 s response",
+        "status": "completed",
+        "peak_cell_current_A": 4.208754208754234,
+        "peak_temperature_C": 27.37006938336244
       }
     },
     "error_budget": {
@@ -870,10 +930,16 @@
       "passed": true
     }
   },
+  "designs": 13,
   "business": {
-    "stage1_crore": 9.268871383545509,
+    "stage1_crore": 10.971353667208792,
     "team_price_inr": 500000,
     "repay_years": 5,
-    "stage1_teams": 25
+    "labs": 130,
+    "lab_lakh": 65.0,
+    "yearly_crore": 2.1942707334417584,
+    "stage1_teams": 31,
+    "teams_without_labs": 44,
+    "labs_alone": 439
   }
 }

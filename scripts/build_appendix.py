@@ -222,7 +222,7 @@ e = tab('Evidence', 'How far the results can be trusted', 'The maths checks out.
 r = section(e, 4, 'Checks')
 r = header(e, r, ['Check', 'Result', 'What it means']); e.merge_cells(start_row=r-1, start_column=3, end_row=r-1, end_column=10)
 check_first = r
-checks = [
+software = [
     ('Python tests', TESTS['python'], 'Clean install of the final code'),
     ('JavaScript tests', TESTS['javascript'], 'Editor and app logic'),
     ('AI route', '4 of 4 prompts on Claude and on Codex', 'Each plain-English request opened an editable draft'),
@@ -233,7 +233,7 @@ checks = [
     ('Sealed records', f"{slide['kpi']['sealed_total']} never opened", f"{slide['kpi']['sealed_module_records']} module tests and {slide['kpi']['sealed_cell_records']} Samsung cell records, reserved for a final assessment"),
     ('Audit of V3 findings', AUDIT['v3'], AUDIT['note']),
 ]
-for name, result, meaning in checks:
+for name, result, meaning in software:
     put(e, r, 1, name); put(e, r, 2, result); put(e, r, 3, meaning); e.merge_cells(start_row=r, start_column=3, end_row=r, end_column=10); r += 1
 r += 1; r = section(e, r, 'Compared with published measurements: frozen before any run, never used to fit')
 v, t = protocol['bands']['voltage'], protocol['bands']['temperature']

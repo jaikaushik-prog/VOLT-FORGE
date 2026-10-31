@@ -1,0 +1,9 @@
+{
+ "cases": 4006,
+ "numeric_fields_compared": 19820,
+ "differing_fields": 0,
+ "largest_change": 0.0,
+ "earlier_software": "dd8746b0898bcae0",
+ "locked_software": "97ca199f2fd21aac",
+ "note": "The whole study was rerun from scratch on the locked code and compared case by case with the earlier run."
+}

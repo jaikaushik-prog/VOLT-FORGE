@@ -13,7 +13,7 @@ header p{font-size:23px;font-weight:500;color:#566575;margin-top:4px}
 .left{left:36px}.right{right:36px}
 .c h2,.proto h2{font-size:16px;font-weight:800;color:#0091CC;letter-spacing:.3px;text-transform:uppercase}
 .c h3{font-size:27px;font-weight:800;letter-spacing:-.5px;line-height:1.18;margin-top:5px;text-wrap:balance}
-.c p{font-size:19px;font-weight:500;line-height:1.42;color:#3F4E5D;margin-top:6px}
+.c p{font-size:18px;font-weight:500;line-height:1.42;color:#3F4E5D;margin-top:6px}
 .c p b,.kpi b{font-weight:800;color:#10202F}
 .proto{position:absolute;left:436px;top:118px;width:1048px;height:872px}
 .proto h2{text-align:center}
@@ -34,23 +34,23 @@ footer{position:absolute;left:36px;right:36px;bottom:16px;height:52px;border-rad
 footer b{font-weight:800}
 </style></head><body><div class="slide">
 <img class="logo-left" src="assets/logo_teliport.png" alt="Teliport"><img class="logo-right" src="assets/logo_tata.png" alt="Tata Elxsi">
-<header><h1>Test a battery <em>before you build it</em></h1><p>VOLT-FORGE connects every battery design decision to what it physically changes</p></header>
+<header><h1>Test a battery <em>before you build it</em></h1><p>VOLT-FORGE connects your battery design decisions to what they physically change</p></header>
 <section class="col left">
-<div class="c"><h2>Problem understanding</h2><h3>Cells never share the load evenly</h3><p>Say you need a Raspberry Pi 5 gateway to survive a <b>10-minute power cut at 25 W</b>. Four cells in parallel sounds easy, until the cell closest to the output takes more current than the rest, runs hotter and sets the limit for the whole pack.</p></div>
-<div class="c"><h2>Desirability</h2><h3>You shouldn't need a lab to learn that</h3><p>Right now you find out by buying parts and hoping. A student can't afford that, and an engineer can't wait for it. Here you wire the circuit on screen, run it and see which cell struggles <b>before spending a rupee</b>.</p></div>
-<div class="c"><h2>Technical feasibility</h2><h3>So how few cells can do this job?</h3><p>We compared 3 and 2 cells against the <span style="white-space:nowrap">4-cell</span> start. <b>Two cells</b> kept the Pi running for all 10 minutes in all 33 tests, even with one weak cell, and never hit their limit. One cell was refused outright. You can build it today on a two-cell Pi UPS board, and the tool runs on a normal laptop.</p></div>
+<div class="c"><h2>Problem understanding</h2><h3>Cells rarely share the load evenly</h3><p>Say a Raspberry Pi 5 gateway must survive a <b>10-minute power cut at 25 W</b>, its full supply rating, at 23 °C. Four cells in parallel sounds easy, until the cell closest to the output takes more current at first. Ageing and packaging come later.</p></div>
+<div class="c"><h2>Desirability</h2><h3>You shouldn't need a lab to learn that</h3><p>Today that takes a bench, a paid tool or your own code. Students can't afford that and engineers can't wait. Here you wire the circuit on screen and see which cell struggles <b>before spending a rupee</b>.</p></div>
+<div class="c"><h2>Technical feasibility</h2><h3>So how few cells can do this job?</h3><p>We compared 3 and 2 cells against the <span style="white-space:nowrap">4-cell</span> start. <b>Two cells</b> held the Pi for all 10 minutes in all 33 simulated tests, even with one weak cell. One cell was refused. It should fit a two-cell Pi UPS board, though we haven't built it yet, and the tool runs on a laptop.</p></div>
 </section>
 <section class="proto"><h2>Prototype &amp; evidence<span>The real Pi design, then 4 cells against 2 under the same load</span></h2>
 <div class="shot one"><img src="assets/circuit.png" alt="The 4-cell Pi backup circuit in VOLT-FORGE with the properties of Cell 1 open"></div>
 <div class="shot two"><img src="assets/compare.png" alt="VOLT-FORGE comparing the 4-cell and 2-cell designs, with the full results table"></div>
-<div class="proofs"><div><b>4,006 what-if runs.</b> Weak cells, bad links, poor cooling: we tried to break it first.</div><div><b>54 published lab experiments.</b> Real four-cell test data, with all 194 files verified intact.</div><div><b>9 tests kept sealed.</b> Held back from every fit, so the final exam uses unseen data.</div></div>
+<div class="proofs"><div><b>4,006 simulated cases.</b> 13 designs against weak cells, bad links and poor cooling. A full rerun matched exactly.</div><div><b>54 published four-cell experiments.</b> All 194 dataset files verified intact, 2 tests compared with the model so far.</div><div><b>9 records kept closed.</b> Saved for a final exam. 2 can test this cell, both at 40 °C.</div></div>
 </section>
 <section class="col right">
-<div class="c"><h2>Engineering quality</h2><h3>Why should you trust it?</h3><p>Every run has to balance its energy or it gets flagged. In a published four-cell test, the nearest cell took <b>34%</b> of the current and the farthest 19%. Our model said <b>34%</b> and 19%. Temperature is weaker: all 12 real tests missed, so we use a range, and 2 cells stay under their limit even at 2.3 times the heat.</p></div>
-<div class="c"><h2>Innovation</h2><h3>You don't have to guess</h3><p>Press <b>Find the smallest design</b> and it rebuilds the circuit at each size, tests them all and shows what survives. For the Pi, that meant 2 cells, not 4, at half the cell cost.</p></div>
+<div class="c"><h2>Engineering quality</h2><h3>Why should you trust it?</h3><p>Every run must balance its energy, which catches solver errors, not a wrong model. Against published data, voltage and temperature missed all 12 checks. Current sharing came closer but also missed: the nearest cell took <b>34%</b> early on, the model said <b>34%</b>. Over 10 minutes, real heating stayed within 1.13 times the model.</p></div>
+<div class="c"><h2>Innovation</h2><h3>You don't have to guess</h3><p>Press <b>Find the smallest design</b>. It rebuilds the circuit at each size and tests it under normal conditions. For the Pi: 2 cells, not 4, at half the cell cost. Our study then stress-tested that.</p></div>
 <div class="c"><h2>Business viability</h2><div class="market"><svg width="118" height="118" viewBox="0 0 176 176" role="img" aria-label="TAM, SAM and SOM nested circles"><circle cx="88" cy="88" r="88" fill="#D5ECF8"/><circle cx="88" cy="118" r="58" fill="#59B9E6"/><circle cx="88" cy="146" r="30" fill="#0B6FA8"/></svg>
-<ul><li><b>41.3 lakh</b>TAM, engineering students</li><li><b>15.6 lakh</b>SAM, electrical, electronics, mechanical</li><li><b>130</b>SOM, colleges, 5% assumed</li></ul></div>
-<div class="cost">₹35 crore</div><p>to build all of it, about 2% of AspenTech's yearly R&amp;D. Students use it free. Stage one is ₹9 crore, and 25 teams paying ₹5 lakh a year repay it in 5 years.</p></div>
+<ul><li><b>41.3 lakh</b>TAM, engineering students</li><li><b>15.6 lakh</b>SAM, electrical, electronics, mechanical</li><li><b>130</b>SOM, labs at ₹50,000, 5% assumed</li></ul></div>
+<div class="cost">₹35 crore</div><p>to build it all. Stage one is ₹11 crore: 130 labs and 31 teams at ₹5 lakh a year would repay it in 5 years, before running costs. Students use it free. No customer has seen these prices.</p></div>
 </section>
-<footer><span><b>These results are simulated.</b>&nbsp; Next we bench-test real cells and put it in front of students and engineers.</span></footer>
+<footer><span><b>Simulated</b> with an assumed 90% converter and 3.3 V floor. <b>Next:</b> a bench test with voltage, current and heat cutoffs, then student and engineer trials.</span></footer>
 </div></body></html>

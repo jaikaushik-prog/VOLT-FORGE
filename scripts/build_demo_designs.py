@@ -6,14 +6,14 @@ from pathlib import Path
 from voltforge.project import Project
 from voltforge.studio.store import Studio
 
-path = Path('workspace/demo_pi'); Project.create_reference(path); studio = Studio(path)
+path = Path('workspace/demo_final'); Project.create_reference(path); studio = Studio(path)
 sys.path.insert(0, 'scripts')
 from run_design_study_v2 import build
 
 
 def design(name, count, option):
     doc = studio.create('parallel', count, name, mission=dict(preset='pi5_gateway_backup'))
-    graph, _, _ = build(dict(count=count, option=option, mission='pi'))
+    graph, _, _ = build(dict(count=count, option=option, mission='pi')); graph['name'] = name
     return studio.save(doc['id'], doc['version'], graph, doc['settings'])
 
 
