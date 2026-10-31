@@ -48,6 +48,7 @@ def main():
             page.evaluate("document.querySelector('[data-act=\"view:results\"]')?.click()"); page.wait_for_timeout(1500)
             page.evaluate("document.querySelector('[data-act=\"compare\"]')?.click()"); page.wait_for_selector('#compare-form select', timeout=8000); page.wait_for_timeout(800)
             page.evaluate(PICK); page.click('#compare-form button[type=submit]'); page.wait_for_selector('.compare-designs', timeout=10000); page.wait_for_timeout(1500)
+            page.evaluate("document.querySelectorAll('.compare-designs svg,.compare-designs .battery-canvas').forEach(e=>e.style.setProperty('height','208px','important'))"); page.wait_for_timeout(500)
             page.evaluate("document.querySelector('.compare-designs').scrollIntoView({block:'start'})"); page.wait_for_timeout(700)
             box = page.evaluate("(()=>{const a=document.querySelector('.compare-designs').getBoundingClientRect(),b=document.querySelector('.compare-tables').getBoundingClientRect();return [a.left,a.top,a.right,b.bottom]})()")
             rows = page.evaluate("[...document.querySelectorAll('.compare-table tbody tr')].map(r=>r.innerText.replace(/\\s+/g,' '))")

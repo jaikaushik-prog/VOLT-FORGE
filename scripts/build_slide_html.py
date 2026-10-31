@@ -30,9 +30,14 @@ header p{font-size:23px;font-weight:500;color:#566575;margin-top:4px}
 .proto h2 span{color:#566575;font-weight:600;text-transform:none;letter-spacing:0;margin-left:10px}
 .shot{position:absolute;left:0;width:1048px;border:2px solid #D3DFE8;border-radius:12px;overflow:hidden;background:#fff}
 .shot img{display:block;width:100%}
-.one{top:27px}.two{top:347px}
-.proofs{position:absolute;left:0;right:0;top:772px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.proofs div{font-size:18px;font-weight:500;line-height:1.42;color:#3F4E5D}
+.one{top:27px}.two{top:370px}
+.caption{position:absolute;left:0;right:0;margin:0;text-align:center;font-size:17px;font-weight:500;color:#3F4E5D;line-height:1.3}
+.caption b{font-weight:800;color:#10202F}.capone{top:342px}.captwo{top:726px}
+.proto h2 a{color:#0B6FA8;font-weight:800}
+.applink{position:absolute;left:0;right:0;top:846px;margin:0;text-align:center;font-size:17px;font-weight:500;color:#3F4E5D}
+.applink a{color:#0B6FA8;font-weight:800}
+.proofs{position:absolute;left:0;right:0;top:756px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.proofs div{font-size:17px;font-weight:500;line-height:1.36;color:#3F4E5D}
 .proofs b{font-weight:800;color:#10202F}
 .market{display:flex;align-items:center;gap:14px;margin-top:8px}
 .market svg{flex:none}
@@ -51,6 +56,7 @@ def main():
     parser.add_argument('--out', type=Path, default=ROOT/'reports/slide_v4/slide.html')
     args = parser.parse_args()
     d = json.loads(args.data.read_text()); best, m, cost, biz = d['best'], d['market'], d['cost'], d['business']
+    links = json.loads((args.data.parents[2]/'configs/public_site.json').read_text())
     share, tenmin = d['checks']['post_hoc']['share_detail'][0]['first_10pct'], max(x['ratio'] for x in d['checks']['post_hoc']['ten_minute_rise'])
     n = best['count']; k = d['kpi']
     html = f"""<!doctype html><html><head><meta charset="utf-8"><title>VOLT-FORGE Round 1</title>
@@ -62,10 +68,13 @@ def main():
 <div class="c"><h2>Desirability</h2><h3>You shouldn't need a lab to learn that</h3><p>Today that takes a bench, a paid tool or your own code. Students can't afford that and engineers can't wait. Here you wire the circuit on screen and see which cell struggles <b>before spending a rupee</b>.</p></div>
 <div class="c"><h2>Technical feasibility</h2><h3>So how few cells can do this job?</h3><p>We compared 3 and 2 cells against the <span style="white-space:nowrap">4-cell</span> start. <b>Two cells</b> held the Pi for all 10 minutes in all {best['required_cases']} simulated tests, even with one weak cell. One cell was refused. It should fit a two-cell Pi UPS board, though we haven't built it yet, and the tool runs on a laptop.</p></div>
 </section>
-<section class="proto"><h2>Prototype &amp; evidence<span>The real Pi design, then 4 cells against 2 under the same load</span></h2>
+<section class="proto"><h2>Prototype &amp; evidence<span>Test it out: <a id="site-link">{links['address']}</a></span></h2>
 <div class="shot one"><img src="assets/circuit.png" alt="The 4-cell Pi backup circuit in VOLT-FORGE with the properties of Cell 1 open"></div>
+<p class="caption capone"><b>Build it.</b> This is the real circuit the solver runs. Click any cell to see and change what's inside it.</p>
 <div class="shot two"><img src="assets/compare.png" alt="VOLT-FORGE comparing the 4-cell and 2-cell designs, with the full results table"></div>
+<p class="caption captwo"><b>Compare it.</b> Same 25 W job: 2 cells cost and weigh half, but work harder with less voltage margin.</p>
 <div class="proofs"><div><b>{k['study_runs']:,} simulated cases.</b> {d['designs']} designs against weak cells, bad links and poor cooling. A full rerun matched exactly.</div><div><b>{k['lab_experiments']} published four-cell experiments.</b> All {k['data_files']} dataset files verified intact, 2 tests compared with the model so far.</div><div><b>{k['sealed_total']} records kept closed.</b> Saved for a final exam. 2 can test this cell, both at 40 °C.</div></div>
+<p class="applink">Every cost, source and check is in the full appendix: <a id="appendix-link">{links['address']}/appendix</a></p>
 </section>
 <section class="col right">
 <div class="c"><h2>Engineering quality</h2><h3>Why should you trust it?</h3><p>Every run must balance its energy, which catches solver errors, not a wrong model. Against published data, voltage and temperature missed all {d['proof_cases']} checks. Current sharing came closer but also missed: the nearest cell took <b>{share['measured'][0]:.0f}%</b> early on, the model said <b>{share['simulated'][0]:.0f}%</b>. Over 10 minutes, real heating stayed within {tenmin:.2f} times the model.</p></div>

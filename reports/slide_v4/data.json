@@ -561,7 +561,7 @@
   "checks": {
     "version": "voltforge.engineering-check-results/1",
     "protocol_sha256": "a14957bcaa8f3c30e9fbc8af8d947eeebf49f58c99023b4a416b30f728ded8ba",
-    "source_commit": "089c6490c80698d63fb2a7025673d5b08c193955",
+    "source_commit": "7fbff7951df4a72b6cfe928fb2a005ca9eaee759",
     "experimental_validation": false,
     "current_sharing": [
       {

@@ -4,9 +4,13 @@ import argparse
 import json
 
 from pptx import Presentation
-from pptx.util import Emu
+from pptx.enum.shapes import MSO_SHAPE
+from pptx.util import Emu, Pt
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+TEAM = dict(name='StratWise', members=['Shubhra Arora', 'Jai Kaushik', 'Sanya Bansal'], size_pt=18)
 
 
 def notes(d):
@@ -28,6 +32,7 @@ Business: free for students, labs and teams pay, as a hypothesis. Stage one is d
 Build cost: about Rs {d['cost']['total_crore']:.0f} crore over 3 years and {d['cost']['person_years']:g} person-years for the full product vision. An estimate from sourced salary rates and assumed staffing, cross-checked with COCOMO II. See reports/build_cost_v1/BUILD_COST.md. AspenTech fiscal 2024 R&D was US$206.1 million.
 Safety and limits: no spare cell, so three cells is the smallest design that survives losing one. 25 W is the supply rating, and below about 21.6 W one cell stays under its limit. Bench safety steps are in the appendix. No user has tried the app yet.
 KPIs: {d['kpi']['lab_experiments']} module experiments in the Piombo et al. dataset, and {d['kpi']['data_files']} dataset files checksum-verified, including cell characterisation and calibration files. {d['kpi']['sealed_total']} records are reserved for a final assessment and were never opened: {d['kpi']['sealed_module_records']} module tests and {d['kpi']['sealed_cell_records']} Samsung cell records.
+Link: the site shows the demo video first, then the real engine running in the visitor's browser. The AI uses Gemini through a small server function.
 Screens: real designs in the app. The table compares the 4-cell starting design with the 2-cell design under the same 8.42 A load."""
 
 
@@ -42,11 +47,19 @@ def main():
         if shape.has_text_frame and 'Case Study No' in shape.text_frame.text:
             shape.text_frame.paragraphs[0].runs[0].text = 'Case Study 2'
             for extra in shape.text_frame.paragraphs[0].runs[1:]: extra.text = ''
+        if shape.has_text_frame and 'Team Details' in shape.text_frame.text:
+            frame = shape.text_frame; frame.paragraphs[0].runs[0].text = f"Team {TEAM['name']}"
+            for extra in frame.paragraphs[0].runs[1:]: extra.text = ''
+            line = frame.add_paragraph(); line.text = ', '.join(TEAM['members']); line.font.size = Pt(TEAM['size_pt']); line.font.bold = False
     for shape in list(slide.placeholders):
         if shape.placeholder_format.idx != 0: shape._element.getparent().remove(shape._element)
     slide.shapes.title.text_frame.text = 'Test a battery before you build it'
     picture = slide.shapes.add_picture(str(ROOT/'reports/slide_v4/VOLT-FORGE_Round1_Slide.png'), Emu(0), Emu(0), prs.slide_width, prs.slide_height)
     picture.name = 'VOLT-FORGE Round 1 slide'
+    links = json.loads((ROOT/'configs/public_site.json').read_text()); boxes = json.loads((ROOT/'reports/slide_v4/link_boxes.json').read_text())
+    for key, address in (('site', 'https://'+links['address']), ('appendix', f"https://{links['address']}/appendix")):
+        x, y, w, h = [Pt(v/2) for v in boxes[key]]  # The page is 1920 px wide on a 960 pt slide.
+        spot = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, x, y, w, h); spot.name = key+' link'; spot.fill.background(); spot.line.fill.background(); spot.click_action.hyperlink.address = address
     picture._element.nvPicPr.cNvPr.set('descr', 'VOLT-FORGE: the seven rubric criteria around the working app, showing the 4-cell Pi circuit with a cell properties panel, and a comparison of the 4-cell and 2-cell designs.')
     slide.notes_slide.notes_text_frame.text = notes(d)
     prs.save(args.out)

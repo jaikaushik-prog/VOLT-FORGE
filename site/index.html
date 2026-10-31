@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VOLT-FORGE</title>
+<meta name="description" content="Test a battery before you build it. A real battery simulator that runs in your browser.">
+<link rel="icon" href="app/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10202F;--muted:#566575;--blue:#0B6FA8;--line:#D3DFE8;--ground:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--ink:#EAF2F8;--muted:#A9B8C6;--blue:#4DB3E6;--line:#2C3B48;--ground:#0F1820}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:Manrope,system-ui,sans-serif}
+main{max-width:1040px;margin:0 auto;padding:28px 16px 40px}
+video{display:block;width:100%;aspect-ratio:16/9;background:#000;border-radius:14px;border:1px solid var(--line)}
+h1{font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:-.8px;margin:28px 0 8px}
+h1 em{font-style:normal;color:var(--blue)}
+p{font-size:18px;line-height:1.5;font-weight:500;color:var(--muted);margin:0 0 14px;max-width:760px}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 18px}
+a.button{display:inline-block;padding:13px 22px;border-radius:12px;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:800;font-size:16px}
+a.button.main{background:var(--blue);border-color:var(--blue);color:#fff}
+small{display:block;font-size:14px;line-height:1.5;color:var(--muted);font-weight:500}
+</style>
+</head>
+<body>
+<main>
+<video src="demo.mp4" autoplay muted loop playsinline controls aria-label="A one-minute walkthrough of VOLT-FORGE"></video>
+<h1>Test a battery <em>before you build it</em></h1>
+<p>VOLT-FORGE connects your battery design decisions to what they physically change. Wire a circuit, run it and see which cell struggles.</p>
+<div class="links">
+<a class="button main" href="app/">Test it out</a>
+<a class="button" href="https://github.com/shu-aro/VOLT-FORGE/tree/v4">See the code</a>
+<a class="button" href="appendix">Read the appendix</a>
+</div>
+<small>The real simulator runs inside your browser, so the first load takes about 15 seconds. Results are simulated. Team StratWise, Tata Elxsi Teliport Season 4, Case Study 2.</small>
+</main>
+</body>
+</html>
