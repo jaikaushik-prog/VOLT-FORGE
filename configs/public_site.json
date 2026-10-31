@@ -1,6 +1,6 @@
 {
   "version": "voltforge.public-site/1",
   "address": "volt-forge-app.vercel.app",
-  "appendix_url": "https://github.com/shu-aro/VOLT-FORGE/blob/v4/reports/appendix_v1/VOLT-FORGE_Appendix.xlsx",
-  "note": "Replace appendix_url with the Google Sheet link, then rebuild and redeploy the site. The slide link does not change."
+  "appendix_url": "https://docs.google.com/spreadsheets/d/1byhDFmM3Y7rHDYq_uZWy3oWRmRp5EIx5QVqF5Mqdp7E/edit?usp=sharing",
+  "note": "The slide link stays the same. To move the appendix, change appendix_url, then rebuild and redeploy the site."
 }

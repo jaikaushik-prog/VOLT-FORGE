@@ -13,7 +13,7 @@ header p{font-size:23px;font-weight:500;color:#566575;margin-top:4px}
 .left{left:36px}.right{right:36px}
 .c h2,.proto h2{font-size:16px;font-weight:800;color:#0091CC;letter-spacing:.3px;text-transform:uppercase}
 .c h3{font-size:27px;font-weight:800;letter-spacing:-.5px;line-height:1.18;margin-top:5px;text-wrap:balance}
-.c p{font-size:18px;font-weight:500;line-height:1.42;color:#3F4E5D;margin-top:6px}
+.c p{font-size:19px;font-weight:500;line-height:1.42;color:#3F4E5D;margin-top:6px}
 .c p b,.kpi b{font-weight:800;color:#10202F}
 .proto{position:absolute;left:436px;top:118px;width:1048px;height:872px}
 .proto h2{text-align:center}
@@ -41,16 +41,16 @@ footer b{font-weight:800}
 <img class="logo-left" src="assets/logo_teliport.png" alt="Teliport"><img class="logo-right" src="assets/logo_tata.png" alt="Tata Elxsi">
 <header><h1>Test a battery <em>before you build it</em></h1><p>VOLT-FORGE connects your battery design decisions to what they physically change</p></header>
 <section class="col left">
-<div class="c"><h2>Problem understanding</h2><h3>Cells rarely share the load evenly</h3><p>Say a Raspberry Pi 5 gateway must survive a <b>10-minute power cut at 25 W</b>, its full supply rating, at 23 °C. Four cells in parallel sounds easy, until the cell closest to the output takes more current at first. Ageing and packaging come later.</p></div>
-<div class="c"><h2>Desirability</h2><h3>You shouldn't need a lab to learn that</h3><p>Today that takes a bench, a paid tool or your own code. Students can't afford that and engineers can't wait. Here you wire the circuit on screen and see which cell struggles <b>before spending a rupee</b>.</p></div>
-<div class="c"><h2>Technical feasibility</h2><h3>So how few cells can do this job?</h3><p>We compared 3 and 2 cells against the <span style="white-space:nowrap">4-cell</span> start. <b>Two cells</b> held the Pi for all 10 minutes in all 33 simulated tests, even with one weak cell. One cell was refused. It should fit a two-cell Pi UPS board, though we haven't built it yet, and the tool runs on a laptop.</p></div>
+<div class="c"><h2>Problem understanding</h2><h3>Cells rarely share the load evenly</h3><p>Say a Raspberry Pi 5 gateway must survive a <b>10-minute power cut at 25 W</b>, its full supply rating, at 23 °C. Four cells in parallel sounds easy, until the cell closest to the output takes more current at first and warms sooner. Ageing and packaging come later.</p></div>
+<div class="c"><h2>Desirability</h2><h3>You shouldn't need a lab to learn that</h3><p>Today that takes a bench, a paid simulation tool or your own code. Students can't afford that and engineers can't wait. Here you wire the circuit on screen, run it and see which cell struggles <b>before spending a rupee</b>.</p></div>
+<div class="c"><h2>Technical feasibility</h2><h3>So how few cells can do this job?</h3><p>We compared 3 and 2 cells against the <span style="white-space:nowrap">4-cell</span> start. <b>Two cells</b> held the Pi for 10 minutes in all 33 simulated tests, even with one weak cell. One cell was refused. It should fit a two-cell Pi UPS board, though we haven't built it, and the tool runs on a laptop.</p></div>
 </section>
 <section class="proto"><h2>Prototype &amp; evidence<span>Test it out: <a id="site-link">volt-forge-app.vercel.app</a></span></h2>
 <div class="shot one"><img src="assets/circuit.png" alt="The 4-cell Pi backup circuit in VOLT-FORGE with the properties of Cell 1 open"></div>
 <p class="caption capone"><b>Build it.</b> This is the real circuit the solver runs. Click any cell to see and change what's inside it.</p>
 <div class="shot two"><img src="assets/compare.png" alt="VOLT-FORGE comparing the 4-cell and 2-cell designs, with the full results table"></div>
 <p class="caption captwo"><b>Compare it.</b> Same 25 W job: 2 cells cost and weigh half, but work harder with less voltage margin.</p>
-<div class="proofs"><div><b>4,006 simulated cases.</b> 13 designs against weak cells, bad links and poor cooling. A full rerun matched exactly.</div><div><b>54 published four-cell experiments.</b> All 194 dataset files verified intact, 2 tests compared with the model so far.</div><div><b>9 records kept closed.</b> Saved for a final exam. 2 can test this cell, both at 40 °C.</div></div>
+<div class="proofs"><div><b>4,006 simulated cases.</b> 13 designs against weak cells, bad links and poor cooling. A full rerun matched exactly.</div><div><b>54 published four-cell experiments.</b> All 194 dataset files verified intact, 2 tests compared with the model so far.</div><div><b>15 of 15 solver checks.</b> PyBaMM, an independent solver, matched our voltage and heat.</div></div>
 <p class="applink">Every cost, source and check is in the full appendix: <a id="appendix-link">volt-forge-app.vercel.app/appendix</a></p>
 </section>
 <section class="col right">
