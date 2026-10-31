@@ -1,0 +1,41 @@
+{
+  "schema": "voltforge.round1_review_package/1",
+  "review_date": "2026-10-31",
+  "reviewed_source_commit": "c2339a569876da5fc20969ea578a91ae57f33384",
+  "handoff_bundle_commit": "bba3eb5f3c33b7f06e4a5e0fc53f21d2b328a8e6",
+  "origin_repository": "https://github.com/shu-aro/VOLT-FORGE",
+  "delivery_repository": "https://github.com/jaikaushik-prog/VOLT-FORGE",
+  "delivery_branch": "v4",
+  "original_inputs_sha256": {
+    "VOLT-FORGE_Round1_Slide.pdf": "7d4f9e49796b784cf951bd82dfc69dfc6cc7de0996063cc4e3cc0f82a0acc3f8",
+    "VOLT-FORGE_Handoff_Package.zip": "fe6587748f78980e6c933b4505f3b97fdb43d9faed91e016560b10c55943acf0",
+    "VOLT_FORGE_Product_Vision.pdf": "d158a3801e2eecac66eda41ea84df6e35270134683ef95551afc1a1fa88cc8eb"
+  },
+  "original_inputs_redistributed": false,
+  "source_changes": false,
+  "live_browser_walkthrough_completed": false,
+  "review_limitations": [
+    "Generated persona reviews are not observed user trials",
+    "Exploratory Windows reproduction; not a full locked replay",
+    "Package integrity is not experimental validation"
+  ],
+  "artifacts_sha256": {
+    "design_reference/README.md": "cc5bc5fe9352636d289cf4cb958331e20738202bb814b80fa800a2d4df0bf32b",
+    "design_reference/SKILL.md": "9aac772ecba8d9cde229187978477e2544d95ff0c343ec4ad10243d34eecedfe",
+    "electrical/INITIAL_NOTES.md": "910daa04a124bf406933e7164b8ae26fe26ba2614a497d18800f25fa70f7fa47",
+    "electrical/receipt.json": "0d329dfd0d1eda12467e2c892169339a71fc95a8a4ee23d29e0d2ec9352e16f4",
+    "electrical/reproduce_electrical.py": "906d4e1d1ab4c071c951b89e8fba64c39b88b530b6ae533e650535c2a035e5c5",
+    "electrical/selected_tests.txt": "a46e12534b3ee70c9aa1b6939425664f1e41614c04f1dc9465ad4f4f0fa4d6cd",
+    "ELECTRICAL_REVIEW.md": "de26ba4a6c53c2a0b1bb8b623b20b5457ee54cf1901e33d1bbe792a0cb581b8c",
+    "FRONTEND_IMPROVEMENT_BRIEF.md": "ac013f1f1524675ccded7fbb186f47a7be30197899e789157a932bf7ead05516",
+    "JUDGE_REVIEW.md": "8b00f6e8c3991d1b5de826ff3ec7b3b4106c63fd92d36edc1f616c2194a04c7c",
+    "prompts/01_JUDGE_FRESH_SESSION.md": "b4f6782b9241ce7711263f90d260520ba8468394d8e859f9a04ed69294746451",
+    "prompts/02_ELECTRICAL_ENGINEER_FRESH_SESSION.md": "5d9510516834e3b0853a5b8565164f6eb22e83207d6d71f6b3c6c5e370f8d2b6",
+    "prompts/03_USER_EXPERIENCE_FRESH_SESSION.md": "d9f998ce812507aa8412770b5e6d2bfa86b8b27b1f054549a320cc85df287d6c",
+    "prompts/04_FRONTEND_IMPLEMENTER.md": "b6ab93e08f6e99792d273ceed9a78c4c34d17cac90812ea99a5812177adc0715",
+    "prompts/05_RECONCILE_REVIEWS.md": "641b0e4577dc38f4b60feabbf071b8dfa317de0d4374da289e3c3e327d3cc697",
+    "START_HERE.md": "b7c7fddec93ed954207bc30571e0fbea50b45202d22212af226ea2f6efb42fc7",
+    "USER_EXPERIENCE_REVIEW.md": "f7ed85bb42c173f5001a935d961681f7d405298b55d78e0220c0bf30b9c0190e",
+    "verify_package.py": "c5b728d31f42b55bd2a0d60ed158c4fb0eed0435f38d072f13592ea36b78650f"
+  }
+}

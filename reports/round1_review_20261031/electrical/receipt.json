@@ -1,0 +1,529 @@
+{
+  "python": "3.12.3 | packaged by conda-forge | (main, Apr 15 2024, 18:20:11) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "2.2.2",
+    "matplotlib": "3.9.2",
+    "openpyxl": "3.1.5",
+    "pytest": "7.4.4"
+  },
+  "scope": "Synthetic/local model probes; no raw measurements read",
+  "cases": {
+    "missing_limits_sizing": {
+      "input": {
+        "model": {
+          "name": "Synthetic 3.7 V cell with unspecified limits",
+          "capacity_Ah": 2.0,
+          "nominal_voltage_V": 3.7,
+          "resistance_mohm": 20.0,
+          "version": "voltforge.custom-cell/1",
+          "kind": "basic_resistive/1",
+          "key": "custom_probe",
+          "origin": "user",
+          "family": "Synthetic 3.7 V cell with unspecified limits",
+          "revision": 1,
+          "parent": null,
+          "evidence_status": "User-provided model; independent assessment pending",
+          "source": {
+            "url": "",
+            "description": "User-provided cell parameters"
+          },
+          "thermal_provenance": {
+            "version": "example_cylindrical/1",
+            "heat_capacity_J_K": 70.0,
+            "ambient_conductance_W_K": 0.15,
+            "status": "Assumed heat model",
+            "source": "Illustrative cylindrical-cell heat capacity and room-cooling assumptions; not measurements of this custom cell."
+          },
+          "thermal_defaults": {
+            "heat_capacity_J_K": 70.0,
+            "ambient_conductance_W_K": 0.15
+          },
+          "operating_limits": {}
+        },
+        "graph": {
+          "version": "studio.graph.1",
+          "name": "Shared-load design",
+          "cells": [
+            {
+              "id": "cell1",
+              "name": "Cell 1",
+              "model": "custom_probe",
+              "x": 180,
+              "y": 210,
+              "charge_pct": 70.0,
+              "temperature_C": 23.0,
+              "polarization_V": 0.0
+            }
+          ],
+          "connections": [],
+          "output": {
+            "positive": "cell1:p",
+            "negative": "cell1:n"
+          },
+          "thermal": {
+            "heat_capacity_J_K": 69.25,
+            "ambient_conductance_W_K": 0.148629,
+            "wire_heat_fraction": 0.5,
+            "contacts": []
+          }
+        },
+        "settings": {
+          "profile": [
+            {
+              "start_s": 0.0,
+              "end_s": 60.0,
+              "current_A": 8.0
+            }
+          ],
+          "ambient_C": 23.0,
+          "dt_s": 0.5,
+          "limits": {
+            "temperature_C": null,
+            "current_A": null,
+            "min_voltage_V": 3.3,
+            "imbalance_pct": null
+          }
+        }
+      },
+      "actual": {
+        "status": "completed",
+        "sizing": "qualifies",
+        "outcome": {
+          "kind": "within_targets",
+          "label": "Within selected model targets",
+          "message": "No selected target was exceeded in this calculated case.",
+          "first_limit": null,
+          "affected_cells": [],
+          "sample_index": 120
+        },
+        "warnings": [
+          {
+            "rule": "missing_limits",
+            "severity": "warning",
+            "message": "Cell 1 has no current limit on record, so the test cannot confirm it stays within one.",
+            "cells": [
+              "cell1"
+            ]
+          }
+        ],
+        "metrics": {
+          "peak_temperature_C": 24.029540271724024,
+          "warmest_cell": "cell1",
+          "warmest_time_s": 60.0,
+          "peak_cell_current_A": 8.0,
+          "busiest_cell": "cell1",
+          "minimum_voltage_V": 3.54,
+          "final_voltage_V": 3.54,
+          "delivered_energy_Wh": 0.4720000000000009,
+          "received_energy_Wh": 0.0,
+          "net_energy_Wh": 0.4720000000000009,
+          "duration_s": 60.0,
+          "maximum_temperature_spread_C": 0.0,
+          "imbalance_pct": null,
+          "current_gap_A": 0.0,
+          "conductor_mass_g": null
+        },
+        "checks": [
+          {
+            "metric": "min_voltage_V",
+            "value": 3.54,
+            "target": 3.3,
+            "status": "within_target"
+          }
+        ],
+        "verification": {
+          "max_kcl_A": 0.0,
+          "max_kvl_V": 0.0,
+          "max_power_residual_W": 1.1102230246251565e-15,
+          "max_cell_charge_residual_As": 2.091837814077735e-11,
+          "final_energy_residual_Wh": -1.922412846195382e-15,
+          "max_thermal_residual_J": 2.2382096176443156e-11,
+          "first_law_residual_J": 1.546140993013978e-11,
+          "electrical_dissipation_J": 76.79999999999313,
+          "first_law_tolerance": 0.001,
+          "first_law_closed": true
+        }
+      },
+      "expected": "Incomplete operating-limit assessment; never unqualified qualifying design"
+    },
+    "series_charge_ah": {
+      "input": {
+        "graph": {
+          "version": "studio.graph.1",
+          "name": "Higher-voltage design",
+          "cells": [
+            {
+              "id": "cell1",
+              "name": "Cell 1",
+              "model": "custom_probe",
+              "x": 180,
+              "y": 210,
+              "charge_pct": 70.0,
+              "temperature_C": 23.0,
+              "polarization_V": 0.0
+            },
+            {
+              "id": "cell2",
+              "name": "Cell 2",
+              "model": "custom_probe",
+              "x": 390,
+              "y": 210,
+              "charge_pct": 70.0,
+              "temperature_C": 23.0,
+              "polarization_V": 0.0
+            }
+          ],
+          "connections": [
+            {
+              "id": "wire1",
+              "a": "cell1:n",
+              "b": "cell2:p",
+              "resistance_mohm": 1.0,
+              "source": "User design assumption"
+            }
+          ],
+          "output": {
+            "positive": "cell1:p",
+            "negative": "cell2:n"
+          },
+          "thermal": {
+            "heat_capacity_J_K": 69.25,
+            "ambient_conductance_W_K": 0.148629,
+            "wire_heat_fraction": 0.5,
+            "contacts": []
+          }
+        },
+        "settings": {
+          "profile": [
+            {
+              "start_s": 0.0,
+              "end_s": 600.0,
+              "current_A": -1.0
+            }
+          ],
+          "ambient_C": 23.0,
+          "dt_s": 0.5,
+          "limits": {
+            "temperature_C": null,
+            "current_A": null,
+            "min_voltage_V": 3.3,
+            "imbalance_pct": null
+          }
+        }
+      },
+      "actual": {
+        "elapsed_s": 600.0,
+        "charge_gained_Ah": 0.3333333333333333,
+        "energy_received_Wh": 1.2401666666666549,
+        "stop_reason": "requested_time_reached",
+        "stop_message": "The requested test time ended.",
+        "note": "Simulated time under this constant-current test, not a full recharge time."
+      },
+      "expected_pack_charge_received_Ah": 0.16666666666666666,
+      "note": "Summed cell Ah may be reported separately, but is not pack-input Ah"
+    },
+    "ideal_link_unknown_as_zero": {
+      "input": {
+        "graph": {
+          "version": "studio.graph.1",
+          "name": "Shared-load design",
+          "cells": [
+            {
+              "id": "cell1",
+              "name": "Cell 1",
+              "model": "custom_probe",
+              "x": 180,
+              "y": 210,
+              "charge_pct": 70.0,
+              "temperature_C": 23.0,
+              "polarization_V": 0.0
+            },
+            {
+              "id": "cell2",
+              "name": "Cell 2",
+              "model": "custom_probe",
+              "x": 390,
+              "y": 210,
+              "charge_pct": 70.0,
+              "temperature_C": 23.0,
+              "polarization_V": 0.0
+            }
+          ],
+          "connections": [
+            {
+              "id": "wire1",
+              "a": "cell1:p",
+              "b": "cell2:p",
+              "resistance_mohm": 0.0,
+              "source": "User design assumption"
+            },
+            {
+              "id": "wire2",
+              "a": "cell1:n",
+              "b": "cell2:n",
+              "resistance_mohm": 0.0,
+              "source": "User design assumption"
+            }
+          ],
+          "output": {
+            "positive": "cell1:p",
+            "negative": "cell1:n"
+          },
+          "thermal": {
+            "heat_capacity_J_K": 69.25,
+            "ambient_conductance_W_K": 0.148629,
+            "wire_heat_fraction": 0.5,
+            "contacts": []
+          }
+        },
+        "settings": {
+          "profile": [
+            {
+              "start_s": 0.0,
+              "end_s": 1.0,
+              "current_A": 2.0
+            }
+          ],
+          "ambient_C": 23.0,
+          "dt_s": 0.5,
+          "limits": {
+            "temperature_C": null,
+            "current_A": null,
+            "min_voltage_V": 3.3,
+            "imbalance_pct": null
+          }
+        }
+      },
+      "row_cell_current_A": [
+        1.0,
+        1.0
+      ],
+      "row_wire_current_A": [
+        null,
+        null
+      ],
+      "actual": {
+        "links": [
+          {
+            "connection": "wire1",
+            "peak_current_A": 0.0,
+            "peak_loss_W": 0.0,
+            "area_mm2": null,
+            "current_density_A_mm2": null
+          },
+          {
+            "connection": "wire2",
+            "peak_current_A": 0.0,
+            "peak_loss_W": 0.0,
+            "area_mm2": null,
+            "current_density_A_mm2": null
+          }
+        ],
+        "note": "Calculated current and loss. This is not a certified current rating."
+      },
+      "expected": "Each unique link carries 1 A in this ladder, or report uncomputed current as null, not zero"
+    },
+    "count_only_parts": {
+      "input": {
+        "graph": {
+          "version": "studio.graph.1",
+          "name": "Higher-voltage design",
+          "cells": [
+            {
+              "id": "cell1",
+              "name": "Cell 1",
+              "model": "LG_M50T_ECN",
+              "x": 180,
+              "y": 210,
+              "charge_pct": 70.0,
+              "temperature_C": 23.0,
+              "polarization_V": 0.0
+            },
+            {
+              "id": "cell2",
+              "name": "Cell 2",
+              "model": "LG_M50T_ECN",
+              "x": 390,
+              "y": 210,
+              "charge_pct": 70.0,
+              "temperature_C": 23.0,
+              "polarization_V": 0.0
+            }
+          ],
+          "connections": [
+            {
+              "id": "wire1",
+              "a": "cell1:n",
+              "b": "cell2:p",
+              "resistance_mohm": 1.0,
+              "source": "User design assumption"
+            }
+          ],
+          "output": {
+            "positive": "cell1:p",
+            "negative": "cell2:n"
+          },
+          "thermal": {
+            "heat_capacity_J_K": 69.25,
+            "ambient_conductance_W_K": 0.148629,
+            "wire_heat_fraction": 0.5,
+            "contacts": []
+          }
+        },
+        "settings": {
+          "profile": [
+            {
+              "start_s": 0.0,
+              "end_s": 1.0,
+              "current_A": 1.0
+            }
+          ],
+          "ambient_C": 23.0,
+          "dt_s": 0.5,
+          "limits": {
+            "temperature_C": null,
+            "current_A": null,
+            "min_voltage_V": 3.3,
+            "imbalance_pct": null
+          }
+        }
+      },
+      "terminal_V": 7.765299567190105,
+      "actual": {
+        "lines": [
+          {
+            "specification": "Two 21700 slots, 5.1 V \u00c2\u00b15% at up to 6 A, for Raspberry Pi 5.",
+            "limits": "Lists up to 95% efficiency and a 2.4 V over-discharge cutoff on v1.1. No battery overcurrent threshold is published.",
+            "part": "Geekworm X1205 2-cell UPS HAT",
+            "slot": "converter",
+            "quantity": 1,
+            "unit": "part",
+            "listings": [
+              {
+                "seller": "Geekworm",
+                "price": 46.0,
+                "currency": "USD",
+                "url": "https://geekworm.com/products/x1205",
+                "tax": "Not stated",
+                "availability": "Contradictory on the page"
+              }
+            ],
+            "exclusions": "Batteries, shipping and import duty not included. The page showed both \"Only 118 items in stock\" and \"Out of stock\".",
+            "checked": "2026-10-30",
+            "priced": true,
+            "unit_price": 46.0,
+            "currency": "USD",
+            "listing_count": 1,
+            "cost": 46.0
+          },
+          {
+            "specification": "The maker lists battery overcurrent, overvoltage and reverse-cell protection, with a 2.4 V over-discharge cutoff on v1.1. Not certified or independently tested here.",
+            "limits": null,
+            "part": "Battery protection",
+            "slot": "protection",
+            "quantity": 1,
+            "unit": "part",
+            "listings": [],
+            "exclusions": "",
+            "checked": null,
+            "priced": false,
+            "included": true,
+            "note": "Included in the UPS board"
+          }
+        ],
+        "warnings": []
+      },
+      "expected": "Board compatibility unknown/incompatible for this series battery; no implied compatible board/protection"
+    },
+    "board_three_amp_charging": {
+      "input": {
+        "graph": {
+          "version": "studio.graph.1",
+          "name": "Shared-load design",
+          "cells": [
+            {
+              "id": "cell1",
+              "name": "Cell 1",
+              "model": "LG_M50T_ECN",
+              "x": 180,
+              "y": 210,
+              "charge_pct": 70.0,
+              "temperature_C": 23.0,
+              "polarization_V": 0.0
+            },
+            {
+              "id": "cell2",
+              "name": "Cell 2",
+              "model": "LG_M50T_ECN",
+              "x": 390,
+              "y": 210,
+              "charge_pct": 70.0,
+              "temperature_C": 23.0,
+              "polarization_V": 0.0
+            }
+          ],
+          "connections": [
+            {
+              "id": "wire1",
+              "a": "cell1:p",
+              "b": "cell2:p",
+              "resistance_mohm": 1.0,
+              "source": "User design assumption"
+            },
+            {
+              "id": "wire2",
+              "a": "cell1:n",
+              "b": "cell2:n",
+              "resistance_mohm": 1.0,
+              "source": "User design assumption"
+            }
+          ],
+          "output": {
+            "positive": "cell1:p",
+            "negative": "cell1:n"
+          },
+          "thermal": {
+            "heat_capacity_J_K": 69.25,
+            "ambient_conductance_W_K": 0.148629,
+            "wire_heat_fraction": 0.5,
+            "contacts": []
+          }
+        },
+        "settings": {
+          "profile": [
+            {
+              "start_s": 0.0,
+              "end_s": 10.0,
+              "current_A": -3.0
+            }
+          ],
+          "ambient_C": 23.0,
+          "dt_s": 0.5,
+          "limits": {
+            "temperature_C": null,
+            "current_A": null,
+            "min_voltage_V": 3.3,
+            "imbalance_pct": null
+          }
+        }
+      },
+      "actual": {
+        "status": "refused",
+        "reason": "Cell 1: Charging exceeds the 1.455 A operating limit at this temperature. Reduce the load, change starting charge or check the circuit."
+      },
+      "expected": "Refusal is correct under deployed cell rule; board charge compatibility must not be inferred from discharge pass",
+      "ideal_share_A": 1.5,
+      "deployed_charge_limit_at_23C_A": 1.455
+    },
+    "permutation_control": {
+      "baseline_voltage_V": 3.679047619047619,
+      "permuted_voltage_V": 3.679047619047619,
+      "maximum_voltage_difference_V": 0.0,
+      "first_law_closed": true,
+      "expected": "Equivalent orderings preserve terminal response; first-law closes"
+    }
+  }
+}
