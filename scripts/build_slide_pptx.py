@@ -43,6 +43,7 @@ def main():
     args = parser.parse_args()
     d = json.loads((ROOT/'reports/slide_v4/data.json').read_text()); prs = Presentation(args.template)
     cover, slide = prs.slides[0], prs.slides[1]
+    prs.core_properties.title = 'VOLT-FORGE, Tata Elxsi Teliport Season 4, Case Study 2'; prs.core_properties.author = f"Team {TEAM['name']}"; prs.core_properties.last_modified_by = f"Team {TEAM['name']}"
     for shape in cover.shapes:
         if shape.has_text_frame and 'Case Study No' in shape.text_frame.text:
             shape.text_frame.paragraphs[0].runs[0].text = 'Case Study 2'
