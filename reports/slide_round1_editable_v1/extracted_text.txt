@@ -1,0 +1,47 @@
+VOLT-FORGE
+A visual workspace for battery trade-offs
+CASE STUDY 2
+Two cells are a simulation candidate
+Smallest qualifying count tested (1-4 cells): half the baseline's cell cost and mass, with less electrical margin.
+Pi 5 backup | LG M50T | 25 W supply-rating scenario | 10 min | 23°C | 70% starting SOC
+90% converter assumed | 3.3 V study floor | 8.42 A constant-current proxy | actual Pi draw not measured
+BUILD, TEST, UNDERSTAND
+Original V4 editor; illustrative circuit, not the study table.
+For students and lab instructors: edit a circuit, inspect
+current, voltage and simulated temperature, then
+compare alternatives and export the evidence.
+BASELINE + TWO ALTERNATIVES
+Parallel
+design
+Required
+passes
+Worst cell
+current
+Worst cell
+temperature
+Cell
+mass
+Listed
+cell cost
+4 cells 51/51 3.34 A 26.1°C 280 g ₹4,824
+3 cells 42/42 3.86 A 27.7°C 210 g ₹3,618
+2 cells 33/33 5.49 A 31.8°C 140 g ₹2,412
+Frozen V4: same-end outputs; mismatch, thermal and converter sensitivity cases.
+Counts vary by cell position. Temperatures simulated; cell-only cost and mass.
+EVIDENCE
+15/15 numerical checks passed
+All 12 comparison cases missed voltage and
+temperature bands. Measured accuracy is
+not established.
+LIMITS THAT MATTER
+Conditional, not build-ready
+No spare cell. Board current limits unverified.
+Virtual cutoffs modelled; physical protection
+has not been demonstrated.
+USER + BUYER HYPOTHESIS
+Start with teaching labs
+Free student use; paid lab licences untested.
+No observed user trials yet. Next user task:
+complete and explain a comparison.
+NEXT Measure load and converter behavior; bench-check with supervised cutoffs; observe student tasks.
+Source + code: github.com/jaikaushik-prog/VOLT-FORGE Team StratWise | Frozen V4 study | Submission draft

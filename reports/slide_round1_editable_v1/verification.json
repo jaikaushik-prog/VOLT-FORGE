@@ -1,0 +1,464 @@
+{
+  "schema": "voltforge.submission-slide/1",
+  "authoring": "Native PowerPoint COM; local Artifact Tool runtime unavailable",
+  "slide_count": 1,
+  "native_tables": 1,
+  "editable_text": true,
+  "sources_sha256": "8e7a29b803b4bd2d265b3d2e5f04afd8a207f59b17c25669ee0e994e4a4efd0f",
+  "source_commit": "c2339a569876da5fc20969ea578a91ae57f33384",
+  "implementation_commit": "d184a49f093636ea2b7e9a9fb1e1ad14f5f2b806",
+  "output_hashes": {
+    "VOLT-FORGE_Round1_Editable.pptx": "7e9243d9db833c9f1213182e0df37e09f3f51ba2f8fea6785bedc3989abbbe0f",
+    "VOLT-FORGE_Round1_Editable.pdf": "6ba7eadd826728cb85a341aa29423b5afcb033f0268a46f7d78f487184ae6f77",
+    "VOLT-FORGE_Round1_Editable.png": "0a2a885f921f04c9c43b9bed298929980466ff6a600173dc4a2b9cc0de0c5eda"
+  },
+  "text_fit": [
+    {
+      "name": "Product",
+      "text_height": 36.0,
+      "available_height": 39.0,
+      "left": 159.0,
+      "top": 15.999920845031738,
+      "width": 555.0,
+      "height": 39.0
+    },
+    {
+      "name": "Product purpose",
+      "text_height": 21.600000381469727,
+      "available_height": 27.0,
+      "left": 160.0,
+      "top": 54.99991989135742,
+      "width": 602.0,
+      "height": 27.0
+    },
+    {
+      "name": "Case",
+      "text_height": 14.399999618530273,
+      "available_height": 20.0,
+      "left": 749.0,
+      "top": 32.0,
+      "width": 114.0,
+      "height": 20.0
+    },
+    {
+      "name": "Finding",
+      "text_height": 30.0,
+      "available_height": 32.0,
+      "left": 27.0,
+      "top": 88.99992370605469,
+      "width": 906.0,
+      "height": 32.0
+    },
+    {
+      "name": "Trade-off",
+      "text_height": 17.399999618530273,
+      "available_height": 22.0,
+      "left": 28.0,
+      "top": 123.99992370605469,
+      "width": 902.0,
+      "height": 22.0
+    },
+    {
+      "name": "Conditions",
+      "text_height": 16.200000762939453,
+      "available_height": 19.0,
+      "left": 28.0,
+      "top": 154.0,
+      "width": 904.0,
+      "height": 19.0
+    },
+    {
+      "name": "Assumptions",
+      "text_height": 14.520000457763672,
+      "available_height": 18.0,
+      "left": 28.0,
+      "top": 175.0,
+      "width": 904.0,
+      "height": 18.0
+    },
+    {
+      "name": "Workflow heading",
+      "text_height": 15.0,
+      "available_height": 20.0,
+      "left": 28.0,
+      "top": 199.0,
+      "width": 355.0,
+      "height": 20.0
+    },
+    {
+      "name": "Screenshot qualification",
+      "text_height": 12.239999771118164,
+      "available_height": 16.0,
+      "left": 28.0,
+      "top": 335.0,
+      "width": 362.0,
+      "height": 16.0
+    },
+    {
+      "name": "User value",
+      "text_height": 45.720001220703125,
+      "available_height": 48.0,
+      "left": 28.0,
+      "top": 355.9999084472656,
+      "width": 365.0,
+      "height": 48.0
+    },
+    {
+      "name": "Comparison heading",
+      "text_height": 15.0,
+      "available_height": 20.0,
+      "left": 415.0,
+      "top": 199.0,
+      "width": 517.0,
+      "height": 20.0
+    },
+    {
+      "name": "Table scope",
+      "text_height": 25.920000076293945,
+      "available_height": 35.0,
+      "left": 415.0,
+      "top": 346.0,
+      "width": 518.0,
+      "height": 35.0
+    },
+    {
+      "name": "Evidence heading",
+      "text_height": 14.039999961853027,
+      "available_height": 16.0,
+      "left": 28.0,
+      "top": 407.0,
+      "width": 285.0,
+      "height": 16.0
+    },
+    {
+      "name": "Evidence result",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 28.0,
+      "top": 427.0,
+      "width": 287.0,
+      "height": 21.0
+    },
+    {
+      "name": "Evidence limit",
+      "text_height": 43.20000076293945,
+      "available_height": 48.0,
+      "left": 28.0,
+      "top": 451.9999084472656,
+      "width": 287.0,
+      "height": 48.0
+    },
+    {
+      "name": "Limits heading",
+      "text_height": 14.039999961853027,
+      "available_height": 16.0,
+      "left": 337.0,
+      "top": 407.0,
+      "width": 285.0,
+      "height": 16.0
+    },
+    {
+      "name": "Limits result",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 337.0,
+      "top": 427.0,
+      "width": 287.0,
+      "height": 21.0
+    },
+    {
+      "name": "Limits body",
+      "text_height": 43.20000076293945,
+      "available_height": 48.0,
+      "left": 337.0,
+      "top": 451.9999084472656,
+      "width": 287.0,
+      "height": 48.0
+    },
+    {
+      "name": "Buyer heading",
+      "text_height": 14.039999961853027,
+      "available_height": 16.0,
+      "left": 647.0,
+      "top": 407.0,
+      "width": 285.0,
+      "height": 16.0
+    },
+    {
+      "name": "Buyer result",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 647.0,
+      "top": 427.0,
+      "width": 287.0,
+      "height": 21.0
+    },
+    {
+      "name": "Buyer body",
+      "text_height": 43.20000076293945,
+      "available_height": 48.0,
+      "left": 647.0,
+      "top": 451.9999084472656,
+      "width": 287.0,
+      "height": 48.0
+    },
+    {
+      "name": "Next action",
+      "text_height": 13.920000076293945,
+      "available_height": 17.0,
+      "left": 28.0,
+      "top": 505.0,
+      "width": 904.0,
+      "height": 17.0
+    },
+    {
+      "name": "Evidence link",
+      "text_height": 10.5600004196167,
+      "available_height": 11.0,
+      "left": 28.0,
+      "top": 526.0,
+      "width": 540.0,
+      "height": 11.0
+    },
+    {
+      "name": "Version",
+      "text_height": 10.5600004196167,
+      "available_height": 11.0,
+      "left": 612.0,
+      "top": 526.0,
+      "width": 320.0,
+      "height": 11.0
+    },
+    {
+      "name": "table r1c1",
+      "text_height": 25.440000534057617,
+      "available_height": 28.0,
+      "left": 415.0,
+      "top": 225.0,
+      "width": 100.0,
+      "height": 34.0
+    },
+    {
+      "name": "table r1c2",
+      "text_height": 25.440000534057617,
+      "available_height": 28.0,
+      "left": 515.0,
+      "top": 225.0,
+      "width": 70.0,
+      "height": 34.0
+    },
+    {
+      "name": "table r1c3",
+      "text_height": 25.440000534057617,
+      "available_height": 28.0,
+      "left": 585.0,
+      "top": 225.0,
+      "width": 82.0,
+      "height": 34.0
+    },
+    {
+      "name": "table r1c4",
+      "text_height": 25.440000534057617,
+      "available_height": 28.0,
+      "left": 667.0,
+      "top": 225.0,
+      "width": 99.0,
+      "height": 34.0
+    },
+    {
+      "name": "table r1c5",
+      "text_height": 25.440000534057617,
+      "available_height": 28.0,
+      "left": 766.0,
+      "top": 225.0,
+      "width": 65.0,
+      "height": 34.0
+    },
+    {
+      "name": "table r1c6",
+      "text_height": 25.440000534057617,
+      "available_height": 28.0,
+      "left": 831.0,
+      "top": 225.0,
+      "width": 101.0,
+      "height": 34.0
+    },
+    {
+      "name": "table r2c1",
+      "text_height": 14.640000343322754,
+      "available_height": 21.0,
+      "left": 415.0,
+      "top": 259.0,
+      "width": 100.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r2c2",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 515.0,
+      "top": 259.0,
+      "width": 70.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r2c3",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 585.0,
+      "top": 259.0,
+      "width": 82.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r2c4",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 667.0,
+      "top": 259.0,
+      "width": 99.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r2c5",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 766.0,
+      "top": 259.0,
+      "width": 65.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r2c6",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 831.0,
+      "top": 259.0,
+      "width": 101.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r3c1",
+      "text_height": 14.640000343322754,
+      "available_height": 21.0,
+      "left": 415.0,
+      "top": 286.0,
+      "width": 100.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r3c2",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 515.0,
+      "top": 286.0,
+      "width": 70.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r3c3",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 585.0,
+      "top": 286.0,
+      "width": 82.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r3c4",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 667.0,
+      "top": 286.0,
+      "width": 99.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r3c5",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 766.0,
+      "top": 286.0,
+      "width": 65.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r3c6",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 831.0,
+      "top": 286.0,
+      "width": 101.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r4c1",
+      "text_height": 14.640000343322754,
+      "available_height": 21.0,
+      "left": 415.0,
+      "top": 313.0,
+      "width": 100.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r4c2",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 515.0,
+      "top": 313.0,
+      "width": 70.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r4c3",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 585.0,
+      "top": 313.0,
+      "width": 82.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r4c4",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 667.0,
+      "top": 313.0,
+      "width": 99.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r4c5",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 766.0,
+      "top": 313.0,
+      "width": 65.0,
+      "height": 27.0
+    },
+    {
+      "name": "table r4c6",
+      "text_height": 17.15999984741211,
+      "available_height": 21.0,
+      "left": 831.0,
+      "top": 313.0,
+      "width": 101.0,
+      "height": 27.0
+    }
+  ],
+  "visual_review": "PowerPoint PNG at 1920x1080 and PDF render at 1440x810 inspected; no clipping or unintended overlap in final revision.",
+  "preserved_source_checks": 13,
+  "generator_sha256": "3a0dc879d8d84c13f95a4e2e148c4d724bd6ab1cd7b31ccfcdb342fa732083f9",
+  "pdf_checks": {
+    "pages": 1,
+    "required_text_present": true,
+    "render_reviewed": true
+  },
+  "fonts": {
+    "basis": "design",
+    "families": [
+      "Arial"
+    ]
+  },
+  "artifact_tool_import_check": "unavailable: local Artifact Tool runtime not installed"
+}

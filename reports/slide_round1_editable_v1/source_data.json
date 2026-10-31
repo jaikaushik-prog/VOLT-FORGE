@@ -1,0 +1,176 @@
+{
+  "artifact_status": "Review draft; not published or submitted",
+  "source_commit": "c2339a569876da5fc20969ea578a91ae57f33384",
+  "checkout_head_at_generation": "5cfb62c5ed146bda4b84b30e634f5e9dfb3fb047",
+  "source_software_id": "97ca199f2fd21aac",
+  "review_date": "2026-10-31",
+  "comparison": {
+    "option": "baseline",
+    "description": "Same-end outputs and 0.08 mm copper links",
+    "base_conditions": {
+      "duration_s": 600.0,
+      "ambient_C": 23.0,
+      "charge_pct": 70.0,
+      "temperature_C": 23.0,
+      "voltage_floor_V": 3.3,
+      "dt_s": 0.5,
+      "half_step_dt_s": 0.25
+    },
+    "mission": {
+      "name": "Raspberry Pi 5 gateway backup",
+      "power_W": 25.0,
+      "converter_efficiency": 0.9,
+      "role": "decides qualification"
+    },
+    "required_tiers": [
+      "nominal",
+      "position_mismatch",
+      "shared_sensitivity",
+      "converter_efficiency"
+    ],
+    "rows": [
+      {
+        "cells": 4,
+        "source_selector": "designs[count=4, option=baseline]",
+        "required_passed": 51,
+        "required_cases": 51,
+        "worst_cell_current_A": 3.340501313781926,
+        "worst_cell_temperature_C": 26.11830720872382,
+        "worst_battery_voltage_V": 3.6638327615882806,
+        "cell_mass_g": 280.0,
+        "listed_cell_cost_inr": 4824.0
+      },
+      {
+        "cells": 3,
+        "source_selector": "designs[count=3, option=baseline]",
+        "required_passed": 42,
+        "required_cases": 42,
+        "worst_cell_current_A": 3.8554803783633713,
+        "worst_cell_temperature_C": 27.694595986104133,
+        "worst_battery_voltage_V": 3.6155707765352165,
+        "cell_mass_g": 210.00000000000003,
+        "listed_cell_cost_inr": 3618.0
+      },
+      {
+        "cells": 2,
+        "source_selector": "designs[count=2, option=baseline]",
+        "required_passed": 33,
+        "required_cases": 33,
+        "worst_cell_current_A": 5.485359037716929,
+        "worst_cell_temperature_C": 31.77641135305313,
+        "worst_battery_voltage_V": 3.4989723035703193,
+        "cell_mass_g": 140.0,
+        "listed_cell_cost_inr": 2412.0
+      }
+    ],
+    "cost_mass_scope": "Cells only; listed cost, not a complete system price or stock quote",
+    "temperature_scope": "Simulated output; measured accuracy not established"
+  },
+  "evidence": {
+    "numerical": {
+      "passed": 15,
+      "total": 15,
+      "temperature_comparison_performed": false,
+      "scope": "Synthetic electrical and heat-generation verification against native PyBaMM Thevenin and closed-form RC solutions; not experimental or thermal validation"
+    },
+    "measured": {
+      "total": 12,
+      "voltage_band_passed": 0,
+      "temperature_band_passed": 0,
+      "experimental_validation": false
+    }
+  },
+  "copy_provenance": {
+    "conditional_result": "study.smallest_qualifying_cell_count; protocol.scope/qualification",
+    "limitations": "recommendation: What argues against it; Checks on the decision",
+    "buyer_hypothesis": "business.status/model; user_trial: introductory paragraph",
+    "protection": "recommendation: Checks on the decision / Virtual protection",
+    "screenshot": "Original V4 circuit image; illustrative UI, not the study comparison topology",
+    "next_step": "Proposed next action; not a completed experiment or user trial"
+  },
+  "sources": {
+    "study": {
+      "path": "reports/design_study_v2/run1/summary.json",
+      "sha256": "8dce5325e70f0869a018bdf009b3d44538c93c263b86b1e91d581084e02828c0",
+      "pinned_git_sha256": "8dce5325e70f0869a018bdf009b3d44538c93c263b86b1e91d581084e02828c0",
+      "matches_pinned_source": true
+    },
+    "repeat": {
+      "path": "reports/v4_release/study_repeat.json",
+      "sha256": "3c9ae8aefa6259c10b7f01a206c2ec87be7364382a7785e029ebd7bc1b19f087",
+      "pinned_git_sha256": "3c9ae8aefa6259c10b7f01a206c2ec87be7364382a7785e029ebd7bc1b19f087",
+      "matches_pinned_source": true
+    },
+    "protocol": {
+      "path": "configs/round1_design_study_v2.json",
+      "sha256": "8dcfc8f11f944f073c8aa137309c43fd6c2f597496dae06f0a40ce8222176a88",
+      "pinned_git_sha256": "8dcfc8f11f944f073c8aa137309c43fd6c2f597496dae06f0a40ce8222176a88",
+      "matches_pinned_source": true
+    },
+    "numerical": {
+      "path": "reports/numerical_reference_v2/locked_97ca199/verification.json",
+      "sha256": "8159f7679130fedccfd3638c0638afe47d20eba386cf21646b512e1d7bf10ee8",
+      "pinned_git_sha256": "8159f7679130fedccfd3638c0638afe47d20eba386cf21646b512e1d7bf10ee8",
+      "matches_pinned_source": true
+    },
+    "numerical_protocol": {
+      "path": "reports/numerical_reference_v2/locked_97ca199/protocol.json",
+      "sha256": "55317e7a2638b657dbdada7e6cf3397672d92b66372b8415f8c375ab958339b9",
+      "pinned_git_sha256": "55317e7a2638b657dbdada7e6cf3397672d92b66372b8415f8c375ab958339b9",
+      "matches_pinned_source": true
+    },
+    "measured": {
+      "path": "reports/measured_comparison_v1/final/result.json",
+      "sha256": "4c07dfddd2a7ccd6893aa780a4185ebae05bdc803ce6956aaa8d4e04c7885426",
+      "pinned_git_sha256": "4c07dfddd2a7ccd6893aa780a4185ebae05bdc803ce6956aaa8d4e04c7885426",
+      "matches_pinned_source": true
+    },
+    "measured_protocol": {
+      "path": "configs/measured_comparison_v1.json",
+      "sha256": "a0e8d72f19d6a7ffb25afdc7e155dc7f9166fda03926ac4cb7d3329fda337020",
+      "pinned_git_sha256": "a0e8d72f19d6a7ffb25afdc7e155dc7f9166fda03926ac4cb7d3329fda337020",
+      "matches_pinned_source": true
+    },
+    "recommendation": {
+      "path": "reports/design_study_v2/RECOMMENDATION.md",
+      "sha256": "aabdcc8d3f0cd1d48c62dab3069f2d187b6b0f6eff5c2b30232bd6603bf2f083",
+      "pinned_git_sha256": "aabdcc8d3f0cd1d48c62dab3069f2d187b6b0f6eff5c2b30232bd6603bf2f083",
+      "matches_pinned_source": true
+    },
+    "user_trial": {
+      "path": "reports/user_trial_v1/KIT.md",
+      "sha256": "54648d0fc998327188069fa411eb185902a5a615ef92fa316f4895a704b54d2c",
+      "pinned_git_sha256": "54648d0fc998327188069fa411eb185902a5a615ef92fa316f4895a704b54d2c",
+      "matches_pinned_source": true
+    },
+    "business": {
+      "path": "configs/business_case_v1.json",
+      "sha256": "7ec94d9f3814a5a7b9c12eb048765eb9dedb493c36e1edd31b1bc05eb72c78d2",
+      "pinned_git_sha256": "7ec94d9f3814a5a7b9c12eb048765eb9dedb493c36e1edd31b1bc05eb72c78d2",
+      "matches_pinned_source": true
+    },
+    "screenshot": {
+      "path": "reports/slide_v4/assets/circuit.png",
+      "sha256": "da692698fd6a3c78ccc64263f0fb74a556395b7e0b549efecf67a36396642fc2",
+      "pinned_git_sha256": "da692698fd6a3c78ccc64263f0fb74a556395b7e0b549efecf67a36396642fc2",
+      "matches_pinned_source": true
+    },
+    "logo_teliport": {
+      "path": "reports/slide_v4/assets/logo_teliport.png",
+      "sha256": "c95d6b3e914b74bda6d8764bcf70983adef1534a8dc8aae278d25e2c09dc41e8",
+      "pinned_git_sha256": "c95d6b3e914b74bda6d8764bcf70983adef1534a8dc8aae278d25e2c09dc41e8",
+      "matches_pinned_source": true
+    },
+    "logo_tata": {
+      "path": "reports/slide_v4/assets/logo_tata.png",
+      "sha256": "6faeae188c785c9f53fda4c23994b349bc37702597b1b83424aa68f271d78d78",
+      "pinned_git_sha256": "6faeae188c785c9f53fda4c23994b349bc37702597b1b83424aa68f271d78d78",
+      "matches_pinned_source": true
+    }
+  },
+  "generator_sha256": "5ced7de62ef578808bc5cd765ee374ed8a7b535a6e5a37a37960c1cc3377635b",
+  "fonts": {
+    "arial.ttf": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a",
+    "arialbd.ttf": "e8f4e3baf6cc35fed6fcce3a540e8b39e8f6cda1d22a28f2ec8f526fef7a43f5"
+  }
+}
